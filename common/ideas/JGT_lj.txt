@@ -1,0 +1,100 @@
+ideas = {
+	academy_spirit = {
+		JGT01_gxzy = {
+			ledger = army
+			picture = JGT01_gxzy
+			modifier = {
+				experience_gain_factor = 0.5
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		tactical_warfare_spirit = {
+			ledger = army
+			picture = tactical_warfare_spirit
+			modifier = {
+				trait_commando_xp_gain_factor = 0.25
+				experience_gain_mechanized_combat_factor = 0.25
+				
+				trait_fortress_buster_xp_gain_factor = 0.25
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	army_spirit = {
+		expeditionary_spirit = {
+			ledger = army
+			modifier = {
+				LEND_LEASE_TENSION = -0.2
+				SEND_VOLUNTEERS_TENSION = -0.2
+				SEND_VOLUNTEER_SIZE = 3
+				SEND_VOLUNTEER_DIVISIONS_REQUIRED = -0.2
+				AIR_VOLUNTEER_CAP = 2
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		JGT01_dlzz = {
+			ledger = army
+			equipment_bonus = {
+				floating_harbor_equipment = {
+					build_cost_ic = -0.3
+					instant = yes
+				}
+			}
+			equipment_bonus = {
+				convoy = {
+					build_cost_ic = -0.3
+					instant = yes
+				}
+			}
+			modifier = {
+				naval_invasion_penalty = -0.1
+				convoy_retreat_speed = 0.1
+				transport_capacity = -0.1
+				naval_invasion_capacity = 5
+				invasion_preparation = -0.1
+				amphibious_invasion = 0.1
+				amphibious_invasion_defence = 0.1
+				trait_ground_pounder_xp_gain_factor = 0.2
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	division_command_spirit = {
+		expandable_soldier_doctrine_spirit = {
+			ledger = army
+			picture = expandable_soldier_doctrine_spirit
+			modifier = {
+				army_defence_factor = -0.1
+				army_morale_factor = -0.1
+				army_org_factor = -0.05
+				planning_speed = 0.15
+				max_planning = 0.15
+				breakthrough_factor = 0.1
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		JGT01_smzypd = {
+			ledger = army
+			modifier = {
+				army_attack_factor = 0.1
+				breakthrough_factor = 0.1
+				supply_consumption_factor = 0.15
+				attrition = 0.05	
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

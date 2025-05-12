@@ -48,6 +48,11 @@ NDefines.NTechnology.BASE_RESEARCH_POINTS_SAVED = 50.0 --#base game 30 changed t
 NDefines.NTechnology.BASE_YEAR_AHEAD_PENALTY_FACTOR = 3.0		-- Base year ahead penalty
 NDefines.NTechnology.BASE_TECH_COST = 80					-- Base cost for a tech. multiplied with tech cost and ahead of time penalties
 ----------------------------------
+NDefines.NMilitary.PROMOTE_LEADER_CP_COST = 20.0
+NDefines.NMilitary.UNIT_LEADER_TRAIT_SLOT_PER_LEVEL = { 0.5, 0.65, 0.6, 0.0 }
+NDefines.NMilitary.UNIT_LEADER_ASSIGN_TRAIT_COST = 5.0
+NDefines.NMilitary.COST_INCREASE_PER_ACTIVE_MEDAL = 0.20
+----------------------------------
 NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0.0 -- prevent special forces exploit 
 NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 1000 -- 20 forty-width special forces divisions, plenty  
 NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 50
@@ -130,6 +135,11 @@ NDefines.NCountry.GIE_EXILE_ARMY_LEADER_START_LEVEL = 1	--Starting level for exi
 
 NDefines.NResistance.GARRISON_MANPOWER_LOST_BY_ATTACK = 0.005 	--WAS 0.018 Ratio of manpower lost by garrison at each attack on garrison (this number will be reduced by the hardness of garrison template)	
 
+
+NDefines.NBuildings.BASE_FACTORY_REPAIR = 1.0
+NDefines.NResistance.INITIAL_STATE_RESISTANCE = 1.0
+NDefines.NResistance.RESISTANCE_ACTIVITY_CHANCE_AT_MAX_RESISTANCE = 0.312
+NDefines.NResistance.RESISTANCE_ACTIVITY_MIN_GARRISON_PENETRATE_CHANCE = 0.0
 
 NDefines.NPolitics.ARMY_LEADER_MAX_COST = 75				-- max cost BEFORE modifiers
 NDefines.NPolitics.NAVY_LEADER_MAX_COST = 75

@@ -1,0 +1,60 @@
+# [] army_org
+# [1] army_org_factor
+# [] supply_consumption_factor
+# [] equipment_capture
+# [] equipment_capture_factor
+# [] army_fuel_capacity_factor
+# [] army_fuel_consumption_factor
+# [] recon_factor
+# [] recon_factor_while_entrenched
+# [1] breakthrough_factor
+# [1] armor_factor
+# [1] army_strength_factor
+# [1] experience_loss_factor
+# [1] army_attack_factor
+# [] army_defence_factor
+# [] max_dig_in
+# [] max_dig_in_factor
+
+unit_medals = {
+	bm_strip_1_baton_1 = {
+		available = {
+			every_possible_country = {
+				should_have_any_unique_medals_trigger = yes
+			}
+		}
+		frame = 1
+		icon = "GFX_bm_baton_strip_1"
+		cost = 25
+
+		unit_modifiers = {
+			army_org_factor = 0.07
+			army_strength_factor = 0.05
+			armor_factor = 0.05
+		}
+
+		one_time_effect = {
+			add_divisional_commander_xp = 170
+		}
+	}
+	bm_strip_1_baton_2 = {
+		available = {
+			every_possible_country = {
+				should_have_any_unique_medals_trigger = yes
+			}
+		}
+		frame = 2
+		icon = "GFX_bm_baton_strip_1"
+		cost = 25
+
+		unit_modifiers = {
+			army_attack_factor = 0.07
+			breakthrough_factor = 0.05
+			experience_loss_factor = -0.05
+		}
+
+		one_time_effect = {
+			add_divisional_commander_xp = 170
+		}
+	}
+}
