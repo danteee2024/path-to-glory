@@ -543,4 +543,40 @@ parliament_gui_decision_category = {
 			factor = 1
 		}
 	}
+	#path to glory - danteee
+	call_general_election = {
+		icon = GFX_decision_generic_speech
+		
+		allowed = {
+			#tag = ENG
+		}
+		
+		visible = { }
+		
+		available = {
+			NOT = { has_country_flag = parliament_has_ongoing_law }
+			check_variable = { second_party_popularity > 0.51 }
+		}
+		
+		
+		cost = 100
+		
+	
+		
+		complete_effect = {
+			country_event = { id = parliament.7 }
+		}
+		
+		remove_effect = {
+			
+			
+			clr_country_flag = parliament_has_ongoing_law
+			
+			custom_effect_tooltip = parliament_general_election_tooltip
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
 }

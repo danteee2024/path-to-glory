@@ -196,3 +196,33 @@ country_event = {
 		}
 	}
 }
+
+#path to glory - danteee
+
+country_event = {
+	id = parliament.7
+	title = parliament.7.t
+	desc = parliament.7.d
+	picture = GFX_report_event_physics_lab_01
+	
+	is_triggered_only = yes
+	
+
+
+	option = {
+		name = parliament.7.a
+		retire_country_leader = yes 
+		
+         create_country_leader = {
+			name = "Clement Attlee"
+			picture = "GFX_Portrait_ENG_Clement_Attlee"
+			expire = "1965.1.1"
+		}
+         
+		set_party_name = { 
+        ideology = democratic
+        long_name = ENG_democratic_party_labour_long 
+        name = ENG_democratic_party_labour
+       }
+	}
+}

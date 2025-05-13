@@ -151,4 +151,8 @@ spriteTypes = {
 		name = "GFX_decision_ENG_conference_control_total"
 		texturefile = "gfx/interface/decisions/decision_eng_total_control.png"
 	}
+#path to glory#
+
+
+
 }

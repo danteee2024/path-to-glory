@@ -2,6 +2,8 @@
 add_namespace = AAT_britain_narvik
 
 # Tizard mission event for USA
+
+
 country_event = {
 	id = britain.1
 	title = britain.1.t
