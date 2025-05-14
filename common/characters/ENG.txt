@@ -60,7 +60,22 @@ characters={
 			id=-1
 		}
 	}
-
+    
+	ENG_clement_attlee={
+		name=ENG_clement_attlee
+		portraits={
+			civilian = {
+				large="gfx/leaders/ENG/Portrait_ENG_Clement_Attlee.dds"
+			}
+		}
+		country_leader={
+			ideology=socialism
+			traits={ social_democrat }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		
+	}
 	ENG_oswald_mosley={
 		name=ENG_oswald_mosley
 		portraits={
@@ -765,6 +780,59 @@ characters={
 			logistics_skill = 1
 		}
 	}
+	
+	ENG_Jock_Hoston = {
+		name = ENG_Jock_Hoston
+		portraits={
+			civilian={
+				large = GFX_portrait_jock_hoston
+			}
+		}
+	}
+	
+	ENG_Reg_Birch = {
+		name = ENG_Reg_Birch
+		portraits={
+			civilian={
+				large = GFX_portrait_reg_birch
+			}
+		}
+	}
+	
+	ENG_Bill_Alexander = {
+		name = ENG_Bill_Alexander
+		portraits={
+			civilian={
+				large = GFX_portrait_bill_alexander
+			}
+			army = {
+				large = GFX_portrait_bill_alexander
+			}
+		}
+	}
+	
+	#ENG_Ernest_Bevin = {
+	#	name = ENG_Ernest_Bevin
+	#	portraits={
+	#		civilian={
+	#			small=  GFX_portrait_ernest_bevin_small
+	#		}
+	#	}
+	#	
+	#	advisor={
+	#		slot = political_advisor
+	#		idea_token = ENG_Ernest_Bevin
+	#		allowed = {
+	#			original_tag = ENG
+	#		}
+	#		available = {
+	#			has_completed_focus = ENG_Re_Establish_Triple_Alliance
+	#		}
+	#		traits = {
+	#			education_reformer 
+	#		}
+	#	}
+	#}
 
 	ENG_james_fownes_somerville={
 		name=ENG_james_fownes_somerville
@@ -1580,7 +1648,7 @@ characters={
 			}
 		}
 	}
-
+      
 
 	### POLITICAL ADVISORS ###
 
@@ -1590,50 +1658,6 @@ characters={
 
 	# Pollit up there
 
-	ENG_clement_attlee={
-		name=ENG_clement_attlee
-		portraits={
-			army={
-				small="GFX_idea_clement_attlee"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = clement_attlee
-			available  = {
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_completed_focus  = ENG_a_change_in_course 
-					}
-				}
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state  = autonomy_supervised_state
-					}
-				}
-			}
-			allowed  = {
-				original_tag  = ENG
-			}
-			traits  = {
-				democratic_reformer 
-			}
-			do_effect  = {
-				NOT = {
-					has_government  = democratic 
-				}
-			}
-			ai_will_do  = {
-				factor  = 0.000
-			}
-		}		
-	}
 	
 	ENG_john_beckett={
 		name=ENG_john_beckett

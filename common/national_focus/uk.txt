@@ -7828,6 +7828,46 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = ENG_call_general_election
+		available = {
+			NOT = { has_country_flag = parliament_has_ongoing_law }
+			check_variable = { second_party_popularity > 0.51 }
+		} #UK at war with fascist/commie. iraq is fascist/commie
+
+		
+
+		prerequisite = { focus = ENG_home_defence }
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = -1
+		y = 5
+		
+		relative_position_id = ENG_home_defence
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			effect_tooltip = { 
+				set_party_name = {
+					ideology = democratic
+					long_name = "The Labour Party"
+					short_name = "Labour"
+				}
+			}
+			add_country_leader_role = {
+				character = ENG_clement_attlee
+				promote_leader = yes
+				country_leader = {
+					ideology = socialism
+					expire = "1965.1.1"
+					traits = {
+						social_democrat
+					}
+				}
+			}	
+		}
+	}
 	# START IRAQ/IRAN/USSR INTERVENTION #
 
 	focus = {
