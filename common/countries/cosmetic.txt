@@ -3475,3 +3475,11 @@ PRC_PUPPET = {
 	color = rgb { 205 5 21 }
 	color_ui = rgb { 255 255 255 }
 }
+
+
+
+#path to glory 
+GER_RTR = {	
+	color = rgb { 50 50 50 }
+	color_ui = rgb { 138 155 116 }
+}
