@@ -68,12 +68,6 @@ characters={
 				large="gfx/leaders/ENG/Portrait_ENG_Clement_Attlee.dds"
 			}
 		}
-		country_leader={
-			ideology=socialism
-			traits={ social_democrat }
-			expire="1965.1.1.1"
-			id=-1
-		}
 		
 	}
 	ENG_oswald_mosley={

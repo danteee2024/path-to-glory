@@ -51,7 +51,7 @@
   parliament_policy_6:0 "Assemble Volunteer Corps"
   parliament_policy_6_desc:0 "With over 51% of our seats occupied by members of the [GetFirstParliamentPartyName], [GetSecondParliamentPartyName], or [GetThirdParliamentPartyName], we can Assemble Volunteer Corps. Current [GetFirstParliamentPartyName] popularity: [?first_party_popularity|%Y]. Current [GetSecondParliamentPartyName] popularity: [?second_party_popularity|%Y]. Current [GetThirdParliamentPartyName] popularity: [?third_party_popularity|%Y]"
   
-  
+  ENG_call_general_election_tt:0 "With over 51% of our seats occupied by members of the [GetSecondParliamentPartyName], we can start National Construction Projects. Current [GetSecondParliamentPartyName] popularity: [?second_party_popularity|%Y]"
   eng_parliament_policy:0 "Enforce Imperial Rule"
   eng_parliament_policy_desc:0 "With over 51% of our seats occupied by members of the [GetFourthParliamentPartyName], we can Enforce Imperial Rule. Current [GetFourthParliamentPartyName] popularity: [?fourth_party_popularity|%Y]"
   
@@ -105,12 +105,7 @@
   parliament_lose_5_party_2_tooltip:0 "Lose §Y5§! Members of [GetSecondParliamentPartyName]."
   parliament_lose_5_party_3_tooltip:0 "Lose §Y5§! Members of [GetThirdParliamentPartyName]."
   parliament_lose_5_party_4_tooltip:0 "Lose §Y5§! Members of [GetFourthParliamentPartyName]."
-# general election - danteee
-  parliament_general_election_tooltip:0 "This Will Trigger a General Election"
-  parliament_general_election_tooltip:0 "National Construction Projects"
-  parliament_general_election_tooltip_desc:0 "With over 51% of our seats occupied by members of the [GetSecondParliamentPartyName], we can start National Construction Projects. Current [GetSecondParliamentPartyName] popularity: [?second_party_popularity|%Y]"
-  call_general_election:0 "Call General Election"
-  call_general_election_desc:0 "With over 51% of our seats occupied by members of the [GetSecondParliamentPartyName], we can call a general election. Current [GetSecondParliamentPartyName] popularity: [?second_party_popularity|%Y]"
+
 
   parliament_lose_1_party_1_tooltip:0 "Lose §Y1§! Members of [GetFirstParliamentPartyName]."
   parliament_lose_1_party_2_tooltip:0 "Lose §Y1§! Members of [GetSecondParliamentPartyName]."

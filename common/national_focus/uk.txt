@@ -6968,7 +6968,7 @@ focus_tree = {
 			}
 		}
 		offset = {
-			x = -1
+			x = 1
 			y = 0
 			trigger = {
 				has_game_rule = {
@@ -7709,7 +7709,7 @@ focus_tree = {
 		prerequisite = { focus = ENG_steady_as_she_goes }
 		mutually_exclusive = { focus = ENG_global_defense }
 		icon = GFX_focus_generic_home_defense
-		x = 5
+		x = 7
 		y = 1
 		offset = {
 			x = -5
@@ -7719,7 +7719,7 @@ focus_tree = {
 			}
 		}
 		offset = {
-			x = -5
+			x = -7
 			y = 0
 			trigger = {
 				has_game_rule = {
@@ -7829,32 +7829,48 @@ focus_tree = {
 	}
 
 	focus = {
-		id = ENG_call_general_election
+		id = ENG_call_general_election_labour
 		available = {
-			NOT = { has_country_flag = parliament_has_ongoing_law }
-			check_variable = { second_party_popularity > 0.51 }
-		} #UK at war with fascist/commie. iraq is fascist/commie
+			hidden_trigger = {
+				
+			
+			 NOT = { has_country_flag = parliament_has_ongoing_law }
+            check_variable = { second_party_popularity > 0.51 }
+			}
+}
 
-		
+	custom_trigger_tooltip = {
+	    tooltip = ENG_call_general_election_tt
+	}
 
-		prerequisite = { focus = ENG_home_defence }
-		icon = GFX_goal_generic_occupy_states_ongoing_war
-		x = -1
-		y = 5
-		
+		prerequisite = { focus = ENG_home_defence focus = ENG_global_defense }
+		icon = GFX_focus_PER_strengthen_the_tudeh
+		x = -8
+		y = 1
+		offset = {
+			x = 4
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ENG_global_defense
+			}
+		}
 		relative_position_id = ENG_home_defence
 		cost = 10
 		ai_will_do = {
 			factor = 1
 		}	
 		completion_reward = {
-			effect_tooltip = { 
-				set_party_name = {
+			custom_effect_tooltip = ENG_call_general_election_tt
+	
+			set_party_name = {
 					ideology = democratic
 					long_name = "The Labour Party"
-					short_name = "Labour"
+					name = "Labour"
 				}
-			}
 			add_country_leader_role = {
 				character = ENG_clement_attlee
 				promote_leader = yes
@@ -7862,7 +7878,7 @@ focus_tree = {
 					ideology = socialism
 					expire = "1965.1.1"
 					traits = {
-						social_democrat
+						democratic_socialist
 					}
 				}
 			}	
@@ -7948,7 +7964,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_embargo_ussr 
-		prerequisite = { focus = uk_iran_focus focus = ENG_no_further_appeasement }
+		prerequisite = { focus = ENG_call_general_election_labour focus = ENG_no_further_appeasement }
 
 		allow_branch = {
 			if = {
@@ -7985,7 +8001,7 @@ focus_tree = {
 			has_war_with = SOV
 		}
 		icon = GFX_goal_generic_trade
-		x = 0
+		x = -2
 		y = 1
 		relative_position_id = uk_iran_focus
 		cost = 5
@@ -8099,9 +8115,9 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
-		prerequisite = { focus = ENG_military_training_act }
+		prerequisite = { focus = ENG_military_training_act focus = uk_iran_focus }
 		icon = GFX_goal_generic_trade
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = ENG_military_training_act
 		cost = 5
