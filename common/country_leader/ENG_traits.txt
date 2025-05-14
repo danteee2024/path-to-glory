@@ -17,7 +17,12 @@ leader_traits = {
 		# MODIFIERS will be listed here
 		
 	}
-	
+	democratic_socialist = {
+		stability_factor = 0.1
+		consumer_goods_factor = -0.05
+		democratic_acceptance = 25
+		democratic_drift = 0.05
+	}
 	king_of_england = {
 		war_support_factor = 0.25
 		stability_factor = 0.25

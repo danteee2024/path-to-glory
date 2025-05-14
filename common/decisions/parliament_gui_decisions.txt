@@ -543,4 +543,7 @@ parliament_gui_decision_category = {
 			factor = 1
 		}
 	}
+	#path to glory - danteee
+	
+	
 }

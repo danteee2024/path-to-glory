@@ -424,6 +424,25 @@
  britain.53.desc:0 "Ireland has declined our gracious offer to join our Union. We will not allow this affront to continue as we must liberate the workers of Ireland.\n\nOur resolve is now being tested. Will we allow the workers of Ireland to continune being subjected to injustices or will we mobilize and make our demands with force?"
  britain.53.a:0 "Mobilize the Army."
 
+  
+ ENG_democratic_party_labour:0 "Labour Party" 
+ ENG_democratic_party_labour_long:0 "The Labour Party"  
+
+ democratic_socialist:0 "Democratic Socialist"
+ ENG_call_general_election_tt:0 "With over 51% of our seats occupied by members of the [GetSecondParliamentPartyName], we can call a General Election. Current [GetSecondParliamentPartyName] popularity: [?second_party_popularity|%Y]         " #leave this gap
+
+
+
+ ENG_call_general_election_labour:0 "Call General Election"
+ ENG_call_general_election_labour_desc:0 "With our majority in Parliament, we can call a General Election. This will allow us to solidify our power and ensure that the Labour Party remains in control of the government."
+
+
+
+
+
+
+
+
 ################################### OTHER\n                     \n      §H§!
  
  eng_offers_of_protection:0 "Offers of Protection"
