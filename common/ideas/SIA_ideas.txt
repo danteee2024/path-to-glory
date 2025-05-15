@@ -1,0 +1,1225 @@
+# This only tells the game that you have NATIONAL SPIRITs stored here
+ideas = {
+	country = {
+	
+		### EXPLANATORY IDEA
+		AFK_explanatoryidea_I = {
+			picture = GFX_thisgfxiswrong
+			
+			# If CONDITIONS in "available" are not satisfied, this IDEA will be REMOVED
+			available = {
+				# CONDITIONS listed here
+			
+			}
+			
+			# This stays always the same
+			removal_cost = -1
+
+			# MODIFIERS that this IDEA gives
+			modifier = {
+				# MODIFIERS listed here
+				
+			}
+			
+			
+			
+			### OTHER POSSIBLE THINGS (not often used, but will list it here - if you want to use them, just copy them to the EXEMPLARY IDEA bellow)
+			# TARGETED MODIFIERS that this IDEA provides
+			targeted_modifier = {
+				tag = AFK 
+				
+				# TARGETED MODIFIERS listed here
+				
+			}
+			
+			# What happens when you GET this IDEA
+			on_add = {
+				# EFFECTS listed here
+				
+			}
+			# What happens when you LOOSE/REMOVE this IDEA
+			on_remove = {
+				# EFFECTS listed here
+				
+			}
+			
+			# Rules you must follow when you have this IDEA (for example can't declare war, can't join factions, etc)
+			rule = {
+				# RULES listed here
+			}
+		}
+		
+		SIA_Pad_Thai = {
+			picture = pad_thai
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				supply_consumption_factor = -0.5
+			}
+		}
+		
+		SIA_Pad_Thai_II = {
+			picture = pad_thai
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				supply_consumption_factor = -0.10
+				political_power_cost = 0.05
+			}
+		}
+		
+		SIA_Yellow_Dossier = {
+			picture = yellow_dossier
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.05
+				communism_drift = 0.05
+			}
+		}
+		
+		SIA_Yellow_Dossier_Expanded = {
+			picture = yellow_dossier_expanded
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.15
+				production_speed_buildings_factor = 0.2
+				industrial_capacity_factory = 0.1
+				communism_drift = 0.1
+			}
+		}
+		
+		SIA_Peoples_Dictatorship = {
+			picture = peoples_dictator
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.015
+				production_speed_buildings_factor = 0.15
+				industrial_capacity_factory = 0.05
+				communism_drift = 0.1
+			}
+		}
+		
+		SIA_The_Permanent_Revolution = {
+			picture = por_iberian_workers_united
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				boost_ideology_mission_factor = 0.5
+				operation_coup_government_outcome = 0.33
+				send_volunteer_divisions_required = -1.0
+				send_volunteers_tension = -0.5
+				send_volunteer_size = 8
+			}
+		}
+		
+		SIA_spies = {
+			picture = nkvd_2
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				intel_network_gain_factor = 0.25
+				subversive_activites_upkeep = -0.25
+				foreign_subversive_activites = -0.33
+				agency_upgrade_time = -0.2
+				operative_slot = 2
+			}
+		}
+		
+		SIA_Asian_Revolution = {
+			picture = generic_communism_drift_bonus
+			
+			available = {
+				
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				communism_drift = 0.05
+				communism_acceptance = 25
+			}
+		}
+		
+		SIA_Stalinism = {
+			picture = stalinism
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.15
+				consumer_goods_factor = -0.05
+				justify_war_goal_time = -0.25
+				puppet_cost_factor = -0.2
+			}
+		}
+		
+		SIA_Rural_Economic_Subsidies = {
+			picture = rural_subsidies
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.025
+				conscription = 0.02
+				drift_defence_factor = 0.5
+			}
+		}
+		
+		SIA_Redistribute_Land = {
+			picture = redistribute_land
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.025
+				global_building_slots_factor = 0.15
+			}
+		}
+		
+		SIA_State_Welfare = {
+			picture = state_welfare
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.025
+				industrial_capacity_factory = 0.05
+				political_power_factor = -0.05
+			}
+		}
+		
+		SIA_Rama_VII = {
+			picture = rama_vii
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.1
+			}
+		}
+		
+		SIA_Civilian_Wing_Opposition = {
+			picture = civilian_opposition
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.2
+				political_power_cost = 0.5
+			}
+		}
+		
+		SIA_Military_Opposition = {
+			picture = military_opposition
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.15
+				political_power_cost = 0.5
+			}
+		}
+		
+		SIA_Purge_the_Fascists = {
+			picture = generic_fascism_banned
+			
+			available = {
+				tag = SIA
+			}
+			
+			allowed_civil_war = { TAG = SIA }
+			
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.2
+				fascism_drift = -0.2
+				political_power_cost = 0.75
+			}
+		}
+		
+		SIA_Purge_the_Communists = {
+			picture = generic_communism_banned
+			
+			available = {
+				tag = SIA
+			}
+			
+			allowed_civil_war = { TAG = SIA }
+			
+			removal_cost = -1
+
+			modifier = {
+				communism_drift = -0.20
+				political_power_cost = 0.75
+			}
+		}
+		
+		SIA_Military_in_Power = {
+			picture = military_in_power
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				fascism_drift = 0.05
+			}
+		}
+		
+		SIA_March_on_Rome = {
+			picture = march_rome
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				fascism_drift = 0.1
+				war_support_factor = 0.2
+			}
+		}
+		
+		SIA_Puppeted_Monarchy = {
+			picture = puppeted_monarchy
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				neutrality_drift = -0.1
+			}
+		}
+		
+		SIA_Public_Education = {
+			picture = public_education
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+		
+		SIA_Supreme_Council_Of_Science = {
+			picture = surpeme_science
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+		
+		SIA_Empowered_Civilian_Wing = {
+			picture = empowered_civilians
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				communism_drift = 0.05
+				democratic_drift = 0.1
+			}
+		}
+		
+		SIA_Repealed_Anti_Communist_Act = {
+			picture = generic_communism_drift_bonus
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				democratic_drift = 0.05
+				communism_drift = 0.1
+			}
+		}
+		
+		SIA_Empowered_Rama_VII = {
+			picture = rama_vii
+			
+			available = {
+				tag = SIA
+			}
+			
+			allowed_civil_war = { TAG = SIA }
+			
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.25
+				neutrality_drift = 0.10
+				consumer_goods_factor = 0.15
+			}
+		}
+		
+		SIA_Phrayas_Support = {
+			picture = phraya
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.20
+				stability_factor = 0.1
+				neutrality_drift = 0.05
+			}
+		}
+		
+		SIA_Phrayas_President = {
+			picture = phraya
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.3
+				stability_factor = 0.1
+				neutrality_drift = 0.05
+				war_support_factor = 0.1
+			}
+		}
+		
+		SIA_Supreme_Council = {
+			picture = supreme_council
+			
+			available = {
+				tag = SIA
+			}
+			
+			allowed_civil_war = { TAG = SIA }
+			
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.15
+				neutrality_drift = 0.1
+				
+				political_advisor_cost_factor = -0.25
+				#trade_laws_cost_factor = -0.25
+				mobilization_laws_cost_factor = -0.25
+				#economy_cost_factor = -0.25
+				high_command_cost_factor = -0.25
+				air_chief_cost_factor = -0.25
+				army_chief_cost_factor = -0.25
+				navy_chief_cost_factor = -0.25
+			}
+		}
+		
+		SIA_Protect_Asia = {
+			picture = protect_asia
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				send_volunteer_divisions_required = -1
+				send_volunteers_tension = -1
+				send_volunteer_size = 12
+				
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.15
+			}
+		}
+		
+		SIA_National_Economic_Council = {
+			picture = economic_council
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {				
+				political_advisor_cost_factor = -0.25
+				trade_laws_cost_factor = -0.25
+				#mobilization_laws_cost_factor = -0.25
+				economy_cost_factor = -0.25
+				
+				consumer_goods_factor = -0.15
+			}
+		}
+		
+		SIA_Supreme_Council_Of_Economics = {
+			picture = surpeme_ecnomics
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {				
+				#political_advisor_cost_factor = -0.25
+				trade_laws_cost_factor = -0.25
+				mobilization_laws_cost_factor = -0.25
+				economy_cost_factor = -0.25
+				
+				local_resources_factor = 0.1
+				
+				consumer_goods_factor = -0.10
+			}
+		}
+		
+		SIA_Peoples_Assembly = {
+			picture = peoples_assembly
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {				
+				political_power_factor = 0.10
+				stability_weekly = 0.005
+			}
+		}
+		
+		SIA_Thammasat_University = {
+			picture = thammasat
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {				
+				research_speed_factor = 0.05
+			}
+		}
+		
+		SIA_Divine_Leadership = {
+			picture = chakri
+			
+			available = {
+				tag = SIA
+			}
+			
+			allowed_civil_war = { TAG = SIA }
+			
+			removal_cost = -1
+
+			modifier = {
+				army_morale_factor = 0.1
+				army_attack_factor = 0.1
+			}
+		}
+		
+		SIA_Legacy_of_Ayutthaya = {
+			picture = legacy_ayu
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				puppet_cost_factor = -0.50
+				trade_opinion_factor = 1.0
+				local_resources_factor = 0.2
+				subjects_autonomy_gain = -1.0
+			}
+		}
+		
+		SIA_Great_Kingdom_of_Thailand = {
+			picture = great_thai
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.015
+				surrender_limit = 0.5
+			}
+		}
+		
+		SIA_Revenge_Against_Burma = {
+			picture = revenge_burma
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			targeted_modifier = {
+				tag = RAJ
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.10
+			}
+		}
+		
+		SIA_Revenge_Against_France = {
+			picture = generic_war_preparation
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			targeted_modifier = {
+				tag = FRA
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+		}
+		
+		SIA_Revenge_Against_ENG = {
+			picture = generic_war_preparation
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			targeted_modifier = {
+				tag = ENG
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+		}
+		
+		SIA_Volunteers_for_China = {
+			picture = generic_volunteer_expedition_bonus
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			targeted_modifier = {
+				tag = CHI
+				send_volunteer_divisions_required = -1
+				send_volunteers_tension = -1
+				send_volunteer_size = 8
+			}
+		}
+		
+		SIA_Cultural_Mandate_1 = {
+			picture = generic_intel_bonus
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = 0.25
+			}
+		}
+		
+		SIA_Cultural_Mandate_2_3 = {
+			picture = generic_intel_bonus
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = 0.25
+			
+				drift_defence_factor = 0.5
+				stability_weekly = 0.01
+			}
+		}
+		
+		SIA_Cultural_Mandate_4 = {
+			picture = generic_intel_bonus
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+			
+				conscription_factor = 0.50
+			
+				drift_defence_factor = 0.5
+				stability_weekly = 0.01
+				
+				weekly_manpower = 500
+				war_support_weekly = 0.01
+			}
+		}
+		
+		SIA_Cultural_Mandate_5 = {
+			picture = generic_intel_bonus
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = 0.50
+			
+				drift_defence_factor = 0.5
+				stability_weekly = 0.01
+				
+				weekly_manpower = 500
+				war_support_weekly = 0.01
+			
+				consumer_goods_factor = -0.1
+			}
+		}
+		
+		SIA_Cultural_Mandate_7 = {
+			picture = generic_intel_bonus
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+			
+				conscription_factor = 0.50
+			
+				drift_defence_factor = 0.5
+				stability_weekly = 0.01
+				
+				weekly_manpower = 500
+				war_support_weekly = 0.01
+			
+				consumer_goods_factor = -0.1
+			
+				industrial_capacity_factory = 0.05
+			}
+		}
+		
+		SIA_Cultural_Mandate_11 = {
+			picture = generic_intel_bonus
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = 0.50
+			
+				drift_defence_factor = 0.5
+				stability_weekly = 0.02
+				
+				weekly_manpower = 500
+				war_support_weekly = 0.01
+			
+				consumer_goods_factor = -0.1
+			
+				industrial_capacity_factory = 0.1
+			}
+		}
+		
+		## Six Principles
+		
+		SIA_Supreme_Power_of_Thai_People = {
+			picture = supreme_power
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.10
+			}
+		}
+		
+		SIA_National_Security = {
+			picture = national_security
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		
+		SIA_Economic_Welfare = {
+			picture = economic_welfare
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+		
+		SIA_Equality_of_Thai_People = {
+			picture = equality
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = 0.15
+			}
+		}
+				
+		SIA_Rights_and_Liberties = {
+			picture = rights_and_liberties
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				compliance_growth = 0.05
+			}
+		}
+		
+		SIA_New_Thai_Military_Academies = {
+			picture = generic_army_war_college
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				army_leader_cost_factor = -0.25
+				army_leader_start_level = 2
+				experience_gain_factor = 0.1
+				command_power_gain_mult = 0.4
+			}
+		}
+		
+		SIA_Royal_Thai_Marine_Corps = {
+			picture = marines
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				special_forces_training_time_factor = -0.25
+				marines_special_forces_contribution_factor = -0.25
+				special_forces_no_supply_grace = 120
+				special_forces_cap_flat = 4
+			}
+		}
+		
+		SIA_Interdiction_Focus = {
+			picture = generic_army_war_college
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			equipment_bonus = {
+				submarine = {
+					build_cost_ic = -0.2 instant = yes
+				}
+			}
+		}
+		
+		SIA_Escort_Focus = {
+			picture = generic_army_war_college
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			equipment_bonus = {
+				destroyer = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				light_cruiser = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		
+		SIA_Artillery_Production = {
+			picture = generic_artillery_regiments
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			equipment_bonus = {
+				artillery_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				
+				anti_air_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				
+				anti_tank_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		
+		SIA_Arms_Production = {
+			picture = generic_artillery_regiments
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				
+				support_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		
+		SIA_Armor_Production = {
+			picture = generic_artillery_regiments
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			equipment_bonus = {
+				medium_tank_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				
+				motorized_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				
+				mechanized_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		
+		SIA_CAS_Focus = {
+			picture = generic_artillery_regiments
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			equipment_bonus = {
+				cas = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		
+		SIA_Fighter_Focus = {
+			picture = generic_artillery_regiments
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			equipment_bonus = {
+				fighter = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		
+		SIA_Naval_Focus = {
+			picture = generic_artillery_regiments
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			equipment_bonus = {
+				naval_bomber = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		
+		SIA_Thai_Neutrality = {
+			picture = neutrality_idea
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+
+			cancel = {
+				has_war = yes
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				join_faction_tension = 1.00
+				send_volunteers_tension = 0.20
+				guarantee_tension = 1.0
+				embargo_threshold_factor = 2.5
+				ai_badass_factor = 0.01    # Will receive 1% of the threat from others
+				ai_get_ally_desire_factor = -100
+			}
+		}
+		
+		SIA_Great_Depression_I = {
+			picture = great_depression
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				#political_power_factor = -0.4
+				local_resources_factor = -0.4
+				conscription_factor = -0.4
+				consumer_goods_factor = 0.4
+			}
+		}
+		
+		SIA_Great_Depression_II = {
+			picture = great_depression
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				#political_power_factor = -0.3
+				local_resources_factor = -0.3
+				conscription_factor = -0.3
+				consumer_goods_factor = 0.3
+			}
+		}
+		
+		SIA_Great_Depression_III = {
+			picture = great_depression
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				#political_power_factor = -0.2
+				local_resources_factor = -0.2
+				conscription_factor = -0.2
+				consumer_goods_factor = 0.2
+			}
+		}
+		
+		SIA_Great_Depression_IV = {
+			picture = great_depression
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				#political_power_factor = -0.1
+				local_resources_factor = -0.1
+				conscription_factor = -0.1
+				consumer_goods_factor = 0.1
+			}
+		}
+	}
+	
+	industrial_concern = {
+	
+		SIA_Royal_Railways = { 
+
+			picture = generic_railroads
+
+			allowed = {
+				original_TAG = SIA
+
+			}
+			
+			available = {
+				has_completed_focus = SIA_Expand_Royal_Railway
+			}
+
+			cost = 75
+
+			research_bonus = {
+				train_tech = 0.1
+			}
+
+			traits = { railway_company }
+		}
+	
+	}
+}
