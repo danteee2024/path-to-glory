@@ -1,0 +1,102 @@
+ideas = {
+	foreign_investors = {
+		law = yes
+		use_list_view = yes
+
+		fdi_encouraged = {
+			available = { 
+			OR = {
+					has_government = neutrality
+					has_government = democratic
+					}	
+			}
+
+			level = 4
+			modifier = {
+				political_power_factor = -0.06
+				industrial_capacity_factory = 0.04
+				industrial_capacity_dockyard = 0.04
+				production_speed_industrial_complex_factor = 0.04
+				production_speed_arms_factory_factor = 0.04
+				production_speed_dockyard_factor = 0.04
+				research_speed_factor = 0.02
+				local_resources_factor = 0.06
+				trade_opinion_factor = 0.10
+				consumer_goods_factor = -0.04
+				stability_factor = -0.1
+				opposition_party_drift = 0.03
+				civilian_intel_to_others = 5.0
+			}
+			
+		}
+		fdi_allowed = {
+			available = { 
+			OR = {
+					has_government = neutrality
+					has_government = democratic
+					has_government = fascism
+					}	
+			}
+			level = 3
+			modifier = {
+				political_power_factor = -0.02
+				industrial_capacity_factory = 0.02
+				industrial_capacity_dockyard = 0.02
+				production_speed_industrial_complex_factor = 0.02
+				production_speed_arms_factory_factor = 0.02
+				production_speed_dockyard_factor = 0.02
+				local_resources_factor = 0.03
+				trade_opinion_factor = 0.05
+				consumer_goods_factor = -0.02
+				research_speed_factor = 0.01
+				stability_factor = -0.05
+				opposition_party_drift = 0.02
+				civilian_intel_to_others = 3.0
+			}
+			
+		}
+		
+		fdi_regulated = {
+			
+			level = 2
+			modifier = {
+				political_power_factor = 0.02
+				industrial_capacity_factory = -0.02
+				industrial_capacity_dockyard = -0.02
+				production_speed_industrial_complex_factor = -0.02
+				production_speed_arms_factory_factor = -0.02
+				production_speed_dockyard_factor = -0.02
+				research_speed_factor = -0.010
+				stability_factor = 0.05
+				local_resources_factor = -0.03
+				trade_opinion_factor = -0.05
+				opposition_party_drift = 0.01
+				civilian_intel_to_others = 1.0
+			}
+			
+		}
+
+		fdi_banned = {
+			available = { 
+			OR = {
+					has_government = communism
+					has_government = fascism
+					}	
+			}
+			level = 1
+			modifier = {
+				political_power_factor = 0.06
+				industrial_capacity_factory = -0.04
+				industrial_capacity_dockyard = -0.04
+				production_speed_industrial_complex_factor = -0.04
+				production_speed_arms_factory_factor = -0.04
+				production_speed_dockyard_factor = -0.04
+				research_speed_factor = -0.02
+				local_resources_factor = -0.06
+				trade_opinion_factor = -0.10
+				stability_factor = 0.1
+			}
+		}
+	}
+}
+### EOF ###

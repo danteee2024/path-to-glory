@@ -1,0 +1,132 @@
+ideas = {
+
+	taxation_policies = {
+		law = yes
+		use_list_view = yes
+		
+		very_high_taxation = {
+			picture = very_high_taxation
+		
+			available = {
+				
+				NOT = {
+				has_government = communism
+				has_country_leader_ideology = anarchism
+				}
+			}
+			
+			cost = 100
+			removal_cost = -1
+			level = 1
+			
+			modifier = {
+				consumer_goods_factor = -0.2
+				political_power_factor = 0.15
+				stability_factor = -0.15
+				research_speed_factor = -0.05
+				drift_defence_factor = -0.5
+			}
+			
+			cancel_if_invalid = yes
+		}
+		
+		high_taxation = {
+			picture = high_taxation
+		
+			available = {
+				NOT = {
+				has_government = communism
+				has_country_leader_ideology = anarchism
+				}
+			}
+			
+			cost = 100
+			removal_cost = -1
+			level = 2
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				political_power_factor = 0.1
+				research_speed_factor = -0.05
+				drift_defence_factor = -0.4
+			}
+			
+			cancel_if_invalid = yes
+		}
+		
+		standard_taxation = {
+			picture = standard_taxation
+		
+			available = {
+				NOT = {
+				has_government = communism
+				has_country_leader_ideology = anarchism
+				}
+			}
+			
+			cost = 100
+			removal_cost = -1
+			level = 3
+			
+			modifier = {
+				political_power_factor = 0.05
+			}
+			
+			default = yes
+			
+			cancel_if_invalid = yes
+		}
+		
+		low_taxation = {
+			picture = low_taxation
+		
+			available = {
+				NOT = {
+				has_government = communism
+				has_country_leader_ideology = anarchism
+				}
+			}
+			
+			cost = 100
+			removal_cost = -1
+			level = 4
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+				stability_factor = 0.05
+				research_speed_factor = 0.05
+				drift_defence_factor = 0.3
+			}
+			
+			cancel_if_invalid = yes
+		}
+		
+		very_low_taxation = {
+			picture = very_low_taxation
+		
+			available = {
+				NOT = {
+				has_government = communism
+				has_country_leader_ideology = anarchism
+				has_government = fascism
+				}
+			}
+			
+			cost = 100
+			removal_cost = -1
+			level = 5
+			
+			modifier = {
+				political_power_factor = -0.05
+				consumer_goods_factor = 0.2
+				stability_factor = 0.10
+				research_speed_factor = 0.1
+				drift_defence_factor = 0.5
+			}
+			
+			cancel_if_invalid = yes
+		}
+
+		
+	}
+}

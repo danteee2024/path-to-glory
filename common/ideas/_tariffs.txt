@@ -1,0 +1,98 @@
+ideas = {
+	tariffs = {
+		law = yes
+		use_list_view = yes
+
+		tariffs_none = {
+			available = { 
+			OR = {
+					has_government = democratic
+					}	
+			}
+			level = 5
+			modifier = {
+				production_speed_dockyard_factor = -0.08
+				production_speed_arms_factory_factor = -0.08
+				production_speed_industrial_complex_factor = -0.04
+				production_factory_efficiency_gain_factor = -0.10
+				consumer_goods_factor = -0.08
+				industrial_capacity_factory = -0.10				
+				license_purchase_cost = -0.20
+				license_production_speed = 0.10	
+			}
+			research_bonus = { 
+				industry = 0.05
+			} 
+			
+		}
+		tariffs_low = {
+			available = { 
+			
+			}
+			level = 4
+			modifier = {
+				production_speed_dockyard_factor = -0.04
+				production_speed_arms_factory_factor = -0.04
+				production_factory_efficiency_gain_factor = -0.05
+				consumer_goods_factor = -0.04
+				industrial_capacity_factory = -0.05				
+				license_purchase_cost = -0.10
+				license_production_speed = 0.05
+			}
+			
+		}
+		tariffs_average = {
+			level = 3 
+			modifier = {
+				production_speed_industrial_complex_factor = 0.02
+			}
+			research_bonus = { 
+				industry = -0.05
+			}
+			
+		}
+		tariffs_high = {
+			level = 2 
+			modifier = {
+				production_speed_dockyard_factor = 0.04
+				production_speed_arms_factory_factor = 0.04
+				production_speed_industrial_complex_factor = 0.08
+				production_factory_efficiency_gain_factor = 0.05
+				production_speed_fuel_silo_factor = 0.05
+				consumer_goods_factor = 0.02
+				stability_factor = -0.025
+				industrial_capacity_factory = 0.05				
+				license_purchase_cost = 0.10
+				license_production_speed = -0.05
+			}
+			research_bonus = { 
+				industry = -0.10
+			} 
+		}
+		tariffs_extreme = {
+			available = { 
+			OR = {
+					has_government = fascism
+					has_government = communism
+					}	
+			}
+			level = 1 
+			modifier = {
+				production_speed_dockyard_factor = 0.08
+				production_speed_arms_factory_factor = 0.08
+				production_speed_industrial_complex_factor = 0.12
+				production_factory_efficiency_gain_factor = 0.10
+				production_speed_fuel_silo_factor = 0.10
+				consumer_goods_factor = 0.06
+				stability_factor = -0.05
+				industrial_capacity_factory = 0.1				
+				license_purchase_cost = 0.20
+				license_production_speed = -0.1
+			}
+			research_bonus = { 
+				industry = -0.15
+			} 
+		}
+	}
+}
+### EOF ###

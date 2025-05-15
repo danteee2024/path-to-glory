@@ -1,0 +1,416 @@
+ideas = {
+	
+	trade_unions = {
+		law = yes
+		use_list_view = yes
+		
+		trade_unions_banned = {
+			picture = trade_unions_banned
+		
+			available = {
+				NOT = {
+				has_government = democratic
+				has_government = communism
+				}
+			}
+			
+	        cost = 100
+			removal_cost = -1
+			level = 5
+
+			modifier = {
+				industrial_capacity_dockyard = 0.1
+				industrial_capacity_factory = 0.1
+				stability_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.15
+			}
+			
+			cancel_if_invalid = yes
+		}
+		
+		trade_unions_restricted = {
+			picture = trade_unions_restricted
+		
+			available = {
+				NOT = {
+				has_government = democratic
+				}
+			}
+			
+	        cost = 100
+			removal_cost = -1
+			level = 4
+
+			modifier = {
+				industrial_capacity_dockyard = 0.05
+				industrial_capacity_factory = 0.05
+				stability_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.075
+			}
+			
+			cancel_if_invalid = yes
+		}
+		
+		trade_unions_anticommie = {
+			picture = trade_unions_anticommie
+		
+			available = {
+				NOT = {
+				has_government = communism
+				has_government = fascism
+				has_country_leader_ideology = socialism
+				}
+			}
+			
+	        cost = 100
+			removal_cost = -1
+			level = 3
+			
+			default = yes
+			
+			cancel_if_invalid = yes
+		}
+		
+		trade_unions_free = {
+			picture = trade_unions_free
+		
+			available = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+			
+	        cost = 100
+			removal_cost = -1
+			level = 2
+
+			modifier = {
+				industrial_capacity_dockyard = -0.05
+				industrial_capacity_factory = -0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+			}
+			
+			cancel_if_invalid = yes
+		}
+	}
+	
+	population_growth = {
+		law = yes
+		use_list_view = yes
+		
+		enforced = {
+			picture = enforced
+		
+			available = {
+				NOT = { has_government = democratic }
+			}
+			
+			cost = 100
+			removal_cost = -1
+			level = 1
+			
+			modifier = {
+				monthly_population = 0.35
+				consumer_goods_factor = 0.05
+				political_power_factor = -0.05
+			}
+			
+			cancel_if_invalid = yes
+		}
+		
+		encouraged = {
+			picture = encouraged
+			
+			cost = 100
+			removal_cost = -1
+			level = 2
+			
+			modifier = {
+				monthly_population = 0.15
+				consumer_goods_factor = 0.04
+				political_power_factor = -0.025
+			}
+			
+			cancel_if_invalid = yes
+		}
+		
+		stagnation = {
+			picture = stagnation
+			
+			cost = 100
+			removal_cost = -1
+			level = 3
+			
+			modifier = {
+				monthly_population = 0.025
+			}
+			
+			default = yes
+			
+			cancel_if_invalid = yes
+		}
+		
+		disencouraged = {
+			picture = disencouraged
+		
+			available = {
+				NOT = { has_government = fascism }
+			}
+			
+			cost = 100
+			removal_cost = -1
+			level = 4
+			
+			modifier = {
+				monthly_population = -0.15
+				consumer_goods_factor = -0.04
+				political_power_factor = 0.025
+			}
+			
+			cancel_if_invalid = yes
+		}
+		
+		plummet = {
+			picture = plummet
+		
+			available = {
+				NOT = { 
+				has_government = fascism 
+				has_government = democratic
+				}
+			}
+			
+			cost = 100
+			removal_cost = -1
+			level = 5
+			
+			modifier = {
+				monthly_population = -0.3
+				consumer_goods_factor = -0.16
+				stability_factor = -0.05
+				stability_weekly = -0.004
+				political_power_factor = 0.05
+			}
+			
+			cancel_if_invalid = yes
+		}
+	}
+	
+	penal_system = {
+		law = yes
+		use_list_view = yes
+	
+		penal_slavery = {
+			picture = slave
+		
+			available = {
+				NOT = { 
+				has_government = democratic
+				}
+			}
+			
+			cost = 100
+			removal_cost = -1
+			level = 1
+			
+			modifier = {
+				consumer_goods_factor = -0.10
+				industry_free_repair_factor = 1.2
+				industry_repair_factor = 0.75
+				monthly_population = -0.2
+				production_speed_buildings_factor = 0.1
+				stability_factor = -0.15
+				research_speed_factor = -0.05
+				conscription_factor = -0.05
+			}
+			
+			cancel_if_invalid = yes
+		}
+		
+		capital_punishment = {
+			picture = capital_punishment
+		
+			available = {
+				NOT = { 
+				has_country_leader_ideology = socialism
+				}
+			}
+			
+			cost = 100
+			removal_cost = -1
+			level = 2
+			
+			modifier = {
+				consumer_goods_factor = -0.04
+				industry_free_repair_factor = 0.8
+				industry_repair_factor = 0.5
+				monthly_population = -0.1
+				production_speed_buildings_factor = 0.05
+				stability_factor = -0.075
+				research_speed_factor = -0.025
+				conscription_factor = -0.025
+			}
+			
+			default = yes
+			
+			cancel_if_invalid = yes
+		}
+		
+		penal_labour = {
+			picture = penal_labour
+			
+			cost = 100
+			removal_cost = -1
+			level = 3
+			
+			modifier = {
+				consumer_goods_factor = -0.04
+				industry_free_repair_factor = 0.4
+				industry_repair_factor = 0.25
+			}
+			
+			cancel_if_invalid = yes
+		}
+		
+		incarceration = {
+			picture = incarceration
+		
+			available = {
+				
+			}
+			
+			cost = 100
+			removal_cost = -1
+			level = 4
+			
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.1
+			}
+			
+			cancel_if_invalid = yes
+		}
+		
+		rehabilitation = {
+			picture = rehabilitation
+		
+			available = {
+				OR = {
+					has_country_leader_ideology = socialism
+					has_country_leader_ideology = liberalism
+				}
+			}
+			
+			cost = 100
+			removal_cost = -1
+			level = 5
+			
+			modifier = {
+				research_speed_factor = 0.1
+				political_power_factor = -0.1
+				stability_factor = 0.1
+				consumer_goods_factor = 0.07
+			}
+			
+			cancel_if_invalid = yes
+		}
+	}
+	firearms = {
+	
+		law = yes
+		use_list_view = yes
+		
+		nogun_idea = {
+				
+			available = {
+				OR = {
+					
+					has_government = communism
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+			
+			cost = 100
+			removal_cost = 0
+			level = 1
+	
+			modifier = {
+				political_power_factor = 0.05
+				stability_factor = 0.05
+				army_core_attack_factor = -0.02
+				army_core_defence_factor = -0.02
+				resistance_activity = -0.10
+			}
+
+			cancel_if_invalid = no
+			
+			picture = nogun
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		licensegun_idea = {
+				
+			available = {
+					
+			}
+			
+			cost = 100
+			removal_cost = 0
+			level = 2
+	
+			modifier = {
+				political_power_factor = -0.05
+				stability_factor = 0.002
+				required_garrison_factor = 0.05
+				}				
+
+			cancel_if_invalid = no
+			
+			picture = licensegun
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		yesgun_idea = {
+			available = {
+				OR = {
+					
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			
+			cost = 100
+			removal_cost = 0
+			level = 3
+	
+			modifier = {
+				political_power_factor = 0.05
+				war_support_factor = 0.03
+				stability_factor = -0.05
+				monthly_population = 0.01
+				resistance_activity = 0.10
+				required_garrison_factor = 0.08
+				resistance_damage_to_garrison_on_our_occupied_states = 0.05
+				army_core_attack_factor = 0.12
+				army_core_defence_factor = 0.15
+			}
+
+			cancel_if_invalid = no
+			
+			picture = yesgun
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

@@ -1,0 +1,90 @@
+ideas = {
+
+	welfare = { 
+		law = yes
+		use_list_view = yes
+
+		PB_Generous_Welfare = {
+						
+			
+
+			available = {
+			
+				
+			}
+			
+            picture = PB_Generous_Welfare
+                  	level = 4
+			modifier = {
+				monthly_population = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				political_power_factor = 0.1
+				consumer_goods_factor = 0.05
+				stability_factor = 0.05
+				
+			}
+			
+			cancel_if_invalid = yes
+		}
+
+		PB_Limited_Welfare = {
+						
+			
+
+			available = { 
+				
+			}
+			
+            picture = PB_Limited_Welfare
+                  	level = 3
+			modifier = {
+				monthly_population = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				political_power_factor = 0.05
+				stability_factor = 0.025
+				consumer_goods_factor = 0.03
+			}
+			
+			cancel_if_invalid = yes
+		}
+
+		PB_Basic_Welfare = {
+						
+			
+
+			available = { 
+				
+			}
+			
+            picture = PB_Basic_Welfare
+                  	level = 2
+			modifier = {
+				political_power_factor = 0.025
+				stability_factor = 0.025
+				monthly_population = 0.05
+				production_factory_max_efficiency_factor = 0.025
+			}
+			
+			cancel_if_invalid = yes
+		}
+
+		PB_No_Welfare = {
+						
+		
+
+			available = { 
+				
+			}
+			
+            picture = PB_No_Welfare
+                  	level = 1
+			modifier = {
+				monthly_population = -0.10
+				stability_factor = -0.05
+				consumer_goods_factor = -0.05
+			}
+			
+			cancel_if_invalid = yes
+		}
+	}
+}

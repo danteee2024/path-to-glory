@@ -1,0 +1,130 @@
+ideas = {
+
+	labour_laws = { 
+		law = yes
+		use_list_view = yes
+
+		PB_8_Hour_Workday = {
+						
+
+			available = {
+
+			}
+			
+            picture = PB_8_Hour_Workday
+                  	level = 5
+			modifier = {
+				production_factory_start_efficiency_factor = 0.05
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = 0.05
+				stability_factor = 0.1
+				political_power_factor = 0.1
+				monthly_population = 0.075
+			}
+			
+			cancel_if_invalid = yes
+		}
+
+		PB_12_Hour_Workday = {
+						
+
+			available = { 
+				
+			}
+			
+            picture = PB_12_Hour_Workday
+                  	level = 4
+			modifier = {
+				production_factory_start_efficiency_factor = 0.1
+				industrial_capacity_factory = -0.025
+				local_resources_factor = 0.1
+				monthly_population = -0.075
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				line_change_production_efficiency_factor = 0.1
+			}
+			
+			cancel_if_invalid = yes
+		}
+
+		PB_14_Hour_Workday = {
+						
+
+			available = {
+				NOT = { has_government = democratic}
+			}
+			
+            picture = PB_14_Hour_Workday
+                  	level = 3
+			modifier = {
+				production_factory_start_efficiency_factor = 0.05
+				industrial_capacity_factory = -0.05
+				consumer_goods_factor = -0.05
+				stability_factor = -0.05
+				political_power_factor = -0.05
+				local_resources_factor = 0.15
+				monthly_population = -0.15
+				conscription_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.075
+				line_change_production_efficiency_factor = 0.15
+
+			}
+			
+			cancel_if_invalid = yes
+		}
+
+		PB_18_Hour_Workday = {
+						
+
+
+			available = {
+				NOT = { has_government = democratic}
+			}
+			
+            picture = PB_18_Hour_Workday
+                  	level = 2
+			modifier = {
+				production_factory_start_efficiency_factor = 0.1
+				industrial_capacity_factory = -0.1
+				consumer_goods_factor = -0.1
+				stability_factor = -0.075
+				political_power_factor = -0.1
+				local_resources_factor = 0.1
+				monthly_population = -0.225
+				conscription_factor = -0.1
+				production_factory_efficiency_gain_factor = 0.2
+				production_factory_max_efficiency_factor = 0.1
+				line_change_production_efficiency_factor = 0.2
+			}
+			
+			cancel_if_invalid = yes
+		}
+
+		PB_No_Limit_Workday = {
+						
+
+			available = {
+				NOT = { has_government = democratic}
+			}
+			
+            picture = PB_No_Limit_Workday
+                  	level = 1
+			modifier = {
+				production_factory_start_efficiency_factor = 0.15
+				industrial_capacity_factory = -0.15
+				consumer_goods_factor = -0.15
+				stability_factor = -0.1
+				political_power_factor = -0.1
+				local_resources_factor = 0.1
+				monthly_population = -0.225
+				conscription_factor = -0.1
+				production_factory_efficiency_gain_factor = 0.2
+				production_factory_max_efficiency_factor = 0.1
+				line_change_production_efficiency_factor = 0.2
+			}
+			
+			cancel_if_invalid = yes
+		}
+	}
+}

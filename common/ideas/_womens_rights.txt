@@ -1,0 +1,125 @@
+ideas = {
+
+	womens_rights = { 
+		law = yes
+		use_list_view = yes
+
+		PB_Total_Gender_Equality = {
+						
+			
+			available = {
+				OR = {
+					has_country_leader_ideology = socialism
+					has_government = neutrality
+				}
+			}
+			
+            picture = PB_Total_Gender_Equality
+                  	level = 5
+			modifier = {
+				conscription_factor = 0.05
+				stability_factor = -0.015
+				monthly_population = -0.5
+				conscription_factor = 0.075
+				production_factory_max_efficiency_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.1
+			}
+			
+			cancel_if_invalid = yes
+		}
+
+		PB_Full_Womens_Equality = {
+						
+			
+
+			available = {
+				NOT = { 
+				has_government = fascism
+				}
+			}
+			
+            picture = PB_Full_Womens_Equality
+                  	level = 4
+			modifier = {
+				conscription_factor = 0.01
+				stability_factor = 0.05
+				monthly_population = -0.25
+				conscription_factor = 0.05
+				production_factory_max_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.05
+			}
+			
+			cancel_if_invalid = yes
+		}
+
+		PB_Limited_Womens_Rights = {
+						
+
+			available = { 
+				
+			}
+			
+            picture = PB_Limited_Womens_Rights
+                  	level = 3
+			modifier = {
+				conscription_factor = 0.025
+				stability_factor = 0.02
+			}
+			
+			cancel_if_invalid = yes
+		}
+
+		PB_No_Womens_Legal_Protections = {
+						
+			
+
+			available = {
+				NOT = { 
+				has_country_leader_ideology = socialism
+				has_government = communism
+				}
+			}
+			
+            picture = PB_No_Womens_Legal_Protections
+                  	level = 2
+			modifier = {
+				stability_factor = -0.02
+				political_power_gain = 0.05
+				monthly_population = 0.25
+				conscription_factor = -0.025
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+			}
+			
+			cancel_if_invalid = yes
+		}
+
+		PB_Patriarchal_Society = {
+						
+			
+
+			available = {
+				NOT = { 
+				has_country_leader_ideology = socialism
+				has_country_leader_ideology = liberalism
+				has_government = communism
+				has_country_leader_ideology = centrism
+				has_country_leader_ideology = moderatism
+				}
+			}
+			
+            picture = PB_Patriarchal_Society
+                  	level = 1
+			modifier = {
+				stability_factor = -0.1
+				political_power_gain = 0.1
+				monthly_population = 0.5
+				conscription_factor = -0.075
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+			}
+			
+			cancel_if_invalid = yes
+		}
+	}
+}

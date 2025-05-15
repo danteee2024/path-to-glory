@@ -1,0 +1,129 @@
+ideas = {
+
+	education = { 
+		law = yes
+		use_list_view = yes
+
+		PB_Universal_Higher = {
+
+			available = {
+				
+			}
+
+			visible = {
+				NOT = {
+					has_completed_focus = SCA_Builders_Of_A_Better_Tomorrow 
+				} 
+			}
+			
+            picture = PB_Universal_Higher
+                  	level = 4
+			modifier = {
+				army_leader_start_level = 1
+				stability_factor = 0.05
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				consumer_goods_factor = 0.05
+				drift_defence_factor = -1 
+				agency_upgrade_time = -0.25
+				monthly_population = 0.05
+				research_speed_factor = 0.15
+			}
+			
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					num_of_civilian_factories > 50
+					has_government = democratic
+					factor = 120
+				}
+			}
+
+			cancel_if_invalid = yes
+		}
+
+		PB_Universal_Basic = {
+						
+			
+
+			available = { 
+			
+			}
+			
+
+            picture = PB_Universal_Basic
+                  	level = 3
+			modifier = {
+				consumer_goods_factor = 0.03
+				agency_upgrade_time = -0.10
+				monthly_population = 0.025
+				research_speed_factor = 0.075
+			}
+
+			ai_will_do = {
+				factor = 40
+			}
+
+			cancel_if_invalid = yes
+		}
+
+		PB_Basic_Education = {
+						
+			
+
+			available = { 
+				
+			}
+
+			visible = {
+				NOT = {
+					has_completed_focus = SCA_Builders_Of_A_Better_Tomorrow 
+				} 
+			}
+			
+            picture = PB_Basic_Education
+                  	level = 2
+			modifier = {
+				female_random_country_leader_chance = 0.1
+				agency_upgrade_time = -0.05
+				monthly_population = 0.01
+				research_speed_factor = 0.05
+			}
+
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					num_of_civilian_factories < 40
+					factor = 40
+				}
+			}
+			cancel_if_invalid = yes
+		}
+
+		PB_No_Formal_Education = {
+						
+			
+			available = { 
+				
+			}
+			
+            picture = PB_No_Formal_Education
+                  	level = 1
+			modifier = {
+				research_speed_factor = -0.05
+				consumer_goods_factor = -0.05
+			}
+
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					num_of_civilian_factories < 30
+					factor = 40
+				}
+			}
+
+			cancel_if_invalid = yes
+		}
+
+	}
+}

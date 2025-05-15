@@ -1,0 +1,148 @@
+ideas = {
+
+	security_services = { 
+		law = yes
+		use_list_view = yes
+
+		PB_Law_Community_Outreach = {
+						
+			
+
+			available = { 
+				NOT = { has_government = democratic }
+			}
+			
+            picture = PB_Law_Community_Outreach
+                  	level = 5
+			modifier = {
+				stability_factor = -0.10
+				encryption_factor = 0.05
+				decryption_factor = 0.05
+				political_power_factor = -0.05
+				enemy_partisan_effect = -0.05
+				compliance_growth = -0.05
+				resistance_activity = -0.10
+				resistance_target = -0.10
+				foreign_subversive_activites = -0.1
+				drift_defence_factor = 0.1
+				resistance_tick_auto = -0.05
+				experience_gain_garrison_training_factor = 0.20
+				civilian_intel_to_others = 1
+				army_intel_to_others = 1
+				navy_intel_to_others = 1
+				airforce_intel_to_others = 1
+				intelligence_agency_defense = 0.1
+			}
+			
+			cancel_if_invalid = yes
+		}
+
+		PB_Law_Prev_Policing = {
+						
+			
+
+			available = { 
+				
+			}
+			
+            picture = PB_Law_Prev_Policing
+                  	level = 4
+			modifier = {
+				encryption_factor = 0.05
+				decryption_factor = 0.03
+				compliance_growth = 0.025
+				political_power_factor = 0.02
+				enemy_partisan_effect = -0.05
+				compliance_growth = -0.025
+				resistance_activity = -0.05
+				resistance_target = -0.05
+				foreign_subversive_activites = -0.05
+				drift_defence_factor = -0.1
+				resistance_tick_auto = 0.02
+				experience_gain_garrison_training_factor = 0.50
+				civilian_intel_to_others = 3
+				army_intel_to_others = 3
+				navy_intel_to_others = 3
+				airforce_intel_to_others = 3
+			}
+			
+			cancel_if_invalid = yes
+		}
+
+		PB_Law_Standard_Policing = {
+						
+			
+
+			available = { 
+				
+			}
+			
+            picture = PB_Law_Prev_Policing
+                  	level = 3
+			modifier = {
+			}
+			
+			cancel_if_invalid = yes
+		}
+
+		PB_Law_Intimidation_Policing = {
+						
+			
+			available = { 
+					NOT = { has_government = fascism }
+					NOT = { has_government = communism }
+			}
+			
+            picture = PB_Law_Intimidation_Policing
+                  	level = 2
+			modifier = {
+				encryption_factor = 0.03
+				decryption_factor = 0.05
+				compliance_growth = 0.05
+				political_power_factor = 0.05
+				enemy_partisan_effect = 0.10
+				foreign_subversive_activites = 0.10
+				drift_defence_factor = -0.16
+				stability_factor = 0.05
+				resistance_tick_auto = 0.04
+				civilian_intel_to_others = 5
+				army_intel_to_others = 5
+				navy_intel_to_others = 5
+				airforce_intel_to_others = 5
+				resistance_activity = 0.10
+				resistance_target = 0.10
+			}
+			
+			cancel_if_invalid = yes
+		}
+
+		PB_Law_Secret_Police = {
+						
+			
+
+			available = { 
+				NOT = { has_government = neutrality }
+				NOT = { has_government = democratic }
+			}
+			
+            picture = PB_Law_Secret_Police
+                  	level = 1
+			modifier = {
+				stability_factor = -0.075
+				encryption_factor = 0.05
+				decryption_factor = 0.05
+				compliance_growth = 0.025
+				political_power_factor = -0.05
+				enemy_partisan_effect = -0.1
+				foreign_subversive_activites = -0.2
+				drift_defence_factor = 0.15
+				resistance_tick_auto = -0.05
+				intelligence_agency_defense = 0.5
+				resistance_activity = -0.025
+				resistance_target = -0.025
+			}
+			
+			cancel_if_invalid = yes
+		}
+	}
+}

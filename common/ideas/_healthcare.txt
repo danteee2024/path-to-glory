@@ -1,0 +1,108 @@
+ideas = {
+
+	healthcare = { 
+		law = yes
+		use_list_view = yes
+
+		PB_Universal_Healthcare = {
+						
+			
+
+			available = { 
+				
+			}
+			
+            picture = PB_Universal_Healthcare
+                  	level = 4
+			modifier = {
+				monthly_population = 0.10
+				experience_loss_factor = -0.05
+				consumer_goods_factor = 0.05
+				monthly_population = 0.2
+				stability_factor = 0.1
+			}
+
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					has_stability > 0.5
+					OR = {
+						has_government = democratic
+						has_government = communism
+					}
+					
+					factor = 40
+				}
+			}
+			
+			cancel_if_invalid = no
+		}
+
+		PB_Trinket_Healthcare = {
+						
+
+			available = { 
+				
+			}
+			
+            picture = PB_Trinket_Healthcare
+                  	level = 3
+			modifier = {
+				
+				experience_loss_factor = -0.03
+				consumer_goods_factor = 0.03
+				monthly_population = 0.1
+				stability_factor = 0.05
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					OR = {
+						has_government = democratic
+						has_government = neutrality
+					}
+					factor = 40
+				}
+			}
+			
+			cancel_if_invalid = no
+		}
+
+		PB_Basic_Healthcare = {
+						
+			
+
+			available = { 
+				
+			}
+			
+            picture = PB_Basic_Healthcare
+                  	level = 2
+			modifier = {
+			}
+			
+			cancel_if_invalid = no
+		}
+
+		PB_No_Healthcare = {
+						
+			
+			available = {
+				NOT = { has_government = communism }
+			}
+			
+            picture = PB_No_Healthcare
+                  	level = 1
+			modifier = {
+				monthly_population = -0.05
+				experience_loss_factor = 0.05
+				consumer_goods_factor = -0.05
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
+}

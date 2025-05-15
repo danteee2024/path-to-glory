@@ -1,0 +1,106 @@
+ideas = {
+
+	citizenship_laws = { 
+		law = yes
+		use_list_view = yes
+
+		PB_Universal_Citizenship = {
+						
+			
+			available = {
+				NOT = {
+				has_government = fascism
+				has_government = communism
+				}
+			}
+			
+            picture = PB_Universal_Citizenship
+                  	
+			level = 4
+
+			modifier = {
+				stability_factor = -0.10
+				consumer_goods_factor = 0.05
+				monthly_population = 0.75
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.25
+				research_speed_factor = 0.05
+			}
+			
+			cancel_if_invalid = no
+		}
+
+		PB_Limited_Disenfranchisement = {
+						
+			
+
+			available = {
+				NOT = {
+				has_government = fascism
+				
+				}
+			}
+			
+            picture = PB_Limited_Disenfranchisement
+
+                  	level = 3
+
+			modifier = {
+				stability_factor = -0.05
+				consumer_goods_factor = 0.03
+				monthly_population = 0.25
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.25
+				research_speed_factor = 0.025
+			}
+			
+			cancel_if_invalid = no
+		}
+
+		PB_Aristocratic_Democracy  = {
+						
+			
+
+			available = { 
+				
+			}
+			
+            picture = PB_Aristocratic_Democracy
+                  	
+			level = 2
+
+			modifier = {
+				stability_factor = 0.05
+			}
+			
+			cancel_if_invalid = no
+		}
+
+		PB_Managed_Democracy = {
+						
+
+			available = {
+				NOT = {
+				has_government = democratic
+				has_country_leader_ideology = centrism
+				has_country_leader_ideology = moderatism
+				}
+			}
+			
+            picture = PB_Managed_Democracy
+                  	
+			level = 1
+
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = -0.05
+				monthly_population = -0.25
+				production_factory_max_efficiency_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.2
+			}
+			
+			cancel_if_invalid = no
+		}	
+	}
+}
+	

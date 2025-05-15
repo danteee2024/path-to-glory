@@ -1,0 +1,91 @@
+on_actions = {
+    
+    on_weekly = {
+		effect = {
+					if = { limit = { has_government = democratic NOT =  { has_country_flag = alreadyrecieved_it } }
+					add_ideas = PB_Govidea_Mixed_Market_Capitalism
+					add_ideas = PB_Limited_Disenfranchisement
+					add_ideas = PB_Universal_Basic
+					add_ideas = PB_Trinket_Healthcare
+					add_ideas = PB_8_Hour_Workday
+					add_ideas = PB_Significant_Autonomy
+					add_ideas = PB_Free_Press
+					add_ideas = PB_Public_Meetings_Allowed
+					add_ideas = PB_Law_Standard_Policing
+					add_ideas = PB_Limited_Welfare
+					add_ideas = PB_Full_Womens_Equality
+					add_ideas = standard_taxation
+					add_ideas = trade_unions_anticommie
+					add_ideas = stagnation
+					add_ideas = incarceration
+					add_ideas = licensegun_idea
+					add_ideas = fdi_allowed
+					add_ideas = tariffs_average
+					set_country_flag = alreadyrecieved_it
+				}
+				if = { limit = { has_government = neutrality NOT =  { has_country_flag = alreadyrecieved_it } }
+					add_ideas = PB_Govidea_Mixed_Market_Capitalism
+					add_ideas = PB_Aristocratic_Democracy
+					add_ideas = PB_Basic_Education
+					add_ideas = PB_Basic_Healthcare
+					add_ideas = PB_12_Hour_Workday
+					add_ideas = PB_Limited_Autonomy
+					add_ideas = PB_Limited_Censorship
+					add_ideas = PB_Public_Meetings_Monitored
+					add_ideas = PB_Law_Standard_Policing
+					add_ideas = PB_Basic_Welfare
+					add_ideas = PB_Limited_Womens_Rights
+					add_ideas = standard_taxation
+					add_ideas = trade_unions_anticommie
+					add_ideas = stagnation
+					add_ideas = capital_punishment
+					add_ideas = licensegun_idea
+					add_ideas = fdi_regulated
+					add_ideas = tariffs_average
+					set_country_flag = alreadyrecieved_it
+				}
+				if = { limit = { has_government = fascism NOT =  { has_country_flag = alreadyrecieved_it } }
+					add_ideas = PB_Govidea_State_Capitalism
+					add_ideas = PB_Aristocratic_Democracy
+					add_ideas = PB_Basic_Education
+					add_ideas = PB_Basic_Healthcare
+					add_ideas = PB_12_Hour_Workday
+					add_ideas = PB_Racial_Segregation
+					add_ideas = PB_State_Press
+					add_ideas = PB_Public_Meetings_Banned
+					add_ideas = PB_Law_Secret_Police
+					add_ideas = PB_Basic_Welfare
+					add_ideas = PB_No_Womens_Legal_Protections
+					add_ideas = high_taxation
+					add_ideas = trade_unions_restricted
+					add_ideas = enforced
+					add_ideas = penal_labor
+					add_ideas = nogun_idea
+					add_ideas = fdi_regulated
+					add_ideas = tariffs_high
+					set_country_flag = alreadyrecieved_it
+				}
+				if = { limit = { has_government = communism NOT =  { has_country_flag = alreadyrecieved_it }}
+					add_ideas = PB_Govidea_Planned_Economy
+					add_ideas = PB_Limited_Disenfranchisement
+					add_ideas = PB_Universal_Basic
+					add_ideas = PB_Trinket_Healthcare
+					add_ideas = PB_8_Hour_Workday
+					add_ideas = PB_Significant_Autonomy
+					add_ideas = PB_State_Press
+					add_ideas = PB_Public_Meetings_Banned
+					add_ideas = PB_Law_Secret_Police
+					add_ideas = PB_Limited_Welfare
+					add_ideas = PB_Full_Womens_Equality
+					add_ideas = high_taxation
+					add_ideas = trade_unions_restricted
+					add_ideas = encouraged
+					add_ideas = penal_labour
+					add_ideas = nogun_idea
+					add_ideas = fdi_banned
+					add_ideas = tariffs_extreme
+					set_country_flag = alreadyrecieved_it
+				}
+			}
+		}
+	}
