@@ -195,7 +195,7 @@ spriteTypes = {
 	}
 	
 	#-------------
-
+    
 	spriteType = {
 		name = "GFX_ongoing_focus_goal_icon"
 		textureFile = "gfx/interface/ongoing_focus_goal_icon.dds"

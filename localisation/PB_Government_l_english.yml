@@ -36,9 +36,9 @@ PB_Limited_Censorship:0 "Semi-Independent Press"
 PB_Free_Press:0 "Independent Free Press"
 
 citizenship_laws:0 "Border Policy"
-PB_Universal_Citizenship:0 "Relaxed Border Control"
+PB_Universal_Citizenship:0 "Relaxed Borders"
 PB_Limited_Disenfranchisement:0 "Limited Citizenship"
-PB_Aristocratic_Democracy:0 "Strict Immigration Controls"
+PB_Aristocratic_Democracy:0 "Strict Immigration"
 PB_Managed_Democracy:0 "Closed Borders"
 
 

@@ -1,180 +1,130 @@
 ideas = {
-	minority_rights = { 
+	minority_rights = {
 		law = yes
-		use_list_view = yes
+		use_list_view = no
 
 		PB_Affirmitive_Action = {
-						
-			available = { 
-			OR = {
+			available = {
+				OR = {
 					has_government = communism
 					has_government = democratic
-					}	
+				}
 			}
-			
-            picture = PB_Affirmitive_Action
-                  	level = 5
+			picture = PB_Affirmitive_Action
 			modifier = {
-				non_core_manpower = 0.6
-				stability_factor = 0.075
-				political_power_factor = -0.20
-			    resistance_damage_to_garrison = 0.30
-				conscription_factor = 0.075
+				non_core_manpower = 0.30
+				stability_factor = 0.05
+				political_power_factor = -0.05
 			}
-
 			ai_will_do = {
-   				factor = 20
+				factor = 20
 				modifier = {
-				    OR = {
-					has_government = communism
-					has_government = democratic
+					OR = {
+						has_government = communism
+						has_government = democratic
 					}
 					factor = 40
-					
 				}
-			}		
-			
+			}
 			cancel_if_invalid = yes
 		}
 
 		PB_Significant_Autonomy = {
-						
-			
-			available = { 
-			OR = {
+			available = {
+				OR = {
 					has_government = communism
 					has_government = democratic
 					has_government = neutrality
-					}	
-			}
-			
-            picture = PB_Significant_Autonomy
-                  	level = 4
-			modifier = {
-				non_core_manpower = 0.4
-				stability_factor = 0.05
-				political_power_factor = -0.15
-			    resistance_damage_to_garrison = 0.25
-				conscription_factor = 0.05
-			}
-
-			ai_will_do = {
-   				factor = 20
-				modifier = {
-				    OR = {
-					has_government = communism
-					has_government = democratic
-					}
-					factor = 40
-					
 				}
 			}
-		
+			picture = PB_Significant_Autonomy
+			modifier = {
+				non_core_manpower = 0.20
+				stability_factor = 0.05
+				political_power_factor = -0.05
+			}
+			ai_will_do = {
+				factor = 20
+				modifier = {
+					OR = {
+						has_government = communism
+						has_government = democratic
+					}
+					factor = 40
+				}
+			}
 			cancel_if_invalid = yes
 		}
 
 		PB_Limited_Autonomy = {
-						
-			
-
-			available = { 
-				
-			}
-			
-            picture = PB_Limited_Autonomy
-                  	level = 3
+			available = { }
+			picture = PB_Limited_Autonomy
 			modifier = {
-				non_core_manpower = 0.2
-				resistance_damage_to_garrison = -0.15
-				political_power_factor = 0.05
+				non_core_manpower = 0.10
 				stability_factor = -0.05
-				conscription_factor = 0.025
-				
+				political_power_factor = 0.05
 			}
-
 			ai_will_do = {
-   				factor = 0.5
-
-   				modifier = {
+				factor = 0.5
+				modifier = {
 					has_government = neutrality
 					factor = 0.5
 				}
-   			}
-			
+			}
 			cancel_if_invalid = yes
 		}
 
 		PB_Racial_Segregation = {
-						
-			
 			available = {
-		       NOT = { 
-				    OR = {
+				NOT = {
 					has_government = communism
-				
-					}
 				}
 			}
-			
-            picture = PB_Racial_Segregation
-                  	level = 2
+			picture = PB_Racial_Segregation
 			modifier = {
-				non_core_manpower = -0.2
-				stability_factor = -0.10
-				political_power_factor = 0.15
-				resistance_damage_to_garrison = -0.3
-				conscription_factor = -0.025
+				non_core_manpower = -0.10
+				stability_factor = -0.05
+				political_power_factor = 0.05
 			}
-			
-			cancel_if_invalid = yes
-				
 			ai_will_do = {
-   				factor = 20
-
+				factor = 20
 				modifier = {
-				    OR = {
-					has_government = fascism
-					has_government = neutrality
+					OR = {
+						has_government = fascism
+						has_government = neutrality
 					}
 					factor = 20
 				}
 			}
+			cancel_if_invalid = yes
 		}
+
 		PB_Racial_Hierarchy = {
-						
-			
 			available = {
-				NOT = { 
-				    OR = {
-					has_government = democratic
-					has_government = communism
+				NOT = {
+					OR = {
+						has_government = democratic
+						has_government = communism
 					}
 				}
 			}
-			
-            picture = PB_Racial_Hierarchy
-                  	level = 1
+			picture = PB_Racial_Hierarchy
 			modifier = {
-				non_core_manpower = -0.4
-				resistance_damage_to_garrison = -0.5
-				political_power_factor = 0.25
-				stability_factor = -0.15
-				conscription_factor = -0.075
+				non_core_manpower = -0.20
+				stability_factor = -0.10
+				political_power_factor = 0.10
 			}
-			
-			cancel_if_invalid = yes
-			
 			ai_will_do = {
-   				factor = 20
-
-   				modifier = {
-				    if = {
-						GER = {has_government = fascism}
+				factor = 20
+				modifier = {
+					if = {
+						GER = { has_government = fascism }
 						tag = GER
 					}
 					factor = 20
 				}
-   			}
+			}
+			cancel_if_invalid = yes
 		}
 	}
 }

@@ -133,7 +133,7 @@ NDefines.NResistance.GARRISON_MANPOWER_LOST_BY_ATTACK = 0.005 	--WAS 0.018 Ratio
 
 NDefines.NPolitics.ARMY_LEADER_MAX_COST = 75				-- max cost BEFORE modifiers
 NDefines.NPolitics.NAVY_LEADER_MAX_COST = 75
-NDefines.NPolitics.BASE_POLITICAL_POWER_INCREASE = 2.5 -- base pp gain per (week)?		
+NDefines.NPolitics.BASE_POLITICAL_POWER_INCREASE = 2.0 -- base pp gain per day	
 
 NDefines.NMilitary.SUPPLY_GRACE = 84 -- 72 3 days as they say and remain hungry for another 12
 
