@@ -4,6 +4,11 @@ ideas = {
         use_list_view = no
 
         PB_Govidea_Free_Market_Capitalism = {
+            visible = {
+				not = {
+					has_idea = nationalization_FA_america_capital
+				}
+				}
             available = {
                 NOT = { has_government = communism }
             }
@@ -26,6 +31,11 @@ ideas = {
         }
 
         PB_Govidea_Mixed_Market_Capitalism = {
+            visible = {
+				not = {
+					has_idea = nationalization_FA_america_capital
+				}
+				}
             available = {
                 NOT = { has_government = communism }
             }
@@ -48,6 +58,11 @@ ideas = {
         }
 
         PB_Govidea_Welfare_Capitalism = {
+            visible = {
+				not = {
+					has_idea = nationalization_FA_america_capital
+				}
+				}
             available = {
                 NOT = { has_government = communism }
             }
@@ -69,6 +84,11 @@ ideas = {
         }
 
         PB_Govidea_State_Capitalism = {
+            visible = {
+				not = {
+					has_idea = nationalization_FA_america_capital
+				}
+				}
             available = {
                 OR = {
                     has_government = communism
@@ -95,6 +115,11 @@ ideas = {
         }
 
         PB_Govidea_Planned_Economy = {
+            visible = {
+				not = {
+					has_idea = nationalization_FA_america_capital
+				}
+				}
             available = {
                 OR = {
                     has_government = neutrality
@@ -121,6 +146,11 @@ ideas = {
         }
 
         PB_Govidea_Communal_Economy = {
+            visible = {
+				not = {
+					has_idea = nationalization_FA_america_capital
+				}
+				}
             available = {
                 has_government = communism
             }
@@ -142,5 +172,36 @@ ideas = {
             }
             cancel_if_invalid = yes
         }
+        nationalization_FA_america_capital = {
+
+		visible = {
+			tag = USA
+		}
+			available = {
+            always = false
+				}
+			removal_cost = -1
+			modifier = {
+				global_building_slots_factor = 0.25
+				consumer_goods_factor = -0.25
+				research_speed_factor = 0.10
+				production_speed_buildings_factor = -0.15
+				local_resources_factor = 0.3
+				political_power_factor = -0.1
+				min_export = 0.05
+			}
+			
+			cost = 200
+			
+			cancel_if_invalid = yes
+
+			ai_will_do = {
+   				factor = 0.5
+				modifier = {
+					has_government = democratic
+					factor = 10
+				}
+   			}
+		}
     }
 }
