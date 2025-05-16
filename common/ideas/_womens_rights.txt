@@ -8,6 +8,7 @@ ideas = {
 				OR = {
 					has_country_leader_ideology = socialism
 					has_government = neutrality
+					has_government = communism
 				}
 			}
 			picture = PB_Total_Gender_Equality
