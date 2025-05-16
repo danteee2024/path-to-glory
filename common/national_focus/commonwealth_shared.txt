@@ -5,7 +5,7 @@ shared_focus = {
 	
 	icon = GFX_focus_POL_complete_april_constitution
 
-	x = 40
+	x = 27
 	y = 8
 	
 	offset = {
