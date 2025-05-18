@@ -9,11 +9,14 @@ ideas = {
 			}
 			picture = PB_State_Press
 			modifier = {
+				recruitable_population = 0.01
+				recruitable_population_factor = 0.05
 				drift_defence_factor = 0.10
-				justify_war_goal_time = -0.10
-				stability_factor = -0.05
-				political_power_factor = -0.10
+				justify_war_goal_time = -0.15
+				stability_factor = 0.05
+				political_power_factor = -0.05
 				war_support_factor = 0.10
+				consumer_goods_factor = 0.05
 			}
 			ai_will_do = {
 				factor = 1
@@ -33,10 +36,11 @@ ideas = {
 			picture = PB_Limited_Censorship
 			modifier = {
 				drift_defence_factor = 0.05
-				justify_war_goal_time = -0.05
-				stability_factor = 0.00
-				political_power_factor = -0.05
+				justify_war_goal_time = -0.10
+				stability_factor = 0.05
+				political_power_factor = 0.10
 				war_support_factor = 0.05
+				consumer_goods_factor = 0.025
 			}
 			ai_will_do = {
 				factor = 1
@@ -63,12 +67,14 @@ ideas = {
 			}
 			picture = PB_Free_Press
 			modifier = {
-				drift_defence_factor = -0.05
+				drift_defence_factor = -0.20
 				justify_war_goal_time = 0.10
-				war_support_factor = -0.05
+				recruitable_population_factor = -0.05
+				war_support_factor = -0.10
 				stability_factor = 0.10
 				political_power_factor = 0.10
-				recovery_factor = 0.05
+				army_morale_factor = 0.15
+				research_speed_factor = 0.05
 			}
 			ai_will_do = {
 				factor = 1
