@@ -135,6 +135,9 @@ Commonwealth_is_democratic = {
 	OR = {
 		original_tag = ENG
 		original_tag = CAN
+		original_tag = SAF
+		original_tag = AST
+		original_tag = NZL
 	}
 	OR = {
 		has_government = democratic
@@ -144,6 +147,9 @@ Commonwealth_is_monarchist = {
 	OR = {
 		original_tag = ENG
 		original_tag = CAN
+		original_tag = SAF
+		original_tag = AST
+		original_tag = NZL
 	}
 	OR = {
 		has_government = neutrality
@@ -153,6 +159,9 @@ Commonwealth_is_communist = {
 	OR = {
 		original_tag = ENG
 		original_tag = CAN
+		original_tag = SAF
+		original_tag = AST
+		original_tag = NZL
 	}
 	has_government = communism
 }
@@ -161,6 +170,9 @@ Commonwealth_is_fascist = {
 	OR = {
 		original_tag = ENG
 		original_tag = CAN
+		original_tag = SAF
+		original_tag = AST
+		original_tag = NZL
 	}
 	has_government = fascism
 	# Add more triggers if needed

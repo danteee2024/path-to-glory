@@ -25,14 +25,6 @@ shared_focus = {
 	}
 	
 	offset = {
-		x = 18
-		y = -8
-		trigger = {
-			has_focus_tree = indian_focus
-		}
-	}
-	
-	offset = {
 		x = 22
 		y = -8
 		trigger = {
