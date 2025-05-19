@@ -2350,22 +2350,13 @@ mutually_exclusive = {
 		id = USA_black_chamber
 		icon = GFX_goal_generic_military_deal
 		prerequisite = { focus = USA_magic }
+		
 		available = { }
 		x = 1
 		y = 3
 		relative_position_id = USA_war_propaganda
 
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_limited_intervention
-			}
-		}
+		
 
 		cost = 10
 		ai_will_do = {
@@ -2402,8 +2393,8 @@ mutually_exclusive = {
 		relative_position_id = USA_black_chamber
 
 		offset = {
-			x = -1
-			y = -4
+			x = -2
+			y = -3
 			trigger = {
 				has_game_rule = {
 					rule = obsolete_focus_branches_visibility
@@ -2424,18 +2415,7 @@ mutually_exclusive = {
 				has_completed_focus = USA_reestablish_the_gold_standard
 			}
 		}
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_limited_intervention
-			}
-		}
-
+		
 		cost = 10
 		#ai_will_do = {
 		#	factor = 1
