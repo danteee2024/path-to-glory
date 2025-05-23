@@ -10419,4 +10419,15 @@ spriteType = {
 		texturefile = "gfx/interface/ideas/idea_PLACEHOLDER.dds"
 	}
 
+
+
+
+
+
+	#PTG
+
+	spriteType = {
+		name = "GFX_idea_japanese_war_economy"
+		texturefile = "gfx/interface/ideas/jap/JAP_war_economy.dds"
+	}
 }
