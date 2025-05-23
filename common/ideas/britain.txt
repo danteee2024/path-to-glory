@@ -378,7 +378,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				research_speed_factor = 0.07
+				research_speed_factor = 0.025
 			}
 		}
 		
@@ -1904,7 +1904,33 @@ ideas = {
 				production_speed_coastal_bunker_factor = 0.05
 			}
 		}
+         GBR_british_mobilisation_support = {
+			name = GBR_british_mobilisation_support
+			picture = can_send_in_the_zombies
+			
+			allowed_civil_war = {	always = no	}
 
+			removal_cost = -1		
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.05
+				conversion_cost_civ_to_mil_factor = -0.20
+			}
+		}
+		ENG_british_commonwealth_air_training_plan_1 = {
+			name = GBR_british_commonwealth_air_training_plan
+			picture = man_five_year_plan_air #generic_air_bonus
+			allowed = {	always = no	}
+			available = {
+				
+			}			
+			removal_cost = -1
+			modifier = {
+				air_ace_generation_chance_factor = 0.05
+				air_accidents_factor = -0.05
+				experience_gain_air = 0.02
+			}
+		}
 		ENG_fortify_the_empire_2 = {
 
 			name = ENG_fortify_the_empire

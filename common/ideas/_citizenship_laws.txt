@@ -1,66 +1,63 @@
 ideas = {
-	citizenship_laws = {
-		law = yes
-		use_list_view = no
+    citizenship_laws = {
+        law = yes
+        use_list_view = no
 
-		PB_Universal_Citizenship = {
-			available = {
-				NOT = {
-					has_government = fascism
-					has_government = communism
-				}
-			}
-			picture = PB_Universal_Citizenship
-			modifier = {
-				stability_factor = -0.05
-				consumer_goods_factor = 0.05
-				monthly_population = 0.20
-				research_speed_factor = 0.05
-			}
-			cancel_if_invalid = yes
-		}
+        PB_Universal_Citizenship = {
+            available = {
+                NOT = { has_government = fascism }
+                NOT = { has_government = communism }
+            }
+            picture = PB_Universal_Citizenship
+            modifier = {
+                monthly_population = 0.10               # broader access raises demographic growth
+                recruitable_population_factor = 0.05    # more people eligible for service
+                political_power_factor = -0.10           # inclusive society spurs innovation
+                stability_factor = -0.05               # social strain from rapid openness
+            }
+            cancel_if_invalid = yes
+        }
 
-		PB_Limited_Disenfranchisement = {
-			available = {
-				NOT = {
-					has_government = fascism
-				}
-			}
-			picture = PB_Limited_Disenfranchisement
-			modifier = {
-				stability_factor = 0.00
-				consumer_goods_factor = 0.05
-				monthly_population = 0.10
-			}
-			cancel_if_invalid = yes
-		}
+        PB_Limited_Disenfranchisement = {
+            available = {
+                NOT = { has_government = fascism }
+            }
+            picture = PB_Limited_Disenfranchisement
+            modifier = {
+                 stability_factor = 0.05               # controlled enfranchisement eases unrest
+                political_power_factor = -0.05         # elites gain modest leverage
+                recruitable_population_factor = -0.05 # smaller pool for drafting
+                trade_opinion_factor = 0.05           # moderate markets respond positively
+            }
+            cancel_if_invalid = yes
+        }
 
-		PB_Aristocratic_Democracy = {
-			available = { }
-			picture = PB_Aristocratic_Democracy
-			modifier = {
-				stability_factor = 0.05
-				monthly_population = -0.05
-			}
-			cancel_if_invalid = yes
-		}
+        PB_Aristocratic_Democracy = {
+            available = { }
+            picture = PB_Aristocratic_Democracy
+            modifier = {
+                stability_factor = 0.025               # strict screening reduces friction
+                political_power_factor = 0.10         # government wields strong control
+                recruitable_population_factor = -0.05 # fewer newcomers contribute
+                repair_speed_industrial_complex_factor = 0.10          # focused investment boosts industry
+            }
+            cancel_if_invalid = yes
+        }
 
-		PB_Managed_Democracy = {
-			available = {
-				NOT = {
-					has_government = democratic
-					has_country_leader_ideology = centrism
-					has_country_leader_ideology = moderatism
-				}
-			}
-			picture = PB_Managed_Democracy
-			modifier = {
-				stability_factor = 0.10
-				consumer_goods_factor = -0.05
-				monthly_population = -0.10
-			}
-			cancel_if_invalid = yes
-		}
-	}
+        PB_Managed_Democracy = {
+            available = {
+                NOT = { has_government = democratic }
+                NOT = { has_country_leader_ideology = centrism }
+                NOT = { has_country_leader_ideology = moderatism }
+            }
+            picture = PB_Managed_Democracy
+            modifier = {
+                stability_factor = 0.05          # closed policy lowers unrest
+                research_speed_factor = 0.05          # directed R&D continues
+                political_power_factor = 0.15       # citizens have reduced sway
+                recruitable_population_factor = -0.05 # strictest limits on enlistment
+            }
+            cancel_if_invalid = yes
+        }
+    }
 }
-

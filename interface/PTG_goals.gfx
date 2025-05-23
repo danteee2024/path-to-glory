@@ -36,6 +36,32 @@ spriteTypes = {
 		name = "GFX_beacon_of_democracy_shine"
 		textureFile = "gfx/interface/goals/usa/last_stand_beacon_of_democracy_shine.dds"
 	}
+	
+	#### COUNTRY FLAGS ####
+
+SpriteType = {
+	name = "GFX_focus_TBE_flag_australia"
+	texturefile = "gfx/interface/goals/eng/TBE_flag_australia.dds"
+}
+
+SpriteType = {
+	name = "GFX_focus_TBE_flag_british_raj"
+	texturefile = "gfx/interface/goals/eng/TBE_flag_british_raj.dds"
+}
+
+SpriteType = {
+	name = "GFX_focus_TBE_flag_canada"
+	texturefile = "gfx/interface/goals/eng/TBE_flag_canada.dds"
+}
+
+SpriteType = {
+	name = "GFX_focus_TBE_flag_new_zealand"
+	texturefile = "gfx/interface/goals/eng/TBE_flag_new_zealand.dds"
+}
+SpriteType = {
+	name = "GFX_focus_TBE_flag_south_africa"
+	texturefile = "gfx/interface/goals/eng/TBE_flag_south_africa.dds"
+}
 	#ideas
 	spriteType = {
 		name = "GFX_idea_nationalization_FA_america_capital"

@@ -292,8 +292,8 @@ parliament_gui_decision_category = {
 		cost = 50
 		
 		modifier = {
-			trade_opinion_factor = 0.5
-			consumer_goods_factor = -0.1
+			trade_opinion_factor = 0.25
+			consumer_goods_factor = -0.025
 			democratic_drift = 0.03
 		}
 		
@@ -334,7 +334,7 @@ parliament_gui_decision_category = {
 		cost = 50
 		
 		modifier = {
-			production_speed_buildings_factor = 0.5
+			production_speed_buildings_factor = 0.15
 			communism_drift = 0.03
 		}
 		

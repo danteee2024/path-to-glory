@@ -5,10 +5,8 @@ ideas = {
 
         PB_Govidea_Free_Market_Capitalism = {
             visible = {
-				not = {
-					has_idea = nationalization_FA_america_capital
-				}
-				}
+                not = { has_idea = nationalization_FA_america_capital }
+            }
             available = {
                 NOT = { has_government = communism }
             }
@@ -17,8 +15,7 @@ ideas = {
                 consumer_goods_factor = -0.10
                 production_speed_industrial_complex_factor = 0.10
                 industrial_capacity_factory = 0.05
-                stability_factor = -0.05
-                political_power_factor = -0.15
+                trade_opinion_factor = 0.20
             }
             ai_will_do = {
                 factor = 1
@@ -32,10 +29,8 @@ ideas = {
 
         PB_Govidea_Mixed_Market_Capitalism = {
             visible = {
-				not = {
-					has_idea = nationalization_FA_america_capital
-				}
-				}
+                not = { has_idea = nationalization_FA_america_capital }
+            }
             available = {
                 NOT = { has_government = communism }
             }
@@ -44,8 +39,7 @@ ideas = {
                 consumer_goods_factor = -0.05
                 production_speed_infrastructure_factor = 0.05
                 production_speed_industrial_complex_factor = 0.05
-                production_speed_arms_factory_factor = 0.05
-                stability_factor = 0.10
+                faction_trade_opinion_factor = 0.15
             }
             ai_will_do = {
                 factor = 1
@@ -60,21 +54,17 @@ ideas = {
 
         PB_Govidea_Welfare_Capitalism = {
             visible = {
-				not = {
-					has_idea = nationalization_FA_america_capital
-				}
-				}
+                not = { has_idea = nationalization_FA_america_capital }
+            }
             available = {
                 NOT = { has_government = communism }
             }
             picture = PB_Welfare_Capitalism
             modifier = {
                 consumer_goods_factor = 0.05
-                production_speed_infrastructure_factor = 0.15
-                production_speed_industrial_complex_factor = 0.075
+                production_speed_infrastructure_factor = 0.10
                 stability_factor = 0.10
-                war_support_factor = -0.05
-                political_power_factor = -0.05
+                global_building_slots_factor = 0.10
             }
             ai_will_do = {
                 factor = 1
@@ -88,10 +78,8 @@ ideas = {
 
         PB_Govidea_State_Capitalism = {
             visible = {
-				not = {
-					has_idea = nationalization_FA_america_capital
-				}
-				}
+                not = { has_idea = nationalization_FA_america_capital }
+            }
             available = {
                 OR = {
                     has_government = communism
@@ -104,8 +92,8 @@ ideas = {
                 consumer_goods_factor = -0.05
                 local_resources_factor = 0.10
                 production_speed_arms_factory_factor = 0.10
-                industrial_capacity_factory = 0.05
-                political_power_factor = -0.10
+                global_building_slots_factor = 0.05
+                conversion_cost_civ_to_mil_factor = -0.10
             }
             ai_will_do = {
                 factor = 1
@@ -119,10 +107,8 @@ ideas = {
 
         PB_Govidea_Planned_Economy = {
             visible = {
-				not = {
-					has_idea = nationalization_FA_america_capital
-				}
-				}
+                not = { has_idea = nationalization_FA_america_capital }
+            }
             available = {
                 OR = {
                     has_government = neutrality
@@ -131,12 +117,10 @@ ideas = {
             }
             picture = PB_Planned_Economy
             modifier = {
-                industrial_capacity_factory = 0.10
-                production_speed_industrial_complex_factor = -0.05
-                production_speed_arms_factory_factor = -0.05
-                consumer_goods_factor = -0.10
-                stability_factor = -0.05
-                political_power_factor = -0.05
+                industrial_capacity_factory = 0.05
+                production_speed_industrial_complex_factor = -0.10
+                global_building_slots_factor = 0.05
+                production_speed_buildings_factor = 0.05
             }
             ai_will_do = {
                 factor = 1
@@ -150,24 +134,18 @@ ideas = {
 
         PB_Govidea_Communal_Economy = {
             visible = {
-				not = {
-					has_idea = nationalization_FA_america_capital
-				}
-				}
+                not = { has_idea = nationalization_FA_america_capital }
+            }
             available = {
                 has_government = communism
             }
             picture = PB_Communal_Economy
             modifier = {
-      
-		resistance_target_on_our_occupied_states = -0.10
-		production_speed_industrial_complex_factor = 0.15
-		consumer_goods_factor = 0.10
-		industrial_capacity_factory = -0.05
-        resistance_target_on_our_occupied_states = -0.10
-        stability_factor = 0.05
-		political_power_factor = 0.05
-
+                resistance_target_on_our_occupied_states = -0.10
+                production_speed_industrial_complex_factor = 0.10
+                consumer_goods_factor = 0.10
+                global_building_slots_factor = 0.15
+                compliance_growth_on_our_occupied_states = 0.05
             }
             ai_will_do = {
                 factor = 1
@@ -178,36 +156,33 @@ ideas = {
             }
             cancel_if_invalid = yes
         }
+
         nationalization_FA_america_capital = {
-
-		visible = {
-			tag = USA
-		}
-			available = {
-            always = false
-				}
-			removal_cost = -1
-			modifier = {
-				global_building_slots_factor = 0.25
-				consumer_goods_factor = -0.25
-				research_speed_factor = 0.10
-				production_speed_buildings_factor = -0.15
-				local_resources_factor = 0.3
-				political_power_factor = -0.1
-				min_export = 0.05
-			}
-			
-			cost = 200
-			
-			cancel_if_invalid = yes
-
-			ai_will_do = {
-   				factor = 0.5
-				modifier = {
-					has_government = democratic
-					factor = 10
-				}
-   			}
-		}
+            visible = {
+                tag = USA
+            }
+            available = {
+                always = false
+            }
+            removal_cost = -1
+            modifier = {
+                global_building_slots_factor = 0.25
+                consumer_goods_factor = -0.25
+                research_speed_factor = 0.10
+                production_speed_buildings_factor = -0.15
+                local_resources_factor = 0.3
+                political_power_factor = -0.1
+                min_export = 0.05
+            }
+            cost = 200
+            cancel_if_invalid = yes
+            ai_will_do = {
+                factor = 0.5
+                modifier = {
+                    has_government = democratic
+                    factor = 10
+                }
+            }
+        }
     }
 }

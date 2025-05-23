@@ -45,6 +45,7 @@ ideologies = {
 		faction_impact_on_world_tension = 0.1
 
 		modifiers = {
+			production_speed_industrial_complex_factor = -0.05
 			generate_wargoal_tension = 1.00
 			join_faction_tension = 0.40
 			lend_lease_tension = 0.20
@@ -54,9 +55,8 @@ ideologies = {
 			civilian_intel_to_others = 20.0
 			army_intel_to_others = 5.0
 			navy_intel_to_others = 20.0
-			airforce_intel_to_others = 5
-			embargo_cost_factor = -0.5
-			embargo_threshold_factor = -0.5
+			airforce_intel_to_others = 5#
+			production_speed_industrial_complex_factor = -0.05
 		}
 
 		faction_modifiers = {

@@ -40,7 +40,7 @@ shared_focus = {
 		}
 	}
 	
-	cost = 5
+	cost = 15
 
 	
 
@@ -448,7 +448,7 @@ joint_focus = {
 joint_focus = {
 	id = Commonwealth_second_institution
 
-	icon = GFX_goal_generic_scientific_exchange
+	icon = GFX_focus_RAJ_seek_allies_with_the_muslim_league
 
 	dynamic = yes 
 	

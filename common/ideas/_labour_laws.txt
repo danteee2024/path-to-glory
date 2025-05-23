@@ -1,71 +1,64 @@
 ideas = {
-	labour_laws = {
-		law = yes
-		use_list_view = no
+    labour_laws = {
+        law = yes
+        use_list_view = no
 
-		PB_8_Hour_Workday = {
-			available = { }
-			picture = PB_8_Hour_Workday
-			modifier = {
-				industrial_capacity_factory = 0.05
-				consumer_goods_factor = 0.05
-				stability_factor = 0.10
-				political_power_factor = 0.05
-			}
-			cancel_if_invalid = yes
-		}
+        PB_8_Hour_Workday = {
+            picture = PB_8_Hour_Workday
+            modifier = {
+                industrial_capacity_factory = 0.05    # modest boost to IC
+                stability_factor = 0.05               # improved worker morale
+                political_power_factor = 0.05         # government goodwill
+                consumer_goods_factor = 0.00          # neutral consumer demand
+            }
+            cancel_if_invalid = yes
+        }
 
-		PB_12_Hour_Workday = {
-			available = { }
-			picture = PB_12_Hour_Workday
-			modifier = {
-				production_factory_efficiency_gain_factor = 0.05
-				monthly_population = -0.05
-				local_resources_factor = 0.05
-			}
-			cancel_if_invalid = yes
-		}
+        PB_12_Hour_Workday = {
+            picture = PB_12_Hour_Workday
+            modifier = {
+                production_speed_buildings_factor = 0.05   # smoother construction
+                production_factory_efficiency_gain_factor = 0.05  # gradual efficiency gains
+                monthly_population = -0.05                 # slight demographic toll
+                local_resources_factor = 0.05              # better resource extraction
+            }
+            cancel_if_invalid = yes
+        }
 
-		PB_14_Hour_Workday = {
-			available = {
-			}
-			picture = PB_14_Hour_Workday
-			modifier = {
-				consumer_goods_factor = -0.05
-				stability_factor = -0.05
-				production_factory_max_efficiency_factor = 0.05
-				monthly_population = -0.10
-			}
-			cancel_if_invalid = yes
-		}
+        PB_14_Hour_Workday = {
+            picture = PB_14_Hour_Workday
+            available = { NOT = { has_government = democratic } }
+            modifier = {
+                production_speed_industrial_complex_factor = 0.05  # faster industry at peak times
+                consumer_goods_factor = -0.05                   # increased civilian hardship
+                stability_factor = -0.05                        # rising social tension
+                political_power_factor = -0.10                 # policy unpopular
+            }
+            cancel_if_invalid = yes
+        }
 
-		PB_18_Hour_Workday = {
-			available = {
-				NOT = { has_government = democratic }
-			}
-			picture = PB_18_Hour_Workday
-			modifier = {
-				consumer_goods_factor = -0.10
-				industrial_capacity_factory = -0.05
-				production_factory_efficiency_gain_factor = 0.05
-				stability_factor = -0.05
-			}
-			cancel_if_invalid = yes
-		}
+        PB_18_Hour_Workday = {
+            picture = PB_18_Hour_Workday
+            available = { NOT = { has_government = democratic } }
+            modifier = {
+                production_speed_industrial_complex_factor = 0.05  # faster industry
+                consumer_goods_factor = -0.10                      # shortages worsen
+                stability_factor = -0.10                           # unrest spikes
+                industrial_capacity_factory = -0.05                # overwork inefficiencies
+            }
+            cancel_if_invalid = yes
+        }
 
-		PB_No_Limit_Workday = {
-			available = {
-				NOT = { has_government = democratic }
-			}
-			picture = PB_No_Limit_Workday
-			modifier = {
-				consumer_goods_factor = -0.15
-				industrial_capacity_factory = -0.10
-				stability_factor = -0.10
-				war_support_factor = -0.05
-				production_factory_efficiency_gain_factor = 0.10
-			}
-			cancel_if_invalid = yes
-		}
-	}
+        PB_No_Limit_Workday = {
+            picture = PB_No_Limit_Workday
+            available = { NOT = { has_government = democratic } }
+            modifier = {
+                production_factory_efficiency_gain_factor = 0.10   # extreme efficiency push within cap
+                political_power_factor = -0.20                     # strong backlash
+                stability_factor = -0.10                           # major unrest
+                consumer_goods_factor = -0.10                      # critical shortages
+            }
+            cancel_if_invalid = yes
+        }
+    }
 }

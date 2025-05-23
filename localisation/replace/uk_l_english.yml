@@ -436,6 +436,14 @@
  ENG_call_general_election_labour:0 "Call General Election"
  ENG_call_general_election_labour_desc:0 "With our majority in Parliament, we can call a General Election. This will allow us to solidify our power and ensure that the Labour Party remains in control of the government."
 
+GBR_british_commonwealth_air_training_plan:0 "British Commonwealth Air Training Plan"
+GBR_british_commonwealth_air_training_plan_desc:0 "Our military success hinges upon our mastery of the air, and therefore the skill of our air crews. We will embark upon the largest aviation training program the world has ever seen to ensure we have all the trained pilots and crews we require to master this new dimension of warfare."
+ 
+britain.38.title:0 "Britain Provides Support for [ROOT.GetAdjective] Mobilisation"
+britain.38.desc:0 "The British Government has sought to support the mobilisation of the [ROOT.GetAdjective] economy towards war production. Many of the experts who learnt important lessons through the British Shadow Scheme and the establishment of the Ministry of Supply are beig seconded to support our own mobilisation."
+britain.38.a:0 "I'm sure we'll find a use for these Brits."
+GBR_british_mobilisation_support:0 "British Mobilisation Support"
+
 
 
 
