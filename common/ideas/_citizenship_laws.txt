@@ -11,7 +11,7 @@ ideas = {
             picture = PB_Universal_Citizenship
             modifier = {
                 monthly_population = 0.10               # broader access raises demographic growth
-                recruitable_population_factor = 0.05    # more people eligible for service
+                conscription_factor = 0.05    # more people eligible for service
                 political_power_factor = -0.10           # inclusive society spurs innovation
                 stability_factor = -0.05               # social strain from rapid openness
             }
@@ -26,8 +26,8 @@ ideas = {
             modifier = {
                  stability_factor = 0.05               # controlled enfranchisement eases unrest
                 political_power_factor = -0.05         # elites gain modest leverage
-                recruitable_population_factor = -0.05 # smaller pool for drafting
-                trade_opinion_factor = 0.05           # moderate markets respond positively
+                conscription_factor = -0.05 # smaller pool for drafting
+                trade_opinion_factor = 0.25          # moderate markets respond positively
             }
             cancel_if_invalid = yes
         }
@@ -38,7 +38,7 @@ ideas = {
             modifier = {
                 stability_factor = 0.025               # strict screening reduces friction
                 political_power_factor = 0.10         # government wields strong control
-                recruitable_population_factor = -0.05 # fewer newcomers contribute
+                conscription_factor = -0.05 # fewer newcomers contribute
                 repair_speed_industrial_complex_factor = 0.10          # focused investment boosts industry
             }
             cancel_if_invalid = yes
@@ -52,10 +52,10 @@ ideas = {
             }
             picture = PB_Managed_Democracy
             modifier = {
-                stability_factor = 0.05          # closed policy lowers unrest
-                research_speed_factor = 0.05          # directed R&D continues
+                war_support_factor = 0.05          # closed policy lowers unrest
+                research_speed_factor = -0.05          # directed R&D continues
                 political_power_factor = 0.15       # citizens have reduced sway
-                recruitable_population_factor = -0.05 # strictest limits on enlistment
+                conscription_factor = -0.05 # strictest limits on enlistment
             }
             cancel_if_invalid = yes
         }

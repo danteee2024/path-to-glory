@@ -9,7 +9,7 @@ ideas = {
                 industrial_capacity_factory = 0.05    # modest boost to IC
                 stability_factor = 0.05               # improved worker morale
                 political_power_factor = 0.05         # government goodwill
-                consumer_goods_factor = 0.00          # neutral consumer demand
+                consumer_goods_factor = 0.05      # neutral consumer demand
             }
             cancel_if_invalid = yes
         }
