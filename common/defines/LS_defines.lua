@@ -1,4 +1,4 @@
-NDefines.NFocus.FOCUS_POINT_DAYS = 5 -- 1.5x focuses
+NDefines.NFocus.FOCUS_POINT_DAYS = 6 -- 1.3x focuses
 NDefines.NDiplomacy.DIPLOMACY_REQUEST_EXPIRY_DAYS = 30
 NDefines.NDiplomacy.NUM_DAYS_TO_ENABLE_KICKING_NEW_MEMBERS_OF_FACTION = 1			-- Number of days before being able to kick a new member of faction
 NDefines.NDiplomacy.NUM_DAYS_TO_ENABLE_REINVITE_KICKED_NATIONS = 1			-- Number of days before being able to re invite a kicked nation to your faction
@@ -76,7 +76,7 @@ NDefines.NNavy.SUPPLY_NEED_FACTOR = 0
 NDefines.NNavy.PRIDE_OF_THE_FLEET_UNASSIGN_COST = 0							-- cost to unassign/replace pride of the fleet
 NDefines.NNavy.PRIDE_OF_THE_FLEET_LOST_TEMP_MODIFIER_DURATION = 180	
 ----------------------------------
-NDefines.NFocus.MAX_SAVED_FOCUS_PROGRESS = 25		-- This much progress can be saved while not having a focus selected
+NDefines.NFocus.MAX_SAVED_FOCUS_PROGRESS = 30		-- This much progress can be saved while not having a focus selected
 ----------------------------------
 NDefines.NBuildings.MAX_SHARED_SLOTS = 35
 NDefines.NBuildings.AIRBASE_CAPACITY_MULT = 200
