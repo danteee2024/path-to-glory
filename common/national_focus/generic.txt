@@ -74,8 +74,8 @@ focus_tree = {
 
 			add_tech_bonus = {
 				name = infantry_artillery_bonus
-				bonus = 1.0
-				uses = 1
+				bonus = 0.75
+				uses = 2
 				category = infantry_weapons
 				category = artillery
 			}
@@ -100,8 +100,14 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = motorized_bonus
-				bonus = 1.0
+				bonus = 0.75
+				uses = 2
 				technology = motorised_infantry
+			}
+
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.1
 			}
 		}
 	}
@@ -113,7 +119,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = army_effort
-		cost = 10
+		cost = 5
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
@@ -123,8 +129,8 @@ focus_tree = {
 			army_experience = 25
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 1
+				cost_reduction = 1
+				uses = 2
 				category = land_doctrine
 			}
 		}
@@ -152,8 +158,8 @@ focus_tree = {
 
 			add_tech_bonus = {
 				name = infantry_artillery_bonus
-				bonus = 1.0
-				uses = 1
+				bonus = 0.75
+				uses = 2
 				category = infantry_weapons
 				category = artillery
 			}
@@ -190,6 +196,11 @@ focus_tree = {
 					amount = 1
 				}
 			}
+
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.1
+			}
 		}
 	}
 
@@ -200,7 +211,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = doctrine_effort
-		cost = 10
+		cost = 5
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
@@ -210,8 +221,8 @@ focus_tree = {
 			army_experience = 25
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 1
+				cost_reduction = 1
+				uses = 2
 				category = land_doctrine
 			}
 		}
@@ -265,7 +276,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = armor_bonus
 				bonus = 1.0
-				uses = 2
+				uses = 4
 				category = armor
 			}
 		}
@@ -291,7 +302,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = special_forces_bonus
 				bonus = 1.0
-				uses = 1
+				uses = 2
 				technology = paratroopers
 				technology = paratroopers2
 				technology = marines
@@ -467,7 +478,13 @@ focus_tree = {
 				category = air_doctrine
 			}
 		}
-		completion_reward = {
+		completion_reward = { 
+			add_tech_bonus = {
+				name = air_bonus
+				bonus = 0.5
+				uses = 2
+				category = air_equipment
+			}
 			air_experience = 25
 			if = {
 				limit = {
@@ -665,7 +682,7 @@ focus_tree = {
 					}
 				}
 				random_owned_controlled_state = {
-					limit = {
+					limit = { 
 						is_coastal = yes
 						free_building_slots = {
 							building = dockyard
@@ -673,6 +690,7 @@ focus_tree = {
 							include_locked = yes
 						}
 					}
+
 					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = dockyard
@@ -776,8 +794,8 @@ focus_tree = {
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				name = sub_op_bonus
-				cost_reduction = 0.5
-				uses = 2
+				cost_reduction = 1
+				uses = 3
 				technology = convoy_interdiction_ti
 				technology = unrestricted_submarine_warfare
 				technology = wolfpacks
@@ -818,8 +836,8 @@ focus_tree = {
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				name = fleet_in_being_bonus
-				cost_reduction = 0.25
-				uses = 2
+				cost_reduction = 1
+				uses = 3
 				category = fleet_in_being_tree
 			}
 		}
@@ -1086,10 +1104,10 @@ focus_tree = {
 		}
 
 		complete_tooltip = {
-			add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = industrial_complex
-				level = 1
+				level = 2
 				instant_build = yes
 			}			
 		}
@@ -1118,10 +1136,10 @@ focus_tree = {
 						}
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1174,10 +1192,10 @@ focus_tree = {
 		}
 
 		complete_tooltip = {
-			add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = arms_factory
-				level = 1
+				level = 2
 				instant_build = yes
 			}
 		}
@@ -1206,10 +1224,10 @@ focus_tree = {
 						}
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1262,10 +1280,10 @@ focus_tree = {
 		}
 
 		complete_tooltip = {
-			add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = industrial_complex
-				level = 1
+				level = 2
 				instant_build = yes
 			}
 		}		
@@ -1294,10 +1312,10 @@ focus_tree = {
 						}
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1350,10 +1368,10 @@ focus_tree = {
 		}
 
 		complete_tooltip = {
-			add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = arms_factory
-				level = 1
+				level = 2
 				instant_build = yes
 			}
 		}		
@@ -1382,10 +1400,10 @@ focus_tree = {
 						}
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1399,7 +1417,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = construction_effort_2
-		cost = 10
+		cost = 5
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		
@@ -1544,10 +1562,10 @@ focus_tree = {
 		}
 
 		complete_tooltip = {
-			add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = arms_factory
-				level = 1
+				level = 2
 				instant_build = yes
 			}
 		}		
@@ -1576,10 +1594,10 @@ focus_tree = {
 						}
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1593,7 +1611,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = infrastructure_effort
-		cost = 10
+		cost = 5
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		    available = {
@@ -1876,7 +1894,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = infrastructure_effort_2
-		cost = 10
+		cost = 5
 
 		search_filters = { FOCUS_FILTER_RESEARCH } 
 		
