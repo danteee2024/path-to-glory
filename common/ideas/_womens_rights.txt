@@ -41,7 +41,7 @@ ideas = {
 			modifier = {
 				stability_factor = 0.075
 				industrial_capacity_factory = 0.025
-				production_speed_buildings_factor = 0.025
+				production_speed_buildings_factor = 0.05
 				conscription_factor = -0.05
 				
 			}

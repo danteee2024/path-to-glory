@@ -18,7 +18,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-
+            join_faction_tension = -0.999
 
 			}
 		}		
