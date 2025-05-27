@@ -75,8 +75,8 @@ FORM_POH = {
 	color_ui = rgb { 255 128 128 }
 }
 FORM_QIN = {
-    color = rgb { 254 205 33 }
-	color_ui = rgb { 254 205 33 }
+    color = rgb { 255 255 255 }
+	color_ui = rgb { 255 255 255 }
 }
 FORM_ROE = {
     color = rgb { 181 0 0 }
@@ -2399,8 +2399,8 @@ FORM_POH = {
 	color_ui = rgb { 255 128 128 }
 }
 FORM_QIN = {
-    color = rgb { 254 205 33 }
-	color_ui = rgb { 254 205 33 }
+    color = rgb { 255 255 255 }
+	color_ui = rgb { 255 255 255 }
 }
 FORM_ROE = {
     color = rgb { 181 0 0 }
