@@ -1256,7 +1256,7 @@ focus_tree = {
 		#ai_will_do = {
 		#	factor = 1
 		#}
-
+        
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
@@ -1286,13 +1286,13 @@ focus_tree = {
 			
 			has_country_flag = {
 				flag = USA_new_legislation_drafed_flag
-				days > 230
+				days > 250
 			}
 			custom_trigger_tooltip = {
 				tooltip = r56_USA_legislation_drafted_days_tt
 				has_country_flag = {
 					flag = USA_new_legislation_drafed_flag
-					days > 230
+					days > 250
 				}
 			}
 		}
@@ -1406,13 +1406,13 @@ focus_tree = {
 			
 			has_country_flag = {
 				flag = USA_new_legislation_drafed_flag
-				days > 230
+				days > 250
 			}
 			custom_trigger_tooltip = {
 				tooltip = r56_USA_legislation_drafted_days_tt
 				has_country_flag = {
 					flag = USA_new_legislation_drafed_flag
-					days > 230
+					days > 250
 				}
 			}
 		}
@@ -1565,13 +1565,13 @@ mutually_exclusive = {
 			has_government = democratic
 			has_country_flag = {
 				flag = USA_new_legislation_drafed_flag
-				days > 230
+				days > 250
 			}
 			custom_trigger_tooltip = {
 				tooltip = r56_USA_legislation_drafted_days_tt
 				has_country_flag = {
 					flag = USA_new_legislation_drafed_flag
-					days > 230
+					days > 250
 				}
 			}
 		}
@@ -1905,13 +1905,13 @@ mutually_exclusive = {
 			has_government = democratic
 			has_country_flag = {
 				flag = USA_new_legislation_drafed_flag
-				days > 230
+				days > 250
 			}
 			custom_trigger_tooltip = {
 				tooltip = r56_USA_legislation_drafted_days_tt
 				has_country_flag = {
 					flag = USA_new_legislation_drafed_flag
-					days > 230
+					days > 250
 				}
 			}
 		}
