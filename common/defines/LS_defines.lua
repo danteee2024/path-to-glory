@@ -34,6 +34,7 @@ NDefines.NProduction.BASE_FACTORY_SPEED_MIL = 3.6
 NDefines.NProduction.BASE_FACTORY_SPEED_NAV = 4.0
 NDefines.NProduction.MINIMUM_NUMBER_OF_FACTORIES_TAKEN_BY_CONSUMER_GOODS_PERCENT = 0.01
 NDefines.NProduction.CAPITULATE_STOCKPILES_RATIO = 0
+NDefines.NProduction.MAX_CIV_FACTORIES_PER_LINE = 12
 ---------
 NDefines.NProject.RECRUIT_SCIENTIST_COST = {						-- Amount of pp to hire a scientist based on available scientist
 		0,			-- pp cost if no available scientist
