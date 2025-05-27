@@ -5873,29 +5873,6 @@ focus_tree = {
 					exists = no
 				}
 			}
-			NOT = {
-				any_state = {
-					OR = {
-						is_core_of = ENG
-						is_core_of = CAN
-						is_core_of = SAF
-						is_core_of = AST
-						is_core_of = NZL
-					}
-					NOT = { state = 331 }
-					OWNER = {
-						NOT = {
-							OR = {
-								tag = ENG
-								tag = CAN
-								tag = SAF
-								tag = AST
-								tag = NZL
-							}
-						}
-					}
-				}
-			}
 
 		}
 
@@ -5918,20 +5895,7 @@ focus_tree = {
 			NZL = {
 				exists = no
 			}
-			NOT = {
-				any_state = {
-					OR = {
-						is_core_of = ENG
-						is_core_of = CAN
-						is_core_of = SAF
-						is_core_of = AST
-						is_core_of = NZL
-					}
-					OWNER = {
-						NOT = { tag = ENG }
-					}
-				}
-			}
+			
 		}
 
 		continue_if_invalid = no
@@ -6167,38 +6131,16 @@ focus_tree = {
 					}
 				}
 				AST = {
-					OR = {
-						AND = {
+					AND = {
 							is_subject_of = ENG
 							has_autonomy_state = autonomy_integrated_puppet
 						}
-						AND = {
-							exists = no
-							NOT = {
-								any_state = {
-									is_core_of = AST
-									NOT = { is_owned_by = ROOT }
-								}
-							}
-						}
-					}
 				}
 				NZL = {
-					OR = {
 						AND = {
 							is_subject_of = ENG
 							has_autonomy_state = autonomy_integrated_puppet
 						}
-						AND = {
-							exists = no
-							NOT = {
-								any_state = {
-									is_core_of = NZL
-									NOT = { is_owned_by = ROOT }
-								}
-							}
-						}
-					}
 				}
 			}
 			else_if = {
@@ -6208,21 +6150,10 @@ focus_tree = {
 					has_government = fascism
 				}
 				CAN = {
-					OR = {
-						AND = {
+					AND = {
 							is_subject_of = ENG
-							has_autonomy_state = autonomy_reichskommissariat
+							has_autonomy_state = autonomy_integrated_puppet
 						}
-						AND = {
-							exists = no
-							NOT = {
-								any_state = {
-									is_core_of = CAN
-									NOT = { is_owned_by = ROOT }
-								}
-							}
-						}
-					}
 				}
 				SAF = {
 					OR = {

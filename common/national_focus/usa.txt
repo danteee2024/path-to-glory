@@ -128,7 +128,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			add_political_power = 150
+			add_political_power = 100
 			hidden_effect = {
 				if = {
 					limit = {
@@ -1252,7 +1252,7 @@ focus_tree = {
 		relative_position_id = USA_continue_the_new_deal
 		x = -6
 		y = 1
-		cost = 5
+		cost = 10
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -1260,7 +1260,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			add_political_power = 100			
+			add_political_power = 50			
 		}
 	}
 	focus = {
@@ -3604,7 +3604,7 @@ focus = {
 	focus = {
 		id = USA_adjusted_compensation_act
 		icon = GFX_goal_generic_consumer_goods
-		x = 2
+		x = 3
 		y = 1
 		prerequisite = { focus = USA_reestablish_the_gold_standard }
 		relative_position_id = USA_reestablish_the_gold_standard
@@ -3638,9 +3638,38 @@ focus = {
 		}
 	}
 	focus = {
+		id = USA_anti_unions_act
+		icon = GFX_focus_RAJ_union_busting
+		x = -1
+		y = 1
+		prerequisite = { focus = USA_adjusted_compensation_act }
+		relative_position_id = USA_adjusted_compensation_act
+		mutually_exclusive = {
+			focus = USA_labour_management_relations_act
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			congress_medium_support_trigger = yes
+		}
+		
+		bypass = {
+
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+			add_ideas = USA_anti_unions_act_idea
+		}
+	}
+	focus = {
 		id = USA_labour_management_relations_act
-		icon = GFX_focus_generic_military_academy
-		x = 0
+		icon = GFX_focus_GER_customs_union
+		x = 1
 		y = 1
 		prerequisite = { focus = USA_adjusted_compensation_act }
 		relative_position_id = USA_adjusted_compensation_act
@@ -3680,7 +3709,7 @@ focus = {
 		icon = GFX_goal_generic_defence
 		x = 0
 		y = 2
-		prerequisite = { focus = USA_labour_management_relations_act }
+		prerequisite = { focus = USA_labour_management_relations_act focus = USA_anti_unions_act  }
 		relative_position_id = USA_adjusted_compensation_act
 		cost = 10
 
@@ -3779,7 +3808,7 @@ focus = {
 	focus = {
 		id = USA_america_first
 		icon = GFX_goal_generic_political_pressure
-		x = 4
+		x = 7
 		y = 1
 		prerequisite = { focus = USA_reestablish_the_gold_standard }
 		relative_position_id = USA_reestablish_the_gold_standard
@@ -5219,10 +5248,10 @@ focus = {
  	focus = {
 		id = USA_war_plans_division
 		icon = GFX_goal_generic_position_armies
-		x = 42
+		x = 45
 		y = 0
 		offset = {
-			x = -26
+			x = -27
 			y = 0
 			trigger = {
 				NOT = { has_dlc = "Man the Guns" }
@@ -6074,7 +6103,7 @@ focus = {
 	focus = {
 		id = USA_war_department
 		icon = GFX_goal_generic_army_doctrines
-		x = 16
+		x = 18
 		y = 0
 		relative_position_id = USA_war_plans_division
 		

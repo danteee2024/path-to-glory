@@ -51,7 +51,7 @@
  Commonwealth_Guard_The_Suez:0 "Guard The Suez"
  Commonwealth_Guard_The_Suez_desc:0 ""
 
- Commonwealth_form_joint_alliance: "The [Commonwealth_get_alliance_name]"
+ Commonwealth_form_joint_alliance: "The Commonwealth"
  Commonwealth_form_joint_alliance_desc: "The world has suffered from the impacts of the Great War. Let us now band together to prevent anything like this again."
  Commonwealth_form_joint_alliance_desc_dem: "However, forming a new alliance based on the democratic values we share could become a beacon for democracies everywhere, while still defending ourselves and bringing swift victory against the enemies of freedom."
  Commonwealth_form_joint_alliance_desc_com: "However, through the impetus of proletarian revolution we can bring our peoples together and focus them on the fight against capitalism, by joining our nations in an alliance of the Northern People's."
