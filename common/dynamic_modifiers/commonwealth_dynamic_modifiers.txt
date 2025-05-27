@@ -68,7 +68,7 @@ Commonwealth_mil_industry_originator_dmod = {
 
 	remove_trigger = { Commonwealth_basic_joint_trigger = no }
 
-	production_factory_max_efficiency_factor = 0.1
+	production_factory_max_efficiency_factor = 0.05
 	production_speed_arms_factory_factor = Commonwealth_mil_industry_originator_production_speed_arms_factory_factor # 0.15
 	production_factory_efficiency_gain_factor = Commonwealth_mil_industry_originator_dmod_efficiency_gain_factor # 0.2
 	equipment_conversion_speed = Commonwealth_mil_industry_originator_dmod_equipment_conversion_speed # 0.25 
@@ -81,7 +81,7 @@ Commonwealth_mil_industry_member_dmod = {
 
 	remove_trigger = { Commonwealth_basic_joint_trigger = no }
 
-	production_factory_max_efficiency_factor = 0.1
+	production_factory_max_efficiency_factor = 0.05
 	production_speed_arms_factory_factor = Commonwealth_mil_industry_member_production_speed_arms_factory_factor # 0.1
 	production_factory_efficiency_gain_factor = Commonwealth_mil_industry_member_dmod_efficiency_gain_factor # 0.1
 	equipment_conversion_speed = Commonwealth_mil_industry_member_dmod_equipment_conversion_speed # 0.15

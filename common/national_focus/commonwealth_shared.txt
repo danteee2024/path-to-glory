@@ -2112,68 +2112,6 @@ joint_focus = {
 }
 
 joint_focus = {
-	id = Commonwealth_air_production
-	
-	icon = GFX_focus_generic_aircraft_production
-	
-	prerequisite = { focus = Commonwealth_North_African_Air_Control focus = Commonwealth_Pacific_Air_Control focus = Commonwealth_Indian_Air }
-
-	x = 0
-	y = 1
-	relative_position_id = Commonwealth_North_African_Air_Control
-	cost = 10
-
-	
-
-	available = {
-		Commonwealth_basic_available_trigger = yes
-		has_deployed_air_force_size = {
-			size > 299
-		}
-	}
-
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-
-	joint_trigger = {
-  		Commonwealth_basic_joint_trigger = yes 
-	}
-
-	completion_reward_joint_originator = {
-		if = {
-			limit = {
-				has_dynamic_modifier = { modifier = Commonwealth_airforces_member_dmod }
-			}
-			remove_dynamic_modifier = {
-			 	modifier = Commonwealth_airforces_member_dmod
-			}
-			add_dynamic_modifier = {
-				modifier = Commonwealth_airforces_originator_dmod
-			}
-		}
-		custom_effect_tooltip = Commonwealth_modify_Commonwealth_airforce_dmod
-		custom_effect_tooltip = Commonwealth_airforces_dmod_production_cost_originator_TT
-		hidden_effect = {
-			add_ideas = {
-				Commonwealth_hidden_airforces_originator_dmod
-			}
-		}
-	}
-
-	completion_reward_joint_member = {
-		if = {
-			limit = {
-				has_dynamic_modifier = { modifier = Commonwealth_airforces_originator_dmod } 
-			}
-			remove_dynamic_modifier = {	modifier = Commonwealth_airforces_originator_dmod	}
-			add_dynamic_modifier = { modifier = Commonwealth_airforces_member_dmod }
-		} 
-		custom_effect_tooltip = Commonwealth_modify_Commonwealth_airforce_dmod
-		custom_effect_tooltip = Commonwealth_airforces_dmod_production_cost_member_TT
-		hidden_effect = { add_ideas = Commonwealth_hidden_airforces_member_dmod }
-	}
-}
-
-joint_focus = {
 	id = Commonwealth_naval_aircraft
 	icon = GFX_goal_generic_air_naval_bomber
 	prerequisite = { focus = Commonwealth_Commonwealth_airforce }
@@ -2222,13 +2160,13 @@ joint_focus = {
 	
 	icon = GFX_goal_generic_air_bomber
 	
-	prerequisite = { focus = Commonwealth_air_production }
+	prerequisite = {  focus = Commonwealth_Indian_Air focus = Commonwealth_Pacific_Air_Control focus = Commonwealth_North_African_Air_Control }    
 
 	mutually_exclusive = { focus = Commonwealth_fighter_command }
 
 	x = -1
 	y = 1
-	relative_position_id = Commonwealth_air_production
+	relative_position_id = Commonwealth_North_African_Air_Control
 	cost = 5
 
 	
@@ -2318,13 +2256,13 @@ joint_focus = {
 joint_focus = {
 	id = Commonwealth_fighter_command
 	icon = GFX_goal_generic_air_fighter2
-	prerequisite = { focus = Commonwealth_air_production }
+	prerequisite = {  focus = Commonwealth_Indian_Air focus = Commonwealth_Pacific_Air_Control focus = Commonwealth_North_African_Air_Control }               
 
 	mutually_exclusive = { focus = Commonwealth_bomber_command }
 
 	x = 1
 	y = 1
-	relative_position_id = Commonwealth_air_production
+	relative_position_id = Commonwealth_North_African_Air_Control
 	cost = 5
 
 	
