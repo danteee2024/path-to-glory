@@ -432,7 +432,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				max_planning = 0.15
+				max_planning = 0.10
 				planning_speed = 0.25
 				conscription = 0.03
 				conscription_factor = 0.25
