@@ -1878,7 +1878,7 @@ focus_tree = {
 		y = 1
 
 		relative_position_id = POR_arsenal_do_alfeite
-		cost = 10
+		cost = 5
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = { 	
 			add_tech_bonus = {
@@ -2467,11 +2467,11 @@ focus_tree = {
 		completion_reward = { 
 			add_war_support = 0.05
 			add_manpower = 50000
-			army_experience = 15
+			army_experience = 30
 			add_doctrine_cost_reduction = {
 				name = POR_field_maneuvers
-			    cost_reduction = 0.5
-			    uses = 1
+			    cost_reduction = 1
+			    uses = 2
 			    category = land_doctrine
 			}
 		}
@@ -3531,20 +3531,20 @@ focus_tree = {
 		completion_reward = { 
 			add_doctrine_cost_reduction = {
 				name = POR_visit_the_front
-			    cost_reduction = 0.5
-			    uses = 1
+			    cost_reduction = 1
+			    uses = 2
 			    category = land_doctrine
 			}
 			add_tech_bonus = {
 				name = POR_visit_the_front
 			    bonus = 0.5
 			    uses = 1
-			    category = light_air
+			    category = air_equipment
 			}
 			add_tech_bonus = {
 				name = POR_visit_the_front
-			    bonus = 0.5
-			    uses = 1
+			    bonus = 1
+			    uses = 2
 			    category = cat_light_armor
 			}
 			army_experience = 20
@@ -3771,7 +3771,6 @@ focus_tree = {
 		id = POR_securing_the_free_world
 		available = {			
 			has_global_flag = scw_over
-			threat > 0.4
 			has_government = democratic	
 		}
 
@@ -3786,6 +3785,7 @@ focus_tree = {
 		relative_position_id = POR_they_need_our_help
 		cost = 10
 		completion_reward = {
+			add_ideas = POR_nation_in_arms
 			hidden_effect = {
 				every_other_country = {
 					limit = {
@@ -4196,9 +4196,6 @@ focus_tree = {
 						states = { 181 }
 					}
 				}
-				else = {
-					add_stability = -0.1
-				}
 				custom_effect_tooltip = POR_potential_civil_war_low_requirement_tt
 			}
 			else = {
@@ -4249,7 +4246,8 @@ focus_tree = {
 
 		relative_position_id = POR_allow_free_elections
 		cost = 5
-		completion_reward = { 	
+		completion_reward = { 
+			add_ideas = POR_defence_of_freedom	
 			if = {
 				limit = { 
 					ENG = {
@@ -4891,7 +4889,7 @@ focus_tree = {
 		relative_position_id = POR_concordat_with_the_holy_see
 		cost = 10
 		completion_reward = { 
-			remove_ideas = POR_national_gold_reserves
+			add_ideas = POR_defence_of_freedom
 			remove_ideas = POR_unstable_republic
 			if = {
 				limit = { 
@@ -5183,7 +5181,11 @@ focus_tree = {
 
 		relative_position_id = POR_camisas_azuis
 		cost = 5
-		completion_reward = { 	
+		completion_reward = { 
+			swap_ideas = {
+				remove_idea = POR_national_syndicalism
+				add_idea = POR_axis_syndicalism
+			}
 			GER = {
 				country_event = { id = generic.2 hours = 4 }
 			}
@@ -5238,20 +5240,6 @@ focus_tree = {
 				leave_faction = yes
 			}
 			set_rule = { can_create_factions = yes }
-			set_rule = { can_join_factions = no }
-			every_other_country = {
-				limit = {
-					NOT = { is_puppet_of = ROOT }
-				}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = POR_the_fifth_empire_has_threatening_ambitions
-				}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = embargo
-				}
-			}
 			set_cosmetic_tag = POR_empire
 		}
 	}
