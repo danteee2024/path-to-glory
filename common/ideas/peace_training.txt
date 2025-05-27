@@ -8,7 +8,7 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = ast_volunteer_defence_corps
+			picture = BEL_the_kings_surrender
 			
 			modifier = {
                 training_time_army_factor = -0.20
