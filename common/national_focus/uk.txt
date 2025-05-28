@@ -1953,6 +1953,106 @@ focus_tree = {
 			}			
 		}
 	}
+	
+	focus = {
+		id = ENG_maintaining_imperial_integrity
+		prerequisite = { focus = ENG_reinforce_the_empire }
+		available = { 
+			is_subject = no
+		}
+		bypass = {
+			NOT = {
+				any_country = {
+					is_subject_of = ENG
+				}
+			}
+			NOT = {
+				focus_progress = {
+					focus = ENG_maintaining_the_balance_of_power
+					progress > 0
+				}
+			}
+		}
+
+		continue_if_invalid = yes
+ 
+		icon = GFX_focus_chi_british_cooperation
+		x = 1
+		y = 1
+		relative_position_id = ENG_reinforce_the_empire
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {FOCUS_FILTER_RESEARCH}	
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = naval_doc_bonus
+				cost_reduction = 0.5
+				uses = 3
+				category = naval_doctrine
+			}
+			if = {
+				limit = {
+					has_dlc = "Together for Victory"
+				}
+				CAN = {
+					if = {
+						limit = { is_in_faction_with = ENG }
+						add_ideas = ENG_maintaining_imperial_integrity_idea
+					}
+				}
+				AST = {
+					if = {
+						limit = { is_in_faction_with = ENG }
+						add_ideas = ENG_maintaining_imperial_integrity_idea
+					}
+				}
+				NZL = {
+					if = {
+						limit = { is_in_faction_with = ENG }
+						add_ideas = ENG_maintaining_imperial_integrity_idea
+					}
+				}
+				SAF = {
+					if = {
+						limit = { is_in_faction_with = ENG }
+						add_ideas = ENG_maintaining_imperial_integrity_idea
+					}
+				}
+				RAJ = {
+					if = {
+						limit = { is_in_faction_with = ENG }
+						add_ideas = ENG_maintaining_imperial_integrity_idea
+					}
+				}
+			}
+			FRA = {
+				if = {
+					limit = { NOT = { is_in_faction_with = ENG } }
+					add_opinion_modifier = { target = ENG modifier = ENG_maintaining_imperial_integrity }
+				}
+			}
+			ITA = {
+				if = {
+					limit = { NOT = { is_in_faction_with = ENG } }
+					add_opinion_modifier = { target = ENG modifier = ENG_maintaining_imperial_integrity }
+				}
+			}
+			USA = {
+				if = {
+					limit = { NOT = { is_in_faction_with = ENG } }
+					add_opinion_modifier = { target = ENG modifier = ENG_maintaining_imperial_integrity }
+				}
+			}
+			JAP = {
+				if = {
+					limit = { NOT = { is_in_faction_with = ENG } }
+					add_opinion_modifier = { target = ENG modifier = ENG_maintaining_imperial_integrity }
+				}
+			}
+		}
+	}
 	focus = {
 		id = uk_mediterranean_focus 
 		prerequisite = { focus = uk_service_focus }
@@ -6678,7 +6778,6 @@ focus_tree = {
 			}
 		}	
 		completion_reward = {
-			add_ideas = ENG_maintaining_imperial_integrity_idea
 			# Singapore
 			336 = {
 				if = {
