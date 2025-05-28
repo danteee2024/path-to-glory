@@ -13,10 +13,20 @@ NDefines.NDiplomacy.VOLUNTEERS_TRANSFER_SPEED = 5
 ----------------------------------
 NDefines.NCountry.EVENT_PROCESS_OFFSET = 30				-- Events are checked every X day per country or state (1 is ideal, but CPU heavy)
 ----------------------------------
+
 NDefines.NTrade.BASE_TRADE_FACTOR = 1000
 NDefines.NTrade.PARTY_SUPPORT_TRADE_FACTOR = 20
 NDefines.NDiplomacy.EMBARGO_THREAT_THRESHOLD = -10
 NDefines.NDiplomacy.EMBARGO_COST = 25
+NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 50
+NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 50
+NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 5000
+NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 5000
+NDefines.NMilitary.MAX_AIR_EXPERIENCE = 5000
+NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0.0 -- prevent special forces exploit 
+NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 50 -- 20 forty-width special forces divisions, plenty  
+
+
 
 NDefines.NBuildings.OWNER_CHANGE_EXTRA_SHARED_SLOTS_FACTOR = 1
 ----------------------------------
@@ -49,27 +59,6 @@ NDefines.NTechnology.BASE_RESEARCH_POINTS_SAVED = 50.0 --#base game 30 changed t
 NDefines.NTechnology.BASE_YEAR_AHEAD_PENALTY_FACTOR = 3.0		-- Base year ahead penalty
 NDefines.NTechnology.BASE_TECH_COST = 80					-- Base cost for a tech. multiplied with tech cost and ahead of time penalties
 ----------------------------------
-NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0.0 -- prevent special forces exploit 
-NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 50 -- 20 forty-width special forces divisions, plenty  
-NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 50
-NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 50
-NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 5000
-NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 5000
-NDefines.NMilitary.MAX_AIR_EXPERIENCE = 5000
-NDefines.NMilitary.UNIT_LEADER_USE_NONLINEAR_XP_GAIN = false -- yeah lets keep this true, or else EVERYONE and their mother has cracked out generals
-NDefines.NMilitary.TRAINING_MAX_LEVEL = 10
-NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 10
-NDefines.NMilitary.ARMY_EXP_BASE_LEVEL = 5
-NDefines.NMilitary.NUKE_MIN_DAMAGE_PERCENT = 0.9
-NDefines.NMilitary.NUKE_MAX_DAMAGE_PERCENT = 1.2
-NDefines.NMilitary.RETREAT_SPEED_FACTOR = 0.15
-NDefines.NMilitary.DIG_IN_FACTOR = 0.02
-NDefines.Enemy_AIR_SUPERIORITY_IMPACT = -0.45
-----------------------------------
-NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 0.2
-NDefines.NAir.AIR_WING_XP_LEVELS = { 20, 40, 60, 80, 100, 140, 180, 220, 260, 300, 390, 480, 570, 660, 750, 780, 810, 840, 870, 900 }
-NDefines.NAir.AIR_DEPLOYMENT_DAYS = 0
-----------------------------------
 NDefines.NNavy.SUPPLY_NEED_FACTOR = 0	
 NDefines.NNavy.PRIDE_OF_THE_FLEET_UNASSIGN_COST = 0							-- cost to unassign/replace pride of the fleet
 NDefines.NNavy.PRIDE_OF_THE_FLEET_LOST_TEMP_MODIFIER_DURATION = 180	
@@ -79,13 +68,8 @@ NDefines.NFocus.MAX_SAVED_FOCUS_PROGRESS = 30		-- This much progress can be save
 NDefines.NBuildings.MAX_SHARED_SLOTS = 35
 NDefines.NBuildings.AIRBASE_CAPACITY_MULT = 200
 
-NDefines.NMilitary.NUKE_MIN_DAMAGE_PERCENT = 0.9;
-NDefines.NMilitary.NUKE_MAX_DAMAGE_PERCENT = 1.2;
-NDefines.NMilitary.NUKE_DELAY_HOURS = 12;
-NDefines.NCountry.NUCLEAR_BOMB_DROP_UNITY_EFFECT_MAX_INFRA = 0.35;
-NDefines.NCountry.NUCLEAR_BOMB_DROP_UNITY_EFFECT_MAX_VP = 1;
 
-NDefines.NMilitary.COMBAT_OVER_WIDTH_PENALTY = -2
+
 	
 NDefines.NProduction.LICENSE_EQUIPMENT_SPEED_NOT_FACTION = 0
 NDefines.NProduction.LICENSE_EQUIPMENT_TECH_SPEED_PER_YEAR = 0
@@ -152,38 +136,6 @@ NDefines.NProduction.EQUIPMENT_MODULE_REPLACE_XP_COST = 0.0				-- XP cost for re
 NDefines.NProduction.EQUIPMENT_MODULE_CONVERT_XP_COST = 0.0				-- XP cost for converting one equipment module to a related module when creating an equipment variant.
 NDefines.NProduction.EQUIPMENT_MODULE_REMOVE_XP_COST = 0.0
 
-NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 5
-NDefines.NMilitary.UNIT_EXP_LEVELS = {0.02, 0.04, 0.06, 0.08, 0.1, 0.14, 0.18, 0.22, 0.26, 0.3, 0.39, 0.48, 0.57, 0.66, 0.75, 0.78, 0.81, 0.84, 0.87, 0.9}
-NDefines.NMilitary.ARMY_EXP_BASE_LEVEL = 5
-NDefines.NMilitary.TRAINING_MAX_LEVEL = 10
-
-NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 2000 -- Max army experience a country can store
-NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 2000 -- Max navy experience a country can store
-NDefines.NMilitary.MAX_AIR_EXPERIENCE = 2000  -- Max air experience a country can store
-
-NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.03
-NDefines.NMilitary.FIELD_MARSHAL_ARMIES_CAP = 10
-NDefines.NMilitary.RECON_SKILL_IMPACT = 6
-NDefines.NMilitary.BASE_DIVISION_BRIGADE_GROUP_COST = 0 -- Base cost to unlock a regiment slot
-NDefines.NMilitary.BASE_DIVISION_BRIGADE_CHANGE_COST = 0 -- Base cost to change a regiment column.
-NDefines.NMilitary.BASE_DIVISION_SUPPORT_SLOT_COST = 0
-
-NDefines.NMilitary.BASE_LEADER_TRAIT_GAIN_XP = 0.45
-NDefines.NMilitary.UNIT_EXPERIENCE_PER_COMBAT_HOUR = 0.0001
-NDefines.NMilitary.FIELD_EXPERIENCE_MAX_PER_DAY = 1.2
-NDefines.NMilitary.ENCIRCLED_DISBAND_MANPOWER_FACTOR = 0.1
-NDefines.NMilitary.PLAYER_ORDER_PLANNING_DECAY = 0.03
-NDefines.NMilitary.DISBAND_MANPOWER_LOSS = 0.0
-NDefines.NMilitary.PLAN_SPREAD_ATTACK_WEIGHT = 4.1 --AI should concentrate forces more a bit experimental. Increased from 4.0 to combat issues with AI death stacks - SpicyAlfredo
-
-NDefines.NMilitary.FIELD_MARSHAL_XP_RATIO = 0.3
-NDefines.NMilitary.COMMANDER_LEVEL_UP_STAT_WEIGHTS = {5, 5, 3, 4}
-NDefines.NMilitary.NEW_COMMANDER_RANDOM_PERSONALITY_TRAIT_CHANCES = { -- Chances to gain a personality trait for new generals
-    0.80, --50% for first trait
-    0.40, --15% for second trait after that
-    0.05, 
-    0.01,
-}
 
 NDefines.NMilitary.PLANNING_DECAY = 0.01
 NDefines.NMilitary.PLANNING_GAIN = 0.02
@@ -244,17 +196,6 @@ NDefines.NMilitary.NEW_NAVY_LEADER_RANDOM_SKILL_CHANCES = { -- chances to give a
 
 NDefines.NAir.SUPPLY_NEED_FACTOR = 0.22 -- 0.28
 
-NDefines.NAir.AIR_WING_XP_LEVELS = {20, 40, 60, 80, 100, 140, 180, 220, 260, 300, 390, 480, 570, 660, 750, 780, 810, 840, 870, 900}
-NDefines.NAir.AIR_WING_XP_TRAINING_MAX = 300.0
-NDefines.NAir.AIR_WING_MAX_STATS_BOMBING = 100
-NDefines.NAir.AIR_WING_XP_TRAINING_MISSION_GAIN_DAILY = 4.5
-NDefines.NAir.AIR_WING_COUNTRY_XP_FROM_TRAINING_FACTOR = 0.01
-NDefines.NAir.AIR_WING_XP_LOSS_WHEN_KILLED = 200
-NDefines.NAir.AIR_WING_MAX_STATS_ATTACK = 1000 -- Max stats was 200
-NDefines.NAir.AIR_WING_MAX_STATS_DEFENCE = 1000 -- was 200
-NDefines.NAir.AIR_WING_MAX_STATS_AGILITY = 1000 -- was 200
-NDefines.NAir.AIR_WING_MAX_STATS_SPEED = 9999 -- Used to balance the damage done while bombing. was 1500
-NDefines.NAir.AIR_WING_XP_LOSS_REDUCTION_OVER_FRIENDLY_TERRITORY_FACTOR = 0.7
 
 
 NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_NO_TRUCK_DISRUPTION_FACTOR = 0.05 --0.2 was 0.1 Base 0.02
@@ -299,13 +240,6 @@ NDefines.NAI.RESEARCH_LAND_DOCTRINE_NEED_GAIN_FACTOR = 0	-- Multiplies value bas
 NDefines.NAI.RESEARCH_NAVAL_DOCTRINE_NEED_GAIN_FACTOR = 0	-- Multiplies value based on relative naval industry size / country size.
 NDefines.NAI.RESEARCH_AIR_DOCTRINE_NEED_GAIN_FACTOR = 0		-- Multiplies value based on relative number of air base / country size.
 
-NDefines.NAI.MAX_AHEAD_RESEARCH_PENALTY = 1.3
-NDefines.NAI.RESEARCH_NEW_WEIGHT_FACTOR = 0.5 			-- Impact of previously unexplored tech weights. Higher means more random exploration.
-NDefines.NAI.RESEARCH_BONUS_FACTOR = 3 				-- To which extent AI should care about bonuses to research
-NDefines.NAI.RESEARCH_AHEAD_OF_TIME_FACTOR = 2.0 		-- To which extent AI should care about ahead of time penalties to research
-NDefines.NAI.RESEARCH_BASE_DAYS = 30					-- Vanilla 60 AI adds a base number of days when weighting completion time for techs to ensure it doesn't only research quick techs	
-NDefines.NAI.XP_RATIO_REQUIRED_TO_RESEARCH_WITH_XP = 3.0
-
 --------------------------------------------------------------------------------------------------------------
 -- DESIGN
 --------------------------------------------------------------------------------------------------------------
@@ -313,59 +247,6 @@ NDefines.NAI.DEFAULT_LEGACY_VARIANT_CREATION_XP_CUTOFF_LAND = 199 --10	-- Army X
 NDefines.NAI.DEFAULT_LEGACY_VARIANT_CREATION_XP_CUTOFF_NAVY = 49 --25	-- Same as above but for navy XP and navy_xp_spend_priority.
 NDefines.NAI.DEFAULT_LEGACY_VARIANT_CREATION_XP_CUTOFF_AIR  = 199 --25	-- Same as above but for air XP and air_xp_spend_priority.
 
--- The AI uses the below values when selecting which design to make among the types that use the tank designer
--- (the tank designer DLC feature must be active). For each role the highest priority AI design that can be
--- created if any is assigned a weight. Any design with a weight of zero or a weight that falls below the
--- cutoff is dropped. A random design is then picked from the remaining.
--- Weight is calculated as AlternativeFactor * DemandFactor.
--- An "alternative" is a producible design of the same archetype (each specialized type is its own archetype).
-
--- EAI: AI delays upgrading the main tank types too much because it wants to create absent types for its templates first
--- makes sense but I'd rather have it get its most used type upgraded first
-NDefines.NAI.LAND_DESIGN_ALTERNATIVE_ABSENT = 1 --1000000
-NDefines.NAI.LAND_DESIGN_ALTERNATIVE_OF_LESSER_TECH = 1 --10000
-NDefines.NAI.LAND_DESIGN_ALTERNATIVE_OF_EQUAL_TECH = 1 --100
-NDefines.NAI.LAND_DESIGN_ALTERNATIVE_OF_GREATER_TECH = 1
-
--- If a template may be reinforced with the archetype it's considered to be "demanded". If multiple conditions
--- are met e.g. it's both in the field and in training the largest value is used.
-
-NDefines.NAI.LAND_DESIGN_DEMAND_FIELD_DIVISION = 50
-NDefines.NAI.LAND_DESIGN_DEMAND_TRAINING_DIVISION = 50
-NDefines.NAI.LAND_DESIGN_DEMAND_GARRISON_DIVISION = 10
-NDefines.NAI.LAND_DESIGN_DEMAND_UNUSED_TEMPLATE = 10 --1
-NDefines.NAI.LAND_DESIGN_DEMAND_ABSENT = 10 --0
-
--- The AI "desires" to spend XP on doctrines templates and equipment.
--- The desire is built up over time and when XP is available it spends it on the action that has the highest accumulated desire. After spending XP the desire is reset in effect balancing the desires.
--- Below is the daily desire gain for each action.
-
-NDefines.NAI.DESIRE_USE_XP_TO_UNLOCK_LAND_DOCTRINE = 1    -- How quickly is desire to unlock land doctrines accumulated?
-NDefines.NAI.DESIRE_USE_XP_TO_UNLOCK_NAVAL_DOCTRINE = 1   -- How quickly is desire to unlock naval doctrines accumulated?
-NDefines.NAI.DESIRE_USE_XP_TO_UNLOCK_AIR_DOCTRINE = 1    -- How quickly is desire to unlock air doctrines accumulated?
-
---EAI: make sure land template desire is always at the top if the doctrine desire is high but the mod blocks it AI wont create templates
-NDefines.NAI.DESIRE_USE_XP_TO_UPDATE_LAND_TEMPLATE = 100.0 --2.0    -- How quickly is desire to update/create templates accumulated?
-
-NDefines.NAI.DESIRE_USE_XP_TO_UPGRADE_LAND_EQUIPMENT = 2.0  -- How quickly is desire to update/create land equipment variants accumulated?
-NDefines.NAI.DESIRE_USE_XP_TO_UPGRADE_NAVAL_EQUIPMENT = 100.0 -- How quickly is desire to update/create naval equipment variants accumulated?
-NDefines.NAI.DESIRE_USE_XP_TO_UPGRADE_AIR_EQUIPMENT = 100.0  -- How quickly is desire to update/create air equipment variants accumulated?
-
-NDefines.NAI.DESIRE_USE_XP_TO_UNLOCK_ARMY_SPIRIT = 0.4    -- How quickly is desire to unlock army spirits accumulated?
-NDefines.NAI.DESIRE_USE_XP_TO_UNLOCK_NAVY_SPIRIT = 0.4   -- How quickly is desire to unlock naval spirits accumulated?
-NDefines.NAI.DESIRE_USE_XP_TO_UNLOCK_AIR_SPIRIT = 0.4    -- How quickly is desire to unlock air spirits accumulated?
-
-NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_DOCTRINE = 7       -- Recalculate desired best doctrine to unlock with this many days inbetween.
-NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_TEMPLATE = 7       -- Recalculate desired best template to upgrade with this many days inbetween.
-NDefines.NAI.DAYS_BETWEEN_CHECK_BEST_EQUIPMENT = 7      -- Recalculate desired best equipment to upgrade with this many days inbetween.
-
-NDefines.NAI.GARRISON_TEMPLATE_SCORE_IC_FACTOR = 1.0 -- ai uses these defines while calculating garrison template score of a template.
-NDefines.NAI.GARRISON_TEMPLATE_SCORE_MANPOWER_FACTOR = 0.05 -- formula is (template_ic * ic_factor + template_manpower * manpower_factor ) / template_supression (lower is better)	
-
-NDefines.NAI.DIVISION_UPGRADE_MIN_XP = 100				-- Instead of 200 Minimum XP before attempting to upgrade a division template.
-NDefines.NAI.DIVISION_CREATE_MIN_XP = 100				-- Instead of 150 Minimum XP before attempting to create a fresh new division template.
-NDefines.NAI.VARIANT_UPGRADE_MIN_XP = 100				-- Instead of 150 Minimum XP before attempting to create a new variant.
-NDefines.NAI.UPGRADE_XP_RUSH_UPDATE = 150				-- Instead of 200 If XP is above this on the daily tick the AI will attempt to spend it
 
 --------------------------------------------------------------------------------------------------------------
 -- DIVISION PRODUCTION
