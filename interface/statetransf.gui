@@ -2,7 +2,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "st_open_container"
-		position = { x = 1320 y = 2 }
+		position = { x = 1320 y = 3 }
 
 		buttonType = {
 			name = "open_ST"
@@ -16,12 +16,12 @@ guiTypes = {
 		
 		instantTextboxType = {
 			name = "title"
-			position = {x=22 y=5}
-			font = "hoi_18mbs"
+			position = {x=0 y=5}
+			font = "hoi_16mbs"
 			text = "[transfer_states_tooltip]"
 			maxWidth = 200
 			maxHeight = 23
-			format = left
+			format = center
 		}
 
 	}

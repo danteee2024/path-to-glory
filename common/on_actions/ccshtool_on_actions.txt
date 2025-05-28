@@ -3,426 +3,426 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {has_game_rule = {rule = select_host_country option = GER}}
-				set_variable={host = GER.id}
+				GER = { set_country_flag = ccshtool_enabled_cflag }
 			}
 			else_if = {
 				limit = {has_game_rule = {rule = select_host_country option = AFG}}
-				set_variable={host = AFG.id}
+				AFG = { set_country_flag = ccshtool_enabled_cflag }
 			}
-	
+
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = ALB}}
-					set_variable={host = ALB.id}
+					ALB = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = ANG}}
-					set_variable={host = ANG.id}
+					ANG = { set_country_flag = ccshtool_enabled_cflag }
 				}
-		
+
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = ARG}}
-					set_variable={host = ARG.id}
+					ARG = { set_country_flag = ccshtool_enabled_cflag }
 				}
 
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = AST}}
-					set_variable={host = AST.id}
+					AST = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = AUS}}
-					set_variable={host = AUS.id}
+					AUS = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = BEL}}
-					set_variable={host = BEL.id}
+					BEL = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = BHU}}
-					set_variable={host = BHU.id}
+					BHU = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = BOL}}
-					set_variable={host = BOL.id}
+					BOL = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = BRA}}
-					set_variable={host = BRA.id}
+					BRA = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = MAL}}
-					set_variable={host = MAL.id}
+					MAL = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = RAJ}}
-					set_variable={host = RAJ.id}
+					RAJ = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = BUL}}
-					set_variable={host = BUL.id}
+					BUL = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = CHL}}
-					set_variable={host = CHL.id}
+					CHL = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = CHI}}
-					set_variable={host = CHI.id}
+					CHI = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = COL}}
-					set_variable={host = COL.id}
+					COL = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = PRC}}
-					set_variable={host = PRC.id}
+					PRC = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = COS}}
-					set_variable={host = COS.id}
+					COS = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = CUB}}
-					set_variable={host = CUB.id}
+					CUB = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = CZE}}
-					set_variable={host = CZE.id}
+					CZE = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = DEN}}
-					set_variable={host = DEN.id}
+					DEN = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = DOM}}
-					set_variable={host = DOM.id}
+					DOM = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = CAN}}
-					set_variable={host = CAN.id}
+					CAN = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = INS}}
-					set_variable={host = INS.id}
+					INS = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = ECU}}
-					set_variable={host = ECU.id}
+					ECU = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = ELS}}
-					set_variable={host = ELS.id}
+					ELS = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = EST}}
-					set_variable={host = EST.id}
+					EST = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = ETH}}
-					set_variable={host = ETH.id}
+					ETH = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = FIN}}
-					set_variable={host = FIN.id}
+					FIN = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = FRA}}
-					set_variable={host = FRA.id}
+					FRA = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = GER}}
-					set_variable={host = GER.id}
+					GER = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = GRE}}
-					set_variable={host = GRE.id}
+					GRE = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = GXC}}
-					set_variable={host = GXC.id}
+					GXC = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = GUA}}
-					set_variable={host = GUA.id}
+					GUA = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = HAI}}
-					set_variable={host = HAI.id}
+					HAI = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = HON}}
-					set_variable={host = HON.id}
+					HON = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = ICE}}
-					set_variable={host = ICE.id}
+					ICE = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = PER}}
-					set_variable={host = PER.id}
+					PER = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = IRQ}}
-					set_variable={host = IRQ.id}
+					IRQ = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = IRE}}
-					set_variable={host = IRE.id}
+					IRE = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = ITA}}
-					set_variable={host = ITA.id}
+					ITA = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = JAP}}
-					set_variable={host = JAP.id}
+					JAP = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = HUN}}
-					set_variable={host = HUN.id}
+					HUN = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = ROM}}
-					set_variable={host = ROM.id}
+					ROM = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = LAT}}
-					set_variable={host = LAT.id}
+					LAT = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = LIB}}
-					set_variable={host = LIB.id}
+					LIB = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = LIT}}
-					set_variable={host = LIT.id}
+					LIT = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = LUX}}
-					set_variable={host = LUX.id}
+					LUX = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = MAN}}
-					set_variable={host = MAN.id}
+					MAN = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = MEN}}
-					set_variable={host = MEN.id}
+					MEN = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = MEX}}
-					set_variable={host = MEX.id}
+					MEX = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = MON}}
-					set_variable={host = MON.id}
+					MON = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = NEP}}
-					set_variable={host = NEP.id}
+					NEP = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = HOL}}
-					set_variable={host = HOL.id}
+					HOL = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = NZL}}
-					set_variable={host = NZL.id}
+					NZL = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = NIC}}
-					set_variable={host = NIC.id}
+					NIC = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = NOR}}
-					set_variable={host = NOR.id}
+					NOR = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = OMA}}
-					set_variable={host = OMA.id}
+					OMA = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = PAN}}
-					set_variable={host = PAN.id}
+					PAN = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = PAR}}
-					set_variable={host = PAR.id}
+					PAR = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = PRU}}
-					set_variable={host = PRU.id}
+					PRU = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = PHI}}
-					set_variable={host = PHI.id}
+					PHI = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = POL}}
-					set_variable={host = POL.id}
+					POL = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = POR}}
-					set_variable={host = POR.id}
+					POR = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = SAU}}
-					set_variable={host = SAU.id}
+					SAU = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = SHX}}
-					set_variable={host = SHX.id}
+					SHX = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = SIA}}
-					set_variable={host = SIA.id}
+					SIA = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = SIK}}
-					set_variable={host = SIK.id}
+					SIK = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = SAF}}
-					set_variable={host = SAF.id}
+					SAF = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = SOV}}
-					set_variable={host = SOV.id}
+					SOV = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = SPR}}
-					set_variable={host = SPR.id}
+					SPR = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = SWE}}
-					set_variable={host = SWE.id}
+					SWE = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = SWI}}
-					set_variable={host = SWI.id}
+					SWI = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = TAN}}
-					set_variable={host = TAN.id}
+					TAN = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = TIB}}
-					set_variable={host = TIB.id}
+					TIB = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = TUR}}
-					set_variable={host = TUR.id}
+					TUR = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = ENG}}
-					set_variable={host = ENG.id}
+					ENG = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = USA}}
-					set_variable={host = USA.id}
+					USA = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = URG}}
-					set_variable={host = URG.id}
+					URG = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = VEN}}
-					set_variable={host = VEN.id}
+					VEN = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = XSM}}
-					set_variable={host = XSM.id}
+					XSM = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = YEM}}
-					set_variable={host = YEM.id}
+					YEM = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = YUG}}
-					set_variable={host = YUG.id}
+					YUG = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			else_if = {
 					limit = {has_game_rule = {rule = select_host_country option = YUN}}
-					set_variable={host = YUN.id}
+					YUN = { set_country_flag = ccshtool_enabled_cflag }
 				}
 		
 			var:host = {
