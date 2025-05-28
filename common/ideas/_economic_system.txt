@@ -64,8 +64,8 @@ ideas = {
             modifier = {
                 consumer_goods_factor = 0.05
                 production_speed_infrastructure_factor = 0.10
-                stability_factor = 0.10
-                global_building_slots_factor = 0.10
+                stability_factor = 0.15
+                global_building_slots_factor = 0.15
             }
             ai_will_do = {
                 factor = 1
@@ -138,7 +138,7 @@ ideas = {
             picture = PB_Communal_Economy
             modifier = {
                 conscription_factor = -0.05
-                production_speed_industrial_complex_factor = 0.10
+                production_speed_industrial_complex_factor = 0.15
                 consumer_goods_factor = 0.10
                 global_building_slots_factor = 0.15
             }

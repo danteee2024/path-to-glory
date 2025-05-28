@@ -6678,6 +6678,7 @@ focus_tree = {
 			}
 		}	
 		completion_reward = {
+			add_ideas = ENG_maintaining_imperial_integrity_idea
 			# Singapore
 			336 = {
 				if = {
@@ -7429,7 +7430,51 @@ focus_tree = {
 			}
 		}
 	}
+focus = {
+		id = ENG_prepare_for_the_inevitable
+		available = {
 
+		}		
+		prerequisite = { focus = ENG_home_defence }
+
+		icon = GFX_goal_generic_construction
+
+		x = 2
+		y = 1
+		offset = {
+			x = 1
+			y = 0
+			trigger = {
+				NOT = { has_dlc = "Man the Guns" }
+			}
+		}
+		relative_position_id = ENG_home_defence
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }	
+
+		completion_reward = {
+			IF = {
+				limit = {
+					NOT = {
+						has_idea = wartime_industry_focus
+					}
+				}
+				add_ideas = ENG_prepare_for_the_inevitable_idea
+			}
+			ELSE = {
+				swap_ideas = {
+					remove_idea = wartime_industry_focus
+					add_idea = ENG_prepare_for_the_inevitable_and_wartime_industry_idea
+				}	
+			}
+		}
+	}
 	focus = {
 		id = ENG_call_general_election_labour
 		available = {
