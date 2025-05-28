@@ -1,0 +1,8 @@
+﻿l_english:
+
+ ccshtool_gamerules_group:0 "§CHost Tool§!"
+ ccshtool_gr_generic:0 "Select"
+ ccshtool_gr_genericnohost:0 "No Host"
+ ccshtool_gr_genericnohost_desc:0 "Tip: You can use the console to give yourself the §CHost Tool§! with `set_flag ccshtool_enabled_cflag 1`"
+ ccshtool_gr_randomhost:0 "Random Host"
+ ccshtool_gr_randomhost_desc:0 "Gives the §CHost Tool§! to a random player. If required, you can then transfer access within the tool itself."
