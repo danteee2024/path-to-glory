@@ -4,17 +4,16 @@ state={
 	name="STATE_277"
 	manpower = 3424403
 	
-	state_category = city
-
+	state_category = metropolis
 	resources={
-		steel=6 #was 2 before Mexican steel production was centralized to allow oil concessions
+		steel=12 
 	}
 	
 	history={
 		owner = MEX
 		buildings = {
-			infrastructure = 3 #was: 5
-			arms_factory = 2
+			infrastructure = 4 #was: 5
+			arms_factory = 3
 			industrial_complex = 4
 			air_base = 3
 		}
