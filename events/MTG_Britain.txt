@@ -960,6 +960,9 @@ country_event = {
 	
 	# If he goes through with it, we're out
 	option = {
+		ai_chance = {
+			factor = 0
+		}
 		name = mtg_britain.15.a
 		custom_effect_tooltip = mtg_britain.15_tt
 		set_country_flag = ENG_abdication_crisis_dominion_will_leave
@@ -969,7 +972,7 @@ country_event = {
 	option = {
 		name = mtg_britain.15.b
 		ai_chance = {
-			factor = 0
+			factor = 10
 		}
 		custom_effect_tooltip = mtg_britain.15_tt_2
 		set_country_flag = ENG_abdication_crisis_dominion_will_stay
@@ -7650,19 +7653,15 @@ country_event = {
 
 	trigger = {
 		tag = ENG
-		has_country_flag = ENG_king_died
 		has_dlc = "Man the Guns"
 		has_country_flag = ENG_abdication_crisis_morganatic_marriage
 		has_country_flag = edward_viii_married_wallis_simpson
-		126 = {
-			is_controlled_by = ENG
-			days_since_last_strategic_bombing < 8
-		}
+		date > 1937.3.1
 	}
 	
 	fire_only_once = yes
 
-	mean_time_to_happen = { days = 30 }
+	mean_time_to_happen = { days = 10 }
 	
 	option = {
 		name = mtg_britain.999.a
@@ -7692,12 +7691,12 @@ country_event = {
 	trigger = {
 		original_tag = ENG
 		has_government = neutrality
-		date > 1941.1.1
+		date > 1938.12.1
 		has_country_leader = { ruling_only = yes name = "George VI" }
 	}
 
 	mean_time_to_happen = {
-		days = 1460
+		days = 10
 	}
 	
 	option = {
