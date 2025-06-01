@@ -892,7 +892,7 @@
 		y = 1
 		relative_position_id = NZL_national_roads_board
 
-		cost = 10
+		cost = 2
 
 		ai_will_do = {
 			factor = 25
@@ -952,7 +952,7 @@
 			284 = {
 				add_resource = {
 					type = oil
-					amount = 5
+					amount = 15
 				}
 			}
 		}
@@ -960,7 +960,7 @@
 
 	focus = {
 		id = NZL_wairarapa_sheep_farms
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_focus_generic_sheep
 		prerequisite = { focus = NZL_national_roads_board }
 		x = 2
 		y = 1
@@ -991,6 +991,12 @@
 
 		completion_reward = {
 			add_ideas = NZL_wairarapa_sheep_farms
+			add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
 		}
 	}
 
@@ -1002,7 +1008,7 @@
 		y = 2
 		relative_position_id = NZL_national_roads_board
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -1049,10 +1055,10 @@
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = NZL_bureau_of_industry_IC1
@@ -1336,7 +1342,7 @@
 		x = 0
 		y = 5
 		relative_position_id = NZL_national_roads_board
-
+		
 		cost = 10
 
 		ai_will_do = {
@@ -1396,7 +1402,7 @@
 			add_doctrine_cost_reduction = {
 				name = NZL_army_reforms
 				cost_reduction = 0.5
-				uses = 1
+				uses = 3
 				category = land_doctrine
 			}
 		}
