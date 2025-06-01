@@ -327,6 +327,7 @@ technologies = {
 		}
 
 		enable_tactic = tactic_blitz
+		enable_tactic = elastic_defence
 		
 		
 		path = {
@@ -442,8 +443,6 @@ technologies = {
 
 		category_tanks = {
 			max_organisation = 3
-			soft_attack = 0.05
-			hard_attack = 0.05
 		}
 
 		category_all_armor = {
@@ -804,8 +803,8 @@ technologies = {
 		}
 
 		conscription = 0.02
-		army_core_defence_factor = 0.15
-		army_core_attack_factor = 0.10
+		army_core_defence_factor = 0.1
+		army_core_attack_factor = 0.05
 		
 		path = {
 			leads_to_tech = nd_conscription 
@@ -859,7 +858,6 @@ technologies = {
 		xp_unlock_cost = 100
 		conscription = 0.03
 		out_of_supply_factor = -0.2
-		supply_consumption_factor = -0.1
 
 		path = {
 			leads_to_tech = werwolf_guerillas 
@@ -903,15 +901,9 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 		#Increased Partisan effect on your land occupied by others
-		out_of_supply_factor = -0.30
-		category_army = {
-			default_morale = 0.2
-		}
-		
-		enable_tactic = tactic_guerrilla_tactics
+		resistance_damage_to_garrison_on_our_occupied_states = 0.2 
 
-		resistance_growth_on_our_occupied_states = 0.25 
-		# ported over Mass mob Guerrilla warfare
+		enable_tactic = tactic_guerrilla_tactics
 		
 		doctrine = yes	
 		research_cost = 4.5
@@ -997,8 +989,8 @@ technologies = {
 	sup_delay = {
 		xp_research_type = army
 		xp_unlock_cost = 100
-		category_all_infantry = {
-			max_organisation = 15
+		category_light_infantry = {
+			max_organisation = 10
 		}
 		
 		enable_tactic = tactic_delay
@@ -1146,6 +1138,7 @@ technologies = {
 		category_support_battalions = {
 			max_organisation = 10
 			breakthrough = 1
+			defence = 1
 		}
 		
 		supply_consumption_factor = -0.10
@@ -1201,7 +1194,7 @@ technologies = {
 			intergrated_support
 		}
 		
-		category_artillery = {
+		category_line_artillery = {
 			default_morale = 0.20
 			defence = 0.20
 			max_organisation = 10
@@ -1212,8 +1205,6 @@ technologies = {
 				category = category_artillery
 				defense = 0.10
 				soft_attack = 0.10
-				hard_attack = 0.10
-				breakthrough = 0.10
 			}
 		}
 		
@@ -1262,10 +1253,10 @@ technologies = {
 	overwhelming_firepower = {
 		xp_research_type = army
 		xp_unlock_cost = 100
-		category_artillery = {
-			soft_attack = 0.25
-			hard_attack = 0.25
-			breakthrough = 0.25
+		category_line_artillery = {
+			soft_attack = 0.10
+			hard_attack = 0.10
+			breakthrough = 0.20
 		}
 		coordination_bonus = 0.05
 
@@ -1349,6 +1340,7 @@ technologies = {
 
 		additional_brigade_column_size = 1
 
+		enable_tactic = elastic_defence
 		enable_tactic = tactic_blitz
 		
 		path = {
@@ -1412,7 +1404,7 @@ technologies = {
 			soft_attack = 0.05
 			breakthrough = 0.05
 		}
-		coordination_bonus = 0.05
+		coordination_bonus = 0.02
 		
 		path = {
 			leads_to_tech = combined_arms 
@@ -1463,9 +1455,12 @@ technologies = {
 		category_all_armor = {
 			max_organisation = 2
 			default_morale = 0.1
-			hard_attack = 0.05
-			soft_attack = 0.05
-			breakthrough = 0.1
+		}
+		
+		category_tanks  = { 
+			hard_attack = 0.10
+			soft_attack = 0.10
+			breakthrough = 0.2
 		}	
 
 		enable_tactic = tactic_breakthrough
@@ -1574,29 +1569,25 @@ technologies = {
 			
 		#combat advantage when air superior
 		army_bonus_air_superiority_factor = 0.15
-		enemy_army_bonus_air_superiority_factor = -0.15
 		
 		recon = {
 			battalion_mult = {
 				category = category_anti_air
-				air_attack = 0.20
-				max_organisation = 0.20
+				air_attack = 0.10
 			}
 		}
 		
 		mot_recon = {
 			battalion_mult = {
 				category = category_anti_air
-				air_attack = 0.20
-				max_organisation = 0.20
+				air_attack = 0.10
 			}
 		}
 
 		armored_car_recon = {
 			battalion_mult = {
 				category = category_anti_air
-				air_attack = 0.20
-				max_organisation = 0.20
+				air_attack = 0.10
 			}
 		}
 		
@@ -1649,7 +1640,8 @@ technologies = {
 			breakthrough_factor = 0.05
 		}
 		category_artillery = { 
-			breakthrough = 0.25
+			breakthrough = 0.10
+			defence = 0.10
 			max_organisation = 10
 		}
 
@@ -2104,6 +2096,7 @@ technologies = {
 
 		additional_brigade_column_size = 1
 
+		enable_tactic = elastic_defence
 		enable_tactic = tactic_blitz
 		
 		path = {
@@ -2323,7 +2316,7 @@ technologies = {
 			battalion_mult = {
 				category = category_all_infantry
 				defense = 0.05
-				breakthrough = 0.05
+				recovery = 0.05
 			}
 		}
 		
@@ -2430,12 +2423,10 @@ technologies = {
 		}
 		category_light_infantry = {
 			max_organisation = 5
-			breakthrough = 0.10
-			default_morale = 0.10
+			breakthrough = 0.1
 		}
 
 		additional_brigade_column_size = 1
-		land_reinforce_rate = 0.02
 		
 		enable_tactic = tactic_infantry_charge
 		
@@ -2485,10 +2476,11 @@ technologies = {
 	armored_operations = {
 		xp_research_type = army
 		xp_unlock_cost = 100
-		
+		category_tanks = {
+			max_organisation = 2
+		}
 		category_all_armor = {
 			default_morale = 0.1
-			max_organisation = 2
 		}
 		armored_car = {
 			max_organisation = 2
@@ -2496,6 +2488,8 @@ technologies = {
 		}
 		
 		enable_tactic = tactic_blitz
+		enable_tactic = tactic_elastic_defense
+		
 		
 		path = {
 			leads_to_tech = infiltration_assault 
@@ -2546,10 +2540,6 @@ technologies = {
 		xp_unlock_cost = 100
 		supply_consumption_factor = -0.10
 		command_power_gain_mult = 0.15
-
-		infantry = {
-				combat_width = -0.2
-			}
 		
 		recon = {
 			battalion_mult = {
@@ -2607,7 +2597,7 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 		#reduce land night combat penalty
-		land_night_attack = 0.30 # negates half of base penalty
+		land_night_attack = 0.25 # negates half of base penalty
 		org_loss_when_moving = -0.10
 		recon_factor = 1
 	
