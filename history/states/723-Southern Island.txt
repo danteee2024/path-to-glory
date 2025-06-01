@@ -3,10 +3,13 @@ state={
 	name="STATE_723"
 	manpower = 547198
 	resources={
-		tungsten=4 # was: 6
+		tungsten=16
+	    aluminium=9
+		steel=4 
+		chromium=31
 	}
 
-	state_category = rural
+	state_category = Metropolis
 
 
 	history={
