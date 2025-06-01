@@ -68,7 +68,7 @@ focus_tree = {
 
 	focus = {
 		id = CAN_rowell_sirois_commission
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_focus_ARG_pan_american_cooperation
 		x = 0
 		y = 0
 
@@ -144,7 +144,7 @@ focus_tree = {
 
 	focus = {
 		id = CAN_national_housing_act
-		icon = GFX_goal_generic_construct_civilian
+		icon =GFX_focus_generic_low_cost_housing
 		prerequisite = { focus = CAN_rowell_sirois_commission }
 		prerequisite = { focus = CAN_crown_corporations }
 		x = 2
