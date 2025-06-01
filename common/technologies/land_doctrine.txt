@@ -785,9 +785,9 @@ technologies = {
 		xor={
 			firebrigades
 		}
-
+        
 		
-		conscription = 0.02
+		conscription = 0.04
 		
 		path = {
 			leads_to_tech = nd_conscription 
@@ -839,7 +839,7 @@ technologies = {
 	nd_conscription = {
 		xp_research_type = army
 		xp_unlock_cost = 100
-		conscription = 0.03
+		conscription = 0.04
 
 		path = {
 			leads_to_tech = werwolf_guerillas 
@@ -1012,12 +1012,13 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 		category_all_infantry = {
-			defense = 0.10
+			defense = 0.075
+
 		}
 		
 		enable_tactic = tactic_elastic_defense
 		
-		
+		experience_loss_factor = -0.10
 		path = {
 			leads_to_tech = intergrated_support 
 			research_cost_coeff = 1
@@ -1119,6 +1120,8 @@ technologies = {
 		category_support_battalions = {
 			max_organisation = 10
 			soft_attack = 0.25
+			hard_attack = 0.25
+			breakthrough_factor = 0.10
 		}
 		
 		enable_tactic = tactic_overwhelming_fire
@@ -1231,6 +1234,7 @@ technologies = {
 		xp_unlock_cost = 100
 		category_line_artillery = {
 			soft_attack = 0.10
+			build_cost_ic = -0.20
 		}
 		coordination_bonus = 0.05
 
@@ -1346,6 +1350,7 @@ technologies = {
 
 		category_army = {
 			hard_attack = 0.10
+			
 		}
 		
 		path = {
@@ -1448,7 +1453,7 @@ technologies = {
 	tactical_control = {
 		xp_research_type = army
 		xp_unlock_cost = 100
-		land_reinforce_rate = 0.02
+		land_reinforce_rate = 0.05
 
 		additional_brigade_column_size = 1
 	
@@ -1564,9 +1569,10 @@ technologies = {
 		xor = {
 			concentrated_fire_plans
 		}
-
+        army_org_regain = 0.10
 		category_all_infantry = { 
 			soft_attack = 0.05 
+			hard_attack = 0.05
 		}
 		category_artillery = { 
 			soft_attack = 0.05
@@ -1616,18 +1622,18 @@ technologies = {
 	
 	forward_observers = {
 
-		land_reinforce_rate = 0.02
 		xp_research_type = army
 		xp_unlock_cost = 100
 		category_recon = {
 			recon = 1
 		}
 		
+		experience_loss_factor = -0.25
 		path = {
 			leads_to_tech = advanced_firebases 
 			research_cost_coeff = 1
 		}
-
+      
 		
 		doctrine = yes	
 		research_cost = 4.5
@@ -2449,7 +2455,7 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 100
-		supply_consumption_factor = -0.10
+		supply_consumption_factor = -0.15
 		command_power_gain_mult = 0.15
 		
 		recon = {
@@ -2506,8 +2512,8 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 		#reduce land night combat penalty
-		land_night_attack = 0.25 # negates half of base penalty
-	
+		land_night_attack = 0.35 
+	    
 	
 		path = {
 			leads_to_tech = attritional_containment 
@@ -3293,7 +3299,7 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 		infantry = {
-			default_morale = 0.30
+			default_morale = 0.25
 		}
 		land_reinforce_rate = 0.05		
 		
@@ -3388,7 +3394,7 @@ technologies = {
 			combat_width = -0.4
 		}
 
-		land_reinforce_rate = 0.15		
+		land_reinforce_rate = 0.10	
 		
 		path = {
 			leads_to_tech = guerilla_warfare
