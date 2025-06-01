@@ -654,7 +654,6 @@ technologies = {
 			leads_to_tech = backhand_blow 
 			research_cost_coeff = 1
 		}
-
 		
 		doctrine = yes	
 		research_cost = 4.5
@@ -703,14 +702,16 @@ technologies = {
 			leads_to_tech = modern_blitzkrieg 
 			research_cost_coeff = 1
 		}
-		recon_factor = 1
 		recon_factor_while_entrenched = 0.25
-		supply_consumption_factor = -0.05
 		org_loss_when_moving = -0.25
 		
 		doctrine = yes	
 		research_cost = 4.5
-		
+
+		category_recon = {
+			recon = 1
+		}
+
 		categories = {
 			land_doctrine
 			cat_mobile_warfare
@@ -804,8 +805,8 @@ technologies = {
 		}
 
 		conscription = 0.02
-		army_core_defence_factor = 0.15
-		army_core_attack_factor = 0.10
+		army_core_defence_factor = 0.10
+		army_core_attack_factor = 0.5
 		
 		path = {
 			leads_to_tech = nd_conscription 
@@ -857,7 +858,7 @@ technologies = {
 	nd_conscription = {
 		xp_research_type = army
 		xp_unlock_cost = 100
-		conscription = 0.03
+		conscription = 0.02
 		out_of_supply_factor = -0.2
 		supply_consumption_factor = -0.1
 
@@ -905,7 +906,7 @@ technologies = {
 		#Increased Partisan effect on your land occupied by others
 		out_of_supply_factor = -0.30
 		category_army = {
-			default_morale = 0.2
+			default_morale = 0.1
 		}
 		
 		enable_tactic = tactic_guerrilla_tactics
@@ -1094,8 +1095,8 @@ technologies = {
 
 		category_support_battalions = {
 			max_organisation = 10
-			soft_attack = 1
-			hard_attack = 1
+			soft_attack = 0.5
+			hard_attack = 0.5
 		}
 		
 		path = {
@@ -1145,7 +1146,7 @@ technologies = {
 		xp_unlock_cost = 100
 		category_support_battalions = {
 			max_organisation = 10
-			breakthrough = 1
+			breakthrough = 0.5
 		}
 		
 		supply_consumption_factor = -0.10
@@ -1701,9 +1702,12 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 		
-		recon_factor = 1
 		recon_factor_while_entrenched = 0.25
 		land_reinforce_rate = 0.02
+
+		category_recon = {
+			recon = 1
+		}
 		
 		path = {
 			leads_to_tech = advanced_firebases 
@@ -2607,9 +2611,12 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 		#reduce land night combat penalty
-		land_night_attack = 0.30 # negates half of base penalty
+		land_night_attack = 0.25 # negates half of base penalty
 		org_loss_when_moving = -0.10
-		recon_factor = 1
+		
+		category_recon = {
+			recon = 1
+		}
 	
 		path = {
 			leads_to_tech = attritional_containment 
@@ -2717,8 +2724,11 @@ technologies = {
 		xp_unlock_cost = 100
 		land_reinforce_rate = 0.02
 		org_loss_when_moving = -0.15
-		recon_factor = 1
 		recon_factor_while_entrenched = 0.25
+
+		category_recon = {
+			recon = 1
+		}
 
 		doctrine = yes	
 		research_cost = 4.5
@@ -3030,7 +3040,7 @@ technologies = {
 		xp_unlock_cost = 100
 		planning_speed = 0.10
 		max_planning = 0.10
-		land_reinforce_rate = 0.10
+		land_reinforce_rate = 0.08
 
 		enable_tactic = tactic_elastic_defense
 		
@@ -3398,10 +3408,16 @@ technologies = {
 	human_infantry_offensive = {
 		xp_research_type = army
 		xp_unlock_cost = 100
-		infantry = {
-			default_morale = 0.30
+
+		category_light_infantry = {
+			max_organisation = 5
+			breakthrough = 0.10
+			default_morale = 0.10
 		}
-		land_reinforce_rate = 0.05		
+
+		land_reinforce_rate = 0.02
+		
+		enable_tactic = tactic_infantry_charge		
 		
 		path = {
 			leads_to_tech = large_front_offensive
@@ -3487,14 +3503,14 @@ technologies = {
 	
 	human_wave_offensive = {
 
-		conscription = 0.05
+		conscription = 0.02
 		xp_research_type = army
 		xp_unlock_cost = 100
 		infantry = {
 			combat_width = -0.4
 		}
 
-		land_reinforce_rate = 0.15		
+		land_reinforce_rate = 0.08		
 		
 		path = {
 			leads_to_tech = guerilla_warfare
@@ -3536,7 +3552,7 @@ technologies = {
 		xp_unlock_cost = 100
 		out_of_supply_factor = -0.30
 		category_army = {
-			default_morale = 0.2
+			default_morale = 0.1
 		}
 		
 		enable_tactic = tactic_guerrilla_tactics
