@@ -3,7 +3,7 @@ shared_focus = {
 	
 	dynamic = yes 
 	
-	icon = GFX_focus_POL_complete_april_constitution
+	icon = GFX_focus_generic_improve_the_administration
 
 	x = 27
 	y = 8
@@ -40,7 +40,7 @@ shared_focus = {
 		}
 	}
 	
-	cost = 15
+	cost = 10
 
 	
 
@@ -64,6 +64,7 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_POLITICAL }
 
 	completion_reward = {
+		add_political_power = 100
 		if = {
 			limit = {	
 				Commonwealth_alliance_created_already = no
@@ -85,7 +86,7 @@ shared_focus = {
 joint_focus = {
 	id = Commonwealth_command
 	
-	icon = GFX_goal_generic_army_doctrines
+	icon = GFX_focus_eng_the_sun_never_sets
 	
 	prerequisite = { focus = Commonwealth_form_joint_alliance }
 	
@@ -120,7 +121,7 @@ joint_focus = {
 
 joint_focus = {
 	id = Commonwealth_political_cooperation
-	icon = GFX_focus_generic_improve_the_administration
+	icon = GFX_focus_RAJ_to_shake_the_world
 	prerequisite = { focus = Commonwealth_form_joint_alliance }
 
 	x = 0
@@ -212,7 +213,7 @@ joint_focus = {
 
 joint_focus = {
 	id = Commonwealth_economic_union
-	icon = GFX_goal_generic_positive_trade_relations
+	icon = GFX_focus_generic_devaluation
 	prerequisite = { focus = Commonwealth_political_cooperation }
 
 	x = 1
@@ -243,7 +244,7 @@ joint_focus = {
 joint_focus = {
 	id = Commonwealth_shared_intelligence
 	
-	icon = GFX_goal_generic_intelligence_exchange
+	icon = GFX_focus_generic_vatican_agents
 	
 	prerequisite = { focus = Commonwealth_political_cooperation }
 
@@ -303,7 +304,7 @@ joint_focus = {
 
 	dynamic = yes
 
-	icon = GFX_goal_generic_scientific_exchange
+	icon =GFX_focus_RAJ_appoint_a_c_suite
 
 
 	prerequisite = { focus = Commonwealth_shared_intelligence }
@@ -591,7 +592,7 @@ joint_focus = {
 
 joint_focus = {
 	id = Commonwealth_Commonwealth_army
-	icon = GFX_goal_generic_army_doctrines
+	icon = GFX_focus_generic_national_security
 
 	dynamic = yes 
 	
@@ -974,7 +975,7 @@ joint_focus = {
 joint_focus = {
 	id = Commonwealth_Commonwealth_navy
 
-	icon = GFX_goal_generic_build_navy
+	icon = GFX_focus_generic_navy_battleship2
 
 	dynamic = yes 
 	
@@ -1259,7 +1260,7 @@ joint_focus = {
 joint_focus = {
 	id = Commonwealth_Guard_The_Suez
 	
-	icon = GFX_focus_generic_coastal_fort
+	icon = GFX_focus_ARG_study_the_battle_of_the_river_plate
 	
 	prerequisite = { focus = Commonwealth_naval_exercises }
 	x = 1
@@ -2515,7 +2516,7 @@ joint_focus = {
 joint_focus = {
 	id = Commonwealth_Commonwealth_construction_developments
 	
-	icon = GFX_goal_generic_construction
+	icon = GFX_SOV_rebuild_the_nation_ccp_2d_sov_compatibility
 	
 	prerequisite = { focus = Commonwealth_Commonwealth_research }
 
@@ -3181,7 +3182,7 @@ joint_focus = {
 joint_focus = {
 	id = Commonwealth_Commonwealth_military_industry
 
-	icon = GFX_goal_generic_construct_mil_factory
+	icon = GFX_goal_generic_small_arms
 
 	dynamic = yes
 	

@@ -4326,18 +4326,12 @@ formable_nations_mod_category = {
 				state = 483
 				state = 484
 				state = 485
-				state = 375
-				state = 376
-				state = 377
-				state = 378
-				state = 379
-				state = 380
+				
 				state = 313
 				state = 314
 				state = 312
 				state = 317
 				state = 316
-				state = 311
 			}
 		}
 		
@@ -4359,18 +4353,12 @@ formable_nations_mod_category = {
 						483 = { is_controlled_by = ROOT }
 						484 = { is_controlled_by = ROOT }
 						485 = { is_controlled_by = ROOT }
-						375 = { is_controlled_by = ROOT }
-						376 = { is_controlled_by = ROOT }
-						377 = { is_controlled_by = ROOT }
-						378 = { is_controlled_by = ROOT }
-						379 = { is_controlled_by = ROOT }
-						380 = { is_controlled_by = ROOT }
+						
 						313 = { is_controlled_by = ROOT }
 						314 = { is_controlled_by = ROOT }
 						312 = { is_controlled_by = ROOT }
 						317 = { is_controlled_by = ROOT }
 						316 = { is_controlled_by = ROOT }
-						311 = { is_controlled_by = ROOT }
 					}
 					AND = {
 						has_global_flag = debug_mode
