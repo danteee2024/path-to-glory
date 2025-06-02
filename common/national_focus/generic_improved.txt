@@ -6126,7 +6126,7 @@ focus_tree = {
 
 	focus = {
 		id = socialism_dem_focus
-		icon = GFX_focus_socialism
+		icon = GFX_focus_generic_social_democracy
 		prerequisite = { 
 			focus = power_people_focus 
 		}
@@ -6161,7 +6161,7 @@ focus_tree = {
 
 	focus = {
 		id = liberalism_focus
-		icon = GFX_focus_liberalism
+		icon = GFX_goal_support_democracy
 		prerequisite = { 
 			focus = power_people_focus 
 		}
@@ -6196,7 +6196,7 @@ focus_tree = {
 
 	focus = {
 		id = conservatism_focus
-		icon = GFX_focus_conservatism
+		icon = GFX_focus_ARG_defense_and_democracy
 		prerequisite = { 
 			focus = power_people_focus 
 		}
