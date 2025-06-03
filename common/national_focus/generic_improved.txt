@@ -10583,4 +10583,525 @@ available = {
         factor = 0
     }
 	}
+	#### PUPPET PATH
+
+	focus = {
+		id = being_a_puppet
+		icon = GFX_focus_CZE_german_puppet
+		x = 19
+		y = 8
+		cost = 2.5
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+		available = {
+			is_subject = yes
+		}
+
+		completion_reward = {
+			add_autonomy_score = {
+				value = 200
+				localization = AST_never_another_gallipoli
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	focus = {
+		id = cooperation_puppet
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { 
+			focus = being_a_puppet
+		}
+		mutually_exclusive = {
+			focus = uncooperation_puppet
+		}
+		x = -2
+		y = 1
+		relative_position_id = being_a_puppet
+		cost = 5
+		
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			is_subject = yes
+		}
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			overlord = {
+				send_equipment = {
+				    equipment = infantry_equipment
+				    amount = 1000
+				    target = ROOT
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_autonomy_score = {
+				value = -100
+				localization = AST_never_another_gallipoli
+			}			
+		}
+		ai_will_do = {
+			factor = 80
+		}
+	}
+
+	focus = {
+		id = cooperation_puppet_1
+		icon = GFX_goal_generic_trade
+		prerequisite = { 
+			focus = cooperation_puppet
+		}
+		x = 0
+		y = 1
+		relative_position_id = cooperation_puppet
+		cost = 5
+		available = {
+			is_subject = yes
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = puppet_cooperate_idea_1
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	focus = {
+		id = cooperation_puppet_2
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { 
+			focus = cooperation_puppet_1
+		}
+		x = 0
+		y = 1
+		relative_position_id = cooperation_puppet_1
+		cost = 5
+		available = {
+			is_subject = yes
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = puppet_cooperate_idea_1
+				add_idea = puppet_cooperate_idea_2
+			}
+			add_autonomy_score = {
+				value = -100
+				localization = AST_never_another_gallipoli
+			}
+		add_offsite_building = { type = arms_factory level = 3 }
+		add_offsite_building = { type = industrial_complex level = 3 }			
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	focus = {
+		id = cooperation_puppet_3
+		icon = GFX_focus_generic_self_management
+		prerequisite = { 
+			focus = cooperation_puppet_2
+		}
+		x = 0
+		y = 1
+		relative_position_id = cooperation_puppet_2
+		cost = 5
+		available = {
+			is_subject = yes
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER } 
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = puppet_cooperate_idea_2
+				add_idea = puppet_cooperate_idea_3
+			}
+			add_autonomy_score = {
+				value = 200
+				localization = AST_never_another_gallipoli
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	focus = {
+		id = pure_cooperation
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { 
+			focus = cooperation_puppet_3
+		}
+		x = 0
+		y = 1
+		relative_position_id = cooperation_puppet_3
+		cost = 10
+		available = {
+			is_subject = yes
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = puppet_cooperate_idea_3
+				add_idea = puppet_cooperate_idea_final
+			}
+			add_autonomy_score = {
+				value = 500
+				localization = AST_never_another_gallipoli
+			}
+			country_event = { 
+			id = yem_event.8
+			days = 1
+			}	
+			overlord = {
+			country_event = { 
+			id = yem_event.8
+			days = 1
+			}	
+			}			
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	focus = {
+		id = uncooperation_puppet
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { 
+			focus = being_a_puppet
+		}
+		mutually_exclusive = {
+			focus = cooperation_puppet
+		}
+		x = 2
+		y = 1
+		relative_position_id = being_a_puppet
+		cost = 5
+		
+		available = {
+			is_subject = yes
+			NOT = { is_ai = yes }
+			hidden_trigger = {
+				OR = {
+					is_ai = no
+					AND = {
+						is_ai = yes
+						overlord = { is_ai = yes}
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = puppet_uncooperate_idea
+			add_offsite_building = { type = arms_factory level = 2 }
+		}
+		ai_will_do = {
+			factor = 80
+		}
+	}
+
+	focus = {
+		id = uncooperation_puppet_1
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { 
+			focus = uncooperation_puppet
+		}
+		x = 0
+		y = 1
+		relative_position_id = uncooperation_puppet
+		cost = 5
+		available = {
+			is_subject = yes
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = 2000
+			    producer = ROOT
+			}
+			swap_ideas = {
+				remove_idea = puppet_uncooperate_idea
+				add_idea = puppet_uncooperate_idea_1
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	focus = {
+		id = uncooperation_puppet_2
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { 
+			focus = uncooperation_puppet_1
+		}
+		x = 0
+		y = 1
+		relative_position_id = uncooperation_puppet_1
+		cost = 5
+		available = {
+			is_subject = yes
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = puppet_uncooperate_idea_1
+				add_idea = puppet_uncooperate_idea_2
+			}
+			add_political_power = 150
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	focus = {
+		id = uncooperation_puppet_3
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { 
+			focus = uncooperation_puppet_2
+		}
+		x = 0
+		y = 1
+		relative_position_id = uncooperation_puppet_2
+		cost = 5
+		available = {
+			is_subject = yes
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = puppet_uncooperate_idea_2
+				add_idea = puppet_uncooperate_idea_3
+			}
+			add_autonomy_score = {
+				value = 200
+				localization = AST_never_another_gallipoli
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	focus = {
+		id = violent_liberation
+		icon = GFX_focus_ARG_defense_and_democracy
+		prerequisite = { 
+			focus = uncooperation_puppet_3
+		}
+		x = 0
+		y = 1
+		relative_position_id = uncooperation_puppet_3
+		mutually_exclusive = { focus = peacefull_liberation }
+		cost = 7.5
+		available = {
+			is_subject = yes
+			date > 1937.1.1	
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+   			every_country = {
+       		limit = {
+                has_war_with = ROOT
+            }
+       		ROOT = {
+           	white_peace = PREV
+           	}
+       		}			
+			leave_faction = yes	
+			swap_ideas = {
+			remove_idea = puppet_uncooperate_idea_3
+			add_idea = puppet_uncooperate_idea_final
+			}
+			set_rule = {
+			can_join_factions = no
+			}			
+			overlord = {
+			set_autonomy = {
+    		target = ROOT
+    		autonomous_state = autonomy_free
+			end_civil_wars = yes
+			}
+			create_wargoal = {
+			target = ROOT
+			type = puppet_wargoal_focus
+			}
+				add_timed_idea = {
+					idea = puppet_attacking_overlod_idea
+					days = 200
+				}
+			}
+		ai_will_do = {
+			factor = 3
+		}
+	}	
+	} 
+	focus = {
+		id = End_of_war
+		icon = GFX_focus_BEL_v_for_victory
+		prerequisite = { focus = violent_liberation }	
+		x = 0
+		y = 2	
+		relative_position_id = uncooperation_puppet_3
+		cost = 15
+		available = {
+			has_war = yes
+		}
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			set_rule = {
+			can_join_factions = yes
+			}				
+   			every_country = {
+       		limit = {
+                has_war_with = ROOT
+            }	
+       		ROOT = {
+           	white_peace = PREV
+           	}
+		}
+		remove_ideas = puppet_uncooperate_idea_final
+		add_ideas = Victory_against_overlord
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}	
+
+		focus = {
+		id = peacefull_liberation
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		prerequisite = { 
+			focus = uncooperation_puppet_3
+		}
+		mutually_exclusive = { focus = violent_liberation }
+		x = 2
+		y = 1
+		relative_position_id = uncooperation_puppet_3
+		cost = 10
+		available = {
+			is_subject = yes
+			date > 1937.3.26
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = puppet_uncooperate_idea_3
+				add_idea = puppet_peacefull
+			}
+		add_autonomy_score = {
+				value = 400
+				localization = AST_never_another_gallipoli
+			}			
+		}
+		ai_will_do = {
+			factor = 7
+		}
+	}
 }
