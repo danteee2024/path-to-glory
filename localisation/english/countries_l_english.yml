@@ -695,7 +695,8 @@
  CAN_ADJ:0 "Canadian"
  CAN_autonomy_dominion:0 "Imperial Dominion of Canada"
  CAN_autonomy_dominion_DEF:0 "the Imperial Dominion of Canada"
-
+ CAN_province_of_canada:0 "American Province of Canada"
+ CAN_province_of_canada_DEF:0 "the American Province of Canada"
  #CHI
  CHI_fascism:0 "Republic of China"
  CHI_fascism_DEF:0 "the Republic of China"
