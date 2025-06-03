@@ -787,7 +787,7 @@ technologies = {
 		}
         
 		
-		conscription = 0.04
+		conscription = 0.03
 		
 		path = {
 			leads_to_tech = nd_conscription 
@@ -839,7 +839,7 @@ technologies = {
 	nd_conscription = {
 		xp_research_type = army
 		xp_unlock_cost = 100
-		conscription = 0.04
+		conscription = 0.02
 
 		path = {
 			leads_to_tech = werwolf_guerillas 
@@ -1225,7 +1225,7 @@ technologies = {
 		}
 		
 		ai_research_weights = {
-			artillery = 1.0
+			artillery = 1.0	
 		}
 	}
 	
