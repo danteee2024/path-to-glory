@@ -6052,7 +6052,7 @@ focus_tree = {
 
 	focus = {
 		id = power_people_focus
-		icon = GFX_goal_support_democracy
+		icon = GFX_focus_AFG_parliamentary_democracy
 		prerequisite = { 
 			focus = moderate_focus 
 		}
