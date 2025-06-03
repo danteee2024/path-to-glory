@@ -650,7 +650,7 @@ focus_tree = {
 				is_coastal = yes
 				is_controlled_by = ROOT
 			}
-		is_ai = no
+		NOT = { is_puppet = yes }
 		}
 
 		complete_tooltip = {
@@ -1018,7 +1018,7 @@ focus_tree = {
 			}
 		}
            available = {
-		is_ai = no
+		NOT = { is_puppet = yes }
 		}
 		ai_will_do = {
 			factor = 3
@@ -1075,7 +1075,10 @@ focus_tree = {
 		available_if_capitulated = yes
 
         available = {
-		is_ai = no
+
+			   NOT = { is_puppet = yes }
+
+
 		}
 		
 		ai_will_do = {
@@ -1160,7 +1163,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
           available = {
-		is_ai = no
+		NOT = { is_puppet = yes }
 		}
 		ai_will_do = {
 			factor = 2
@@ -1247,7 +1250,7 @@ focus_tree = {
 		
 		available_if_capitulated = yes
              available = {
-		is_ai = no
+		NOT = { is_puppet = yes }
 		}
 
 		ai_will_do = {
@@ -1335,7 +1338,7 @@ focus_tree = {
 
 		available_if_capitulated = yes
            available = {
-		is_ai = no
+		NOT = { is_puppet = yes }
 		}
 
 		ai_will_do = {
@@ -1431,7 +1434,7 @@ focus_tree = {
 			}
 		}
            available = {
-		is_ai = no
+		NOT = { is_puppet = yes }
 		}
 		bypass = {
 			custom_trigger_tooltip = {
@@ -1530,7 +1533,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
            available = {
-		is_ai = no
+		NOT = { is_puppet = yes }
 		}
 		ai_will_do = {
 			factor = 2
@@ -1615,7 +1618,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		    available = {
-		is_ai = no
+		NOT = { is_puppet = yes }
 		}
 		available_if_capitulated = yes
 		ai_will_do = {
@@ -1722,7 +1725,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
             available = {
-		is_ai = no
+		NOT = { is_puppet = yes }
 		}
 		ai_will_do = {
 			factor = 2
@@ -1806,7 +1809,7 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_RESEARCH } 
             available = {
-		is_ai = no
+		NOT = { is_puppet = yes }
 		}
 		available_if_capitulated = yes
 
