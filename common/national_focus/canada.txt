@@ -2702,6 +2702,7 @@ focus_tree = {
 				technology = excavation4
 				technology = excavation5
 			}
+			
 		}
 	}
 
@@ -2832,7 +2833,10 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
 
-		completion_reward = {			
+		completion_reward = {		
+			add_autonomy_score = {
+				value = 250
+			}	
 			add_ideas = CAN_patriation
 			ENG = {
 				add_opinion_modifier = { target = CAN modifier = CAN_patriation_mod }
@@ -3266,7 +3270,7 @@ focus_tree = {
 		id = CAN_join_germany
 		icon = GFX_focus_chi_mission_to_germany
 		prerequisite = { focus = CAN_support_the_blue_shirts }
-		mutually_exclusive = { focus = CAN_support_a_synarchist_baja }
+		mutually_exclusive = { focus = CAN_support_a_synarchist_baja focus = CAN_one_nation_one_people }
 		x = -1
 		y = 2
 		relative_position_id = CAN_swastika_clubs
@@ -3349,7 +3353,7 @@ focus_tree = {
 		id = CAN_support_a_synarchist_baja
 		icon =GFX_focus_mex_caudillo_private_armies
 		prerequisite = { focus = CAN_support_the_blue_shirts }
-		mutually_exclusive = { focus = CAN_join_germany }
+		mutually_exclusive = { focus = CAN_join_germany focus = CAN_one_nation_one_people }  
 		x = 1
 		y = 2
 		relative_position_id = CAN_swastika_clubs
@@ -3382,7 +3386,61 @@ focus_tree = {
 			}
 		}
 	}
+focus = {
+		id = CAN_one_nation_one_people
+		icon = GFX_focus_SWI_dissolve_the_federal_council
+		prerequisite = { focus = CAN_support_the_blue_shirts }
+		mutually_exclusive = { focus = CAN_join_germany focus = CAN_support_a_synarchist_baja }    
+		x = 3
+		y = 2
+		relative_position_id = CAN_swastika_clubs
 
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		available = {
+			has_government = fascism
+			threat > 0.8
+		    is_in_faction = no
+		}
+		
+		bypass = {
+     
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			hidden_effect = {
+				set_base_war_support = 0.80
+			}
+			864 = {
+				add_manpower = -1037
+				add_extra_state_shared_building_slots = 1
+			}
+			472 = {
+				add_manpower = -7219
+				add_extra_state_shared_building_slots = 1
+			}
+			471 = {
+				add_manpower = -9340
+				add_extra_state_shared_building_slots = 1
+			}
+			867 = {
+				add_manpower = -6731
+				add_extra_state_shared_building_slots = 1
+			}
+			add_stability = -0.10
+			add_ideas = tot_economic_mobilisation
+			add_ideas = closed_economy
+			
+		}
+	}
 	focus = {
 		id = CAN_pinion_the_eagle
 		icon = GFX_focus_GER_shatter_usas_hegemony
@@ -4053,6 +4111,11 @@ focus_tree = {
 
 		completion_reward = {
 			SOV = {
+				add_ideas = CAN_soviet_supply_the_red_army
+
+			}
+			add_ideas = CAN_soviet_supply_the_red_army
+			SOV = {
 				add_opinion_modifier = {
 					target = ROOT
 					modifier = CAN_supply_the_red_army
@@ -4087,7 +4150,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = CAN_burn_the_royal_portraits
 
-		cost = 2
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -4106,6 +4169,8 @@ focus_tree = {
 
 		completion_reward = {
 			set_rule = { can_create_factions = yes }
+			add_war_support = 0.10
+			add_stability = 0.10
 		}
 	}
 
@@ -4171,7 +4236,7 @@ focus_tree = {
 
 	focus = {
 		id = CAN_support_the_world_revolution
-		icon = GFX_SOV_the_workers_dictatorship_ccp_2d_sov_compatibility
+		icon = GFX_focus_generic_spur_communist_revolutions
 		prerequisite = { focus = CAN_canada_united focus = CAN_join_comintern }
 		x = 1
 		y = 4
@@ -4200,6 +4265,7 @@ focus_tree = {
 				remove_idea = CAN_communist_ideals_2
 				add_idea = CAN_communist_ideals_3
 			}
+			add_ideas = war_economy
 		}
 	}
 

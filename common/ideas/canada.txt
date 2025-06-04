@@ -1,8 +1,25 @@
 ideas = {
 
 	country = {
-
 # CANADA ptg
+ CAN_soviet_supply_the_red_army = {
+    picture = generic_supply_lines
+    removal_cost = 0
+
+    allowed = {
+        is_puppet = yes
+    }
+
+
+    allowed_civil_war = {
+        is_puppet = yes
+    }
+
+    modifier = {
+    supply_factor = 0.05
+	supply_consumption_factor = -0.05
+    }
+}
 CAN_province_of_canada_idea = {
     picture = usa_desegregation_2
     removal_cost = 0
@@ -131,7 +148,7 @@ CAN_beacon_of_democracy = {
 			rule = { can_decline_call_to_war = yes }
 
 			modifier = {
-				autonomy_gain = 1
+				autonomy_gain = 2.5
 			}
 		}
 
