@@ -6009,7 +6009,7 @@ available = {
 
 	focus = {
 		id = socialism_dem_focus
-		icon = GFX_focus_generic_social_democracy
+		icon = GFX_focus_socialism
 		prerequisite = { 
 			focus = power_people_focus 
 		}
@@ -6044,7 +6044,7 @@ available = {
 
 	focus = {
 		id = liberalism_focus
-		icon = GFX_goal_support_democracy
+		icon = GFX_focus_liberalism
 		prerequisite = { 
 			focus = power_people_focus 
 		}
@@ -6079,7 +6079,7 @@ available = {
 
 	focus = {
 		id = conservatism_focus
-		icon = GFX_focus_ARG_defense_and_democracy
+		icon = GFX_focus_conservatism
 		prerequisite = { 
 			focus = power_people_focus 
 		}
