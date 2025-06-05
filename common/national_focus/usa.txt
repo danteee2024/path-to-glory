@@ -3673,6 +3673,9 @@ focus = {
 		y = 1
 		prerequisite = { focus = USA_adjusted_compensation_act }
 		relative_position_id = USA_adjusted_compensation_act
+		mutually_exclusive = {
+			focus = USA_anti_unions_act
+		}
 		cost = 10
 
 		ai_will_do = {
