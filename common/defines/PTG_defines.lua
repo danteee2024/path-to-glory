@@ -23,8 +23,7 @@ NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 50
 NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 5000
 NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 5000
 NDefines.NMilitary.MAX_AIR_EXPERIENCE = 5000
-NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0.0 -- prevent special forces exploit 
-NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 50 -- 20 forty-width special forces divisions, plenty  
+
 
 
 
