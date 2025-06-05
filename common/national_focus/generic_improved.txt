@@ -5935,7 +5935,7 @@ available = {
 
 	focus = {
 		id = power_people_focus
-		icon = GFX_focus_AFG_parliamentary_democracy
+		icon = GFX_goal_support_democracy
 		prerequisite = { 
 			focus = moderate_focus 
 		}
