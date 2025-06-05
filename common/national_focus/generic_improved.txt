@@ -4593,7 +4593,7 @@ available = {
 
 	focus = {
 		id = true_revolutionaries_focus
-		icon = GFX_focus_heralds_of_revolution
+		icon = GFX_focus_GER_the_peoples_victory
 		prerequisite = { 
 			focus = proletarian_state_almighty_focus
 			focus = communist_councils_focus
@@ -5473,7 +5473,7 @@ available = {
 
 	focus = {
 		id = masters_over_all_focus
-		icon = GFX_focus_masters_over_all
+		icon = GFX_focus_SOV_womens_fascist_movement
 		prerequisite = { 
 			focus = nationalism_supreme
 		}
@@ -7201,7 +7201,7 @@ available = {
 
 	focus = {
 		id = will_of_people_focus
-		icon = GFX_focus_will_of_people
+		icon = GFX_focus_generic_democratic_europe
 		prerequisite = { 
 			focus = make_the_case_for_war_focus
 		}
@@ -9591,7 +9591,7 @@ available = {
 
 	focus = {
 		id = armed_ready_focus
-		icon = GFX_focus_armed_ready
+		icon = GFX_focus_generic_tank_assault
 		prerequisite = {
 			focus = ramp_up_production_focus
 		}
@@ -10270,7 +10270,7 @@ available = {
 
 	focus = {
 		id = the_state_is_me_focus
-		icon = GFX_focus_state_is_me
+		icon = GFX_focus_RAJ_the_crown_and_the_world
 		prerequisite = { 
 			focus = grand_alliances
 			focus = attack_major_powers_focus
