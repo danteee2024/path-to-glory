@@ -364,12 +364,7 @@
 					set_autonomy = { target = MEN autonomy_state = autonomy_integrated_puppet }
 				}
 			}
-			if = {
-				limit = {
-					MAN = { has_idea = MAN_kwantung_veto_r56 }
-				}
-				MAN = { remove_ideas = MAN_kwantung_veto_r56 }
-			}
+			
 			if = {
 				limit = {
 					any_state = {
@@ -615,12 +610,16 @@
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			hidden_effect = {
+				
+			
 			if = {
 				limit = {
 					NOT = {has_idea = sooo_player_was_here}
 				}
 				add_ideas = sooo_player_was_here
 			}
+		}
 			country_event = wtt_japan.31
 			add_timed_idea = {
 				idea = JAP_civil_service
@@ -1982,10 +1981,9 @@
 		completion_reward = {
 			random_owned_controlled_state = {
 				prioritize = { 531 }
-				r56_state_category_level_up = yes
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = rubber_refinery
+					type = synthetic_refinery
 					level = 2
 					instant_build = yes
 				}
@@ -2004,7 +2002,7 @@
 				prioritize = { 282 }
 				add_extra_state_shared_building_slots = 6
 				add_building_construction = {
-					type = rubber_refinery
+					type = synthetic_refinery
 					level = 2
 					instant_build = yes
 				}
@@ -2018,7 +2016,7 @@
 				prioritize = { 528 }
 				add_extra_state_shared_building_slots = 6
 				add_building_construction = {
-					type = rubber_refinery
+					type = synthetic_refinery
 					level = 2
 					instant_build = yes
 				}
@@ -2028,6 +2026,11 @@
 					instant_build = yes	
 				}
 			}
+			modify_building_resources = {
+        	   building = synthetic_refinery
+        	   resource = rubber
+        	   amount = 3
+        	}
 		}
 	}
 	focus = {

@@ -2371,7 +2371,7 @@ focus_tree = {
 	focus = {
 		id = CAN_strengthen_the_commonwealth_ties
 		mutually_exclusive = { focus = CAN_patriation }
-		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		icon = GFX_focus_TBE_flag_canada
 		x = 29
 		y = 0
 
