@@ -773,7 +773,7 @@ focus = {
 	#
 	focus = {
 		id = FRA_consolidate_african_federations
-		icon = GFX_focus_AFG_a_modern_economy
+		icon = GFX_focus_BEL_dam_the_consequences
 		cost = 5
 		prerequisite = {
 			focus = FRA_vienot_agreement
@@ -801,7 +801,7 @@ focus = {
 	}
 	focus = {
 		id = FRA_autonomy_indochina
-		icon = GFX_SOV_reorganize_the_pc_of_heavy_industry_ccp_2d_sov_compatibility
+		icon = GFX_focus_AFG_a_modern_economy
 		cost = 5
 		prerequisite = {
 			focus = FRA_vienot_agreement
@@ -1486,7 +1486,7 @@ focus = {
 	}
 	focus = {
 		id = FRA_defense_national_funds
-		icon = GFX_SOV_military_reorganization_ccp_2d_sov_compatibility
+		icon = GFX_focus_PER_construct_air_defenses
 		cost = 10
 		prerequisite = {
 			focus = FRA_commit_automobile_manufacturer
@@ -1974,7 +1974,7 @@ focus = {
 
 	focus = {
 		id = FRA_work_with_the_cgt
-		icon = GFX_focus_AUS_danubian_socialist_communes
+		icon = GFX_focus_CHL_union_of_hispanic_republics
 		cost = 5
 		prerequisite = {
 			focus = FRA_radicalize_front
@@ -2012,7 +2012,7 @@ focus = {
 	}
 	focus = {
 		id = FRA_pcf_sfio_coalition
-		icon = GFX_SOV_expand_the_agitprop_ccp_2d_sov_compatibility
+		icon = GFX_focus_GER_the_peoples_victory
 		cost = 5
 		prerequisite = {
 			focus = FRA_radicalize_front
@@ -2054,7 +2054,7 @@ focus = {
 	}
 	focus = {
 		id = FRA_syndicalist_revolution
-		icon = GFX_SOV_return_of_the_rocor_ccp_2d_sov_compatibility
+		icon = GFX_focus_ARG_no_gods_no_masters
 		cost = 10
 		prerequisite = {
 			focus = FRA_work_with_the_cgt
@@ -2291,7 +2291,7 @@ focus = {
 	}
 	focus = {
 		id = FRA_support_blum
-		icon = GFX_SOV_annex_tannu_tuva_ccp_2d_sov_compatibility
+		icon = GFX_focus_NOR_restore_public_trust_in_the_storting
 		cost = 5
 		prerequisite = {
 			focus = FRA_social_reforms
@@ -2329,7 +2329,7 @@ focus = {
 	}
 	focus = {
 		id = FRA_increase_military_spendings
-		icon = GFX_focus_chi_army_reform
+		icon = GFX_focus_RAJ_war_taxes
 		cost = 5
 		prerequisite = {
 			focus = FRA_support_blum
@@ -2498,7 +2498,7 @@ focus = {
 	}		
 	focus = {
 		id = FRA_support_daladier
-		icon = GFX_SOV_annex_tannu_tuva_ccp_2d_sov_compatibility
+		icon = GFX_focus_NOR_approach_kretsen
 		cost = 5
 		prerequisite = {
 			focus = FRA_social_reforms
@@ -2734,7 +2734,7 @@ focus = {
 
 	focus = {
 		id = FRA_front_liberte
-		icon = GFX_SOV_the_rightful_heir_to_the_empire_ccp_2d_sov_compatibility
+		icon = GFX_focus_SWI_embrace_panoramaheim
 		cost = 5
 		prerequisite = {
 			focus = FRA_far_right_leagues
@@ -2827,7 +2827,7 @@ focus = {
 	
 	focus = {
 		id = FRA_support_ppf
-		icon = GFX_focus_focus_fra_national_resistance_council
+		icon =GFX_focus_BRA_utilize_security_law
 		cost = 10
 		prerequisite = {
 			focus = FRA_front_liberte
@@ -2856,7 +2856,7 @@ focus = {
 	}
 	focus = {
 		id = FRA_we_want_petain
-		icon = GFX_focus_SOV_panslavic_nationalism
+		icon = GFX_focus_ETH_expand_the_kebur_zabagna
 		cost = 10
 		prerequisite = {
 			focus = FRA_front_liberte
@@ -3023,7 +3023,7 @@ focus = {
 	}	
 	focus = {
 		id = FRA_root_out_communism
-		icon = GFX_focus_generic_communism_anti_fascism
+		icon = GFX_focus_GER_end_european_communism
 		cost = 10
 		prerequisite = {
 			focus = FRA_far_right_leagues
@@ -3118,7 +3118,7 @@ focus = {
 	}
 	focus = {
 		id = FRA_alliance_with_industrialists
-		icon = GFX_focus_generic_industrialists
+		icon = GFX_focus_RAJ_appoint_a_c_suite
 		cost = 10
 		prerequisite = {
 			focus = FRA_class_collaboration
@@ -4693,7 +4693,7 @@ focus = {
 	###############################
 	focus = {
 		id = FRA_militarist_society
-		icon = GFX_SOV_depoliticize_the_military_ccp_2d_sov_compatibility
+		icon = GFX_focus_GER_schutztruppe
 		cost = 5
 		prerequisite = {
 			focus = FRA_brumaire_movement
@@ -5833,7 +5833,7 @@ focus = {
 	}
 	focus = {
 		id = FRA_humanite_unie
-		icon = GFX_focus_generic_communist
+		icon = GFX_focus_SOV_international_union_of_soviet_republics
 		cost = 10
 		prerequisite = {
 			focus = FRA_collectivisation
