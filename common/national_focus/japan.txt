@@ -8155,7 +8155,7 @@
 
 		completion_reward = {
 			MAN = {
-				add_ideas = MAN_manchurian_army
+				add_ideas = JAP_manchu_generic
 			}
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_IMPROVEMENT }
@@ -8185,7 +8185,7 @@
 
 		completion_reward = {
 			MAN = {
-				add_ideas = MAN_specialized_units
+				add_ideas = JAP_manchu_special
 			}
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_IMPROVEMENT }

@@ -22,6 +22,87 @@ ideas = {
 				modifier_army_sub_unit_mountaineers_defence_factor = 0.05
 			}
 		}
+		JAP_manchu_special = {
+
+			name = "Manchurian Special Forces"
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = jap_supremacy_of_will
+			
+			modifier = {
+				special_forces_attack_factor = 0.1
+				special_forces_defence_factor = 0.1
+			}
+		}
+		JAP_manchu_generic = {
+
+			name = "Manchurian Special Forces"
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = jap_supremacy_of_will
+			
+			modifier = {
+			    army_org_factor = 0.1
+				recruitable_population_factor = 0.25
+			}
+		}
+		MAN_resource_whore = {
+			  name = "Expanded Resource Output"
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = jap_supremacy_of_will
+			
+			modifier = {
+			   local_resources_factor = 0.15
+			}
+		}
+		MAN_japanese_settlers = {
+		     
+		    name = "Japanese Settlers"
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = jap_supremacy_of_will
+			
+			modifier = {
+			    global_building_slots_factor = 0.1
+			}
+		}
 
 		JAP_marine_focus = {
 
