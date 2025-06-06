@@ -1954,105 +1954,7 @@ focus_tree = {
 		}
 	}
 	
-	focus = {
-		id = ENG_maintaining_imperial_integrity
-		prerequisite = { focus = ENG_reinforce_the_empire }
-		available = { 
-			is_subject = no
-		}
-		bypass = {
-			NOT = {
-				any_country = {
-					is_subject_of = ENG
-				}
-			}
-			NOT = {
-				focus_progress = {
-					focus = ENG_maintaining_the_balance_of_power
-					progress > 0
-				}
-			}
-		}
 
-		continue_if_invalid = yes
- 
-		icon = GFX_focus_chi_british_cooperation
-		x = 1
-		y = 1
-		relative_position_id = ENG_reinforce_the_empire
-		cost = 10
-		ai_will_do = {
-			factor = 10
-		}
-		search_filters = {FOCUS_FILTER_RESEARCH}	
-		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = naval_doc_bonus
-				cost_reduction = 0.5
-				uses = 3
-				category = naval_doctrine
-			}
-			if = {
-				limit = {
-					has_dlc = "Together for Victory"
-				}
-				CAN = {
-					if = {
-						limit = { is_in_faction_with = ENG }
-						add_ideas = ENG_maintaining_imperial_integrity_idea
-					}
-				}
-				AST = {
-					if = {
-						limit = { is_in_faction_with = ENG }
-						add_ideas = ENG_maintaining_imperial_integrity_idea
-					}
-				}
-				NZL = {
-					if = {
-						limit = { is_in_faction_with = ENG }
-						add_ideas = ENG_maintaining_imperial_integrity_idea
-					}
-				}
-				SAF = {
-					if = {
-						limit = { is_in_faction_with = ENG }
-						add_ideas = ENG_maintaining_imperial_integrity_idea
-					}
-				}
-				RAJ = {
-					if = {
-						limit = { is_in_faction_with = ENG }
-						add_ideas = ENG_maintaining_imperial_integrity_idea
-					}
-				}
-			}
-			FRA = {
-				if = {
-					limit = { NOT = { is_in_faction_with = ENG } }
-					add_opinion_modifier = { target = ENG modifier = ENG_maintaining_imperial_integrity }
-				}
-			}
-			ITA = {
-				if = {
-					limit = { NOT = { is_in_faction_with = ENG } }
-					add_opinion_modifier = { target = ENG modifier = ENG_maintaining_imperial_integrity }
-				}
-			}
-			USA = {
-				if = {
-					limit = { NOT = { is_in_faction_with = ENG } }
-					add_opinion_modifier = { target = ENG modifier = ENG_maintaining_imperial_integrity }
-				}
-			}
-			JAP = {
-				if = {
-					limit = { NOT = { is_in_faction_with = ENG } }
-					add_opinion_modifier = { target = ENG modifier = ENG_maintaining_imperial_integrity }
-				}
-			}
-		}
-	}
 	focus = {
 		id = uk_mediterranean_focus 
 		prerequisite = { focus = uk_service_focus }
@@ -7019,7 +6921,7 @@ focus_tree = {
 
 		continue_if_invalid = yes
 
-		icon = GFX_focus_generic_strike_at_democracy1
+		icon = GFX_focus_GER_strengthen_the_proletarian_international
 		x = -1
 		y = 1
 		relative_position_id = ENG_motion_of_no_confidence
@@ -7049,7 +6951,7 @@ focus_tree = {
 
 		continue_if_invalid = yes
 
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_focus_RAJ_special_economic_zones
 		x = -3
 		y = 1
 		relative_position_id = ENG_no_further_appeasement
@@ -7128,8 +7030,8 @@ focus_tree = {
 
 		continue_if_invalid = yes
 
-		icon = GFX_goal_generic_occupy_states_ongoing_war
-		x = 0
+		icon = GFX_focus_IRQ_anglo_iraqi_oil_expansion
+		x = -1
 		y = 1
 		relative_position_id = ENG_kickstart_the_war_industry
 		cost = 10
@@ -7197,7 +7099,7 @@ focus_tree = {
 
 		continue_if_invalid = yes
 
-		icon = GFX_focus_chi_british_cooperation
+		icon = GFX_focus_PER_form_oil_company
 		x = -1
 		y = 1
 		relative_position_id = ENG_no_further_appeasement
@@ -7277,17 +7179,20 @@ focus_tree = {
 
 	focus = {
 		id = ENG_enforce_the_naval_treaties
-		prerequisite = { focus = ENG_maintaining_imperial_integrity }
+		prerequisite = {
+			
+			focus = ENG_kickstart_the_war_industry 
+		}
 		available = { 
 			is_subject = no
 		}
 
 		continue_if_invalid = yes
 
-		icon = GFX_goal_generic_major_war
-		x = 0
+		icon = GFX_focus_generic_naval_discipline
+		x = 1
 		y = 1
-		relative_position_id = ENG_maintaining_imperial_integrity
+		relative_position_id = ENG_kickstart_the_war_industry
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -7309,7 +7214,7 @@ focus_tree = {
 
 		continue_if_invalid = yes
 
-		icon = GFX_goal_generic_neutrality_focus
+		icon = GFX_focus_NOR_empower_sivorg
 		x = 1
 		y = 1
 		relative_position_id = ENG_no_further_appeasement
@@ -7370,7 +7275,7 @@ focus_tree = {
 
 		continue_if_invalid = yes
 
-		icon = GFX_goal_generic_major_war
+		icon = GFX_focus_GER_european_confederation
 		x = 0
 		y = 1
 		relative_position_id = ENG_maintaining_the_balance_of_power
@@ -8708,7 +8613,7 @@ focus = {
 		available = {
 			is_subject = no
 		}
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_focus_rom_royal_dictatorship
 		x = 2
 		y = 1
 		relative_position_id = ENG_the_kings_party
@@ -8731,11 +8636,11 @@ focus = {
 		available = {
 			is_subject = no
 		}
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_focus_BUL_the_third_bulgarian_empire
 		x = 1
 		y = 1
 		relative_position_id = ENG_Royal_Roots
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -8757,7 +8662,7 @@ focus = {
 		available = {
 			is_subject = no
 		}
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_focus_por_reclaim_crown_jewel
 		x = 0
 		y = 2
 		relative_position_id = ENG_Royal_Roots
@@ -8786,11 +8691,11 @@ focus = {
 			
 			SPR = { has_civil_war = no }
 		}
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_focus_spr_maintain_the_republic
 		x = 0
 		y = 1
 		relative_position_id = ENG_The_Portuguese_Crown
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -8814,7 +8719,7 @@ focus = {
 		available = {
 			is_subject = no
 		}
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_focus_BEL_king_of_the_belgians
 		x = -1
 		y = 1
 		relative_position_id = ENG_Royal_Roots
@@ -8844,7 +8749,7 @@ focus = {
 				has_war_together_with = FRA 
 			}
 		}
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_focus_GER_european_confederation
 		x = -1
 		y = 1
 		relative_position_id = ENG_the_kings_party
@@ -8923,7 +8828,7 @@ focus = {
 				}
 			}
 		}
-		icon = GFX_goal_generic_forceful_treaty
+		icon =GFX_focus_generic_mediterranean_sea_focus
 		x = 0
 		y = 1
 		relative_position_id = ENG_reassess_continental_commitments
@@ -10376,7 +10281,7 @@ focus = {
 			is_subject = no
 			BRA = { exists = yes }
 		}
-		icon = GFX_focus_por_recover_latin_america
+		icon = GFX_focus_BRA_third_republic
 		x = -1
 		y = 1
 		relative_position_id = ENG_South_American_Colonial_Charter

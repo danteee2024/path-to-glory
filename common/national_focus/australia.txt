@@ -3055,7 +3055,7 @@
 
 	focus = {
 		id = AST_support_the_policy_of_appeasement
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_TBE_flag_australia
 		mutually_exclusive = { focus = AST_never_another_gallipoli }
 		x = 30
 		y = 0
@@ -3114,7 +3114,7 @@
 
 	focus = {
 		id = AST_strengthen_ties_with_uk
-		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		icon = GFX_focus_eng_the_sun_never_sets
 		prerequisite = { focus = AST_support_the_policy_of_appeasement }
 		relative_position_id = AST_support_the_policy_of_appeasement
 		x = -1
