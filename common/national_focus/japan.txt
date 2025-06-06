@@ -3265,7 +3265,7 @@
 	}
 	focus = {
 		id = JAP_support_the_indian_independence_league
-		icon = GFX_goal_RAJ_dreams_of_ahand_hindustan
+		icon = GFX_focus_SOV_womens_fascist_movement
 		x = 0
 		y = 2
 		prerequisite = {
@@ -3393,7 +3393,7 @@
 	# }	
 	focus = {
 		id = JAP_support_the_burmese_liberation_movement
-		icon = GFX_goal_generic_befriend_burma
+		icon = GFX_focus_SOV_penal_battalions
 		x = -1
 		y = 1
 		prerequisite = {
@@ -5844,7 +5844,7 @@
 	}
 	focus = {
 		id = JAP_invite_the_militarist_back
-		icon = GFX_focus_generic_collective_defense
+		icon = GFX_focus_GER_support_the_proletarian_uprising
 		prerequisite = { focus = JAP_subsidise_the_zaibatsus }
 		x = 0
 		y = 2
@@ -6314,7 +6314,7 @@
 
 	focus = {
 		id = JAP_west_pacific_treaty_organization
-		icon = GFX_goal_generic_freedom
+		icon = GFX_focus_PER_fascist_reach_out_to_japan
 		prerequisite = { focus = JAP_conciliatory_foreign_policy focus = JAP_the_bastion }
 		x = -2
 		y = 1
@@ -6605,7 +6605,7 @@
 	}
 	focus = {
 		id = JAP_joint_military_cooperation
-		icon = GFX_goal_generic_multinational_army
+		icon = GFX_focus_SMB_special_forces_option_3
 		prerequisite = { focus = JAP_joint_civilian_investment }
 		x = -1
 		y = 1
@@ -6721,7 +6721,7 @@
 
 	focus = {
 		id = JAP_east_asian_bank
-		icon = GFX_goal_generic_banking
+		icon = GFX_focus_RAJ_special_economic_zones
 		x = 1
 		y = 1
 		relative_position_id = JAP_joint_civilian_investment
@@ -7245,7 +7245,7 @@
 	}
 	focus = {
 		id = JAP_economic_deals_infantry
-		icon = GFX_goal_proving_grounds
+		icon = GFX_focus_CONGO_copper_cartridges
 		x = 0
 		y = 1
 		relative_position_id = JAP_economic_deals
@@ -7386,7 +7386,7 @@
 	}
 	focus = {
 		id = JAP_expand_the_alliance
-		icon = GFX_goal_philippines_invite_malaysia
+		icon = GFX_focus_ETH_ecole_militaire_haile_selassie_1er
 		prerequisite = { focus = JAP_west_pacific_treaty_organization }
 		x = 0
 		y = 1
@@ -7412,7 +7412,7 @@
 	}
 	focus = {
 		id = JAP_island_investment
-		icon = GFX_goal_generic_industrial_planning
+		icon = GFX_focus_generic_welfare
 		prerequisite = { focus = JAP_conciliatory_foreign_policy focus = JAP_the_bastion }
 		x = 0
 		y = 1
@@ -7575,7 +7575,7 @@
 	}
 	focus = {
 		id = JAP_liberate_manchuria
-		icon = GFX_goal_JAP_attack_manchukuo
+		icon = GFX_focus_jap_manchurian_project
 		prerequisite = { focus = JAP_pacific_guardian }
 		x = 1
 		y = 1
@@ -7648,7 +7648,7 @@
 
 	focus = {
 		id = JAP_crush_chinese_communists
-		icon = GFX_goal_PRC_destroy_the_communists
+		icon = GFX_focus_generic_communism_anti_fascism
 		prerequisite = { focus = JAP_anti_communist_bulwark }
 		x = 0
 		y = 1
@@ -7720,7 +7720,7 @@
 
 	focus = {
 		id = JAP_full_sovereignty_for_the_philippines
-		icon = GFX_goal_philippines_democracy
+		icon = GFX_focus_PER_communist_afghanistan_intervention
 		prerequisite = { focus = JAP_liberate_manchuria }
 		x = 0
 		y = 1
@@ -7840,7 +7840,7 @@
 	}
 	focus = {
 		id = JAP_develop_mengjiang
-		icon = GFX_goal_generic_light_industry
+		icon = GFX_focus_GER_customs_union
 		x = 3
 		y = 0
 		relative_position_id = JAP_the_manchurian_project
@@ -8043,14 +8043,9 @@
 			716 = {
 					add_resource = {
 						type = steel
-						amount = 24
+						amount = 36
 					}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = steel_mill
-					level = 3
-					instant_build = yes
-				}				
+							
 			}
 						
 		}
@@ -8082,15 +8077,9 @@
 					
 					add_resource = {
 						type = aluminium
-						amount = 16
+						amount = 32
 					}
-				
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = aluminum_mill
-					level = 3
-					instant_build = yes
-				}				
+								
 			}		
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STEEL}
@@ -8141,7 +8130,7 @@
 
 	focus = {
 		id = JAP_manchu_buff
-		icon = GFX_goal_JAP_manchu_army
+		icon = GFX_focus_HABSBURG_the_modern_hussar
 		prerequisite = { focus = JAP_manchu_oil  focus = JAP_japanese_settlement }
 		mutually_exclusive = { focus = JAP_manchu_buff1
 		}
@@ -8170,7 +8159,7 @@
 	}
 	focus = {
 		id = JAP_manchu_buff1
-		icon = GFX_goal_JAP_manchu_special_forces
+		icon = GFX_focus_GER_gebirgsjager
 		prerequisite = { focus = JAP_manchu_oil  focus = JAP_japanese_settlement }
 		mutually_exclusive = {
 			focus = JAP_manchu_buff
@@ -8258,7 +8247,7 @@
 
 	focus = {
 		id = JAP_light_industry_development
-		icon = GFX_goal_generic_light_industry
+		icon = GFX_focus_CHL_domestic_production_of_the_willys_mb
 		prerequisite = { focus = JAP_factory_whore }
 		x = -1
 		y = 1
@@ -8380,7 +8369,7 @@
 #############ARMY TREE #################
 	focus = {
 		id = JAP_army_expansion_law
-		icon = GFX_goal_JAP_flag_army
+		icon = GFX_focus_generic_advanced_military_studies
 		x = 8
 		y = 0
 		relative_position_id = JAP_the_manchurian_project
@@ -8425,7 +8414,7 @@
 
 	focus = {
 		id = JAP_small_arms_modernization
-		icon = GFX_goal_CHI_support_pro_japanese_faction
+		icon = GFX_focus_generic_combined_arms
 		prerequisite = { focus = JAP_army_expansion_law }
 		x = -1
 		y = 1
@@ -8537,7 +8526,7 @@
 	
 	focus = {
 		id = JAP_diversified_tank_roles
-		icon = GFX_goal_tank_map
+		icon = GFX_focus_NOR_rikstanken
 		prerequisite = { focus = JAP_armored_divisions }
 		x = 0
 		y = 1
@@ -8629,7 +8618,7 @@
 	
 	focus = {
 		id = JAP_support_the_railways_and_shipping_section
-		icon = GFX_focus_generic_public_works_A
+		icon = GFX_focus_SOV_south_manchuria_railway
 		prerequisite = { focus = JAP_supremacy_of_technology }
 		x = -2
 		y = 2
@@ -8660,7 +8649,7 @@
 	
 	focus = {
 		id = JAP_rocket_artillery
-		icon = GFX_goal_CAN_land_mattress
+		icon = GFX_focus_rocketry
 		prerequisite = { focus = JAP_supremacy_of_technology }
 		x = -1
 		y = 1
@@ -8685,7 +8674,7 @@
 	
 	focus = {
 		id = JAP_the_ultimate_tank
-		icon = GFX_goal_generic_license_tanks
+		icon = GFX_focus_SOV_the_glory_of_the_red_army_alternative
 		prerequisite = { focus = JAP_supremacy_of_technology }
 		prerequisite = { focus = JAP_rethink_armor_design }
 		x = 0
@@ -8721,7 +8710,7 @@
 
 	focus = {
 		id = JAP_army_expansion
-		icon = GFX_goal_JAP_army_expansion
+		icon = GFX_focus_generic_little_entente
 		prerequisite = { focus = JAP_army_expansion_law }
 		x = 3
 		y = 1
@@ -8756,7 +8745,7 @@
 	
 	focus = {
 		id = JAP_kempetai_repression
-		icon = GFX_goal_generic_secret_police_2
+		icon = GFX_focus_ITA_banda_carita
 		cost = 5
 		prerequisite = {
 			focus = JAP_army_expansion
@@ -8844,7 +8833,7 @@
 	
 	focus = {
 		id = JAP_bicycle_battalions
-		icon = GFX_goal_generic_mountain_warfare
+		icon = GFX_focus_SMB_special_forces_option_1
 		prerequisite = { focus = JAP_army_expansion }
 		mutually_exclusive = { focus = JAP_expand_the_teishin_shudan }
 		x = 1
@@ -8879,7 +8868,7 @@
 	
 	focus = {
 		id = JAP_supremacy_of_will
-		icon = GFX_focus_GER_support_the_proletarian_uprising
+		icon = GFX_focus_FIN_parmis_devils
 		prerequisite = { focus = JAP_expand_the_teishin_shudan focus = JAP_bicycle_battalions }
 		mutually_exclusive = { focus = JAP_supremacy_of_technology }
 		x = 1
@@ -8912,7 +8901,7 @@
 	}
 	focus = {
 		id = JAP_lunge_mines
-		icon = GFX_focus_JAP_lunge_mines
+		icon = GFX_focus_generic_provoke_border_clashes
 		prerequisite = { focus = JAP_supremacy_of_will }
 		x = 1
 		y = 1
@@ -8955,7 +8944,7 @@
 	
 	focus = {
 		id = JAP_raise_the_boeitai
-		icon = GFX_goal_generic_into_fire
+		icon = GFX_focus_AFG_royal_guard
 		prerequisite = { focus = JAP_supremacy_of_will }
 		x = 0
 		y = 2
@@ -8981,7 +8970,7 @@
 	
 	focus = {
 		id = JAP_rethink_armor_design
-		icon = GFX_goal_CAN_WCMC
+		icon = GFX_focus_BEL_flooded_tank_barriers
 		prerequisite = { focus = JAP_supremacy_of_technology focus = JAP_supremacy_of_will }
 		x = 1
 		y = 1
@@ -9045,7 +9034,7 @@
 	
 	focus = {
 		id = JAP_embrace_jungle_warfare
-		icon = GFX_goal_generic_jungle_warfare
+		icon = GFX_focus_BRA_amazon_colonization
 		prerequisite = { focus = JAP_supremacy_of_technology focus = JAP_supremacy_of_will }
 		x = 2
 		y = 2
@@ -9168,7 +9157,7 @@
 	
 	focus = {
 		id = JAP_form_the_volunteer_corps
-		icon = GFX_goal_generic_citizens
+		icon = GFX_focus_AUS_frontmiliz_focus
 		prerequisite = { focus = JAP_protect_our_islands_skies }
 		x = -1
 		y = 1
@@ -9295,7 +9284,7 @@
 
 	focus = {
 		id = JAP_range_focus
-		icon = GFX_goal_JAP_bomber
+		icon = GFX_focus_generic_long_range_aircraft
 		prerequisite = { focus = JAP_fighter_modernization }
 		x = -1
 		y = 1
@@ -9333,7 +9322,7 @@
 
 	focus = {
 		id = JAP_agility_focus
-		icon = GFX_goal_JAP_naval_aviation
+		icon = GFX_focus_generic_cas_aircraft
 		prerequisite = { focus = JAP_fighter_modernization }
 		x = 1
 		y = 1
@@ -9563,7 +9552,7 @@
 ##############NAVY TREE
 	focus = {
 		id = JAP_new_naval_estimates
-		icon = GFX_goal_JAP_new_naval_estimates
+		icon = GFX_goal_generic_construct_naval_dockyard
 		x = 14
 		y = 0
 		relative_position_id = JAP_army_expansion_law
@@ -10149,7 +10138,7 @@
 	}
 	focus = {
 		id = JAP_increased_repair_capabilities
-		icon = GFX_goal_generic_expand_the_naval_industry
+		icon = GFX_goal_continuous_repairments
 		prerequisite = { focus = JAP_first_air_fleet focus = JAP_the_ultimate_battleship }
 		x = 1
 		y = 1
@@ -10358,7 +10347,7 @@
 		id = JAP_redesign_the_naval_guns
 		prerequisite = { focus = JAP_supremacy_of_the_battlefleet focus = JAP_cruiser_modernization }
 		mutually_exclusive = { focus = JAP_divert_naval_guns_to_the_army }
-		icon = GFX_goal_generic_admirality
+		icon = GFX_focus_ARG_study_the_battle_of_the_river_plate
 		x = -1
 		y = 1
 		relative_position_id = JAP_cruiser_modernization
@@ -10392,7 +10381,7 @@
 		id = JAP_divert_naval_guns_to_the_army
 		prerequisite = { focus = JAP_supremacy_of_the_battlefleet focus = JAP_cruiser_modernization }
 		mutually_exclusive = { focus = JAP_redesign_the_naval_guns }
-		icon = GFX_goal_generic_railway_artillery
+		icon = GFX_focus_generic_naval_invasion_tank
 		x = -3
 		y = 1
 		relative_position_id = JAP_cruiser_modernization
