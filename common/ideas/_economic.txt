@@ -884,6 +884,90 @@ level = 1
 		law = yes
 		use_list_view = yes
 
+		japanese_closed_eco = {
+			allowed = {
+				tag = JAP
+			}
+			picture = japanese_closed_economy
+		
+			available = {
+				OR = {
+					date > 1939.06.01
+					not = {
+						ROOT = {
+							or = {
+								any_controlled_state = {
+									OR = {
+								  		is_core_of = KOR
+								  		is_core_of = CHI
+								  		is_core_of = SIA
+								  		is_core_of = PHI
+								  		is_core_of = FRI
+								  		is_core_of = MAL
+								  		is_core_of = INS
+								  		is_core_of = AST
+								  		is_core_of = NZL
+								  		is_core_of = RAJ
+								  		is_core_of = SOV
+								  		is_core_of = D01
+								  		is_core_of = D02
+								  		is_core_of = D03
+								  		is_core_of = D05
+								  		is_core_of = D04
+								  		is_core_of = D06
+								  		is_core_of = D05
+								  		is_core_of = D07
+								  		is_core_of = D08
+								  		is_core_of = D09
+								  		is_core_of = D10
+								  		is_core_of = D11
+								  		is_core_of = D12
+										is_core_of = D13
+										is_core_of = GUM
+										is_core_of = PLU
+									}
+								  }
+								  any_other_country = {
+										capital_scope = {
+											is_on_continent = europe
+											is_on_continent = asia
+											is_on_continent = australia
+										}
+									is_subject_of = ROOT
+								}
+							}
+					}
+				}
+				
+			
+			}
+			}
+			visible = {
+				tag = JAP
+				has_completed_focus = JAP_close_the_island
+			}
+			
+			removal_cost = -1
+			cost = 3000
+
+			modifier = {
+			min_export = 0
+			industrial_capacity_factory = 0.25
+			industrial_capacity_dockyard = 0.25
+			production_speed_buildings_factor = 0.15
+			production_speed_arms_factory_factor = 0.25
+			production_speed_dockyard_factor = 0.25
+			production_factory_max_efficiency_factor = 0.05
+			research_speed_factor = 0.10
+			navy_intel_to_others = -10.0
+			army_intel_to_others = -10.0
+			enemy_operative_capture_chance_factor = 0.15
+			}
+			rule = {
+				can_access_market = no
+				desc = can_not_access_market_closed_economy
+			}
+		}
 		uncontrolled_exports = {
 
 

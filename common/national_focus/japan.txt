@@ -16,7 +16,7 @@
 ####COMMIE TREE ######
 	focus = {
 		id = JAP_the_unthinkable_option
-		icon = GFX_goal_JAP_the_unthinkable_option
+		icon = GFX_focus_GER_the_peoples_victory
 		mutually_exclusive = {
 			focus = JAP_purge_the_kodoha_faction
 			focus = JAP_support_the_kodoha_faction
@@ -597,7 +597,7 @@
 
 	focus = {
 		id = JAP_the_fate_of_the_imperial_family
-		icon = GFX_goal_JAP_fate_of_the_imperial_family
+		icon = GFX_SOV_request_imperial_protection_ccp_2d_sov_compatibility
 		prerequisite = { focus = JAP_cast_the_die }
 		x = 0
 		y = 1
@@ -660,7 +660,7 @@
 
 	focus = {
 		id = JAP_red_brigades
-		icon = GFX_goal_generic_left_militia
+		icon = GFX_SOV_leader_of_the_party_and_the_people_ccp_2d_sov_compatibility
 		prerequisite = { focus = JAP_cast_the_die}
 		x = 2
 		y = 1
@@ -853,7 +853,7 @@
 	
 	focus = {
 		id = JAP_retake_manchuria
-		icon = GFX_goal_JAP_finish_the_fight
+		icon = GFX_focus_BRA_end_the_state_of_emergency
 		cost = 10
 		prerequisite = {
 			focus = JAP_alliance_with_the_devil focus = JAP_rebuild_our_navy
@@ -903,7 +903,7 @@
 	
 	focus = {
 		id = JAP_cede_eastern_manchuria_for_help
-		icon = GFX_goal_generic_major_diplo
+		icon = GFX_focus_generic_monetary_union
 		cost = 10
 		prerequisite = {
 			focus = JAP_retake_manchuria
@@ -1080,7 +1080,7 @@
 	}
 	focus = {
 		id = JAP_air_improvements
-		icon = GFX_goal_generic_design_equipment_standards
+		icon = GFX_focus_SMB_purchase_aircraft
 		cost = 10
 		prerequisite = {
 			focus = JAP_air_blueprints
@@ -1095,7 +1095,7 @@
 
 	focus = {
 		id = JAP_import_soviet_armor
-		icon = GFX_goal_generic_heavy_armour_russian
+		icon = GFX_focus_generic_tank_production
 		prerequisite = { focus = JAP_cede_eastern_manchuria_for_help }
 		mutually_exclusive = {
 			focus = JAP_air_blueprints
@@ -1134,7 +1134,7 @@
 	}
 	focus = {
 		id = JAP_improve_tank_tactics
-		icon = GFX_goal_SOV_tankograd
+		icon = GFX_focus_generic_tank_assembly
 		prerequisite = { focus = JAP_import_soviet_armor }
 		x = 2
 		y = 2
@@ -1356,7 +1356,7 @@
 
 	focus = {
 		id = JAP_close_the_island
-		icon = GFX_goal_JAP_closed_island_focus
+		icon = GFX_focus_GER_integrated_economies
 		cost = 10
 		prerequisite = {
 			focus = JAP_the_fate_of_the_imperial_family
@@ -1477,7 +1477,7 @@
 	
 	focus = {
 		id = JAP_colonizing_our_islands
-		icon = GFX_goal_generic_industrial_planning
+		icon =GFX_focus_DEN_no_regulations
 		cost = 4
 		available = {
 			is_in_faction = no
@@ -1499,7 +1499,7 @@
 	}
 	focus = {
 	id = JAP_more_building_slots
-	icon = GFX_goal_generic_road2
+	icon = GFX_focus_ARG_develop_the_electricity_sector
 	cost = 5
 	prerequisite = {
 		focus = JAP_colonizing_our_islands focus = JAP_investing_internal_industries
@@ -1594,7 +1594,7 @@
 
 	focus = {
 		id = JAP_investing_internal_industries
-		icon = GFX_goal_generic_communal_statistical_commission
+		icon = GFX_focus_generic_price_controls
 		cost = 10
 		prerequisite = {
 			focus = JAP_close_the_island
@@ -1846,7 +1846,7 @@
 
 	focus = { 
 	id = JAP_more_investments
-	icon = GFX_goal_r56_CAN_industry
+	icon = GFX_focus_generic_spur_communist_revolutions
 	cost = 10
 	prerequisite = { focus = JAP_internal_infrastructure}
 	prerequisite = {
@@ -1882,7 +1882,7 @@
 	}
 	focus = {
 		id = JAP_synthetic_autarky
-		icon = GFX_goal_generic_all_resource
+		icon = GFX_focus_PER_increase_oil_sales
 		prerequisite = { focus = JAP_tokyo_rubber_industries }
 		x = 1
 		y = 4
@@ -1897,7 +1897,7 @@
 		}
 		focus = {
 		id = JAP_people_owned_mines
-		icon = GFX_goal_generic_commie_investments
+		icon = GFX_focus_generic_coal_mining
 		prerequisite = { focus = JAP_cast_the_die }
 		x = -2
 		y = 1
@@ -1910,23 +1910,22 @@
 		}
 
 		completion_reward = {
-			modify_building_resources = {
-				building = steel_mill
-				resource = steel
-				amount = 2
-			 }
-			 modify_building_resources = {
-				building = aluminum_mill
-				resource = aluminium
-				amount = 2
-			 }
-			random_owned_controlled_state = {
-				prioritize = { 535 }
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = steel_mill
-					level = 2
-					instant_build = yes
+			533 = {
+				add_resource = {
+					type = steel
+					amount = 19
+				}
+			}
+			535 = {
+				add_resource = {
+					type = aluminium
+					amount = 34
+				}
+			}
+			536 = {
+				add_resource = {
+					type = tungsten
+					amount = 8
 				}
 			}
 		}
@@ -1934,7 +1933,7 @@
 
 	focus = {
 		id = JAP_secure_our_claims_with_the_soviets
-		icon = GFX_focus_generic_russian_deal_communist
+		icon = GFX_focus_PER_stage_mass_protests
 		prerequisite = { focus = JAP_more_investments }
 		x = 3
 		y = 4
@@ -2033,7 +2032,7 @@
 	}
 	focus = {
 		id = JAP_naval_buildup
-		icon = GFX_focus_naval_defense_fund
+		icon = GFX_focus_generic_refit_civilian_ships
 		cost = 5
 		prerequisite = {
 			focus = JAP_naval_investments 
@@ -2055,7 +2054,7 @@
 
 	focus = {
 		id = JAP_red_fleet
-		icon = GFX_goal_generic_navy_doctrines_tactics
+		icon = GFX_focus_generic_trade_interdiction
 		prerequisite = { focus = JAP_naval_buildup }
 		x = -2
 		y = 3
@@ -2427,7 +2426,7 @@
 
 	focus = {
 		id = JAP_secure_china
-		icon = GFX_goal_generic_major_war
+		icon = GFX_focus_prc_remove_chiang_kai_shek
 		prerequisite = { focus = JAP_intervene_in_china }
 		x = -1
 		y = 1
@@ -9179,7 +9178,7 @@
 	
 	focus = {
 		id = JAP_supremacy_of_will
-		icon = GFX_goal_supremacy_of_will
+		icon = GFX_focus_GER_support_the_proletarian_uprising
 		prerequisite = { focus = JAP_expand_the_teishin_shudan focus = JAP_bicycle_battalions }
 		mutually_exclusive = { focus = JAP_supremacy_of_technology }
 		x = 1

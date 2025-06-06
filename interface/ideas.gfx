@@ -1,5 +1,15 @@
 spriteTypes = {	
 
+
+
+	spriteType = {
+		name = "GFX_idea_closed_economy"
+		texturefile = "gfx/interface/ideas/idea_generic_closed_economy.dds"
+	}	
+	
+
+
+
 	
 spriteType = {
 		name = "GFX_idea_slot_press_laws"
