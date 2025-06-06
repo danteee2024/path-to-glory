@@ -1571,8 +1571,27 @@ ideas = {
 			picture = generic_pp_unity_bonus
 	
 			modifier = {
-				consumer_goods_factor = -0.25
-				stability_weekly = 0.005
+				consumer_goods_factor = -0.3
+				stability_weekly = -0.001
+			}
+		}
+		FRA_empowered_trade_unions = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = FIN_finnish_federation_of_trade_unions_heavy
+	
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				stability_factor = 0.1
 			}
 		}
 		
@@ -2062,7 +2081,7 @@ ideas = {
 		}
 
 		FRA_work_with_the_cgt = {
-			picture = FRA_work_with_the_cgt_spirit
+			picture = NOR_sivog
 			allowed = {
 				always = no
 			}
@@ -2072,9 +2091,20 @@ ideas = {
 				global_building_slots_factor = 0.1
 			}
 		}
+		FRA_soviet_first = {
+			picture = generic_communism_banned
+			allowed = {
+				always = no
+			}
+
+		targeted_modifier = {
+			tag = SOV
+			army_attack_factor = 0.05
+		}
+		}
 
 		FRA_industrial_decentralization = {
-			picture = communist_industry
+			picture = SPR_international_brigades
 			allowed = {
 				always = no
 			}

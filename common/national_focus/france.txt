@@ -1570,9 +1570,14 @@ focus = {
 			factor = 1.2
 		}
 		completion_reward = {
-			unlock_decision_tooltip = FRA_nationalize_military_complex
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = paul_faure
+			random_core_state = {
+				   add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+			} 
+			}
 		}
 	}
 	focus = {
@@ -1588,9 +1593,14 @@ focus = {
 			factor = 1
 		}
 		completion_reward = {
-			unlock_decision_tooltip = FRA_nationalize_aircraft
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = felix_gouin
+			random_core_state = {
+				   add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+			} 
+			}
 		}
 	}
 	focus = {
@@ -1749,7 +1759,7 @@ focus = {
 			focus = FRA_action_francaise
 		}
 		relative_position_id = FRA_rearmament	#dont use political ones, which may be hidden
-		x = 6
+		x = 8
 		y = 0
 		allow_branch = {
 			if = {
@@ -1807,10 +1817,10 @@ focus = {
 			focus = FRA_action_francaise
 		}
 		relative_position_id = FRA_rearmament	#dont use political ones, which may be hidden
-		x = 15
+		x = 18
 		y = 0
 		offset = {
-			x = -7
+			x = -10
 			y = 0
 			trigger = {
 				has_completed_focus = FRA_status_quo
@@ -1859,10 +1869,10 @@ focus = {
 			focus = FRA_action_francaise
 		}
 		relative_position_id = FRA_rearmament	#dont use political ones, which may be hidden
-		x = 22
+		x = 25
 		y = 0
 		offset = {
-			x = -16
+			x = -19
 			y = 0
 			trigger = {
 				has_completed_focus = FRA_far_right_leagues
@@ -1917,10 +1927,10 @@ focus = {
 			focus = FRA_far_right_leagues
 		}
 		relative_position_id = FRA_rearmament	#dont use political ones, which may be hidden
-		x = 35
+		x = 38
 		y = 0
 		offset = {
-			x = -20
+			x = -23
 			y = 0
 			trigger = {
 				has_completed_focus = FRA_action_francaise
@@ -1982,7 +1992,7 @@ focus = {
 		mutually_exclusive = {
 			focus = FRA_pcf_sfio_coalition
 		}
-		x = 16
+		x = 17
 		y = 1
 		ai_will_do = {
 			factor = 2
@@ -1996,14 +2006,13 @@ focus = {
 				name = "CGT"
 			}
 			create_country_leader = {
-				name = "Léon Jouhaux"
+				name = "United Syndical Congress"
 				desc = ""
-				picture = "Portrait_France_Leon_Jouhaux.dds"
+				picture = "GFX_portrait_SPR_anarchist_commune"
 				expire = "1965.1.1"
 				ideology = marxism
 				traits = {
-					POL_labor_advocate
-					r56_trait_opposed_to_fascism
+					BRA_anti_authoritarian
 				}
 			}
 			FRA_right_wing_riot_effect = yes
@@ -2020,7 +2029,7 @@ focus = {
 		mutually_exclusive = {
 			focus = FRA_work_with_the_cgt
 		}
-		x = 18
+		x = 21
 		y = 1
 		ai_will_do = {
 			factor = 3
@@ -2040,7 +2049,7 @@ focus = {
 			focus = FRA_work_with_the_cgt
 			focus = FRA_pcf_sfio_coalition
 		}
-		x = 17
+		x = 19
 		y = 2
 		
 		ai_will_do = {
@@ -2079,6 +2088,138 @@ focus = {
 		}
 	}
 	focus = {
+		id = FRA_empower_the_trade_unions
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		cost = 10
+		prerequisite = {
+			focus = FRA_syndicalist_revolution
+		}
+		x = 17
+		y = 4
+		available = {
+			has_government = communism
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			
+			add_ideas = FRA_empowered_trade_unions
+		}
+	}
+	focus = {
+		id = FRA_the_international
+		icon = GFX_focus_ETH_callout_to_the_world
+		cost = 10
+		prerequisite = {
+			focus = FRA_empower_the_trade_unions
+		}
+		x = 17
+		y = 5
+		mutually_exclusive = {
+			focus = FRA_assistance_treaty
+		}
+		available = {
+			has_government = communism
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			set_rule = {
+				can_create_factions = yes
+			}
+			create_faction = "L'Internationale"
+
+		}
+	}
+	focus = {
+		id = FRA_denounce_stalin
+		icon = GFX_focus_fra_loyalty_stalin
+		cost = 10
+		prerequisite = {
+			focus = FRA_the_international
+		}
+		x = 18
+		y = 7
+		available = {
+			has_government = communism
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			add_stability = 0.1
+			send_embargo = SOV
+
+		}
+	}
+	focus = {
+		id = FRA_prioritize_the_soviets
+		icon = GFX_focus_SOV_socialism_in_one_country
+		cost = 10
+		prerequisite = {
+			focus = FRA_the_international
+		}
+		x = 16
+		y = 7
+		available = {
+			has_government = communism
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			add_ideas = FRA_soviet_first
+		}
+	}
+	focus = {
+		id = FRA_end_the_traitors
+		icon = GFX_focus_attack_soviet
+		cost = 10
+		prerequisite = {
+			focus = FRA_denounce_stalin
+		}
+		prerequisite = {
+			focus = FRA_prioritize_the_soviets
+		}
+		x = 17
+		y = 8
+		available = {
+			has_government = communism
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = SOV
+				type = puppet_wargoal_focus
+			}
+
+		}
+	}
+	focus = {
+		id = FRA_syndicate_of_innovation
+		icon = GFX_focus_AUS_womens_education_initiative
+		cost = 10
+		prerequisite = {
+			focus = FRA_the_international
+		}
+		x = 15
+		y = 6
+		available = {
+			has_government = communism
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			add_research_slot = 1
+
+		}
+	}
+	focus = {
 		id = FRA_industrial_decentralization
 		icon = GFX_focus_generic_communist_industry
 		cost = 10
@@ -2105,7 +2246,7 @@ focus = {
 		prerequisite = {
 			focus = FRA_pcf_sfio_coalition
 		}
-		x = 18
+		x = 22
 		y = 3
 		available = {
 			is_subject = no
@@ -2130,10 +2271,9 @@ focus = {
 		icon = GFX_SOV_socialist_emulation_ccp_2d_sov_compatibility
 		cost = 10
 		prerequisite = {
-			focus = FRA_syndicalist_revolution
 			focus = FRA_commune_proclamation
 		}
-		x = 17
+		x = 21
 		y = 4
 		available = {
 			has_government = communism
@@ -2144,7 +2284,10 @@ focus = {
 			factor = 4
 		}
 		completion_reward = {
-			add_ideas = FRA_collectivisation
+			add_timed_idea = {
+				idea = FRA_collectivisation
+				days = 365
+			}
 			FRA_right_wing_riot_effect = yes
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2155,11 +2298,13 @@ focus = {
 		cost = 10
 		prerequisite = {
 		 focus = FRA_collectivisation
+		 focus = FRA_empower_the_trade_unions
 		}
 		mutually_exclusive = {
 			focus = FRA_humanite_unie
+			focus = FRA_the_international
 		}
-		x = 18
+		x = 19
 		y = 5
 		available = {
 			has_government = communism
@@ -2208,7 +2353,7 @@ focus = {
 		prerequisite = {
 			focus = FRA_commune_proclamation
 		}
-		x = 19
+		x = 23
 		y = 4
 		available = {
 			has_government = communism
@@ -5841,7 +5986,7 @@ focus = {
 		mutually_exclusive = {
 			focus = FRA_assistance_treaty
 		}
-		x = 16
+		x = 21
 		y = 5
 		available = {
 			is_subject = no
@@ -5867,9 +6012,8 @@ focus = {
 		cost = 10
 		prerequisite = {
 			focus = FRA_humanite_unie
-			focus = FRA_assistance_treaty
 		}
-		x = 16
+		x = 20
 		y = 7
 
 		available = {
@@ -5877,13 +6021,7 @@ focus = {
 			any_country = {
 				has_government = fascism
 			}
-			r56_script_i_am_sane = yes
-			NOT = {
-				has_idea = FRA_victors_of_wwi
-			}
-			has_army_manpower = {
-				size > 1499999
-			}			
+						
 		}
 		
 		ai_will_do = {
@@ -5919,10 +6057,9 @@ focus = {
 		icon = GFX_focus_AST_never_gallipoli
 		cost = 10
 		prerequisite = {
-			focus = FRA_assistance_treaty
 			focus = FRA_humanite_unie
 		}
-		x = 18
+		x = 22
 		y = 7
 		available = {
 			is_subject = no
@@ -5933,7 +6070,7 @@ focus = {
 					has_government = communism
 				}
 			}
-			r56_script_i_am_sane = yes
+		
 		}
 		bypass = {
 			has_war_with = ENG
@@ -5985,94 +6122,44 @@ focus = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 	focus = {
-		id = FRA_help_the_spanish_republicans
-		icon = GFX_focus_generic_befriend_communist_spain_focus
-		cost = 5
-		x = 15
-		y = 6
+		id = FRA_end_capitalism
+		icon = GFX_focus_GER_wage_war_on_capitalism
+		cost = 10
 		prerequisite = {
-			focus = FRA_humanite_unie
+			focus = FRA_fascist_threat
 		}
+		prerequisite = {
+			focus = FRA_strike_empire
+		}
+		x = 21
+		y = 8
 		available = {
-			OR = {
-				country_exists = SPD
-				any_country = {
-					original_tag = SPR
+			USA = {
+				NOT = {
 					has_government = communism
 				}
-			}	
-			NOT = {
-				is_in_faction_with = SPA
-				is_in_faction_with = SPB
-				is_in_faction_with = SPC
 			}
+		
 		}
+		bypass = {
+			has_war_with = ENG
+		}
+		
 		ai_will_do = {
-			factor = 5
+			factor = 1
+			
 		}
+		will_lead_to_war_with = ENG
 		completion_reward = {
-			random_other_country = {
-					limit = {
-						OR = {
-							original_tag = SPR
-							tag = SPD
-						}
-						has_government = communism
-					}
-				country_event = france.124
-			}
-			if = {
-				limit = {
-					SPA = { exists = yes }
-				}
-				random_other_country = {
-					limit = {
-						OR = {
-							original_tag = SPR
-							original_tag = SPA
-						}
-						has_government = fascism
-					}
-					FRA = {
-						create_wargoal = {
-							type = puppet_wargoal_focus
-							target = PREV
-							expire = 0
-						}
-					}
-				}
-			}
-			if = {
-				limit = {
-					SPB = { exists = yes }
-					OR = {
-						has_government = fascism
-						has_government = neutrality
-					}
-				}
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = SPB
-					expire = 0
-				}
-			}
-			if = {
-				limit = {
-					SPC = { exists = yes }
-					OR = {
-						has_government = fascism
-						has_government = neutrality
-					}					
-				}
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = SPC
-					expire = 0
-				}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = USA
+				expire = 0
 			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
+	
 
 	focus = {
 		id = FRA_continue_the_fight_in_africa
@@ -6759,7 +6846,7 @@ focus = {
 		mutually_exclusive = {
 			focus = FRA_de_gaulle_strategy
 		}
-		x = 52
+		x = 54
 		y = 0
 		offset = {
 			x = -20
@@ -6773,7 +6860,7 @@ focus = {
 			}
 		}
 		offset = {
-			x = -18
+			x = -20
 			y = 0
 			trigger = {
 				has_game_rule = {
