@@ -51,7 +51,7 @@ ideas = {
 				has_government = neutrality
 			}
 			
-			picture = FRA_militarist_society_spirit
+			picture = ARG_war_division
 
 			modifier = {
 				army_org_factor = 0.05
@@ -72,7 +72,7 @@ ideas = {
 				has_government = neutrality
 			}
 			
-			picture = FRA_legacy_of_the_grande_armee_spirit
+			picture = AFG_adopt_nufus
 
 			modifier = {
 				conscription = 0.025

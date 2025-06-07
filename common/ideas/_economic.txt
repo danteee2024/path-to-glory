@@ -892,7 +892,7 @@ level = 1
 			allowed = {
 				tag = JAP
 			}
-			picture = japanese_closed_economy
+			picture = JAP_closed_economy
 		
 			available = {
 				OR = {

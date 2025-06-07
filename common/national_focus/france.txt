@@ -1866,7 +1866,7 @@ focus = {
 		x = 25
 		y = 0
 		offset = {
-			x = -19
+			x = -16
 			y = 0
 			trigger = {
 				has_completed_focus = FRA_far_right_leagues
@@ -3171,11 +3171,23 @@ focus = {
 		x = 7
 		y = 1
 		offset = {
-			x = -5
+			x = -20
 			trigger = {
 				OR = {
 					has_completed_focus = FRA_far_right_leagues
 					has_completed_focus = FRA_action_francaise
+				}
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+		offset = {
+			x = 10
+			trigger = {
+				OR = {
+					has_completed_focus = FRA_far_right_leagues
 				}
 				has_game_rule = {
 					rule = obsolete_focus_branches_visibility
@@ -3539,7 +3551,6 @@ focus = {
 					has_completed_focus = FRA_status_quo
 					has_completed_focus = FRA_radicalize_front
 					has_completed_focus = FRA_far_right_leagues
-					has_completed_focus = FRA_brumaire_movement
 				}
 			}
 		}
@@ -3648,7 +3659,6 @@ focus = {
 					has_completed_focus = FRA_status_quo
 					has_completed_focus = FRA_radicalize_front
 					has_completed_focus = FRA_far_right_leagues
-					has_completed_focus = FRA_brumaire_movement
 				}
 			}
 		}
@@ -3736,17 +3746,7 @@ focus = {
 		x = 8
 		y = 1
 		relative_position_id = FRA_repeal_the_law_of_exile
-		offset = {
-			x = -18
-			y = 0
-			trigger = {
-				has_completed_focus = FRA_brumaire_movement
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-			}
-		}
+		
 		allow_branch = {
 			if = {
 				limit = {
@@ -3759,8 +3759,6 @@ focus = {
 					has_completed_focus = FRA_status_quo
 					has_completed_focus = FRA_radicalize_front
 					has_completed_focus = FRA_far_right_leagues
-					has_completed_focus = FRA_side_with_the_orleanists
-					has_completed_focus = FRA_support_the_legitimatises
 				}
 			}
 		}
@@ -6853,21 +6851,7 @@ focus = {
 				has_completed_focus = FRA_action_francaise
 			}
 		}
-		offset = {
-			x = -20
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				OR = {
-					has_completed_focus = FRA_brumaire_movement
-					has_completed_focus = FRA_support_the_legitimatises
-					has_completed_focus = FRA_side_with_the_orleanists
-				}
-			}
-		}
+		
 		offset = {
 			x = -37
 			y = 0

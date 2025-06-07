@@ -3,7 +3,7 @@ spriteTypes = {
 
 
 	spriteType = {
-		name = "GFX_idea_closed_economy"
+		name = "GFX_idea_JAP_closed_economy"
 		texturefile = "gfx/interface/ideas/jap/JAP_closed_economy.dds"
 	}	
 	
