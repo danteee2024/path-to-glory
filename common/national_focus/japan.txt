@@ -7386,7 +7386,6 @@
 		completion_reward = {
 			add_political_power = 50
 			unlock_decision_category_tooltip = JAP_alliance_expansion_plan	
-			news_event = {id = r56.news_event.31 hours = 6 }									
 		}
 		search_filters = {  FOCUS_FILTER_POLITICAL }
 	}

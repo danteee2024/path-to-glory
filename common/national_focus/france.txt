@@ -1697,14 +1697,9 @@ focus = {
 						limit = {
 							NOT = { has_global_flag = ger_vanilla_focus_tree }
 						}
-						has_completed_focus = GER_rhineland
+						has_government = fascism 
 					}
-					if = {
-						limit = {
-							has_global_flag = ger_vanilla_focus_tree
-						}
-						has_completed_focus = GER_rhineland_vanilla
-					}
+					
 				}
 			}
 		}
