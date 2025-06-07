@@ -1,6 +1,7 @@
 ideas = {
 
 	country = {
+		
 		USA_anti_unions_act_idea = {
 			picture = ARG_anti_soviet
 			

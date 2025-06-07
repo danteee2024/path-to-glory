@@ -6,10 +6,9 @@ state={
 		tungsten=16
 	    aluminium=9
 		steel=4 
-		chromium=31
 	}
 
-	state_category = Metropolis
+	state_category = city
 
 
 	history={

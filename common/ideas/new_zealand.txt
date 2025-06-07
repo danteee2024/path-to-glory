@@ -17,9 +17,10 @@ ideas = {
 			picture = HUN_revaluing_the_pengo
 
 			modifier = {
-				global_building_slots_factor = 0.55
+				global_building_slots_factor = 0.50
 				trade_opinion_factor = 0.50
 				research_speed_factor = 0.05
+				production_speed_industrial_expansion_factor = 0.05
 			}
 
 		}
