@@ -927,7 +927,6 @@ level = 1
 								  		is_core_of = D11
 								  		is_core_of = D12
 										is_core_of = D13
-										is_core_of = GUM
 										is_core_of = PLU
 									}
 								  }
@@ -1386,7 +1385,7 @@ level = 2
 
 		closed_economy = {
 
-level = 1
+        level = 1
 			available = {
 				has_war = yes
 				OR = {

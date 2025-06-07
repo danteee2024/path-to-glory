@@ -61,7 +61,7 @@ ideas = {
 			
 			modifier = {
 			    army_org_factor = 0.1
-				recruitable_population_factor = 0.25
+				conscription_factor = 0.15
 			}
 		}
 		MAN_resource_whore = {
@@ -230,7 +230,7 @@ ideas = {
 		}
 		JAP_new_naval_academy = {
 			name = "New Naval Academy"
-			picture = PER_outdated_navy_dynamic_modifier
+			picture = ARG_women_in_industry
 			allowed = {
 				always = no
 			}
@@ -1352,7 +1352,7 @@ ideas = {
 				original_tag = JAP
 			}
 			
-			picture = worker_cluture
+			picture = SOV_romanov_reconstruction_ccp_sov_compatibility
 
 			removal_cost = -1	
 			

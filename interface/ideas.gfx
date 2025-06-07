@@ -4,7 +4,7 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_idea_closed_economy"
-		texturefile = "gfx/interface/ideas/idea_generic_closed_economy.dds"
+		texturefile = "gfx/interface/ideas/jap/JAP_closed_economy.dds"
 	}	
 	
 

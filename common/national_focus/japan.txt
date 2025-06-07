@@ -259,7 +259,6 @@
 			add_stability = 0.1
 			MAN = {
 				country_event = wtt_japan.21
-				custom_effect_tooltip = JAP_if_man_accepts
 				effect_tooltip = {
 					global_every_army_leader = {
 						limit = {
@@ -270,9 +269,6 @@
 					}
 				}
 			}
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = JAP_minoru_takano	
-			#show_ideas_tooltip = JAP_tomin_suzuki		
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
 	}
@@ -349,12 +345,7 @@
 				}
 			}
 			custom_effect_tooltip = cast_the_die_TT
-			if = {
-				limit = {
-					MEN = { is_subject_of = ROOT }
-				}
-				set_autonomy = { target = MEN autonomy_state = autonomy_free }
-			}
+			
 			if = {
 				limit = {
 					MAN = { is_subject_of = ROOT }
@@ -579,7 +570,7 @@
 			has_civil_war = yes
 		}
 
-		search_filters = { FOCUS_FILTER_MILITARY_IMPROVEMENT FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = {  FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
 			add_timed_idea = {
 				idea = JAP_smash_the_imperialists_idea
@@ -1336,7 +1327,7 @@
 	}
 	focus = {
 		id = JAP_been_trolled
-		icon = GFX_goal_generic_industrial_unionism
+		icon = GFX_focus_SWE_attack_landsorganisationen
 		cost = 1
 		relative_position_id = JAP_cast_the_die
 		x = -4
@@ -1892,7 +1883,7 @@
 		completion_reward = {
 			add_ideas = JAP_autarkic
 		}
-		search_filters = { FOCUS_FILTER_OIL FOCUS_FILTER_POLITICAL }
+		search_filters = {  FOCUS_FILTER_POLITICAL }
 		}
 		focus = {
 		id = JAP_people_owned_mines
@@ -1909,22 +1900,22 @@
 		}
 
 		completion_reward = {
-			533 = {
-				add_resource = {
-					type = steel
-					amount = 19
+			random_owned_controlled_state = {
+				prioritize = { 282 }
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = resource_expansion_aluminium
+					level = 3
+					instant_build = yes
 				}
 			}
-			535 = {
-				add_resource = {
-					type = aluminium
-					amount = 34
-				}
-			}
-			536 = {
-				add_resource = {
-					type = tungsten
-					amount = 8
+			random_owned_controlled_state = {
+				prioritize = { 529 }
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = resource_expansion_steel
+					level = 3
+					instant_build = yes
 				}
 			}
 		}
@@ -1954,7 +1945,7 @@
 			SOV = { country_event = { id = wtt_japan.11 } }
 			unlock_decision_tooltip = develop_north_sakhalin_oil_deposits
 		}
-		search_filters = { FOCUS_FILTER_OIL FOCUS_FILTER_POLITICAL }
+		search_filters = {  FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2319,7 +2310,7 @@
 			unlock_decision_category_tooltip = r56_chinese_gui_category
 			set_country_flag = chi_interested_in_china
 		}
-		search_filters = { FOCUS_FILTER_ALLIANCE FOCUS_FILTER_POLITICAL }
+		search_filters = {  FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -2526,7 +2517,7 @@
 				unlock_decision_category_tooltip = prospect_for_resources
 			}
 		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ALUMINIUM}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -2566,37 +2557,30 @@
 
 		completion_reward = {
 			613 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
 			613 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
 			620 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
-			605 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
+		
 		}
 
 	}
@@ -2716,7 +2700,7 @@
 		completion_reward = {
 			SOV = { country_event = { id = wtt_japan.11 } }
 		}
-		search_filters = { FOCUS_FILTER_OIL FOCUS_FILTER_POLITICAL }
+		search_filters = {  FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -3487,7 +3471,7 @@
 				value = 100
 			}
 		}
-		search_filters = { FOCUS_FILTER_ALLIANCE }
+		search_filters = {  }
 	}
 
 	focus = {
@@ -3603,7 +3587,7 @@
 				unlock_decision_category_tooltip = prospect_for_resources
 			}
 		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ALUMINIUM}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -3965,7 +3949,7 @@
 				category = synth_resources
 			}
 		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_OIL }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH  }
 	}
 	focus = {
 		id = JAP_national_mobilization_law
@@ -4293,7 +4277,7 @@
 			add_ideas = JAP_black_dragon_society
 			add_political_power = 60				
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ESPIONAGE }
+		search_filters = { FOCUS_FILTER_POLITICAL  }
 	}
 	focus = {
 		id = JAP_spiritual_mobilization
@@ -4352,7 +4336,7 @@
 				custom_effect_tooltip = cost_reduced_last_stand
 			}
 		}
-		search_filters = { FOCUS_FILTER_MILITARY_IMPROVEMENT }
+		search_filters = {  }
 	}
 
 	focus = {
@@ -4668,7 +4652,7 @@
 				add_idea = JAP_militarism_showa
 			}
 		}
-		search_filters = { FOCUS_FILTER_MILITARY_IMPROVEMENT FOCUS_FILTER_ANNEXATION FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = {  FOCUS_FILTER_ANNEXATION FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
 	}
 
 	focus = {
@@ -4695,7 +4679,7 @@
 				add_idea = JAP_militarism_shogunate
 			}
 		}
-		search_filters = { FOCUS_FILTER_MILITARY_IMPROVEMENT FOCUS_FILTER_ANNEXATION FOCUS_FILTER_RESEARCH FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+		search_filters = {  FOCUS_FILTER_ANNEXATION FOCUS_FILTER_RESEARCH FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
 	}
 	focus = {
 		id = JAP_purge_the_toseiha
@@ -4719,7 +4703,7 @@
 			add_war_support = 0.05
 			add_political_power = 50
 		}
-		search_filters = { FOCUS_FILTER_MILITARY_IMPROVEMENT FOCUS_FILTER_ANNEXATION FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = {  FOCUS_FILTER_ANNEXATION FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
 	}
 	focus = {
 		id = JAP_the_old_ways
@@ -4748,7 +4732,7 @@
 				state = 531
 			}
 		}
-		search_filters = { FOCUS_FILTER_MILITARY_IMPROVEMENT FOCUS_FILTER_ANNEXATION FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = {  FOCUS_FILTER_ANNEXATION FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
 	}
 	focus = {
 		id = JAP_develop_vladivostok
@@ -4806,7 +4790,7 @@
 				}
 			}
 		}
-		search_filters = { FOCUS_FILTER_MILITARY_IMPROVEMENT FOCUS_FILTER_ANNEXATION FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = {  FOCUS_FILTER_ANNEXATION FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
 	}
 	focus = {
 		id = JAP_develop_the_oil_fields
@@ -4864,7 +4848,7 @@
 				}
 			}
 		}
-		search_filters = { FOCUS_FILTER_MILITARY_IMPROVEMENT FOCUS_FILTER_ANNEXATION FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = {  FOCUS_FILTER_ANNEXATION FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
 	}
 	focus = {
 		id = JAP_establish_the_northern_resource_area
@@ -4938,13 +4922,12 @@
 				unlock_decision_category_tooltip = prospect_for_resources
 			}
 		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ALUMINIUM}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
 		id = JAP_prepare_for_war_with_the_soviet_union
 		icon = GFX_focus_SOV_reinforce_northern_naval_bases
-		text = r56_JAP_prepare_for_war_with_the_soviet_union
 		prerequisite = { focus = JAP_purge_the_toseiha }
 		x = -1
 		y = 2
@@ -4965,12 +4948,7 @@
                 uses = 1
 				category = land_doctrine
 			}
-            add_tech_bonus = {
-                name = infantry_artillery_bonus
-                bonus = 3
-                uses = 1
-                category = winter_clothing_tech
-            }				
+           			
 			every_owned_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
@@ -5009,20 +4987,7 @@
 					}
 				}
 			}
-			MEN = {
-				every_owned_state = {
-					limit = {
-						is_fully_controlled_by = MEN
-						is_owned_by = MEN
-						MEN = { is_puppet_of = JAP }
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
+			
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 	}
@@ -5166,7 +5131,7 @@
 				country_event = wtt_japan.41
 			}
 		}
-		search_filters = { FOCUS_FILTER_MILITARY_IMPROVEMENT FOCUS_FILTER_RESEARCH FOCUS_FILTER_TFV_AUTONOMY }
+		search_filters = {  FOCUS_FILTER_RESEARCH FOCUS_FILTER_TFV_AUTONOMY }
 	}
 
 	focus = {
@@ -5234,7 +5199,7 @@
 				}
 			}
 		}
-		search_filters = { FOCUS_FILTER_MILITARY_IMPROVEMENT FOCUS_FILTER_RESEARCH FOCUS_FILTER_TFV_AUTONOMY FOCUS_FILTER_INDUSTRY }
+		search_filters = {  FOCUS_FILTER_RESEARCH FOCUS_FILTER_TFV_AUTONOMY FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -6253,7 +6218,7 @@
 				}
 			}
 		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STEEL }
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
 	}
 	focus = {
 		id = JAP_expand_aluminium_plants
@@ -6291,7 +6256,7 @@
 				}
 			}	
 		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STEEL }
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
 	}
 	focus = {
 		id = JAP_sumitomo_rubber_industries
@@ -6324,7 +6289,7 @@
 				}
 			}		
 		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_OIL FOCUS_FILTER_RUBBER}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH  }
 	}
 
 	focus = {
@@ -6974,7 +6939,7 @@
 				ENG = { country_event = generic.5 }
 			}
 		}
-		search_filters = { FOCUS_FILTER_ALLIANCE FOCUS_FILTER_POLITICAL }
+		search_filters = {  FOCUS_FILTER_POLITICAL }
 	}
 	focus = {
 		id = JAP_trans_pacific_alliance
@@ -7065,7 +7030,7 @@
 				}
 			}						
 		}
-		search_filters = { FOCUS_FILTER_ALLIANCE FOCUS_FILTER_POLITICAL }
+		search_filters = {  FOCUS_FILTER_POLITICAL }
 	}
 	focus = {
 		id = JAP_economic_deals
@@ -7423,7 +7388,7 @@
 			unlock_decision_category_tooltip = JAP_alliance_expansion_plan	
 			news_event = {id = r56.news_event.31 hours = 6 }									
 		}
-		search_filters = { FOCUS_FILTER_ALLIANCE FOCUS_FILTER_POLITICAL }
+		search_filters = {  FOCUS_FILTER_POLITICAL }
 	}
 	focus = {
 		id = JAP_island_investment
@@ -7466,7 +7431,7 @@
 		completion_reward = {
 			unlock_decision_category_tooltip = JAP_pacific_guardian
 		}
-		search_filters = { FOCUS_FILTER_ALLIANCE }
+		search_filters = {  }
 	}
 	focus = {
 		id = JAP_anti_communist_bulwark
@@ -7830,7 +7795,7 @@
 			}
 		}
 		 offset = {
-			x = -26
+			x = -26 
 			y = 0
 			trigger = {
 				has_completed_focus = JAP_purge_the_kodoha_faction
@@ -8059,7 +8024,7 @@
 				add_ideas = MAN_resource_whore
 			}
 		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STEEL}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -8092,7 +8057,7 @@
 			}
 						
 		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STEEL}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -8125,7 +8090,7 @@
 								
 			}		
 		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STEEL}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 	focus = {
 		id = JAP_manchu_oil
@@ -8143,7 +8108,7 @@
 		}
 
 		available = {
-			943 = { is_fully_controlled_by = MAN }
+			716 = { is_fully_controlled_by = MAN }
 			MAN = { is_subject_of = ROOT }
 		}
 
@@ -8168,7 +8133,7 @@
 				}			
 			}		
 		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STEEL}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -8198,7 +8163,7 @@
 				add_ideas = JAP_manchu_generic
 			}
 		}
-		search_filters = { FOCUS_FILTER_MILITARY_IMPROVEMENT }
+		search_filters = {  }
 	}
 	focus = {
 		id = JAP_manchu_buff1
@@ -8228,7 +8193,7 @@
 				add_ideas = JAP_manchu_special
 			}
 		}
-		search_filters = { FOCUS_FILTER_MILITARY_IMPROVEMENT }
+		search_filters = {  }
 	}
 
 	focus = {
@@ -8844,7 +8809,7 @@
 				
 			}
 		}
-		search_filters = {  FOCUS_FILTER_RESEARCH FOCUS_FILTER_ESPIONAGE }
+		search_filters = {  FOCUS_FILTER_RESEARCH  }
 	}
 	
 	focus = {
@@ -10232,7 +10197,7 @@
 			}			
 			add_ideas = ENG_expand_the_repair_yards
 		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MILITARY_IMPROVEMENT }
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
 	}
 
 	focus = {

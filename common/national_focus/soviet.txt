@@ -12105,48 +12105,9 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SOV_annex_tannu_tuva
-		icon = GFX_SOV_annex_tannu_tuva_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_war_measures_in_the_east }
-		x = -1
-		y = 1
-		relative_position_id = SOV_war_measures_in_the_east
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				has_civil_war = yes
-			}	
-		}
-		
-		available = { 
-			is_subject = no 
-			TAN = {
-				OR = {
-					is_in_faction_with = ROOT
-					is_subject_of = ROOT
-				}
-			}
-		}
-		
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-
-		completion_reward = {
-			TAN = {	
-				country_event = { 
-					id = soviet.14 
-					hours = 6
-				} 
-			}
-		}
-	}
-
-	focus = {
 		id = SOV_fortify_mongolian_border
 		icon = GFX_SOV_fortify_mongolian_border_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_war_measures_in_the_east }
+		prerequisite = { focus = SOV_war_measures_in_the_east focus = SOV_policy_of_collective_security   }
 		x = 1
 		y = 1
 		relative_position_id = SOV_war_measures_in_the_east
