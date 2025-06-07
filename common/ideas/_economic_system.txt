@@ -139,6 +139,7 @@ ideas = {
             picture = PB_Communal_Economy
             modifier = {
                 conscription_factor = -0.05
+                 production_speed_industrial_expansion_factor = 0.10
                 production_speed_industrial_complex_factor = 0.15
                 consumer_goods_factor = 0.10
                 global_building_slots_factor = 0.15
