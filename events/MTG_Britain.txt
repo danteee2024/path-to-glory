@@ -492,6 +492,9 @@ country_event = {
 		add_stability = 0.05
 		add_political_power = 50
 		complete_national_focus = ENG_the_kings_party
+		hidden_effect = {
+			complete_national_focus = ENG_a_change_in_course
+		}
 	}
 }
 
@@ -7655,7 +7658,6 @@ country_event = {
 	trigger = {
 		tag = ENG
 		has_dlc = "Man the Guns"
-		has_country_flag = ENG_abdication_crisis_morganatic_marriage
 		has_country_flag = edward_viii_married_wallis_simpson
 		date > 1937.6.1
 	}

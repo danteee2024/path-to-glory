@@ -93,7 +93,7 @@ focus_tree = {
 				has_war_with = USA
 			}
 			USA = { 
-				has_government = ROOT
+				
 				has_war = no
 				NOT = {
 					OR = {
@@ -4268,7 +4268,7 @@ focus_tree = {
 						}
 					}
 					OR = {
-						has_government = ROOT
+						
 						has_government = neutrality
 					}
 				}
@@ -4312,7 +4312,7 @@ focus_tree = {
 					}
 					NOT = {
 						OR = {
-							has_government = ROOT
+							
 							has_government = neutrality
 						}
 					}
@@ -5867,7 +5867,7 @@ focus_tree = {
 				OR = {
 					AND = {
 						is_subject_of = ENG
-						has_government = ROOT
+						
 					}
 					exists = no
 				}
@@ -5876,7 +5876,7 @@ focus_tree = {
 				OR = {
 					AND = {
 						is_subject_of = ENG
-						has_government = ROOT
+						
 					}
 					exists = no
 				}
@@ -5885,7 +5885,7 @@ focus_tree = {
 				OR = {
 					AND = {
 						is_subject_of = ENG
-						has_government = ROOT
+						
 					}
 					exists = no
 				}
@@ -5894,7 +5894,7 @@ focus_tree = {
 				OR = {
 					AND = {
 						is_subject_of = ENG
-						has_government = ROOT
+						
 					}
 					exists = no
 				}
