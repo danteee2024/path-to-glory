@@ -98,7 +98,7 @@ focus_tree = {
 		}
 		
 		
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_spr_no_pasaran
 		x = 31
 		y = 0
 		offset = {
@@ -402,7 +402,7 @@ focus_tree = {
 			}
 		}
 		
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_focus_spr_maintain_the_republic
 		x = 33
 		y = 0
 		offset = {
