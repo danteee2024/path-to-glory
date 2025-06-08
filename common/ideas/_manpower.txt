@@ -15,7 +15,9 @@ ideas = {
 			}
 
 			modifier = {
-				conscription = 0.01
+				conscription = 0.005
+				research_speed_factor = 0.05
+				stability_factor = 0.05
 			}
 
 			cancel_if_invalid = no
@@ -105,6 +107,7 @@ ideas = {
 
 			modifier = {
 				conscription = 0.015
+				army_attack_factor = 0.015
 			}
 
 			default = yes
