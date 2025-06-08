@@ -3760,10 +3760,10 @@
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}											
@@ -4514,7 +4514,7 @@
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
-
+     
 	focus = {
 		id = JAP_challenge_the_zaibatsus
 		icon = GFX_focus_jap_zaibatsu
@@ -4614,6 +4614,25 @@
 					instant_build = yes
 				}
 			}			
+			random_owned_controlled_state = {
+				prioritize = { 531 282 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+					
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 			swap_ideas = {
 				remove_idea = JAP_zaibatsus
 				add_idea = JAP_zaibatsus_challenged
@@ -5737,7 +5756,7 @@
 			add_popularity = { ideology = democratic popularity = 0.1 }
 			add_ideas = JAP_hirohito
 			country_event = { 
-				id = r56_japan.10
+				id = japan.25
 			}
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
@@ -6199,7 +6218,7 @@
 				prioritize = { 531 }
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					type = steel_mill
+					type = resource_expansion_steel
 					level = 2
 					instant_build = yes
 				}
@@ -6208,7 +6227,7 @@
 				prioritize = { 535 }
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					type = steel_mill
+					type = resource_expansion_steel
 					level = 2
 					instant_build = yes
 				}
@@ -6237,7 +6256,7 @@
 				prioritize = { 531 }
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					type = aluminum_mill
+					type = resource_expansion_aluminium
 					level = 2
 					instant_build = yes
 				}
@@ -6246,7 +6265,7 @@
 				prioritize = { 535 }
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					type = aluminum_mill
+					type = resource_expansion_aluminium
 					level = 2
 					instant_build = yes
 				}

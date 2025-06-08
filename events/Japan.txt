@@ -1121,3 +1121,52 @@ country_event = {
 	}
 	
 }
+
+####election dem jap
+country_event = {
+	id = japan.25
+	title = japan.25.t
+	desc = japan.25.desc
+	picture = GFX_news_event_jap_election
+
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.25.a
+		ai_chance = { factor = 40 }
+		set_country_flag = JAP_rikken_mineseito_won
+		set_party_name = {
+			ideology = democratic
+			long_name = JAP_democratic_minseito_party
+			name = JAP_democratic_minseito_party
+		}
+		add_country_leader_role = {
+			character = JAP_machida_chuji
+			promote_leader = yes
+			country_leader = {
+				ideology = socialism
+				expire = "1965.1.1.1"
+				traits = { mediator }
+			}
+		}
+	}
+	option = {
+		name = japan.25.b
+		ai_chance = { factor = 60 }
+		set_country_flag = JAP_rikken_seiyukai_won
+		set_party_name = {
+			ideology = democratic
+			long_name = JAP_democratic_seiyukai_party
+			name = JAP_democratic_seiyukai_party
+		}
+		add_country_leader_role = {
+			character = JAP_ichiro_hatoyama
+			promote_leader = yes
+			country_leader = {
+				ideology = conservatism
+				expire = "1965.1.1.1"
+				traits = { right_industrialist }
+			}
+		}
+	}
+}
