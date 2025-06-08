@@ -28,9 +28,14 @@ spriteTypes = {
 		name = "GFX_USA_family"
 		texturefile = "gfx/interface/goals/usa/family.dds"
 	}
+	
 	spriteType = {
-		name = "GFX_USA_uncle_sam"
-		texturefile = "gfx/interface/goals/usa/uncle_sam.dds"
+		name = "GFX_beacon_of_democracy_shine"
+		textureFile = "gfx/interface/goals/usa/last_stand_beacon_of_democracy_shine.dds"
+	}
+	spriteType = {
+		name = "GFX_beacon_of_democracy_shine"
+		textureFile = "gfx/interface/goals/usa/last_stand_beacon_of_democracy_shine.dds"
 	}
 	spriteType = {
 		name = "GFX_beacon_of_democracy_shine"

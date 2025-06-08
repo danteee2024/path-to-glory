@@ -532,7 +532,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				industrial_capacity_factory = 0.05	
+				industrial_capacity_factory = 0.075
 			}
 		}
 		USA_labour_management_relations_act = {
@@ -583,7 +583,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_factor = -0.15
+				consumer_goods_factor = -0.05
 				stability_factor = 0.05
 			}
 		}

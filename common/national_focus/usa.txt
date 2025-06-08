@@ -63,7 +63,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_continue_the_new_deal
-		icon = GFX_focus_generic_self_management
+		icon = GFX_focus_PER_embrace_opulence
 		x = 14
 		y = 0
 		offset = {
@@ -1993,7 +1993,7 @@ mutually_exclusive = {
 
 	focus = {
 		id = USA_limited_intervention
-		icon = GFX_goal_generic_territory_or_war
+		icon = GFX_focus_PER_communist_afghanistan_intervention
 		prerequisite = { focus = USA_continue_the_new_deal focus = USA_reestablish_the_gold_standard }
 		mutually_exclusive = { focus = USA_neutrality_act }
 		continue_if_invalid = yes
@@ -2103,7 +2103,7 @@ mutually_exclusive = {
 
 	focus = {
 		id = USA_war_propaganda
-		icon = GFX_goal_generic_propaganda
+		icon = GFX_focus_ARG_anti_american_propaganda
 		prerequisite = { focus = USA_limited_intervention }
 		available = {
 			has_government = democratic
@@ -2432,7 +2432,7 @@ mutually_exclusive = {
 	}
 focus = {
 		id = USA_us_war_economy
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_focus_generic_reorient_production
 		x = 1
 		y = 2
 		prerequisite = { focus = USA_office_of_strategic_services focus = USA_magic   }
@@ -2592,7 +2592,7 @@ focus = {
 
 	focus = {
 		id = USA_neutrality_act
-		icon = GFX_goal_generic_neutrality_focus
+		icon = GFX_focus_SWI_neutrality_on_the_move
 		x = 4
 		y = 1
 		prerequisite = { focus = USA_continue_the_new_deal focus = USA_reestablish_the_gold_standard }
@@ -3775,7 +3775,7 @@ focus = {
 	}
 	focus = {
 		id = USA_institute_of_american_sciences
-		icon = GFX_focus_research
+		icon = GFX_focus_SWE_education_reform
 		x = 0
 		y = 6
 		prerequisite = { focus = USA_income_tax_reform }
@@ -3810,12 +3810,12 @@ focus = {
 
 	focus = {
 		id = USA_america_first
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_ARG_the_american_push
 		x = 7
 		y = 1
 		prerequisite = { focus = USA_reestablish_the_gold_standard }
 		relative_position_id = USA_reestablish_the_gold_standard
-		cost = 10
+		cost = 2.5
 
 		ai_will_do = {
 			factor = 1
@@ -3867,7 +3867,7 @@ focus = {
 	}
 	focus = {
 		id = USA_extend_the_chinese_exclusion_acts
-		icon = GFX_goal_generic_forceful_treaty
+		icon = GFX_focus_generic_china1
 		x = 0
 		y = 1
 		prerequisite = { focus = USA_america_first }
@@ -3993,7 +3993,7 @@ focus = {
 		y = 1
 		prerequisite = { focus = USA_america_first }
 		relative_position_id = USA_america_first
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4040,7 +4040,7 @@ focus = {
 		y = 1
 		prerequisite = { focus = USA_ally_with_the_silver_shirts }
 		relative_position_id = USA_ally_with_the_silver_shirts
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4069,7 +4069,7 @@ focus = {
 		y = 2
 		prerequisite = { focus = USA_national_prosperity_program }
 		relative_position_id = USA_ally_with_the_silver_shirts
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4101,7 +4101,7 @@ focus = {
 		y = 2
 		prerequisite = { focus = USA_national_prosperity_program }
 		relative_position_id = USA_ally_with_the_silver_shirts
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4131,7 +4131,7 @@ focus = {
 		prerequisite = { focus = USA_privatize_the_TVA }
 		prerequisite = { focus = USA_de_regulate_the_banking_sector }
 		relative_position_id = USA_ally_with_the_silver_shirts
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4164,7 +4164,7 @@ focus = {
 		y = 1
 		prerequisite = { focus = USA_ally_with_the_silver_shirts }
 		relative_position_id = USA_ally_with_the_silver_shirts
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4194,7 +4194,7 @@ focus = {
 		y = 1
 		prerequisite = { focus = USA_invite_foreign_support }
 		relative_position_id = USA_invite_foreign_support
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4225,7 +4225,7 @@ focus = {
 		y = 2
 		prerequisite = { focus = USA_send_lindbergh_to_germany }
 		relative_position_id = USA_invite_foreign_support
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4259,7 +4259,7 @@ focus = {
 		y = 2
 		prerequisite = { focus = USA_send_lindbergh_to_germany }
 		relative_position_id = USA_invite_foreign_support
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4290,7 +4290,7 @@ focus = {
 		prerequisite = { focus = USA_work_with_the_bund }
 		prerequisite = { focus = USA_national_employment_strategy }
 		relative_position_id = USA_invite_foreign_support
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4333,7 +4333,7 @@ focus = {
 		y = 1
 		prerequisite = { focus = USA_america_first }
 		relative_position_id = USA_america_first
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4364,12 +4364,12 @@ focus = {
 	}
 	focus = {
 		id = USA_seize_cuba
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_focus_CHL_liberate_the_caribbean
 		x = -1
 		y = 1
 		prerequisite = { focus = USA_war_powers_act }
 		relative_position_id = USA_war_powers_act
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4429,13 +4429,13 @@ focus = {
 	}
 	focus = {
 		id = USA_manifest_destiny
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_PER_desert_training
 		prerequisite = { focus = USA_war_powers_act }
 		available = { }
 		x = 1
 		y = 1
 		relative_position_id = USA_war_powers_act
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -4445,12 +4445,12 @@ focus = {
 	}
 	focus = {
 		id = USA_eliminate_the_southern_threat
-		icon = GFX_goal_generic_military_sphere
+		icon = GFX_focus_CHL_claim_the_mexican_throne
 		x = -1
 		y = 2
 		prerequisite = { focus = USA_seize_cuba }
 		relative_position_id = USA_war_powers_act
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4482,12 +4482,12 @@ focus = {
 	}
 	focus = {
 		id = USA_the_canadian_corridor
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_focus_CAN_rifle_association
 		x = 1
 		y = 2
 		prerequisite = { focus = USA_manifest_destiny }
 		relative_position_id = USA_war_powers_act
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4539,13 +4539,13 @@ focus = {
 	}
 	focus = {
 		id = USA_north_american_dominion
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_BRA_north_and_south_america
 		x = 0
 		y = 3
 		prerequisite = { focus = USA_the_canadian_corridor }
 		prerequisite = { focus = USA_eliminate_the_southern_threat }
 		relative_position_id = USA_war_powers_act
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4671,7 +4671,7 @@ focus = {
 		y = 4
 		prerequisite = { focus = USA_north_american_dominion  }
 		relative_position_id = USA_war_powers_act
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4810,7 +4810,7 @@ focus = {
 		y = 5
 		prerequisite = { focus = USA_strategic_interests }
 		relative_position_id = USA_war_powers_act
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4917,7 +4917,7 @@ focus = {
 		y = 4
 		prerequisite = { focus = USA_north_american_dominion }
 		relative_position_id = USA_war_powers_act
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -5061,7 +5061,7 @@ focus = {
 		y = 5
 		prerequisite = { focus = USA_pacific_pacification }
 		relative_position_id = USA_war_powers_act
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -5199,7 +5199,7 @@ focus = {
 		prerequisite = { focus = USA_secure_asia }
 		prerequisite = { focus = USA_protect_south_america }
 		relative_position_id = USA_war_powers_act
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -5327,7 +5327,7 @@ focus = {
 			}
 		}
 		
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -5358,7 +5358,7 @@ focus = {
 		y = 1
 		prerequisite = { focus = USA_war_plans_division }
 		relative_position_id = USA_war_plans_division
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -5387,7 +5387,7 @@ focus = {
 		y = 1
 		prerequisite = { focus = USA_intervention_in_the_americas }
 		relative_position_id = USA_intervention_in_the_americas
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -5416,7 +5416,7 @@ focus = {
 		y = 1
 		prerequisite = { focus = USA_intervention_in_the_americas }
 		relative_position_id = USA_intervention_in_the_americas
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
