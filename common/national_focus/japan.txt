@@ -2262,7 +2262,7 @@
 		y = 1
 		relative_position_id = JAP_purge_the_kodoha_faction
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -2287,7 +2287,7 @@
 		y = 1
 		relative_position_id = JAP_liaison_conference
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -2322,7 +2322,7 @@
 		y = 1
 		relative_position_id = JAP_greater_east_asian_co_prosperity_sphere
 
-		cost = 10
+		cost = 5
 
 		available = {
 			is_puppet = no
@@ -2476,7 +2476,7 @@
 		y = 1
 		relative_position_id = JAP_secure_china
 
-		cost = 10
+		cost = 7.5
 
 		ai_will_do = {
 			factor = 4
@@ -2557,7 +2557,7 @@
 
 		completion_reward = {
 			613 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -2565,7 +2565,7 @@
 				}
 			}
 			613 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -2573,7 +2573,15 @@
 				}
 			}
 			620 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			605 = {
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -2701,7 +2709,7 @@
 		y = 1
 		relative_position_id = JAP_non_aggression_pact_with_the_soviet_union
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -2730,7 +2738,6 @@
 						}
 					}
 				}
-				add_war_support = -0.05
 			}
 			add_tech_bonus = {
 				name = JAP_bypass_the_philippines
@@ -2755,7 +2762,7 @@
 			focus = JAP_non_aggression_pact_with_the_soviet_union
 		}
 		relative_position_id = JAP_non_aggression_pact_with_the_soviet_union
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -2803,7 +2810,7 @@
 		will_lead_to_war_with = MAL
 		will_lead_to_war_with = INS
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -3205,7 +3212,7 @@
 			focus = JAP_strike_on_the_southern_resource_area
 		}
 		relative_position_id = JAP_strike_on_the_southern_resource_area
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -3248,7 +3255,7 @@
 			focus = JAP_strike_on_the_southern_resource_area
 		}
 		relative_position_id = JAP_strike_on_the_southern_resource_area
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -3376,7 +3383,7 @@
 			focus = JAP_strike_on_the_southern_resource_area
 		}
 		relative_position_id = JAP_strike_on_the_southern_resource_area
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -3472,7 +3479,7 @@
 		y = 1
 		relative_position_id = JAP_strike_on_the_southern_resource_area
 
-		cost = 10
+		cost = 7.5
 
 		ai_will_do = {
 			factor = 10
@@ -3587,7 +3594,7 @@
 		y = 1
 		relative_position_id = JAP_liaison_conference
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -3898,7 +3905,7 @@
 		y = 6
 		relative_position_id = JAP_guide_the_zaibatsus
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -4276,7 +4283,7 @@
 		y = 1
 		relative_position_id = JAP_national_defense_state
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 4
@@ -4297,7 +4304,7 @@
 		y = 1
 		relative_position_id = JAP_national_defense_state
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4337,7 +4344,7 @@
 		y = 1
 		relative_position_id = JAP_spiritual_mobilization
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -4790,7 +4797,7 @@
 		y = 1
 		relative_position_id = JAP_develop_vladivostok
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -4847,7 +4854,7 @@
 		y = 1
 		relative_position_id = JAP_develop_the_oil_fields
 
-		cost = 10
+		cost = 7.5
 
 		ai_will_do = {
 			factor = 3
@@ -5107,8 +5114,8 @@
 			MAN = {
 				add_doctrine_cost_reduction = {
 					name = JAP_build_up_the_manchurian_army
-					cost_reduction = 0.5
-					uses = 1
+					cost_reduction = 1
+					uses = 2
 					category = land_doctrine
 				}
 				add_autonomy_ratio = {
@@ -5164,8 +5171,8 @@
 			MAN = {
 				add_tech_bonus = {
 					name = air_plane_models
-					bonus = 1
-					uses = 1
+					bonus = 0.75
+					uses = 2
 					category = light_air
 					category = medium_air
 					category = heavy_air
@@ -5199,7 +5206,7 @@
 		y = 1
 		relative_position_id = JAP_further_preparations_for_war
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -5240,7 +5247,7 @@
 		y = 1
 		relative_position_id = JAP_further_preparations_for_war
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -5272,7 +5279,7 @@
 		x = 1
 		y = 1
 		relative_position_id = JAP_create_a_manchurian_imperial_air_force
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 3
 		}
@@ -5292,7 +5299,7 @@
 		y = 1
 		relative_position_id = JAP_preemptive_war
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -5365,7 +5372,7 @@
 		y = 1
 		relative_position_id = JAP_preemptive_war
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -5430,7 +5437,7 @@
 		}
 
 		available = {
-			GER = { has_opinion = { target = JAP value > 69 } } 
+			GER = { has_opinion = { target = JAP value > 49 } } 
 		}
 
 
@@ -5438,7 +5445,7 @@
 			add_tech_bonus = {
 				name = JAP_german_rocketry
 				bonus = 1
-				uses = 1
+				uses = 2
 				category = rocketry
 			}
 			add_ideas = JAP_german_rocketry
@@ -7925,7 +7932,7 @@
 		y = 1
 		relative_position_id = JAP_the_manchurian_project
 
-		cost = 8
+		cost = 2.5
 
 		ai_will_do = {
 			factor = 1
@@ -8089,7 +8096,7 @@
 		y = 2
 		relative_position_id = JAP_resource_whore_manchu
 
-		cost = 8
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -8134,7 +8141,7 @@
 		y = 3
 		relative_position_id = JAP_resource_whore_manchu
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -8164,7 +8171,7 @@
 		y = 3
 		relative_position_id = JAP_resource_whore_manchu
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -8335,7 +8342,7 @@
 		y = 2
 		relative_position_id = JAP_factory_whore
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -8370,7 +8377,7 @@
 		y = 0
 		relative_position_id = JAP_the_manchurian_project
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -8471,7 +8478,7 @@
 		y = 1
 		relative_position_id = JAP_pack_guns
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -8549,8 +8556,8 @@
 				}
 				add_tech_bonus = {
 					name = armor_bonus
-					bonus = 1
-					uses = 1
+					bonus = 0.75
+					uses = 2
 					category = armor
 				}
 			}
@@ -8575,7 +8582,7 @@
 		y = 1
 		relative_position_id = JAP_diversified_tank_roles
 
-		cost = 10
+		cost = 7.5
 
 		ai_will_do = {
 			factor = 1
@@ -8603,7 +8610,7 @@
 				add_tech_bonus = {
 					name = JAP_supremacy_of_technology
 					bonus = 1
-					uses = 1
+					uses = 2
 					technology = amphibious_mechanized_infantry
 					technology = amphibious_mechanized_infantry_2
 				}
@@ -8619,7 +8626,7 @@
 		x = -2
 		y = 2
 		relative_position_id = JAP_supremacy_of_technology
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -8650,7 +8657,7 @@
 		x = -1
 		y = 1
 		relative_position_id = JAP_supremacy_of_technology
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -8676,7 +8683,7 @@
 		x = 0
 		y = 2
 		relative_position_id = JAP_supremacy_of_technology
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -8696,7 +8703,7 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = JAP_the_ultimate_tank
-				bonus = 1
+				bonus = 2
 				uses = 1
 				technology = super_heavy_tank
 			}
@@ -8780,22 +8787,6 @@
 				uses = 2
 				category = military_police_tech
 			}
-			
-			if = {
-				limit = {
-					NOT = {
-						has_idea = r56i_laws_security_balanced
-						has_idea = r56i_laws_security_rights
-						has_idea = r56i_laws_security_order
-					}
-				}
-				custom_effect_tooltip = EFFECT_CHANGE_LAW_r56i_laws_social
-				show_ideas_tooltip = r56i_laws_security_order
-				hidden_effect = {
-					add_ideas = r56i_laws_security_order
-				}
-				
-			}
 		}
 		search_filters = {  FOCUS_FILTER_RESEARCH  }
 	}
@@ -8871,7 +8862,7 @@
 		y = 1
 		relative_position_id = JAP_expand_the_teishin_shudan
 
-		cost = 10
+		cost = 7.5
 
 		ai_will_do = {
 			factor = 1
@@ -8922,7 +8913,7 @@
 		y = 1
 		relative_position_id = JAP_supremacy_of_will
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -8946,7 +8937,7 @@
 		y = 2
 		relative_position_id = JAP_supremacy_of_will
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -8972,7 +8963,7 @@
 		y = 1
 		relative_position_id = JAP_supremacy_of_technology
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -9060,7 +9051,7 @@
 		y = 1
 		relative_position_id = JAP_army_expansion_law
 
-		cost = 10
+		cost = 2.5
 
 		ai_will_do = {
 			factor = 1
@@ -9159,7 +9150,7 @@
 		y = 1
 		relative_position_id = JAP_protect_our_islands_skies
 
-		cost = 5
+		cost = 2.5
 
 		ai_will_do = {
 			factor = 1
@@ -9187,10 +9178,10 @@
 		icon = GFX_focus_generic_coastal_fort
 		prerequisite = { focus = JAP_protect_our_islands_skies }
 		x = 0
-		y = 3
+		y = 2
 		relative_position_id = JAP_protect_our_islands_skies
 
-		cost = 10
+		cost = 2.5
 
 		ai_will_do = {
 			factor = 1
@@ -9260,6 +9251,12 @@
 				bonus = 1
 				uses = 1
 				category = light_air
+			}
+			add_tech_bonus = {
+				name = air_plane_models
+				bonus = 1
+				uses = 1
+				category = medium_air
 			}
 			add_tech_bonus = {
 				name = air_plane_models
@@ -9361,8 +9358,9 @@
 	focus = {
 		id = JAP_the_zero
 		icon = GFX_focus_jap_zero
-		prerequisite = { focus = JAP_first_air_fleet }
-		prerequisite = { focus = JAP_agility_focus }
+		prerequisite = 
+		{ focus = JAP_first_air_fleet 
+		focus = JAP_agility_focus }
 		x = 1
 		y = 1
 		relative_position_id = JAP_agility_focus
@@ -9432,8 +9430,8 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = air_plane_models
-				bonus = 1
-				uses = 1
+				bonus = 0.75
+				uses = 2
 				category = air_equipment
 			}
 			
@@ -9464,6 +9462,12 @@
 				bonus = 1
 				uses = 1
 				category = heavy_air
+			}
+			add_tech_bonus = {
+				name = air_plane_models
+				bonus = 1
+				uses = 1
+				category = medium_air
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -9496,6 +9500,18 @@
 
 		completion_reward = {
 			remove_ideas = JAP_duplicate_research_efforts
+			add_tech_bonus = {
+				name = air_plane_models
+				bonus = 1
+				uses = 1
+				category = light_air
+			}
+			add_tech_bonus = {
+				name = air_plane_models
+				bonus = 1
+				uses = 1
+				category = medium_air
+			}
 		}
 	}
 	focus = {
@@ -9515,6 +9531,9 @@
 
 		completion_reward = {
 			mio:JAP_mitsubishi_organization = {
+				add_mio_funds = 2500
+			}
+			mio:JAP_aichi_organization = {
 				add_mio_funds = 2500
 			}
 			add_ideas = JAP_airframe_supplies_improvements
@@ -9549,7 +9568,7 @@
 	focus = {
 		id = JAP_new_naval_estimates
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 14
+		x = 13
 		y = 0
 		relative_position_id = JAP_army_expansion_law
 
@@ -9807,7 +9826,7 @@
 		y = 1
 		relative_position_id = JAP_new_naval_estimates
 
-		cost = 10
+		cost = 7.5
 
 		ai_will_do = {
 			factor = 1
@@ -9826,7 +9845,7 @@
 			add_tech_bonus = {
 				name = JAP_supremacy_of_the_battlefleet
 				bonus = 1
-				uses = 1
+				uses = 2
 				category = cv_tech
 			}
 		}
@@ -9841,7 +9860,7 @@
 		y = 2
 		relative_position_id = JAP_new_naval_estimates
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -9885,7 +9904,7 @@
 		y = 2
 		relative_position_id = JAP_carrier_warfare_experiments
 
-		cost = 10
+		cost = 7.5
 
 		ai_will_do = {
 			factor = 1
@@ -9963,7 +9982,7 @@
 		y = 1
 		relative_position_id = JAP_new_naval_estimates
 
-		cost = 10
+		cost = 7.5
 
 		ai_will_do = {
 			factor = 1
@@ -9991,15 +10010,9 @@
 					has_dlc = "Man the Guns"
 				}
 				add_tech_bonus = {
-					name = industrial_bonus
-					bonus = 1
-					uses = 1
-					category = naval_armor_tech
-				}
-				add_tech_bonus = {
 					name = SPR_navy_modernization
-					bonus = 1
-					uses = 2
+					bonus = 0.75
+					uses = 3
 					technology = fire_control_methods_1
 					technology = fire_control_methods_2
 					technology = fire_control_methods_3
@@ -10020,7 +10033,7 @@
 		y = 2
 		relative_position_id = JAP_supremacy_of_the_battlefleet
 
-		cost = 10
+		cost = 7.5
 
 		ai_will_do = {
 			factor = 1
@@ -10104,7 +10117,7 @@
 						}
 						name = "Musashi"
 						requested_factories = 1
-						progress = 0.5
+						progress = 0.75
 						amount = 1
 					}
 				}
@@ -10140,7 +10153,7 @@
 		y = 1
 		relative_position_id = JAP_the_ultimate_battleship
 
-		cost = 8
+		cost = 10
 
 		ai_will_do = {
 			factor = 4
@@ -10199,7 +10212,7 @@
 			focus = JAP_submarine_modernization
 		}		
 
-		cost = 10
+		cost = 7.5
 
 		ai_will_do = {
 			factor = 1
@@ -10208,15 +10221,15 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = JAP_cruiser_modernization
-				bonus = 3
-				uses = 1
+				bonus = 1.5
+				uses = 2
 				category = cl_tech
 
 			}
 			add_tech_bonus = {
 				name = JAP_cruiser_modernization
-				bonus = 3
-				uses = 1
+				bonus = 1.5
+				uses = 2
 				category = ca_tech
 			}
 			if = {
@@ -10256,7 +10269,7 @@
 		y = 1
 		relative_position_id = JAP_new_naval_estimates
 
-		cost = 10
+		cost = 7.5
 
 		ai_will_do = {
 			factor = 1
@@ -10298,7 +10311,7 @@
 		y = 2
 		relative_position_id = JAP_submarine_modernization
 
-		cost = 10
+		cost = 7.5
 
 		ai_will_do = {
 			factor = 1
@@ -10347,7 +10360,7 @@
 		x = -1
 		y = 1
 		relative_position_id = JAP_cruiser_modernization
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -10444,7 +10457,7 @@
 		y = 1
 		relative_position_id = JAP_cruiser_modernization
 
-		cost = 10
+		cost = 7.5
 
 		ai_will_do = {
 			factor = 4
@@ -10476,7 +10489,7 @@
 		y = 1
 		relative_position_id = JAP_long_lance_torpedoes
 
-		cost = 10
+		cost = 7.5
 
 		ai_will_do = {
 			factor = 2
