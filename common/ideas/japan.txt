@@ -3325,8 +3325,8 @@ ideas = {
 			} 
 		}
 
-		JAP_r56_nanshin_ron_player = { #player ver
-			name = JAP_r56_nanshin_ron
+		JAP_nanshin_ron_player = { #player ver
+			name = JAP_nanshin_ron
 
 			allowed = {
 				always = no
@@ -3364,8 +3364,8 @@ ideas = {
 			}
 		}
 		
-		JAP_r56_nanshin_ron_ai = {
-			name = JAP_r56_nanshin_ron
+		JAP_nanshin_ron_ai = {
+			name = JAP_nanshin_ron
 
 			allowed = {
 				always = no
@@ -3447,7 +3447,7 @@ ideas = {
 			}
 		}
 
-		jap_r56_hokushin_ron = {
+		jap_hokushin_ron = {
 			allowed = {
 				always = no
 			}

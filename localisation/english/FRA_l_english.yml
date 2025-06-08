@@ -737,7 +737,7 @@
  FRA_pact_with_spain:0 "Pact with Spain"
  FRA_pact_with_spain_desc:0 "The Spanish Nationalists are natural allies. Together we can unite Western Europe against the [GER.GetAdjective] and communist threat."
  FRA_anti_communism_r56:0 "Anti-Communism"
- FRA_anti_communism_r56_desc:0 "Communism is the enemy of Western civilization. We should take action to liberate the world's people from Communist oppression."
+ FRA_anti_communism_desc:0 "Communism is the enemy of Western civilization. We should take action to liberate the world's people from Communist oppression."
  FRA_return_to_dalmatia:0 "Return to Dalmatia"
  FRA_return_to_dalmatia_desc:0 "The Illyrian Provinces were an integral part of Napoleon's France. We should take them back under our protection."
  FRA_second_march_on_moscow_desc:0 "Russia was Napoleon I's greatest failure. We shall not fail a second time."

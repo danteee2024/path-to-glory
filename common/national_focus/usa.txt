@@ -1289,7 +1289,7 @@ focus_tree = {
 				days > 250
 			}
 			custom_trigger_tooltip = {
-				tooltip = r56_USA_legislation_drafted_days_tt
+				tooltip = USA_legislation_drafted_days_tt
 				has_country_flag = {
 					flag = USA_new_legislation_drafed_flag
 					days > 250
@@ -1409,7 +1409,7 @@ focus_tree = {
 				days > 250
 			}
 			custom_trigger_tooltip = {
-				tooltip = r56_USA_legislation_drafted_days_tt
+				tooltip = USA_legislation_drafted_days_tt
 				has_country_flag = {
 					flag = USA_new_legislation_drafed_flag
 					days > 250
@@ -1568,7 +1568,7 @@ mutually_exclusive = {
 				days > 250
 			}
 			custom_trigger_tooltip = {
-				tooltip = r56_USA_legislation_drafted_days_tt
+				tooltip = USA_legislation_drafted_days_tt
 				has_country_flag = {
 					flag = USA_new_legislation_drafed_flag
 					days > 250
@@ -1908,7 +1908,7 @@ mutually_exclusive = {
 				days > 250
 			}
 			custom_trigger_tooltip = {
-				tooltip = r56_USA_legislation_drafted_days_tt
+				tooltip = USA_legislation_drafted_days_tt
 				has_country_flag = {
 					flag = USA_new_legislation_drafed_flag
 					days > 250

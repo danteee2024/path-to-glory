@@ -2596,13 +2596,13 @@ focus = {
 			create_country_leader = {
 				name = "François de la Rocque"
 				desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
-				picture = "gfx/leaders/FRA/r56_portrait_FRA_Francois_de_la_Rocque.dds"
+				picture = "gfx/leaders/FRA/portrait_FRA_Francois_de_la_Rocque.dds"
 				expire = "1965.1.1"
 				ideology = conservatism_n
 				traits = {
 					dislikes_germany
-					r56_trait_opposed_to_communism
-					r56_trait_opposed_to_fascism
+					trait_opposed_to_communism
+					trait_opposed_to_fascism
 					retired_officer
 				}
 			}			
@@ -3103,7 +3103,7 @@ focus = {
 		}
 		available = {
 			is_subject = no
-			r56_script_i_am_sane = yes
+			script_i_am_sane = yes
 			has_army_manpower = {
 				size > 149999
 			}
@@ -3335,7 +3335,7 @@ focus = {
 			   }
 			   } 
 			OR = {
-			r56_script_i_am_sane = yes
+			script_i_am_sane = yes
 			is_subject = no
 	    }
 	}
@@ -3370,7 +3370,7 @@ focus = {
 		}
 		relative_position_id = FRA_claim_rhineland
 		available = {
-			r56_script_i_am_sane = yes
+			script_i_am_sane = yes
 			is_subject = no
 			ENG = {
 				exists = yes
@@ -3588,7 +3588,7 @@ focus = {
 						ideology = absolute_monarchism
 						traits = {
 							disgraced_monarch
-							r56_trait_opposed_to_communism
+							trait_opposed_to_communism
 						}
 					}
 				}
@@ -3601,7 +3601,7 @@ focus = {
 						ideology = absolute_monarchism
 						traits = {
 							the_legitimist
-							r56_trait_opposed_to_communism
+							trait_opposed_to_communism
 						}
 					}
 				}
@@ -3614,11 +3614,11 @@ focus = {
 				create_country_leader = {
 					name = "Jean III"
 					desc = "POLITICS_JUAN_III_DESC"
-					picture = "gfx/leaders/SPR/r56_portrait_SPR_Juan_III.dds"
+					picture = "gfx/leaders/SPR/portrait_SPR_Juan_III.dds"
 					expire = "1965.1.1"
 					ideology = absolute_monarchism
 					traits = {
-						r56_trait_opposed_to_communism
+						trait_opposed_to_communism
 					}
 				}
 				set_politics = { ruling_party = neutrality }
@@ -3693,7 +3693,7 @@ focus = {
 					ideology = absolute_monarchism
 					traits = {
 						duke_of_orleans
-						r56_trait_opposed_to_communism
+						trait_opposed_to_communism
 					}
 				}
 			}
@@ -3706,7 +3706,7 @@ focus = {
 					ideology = absolute_monarchism
 					traits = {
 						count_of_paris
-						r56_trait_opposed_to_communism
+						trait_opposed_to_communism
 
 					}
 				}
@@ -3784,11 +3784,11 @@ focus = {
 			create_country_leader = {
 				name = "Napoléon VI"
 				desc = "POLITICS_NAPOLEON_VI_DESC"
-				picture = "r56_portrait_France_Napoleon_VI.dds"
+				picture = "portrait_France_Napoleon_VI.dds"
 				expire = "1965.1.1"
 				ideology = absolute_monarchism
 				traits = {
-					r56_trait_opposed_to_communism
+					trait_opposed_to_communism
 					fierce_patriot
 				}
 			}
@@ -4977,7 +4977,7 @@ focus = {
 		relative_position_id = FRA_the_new_continental_system
 		
 		available = {
-			r56_script_i_am_sane = yes
+			script_i_am_sane = yes
 			is_subject = no
 			any_state = {
 				OR = {
@@ -5062,7 +5062,7 @@ focus = {
 		relative_position_id = FRA_our_natural_borders
 		
 		available = {
-			r56_script_i_am_sane = yes
+			script_i_am_sane = yes
 			is_subject = no
 			has_army_manpower = { size > 800000 }
 			any_state = {
@@ -5152,7 +5152,7 @@ focus = {
 		relative_position_id = FRA_our_natural_borders
 
 		available = {
-			r56_script_i_am_sane = yes
+			script_i_am_sane = yes
 			is_subject = no
 			has_army_manpower = { size > 650000 }
 			if = {
@@ -5246,7 +5246,7 @@ focus = {
 		relative_position_id = FRA_our_natural_borders
 		
 		available = {
-			r56_script_i_am_sane = yes
+			script_i_am_sane = yes
 			is_subject = no
 			has_global_flag = scw_over
 			has_army_manpower = { size > 400000 }
@@ -5318,7 +5318,7 @@ focus = {
 		relative_position_id = FRA_our_natural_borders
 		
 		available = {
-			r56_script_i_am_sane = yes
+			script_i_am_sane = yes
 			is_subject = no
 			OR = {
 				GER = {
@@ -5483,7 +5483,7 @@ focus = {
 		}
 		will_lead_to_war_with = SOV
 		available = {
-			r56_script_i_am_sane = yes
+			script_i_am_sane = yes
 			is_subject = no
 			NOT = {
 				SOV = {
@@ -5525,7 +5525,7 @@ focus = {
 		relative_position_id = FRA_destroy_albion
 		cost = 5
 		available = {
-			r56_script_i_am_sane = yes
+			script_i_am_sane = yes
 			is_subject = no
 		}
 
@@ -5598,7 +5598,7 @@ focus = {
 		}
 
 		available = {
-			r56_script_i_am_sane = yes
+			script_i_am_sane = yes
 			is_subject = no
 			any_state = {
 				custom_trigger_tooltip = {
@@ -5683,7 +5683,7 @@ focus = {
 			factor = 1
 		}
 		available = {
-			r56_script_i_am_sane = yes
+			script_i_am_sane = yes
 			is_subject = no
 		}
 		will_lead_to_war_with = SWI
@@ -5908,7 +5908,7 @@ focus = {
 		available = {
 			is_subject = no
 			NOT = { has_idea = FRA_disjointed_government }
-			r56_script_i_am_sane = yes
+			script_i_am_sane = yes
 			any_country = {
 				OR = {
 					has_government = communism

@@ -38,14 +38,14 @@
  POL_engineers_special_forces_training_tt:0 "§HInfantry§!:\n    $STAT_COMMON_MAX_ORG$§R-1§!\n    $STAT_ARMY_DEFAULT_MORALE$§R-5%§!\n§HSpecial Forces§!:\n    $STAT_ADJUSTER_DEFENCE$§G+10%§!\n$MODIFIER_MAX_DIG_IN$: §G+5§!\n$MODIFIER_SPECIAL_FORCES_CAP$: §G+2%§!\n"
 
 
-#r56_modifiers_l_english
+#modifiers_l_english
  naval_armor_tech_research:0 "£research_speed_naval_texticon  Naval Armor Research Speed"
  naval_gunnery_tech_research:0 "£research_speed_battery_texticon  Naval Gunnery Research Speed"
  modifier_production_speed_steel_mill_factor:0 "£construction_speed_steelmill_texticon  §YSteel Mill§! construction speed"
  modifier_production_speed_aluminum_mill_factor:0 "£construction_speed_aluminiummill_texticon  §YAluminium Mill§! construction speed"
  modifier_production_speed_rubber_refinery_factor:0 "£construction_speed_rubberplant_texticon  §YRubber Refinery§! construction speed"
  modifier_state_production_speed_nuclear_reactor_factor:0 "£nuclear_reactor_texticon  Local §YNuclear Reactor§! Construction Speed" 
- cat_r56_guerilla_warfare_cost_factor:0 "£army_doctrine_cost_texticon  Asymetrical Warfare Doctrine Cost"
+ cat_guerilla_warfare_cost_factor:0 "£army_doctrine_cost_texticon  Asymetrical Warfare Doctrine Cost"
  
 #r56e_technology_l_english
  TECH_BOOSTS_STEEL_MILL_TOOLTIP:0 "Modify §LSteel Mill§! resource output by: £steel_texticon  §B+2 Steel§!."

@@ -360,7 +360,7 @@ if = {
 	create_operative_leader = {
 		name = "Paul Paillole"
 		#random portrait
-		gfx = GFX_r56_portrait_FRA_generic_operative_m_1
+		gfx = GFX_portrait_FRA_generic_operative_m_1
 		traits = { operative_master_interrogator }
 		bypass_recruitment = no
 		available_to_spy_master = no
@@ -378,7 +378,7 @@ if = {
 
 #create_corps_commander = { #Add to FFL after liberation of north africa
 #	name = "Jean Touzet du Vigier"
-#	picture = "r56_portrait_FRA_Jean_Touzet_du_Vigier.dds"
+#	picture = "portrait_FRA_Jean_Touzet_du_Vigier.dds"
 #	traits = { }
 #	skill = 2
 #}
