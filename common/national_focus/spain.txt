@@ -3003,7 +3003,6 @@ focus_tree = {
 		}
 		prerequisite = { focus = SPA_join_the_axis }
 		prerequisite = { focus = SPA_national_recovery }
-		mutually_exclusive = { focus = SPA_autarky }
 		
 		icon = GFX_goal_generic_construction
 		x = 1
@@ -3295,7 +3294,7 @@ focus_tree = {
 		}
 		bypass = {
 		}
-		prerequisite = { focus = SPA_support_the_war_industry }
+		prerequisite = { focus = SPA_expand_the_war_industry }
 		
 		icon = GFX_goal_generic_construct_military
 		x = 0
@@ -3332,6 +3331,14 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		complete_tooltip = {
+				if = {
+				limit = {
+					NOT = {
+						has_idea = tot_economic_mobilisation
+					}
+				}
+				add_ideas = tot_economic_mobilisation
+			}
 			every_state = {
 				limit	= {	has_state_flag = SPA_expand_the_war_industry_2mil }
 				add_extra_state_shared_building_slots = 2
@@ -3344,6 +3351,14 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_idea = tot_economic_mobilisation
+					}
+				}
+				add_ideas = tot_economic_mobilisation
+			}
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -3393,11 +3408,15 @@ focus_tree = {
 		x = 6
 		y = 1
 		relative_position_id = SPA_the_national_syndicalist_state
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		complete_tooltip = {
+			swap_ideas = {
+				remove_idea = SPA_recovering_from_civil_war
+				add_idea = SPA_recovering_from_civil_war_2
+			}
 			every_state = {
 				limit	= {	has_state_flag = SPA_national_recovery_2civ }
 				add_extra_state_shared_building_slots = 2
@@ -3409,6 +3428,13 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			
+			swap_ideas = {
+				remove_idea = SPA_recovering_from_civil_war
+				add_idea = SPA_recovering_from_civil_war_2
+			}
+				add_political_power = 250
+			add_cic = 15000
 			add_timed_idea = { idea = SPA_national_recovery_1 days = 1825 }
 			random_owned_controlled_state = {
 				limit = {
@@ -3436,7 +3462,6 @@ focus_tree = {
 		bypass = {
 		}
 		prerequisite = { focus = SPA_national_recovery }
-		mutually_exclusive = { focus = SPA_fascist_economic_aid }
 		
 		icon = GFX_goal_generic_oil_refinery
 		x = 1
@@ -3451,11 +3476,44 @@ focus_tree = {
 				limit = {
 					NOT = { has_idea = closed_economy }
 				}
-				add_ideas = closed_economy
+				add_ideas = limited_exports
 			}
 			swap_ideas = {
 				remove_idea = SPA_national_recovery_1
 				add_idea = SPA_national_recovery_2
+			}
+			
+			if = {
+				limit = {
+					NOT = {
+						has_idea = SPA_recovering_from_civil_war
+						has_idea = SPA_recovering_from_civil_war_2
+					}
+				}
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = SPA_recovering_from_civil_war
+						add_idea = SPA_recovering_from_civil_war_2
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_idea = SPA_recovering_from_civil_war
+				}
+				swap_ideas = {
+					remove_idea = SPA_recovering_from_civil_war
+					add_idea = SPA_recovering_from_civil_war_2
+				}
+			}
+			if = {
+				limit = {
+					has_idea = SPA_recovering_from_civil_war_2
+				}
+				swap_ideas = {
+					remove_idea = SPA_recovering_from_civil_war_2
+					add_idea = SPA_recovering_from_civil_war_3
+				}
 			}
 			add_tech_bonus = {
 				name = HOL_make_use_of_our_riches
@@ -3533,6 +3591,16 @@ focus_tree = {
 					add_idea = SPA_recovering_from_civil_war_3
 				}
 			}
+			if = {
+				limit = {
+					has_idea = SPA_recovering_from_civil_war_3
+				}
+				
+					remove_idea = SPA_recovering_from_civil_war_3
+					
+				
+			}
+			
 		}
 	}
 
@@ -3592,7 +3660,7 @@ focus_tree = {
 		}
 		bypass = {
 		}
-		prerequisite = { focus = SPA_expand_the_axis_gold_trade }
+		prerequisite = { focus = SPA_expand_the_war_industry }
 		
 		icon = GFX_goal_generic_construct_civ_factory
 		x = 0
@@ -4405,6 +4473,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
+			add_stability = 0.10
 			if = {
 				limit = {
 					NOT = {

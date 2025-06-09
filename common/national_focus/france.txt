@@ -1117,7 +1117,7 @@ focus = {
 				}
 			}
 		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_OIL}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 	focus = {
 		id = FRA_tungsten_mines
@@ -1194,7 +1194,7 @@ focus = {
 				}
 			}
 		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_TUNGSTEN}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 	focus = {
 		id = FRA_france_undividable
@@ -2752,7 +2752,7 @@ focus = {
 				}
 			}
 		}
-		search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
+		search_filters = {  }
 	}
 
 	focus = {
@@ -4255,7 +4255,7 @@ focus = {
 			}
 			set_rule = { can_send_volunteers = yes }
 		}
-		search_filters = { FOCUS_FILTER_SPA_CIVIL_WAR FOCUS_FILTER_MANPOWER FOCUS_FILTER_MILITARY_EQUIPMENT }
+		search_filters = { FOCUS_FILTER_SPA_CIVIL_WAR FOCUS_FILTER_MANPOWER  }
 	}
 	focus = {
 		id = FRA_intervene_in_the_spanish_civil_war
@@ -4618,7 +4618,7 @@ focus = {
 				value = 50
 			}			
 		}
-		search_filters = { FOCUS_FILTER_ALLIANCE FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = {  FOCUS_FILTER_WAR_SUPPORT }
 	}
 	focus = {
 		id = FRA_ally_italy
@@ -4667,7 +4667,7 @@ focus = {
 				}
 			}
 		}
-		search_filters = { FOCUS_FILTER_ALLIANCE }
+		search_filters = {  }
 	}
 	focus = {
 		id = FRA_pact_with_spain
@@ -4717,7 +4717,7 @@ focus = {
 				}
 			}
 		}
-		search_filters = { FOCUS_FILTER_ALLIANCE }
+		search_filters = {  }
 	}
 	focus = {
 		id = FRA_anti_communism_r56
@@ -4823,7 +4823,7 @@ focus = {
 				#}
 			}
 		}
-		search_filters = { FOCUS_FILTER_ALLIANCE FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+		search_filters = {  FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 	}
 	###############################
 	###	Bonapartists Focuses	###
@@ -4963,7 +4963,7 @@ focus = {
 				remove_ideas = FRA_reforms_failed
 			}
 		}
-		search_filters = { FOCUS_FILTER_ALLIANCE FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = {  FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
 	}
 	focus = {
 		id = FRA_our_natural_borders
@@ -8754,7 +8754,7 @@ focus = {
 				add_political_power = 50
 			}
 		}
-		search_filters = { FOCUS_FILTER_MILITARY_EQUIPMENT }
+		search_filters = {  }
 	}
 	
 	focus = {
