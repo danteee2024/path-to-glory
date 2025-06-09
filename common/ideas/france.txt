@@ -1714,8 +1714,8 @@ ideas = {
 			picture = generic_wall_line
 			
 			modifier = {
-				max_planning = 0.25
-				planning_speed = -0.25
+				max_planning = 0.15
+				planning_speed = -0.15
 			}
 		}
 
