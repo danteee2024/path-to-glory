@@ -113,7 +113,7 @@ focus_tree = {
 				}
 			}
 		}
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
@@ -168,7 +168,7 @@ focus_tree = {
 			}
 		}
 		relative_position_id = SPA_a_great_spain
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
@@ -219,7 +219,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SPA_negotiate_carlist_support
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_SPA_CIVIL_WAR}
@@ -243,7 +243,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SPA_the_army_of_africa
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_SPA_CIVIL_WAR}
@@ -417,7 +417,7 @@ focus_tree = {
 				}
 			}
 		}
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
@@ -473,7 +473,7 @@ focus_tree = {
 			}
 		}
 		relative_position_id = SPR_the_popular_front
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_SPA_CIVIL_WAR}
@@ -524,7 +524,7 @@ focus_tree = {
 			}
 		}
 		relative_position_id = SPR_the_popular_front
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_SPA_CIVIL_WAR}
@@ -563,7 +563,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SPR_secure_the_guardia_de_asalto
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_SPA_CIVIL_WAR}
@@ -591,7 +591,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SPR_train_the_union_youth
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_SPA_CIVIL_WAR}
@@ -615,7 +615,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SPR_enlarge_the_weapon_caches
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_SPA_CIVIL_WAR}
@@ -644,7 +644,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SPR_distribute_arms_to_the_people
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_SPA_CIVIL_WAR}
@@ -3015,10 +3015,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_ideas = SPA_fascist_economic_aid
-			swap_ideas = {
-				remove_idea = SPA_recovering_from_civil_war
-				add_idea = SPA_recovering_from_civil_war_2
-			}
+			
 			add_tech_bonus = {
 				name = SPA_fascist_economic_aid
 				bonus = 1.0
@@ -3198,9 +3195,22 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = SPA_recovering_from_civil_war_2
-				add_idea = SPA_recovering_from_civil_war_3
+			
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+					}
+					is_core_of = ROOT
+				}
+				set_state_flag = SPA_support_the_war_industry_1civ
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 			}
 			random_owned_controlled_state = {
 				limit = {
@@ -3209,6 +3219,24 @@ focus_tree = {
 						size > 0
 					}
 					is_core_of = ROOT
+					NOT = { has_state_flag = SPA_support_the_war_industry_1civ }
+				}
+				set_state_flag = SPA_support_the_war_industry_1civ
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+					}
+					is_core_of = ROOT
+					NOT = { has_state_flag = SPA_support_the_war_industry_1civ }
 				}
 				set_state_flag = SPA_support_the_war_industry_1civ
 				add_extra_state_shared_building_slots = 1
@@ -3332,14 +3360,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		complete_tooltip = {
-				if = {
-				limit = {
-					NOT = {
-						has_idea = tot_economic_mobilisation
-					}
-				}
-				add_ideas = tot_economic_mobilisation
-			}
+				
 			every_state = {
 				limit	= {	has_state_flag = SPA_expand_the_war_industry_2mil }
 				add_extra_state_shared_building_slots = 2
@@ -3352,14 +3373,7 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			if = {
-				limit = {
-					NOT = {
-						has_idea = tot_economic_mobilisation
-					}
-				}
-				add_ideas = tot_economic_mobilisation
-			}
+			
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -3368,7 +3382,6 @@ focus_tree = {
 					}
 					is_core_of = ROOT
 				}
-				set_state_flag = SPA_expand_the_war_industry_2mil
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
@@ -3377,15 +3390,16 @@ focus_tree = {
 				}
 			}
 			random_owned_controlled_state = {
+				prioritize = {
+					168
+				}
 				limit = {
 					free_building_slots = {
 						building = arms_factory
 						size > 1
 					}
 					is_core_of = ROOT
-					NOT = { has_state_flag = SPA_expand_the_war_industry_2mil }
 				}
-				set_state_flag = SPA_expand_the_war_industry_2mil
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
@@ -3429,6 +3443,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			
 			
 			swap_ideas = {
 				remove_idea = SPA_recovering_from_civil_war
@@ -3484,38 +3499,7 @@ focus_tree = {
 				add_idea = SPA_national_recovery_2
 			}
 			
-			if = {
-				limit = {
-					NOT = {
-						has_idea = SPA_recovering_from_civil_war
-						has_idea = SPA_recovering_from_civil_war_2
-					}
-				}
-				effect_tooltip = {
-					swap_ideas = {
-						remove_idea = SPA_recovering_from_civil_war
-						add_idea = SPA_recovering_from_civil_war_2
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_idea = SPA_recovering_from_civil_war
-				}
-				swap_ideas = {
-					remove_idea = SPA_recovering_from_civil_war
-					add_idea = SPA_recovering_from_civil_war_2
-				}
-			}
-			if = {
-				limit = {
-					has_idea = SPA_recovering_from_civil_war_2
-				}
-				swap_ideas = {
-					remove_idea = SPA_recovering_from_civil_war_2
-					add_idea = SPA_recovering_from_civil_war_3
-				}
-			}
+			
 			add_tech_bonus = {
 				name = HOL_make_use_of_our_riches
 				bonus = 1.0
@@ -3530,7 +3514,53 @@ focus_tree = {
 			}
 		}
 	}
+    focus = {
+		id = SPA_reclaim_the_power
+		available = {
+			 has_war = no
+			controls_state = 168
+			controls_state = 173
+			controls_state = 169
+			controls_state = 789
+			controls_state = 167
+			controls_state = 170
+			controls_state = 175
+			controls_state = 788
+		    controls_state = 174
+			controls_state = 171
+			controls_state = 790
+			controls_state = 176
+			controls_state = 792
+			controls_state = 165 
+			controls_state = 794
+			controls_state = 166
+			controls_state = 793
+			controls_state = 172
 
+		}
+		bypass = {
+		}
+		prerequisite = { focus = SPA_national_recovery }
+		
+		icon = GFX_focus_generic_free_iberia
+		x = 3
+		y = 1
+		relative_position_id = SPA_national_recovery
+		cost = 5
+
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = -125
+			add_stability = -0.05
+			add_war_support = 0.05
+			every_owned_state = {
+				limit = {
+					is_on_continent = europe
+				}
+				add_core_of = SPR
+			}
+		}
+	}
 	focus = {
 		id = SPA_spanish_austerity
 		available = {
@@ -4466,7 +4496,7 @@ focus_tree = {
 		prerequisite = { focus = SPA_national_recovery }
 		
 		icon = GFX_goal_generic_neutrality_focus
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = SPA_join_the_allies
 		cost = 5
@@ -4474,39 +4504,8 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			add_stability = 0.10
-			if = {
-				limit = {
-					NOT = {
-						has_idea = SPA_recovering_from_civil_war
-						has_idea = SPA_recovering_from_civil_war_2
-					}
-				}
-				effect_tooltip = {
-					swap_ideas = {
-						remove_idea = SPA_recovering_from_civil_war
-						add_idea = SPA_recovering_from_civil_war_2
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_idea = SPA_recovering_from_civil_war
-				}
-				swap_ideas = {
-					remove_idea = SPA_recovering_from_civil_war
-					add_idea = SPA_recovering_from_civil_war_2
-				}
-			}
-			if = {
-				limit = {
-					has_idea = SPA_recovering_from_civil_war_2
-				}
-				swap_ideas = {
-					remove_idea = SPA_recovering_from_civil_war_2
-					add_idea = SPA_recovering_from_civil_war_3
-				}
-			}
+			add_stability = 0.05
+			
 		}
 	}
 
@@ -4689,7 +4688,7 @@ focus_tree = {
 		mutually_exclusive = { focus = SPA_expand_the_axis_gold_trade }
 		
 		icon = GFX_focus_generic_the_giant_wakes
-		x = 0
+		x = -1
 		y = 2
 		relative_position_id = SPA_expand_spanish_bases
 		cost = 5
