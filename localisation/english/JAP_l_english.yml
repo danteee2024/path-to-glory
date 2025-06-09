@@ -694,7 +694,8 @@ JAP_island_investment:0 "Island Investment"
  JAP_commie_naval_designer:0 "Nationalized Naval Designer"
 
  ##Decisions
- close_the_island_tt:0 "If you take this path, all the national spirits have a timelocked requirement of not owning any of asia EXCEPT MAINLAND JAPAN, IWOJIMA AND SAIPAN until a said date, look at your trade laws to see such"
+ close_the_island_tt:0 "If you take this path, all the national spirits have a timelocked requirement of not owning any of asia  §YEXCEPT MAINLAND JAPAN§! until a said date, look at your trade laws to see such"
+ look_in_your_ind_tt:0 "Look inside your §YIndustrial Concern§!!"
  JAP_regional_development_in_state:0 "Colonial Development"
  JAP_increase_infrastructure:0 "Increasing Infrastructure"
  JAP_develop_kanto_aluminium:0 "Develop Kanto Aluminium"

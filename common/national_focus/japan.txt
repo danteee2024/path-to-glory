@@ -1631,6 +1631,7 @@
 				}
 			}
 			unlock_decision_category_tooltip = prospect_for_resources
+			custom_effect_tooltip =  look_in_your_ind_tt
 		}
 	}
 	focus = {
