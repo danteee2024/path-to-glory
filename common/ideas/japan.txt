@@ -128,7 +128,7 @@ ideas = {
 
 		JAP_black_dragon_society = {
 			name = "Black Dragon Society"
-
+            picture = generic_spy_intel
 			allowed = {
 				always = yes
 			}

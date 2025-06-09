@@ -3984,25 +3984,7 @@
 			else = {
 				add_ideas = war_economy
 			}
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = fumimaro_konoe
-			if = {
-				limit = {
-					has_completed_focus = JAP_purge_the_kodoha_faction
-				}
-			retire_character = JAP_Okada_Keisuke
-			create_country_leader = {
-				name = "Fumimaro Konoe"
-				desc = ""
-				picture = "gfx/leaders/JAP/portrait_JAP_Fumimaro_Konoe.dds"
-				expire = "1965.1.1"
-				ideology = fascism_ideology
-				traits = {
-					imperial_sanction
-					trait_opposed_to_communism
-				}
-			}
-			}
+			
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
 	}
