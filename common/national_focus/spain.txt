@@ -139,7 +139,7 @@ focus_tree = {
 					SPA_garrison_control_cost_calculation = yes
 				}
 			}
-			add_political_power = 15
+			add_political_power = 150
 		}
 	}
 
@@ -443,6 +443,7 @@ focus_tree = {
 					SPR_garrison_control_cost_calculation = yes
 				}
 			}
+			add_political_power = 100
 		}
 	}
 
@@ -10846,10 +10847,10 @@ focus_tree = {
 					is_core_of = ROOT
 				}
 				set_state_flag = SPR_increase_arms_production_1mil
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -10863,10 +10864,10 @@ focus_tree = {
 					NOT = { has_state_flag = SPR_increase_arms_production_1mil }
 				}
 				set_state_flag = SPR_increase_arms_production_1mil
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -10880,10 +10881,10 @@ focus_tree = {
 					NOT = { has_state_flag = SPR_increase_arms_production_1mil }
 				}
 				set_state_flag = SPR_increase_arms_production_1mil
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
