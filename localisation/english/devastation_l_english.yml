@@ -22,6 +22,21 @@
  devastation_funding_allies_cancel_trigger: "Opinion of [FROM.GetFlag] §Y[FROM.GetNameDefCap]§! is lower than §Y50§! and is not an ally of [ROOT.GetFlag] §Y[ROOT.GetNameDefCap]§!"
  
  
+ assimilation_decisions: "Unassimilated Populations"
+ assimilation_decisions_desc: "As devastation rises across the lands, §Yrefugees§! will flee those areas and seek to start anew elsewhere. When such refugees reach our nation, they join our §OUnassimilated Population§! pool. We can §Gassimilate§! these §Yrefugees§! for a population consolidation in our core states, either by letting time play out or through making a conscious political effort. We could also expell them if they reveal themselves too cumbersome for the apparatus of our state...\n\nCurrently, we have a total §OUnassimilated Population§! of §R[?country_unassimilated_pops|2]K§! which is §Y[CountryUnassimilatedPopsRatio]§! of our §Ccore population§! of §C[?country_core_population_controlled]K§!.\n\nFor every §Y0.1%§! ratio, we will gain a debuff of §R[?global.unassimilated_stability_factor]%§! to our §Ystability§!. We suffer [?country_unassimilated_pops_modifier^0|+2%] §YStability Factor§! due to this.\n\nThe total §OExternal Refugees§! that have come to our nation since the start of the game is §Y[?total_external_refugees_in_game|2]K§!, of whom §G[?total_external_refugees_assimilated_in_game|2]K§! were §Gassimilated§! and §R[?total_external_refugees_expelled_in_game|2]K expelled§!."
+ 
+ assimilation_passive_decision: "Passive Refugee Assimilation"
+ assimilation_passive_decision_desc: "Unassimilated populations will slowly assimilate and be added to their respective state's manpower pool."
+ assimilation_passive_decision_tt: "A random amount of §OUnassimilated Pops§! between §Y[?assimilate_unassimilated_pops_min|0%]§! and §Y[?assimilate_unassimilated_pops_max|0%]§! in every state with §OUnassimilated Pops§! will be §Gassimilated§!.\n\n"
+ assimilation_nationwide_drive_decision: "Nationwide Assimilation Drive"
+ assimilation_nationwide_drive_decision_desc: "Assimilate refugees from every one of our controlled states."
+ assimilation_nationwide_drive_decision_tt: "A random amount of §OUnassimilated Pops§! between §Y[?assimilate_unassimilated_pops_min|0%]§! and §Y[?assimilate_unassimilated_pops_max|0%]§! in every state with §OUnassimilated Pops§! will be §Gassimilated§!.\n\n"
+ assimilation_expel_decision: "Expel Refugees"
+ assimilation_expel_decision_desc: "Expel unassimilated refugees from every one of our controlled states."
+ assimilation_expel_decision_tt: "A random amount of §OUnassimilated Pops§! between §Y[?assimilate_expel_pops_min|0%]§! and §Y[?assimilate_expel_pops_max|0%]§! in every state with §OUnassimilated Pops§! will be §Rexpelled§!.\n\n"
+
+ 
+ 
  decision_cost_CP_10: "£command_power  §Y20§!"
  decision_cost_CP_10_blocked: "£command_power  §R20§!"
  decision_cost_CP_10_tooltip:0 "It costs £command_power  §Y20§! to take the decision"

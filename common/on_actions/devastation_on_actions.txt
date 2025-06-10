@@ -18,7 +18,7 @@ on_actions = {
 			set_variable = { global.devastation_base_gain_controller_at_war_with_owner = 0.05 }	    #  must also change the loc for SDFactors2Key
 			set_variable = { global.devastation_base_gain_partial_occupation = 0.12 }				#  must also change the loc for SDFactors3Key
 			set_variable = { global.devastation_base_gain_neighbor_state_is_enemy = 0.02 }			#  must also change the loc for SDFactors4Key
-			set_variable = { global.devastation_base_gain_experienced_bombing = 0.15 }				#  must also change the loc for SDFactors5Key
+			set_variable = { global.devastation_base_gain_experienced_bombing = 0.25 }				#  must also change the loc for SDFactors5Key
 			set_variable = { global.devastation_base_gain_controller_at_peace_with_owner = -0.01 }	#  must also change the loc for SDFactors6Key
 			set_variable = { global.devastation_base_gain_controller_at_peace = -0.02 }				#  must also change the loc for SDFactors7Key
 			
@@ -47,6 +47,19 @@ on_actions = {
 			# 	will fail to migrate and become casualties.
 			set_variable = { global.casualty_multiplier_min = 0.05 }	# 0.1 originally 0.45
 			set_variable = { global.casualty_multiplier_max = 0.3 }	# 0.15 originally 0.6
+			
+			# pops assimilation
+			set_variable = { global.passive_assimilation_min = 0.01 }
+			set_variable = { global.passive_assimilation_max = 0.08 }
+			set_variable = { global.nationwide_drive_assimilation_min = 0.1 }
+			set_variable = { global.nationwide_drive_assimilation_max = 0.2 }
+			set_variable = { global.expel_refugees_min = 0.15 }
+			set_variable = { global.expel_refugees_max = 0.3 }
+			
+			# for every 0.1% unassimilated, have the following effects
+			set_variable = { global.unassimilated_stability_factor = -0.2 } # can only do up to one decimal point (0.X),not (0.XX or 0.XXX)
+			# when can the decision to expel be active
+			set_variable = { global.unassimilated_expel_minimum_stability_factor = -5 } # can only do up to one decimal point (0.X),not (0.XX or 0.XXX)
 			
 			# mass exodus after state control changed multiplier
 			set_variable = { global.mass_exodus_multiplier = 5.0 } # 5.0  1.0 is 100% (normal value for migrations)
@@ -79,7 +92,8 @@ on_actions = {
 		}
 	}
 	
-	on_daily = {
+	## Used to be daily, but now weekly for performance
+	on_daily = {			
 		effect = {
 			every_state = {
 				calc_pop_change = yes

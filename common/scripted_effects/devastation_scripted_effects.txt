@@ -179,6 +179,12 @@ devastation_state_calc_modifiers = {
 	divide_temp_variable = { temp_100 = global.devastation_state_repair_speed_buildings_factor }
 	divide_temp_variable = { temp = temp_100 }
 	add_to_array = { state_devastation_modifier = temp }
+
+	set_temp_variable = { temp = state_devastation_value }
+	set_temp_variable = { temp_100 = 100 }
+	divide_temp_variable = { temp_100 = global.devastation_army_speed_factor }
+	divide_temp_variable = { temp = temp_100 }
+	add_to_array = { state_devastation_modifier = temp }
 	
 	force_update_dynamic_modifier = yes
 }
@@ -276,7 +282,7 @@ weekly_devastation_update = {
 			
 			set_temp_variable = { global.state_original_controller = THIS.owner }
 			set_temp_variable = { temp = state_devastation_value }
-			add_to_temp_variable = { temp = 25 }
+			add_to_temp_variable = { temp = 10 }			# was 25
 			random = {
 				chance = temp
 				devastation_state_trigger_migration = yes
@@ -331,6 +337,187 @@ daily_devastation_update = {
 	}
 }
 
+devastation_country_calc_unassimilated = {
+	hidden_effect = { 
+		if = {
+			limit = { 
+				NOT = { has_decision = assimilation_passive_decision } 
+				any_controlled_state = {
+					has_unassimilated_pops = yes
+				}
+			}
+			activate_decision = assimilation_passive_decision
+		}
+		clear_variable = country_unassimilated_pops
+		clear_variable = country_core_population_controlled
+		clear_array = country_unassimilated_pops_modifier
+		every_controlled_state = {
+			add_to_variable = { PREV.country_unassimilated_pops = devastation_unassimilated_pops }
+			
+			if = {
+				limit = { check_variable = { devastation_unassimilated_pops < 0 } }
+				clamp_variable = { var = devastation_unassimilated_pops min = 0 }
+			}
+			if = {
+				limit = { is_core_of = controller }
+				#log = "[?THIS.GetName] is core of [?THIS.controller.GetTag]"
+				add_to_temp_variable = { global.num_of_cores = 1 }
+				add_to_variable = { PREV.country_core_population_controlled = state_population_k }
+			}
+		}
+		clamp_variable = { var = country_unassimilated_pops min = 0 }
+		
+		
+		set_variable = { country_unassimilated_pops_ratio_core = country_unassimilated_pops }
+		#log = "country_unassimilated_pops_ratio_core = [?country_unassimilated_pops_ratio_core]"
+		divide_variable = { country_unassimilated_pops_ratio_core = country_core_population_controlled }
+		#log = "country_unassimilated_pops_ratio_core = [?country_unassimilated_pops_ratio_core]"
+		multiply_variable = { country_unassimilated_pops_ratio_core = 100 }
+		#log = "country_unassimilated_pops_ratio_core = [?country_unassimilated_pops_ratio_core]"
+		if = {
+			limit = { check_variable = { country_unassimilated_pops_ratio_core < 0.1 } check_variable = { country_unassimilated_pops > 0.1 } }
+			set_variable = { country_unassimilated_pops_ratio_core = 0.099 }
+		}
+		
+		#log = "[?THIS.GetFlag][?THIS.GetName] number of unassimilated pops is [?country_unassimilated_pops]K"
+		#log = "[?THIS.GetFlag][?THIS.GetName] number of cores is [?global.num_of_cores] and have a total of [?country_core_population_controlled]K population"
+		#log = "Ratio is [?country_unassimilated_pops_ratio_core|3]"
+		
+		
+		if = {
+			limit = { 
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = country_unassimilated_pops_modifier
+					}
+				}
+			}
+			add_dynamic_modifier = {
+				modifier = country_unassimilated_pops_modifier
+			}
+		}
+	
+		set_temp_variable = { temp = global.unassimilated_stability_factor }
+		#log = "global.unassimilated_stability_factor = [?global.unassimilated_stability_factor]"
+		multiply_temp_variable = { temp = 0.1 }
+		#log = "temp = [?temp]"
+		multiply_temp_variable = { temp = country_unassimilated_pops_ratio_core }
+		#log = "temp = [?temp]"
+		add_to_array = { country_unassimilated_pops_modifier = temp }
+		#log = "country_unassimilated_pops_modifier = [?country_unassimilated_pops_modifier^0|%]"
+	}
+}
+
+assimilate_unassimilated_pops = {
+	#set_temp_variable = { assimilate_unassimilated_pops_min = global.passive_assimilation_min }
+	#set_temp_variable = { assimilate_unassimilated_pops_max = global.passive_assimilation_max }
+	set_temp_variable_to_random = { var = global.temp2 min = assimilate_unassimilated_pops_min max = assimilate_unassimilated_pops_max }
+	
+	set_temp_variable = { country_temp = global.temp2 }
+	multiply_temp_variable = { country_temp = country_unassimilated_pops }
+	multiply_temp_variable = { country_temp = 1000 }
+	custom_effect_tooltip = assimilate_unassimilated_pops_tt
+	
+	every_controlled_state = {
+		limit = {
+			has_unassimilated_pops = yes
+		}
+		set_temp_variable = { temp = global.temp2 }
+		#log = "[THIS.GetName] Temp [?global.temp]"
+		#log = "[THIS.GetName] devastation_unassimilated_pops [?devastation_unassimilated_pops]"
+		multiply_temp_variable = { temp = devastation_unassimilated_pops }
+		#log = "[THIS.GetName] temp [?temp]"
+		
+		if = {
+			limit = { check_variable = { temp < 0.001 } }
+			
+			set_temp_variable = { temp = 0.001 }
+			#log = "[THIS.GetName] temp is less than 0.001, changing it to [?temp]"
+		}
+		set_temp_variable = { pops_to_be_assimilated = temp }
+			
+		multiply_temp_variable = { pops_to_be_assimilated = 1000 }
+		#log = "[THIS.GetName] pops_to_be_assimilated [?pops_to_be_assimilated]"
+		
+		
+		#add_manpower = pops_to_be_assimilated
+		
+		divide_temp_variable = { pops_to_be_assimilated = 1000 }
+		subtract_from_variable = { devastation_unassimilated_pops = pops_to_be_assimilated }
+		
+		add_to_variable = { PREV.total_external_refugees_assimilated_in_game = pops_to_be_assimilated }
+	}
+	
+	devastation_country_calc_unassimilated = yes
+}
+
+assimilate_expel_pops = {
+	set_temp_variable = { assimilate_expel_pops_min = global.expel_refugees_min }
+	set_temp_variable = { assimilate_expel_pops_max = global.expel_refugees_max }
+	set_temp_variable_to_random = { var = global.temp2 min = assimilate_expel_pops_min max = assimilate_expel_pops_max }
+	
+	set_temp_variable = { country_temp = global.temp2 }
+	multiply_temp_variable = { country_temp = country_unassimilated_pops }
+	multiply_temp_variable = { country_temp = 1000 }
+	custom_effect_tooltip = assimilate_expel_pops_tt
+	
+	every_controlled_state = {
+		limit = {
+			has_unassimilated_pops = yes
+		}
+		set_temp_variable = { temp = global.temp2 }
+		#log = "Temp [?temp]"
+		#log = "devastation_unassimilated_pops [?devastation_unassimilated_pops]"
+		multiply_temp_variable = { temp = devastation_unassimilated_pops }
+		#log = "temp [?temp]"
+		
+		if = {
+			limit = { check_variable = { temp < 0.001 } }
+			
+			set_temp_variable = { temp = 0.001 }
+			#log = "temp is less than 0.001, changing it to [?temp]"
+		}
+		set_temp_variable = { pops_to_be_expelled = temp }
+			
+		#log = "pops_to_be_expelled [?pops_to_be_expelled]"
+		
+		subtract_from_variable = { devastation_unassimilated_pops = pops_to_be_expelled }
+		add_to_variable = { PREV.total_external_refugees_expelled_in_game = pops_to_be_expelled }
+		
+		set_temp_variable = { global.pops_to_be_expelled_global = pops_to_be_expelled }
+		#log = " [?global.pops_to_be_expelled_global]K Refugees from [?THIS.GetName]"
+		
+		hidden_effect = {
+			random_state = {
+				limit = {
+					NOT = { is_controlled_by = PREV.controller }
+					controller = { is_ai = yes }
+				}
+				#log = "is expelled to [?THIS.GetName] ([?global.pops_to_be_expelled_global]K)"
+				
+				
+				add_to_variable = { devastation_state_refugee_gain = global.pops_to_be_expelled_global }
+				calc_pop_change = yes
+				
+				add_to_variable = { devastation_unassimilated_pops = global.pops_to_be_expelled_global }
+				
+				set_temp_variable = { global.devastation_state_refugee_gain_k = global.pops_to_be_expelled_global }
+				
+				controller = { devastation_country_calc_unassimilated = yes }
+				
+				THIS.controller = {
+					add_to_variable = { total_external_refugees_in_game = global.devastation_state_refugee_gain_k }
+				}
+			}
+		}
+		
+		multiply_temp_variable = { pops_to_be_expelled = 1000 }
+		custom_effect_tooltip = assimilate_expel_pops_tt2
+	}
+	
+	devastation_country_calc_unassimilated = yes
+}
+
 get_devastation_gain_threshold = {
 	set_temp_variable = { temp_threshold = 1 }
 	#log = "Threshold Before Subtraction: [?temp_threshold]"
@@ -372,8 +559,29 @@ generate_random_casualties = {
 		calc_pop_change = yes
 		
 		multiply_temp_variable = { temp_casualty = -1 }
+
+		
+		controller = {
+			set_temp_variable = { manpower = manpower_per_military_factory }
+			set_temp_variable = { mils = num_of_military_factories }
+		}
+
 		add_manpower = temp_casualty
 		
+		controller = {
+			set_temp_variable = { manpower_two = manpower_per_military_factory }
+			set_temp_variable = { mils = num_of_military_factories }
+			subtract_from_temp_variable = { manpower_two = manpower }
+			multiply_temp_variable = { manpower_two = num_of_military_factories }
+			if = {
+				limit = {
+					check_variable = { manpower_two > 0 }
+				}
+				multiply_temp_variable = { manpower_two = -1 }
+				add_manpower = manpower_two
+			}
+		}
+
 		multiply_temp_variable = { temp_casualty = -1 }
 		set_temp_variable = { devastation_state_casualties_k = temp_casualty }
 		divide_temp_variable = { devastation_state_casualties_k = 1000 }
@@ -597,8 +805,9 @@ devastation_state_trigger_migration = {
 			multiply_temp_variable = { devastation_state_refugee = 1000 }
 			multiply_temp_variable = { devastation_state_refugee = -1 }
 			#log = "[THIS.GetName]: Refugees Lost - [?devastation_state_refugee]"
+
 			#effect_tooltip = {
-				add_manpower = devastation_state_refugee
+				#add_manpower = devastation_state_refugee
 			#}
 			
 			# if # of refugee is greater than 2 million, do a for-loop
@@ -622,8 +831,9 @@ devastation_state_trigger_migration = {
 			#log = "[THIS.GetName]: Refugees Lost - [?devastation_state_refugee]"
 			
 			multiply_temp_variable = { devastation_state_refugee = -1 }
+
 			#effect_tooltip = {
-				add_manpower = devastation_state_refugee
+				#add_manpower = devastation_state_refugee
 			#}
 		}
 		
@@ -775,6 +985,54 @@ devastation_state_trigger_migration = {
 	calc_pop_change = yes
 }
 
+meta_effect_migrating_refugees = {
+	meta_effect = {
+		text = {
+			set_temp_variable = { devastation_state_refugee_gain_k = refugee_gain_[STATE_NUMBER] }
+			#log = "[THIS.controller.GetFlag] [THIS.GetName]: Refugees Gain - [?devastation_state_refugee_gain_k]"
+			divide_temp_variable = { devastation_state_refugee_gain_k = 1000 }
+			#log = "[THIS.controller.GetFlag] [THIS.GetName]: Refugees Gain K - [?devastation_state_refugee_gain_k]"
+			add_to_variable = { devastation_state_refugee_gain = devastation_state_refugee_gain_k }
+			calc_pop_change = yes
+			
+			# if owner of this state is not the owner of the previous state, it means that the migration happened cross-country
+			if = {
+				limit = { owner = { NOT = { tag = var:global.state_original_controller } } }
+				
+				#effect_stability_hit_refugees = yes
+				#log = "[THIS.controller.GetFlag] [THIS.GetName]: Becomes unassimilated - [?devastation_state_refugee_gain_k|2] will be added to [?devastation_unassimilated_pops|2]"
+				add_to_variable = { devastation_unassimilated_pops = devastation_state_refugee_gain_k }
+			}
+			else = {
+				#effect_tooltip = {
+					#THIS = { add_manpower = refugee_gain_[STATE_NUMBER] }
+				#}
+			}
+			
+			set_temp_variable = { global.devastation_state_refugee_gain_k = devastation_state_refugee_gain_k }
+			
+			controller = { devastation_country_calc_unassimilated = yes }
+		}
+		STATE_NUMBER = "[?refugee_state_number|.0]"
+	}
+	#log = "[THIS.controller.GetFlag] [THIS.GetName]: devastation_state_refugee_gain_k [?devastation_state_refugee_gain_k]"
+	
+	THIS.controller = {
+		add_to_variable = { total_external_refugees_in_game = global.devastation_state_refugee_gain_k }
+		#log = "[THIS.GetFlag] [THIS.GetName]: PREV.devastation_state_refugee_gain_k [?global.devastation_state_refugee_gain_k]"
+		#log = "[THIS.GetFlag] [THIS.GetName]: total_external_refugees_in_game [?total_external_refugees_in_game]"
+	}	
+	
+}
+
+calc_total_external_refugees_in_game = {
+	clear_variable = total_external_refugees_in_game
+	
+	add_to_variable = { total_external_refugees_in_game = country_unassimilated_pops } 
+	add_to_variable = { total_external_refugees_in_game = total_external_refugees_assimilated_in_game } 
+	add_to_variable = { total_external_refugees_in_game = total_external_refugees_expelled_in_game } 
+}
+
 effect_stability_hit_refugees = {
 	#set_temp_variable = { outgoing_refugees = devastation_state_refugee_gain_k }
 	#multiply_temp_variable = { outgoing_refugees = 10 }
@@ -900,6 +1158,7 @@ devastation_state_calc_value = {
 			
 			#divide_temp_variable = { base_gain_resistance = 333.333 }
 			multiply_temp_variable = { base_gain_resistance = global.devastation_base_gain_resistance }
+			divide_temp_variable = { base_gain_resistance = 2 }			### Added this, otherwise resistance is too strong and cannot be fought devastation-wise
 			set_variable = { state_devastation_base_gain_resistance = base_gain_resistance }
 			#log = "[THIS.GetName] Base Gain Resistance after multiplier: [?base_gain_resistance]"
 			
@@ -1001,6 +1260,10 @@ devastation_state_calc_value = {
 	get_devastation_gain_threshold = yes
 	multiply_temp_variable = { base_gain = temp_threshold }
 	#log = "[THIS.GetName] Base Gain After Threshold: [?base_gain]"
+	set_temp_variable = { temp_threshold_loss = 1 }					# Addition, saturation factor helps reducing devastation now
+	subtract_from_temp_variable = { temp_threshold_loss = temp_threshold }					# Addition
+	add_to_temp_variable = { temp_threshold_loss = 1 }					# Addition
+	multiply_temp_variable = { base_loss = temp_threshold_loss }			# Addition
 	
 	add_to_variable = { state_devastation_value = base_gain }
 	add_to_variable = { state_devastation_value = base_loss }
