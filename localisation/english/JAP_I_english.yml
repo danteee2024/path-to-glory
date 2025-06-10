@@ -521,3 +521,7 @@ JAP_island_investment_desc:0 "It is time we gave our colonies some investment"
 
 #lungemine
 JAP_lungemines:0 "Lunge Mines"
+
+
+ #ptg
+ warning_to_japan_player:0 "Do §RNOT§! Touch §YState Transfer Tool§! until your civil war is over. §YYou will mess up your states§!!"

@@ -60,6 +60,7 @@
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = warning_to_japan_player
 			set_truce = {
 				target = CHI
 				days = 800

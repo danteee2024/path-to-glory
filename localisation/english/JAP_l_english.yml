@@ -747,3 +747,5 @@ JAP_strengthen_the_divine_wind_effect:0 "Enables production of §HYokosuka MXY7 
 JAP_strengthen_the_divine_wind_effect_bba:0 "Enables the §HFixed Explosive Charge§! module"
 JAP_strengthen_the_divine_wind_desc:0 "Kamikaze, the tactics of the Special Attack Unit, have changed suicide attacks
 
+#ptg
+ warning_to_japan_player:0 "Do §RNOT§! Touch §YState Transfer Tool§! until your civil war is over. §RYou will mess up your states§! and will be unable to do §CClose the Island§!."
