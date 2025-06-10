@@ -359,16 +359,16 @@ industrial_expansion = {
 	}
 	fuel_silo = {
 		show_on_map = 1
-		base_cost = 5000
+		base_cost = 2500
 		icon_frame = 14
 		value = 5
 		infrastructure_construction_effect = yes
 		fuel_silo = yes
-		per_level_extra_cost = -500		
+		per_level_extra_cost = -100
 		show_modifier = yes
 		country_modifiers = {
 			modifiers = {
-				max_fuel_building = 100.0 #k
+				max_fuel_building = 200.0 #k
 			}
 		}
 		
