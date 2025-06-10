@@ -73,7 +73,60 @@ on_actions = {
 			100 = election.15
 		}
 	}
-
+    on_war_relation_added = {
+    effect = {
+        # Only handle the trade_agreement case
+        if = {
+            limit = {
+                ROOT = {
+                    has_relation_modifier = {
+                        target = FROM
+                        modifier = trade_agreement3_opmod
+                    }
+                }
+            }
+            custom_effect_tooltip = trade_agreement_war_dec_on_action_tt
+            hidden_effect = {
+                ROOT = {
+                    remove_relation_modifier = {
+                        target = FROM
+                        modifier = trade_agreement3_opmod
+                    }
+                    remove_opinion_modifier = {
+                        target = FROM
+                        modifier = trade_agreement1_opmod
+                    }
+                    remove_opinion_modifier = {
+                        target = FROM
+                        modifier = trade_agreement2_opmod
+                    }
+                    add_opinion_modifier = {
+                        target = FROM
+                        modifier = trade_agreement_break1_opmod
+                    }
+                }
+                FROM = {
+                    remove_relation_modifier = {
+                        target = ROOT
+                        modifier = trade_agreement3_opmod
+                    }
+                    remove_opinion_modifier = {
+                        target = ROOT
+                        modifier = trade_agreement1_opmod
+                    }
+                    remove_opinion_modifier = {
+                        target = ROOT
+                        modifier = trade_agreement2_opmod
+                    }
+                    add_opinion_modifier = {
+                        target = ROOT
+                        modifier = trade_agreement_break1_opmod
+                    }
+                }
+            }
+        }
+    }
+}
 	on_daily_SWE = {
 		effect = {
 			if = {

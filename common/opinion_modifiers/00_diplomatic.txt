@@ -14,4 +14,16 @@ opinion_modifiers = {
 		months = 18
 		decay = 1
 	}
+	trade_agreement1_opmod = {
+		trade = no
+		value = 20
+	}
+	trade_agreement2_opmod = {
+		trade = yes
+		value = 100
+	}
+	trade_agreement_break1_opmod = {
+		trade = no
+		value = -20
+	}
 }

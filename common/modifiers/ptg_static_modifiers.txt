@@ -69,3 +69,10 @@ JAP_support_the_burmese_liberation_movement = {
 	}
 	compliance_gain = 0.20
 }
+
+trade_agreement3_opmod = {
+	valid_relation_trigger = {
+	}
+	extra_trade_to_target_factor = 0.1
+	trade_cost_for_target_factor = -0.25
+}
