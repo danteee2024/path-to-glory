@@ -73,10 +73,10 @@ idea_categories = {
 
 	policies = {
 		slot = press_laws
-		slot = womens_rights
-		slot = citizenship_laws
+		slot = is_state_security
+		slot = womens_rights	
 		slot = minority_rights
-		slot = labour_laws
+		slot = ep_war_bonds
 		slot = economic_system
 
 		ledger = civilian

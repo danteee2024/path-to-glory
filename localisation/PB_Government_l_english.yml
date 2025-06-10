@@ -6,6 +6,17 @@
 policies:0 "Government Policies"
 
 taxation_policies:0 "Taxation Policies"
+is_state_security:0 "State Security"
+police_only:0 "Police"
+police_only_desc:0 "Law is enforced by typical police organisations."
+counter_terrorism_operatives:0 "Counter Terrorism Operatives"
+counter_terrorism_operatives_desc:0 "Special units are formed to combat terror."
+gendarmerie:0 "Gendarmerie"
+gendarmerie_desc:0 "A gendarmerie is a military force with law enforcement duties among the civilian population."
+sassy_secret_police:0 "Secret Police"
+sassy_secret_police_desc:0 "A secret police is present to combat dissidents and political opponents."
+military_policing:0 "Military Policing"
+military_policing_desc:0 "Policing is placed solely on the hands of the armed forces."
 
 cabinet:0 "Cabinet"
 head_of_government:0 "Head of Government"
@@ -114,6 +125,17 @@ PB_Augmentation_No_Legislation:0 "No Augmentation Legislation"
 PB_Augmentation_Banned:0 "Augmentation Banned"
 PB_Augmentation_Encouraged:0 "Augmentation Encouraged"
 PB_Augmentation_Enforced:0 "Augmentation Enforced"
+
+#ep_war_bonds
+
+ep_war_bonds:0 "War Bonds"
+
+force_bonds_buying:0 "Force Bonds Buying"
+force_bonds_buying_desc:0 "The state promotes and directs the purchasing of war bonds."
+bonds_welcome:0 "Bonds Welcome"
+bonds_welcome_desc:0 "The state offers war bonds for purchase."
+no_bonds_selling:0 "No Bonds Selling"
+no_bonds_selling_desc:0 "The state does not offer war bonds for purchase."
 
 ##########################
 # SOCIAL DEVELOPMENT 

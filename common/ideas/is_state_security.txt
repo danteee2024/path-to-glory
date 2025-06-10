@@ -1,0 +1,76 @@
+ideas = {
+    is_state_security = {
+        law = yes
+        use_list_view = no
+
+        # Heavy policing, strong counter‐subversion measures
+        police_only = {
+            available = { }
+            modifier = {
+                foreign_subversive_activites = -0.10    # less sabotage
+                stability_factor = 0.05                  # more stability
+                intelligence_agency_defense = 0.20       # stronger intel defense
+                encryption_factor = 0.05                 # better code security
+            }
+            ai_will_do = { base = 30 }
+            cancel_if_invalid = no
+        }
+
+        # Focused counter‑terror operations
+        counter_terrorism_operatives = {
+            available = { }
+            modifier = {
+                foreign_subversive_activites = -0.25  
+                army_advisor_cost_factor = -0.10 
+                war_support = 0.05                  # slight stability gain
+                decryption_factor = 0.05                 # better codebreaking
+                compliance_growth = 0.05                 # modest compliance up
+            }
+            ai_will_do = { base = 20 }
+            cancel_if_invalid = no
+        }
+
+        # Rural gendarmerie support
+        gendarmerie = {
+            available = { }
+            modifier = {
+                operation_risk = -0.10
+                drift_defence_factor = -0.15             # less drift
+                resistance_growth = -0.05                # slow resistance
+                civilian_intel_to_others = -20
+                intelligence_agency_defense = 0.05         # slight intel leak
+            }
+            ai_will_do = { base = 40 }
+            cancel_if_invalid = no
+        }
+
+        # Secret police, covert control
+        sassy_secret_police = {
+            available = { NOT = { has_government = democratic } }
+            modifier = {
+                political_power_factor = -0.05
+                foreign_subversive_activites = -0.15   
+                stability_factor = -0.05            
+                intelligence_agency_defense = 0.30
+                coordination_bonus = 0.10  
+                compliance_growth = -0.05          
+            }
+            ai_will_do = { base = 25 }
+            cancel_if_invalid = yes
+        }
+
+        # Military policing, harsh enforcement
+        military_policing = {
+            available = { NOT = { has_government = democratic } }
+            modifier = {
+                political_power_factor = 0.15
+                stability_factor = -0.05                # unrest from militarization
+                resistance_activity = -0.10              # strong resistance suppression
+                drift_defence_factor = 0.10              # some drift hardening
+                army_intel_to_others = -0.20               # intel sharing reduced
+            }
+            ai_will_do = { base = 15 }
+            cancel_if_invalid = yes
+        }
+    }
+}

@@ -1,7 +1,7 @@
 ideas = {
 
 	country = {
-# CANADA ptg
+  # CANADA ptg
  CAN_soviet_supply_the_red_army = {
     picture = generic_supply_lines
     removal_cost = 0

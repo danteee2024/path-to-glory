@@ -20,7 +20,7 @@ spriteType = {
 		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_slot_citizenship_laws"
+		name = "GFX_idea_slot_is_state_security"
 		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
 	}
 	spriteType = {
@@ -28,7 +28,7 @@ spriteType = {
 		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_slot_labour_laws"
+		name = "GFX_idea_slot_ep_war_bonds"
 		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
 	}
 	spriteType = {
