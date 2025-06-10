@@ -1,0 +1,21 @@
+on_actions = {
+    on_daily = {
+        random_events = { 100 = tactic_technology_trigger.1 }
+        random_events = { 100 = tactic_technology_trigger.2 }
+        random_events = { 100 = tactic_technology_trigger.3 }
+        random_events = { 100 = tactic_technology_trigger.4 }
+        random_events = { 100 = tactic_technology_trigger.5 }
+        random_events = { 100 = tactic_technology_trigger.6 }
+        random_events = { 100 = tactic_technology_trigger.7 }
+        random_events = { 100 = tactic_technology_trigger.8 }
+        random_events = { 100 = tactic_technology_trigger.9 }
+        random_events = { 100 = tactic_technology_trigger.10 }
+        random_events = { 100 = tactic_technology_trigger.11 }
+        random_events = { 100 = tactic_technology_trigger.12 }
+        random_events = { 100 = tactic_technology_trigger.13 }
+        random_events = { 100 = tactic_technology_trigger.14 }
+        random_events = { 100 = tactic_technology_trigger.15 }
+        random_events = { 100 = tactic_technology_trigger.16 }
+    }
+}
+
