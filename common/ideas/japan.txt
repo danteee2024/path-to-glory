@@ -459,7 +459,7 @@ ideas = {
 		}
 		JAP_lunge_mines_idea = {
 			name = "Lunge Mines"
-			picture = lunge_mine_idea
+			picture = SOV_mine_warfare
 			allowed = {
 				always = yes
 			}
@@ -2592,7 +2592,7 @@ ideas = {
 		
 		JAP_defense_in_depth = {
 
-			name = JAP_defense_in_depth
+			name = SOV_defense_industry_artillery_bonus_ccp_sov_compatibility
 
 			allowed = {
 				always = no
@@ -2615,7 +2615,7 @@ ideas = {
 		
 		JAP_the_boeitai = {
 
-			name = JAP_the_boeitai
+			name = HUN_secret_rearmament
 
 			allowed = {
 				always = no
