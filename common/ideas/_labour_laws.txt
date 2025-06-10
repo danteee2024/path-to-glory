@@ -6,9 +6,9 @@ ideas = {
         PB_8_Hour_Workday = {
             picture = PB_8_Hour_Workday
             modifier = {
-                industrial_capacity_factory = 0.05    # modest boost to IC
+                industrial_capacity_factory = -0.05  # negative boost to IC
                 stability_factor = 0.05               # improved worker morale
-                political_power_factor = 0.05         # government goodwill
+                political_power_factor = 0.10        # government goodwill
                 consumer_goods_factor = 0.05      # neutral consumer demand
             }
             cancel_if_invalid = yes
@@ -17,8 +17,8 @@ ideas = {
         PB_12_Hour_Workday = {
             picture = PB_12_Hour_Workday
             modifier = {
-                production_speed_buildings_factor = 0.05   # smoother construction
-                production_factory_efficiency_gain_factor = 0.05  # gradual efficiency gains
+                production_speed_infrastructure_factor = 0.05   # smoother construction
+                production_factory_start_efficiency_factor = 0.05  # gradual efficiency gains
                 monthly_population = -0.05                 # slight demographic toll
                 local_resources_factor = 0.05              # better resource extraction
             }
@@ -28,8 +28,9 @@ ideas = {
         PB_14_Hour_Workday = {
             picture = PB_14_Hour_Workday
             available = { NOT = { has_government = democratic } }
+             
             modifier = {
-                production_speed_industrial_complex_factor = 0.05  # faster industry at peak times
+                production_speed_buildings_factor = 0.05  # faster industry at peak times
                 consumer_goods_factor = -0.05                   # increased civilian hardship
                 stability_factor = -0.05                        # rising social tension
                 political_power_factor = -0.10                 # policy unpopular
@@ -40,11 +41,13 @@ ideas = {
         PB_18_Hour_Workday = {
             picture = PB_18_Hour_Workday
             available = { NOT = { has_government = democratic } }
+            
             modifier = {
-                production_speed_industrial_complex_factor = 0.05  # faster industry
+               
+                production_speed_industrial_complex_factor = 0.10  # faster industry
                 consumer_goods_factor = -0.10                      # shortages worsen
                 stability_factor = -0.10                           # unrest spikes
-                industrial_capacity_factory = -0.05                # overwork inefficiencies
+                industrial_capacity_factory = 0.05                # overwork inefficiencies
             }
             cancel_if_invalid = yes
         }
@@ -53,10 +56,11 @@ ideas = {
             picture = PB_No_Limit_Workday
             available = { NOT = { has_government = democratic } }
             modifier = {
+
                 production_factory_efficiency_gain_factor = 0.10   # extreme efficiency push within cap
-                political_power_factor = -0.20                     # strong backlash
+                political_power_factor = -0.15                   # strong backlash
                 stability_factor = -0.10                           # major unrest
-                consumer_goods_factor = -0.10                      # critical shortages
+                consumer_goods_factor = -0.15                      # critical shortages
             }
             cancel_if_invalid = yes
         }
