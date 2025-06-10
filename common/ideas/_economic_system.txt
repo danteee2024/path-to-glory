@@ -17,7 +17,6 @@ ideas = {
                 production_speed_industrial_complex_factor = 0.10
                 industrial_capacity_factory = -0.05
                 trade_opinion_factor = 0.20
-                min_export = 0.05
             }
             ai_will_do = {
                 factor = 1
@@ -44,7 +43,6 @@ ideas = {
                 military_industrial_organization_funds_gain = 0.10
                 production_speed_air_base_factor = 0.15
                 production_speed_fuel_silo_factor = 0.15
-                production_speed_resource_expansion_steel_factor = 0.15
                 
             }
             ai_will_do = {
@@ -118,12 +116,11 @@ ideas = {
             }
             picture = PB_Planned_Economy
             modifier = {
-                nuclear_production_factor = 0.15
+                industrial_capacity_factory = 0.05
                 production_speed_resource_expansion_steel_factor = 0.15
                 production_speed_resource_expansion_chromium_factor = 0.15
                 production_speed_resource_expansion_tungsten_factor = 0.15
                 production_speed_resource_expansion_aluminium_factor = 0.15
-                production_speed_synthetic_refinery_factor = 0.15
             }
             ai_will_do = {
                 factor = 1
