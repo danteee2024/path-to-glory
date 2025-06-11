@@ -8814,6 +8814,7 @@ focus_tree = {
 		available = {
 			has_war = no
 			is_subject = no
+			date > 1937.1.1
 		}
 
 		ai_will_do = {
