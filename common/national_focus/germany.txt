@@ -8052,7 +8052,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP }	
 
 		completion_reward = {
-            hidden_effect = { set_cosmetic_tag = GER_RTR }
+            hidden_effect = { set_cosmetic_tag = GER_greater_german_reich }
+
 			42 = { set_demilitarized_zone = no }
 			51 = { set_demilitarized_zone = no }
 			978 = { set_demilitarized_zone = no }
