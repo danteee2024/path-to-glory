@@ -8,7 +8,7 @@ ideas = {
 
             available = {
 
-                has_war = yes
+               
             }
 
             cost = 100
@@ -38,7 +38,7 @@ ideas = {
 
             available = {
 
-                has_war = yes
+               
             }
 
             cost = 100
@@ -67,7 +67,7 @@ ideas = {
 
             available = {
                 
-                has_war = yes
+               
             }
 
             cost = 100
