@@ -11412,8 +11412,6 @@ focus = {
 		search_filters = {FOCUS_FILTER_STABILITY}	
 		completion_reward = {
 			add_stability = 0.05
-			
-			country_event = britain.50
 		}
 	}
 	
