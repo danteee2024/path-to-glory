@@ -2679,7 +2679,7 @@ country_event = {
 
 	is_triggered_only = yes
 	
-	option = { 
+	immediate = { 
 		name = britain.54.a
 		
 		ai_chance = { factor = 1 }
@@ -2695,25 +2695,84 @@ country_event = {
 			target = SCO
 			type = annex_everything
 		}
+
+
+
+
+       ENG = { 
+       country_event = { days = 2 id = britain.55 }
+	   }
+
+
+
+
+
+
+
+
+
+
+     
+
+
+
+
+
+
+
+
+		WLS = { 	
+			every_other_country = {
+				limit = {
+					has_government = democratic
+				}
+				add_ai_strategy = {
+					type = support
+					id = WLS
+					value = 200
+				}
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = WLS
+					value = 200
+				}
+			}
+			every_other_country = {
+				limit = {
+					has_government = communism
+				}
+				add_ai_strategy = {
+					type = support
+					id = WLS
+					value = 200
+				}
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = WLS
+					value = 200
+				}
+			}
+			set_cosmetic_tag =  WLS_british_civil_war
         division_template = {
 					name = "Diffoddwyr Cymru Rydd"
 					priority = 1
 					division_names_group = WLS_DEM_01
 					is_locked = yes
 					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-						infantry = { x = 0 y = 3 }
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					artillery_brigade = { x= 2 y = 0}
 
 					}
 				}
-				WLS = {
 					hidden_effect = {	
 				add_offsite_building = { type = arms_factory level = 3 }
 				add_manpower = 80000
 					}
-				}
 		random_owned_controlled_state = {
 			prioritize = { 122 }
 			create_unit = {
@@ -2756,17 +2815,214 @@ country_event = {
 				division = "name = \"Diffoddwyr Cymru Rydd\" division_template = \"Diffoddwyr Cymru Rydd\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
 				owner = WLS
 			}	
+		}
+				
+	}
+	SCO = { 
+		every_other_country = {
+				limit = {
+					has_government = democratic
+				}
+				add_ai_strategy = {
+					type = support
+					id = SCO
+					value = 200
+				}
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = SCO
+					value = 200
+				}
+			}
+			every_other_country = {
+				limit = {
+					has_government = communism
+				}
+				add_ai_strategy = {
+					type = support
+					id = SCO
+					value = 200
+				}
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = SCO
+					value = 200
+				}
+			}
+		set_cosmetic_tag = SCO_british_civil_war
+        division_template = {
+					name = "Luchd-sabaid Saorsa na h-Alba"
+					priority = 1
+					division_names_group = SCO_DEM_01
+					is_locked = yes
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+
+					}
+				}
+					hidden_effect = {	
+				add_offsite_building = { type = arms_factory level = 5 }
+				add_manpower = 250000
+					}
+		random_owned_controlled_state = {
+			prioritize = { 133 121 }
 			create_unit = {
-				division = "name = \"Diffoddwyr Cymru Rydd\" division_template = \"Diffoddwyr Cymru Rydd\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
-				owner = WLS
+				division = "name = \"Luchd-sabaid Saorsa na h-Alba\" division_template = \"Luchd-sabaid Saorsa na h-Alba\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+				owner = SCO
 			}	
 			create_unit = {
-				division = "name = \"Diffoddwyr Cymru Rydd\" division_template = \"Diffoddwyr Cymru Rydd\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
-				owner = WLS
+				division = "name = \"Luchd-sabaid Saorsa na h-Alba\" division_template = \"Luchd-sabaid Saorsa na h-Alba\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+				owner = SCO
+			}		
+			create_unit = {
+				division = "name = \"Luchd-sabaid Saorsa na h-Alba\" division_template = \"Luchd-sabaid Saorsa na h-Alba\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+				owner = SCO
+			}		
+			create_unit = {
+				division = "name = \"Luchd-sabaid Saorsa na h-Alba\" division_template = \"Luchd-sabaid Saorsa na h-Alba\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+				owner = SCO
+			}		
+			create_unit = {
+				division = "name = \"Luchd-sabaid Saorsa na h-Alba\" division_template = \"Luchd-sabaid Saorsa na h-Alba\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+				owner = SCO
+			}	
+			create_unit = {
+				division = "name = \"Luchd-sabaid Saorsa na h-Alba\" division_template = \"Luchd-sabaid Saorsa na h-Alba\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+				owner = SCO
+			}		
+			create_unit = {
+				division = "name = \"Luchd-sabaid Saorsa na h-Alba\" division_template = \"Luchd-sabaid Saorsa na h-Alba\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+				owner = SCO
+			}		
+			create_unit = {
+				division = "name = \"Luchd-sabaid Saorsa na h-Alba\" division_template = \"Luchd-sabaid Saorsa na h-Alba\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+				owner = SCO
+			}			
+			create_unit = {
+				division = "name = \"Luchd-sabaid Saorsa na h-Alba\" division_template = \"Luchd-sabaid Saorsa na h-Alba\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+				owner = SCO
+			}	
+			create_unit = {
+				division = "name = \"Luchd-sabaid Saorsa na h-Alba\" division_template = \"Luchd-sabaid Saorsa na h-Alba\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+				owner = SCO
+			}		
+			create_unit = {
+				division = "name = \"Luchd-sabaid Saorsa na h-Alba\" division_template = \"Luchd-sabaid Saorsa na h-Alba\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+				owner = SCO
+			}		
+			create_unit = {
+				division = "name = \"Luchd-sabaid Saorsa na h-Alba\" division_template = \"Luchd-sabaid Saorsa na h-Alba\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+				owner = SCO
+			}	
+			create_unit = {
+				division = "name = \"Luchd-sabaid Saorsa na h-Alba\" division_template = \"Luchd-sabaid Saorsa na h-Alba\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+				owner = SCO
+			}	
+			create_unit = {
+				division = "name = \"Luchd-sabaid Saorsa na h-Alba\" division_template = \"Luchd-sabaid Saorsa na h-Alba\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+				owner = SCO
+			}		
+			create_unit = {
+				division = "name = \"Luchd-sabaid Saorsa na h-Alba\" division_template = \"Luchd-sabaid Saorsa na h-Alba\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+				owner = SCO
+			}		
+			create_unit = {
+				division = "name = \"Luchd-sabaid Saorsa na h-Alba\" division_template = \"Luchd-sabaid Saorsa na h-Alba\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+				owner = SCO
 			}	
 		}
 				
+	}
+	  
+	}
+}
+country_event = {
+	id = britain.55
+	title = britain.55.t
+	desc = britain.55.desc
+	picture = GFX_event_ireland
+
+	is_triggered_only = yes
+	
+	immediate = { 
+		name = britain.55.a
 		
+		ai_chance = { factor = 1 }
+		
+		
+		declare_war_on = {
+			target = WLS
+			type = annex_everything
+		}
+
+        declare_war_on = {
+			target = SCO
+			type = annex_everything
+		}
+		division_template = {
+					name = "English Unity Brigade"
+					priority = 1
+					division_names_group = ENG_DEM_01
+					is_locked = yes
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 1 y = 3 }
+
+					}
+				}
+				hidden_effect = {	
+				add_offsite_building = { type = arms_factory level = 5 }
+				add_manpower = 125000
+					}
+		random_owned_controlled_state = {
+			prioritize = { 128 129 131 }
+			create_unit = {
+				division = "name = \"English Unity Brigade\" division_template = \"English Unity Brigade\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+				owner = ENG
+			}	
+			create_unit = {
+				division = "name = \"English Unity Brigade\" division_template = \"English Unity Brigade\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+				owner = ENG
+			}			
+			create_unit = {
+				division = "name = \"English Unity Brigade\" division_template = \"English Unity Brigade\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+				owner = ENG
+			}	
+			create_unit = {
+				division = "name = \"English Unity Brigade\" division_template = \"English Unity Brigade\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+				owner = ENG
+			}	
+			create_unit = {
+				division = "name = \"English Unity Brigade\" division_template = \"English Unity Brigade\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+				owner = ENG
+			}			
+			create_unit = {
+				division = "name = \"English Unity Brigade\" division_template = \"English Unity Brigade\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+				owner = ENG
+			}	
+			create_unit = {
+				division = "name = \"English Unity Brigade\" division_template = \"English Unity Brigade\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+				owner = ENG
+			}	
+			create_unit = {
+				division = "name = \"English Unity Brigade\" division_template = \"English Unity Brigade\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+				owner = ENG
+			}			
+			create_unit = {
+				division = "name = \"English Unity Brigade\" division_template = \"English Unity Brigade\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+				owner = ENG
+			}
+		}
+			
 	  
 	}
 }

@@ -19,6 +19,21 @@
  GER_DEF:0 "Germany"
  GER_ADJ:0 "German"
 
+
+
+
+
+
+
+
+#UK CIVIL WAR
+ SCO_british_civil_war:0 "Poblachd na h-Alba"
+ WLS_british_civil_war:0 "Cymru Rydd"
+
+
+
+
+
  #ENG
  ENG_fascism:0 "British Empire"
  ENG_fascism_DEF:0 "the British Empire"

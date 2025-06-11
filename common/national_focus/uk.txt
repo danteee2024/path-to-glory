@@ -8546,6 +8546,8 @@ focus = {
 		}
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}	
 		completion_reward = {
+		add_popularity = { ideology = neutrality popularity = 0.30 }
+		set_cosmetic_tag = ENG_england
 		add_stability = -0.10
 		}
 	}
@@ -8662,6 +8664,24 @@ focus = {
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}	
 		completion_reward = {
 		country_event = britain.54
+				set_war_support = 0.4
+				set_stability = 0.3
+				set_capital = {
+					state = 128
+				}
+				start_civil_war = {
+				set_capital = {
+					state = 126
+				}
+				ruling_party = neutrality
+				ideology = democratic
+				size = 0.5
+				states = { 126 125 127 338 123 132 }
+				
+			}
+				
+        
+        
 	 }
 	}
 	### UNALIGNED BRANCH ###
