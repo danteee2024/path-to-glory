@@ -16125,8 +16125,9 @@ ai_will_do = {
 		available = {
 			SOV = { 
 				OR = {
-					fascism > 0.25
-					neutrality > 0.25
+					fascism > 0.15
+					neutrality > 0.15
+					democratic > 0.15
 				}
 			}
 			SOV_soviet_civil_war_not_started = yes 
@@ -18950,7 +18951,7 @@ ai_will_do = {
 			factor = 1
 		}
 		available = {
-			democratic > .5
+			democratic > 0.30
 		}
 		available_if_capitulated = no
 		
