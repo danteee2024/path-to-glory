@@ -64,7 +64,6 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_POLITICAL }
 
 	completion_reward = {
-		add_political_power = 100
 		if = {
 			limit = {	
 				Commonwealth_alliance_created_already = no
@@ -2441,7 +2440,7 @@ joint_focus = {
 	
 	prerequisite = { focus = Commonwealth_form_joint_alliance }
 
-	x = 6
+	x = 5
 	y = 1
 	relative_position_id = Commonwealth_form_joint_alliance
 	cost = 10
@@ -3227,10 +3226,10 @@ joint_focus = {
 					include_locked = yes  
 				}
 			}
-			add_extra_state_shared_building_slots = 2 
+			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = arms_factory
-				level = 2 
+				level = 1 
 				instant_build = yes 
 			}
 		}
