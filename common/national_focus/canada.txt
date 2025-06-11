@@ -1963,7 +1963,7 @@ focus_tree = {
 
 	focus = {
 		id = CAN_canadian_infantry_corps
-		icon = GFX_goal_generic_allies_build_infantry
+		icon = GFX_focus_ETH_freedom_at_gunpoint
 		prerequisite = { focus = CAN_army_modernization }
 		x = -1
 		y = 1
@@ -2001,7 +2001,7 @@ focus_tree = {
 
 	focus = {
 		id = CAN_cmp_truck
-		icon = GFX_goal_generic_army_motorized
+		icon = GFX_focus_generic_truck
 		prerequisite = { focus = CAN_army_modernization }
 		x = 1
 		y = 1
@@ -2085,7 +2085,7 @@ focus_tree = {
 
 	focus = {
 		id = CAN_royal_regiment_of_canadian_artillery
-		icon = GFX_goal_generic_army_artillery2
+		icon = GFX_focus_RAJ_mountain_guns
 		prerequisite = { focus = CAN_canadian_infantry_corps }
 		x = -1
 		y = 3
@@ -2122,7 +2122,7 @@ focus_tree = {
 
 	focus = {
 		id = CAN_a_motorized_army
-		icon = GFX_goal_generic_build_tank
+		icon = GFX_focus_FIN_motti_tactics
 		prerequisite = { focus = CAN_cmp_truck }
 		x = 1
 		y = 3
@@ -2209,7 +2209,7 @@ focus_tree = {
 
 	focus = {
 		id = CAN_1st_canadian_parachute_battalion
-		icon = GFX_goal_generic_special_forces 
+		icon = GFX_focus_generic_paratrooper
 		prerequisite = { focus = CAN_commonwealth_air_training_plan focus = CAN_a_motorized_army }
 		x = 2
 		y = 4
@@ -2246,7 +2246,7 @@ focus_tree = {
 
 	focus = {
 		id = CAN_the_black_devils
-		icon = GFX_goal_generic_special_forces
+		icon = GFX_focus_SMB_special_forces_option_1
 		prerequisite = { focus = CAN_red_deer_training_camp }
 		x = -1
 		y = 5
@@ -2284,7 +2284,7 @@ focus_tree = {
 
 	focus = {
 		id = CAN_the_rocky_mountain_rangers
-		icon = GFX_goal_generic_special_forces
+		icon = GFX_focus_GRE_a_land_of_mountains
 		prerequisite = { focus = CAN_red_deer_training_camp }
 		x = 1
 		y = 5
@@ -2321,7 +2321,7 @@ focus_tree = {
 
 	focus = {
 		id = CAN_the_valentine_tank
-		icon = GFX_goal_generic_army_tanks
+		icon =  GFX_focus_generic_mass_production
 		prerequisite = { focus = CAN_red_deer_training_camp }
 		x = 0
 		y = 6
@@ -5159,7 +5159,7 @@ focus = {
 
 	focus = {
 		id = CAN_united_shipyards
-		icon = GFX_goal_generic_construct_naval_dockyard
+		icon = GFX_focus_generic_refit_civilian_ships
 		prerequisite = { focus = CAN_trade_fleet focus = CAN_degauss_ship_hulls }
 		x = 0
 		y = 5
