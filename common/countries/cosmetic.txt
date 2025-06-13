@@ -240,7 +240,10 @@ GER_greater_german_reich = {
 	color = rgb { 54 54 54 }
 	color_ui = rgb { 115 115 115 }
 }
-
+GER_RMTR = {
+	color = rgb { 54 54 54 }
+	color_ui = rgb { 115 115 115 }
+}
 CAT_aragon = {
 	color = rgb { 166 68 72 }
 	color_ui = rgb { 166 68 72 }
