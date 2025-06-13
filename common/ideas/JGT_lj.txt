@@ -4,7 +4,7 @@ ideas = {
 			ledger = army
 			picture = JGT01_gxzy
 			modifier = {
-				experience_gain_factor = 0.5
+				experience_gain_factor = 0.2
 			}
 			cost = 50
 			ai_will_do = {
