@@ -5,7 +5,7 @@ shared_focus = {
 	
 	icon = GFX_focus_generic_improve_the_administration
 
-	x = 27
+	x = 18
 	y = 8
 	
 	offset = {
