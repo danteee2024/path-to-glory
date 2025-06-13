@@ -26,7 +26,7 @@ focus_tree = {
 	focus = {
 		id = crypto_bomb_focus
 		prerequisite = {
-			focus = limited_rearmament_focus
+			focus = ENG_let_that_lion_roar_start
 		}
 		available = {
 				has_war_with = GER
@@ -131,7 +131,7 @@ focus_tree = {
 		icon = GFX_focus_wonderweapons
 		x = 1
 		y = 1
-		relative_position_id = limited_rearmament_focus
+		relative_position_id = ENG_let_that_lion_roar_start
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -153,7 +153,7 @@ focus_tree = {
 	focus = {
 		id = ENG_let_that_lion_roar_start
 		icon = GFX_focus_eng_the_sun_never_sets
-		x = 0
+		x = 5
 		y = 0
 		cost = 10
 		ai_will_do = {
@@ -177,53 +177,11 @@ focus_tree = {
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
-		complete_tooltip = {
-			every_state = {
-				limit = { has_state_flag = ENG_ENG_let_that_lion_roar_start_2IC }
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
+		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = ENG_ENG_let_that_lion_roar_start_2IC
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = ENG_ENG_let_that_lion_roar_start_2IC
-			}
+		add_stability = 0.05
+		
 		}
 	}
 	focus = {
@@ -261,8 +219,8 @@ focus_tree = {
 		prerequisite = {
 			focus = ENG_let_that_lion_roar_start
 		}
-		x = 7
-		y = 1
+		x = 5
+		y = 2
 		ai_will_do = {
 			factor = 10
 		}
@@ -307,7 +265,7 @@ focus_tree = {
 		prerequisite = { focus = ENG_let_that_lion_roar }
 		mutually_exclusive = { focus = ENG_expand_southern_industry }
 		icon = GFX_focus_ARG_capitalize_the_beef_industry
-		x = 1
+		x = 2
 		y = 2
 		relative_position_id = ENG_Provoke_british_patriotism
 		cost = 10
@@ -371,7 +329,7 @@ focus_tree = {
 		prerequisite = { focus = ENG_let_that_lion_roar }
 		mutually_exclusive = { focus = ENG_revitalize_northern_england  }
 		icon = GFX_focus_GER_kdf_wagen
-		x = -1
+		x = 0
 		y = 2
 		relative_position_id = ENG_Provoke_british_patriotism
 		cost = 10
@@ -430,17 +388,16 @@ focus_tree = {
 		id = ENG_industrialise_celtic_areas
 		prerequisite = { focus = ENG_revitalize_northern_england }
 		icon = GFX_focus_AUS_courting_the_princess_of_industry
-		x = 1
+		x = 2
 		y = 3
 		relative_position_id = ENG_Provoke_british_patriotism
 		cost = 10
 		available = {
-			controls_state = 122
 			controls_state = 121
 			controls_state = 133
 			controls_state = 136
 			controls_state = 119
-			controls_state = 119
+			controls_state = 120
 			controls_state = 933
 			controls_state = 123
 			controls_state = 122
@@ -452,6 +409,25 @@ focus_tree = {
 				if = {
 					limit = {
 						122 = {
+							free_building_slots = {
+								building = industrial_complex
+								size > 1
+								include_locked = yes
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			123 = {
+				if = {
+					limit = {
+						123 = {
 							free_building_slots = {
 								building = industrial_complex
 								size > 1
@@ -543,10 +519,10 @@ focus_tree = {
 					}
 				}
 			}
-			119 = {
+			120 = {
 				if = {
 					limit = {
-						119 = {
+						120 = {
 							free_building_slots = {
 								building = industrial_complex
 								size > 1
@@ -613,7 +589,7 @@ focus_tree = {
 		available = {
 			controls_state = 122
 		} 
-		x = -1
+		x = 0
 		y = 3
 		relative_position_id = ENG_Provoke_british_patriotism
 		ai_will_do = {
@@ -621,16 +597,22 @@ focus_tree = {
 		}
 		completion_reward = {
 		add_ideas = welsh_miners_exploited
+		122 = {
+				add_resource = {
+					type = oil
+					amount = 4
+				}
+			}
 		}
 		search_filters = {
-			FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH
+			FOCUS_FILTER_INDUSTRY 
 		}
 	}		
 	focus = {
 		id = ENG_attract_colonial_investors
 		icon = GFX_SOV_aristocratic_investments_ccp_2d_sov_compatibility
 		cost = 5
-		x = -1
+		x = 0
 		ai_will_do = { factor = 1 }
 		y = 5
 		search_filters = {
@@ -659,7 +641,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ENG_Open_our_Markets
 		}
-		x = 1
+		x = 2
 		y = 5
 		relative_position_id = ENG_Provoke_british_patriotism
 		ai_will_do = {
@@ -685,7 +667,7 @@ focus_tree = {
 			focus = ENG_attract_colonial_investors
 			focus = ENG_devaluate_the_pound
 		}
-		x = 0
+		x = 1
 		y = 6
 		relative_position_id = ENG_Provoke_british_patriotism
 		ai_will_do = {
@@ -709,7 +691,7 @@ focus_tree = {
 			focus = ENG_industrialise_celtic_areas
 		}
 		ai_will_do = { factor = 1 }
-		x = 1
+		x = 2
 		y = 4
 		relative_position_id = ENG_Provoke_british_patriotism
 		bypass = { has_idea = free_trade }
@@ -741,7 +723,7 @@ focus_tree = {
 		id = ENG_increase_military_budget
 		icon = GFX_focus_FIN_increase_military_budget
 		relative_position_id = ENG_Provoke_british_patriotism
-		x = -1
+		x = 0
 		y = 4
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
@@ -769,11 +751,7 @@ focus_tree = {
 				limit = {
 					has_idea = partial_economic_mobilisation
 				}
-				add_political_power = 150
-				add_offsite_building = {
-					type = arms_factory
-					level = 5
-				}
+				add_political_power = 150	
 			}
 			else = {
 				add_ideas = partial_economic_mobilisation
@@ -987,7 +965,7 @@ focus_tree = {
 		continue_if_invalid = yes
 		available_if_capitulated = yes
 
-		icon = GFX_goal_generic_construct_military
+		icon = GFX_focus_generic_air_defense
 		x = 3
 		y = 1
 		relative_position_id = ENG_let_that_lion_roar_start
@@ -1232,7 +1210,9 @@ focus_tree = {
 			}
 		}
 	}
+    
 
+	
 	focus = {
 		id = radar_focus
 		prerequisite = { focus = air_defense_focus }
@@ -1261,13 +1241,16 @@ focus_tree = {
 	focus = {
 		id = shadow_scheme_focus
 		prerequisite = {  focus = ENG_let_that_lion_roar }
+		prerequisite = {
+			focus = radar_focus
+		}
 		available = {
 			if = {
 				limit = {
 					has_dlc = "Man the Guns"
 				}
 				OR = {
-					threat > 0.05
+					threat > 0.10
 					has_war = yes
 					has_idea = ENG_no_further_appeasement_idea
 					NOT = { has_government = democratic }
@@ -1278,7 +1261,7 @@ focus_tree = {
 					NOT = { has_dlc = "Man the Guns" }
 				}
 				OR = {
-					threat > 0.05
+					threat > 0.10	
 					has_war = yes
 					NOT = { has_government = democratic }
 				}
@@ -1288,8 +1271,8 @@ focus_tree = {
 		continue_if_invalid = yes
 		available_if_capitulated = yes
 		
-		icon = GFX_goal_generic_construct_mil_factory
-		x = -3	
+		icon = GFX_focus_generic_reorient_production
+		x = -2
 		y = 1
 		relative_position_id = ENG_let_that_lion_roar
 		cost = 10
@@ -1307,9 +1290,9 @@ focus_tree = {
 	focus = {
 		id = uk_extra_tech_slot
 		text = extra_tech_slot
-		icon = GFX_focus_research
+		icon = GFX_focus_SWE_education_reform
 		prerequisite = { focus = shadow_scheme_focus }
-		x = -3
+		x = -2
 		y = 2
 		relative_position_id = ENG_let_that_lion_roar
 		cost = 10
@@ -1350,7 +1333,7 @@ focus_tree = {
 
 		continue_if_invalid = yes
 
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_focus_generic_commonwealth_build_infantry
 		x = -7
 		y = 1
 		relative_position_id = ENG_let_that_lion_roar_start
@@ -1517,6 +1500,13 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_ideas = british_arms_discount
+			add_equipment_subsidy = {
+				cic = 1500
+				equipment_type = infantry_equipment
+				seller_tags = {
+					ENG
+				}
+			}
 		}
 	}
 	
@@ -1631,7 +1621,7 @@ focus_tree = {
 		id = UK_nuclear_program
 		prerequisite = { focus = UK_secret_focus focus = radar_focus }
 		icon = GFX_focus_generic_nuclear_development
-		x = 0
+		x = 1
 		y = 2
 		relative_position_id = maud_focus
 		cost = 10
@@ -1682,7 +1672,7 @@ focus_tree = {
 	focus = {
 		id = air_rearmament_focus
 		prerequisite = { focus = general_rearmament_focus }
-		icon = GFX_goal_generic_air_doctrine
+		icon = GFX_focus_HUN_establish_the_mavag_aircraft_factory
 		x = -2
 		y = 2
 		relative_position_id = general_rearmament_focus
@@ -1917,7 +1907,7 @@ focus_tree = {
 	focus = {
 		id = fighter_command_focus
 		prerequisite = { focus = air_rearmament_focus }
-		icon = GFX_goal_generic_air_fighter
+		icon = GFX_focus_usa_escort_fighters
 		x = -1
 		y = 2
 		relative_position_id = air_rearmament_focus
@@ -1966,7 +1956,7 @@ focus_tree = {
 	focus = {
 		id = bomber_command_focus
 		prerequisite = { focus = air_rearmament_focus }
-		icon = GFX_goal_generic_air_bomber
+		icon = GFX_focus_SWE_marauder_bombers
 		x = 0
 		y = 1
 		relative_position_id = air_rearmament_focus
@@ -2063,7 +2053,7 @@ focus_tree = {
 	}focus = {
 		id = aircraft_production_focus
 		prerequisite = { focus = fighter_command_focus focus = bomber_command_focus focus = coastal_command_focus }
-		icon = GFX_goal_generic_air_production
+		icon = GFX_focus_SMB_purchase_aircraft
 		x = 1
 		y = 1
 		relative_position_id = fighter_command_focus
@@ -2081,7 +2071,7 @@ focus_tree = {
 	focus = {
 		id = uk_jet_focus
 		prerequisite = { focus = aircraft_production_focus }
-		icon = GFX_goal_generic_build_airforce
+		icon = GFX_focus_generic_jet_planes
 		x = 0
 		y = 1
 		relative_position_id = aircraft_production_focus
@@ -2111,7 +2101,7 @@ focus_tree = {
 	focus = {
 		id = naval_rearmament_focus
 		prerequisite = { focus = general_rearmament_focus }
-		icon = GFX_goal_generic_construct_naval_dockyard 
+		icon = GFX_goal_generic_navy_battleship
 		x = 2
 		y = 2
 		relative_position_id = general_rearmament_focus
@@ -2211,7 +2201,7 @@ focus_tree = {
 	focus = {
 		id = ENG_anti_non_contact_committee
 		prerequisite = { focus = naval_rearmament_focus }
-		icon = GFX_goal_generic_occupy_states_coastal
+		icon = GFX_focus_generic_mine_warfare
 		x = 2
 		y = 1
 		relative_position_id = naval_rearmament_focus
@@ -2381,7 +2371,7 @@ focus_tree = {
 	focus = {
 		id = uk_waves_focus
 		prerequisite = { focus = naval_rearmament_focus }
-		icon = GFX_goal_generic_navy_doctrines_tactics
+		icon = GFX_focus_ger_accept_british_naval_dominance
 		x = 1
 		y = 2
 		relative_position_id = naval_rearmament_focus
@@ -2455,7 +2445,7 @@ focus_tree = {
 	focus = {
 		id = uk_amphibious_focus
 		prerequisite = { focus = naval_rearmament_focus }
-		icon = GFX_goal_generic_amphibious_assault
+		icon = GFX_focus_generic_naval_invasion_tank
 		x = 0
 		y = 1
 		relative_position_id = naval_rearmament_focus

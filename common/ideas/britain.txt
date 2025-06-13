@@ -57,10 +57,9 @@ ideas = {
 
 			modifier = {
 				production_speed_buildings_factor = 0.1
-				consumer_goods_factor = -0.075
-				industrial_capacity_factory = 0.1
+				consumer_goods_factor = -0.10
+				industrial_capacity_factory = 0.05
 				political_power_cost = 0
-				global_building_slots_factor = 0.25
 				}	
 			
 		}
@@ -303,8 +302,8 @@ ideas = {
 			picture = prc_low_popular_support3
 			
 			modifier = {
-				local_resources_factor = 0.1	
-		production_speed_buildings_factor = 0.15
+		local_resources_factor = 0.1	
+		fuel_gain_factor = 0.15
 		stability_factor = -0.1
 			}
 		}
