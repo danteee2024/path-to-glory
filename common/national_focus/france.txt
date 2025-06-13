@@ -3571,57 +3571,39 @@ focus = {
 		completion_reward = {
 			if = {
 				limit = {
-					has_dlc = "La Resistance"
+					date < 1941.2.21 #TODO_GABRIEL: coordinate with Drikus for death events
 				}
-				if = {
-					limit = {
-						OR = {
-							NOT = { has_global_flag = SPB_alfonso_xiii_dead }
-							date < 1941.2.21
-						}
+				create_country_leader = {
+					name = "Alphonse I"
+					desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+					picture = GFX_portrait_SPA_alfonso_xiii
+					expire = "1965.1.1"
+					ideology = despotism
+					traits = {
+						
 					}
-					create_country_leader = {
-						name = "Alphonse I"
-						desc = "POLITICS_ALFONSO_XIII_DESC"
-						picture = GFX_portrait_SPA_alfonso_xiii
-						expire = "1965.1.1"
-						ideology = absolute_monarchism
-						traits = {
-							disgraced_monarch
-							trait_opposed_to_communism
-						}
-					}
-				}
-				else = {
-					create_country_leader = {
-						name = "Jacques II"
-						desc = "POLITICS_JAIME_IV_DESC"
-						picture = GFX_portrait_fra_infante_jaime
-						expire = "1965.1.1"
-						ideology = absolute_monarchism
-						traits = {
-							the_legitimist
-							trait_opposed_to_communism
-						}
-					}
-				}
-				set_politics = { ruling_party = neutrality }
-				hidden_effect = {
-					news_event = { id = lar_news.8 days = 3 random_days = 5 }
 				}
 			}
 			else = {
 				create_country_leader = {
-					name = "Jean III"
-					desc = "POLITICS_JUAN_III_DESC"
-					picture = "gfx/leaders/SPR/portrait_SPR_Juan_III.dds"
+					name = "Jacques II"
+					desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+					picture = GFX_portrait_fra_infante_jaime
 					expire = "1965.1.1"
-					ideology = absolute_monarchism
+					ideology = despotism
 					traits = {
-						trait_opposed_to_communism
+						
 					}
 				}
-				set_politics = { ruling_party = neutrality }
+			}
+			set_party_name = {
+				ideology = neutrality
+				long_name = FRA_legitimist_party_long
+				name = FRA_legitimist_party
+			}
+			set_politics = { ruling_party = neutrality }
+			hidden_effect = {
+				news_event = { id = lar_news.8 days = 3 random_days = 5 }
 			}
 			mark_focus_tree_layout_dirty = yes
 		}
@@ -3666,62 +3648,47 @@ focus = {
 			factor = 6
 		}
 		completion_reward = {
-			country_event = {
-				id = france.123
-			}
-			if = {
-				limit = {
-					NOT = { has_government = neutrality }
-				}
-				set_politics = {
-					ruling_party = neutrality
-					elections_allowed = no
-				}
-			}
-			else = {
-				add_political_power = 100
-			}
-			if = {
+				if = {
 				limit = {
 					date < 1940.8.25
 				}
 				create_country_leader = {
 					name = "Jean III"
-					desc = "POLITICS_JEAN_DORLEANS_DESC"
-					picture = "gfx/leaders/FRA/Portrait_France_Jean_dOrleans.dds"
+					desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+					picture = GFX_portrait_fra_jean_duke_of_guise
 					expire = "1965.1.1"
-					ideology = absolute_monarchism
+					ideology = moderatism
 					traits = {
 						duke_of_orleans
-						trait_opposed_to_communism
 					}
 				}
 			}
 			else = {
 				create_country_leader = {
 					name = "Henri VI"
-					desc = "POLITICS_HENRI_ORLEANS_DESC"
-					picture = "gfx/leaders/FRA/Portrait_France_Henri_Orleans.dds"
+					desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+					picture = GFX_portrait_fra_henry_count_of_paris
 					expire = "1965.1.1"
-					ideology = absolute_monarchism
+					ideology = moderatism
 					traits = {
 						count_of_paris
-						trait_opposed_to_communism
-
 					}
 				}
 			}
+			set_party_name = {
+				ideology = neutrality
+				long_name = FRA_orleanist_party_long
+				name = FRA_orleanist_party
+			}
+			set_politics = { ruling_party = neutrality }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			set_cosmetic_tag = FRA_ORLEANS
 			hidden_effect = {
-				set_cosmetic_tag = FRA_KINGDOM
+				news_event = { id = lar_news.8 days = 3 random_days = 5 }
 			}
-			if = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
-				hidden_effect = {
-					news_event = { id = lar_news.8 days = 3 random_days = 5 }
-				}
-			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = charles_maurras
 			mark_focus_tree_layout_dirty = yes
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3766,47 +3733,37 @@ focus = {
 			factor = 3
 		}
 		completion_reward = {
-			country_event = {
-				id = france.148
-			}
-			if = {
-				limit = {
-					NOT = { has_government = neutrality }
-				}
-				set_politics = {
-					ruling_party = neutrality
-					elections_allowed = yes
-				}
-			}
-			else = {
-				add_political_power = 100
-			}
+			mark_focus_tree_layout_dirty = yes
 			create_country_leader = {
 				name = "Napoléon VI"
-				desc = "POLITICS_NAPOLEON_VI_DESC"
-				picture = "portrait_France_Napoleon_VI.dds"
+				desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+				picture = GFX_portraits_fra_napoleon_vi
 				expire = "1965.1.1"
-				ideology = absolute_monarchism
+				ideology = despotism
 				traits = {
-					trait_opposed_to_communism
-					fierce_patriot
+					
 				}
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			set_party_name = {
 				ideology = neutrality
 				long_name = FRA_bonepartist_party_long
 				name = FRA_bonepartist_party
 			}
-			hidden_effect = {
-				set_cosmetic_tag = FRAEMPIRE
-				hidden_effect = {
-					news_event = {
-						hours = 6
-						id = r56.news_event.22
-					}
-				}				
+			set_politics = { ruling_party = neutrality }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					is_in_faction = no
+				}
+				set_rule = { can_create_factions = yes }
+				create_faction = FRA_continental_system
 			}
-			mark_focus_tree_layout_dirty = yes
+			custom_effect_tooltip = generic_skip_one_line_tt
+			hidden_effect = {
+				news_event = { id = lar_news.8 days = 3 random_days = 5 }
+			}
+			set_cosmetic_tag = FRA_THIRD_EMPIRE
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}

@@ -4119,186 +4119,42 @@ ideas = {
 	industrial_concern = {	
 		
 		famh = {
+						
 			allowed = {
 				original_tag = FRA
 			}
-			available = {
-				NOT = { has_country_flag = famh_nat }
-			}
+						
 			research_bonus = {
 				industry = 0.15
 			}
+			
 			traits = { industrial_concern }
+
+			ai_will_do = {
+				factor = 2
+			}
 		}
-		
-		radiola = { #MOD
+
+		sfr = {
+
+			picture = generic_radio_concern
+						
 			allowed = {
 				original_tag = FRA
 			}
-			available = {
-				NOT = { has_country_flag = radiola_nat }
-			}
-			research_bonus = {
-				electronics = 0.075
-			}
-			cost = 75
-			traits = { electronics_developer }
-		}
-		
-		csf = { #MOD
-			allowed = {
-				original_tag = FRA
-			}
-			available = {
-				NOT = { has_country_flag = csf_nat }
-			}	
+						
 			research_bonus = {
 				electronics = 0.15
 			}
+			
 			traits = { electronics_concern }
-		}
-
-		cfp = { #MOD
-			allowed = {
-				original_tag = FRA
-			}
-			available = {
-				NOT = { has_country_flag = cfp_nat }
-			}
-			research_bonus = {
-				industry = 0.10
-				refining_tech = 0.25
-			}
-			modifier = {
-				fuel_gain_factor = 0.1
-			}	
-			traits = { refinery_concern }
-		}
-		
-		normandie = { #MOD
-			allowed = { 
-				original_tag = FRA  
-			}
-			available = {
-				NOT = { has_country_flag = normandie_nat }
-			}
-			research_bonus = {
-				industry = 0.075
-			}			
-			traits = { construction_concern }
-			modifier = {
-				production_speed_arms_factory_factor = 0.07
-				production_speed_industrial_complex_factor = 0.07
-			}
-		}
-		
-		vetra = { #MOD
-			allowed = { 
-				original_tag = FRA  
-			}
-			available = {
-				NOT = { has_country_flag = vetra_nat }
-			}
-			research_bonus = {
-				industry = 0.075
-			}			
-			traits = { construction_concern }
-			modifier = {
-				production_speed_infrastructure_factor = 0.1
-				production_speed_synthetic_refinery_factor = 0.05
-				production_speed_dockyard_factor = 0.1
-			}
-		}
-		
-		bull = { #MOD
-			allowed = { 
-				original_tag = FRA  
-			}
-			available = {
-				NOT = { has_country_flag = bull_nat }
-			}
-			traits = { construction_concern }
-			research_bonus = {
-				electronics = 0.10
-			}
-			modifier = {
-				production_speed_radar_station_factor = 0.1
-				production_speed_nuclear_reactor_factor = 0.1
-			}
-		}
-		
-		poulenc = { #MOD
-			allowed = { 
-				original_tag = FRA 
-			}
-			available = {
-				NOT = { has_country_flag = poulenc_nat }
-			}
-			traits = { refinery_concern }
-			research_bonus = {
-				industry = 0.05
-				synth_resources = 0.12
-			}
-			modifier = {
-				production_speed_synthetic_refinery_factor = 0.1
-			}
-		}
-		FRA_fonderie_de_ruelle = {
-
-			picture = generic_artillery_manufacturer_2
-			
-			allowed = {
-				original_tag = FRA
-			}
-			
-			research_bonus = {
-				industry = 0.10
-				naval_gunnery_tech = 0.15
-			}
-			
-			traits = { industrial_concern }
-			
-			modifier = {
-				production_speed_steel_mill_factor = 0.10 
-			}
-			ai_will_do = {
-				factor = 0
-			}			
-		}		
-		
-	}
-
-	theorist = {
-		
-		EFR_maxime_weygand = {
-			ledger = army
-				
-			
-			
-			allowed = {
-					AND = {	
-					#	original_tag = EFR
-					}	
-			
-			}
-			research_bonus = {
-				land_doctrine = 0.10
-			}
 
 			ai_will_do = {
-				factor = 1
-				modifier = {
-					factor = 0
-
-					GER = { is_ai = yes }
-					date < 1939.1.1
-				}
+				factor = 0.5
 			}
-
-			cost = 150
-			
-			traits = { military_theorist }
 		}
+
 	}
 }
+
 
