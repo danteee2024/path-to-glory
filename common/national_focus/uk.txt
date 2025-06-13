@@ -577,7 +577,7 @@ focus_tree = {
 				}
 			}
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}	
 	focus = {
 		id = ENG_amplify_the_exploitation_of_welsh_coal
@@ -656,7 +656,7 @@ focus_tree = {
 			}
 		}
 		search_filters = {
-			FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH
+			FOCUS_FILTER_INDUSTRY 
 		}
 	}	
 	focus = {
@@ -680,7 +680,7 @@ focus_tree = {
 			}
 					}
 		search_filters = {
-			FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH
+			FOCUS_FILTER_INDUSTRY 
 		}
 	}	
 	focus = {
@@ -695,7 +695,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = ENG_Provoke_british_patriotism
 		bypass = { has_idea = free_trade }
-		
+		search_filters = { FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 				#trade bonuses
 				if = {
@@ -726,7 +726,7 @@ focus_tree = {
 		x = 0
 		y = 4
 		
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_INDUSTRY}
 		
 
 		cost = 10
@@ -791,9 +791,7 @@ focus_tree = {
 				add_idea = motorized_army_three
 			}
 					}
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH
-		}
+		
 	}
 	focus = {
 		id = ENG_artillery_focus
@@ -6033,7 +6031,7 @@ focus_tree = {
 						is_subject_of = ENG
 					}
 				}
-				add_political_power = 25
+				add_political_power = 75
 				add_ideas = ENG_colonial_elite
 			}
 		}
@@ -6058,7 +6056,6 @@ focus_tree = {
 				RAJ = { is_in_faction_with = ENG }
 				AST = { is_in_faction_with = ENG }
 				NZL = { is_in_faction_with = ENG }
-				RHS = { is_in_faction_with = ENG }
 			}
 		}
 
@@ -6073,7 +6070,7 @@ focus_tree = {
 						is_subject_of = ROOT
 					}
 				}
-				add_ideas = ENG_british_commonwealth_air_training_plan_1
+				add_ideas = ENG_british_commonwealth_air_training_plan
 			}
 		}
 	}
@@ -6610,7 +6607,7 @@ focus_tree = {
 
 		continue_if_invalid = no
 
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_focus_SWE_the_lion_of_the_north
 
 		x = 0
 		y = 4

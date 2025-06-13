@@ -106,27 +106,7 @@ ideas = {
 				conversion_cost_civ_to_mil_factor = -0.20
 			}
 		}
-		ENG_british_commonwealth_air_training_plan_1 = {
-			name = GBR_british_commonwealth_air_training_plan
-			picture = man_five_year_plan_air #generic_air_bonus
-			allowed = {	always = no	}
-			available = {
-				OR = {
-					tag = ENG
-					is_subject_of = ENG
-				}
-			}			
-			removal_cost = -1
-			modifier = {
-				experience_gain_air_factor = 0.05
-				air_ace_generation_chance_factor = 0.05
-
-				air_range_factor = 0.05
-				air_accidents_factor = -0.05
-				air_weather_penalty = -0.05
-				air_night_penalty = -0.05
-			}
-		}
+		
 		churchills_influence = {
 			picture = tur_etatism
 			allowed = {
@@ -836,7 +816,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				research_speed_factor = 0.025
+				research_speed_factor = 0.05
 			}
 		}
 		
@@ -2375,20 +2355,7 @@ ideas = {
 				conversion_cost_civ_to_mil_factor = -0.20
 			}
 		}
-		ENG_british_commonwealth_air_training_plan_1 = {
-			name = GBR_british_commonwealth_air_training_plan
-			picture = man_five_year_plan_air #generic_air_bonus
-			allowed = {	always = no	}
-			available = {
-				
-			}			
-			removal_cost = -1
-			modifier = {
-				air_ace_generation_chance_factor = 0.05
-				air_accidents_factor = -0.05
-				experience_gain_air = 0.02
-			}
-		}
+		
 		ENG_fortify_the_empire_2 = {
 
 			name = ENG_fortify_the_empire
