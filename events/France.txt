@@ -353,13 +353,6 @@ country_event = {
 			}
 		}
 		set_party_name = { ideology = fascism long_name = FRA_fascism_party2_long name = FRA_fascism_party2 }
-		if = {
-			limit = {
-				has_completed_focus = FRA_support_ppf
-			}
-			retire_country_leader = yes
-			promote_character = FRA_jacques_doriot
-		}
 	}
 }
 
