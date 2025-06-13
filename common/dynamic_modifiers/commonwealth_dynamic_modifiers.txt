@@ -96,8 +96,8 @@ Commonwealth_democratic_alliance_leader_dmod = {
 	remove_trigger = { Commonwealth_basic_joint_trigger = no }
 
 	democratic_drift = 0.025
-	production_speed_buildings_factor = 0.15
-	consumer_goods_factor = 0.2
+	consumer_goods_factor = 0.15
+	production_speed_buildings_factor = 0.05
 	research_speed_factor = Commonwealth_democratic_alliance_leader_dmod_research # 0.075 
 	training_time_factor = Commonwealth_democratic_alliance_leader_dmod_training_time # 0.12
 	production_factory_start_efficiency_factor = Commonwealth_democratic_alliance_leader_dmod_prod_eff_start # 0.2
@@ -111,8 +111,8 @@ Commonwealth_democratic_alliance_member_dmod = {
 	remove_trigger = { Commonwealth_basic_joint_trigger = no }
 
 	democratic_drift = 0.015
-	production_speed_buildings_factor = 0.10
-	consumer_goods_factor = 0.12
+	production_speed_buildings_factor = 0.05
+	consumer_goods_factor = 0.05
 	research_speed_factor = Commonwealth_democratic_alliance_member_dmod_research # 0.05 
 	training_time_factor = Commonwealth_democratic_alliance_member_dmod_training_time # 0.08
 	production_factory_start_efficiency_factor = Commonwealth_democratic_alliance_member_dmod_prod_eff_start # 0.15	
@@ -155,7 +155,7 @@ Commonwealth_monarchist_alliance_leader_dmod = {
 	remove_trigger = { Commonwealth_basic_joint_trigger = no }
 
 	neutrality_drift = 0.015
-	political_power_gain = 0.7
+	political_power_gain = 0.75
 	research_speed_factor = -0.03
 	production_factory_efficiency_gain_factor = Commonwealth_monarchist_alliance_leader_dmod_prod_eff_gain # 0.25
 	production_speed_buildings_factor = Commonwealth_monarchist_alliance_leader_dmod_construction # -0.1

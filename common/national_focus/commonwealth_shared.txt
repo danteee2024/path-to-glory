@@ -339,14 +339,14 @@ joint_focus = {
 			}
 			else_if = {
 				limit = { Commonwealth_communist_alliance_viable = yes }
-				add_to_variable = { Commonwealth_communist_alliance_leader_dmod_max_eff = 0.15 }
+				add_to_variable = { Commonwealth_communist_alliance_leader_dmod_max_eff = 0.05 }
 				add_to_variable = { Commonwealth_communist_alliance_leader_dmod_max_planning = -0.1 }
 				add_to_variable = { Commonwealth_communist_alliance_member_dmod_max_eff = 0.1 }
 				add_to_variable = { Commonwealth_communist_alliance_member_dmod_max_planning = -0.08 }
 			}
 			else_if = {
 				limit = { Commonwealth_monarchist_alliance_viable = yes }
-				add_to_variable = { Commonwealth_monarchist_alliance_leader_dmod_prod_eff_gain = 0.25 } 
+				add_to_variable = { Commonwealth_monarchist_alliance_leader_dmod_prod_eff_gain = 0.10 } 
 				add_to_variable = { Commonwealth_monarchist_alliance_leader_dmod_construction = -0.1 } 
 				add_to_variable = { Commonwealth_monarchist_alliance_member_dmod_prod_eff_gain = 0.17 } 
 				add_to_variable = { Commonwealth_monarchist_alliance_member_dmod_construction = -0.07 } 
@@ -374,7 +374,7 @@ joint_focus = {
 				limit = { Commonwealth_communist_alliance_viable = yes }
 				add_to_variable = {
 					var = Commonwealth_communist_alliance_leader_dmod_max_eff
-					value = 0.15 
+					value = 0.05 
 					tooltip = production_factory_max_efficiency_factor_tt
 				}
 				add_to_variable = {
@@ -387,7 +387,7 @@ joint_focus = {
 				limit = { Commonwealth_monarchist_alliance_viable = yes }
 				add_to_variable = {
 					var = Commonwealth_monarchist_alliance_leader_dmod_prod_eff_gain
-					value = 0.2
+					value = 0.10
 					tooltip = production_factory_efficiency_gain_factor_tt
 				}
 				add_to_variable = {
@@ -419,7 +419,7 @@ joint_focus = {
 				limit = { Commonwealth_communist_alliance_viable = yes }
 				add_to_variable = {
 					var = Commonwealth_communist_alliance_member_dmod_max_eff
-					value = 0.1 
+					value = 0.05
 					tooltip = production_factory_max_efficiency_factor_tt
 				}
 				add_to_variable = {
@@ -432,7 +432,7 @@ joint_focus = {
 				limit = { Commonwealth_monarchist_alliance_viable = yes }
 				add_to_variable = {
 					var = Commonwealth_monarchist_alliance_member_dmod_prod_eff_gain
-					value = 0.17
+					value = 0.10
 					tooltip = production_factory_efficiency_gain_factor_tt
 				}
 				add_to_variable = {
@@ -476,7 +476,7 @@ joint_focus = {
 		hidden_effect = {
 			if = {
 				limit = {Commonwealth_democratic_alliance_viable = yes }
-				add_to_variable = { Commonwealth_democratic_alliance_leader_dmod_prod_eff_start = 0.2}
+				add_to_variable = { Commonwealth_democratic_alliance_leader_dmod_prod_eff_start = 0.10}
 				add_to_variable = { Commonwealth_democratic_alliance_leader_dmod_war_support = -0.15 }
 				add_to_variable = { Commonwealth_democratic_alliance_member_dmod_prod_eff_start = 0.15 }
 				add_to_variable = { Commonwealth_democratic_alliance_member_dmod_war_support = -0.1 }
@@ -490,7 +490,7 @@ joint_focus = {
 			}
 			else_if = {
 				limit = { Commonwealth_monarchist_alliance_viable = yes }
-				add_to_variable = { Commonwealth_monarchist_alliance_leader_dmod_max_org = 0.2 } 
+				add_to_variable = { Commonwealth_monarchist_alliance_leader_dmod_max_org = 0.05 } 
 				add_to_variable = { Commonwealth_monarchist_alliance_leader_dmod_drift_defense = -0.15 } 
 				add_to_variable = { Commonwealth_monarchist_alliance_member_dmod_max_org = 0.12 } 
 				add_to_variable = { Commonwealth_monarchist_alliance_member_dmod_drift_defense = -0.1 } 
@@ -505,7 +505,7 @@ joint_focus = {
 				limit = { Commonwealth_democratic_alliance_viable = yes }
 				add_to_variable = {
 					var = Commonwealth_democratic_alliance_leader_dmod_prod_eff_start
-					value = 0.2
+					value = 0.10
 					tooltip = production_factory_start_efficiency_factor_tt
 				}
 				add_to_variable = {
@@ -531,7 +531,7 @@ joint_focus = {
 				limit = { Commonwealth_monarchist_alliance_viable = yes }
 				add_to_variable = {
 					var = Commonwealth_monarchist_alliance_leader_dmod_max_org
-					value = 0.2
+					value = 0.05
 					tooltip = army_org_factor_tt
 				}
 				add_to_variable = {
@@ -576,7 +576,7 @@ joint_focus = {
 				limit = { Commonwealth_monarchist_alliance_viable = yes }
 				add_to_variable = {
 					var = Commonwealth_monarchist_alliance_member_dmod_max_org
-					value = 0.12
+					value = 0.10
 					tooltip = army_org_factor_tt
 				}
 				add_to_variable = {
@@ -684,99 +684,9 @@ joint_focus = {
 }
 
 joint_focus = {
-	id = Commonwealth_Egyptian_Delta_Fortress
-	
-	icon = GFX_goal_generic_fortify_city
-	
-	prerequisite = { focus = Commonwealth_joint_military_exercises }
-	x = 1
-	y = 1
-	relative_position_id = Commonwealth_joint_military_exercises
-	cost = 5
-
-	available = {
-
-	}
-
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-
-	joint_trigger = {
-  		Commonwealth_basic_joint_trigger = yes 
-	}
-
-	completion_reward_joint_originator = {
-		if = {
-			random_owned_state = {
-				limit = {	
-					is_controlled_by = ROOT
-					free_building_slots = {
-					 	building = arms_factory
-					 	size > 1 
-					 	include_locked = yes 
-					} 
-				}
-				add_extra_state_shared_building_slots = 2 
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			every_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					bunker > 0
-				}
-				
-				add_building_construction = {
-					type = bunker 
-					level = 3
-					province = {
-  						all_provinces = yes
-  						limit_to_victory_point > 0
-  						limit_to_coastal = yes
-  					}
-				}
-			}
-		}
-	}
-
-	completion_reward = {
-		EGY = {
-			random_owned_state = {
-				limit = {	
-					is_controlled_by = EGY
-				}
-				add_extra_state_shared_building_slots = 2 
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			every_owned_state = {
-				limit = {	
-					is_controlled_by = EGY
-				}
-				add_building_construction = {
-					type = bunker 
-					level = 3 
-					province = {
-  						all_provinces = yes
-  						limit_to_victory_point > 0
-  						limit_to_coastal = yes
-  					}
-				}
-			}
-		}
-	}
-}
-
-joint_focus = {
 	id = Commonwealth_unified_recruitment
 	
-	icon = GFX_focus_chi_army_reform
-	
+	icon = GFX_focus_CONGO_copper_cartridges
 	prerequisite = { focus = Commonwealth_joint_military_exercises }
 
 	x = -1
@@ -852,7 +762,7 @@ joint_focus = {
 joint_focus = {
 	id = Commonwealth_mechanized_army
 	
-	icon = GFX_goal_generic_army_tanks
+	icon = GFX_focus_generic_heavy_tank
 	
 	prerequisite = { focus = Commonwealth_unified_recruitment }
 	mutually_exclusive = { focus = Commonwealth_infantry_first }
@@ -920,7 +830,7 @@ joint_focus = {
 joint_focus = {
 	id = Commonwealth_infantry_first
 	
-	icon = GFX_goal_generic_allies_build_infantry
+	icon = GFX_focus_ETH_freedom_at_gunpoint
 	
 	prerequisite = { focus = Commonwealth_unified_recruitment }
 	mutually_exclusive = { focus = Commonwealth_mechanized_army }
@@ -1382,7 +1292,7 @@ joint_focus = {
 joint_focus = {
 	id = Commonwealth_naval_research_institute
 	
-	icon = GFX_goal_generic_navy_doctrines_tactics
+	icon = GFX_focus_generic_navy_research_bonus
 	
 	prerequisite = { focus = Commonwealth_Guard_Strait_Of_Malacca focus = Commonwealth_Guard_The_Suez }
 
@@ -1507,7 +1417,7 @@ joint_focus = {
 joint_focus = {
 	id = Commonwealth_amphibious_forces
 	
-	icon = GFX_goal_generic_amphibious_assault
+	icon = GFX_focus_generic_naval_invasion
 	
 	prerequisite = { focus = Commonwealth_naval_officer_academy }
 	prerequisite = { focus = Commonwealth_joint_military_exercises }
@@ -1586,8 +1496,7 @@ joint_focus = {
 joint_focus = {
 	id = Commonwealth_Commonwealth_airforce
 	
-	icon = GFX_goal_generic_build_airforce
-
+	icon = GFX_focus_generic_multi_role_aircraft
 	dynamic = yes 
 	
 	prerequisite = { focus = Commonwealth_command }
@@ -2515,7 +2424,7 @@ joint_focus = {
 joint_focus = {
 	id = Commonwealth_Commonwealth_construction_developments
 	
-	icon = GFX_SOV_rebuild_the_nation_ccp_2d_sov_compatibility
+	icon = GFX_focus_generic_modernize_industry
 	
 	prerequisite = { focus = Commonwealth_Commonwealth_research }
 
@@ -2559,7 +2468,7 @@ joint_focus = {
 joint_focus = {
 	id = Commonwealth_Commonwealth_industry
 
-	icon = GFX_goal_generic_construct_civ_factory
+	icon = GFX_focus_BRA_amazon_colonization
 
 	dynamic = yes 
 	
@@ -2634,7 +2543,7 @@ joint_focus = {
 joint_focus = {
 	id = Commonwealth_civilian_contributions
 	
-	icon = GFX_goal_generic_construction
+	icon = GFX_focus_ARG_crackdown_on_corruption
 	
 	prerequisite = { focus = Commonwealth_Commonwealth_industry }
 
@@ -2677,7 +2586,7 @@ joint_focus = {
 joint_focus = {
 	id = Commonwealth_fill_the_infrastructure_gaps
 	
-	icon = GFX_goal_generic_construct_infrastructure
+	icon = GFX_focus_generic_public_works
 	
 	prerequisite = { focus = Commonwealth_civilian_contributions }
 	mutually_exclusive = { focus = Commonwealth_develop_resources }
@@ -2736,7 +2645,7 @@ joint_focus = {
 joint_focus = {
 	id = Commonwealth_develop_resources
 	
-	icon = GFX_focus_generic_mining_industry
+	icon = GFX_focus_CONGO_bakwanga_mine
 	
 	prerequisite = { focus = Commonwealth_civilian_contributions }
 	mutually_exclusive = { focus = Commonwealth_fill_the_infrastructure_gaps }
@@ -2928,8 +2837,7 @@ joint_focus = {
 joint_focus = {
 	id = Commonwealth_research_investments 
 	
-	icon = GFX_focus_research2
-	
+	icon = GFX_focus_generic_industrialists
 	prerequisite = { focus = Commonwealth_materiel_design }
 
 	x = 0
@@ -2964,7 +2872,7 @@ joint_focus = {
 joint_focus = {
 	id = Commonwealth_nuclear_research
 	
-	icon = GFX_focus_wonderweapons
+	icon = GFX_focus_generic_nuclear_development
 	
 	prerequisite = { focus = Commonwealth_Commonwealth_industry }
 	mutually_exclusive = { focus = Commonwealth_Commonwealth_rocketry }
@@ -3086,8 +2994,7 @@ joint_focus = {
 joint_focus = {
 	id = Commonwealth_Commonwealth_rocketry
 	
-	icon = GFX_focus_rocketry
-	
+	icon = GFX_focus_generic_university_3
 	prerequisite = { focus = Commonwealth_research_investments }
 	prerequisite = { focus = Commonwealth_Commonwealth_military_industry }
 	mutually_exclusive = { focus = Commonwealth_nuclear_research }
@@ -3261,7 +3168,7 @@ joint_focus = {
 joint_focus = {
 	id = Commonwealth_standarized_parts
 	
-	icon = GFX_goal_generic_small_arms
+	icon = GFX_focus_generic_military_industry
 	
 	prerequisite = { focus = Commonwealth_Commonwealth_military_industry }
 
@@ -3324,7 +3231,7 @@ joint_focus = {
 joint_focus = {
 	id = Commonwealth_military_industry_hub
 	
-	icon = GFX_goal_generic_construct_mil_factory
+	icon = GFX_focus_AUS_raid_military_storages
 	
 	prerequisite = { focus = Commonwealth_standarized_parts }
 	mutually_exclusive = { focus = Commonwealth_ad_hoc_military_industry }
@@ -3422,7 +3329,7 @@ joint_focus = {
 joint_focus = {
 	id = Commonwealth_ad_hoc_military_industry
 	
-	icon = GFX_goal_generic_production
+	icon = GFX_focus_AUS_disregard_the_treaties
 	
 	prerequisite = { focus = Commonwealth_standarized_parts }
 	mutually_exclusive = { focus = Commonwealth_military_industry_hub }

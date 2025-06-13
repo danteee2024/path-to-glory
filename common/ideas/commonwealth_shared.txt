@@ -226,8 +226,8 @@ ideas = {
 
 		modifier = {
 			max_command_power_mult = 0.1
-			army_org_regain = 0.15
-			army_speed_factor = 0.10
+			army_org_regain = 0.05
+			army_speed_factor = 0.05
 		} 
 
 	}
@@ -303,7 +303,7 @@ ideas = {
 
 		modifier = {
 			consumer_goods_factor = -0.05
-			production_speed_industrial_complex_factor = 0.15
+			production_speed_industrial_complex_factor = 0.05
 			faction_trade_opinion_factor = 0.25
 		}
 
@@ -319,7 +319,7 @@ ideas = {
 		}
 
 		modifier = {
-			production_speed_buildings_factor = 0.15
+			production_speed_buildings_factor = 0.05
 		}
 	}
 
@@ -386,7 +386,7 @@ ideas = {
 		picture = GFX_idea_man_five_year_plan_industry
 
 		modifier = {
-			production_speed_buildings_factor = 0.1
+			production_speed_buildings_factor = 0.05
 		}
 	}
 
@@ -394,8 +394,8 @@ ideas = {
 		picture = generic_economic_increase
 
 		modifier = {
-			consumer_goods_factor = -0.3
-			production_speed_buildings_factor = 0.15
+			consumer_goods_factor = -0.05
+			production_speed_buildings_factor = 0.05
 		}
 
 		cancel = {
