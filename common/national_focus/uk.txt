@@ -600,7 +600,11 @@ focus_tree = {
 		122 = {
 				add_resource = {
 					type = oil
-					amount = 4
+					amount = 19
+				}
+				add_resource = {
+					type = steel
+					amount = 7
 				}
 			}
 		}
@@ -648,7 +652,7 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			add_stability = 0.1
+			add_stability = 0.05
 			add_timed_idea = { idea = ENG_devaluated_pound days = 720 }
 			swap_ideas = {
 				remove_idea = ENG_state_of_the_economy_three
@@ -702,11 +706,8 @@ focus_tree = {
 					limit = {
 						has_idea = free_trade
 					}
-					add_political_power = 120
-					add_offsite_building = {
-						type = industrial_complex
-						level = 1
-					}
+					add_political_power = 100
+					
 				}
 				else = {
 					add_ideas = free_trade
@@ -3598,6 +3599,7 @@ focus_tree = {
 		available = { 
 			is_subject = no
 			RAJ = { is_subject_of = ENG }
+			NOT = { has_completed_focus = ENG_concessions_to_the_trade_unions }
 		}
 		bypass = {
 			OR = {

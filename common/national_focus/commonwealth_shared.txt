@@ -9,7 +9,7 @@ shared_focus = {
 	y = 8
 	
 	offset = {
-		x = 34
+		x = 43
 		y = -8
 		trigger = {
 			has_focus_tree = canadian_focus
@@ -17,7 +17,7 @@ shared_focus = {
 	}
 	
 	offset = {
-		x = 34
+		x = 42
 		y = -8
 		trigger = {
 			has_focus_tree = australian_focus
@@ -25,7 +25,7 @@ shared_focus = {
 	}
 	
 	offset = {
-		x = 22
+		x = 30
 		y = -8
 		trigger = {
 			has_focus_tree = new_zealander_focus
@@ -33,7 +33,7 @@ shared_focus = {
 	}
 	
 	offset = {
-		x = 24
+		x = 32
 		y = -8
 		trigger = {
 			has_focus_tree = south_african_focus
