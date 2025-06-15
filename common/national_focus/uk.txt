@@ -202,7 +202,9 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			army_experience = 50
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = motorized_army
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = armor_bonus
 				bonus = 1.0
@@ -279,6 +281,7 @@ focus_tree = {
 				uses = 1
 				category = dispersed_industry_category
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			130 = {
 				if = {
 					limit = {
@@ -343,6 +346,7 @@ focus_tree = {
 				uses = 1
 				category = concentrated_industry_category
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			126 = {
 				if = {
 					limit = {
@@ -597,6 +601,7 @@ focus_tree = {
 		}
 		completion_reward = {
 		add_ideas = welsh_miners_exploited
+		custom_effect_tooltip = generic_skip_one_line_tt
 		122 = {
 				add_resource = {
 					type = oil
@@ -631,6 +636,7 @@ focus_tree = {
 				idea = ENG_colonial_investors
 				days = 1095
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			swap_ideas = {
 				remove_idea = ENG_state_of_the_economy_three
 				add_idea = ENG_state_of_the_economy_four
@@ -653,7 +659,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_stability = 0.05
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_timed_idea = { idea = ENG_devaluated_pound days = 720 }
+			custom_effect_tooltip = generic_skip_one_line_tt
 			swap_ideas = {
 				remove_idea = ENG_state_of_the_economy_three
 				add_idea = ENG_state_of_the_economy_four
@@ -712,7 +720,9 @@ focus_tree = {
 				else = {
 					add_ideas = free_trade
 				}
+				custom_effect_tooltip = generic_skip_one_line_tt
 				add_ideas = Trade_expanded
+				custom_effect_tooltip = generic_skip_one_line_tt
 				swap_ideas = {
 					remove_idea = ENG_state_of_the_economy_two
 					add_idea = ENG_state_of_the_economy_three
@@ -757,6 +767,7 @@ focus_tree = {
 			else = {
 				add_ideas = partial_economic_mobilisation
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			swap_ideas = {
 				remove_idea = ENG_state_of_the_economy_two
 				add_idea = ENG_state_of_the_economy_three
@@ -787,6 +798,7 @@ focus_tree = {
 				uses = 2
 				category = cat_mobile_warfare
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			swap_ideas = {
 				remove_idea = motorized_army_two
 				add_idea = motorized_army_three
@@ -810,6 +822,7 @@ focus_tree = {
 		
 		completion_reward = {
 			army_experience = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = ENG_artillery_focus
 				bonus = 1
@@ -835,6 +848,7 @@ focus_tree = {
 		
 		completion_reward = {
 			add_stability = -0.05
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = Increased_enlistment
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -861,7 +875,7 @@ focus_tree = {
 		
 		completion_reward = {
 			add_ideas = JAP_economy_by_japan_tanks
-
+             custom_effect_tooltip = generic_skip_one_line_tt
 			127 = {
 			add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -894,6 +908,7 @@ focus_tree = {
 				uses = 1
 				category = armor
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			swap_ideas = {
 				remove_idea = motorized_army_three
 				add_idea = motorized_army_four	
@@ -956,6 +971,7 @@ focus_tree = {
 
 		complete_tooltip = {
 			air_experience = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
 				limit = { has_country_flag = air_defense_focus_built_max }
 				custom_effect_tooltip = air_defense_focus_tt			
@@ -975,6 +991,7 @@ focus_tree = {
 
 		completion_reward = {
 			air_experience = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
 				limit = {
 					NOT = {
@@ -1195,6 +1212,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			air_experience = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = radar_focus
 				bonus = 1.0
@@ -1248,6 +1266,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}	
 		completion_reward = {
 			custom_effect_tooltip = shadow_scheme_focus_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = wartime_industry_focus	
 		}
 	}
@@ -1312,6 +1331,7 @@ focus_tree = {
 			air_experience = 25
 			navy_experience = 25
 			army_experience = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = british_austerity_idea
 		}
 	}
@@ -1335,6 +1355,7 @@ focus_tree = {
 		}	
 		completion_reward = {
 			add_ideas = ENG_special_air_service_idea
+			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = ENG_david_stirling
 		}
@@ -1466,6 +1487,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_ideas = british_arms_discount
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_equipment_subsidy = {
 				cic = 1500
 				equipment_type = infantry_equipment
@@ -1535,6 +1557,7 @@ focus_tree = {
 				limit = {
 					has_dlc = "Man the Guns"
 				}
+				custom_effect_tooltip = generic_skip_one_line_tt
 				add_tech_bonus = {
 					name = armor_bonus
 					bonus = 2.0
@@ -1622,11 +1645,12 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_breakthrough_progress = {
 				specialization = specialization_nuclear
 				value = 0.5
 			}
-
+ custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = NOR_the_weapons_of_conquest
 				bonus = 0.5
@@ -1866,6 +1890,7 @@ focus_tree = {
 			army_experience = 10
 			navy_experience = 10
 			air_experience = 10
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = ENG_chiefs_of_staff_committee_idea
 		}
 	}
@@ -1890,6 +1915,7 @@ focus_tree = {
 					NOT = { has_dlc = "By Blood Alone" }
 				}
 				air_experience = 25
+				custom_effect_tooltip = generic_skip_one_line_tt
 				add_tech_bonus = {
 					name = fighter_command_focus
 					bonus = 1.0
@@ -1903,6 +1929,7 @@ focus_tree = {
 					has_dlc = "By Blood Alone"
 				}
 				air_experience = 25
+				custom_effect_tooltip = generic_skip_one_line_tt
 				add_tech_bonus = {
 					name = fighter_command_focus
 					bonus = 1.0
@@ -1910,6 +1937,7 @@ focus_tree = {
 					category = light_fighter
 					category = cat_heavy_fighter
 				}
+				custom_effect_tooltip = generic_skip_one_line_tt
 				add_doctrine_cost_reduction = {
 					name = ENG_fighter_command_focus #land_doc_bonus
 					cost_reduction = 0.5
@@ -1952,6 +1980,7 @@ focus_tree = {
 					has_dlc = "By Blood Alone"
 				}
 				air_experience = 25
+				custom_effect_tooltip = generic_skip_one_line_tt
 				add_tech_bonus = {
 					name = bomber_command_focus
 					bonus = 1.0
@@ -1959,6 +1988,7 @@ focus_tree = {
 					category = cat_strategic_bomber
 					category = tactical_bomber
 				}
+				custom_effect_tooltip = generic_skip_one_line_tt
 				add_doctrine_cost_reduction = {
 					name = ENG_bomber_command_focus #land_doc_bonus
 					cost_reduction = 0.5
@@ -1988,6 +2018,7 @@ focus_tree = {
 					NOT = { has_dlc = "By Blood Alone" }
 				}
 				air_experience = 25
+				custom_effect_tooltip = generic_skip_one_line_tt
 				add_tech_bonus = {
 					name = coastal_command_focus
 					bonus = 1.0
@@ -2001,6 +2032,7 @@ focus_tree = {
 					has_dlc = "By Blood Alone"
 				}
 				air_experience = 25
+				custom_effect_tooltip = generic_skip_one_line_tt
 				add_tech_bonus = {
 					name = coastal_command_focus
 					bonus = 1.0
@@ -2008,6 +2040,7 @@ focus_tree = {
 					category = naval_bomber
 					category = cas_bomber
 				}
+				custom_effect_tooltip = generic_skip_one_line_tt
 				add_doctrine_cost_reduction = {
 					name = ENG_coastal_command_focus #land_doc_bonus
 					cost_reduction = 0.5
@@ -2054,7 +2087,7 @@ focus_tree = {
 				specialization = specialization_air
 				value = 1
 			}
-
+custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = uk_jet_focus
 				bonus = 1.0
@@ -2107,6 +2140,7 @@ focus_tree = {
 
 		completion_reward = {
 			navy_experience = 50
+			custom_effect_tooltip = generic_skip_one_line_tt
 			random_owned_controlled_state = {
 				limit = {
 					is_coastal = yes
@@ -2226,6 +2260,7 @@ focus_tree = {
 				uses = 2
 				category = cl_tech
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = ENG_secure_the_imperial_shipping_routes
 		}
 	}
@@ -2330,6 +2365,7 @@ focus_tree = {
 				uses = 2
 				category = convoy_defense_tree
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = ENG_anti_submarine_training_school
 		}
 	}
@@ -2374,6 +2410,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			navy_experience = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = uk_carrier_focus
 				bonus = 1.0
@@ -2400,6 +2437,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			navy_experience = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = uk_battleship_focus
 				bonus = 1.0
@@ -2487,6 +2525,7 @@ focus_tree = {
 				}
 				set_state_flag = ENG_expand_the_repair_yards_2dockyard
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = ENG_expand_the_repair_yards
 		}
 	}
@@ -2520,6 +2559,7 @@ focus_tree = {
 
 		completion_reward = {
 			navy_experience = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
 			create_equipment_variant = {
 				name = "Vanguard"
 				type = ship_hull_heavy_4
@@ -2638,7 +2678,9 @@ focus_tree = {
 			army_experience = 5
 			navy_experience = 25
 			air_experience = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = ENG_service_overseas_idea
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = infantry_artillery_bonus
 				bonus = 1

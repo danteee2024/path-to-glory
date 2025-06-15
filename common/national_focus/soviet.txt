@@ -10,7 +10,6 @@
 ### search_filters = {FOCUS_FILTER_ARMY_XP}
 ### search_filters = {FOCUS_FILTER_NAVY_XP}
 ### search_filters = {FOCUS_FILTER_AIR_XP}
-# Reminder that focus filters prio has to be handled in the generic focus file :)
 
 focus_tree = {
 	id = soviet_focus
@@ -9447,8 +9446,6 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 150 
 			every_owned_state = {
-				limit = {
-					OR = {
 						state = 202 # Kiev
 						state = 229 # Azerbaijan
 						state = 230 # Armenia
@@ -9467,7 +9464,6 @@ focus_tree = {
 						size > 1
 						include_locked = yes
 					}
-				}
 				add_extra_state_shared_building_slots = 2
 			}
 		}
