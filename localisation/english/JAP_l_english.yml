@@ -710,7 +710,8 @@ JAP_island_investment:0 "Island Investment"
  JAP_manchurian_investment:0 "Preparing Manchuria for War"
  JAP_military_investment:0 "Developing Arms Factories in Liaotung"
  JAP_military_investment1:0 "Developing Artillery Foundries in Jilin"
- JAP_military_investment2:0 "Developing Motor Industries in Dalian"
+ JAP_military_investment2:0 "Developing Motor Industries in Kirin"
+ JAP_military_investment3:0 "Developing Motor Industries in Dalian"
  JAP_island_colonization:0 "Colonize Island"
 
 ##events

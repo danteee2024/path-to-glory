@@ -3834,37 +3834,16 @@
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes
 				}
-				set_state_flag = JAP_nationalize_war_industry_AF
-			}
-			random_owned_controlled_state = {
-				limit = {
-					
-					is_in_home_area = yes
-					
-					ROOT = { has_full_control_of_state = PREV }
-					is_core_of = ROOT
-					not = {
-						state = 646
-						state = 645
-						state = 555
-					}
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
-				}
-				set_state_flag = JAP_nationalize_war_industry_IC
+				}	
 			}
+			
 			random_owned_controlled_state = {
 				limit = {
 					
@@ -4078,30 +4057,7 @@
 		}
 
 		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					is_in_home_area = yes
-					is_fully_controlled_by = PREV
-					is_core_of = ROOT
-					not = {
-						state = 646
-						state = 645
-						state = 555
-					}
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-				set_state_flag = JAP_imperial_arsenals1
-			}
+			
 			random_owned_controlled_state = {
 				limit = {
 					is_in_home_area = yes
@@ -4640,12 +4596,9 @@
 		}
 		available = {
 		}
-
+        
 		completion_reward = {
 			set_cosmetic_tag = JAP_showa_restoration
-			country_event = {
-				id = japan.23 
-			}
 			swap_ideas = {
 				remove_idea = JAP_militarism
 				add_idea = JAP_militarism_showa

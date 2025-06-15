@@ -1721,7 +1721,6 @@ formable_nations_mod_category = {
 				original_tag = SIK
 				original_tag = PRC
 				original_tag = MAN
-				original_tag = JAP
 			}
 		}
 
@@ -12514,12 +12513,6 @@ formable_nations_mod_category = {
 				state = 609
 				state = 716
 				state = 610
-				state = 608
-				state = 614
-				state = 597
-				state = 743
-				state = 598
-				state = 613
 				state = 525
 				state = 527
 				
@@ -12557,14 +12550,7 @@ formable_nations_mod_category = {
 						
 						745 = { is_controlled_by = ROOT }
 						609 = { is_controlled_by = ROOT }
-						716 = { is_controlled_by = ROOT }
-						610 = { is_controlled_by = ROOT }
-						608 = { is_controlled_by = ROOT }
-						614 = { is_controlled_by = ROOT }
-						597 = { is_controlled_by = ROOT }
-						743 = { is_controlled_by = ROOT }
-						598 = { is_controlled_by = ROOT }
-						613 = { is_controlled_by = ROOT }
+						
 						
 						525 = { is_controlled_by = ROOT }
 						527 = { is_controlled_by = ROOT }
@@ -12616,12 +12602,12 @@ formable_nations_mod_category = {
 				611 = { add_core_of = ROOT }
 				612 = { add_core_of = ROOT }
 			}
-			608 = { add_core_of = ROOT }
-			614 = { add_core_of = ROOT }
-			597 = { add_core_of = ROOT }
-			743 = { add_core_of = ROOT }
-			598 = { add_core_of = ROOT }
-			613 = { add_core_of = ROOT }
+			608 = { add_claim_by = ROOT }
+			614 = { add_claim_by = ROOT }
+			597 = { add_claim_by = ROOT }
+			743 = { add_claim_by = ROOT }
+			598 = { add_claim_by = ROOT }
+			613 = { add_claim_by = ROOT }
 		}
 	}
 
