@@ -620,7 +620,7 @@ focus_tree = {
 	focus = {
 		id = ENG_attract_colonial_investors
 		icon = GFX_SOV_aristocratic_investments_ccp_2d_sov_compatibility
-		cost = 5
+		cost = 10
 		x = 0
 		ai_will_do = { factor = 1 }
 		y = 5
@@ -698,7 +698,7 @@ focus_tree = {
 	focus = {
 		id = ENG_Open_our_Markets
 		icon = GFX_goal_generic_positive_trade_relations
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = ENG_industrialise_celtic_areas
 		}

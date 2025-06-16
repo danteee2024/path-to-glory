@@ -115,7 +115,7 @@ guiTypes = {
 	### MAIN MENU PANEL (upperleft)
 	containerWindowType = {
 		name  ="mainmenu_panel_upperleft"
-		position = { x=0 y =-200 }
+		position = { x=0 y =-250 }
 		show_position = { x=0 y =-1 }
 		animation_type = decelerated
 		animation_time = 1000
