@@ -196,7 +196,7 @@
 
 	# TEST
 
- new_advisors_tt:0 "§YUnlocks§! new §YPolitical Advisors§!\n"
+ new_advisors_tt:0 "§YUnlocks§! a new §YPolitical Advisor§!\n"
  FRA_develop_burgundy:0 "Burgundian Development"
  FRA_develop_centre:0 "Centre Development"
  FRA_matignon_agreements1:0 "Matignon Agreements"
