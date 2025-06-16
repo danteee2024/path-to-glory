@@ -387,9 +387,9 @@ USA_wpa:0 "Works Progress Administration"
  mtg_usa_civil_war_fascists.20.b:0 "Dixie Must be Defended!"
 
 #LAST STAND IDEAS
-army_rangers_idea:0 "US Army Rangers"
-army_rangers_idea_desc:0 "We have trained our soldiers to be specialiezd in close quarters combat."
-
+ army_rangers_idea:0 "US Army Rangers"
+ army_rangers_idea_desc:0 "We have trained our soldiers to be specialiezd in close quarters combat."
+  great_depression_4:0 "Stagnant Recovery"
 operation_liberty_lion_idea:0 "Operation Liberty Lion"
 operation_liberty_lion_desc:0 "The new world shall liberate the old, no matter what it takes."
 
@@ -472,9 +472,13 @@ nationalization_FA_america_capital:0 "§CAmerican Capitalism§!"
 
   #danteee 2025
 USA_anti_unions_act:0 "Anti-Union Act"
-USA_anti_unions_act_desc:0 "In an effort to curb the influence of labor unions and streamline our industrial processes, we will implement the Anti-Union Act. This legislation aims to limit union activities, reduce strikes, and ensure that businesses can operate without excessive interference from organized labor groups."
+USA_anti_unions_act_desc:0 "In an effort to curb the influence of labor unions and streamline our industrial processes, we will implement the Anti-Union Act. This legislation aims to limit      union activities, reduce strikes, and ensure that businesses can operate without excessive interference from organized labor groups."
 
 
-USA_anti_unions_act_idea:0 "Anti-Union Act"
+ USA_anti_unions_act_idea:0 "Anti-Union Act"
 
- 
+
+ USA_food_stamp_program:0 "Food Stamp Program"
+ USA_food_stamp_program_desc:0 "To combat poverty and ensure that all Americans have access to basic necessities, we will establish a comprehensive food stamp program. This initiative will provide financial assistance to low-income families, enabling them to purchase essential food items and improve their quality of life."
+ USA_second_agricultural_adjustment_act:0 "Second Agricultural Adjustment Act"
+ USA_second_agricultural_adjustment_act_desc:0 "To address the challenges faced by our agricultural sector and ensure food security for all Americans, we will implement the Second Agricultural Adjustment Act. This legislation aims to stabilize agricultural prices, support farmers, and promote sustainable farming practices."
