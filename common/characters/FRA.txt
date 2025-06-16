@@ -1149,8 +1149,7 @@ characters={
 			}
 			available  = {
 				OR = {
-					has_completed_focus  = FRA_right_wing_rhetoric 
-					has_completed_focus  = FRA_utilize_the_leagues 
+					has_completed_focus  = FRA_far_right_leagues
 					has_focus_tree  = vichy_french_focus
 				}
 				IF  = {
@@ -1269,7 +1268,7 @@ characters={
 				original_tag  = FRA
 			}
 			available  = {
-				has_completed_focus  = FRA_buy_time 
+				has_completed_focus  = FRA_support_daladier
 				has_government  = democratic 
 			}
 			cost  = 75.000
@@ -1306,8 +1305,8 @@ characters={
 			}
 			available  = {
 				OR = {
-					has_completed_focus = FRA_integralism 
-					has_completed_focus = FRA_orleanist_restoration 
+					has_completed_focus = FRA_national_integralism
+					has_completed_focus = FRA_side_with_the_orleanists
 				}
 				OR  = {
 					has_government  = fascism 
@@ -1346,7 +1345,7 @@ characters={
 				has_dlc = "La Resistance"
 			}
 			available  = {
-				has_completed_focus  = FRA_national_regeneration 
+				has_completed_focus  = FRA_front_liberte
 				has_government  = fascism 
 			}
 			cost  = 75.000
@@ -1511,7 +1510,7 @@ characters={
 				original_tag  = FRA
 			}
 			available  = {
-				has_completed_focus  = FRA_form_the_popular_front 
+				has_completed_focus  = FRA_support_blum
 			}
 			traits  = {
 				financial_expert 
