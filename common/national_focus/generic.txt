@@ -650,7 +650,12 @@ focus_tree = {
 				is_coastal = yes
 				is_controlled_by = ROOT
 			}
-		NOT = { is_puppet = yes }
+		
+			 OR = {
+        is_ai = no      # players (puppets or not)
+        is_puppet = no  # independents (AI or not)
+    }
+	
 		}
 
 		complete_tooltip = {
@@ -1018,7 +1023,10 @@ focus_tree = {
 			}
 		}
            available = {
-		NOT = { is_puppet = yes }
+			 OR = {
+        is_ai = no      # players (puppets or not)
+        is_puppet = no  # independents (AI or not)
+    }
 		}
 		ai_will_do = {
 			factor = 3
@@ -1076,7 +1084,12 @@ focus_tree = {
 
         available = {
 
-			   NOT = { is_puppet = yes }
+			   
+			 OR = {
+        is_ai = no      # players (puppets or not)
+        is_puppet = no  # independents (AI or not)
+    }
+	
 
 
 		}
@@ -1163,7 +1176,12 @@ focus_tree = {
 		available_if_capitulated = yes
 
           available = {
-		NOT = { is_puppet = yes }
+		
+			 OR = {
+        is_ai = no      # players (puppets or not)
+        is_puppet = no  # independents (AI or not)
+    }
+	
 		}
 		ai_will_do = {
 			factor = 2
@@ -1250,7 +1268,12 @@ focus_tree = {
 		
 		available_if_capitulated = yes
              available = {
-		NOT = { is_puppet = yes }
+		
+			 OR = {
+        is_ai = no      # players (puppets or not)
+        is_puppet = no  # independents (AI or not)
+    }
+	
 		}
 
 		ai_will_do = {
@@ -1338,7 +1361,12 @@ focus_tree = {
 
 		available_if_capitulated = yes
            available = {
-		NOT = { is_puppet = yes }
+		
+			 OR = {
+        is_ai = no      # players (puppets or not)
+        is_puppet = no  # independents (AI or not)
+    }
+	
 		}
 
 		ai_will_do = {
@@ -1434,7 +1462,12 @@ focus_tree = {
 			}
 		}
            available = {
-		NOT = { is_puppet = yes }
+		
+			 OR = {
+        is_ai = no      # players (puppets or not)
+        is_puppet = no  # independents (AI or not)
+    }
+	
 		}
 		bypass = {
 			custom_trigger_tooltip = {
@@ -1533,7 +1566,12 @@ focus_tree = {
 		available_if_capitulated = yes
 
            available = {
-		NOT = { is_puppet = yes }
+		
+			 OR = {
+        is_ai = no      # players (puppets or not)
+        is_puppet = no  # independents (AI or not)
+    }
+	
 		}
 		ai_will_do = {
 			factor = 2
@@ -1618,7 +1656,12 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		    available = {
-		NOT = { is_puppet = yes }
+		
+			 OR = {
+        is_ai = no      # players (puppets or not)
+        is_puppet = no  # independents (AI or not)
+    }
+	
 		}
 		available_if_capitulated = yes
 		ai_will_do = {
@@ -1725,7 +1768,12 @@ focus_tree = {
 		available_if_capitulated = yes
 
             available = {
-		NOT = { is_puppet = yes }
+		
+			 OR = {
+        is_ai = no      # players (puppets or not)
+        is_puppet = no  # independents (AI or not)
+    }
+	
 		}
 		ai_will_do = {
 			factor = 2
@@ -1809,7 +1857,12 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_RESEARCH } 
             available = {
-		NOT = { is_puppet = yes }
+		
+			 OR = {
+        is_ai = no      # players (puppets or not)
+        is_puppet = no  # independents (AI or not)
+    }
+	
 		}
 		available_if_capitulated = yes
 
