@@ -2592,7 +2592,6 @@ ideas = {
 		
 		JAP_defense_in_depth = {
 
-			name = SOV_defense_industry_artillery_bonus_ccp_sov_compatibility
 
 			allowed = {
 				always = no
