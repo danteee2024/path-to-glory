@@ -812,7 +812,7 @@ level = 1
 
 			modifier = {
 				consumer_goods_expected_value = 0.15
-				production_speed_buildings_factor = -0.15
+				production_speed_buildings_factor = -0.05
 
 			}
 
@@ -841,8 +841,8 @@ level = 1
 
 			modifier = {
 				consumer_goods_expected_value = 0.10
-				production_speed_buildings_factor = -0.2
-				global_building_slots_factor = 0.1
+				production_speed_buildings_factor = -0.10
+				global_building_slots_factor = 0.15
 			}
 
 			cancel_if_invalid = no
