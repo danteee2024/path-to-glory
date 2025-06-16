@@ -8,5 +8,5 @@
  gain_cores_transfer_on_highlighted_states_tt:0 "The §Hhighlighted§! states will be cored, and transferred to us."
  SOV_new_frontiers_tt:0 "We will now be able to §Hintegrate§! more lands."
  SOV_greater_alliance_tt:0 "We can now invite §HBalkan§! and §HNordic§! countries to our alliance."
- SOV_foreign_investment_tt:0 "Adds one §Hcivilian factory§! and one §Hmilitary factory§! for relations above §H70§! with the following nations:\n- @ENG§H[ENG.getnamedefcap]§!\n- @USA§H[USA.getnamedefcap]§!\n- @GER§H[GER.getnamedefcap]§!\n- @ITA§H[ITA.getnamedefcap]§!\n- @FRA§H[FRA.getnamedefcap]§!\n- @JAP§H[JAP.getnamedefcap]§!\nTherefore, it is possible to gain up to §Htwelve§! factories in total.\n\nHere are the current effects:"
+ SOV_foreign_investment_tt:0 "Adds one §HCivilian Factory§! and one §HMilitary Factory§! for relations above §H70§! with the following nations:\n- @ENG§H[ENG.getnamedefcap]§!\n- @USA§H[USA.getnamedefcap]§!\n- @GER§H[GER.getnamedefcap]§!\n- @ITA§H[ITA.getnamedefcap]§!\n- @FRA§H[FRA.getnamedefcap]§!\n- @JAP§H[JAP.getnamedefcap]§!\nTherefore, it is possible to gain up to §Htwelve§! factories in total."
  SOV_internal_management_tt:0 "Some former members of government will return to the country and can now be hired as advisors."

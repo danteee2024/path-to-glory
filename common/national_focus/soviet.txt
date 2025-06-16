@@ -9426,7 +9426,6 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_all_power_to_the_soviets
-		mutually_exclusive = { focus = SOV_strengthen_the_trade_unions }
 		offset = {
 			x = -1
 			y = 0
@@ -10550,7 +10549,6 @@ focus_tree = {
 		relative_position_id = SOV_incorporate_local_organizations
 		cost = 5
 
-		mutually_exclusive = { focus = SOV_strengthen_the_trade_unions }
 
 		available = {
 			is_faction_leader = yes
@@ -11426,10 +11424,8 @@ focus_tree = {
 			}
 		}
 		relative_position_id = SOV_all_power_to_the_soviets
-		mutually_exclusive = { focus = SOV_regional_development }
 		cost = 5
 
-		mutually_exclusive = { focus = SOV_for_the_common_good }
 
 		available = {
 
@@ -11452,7 +11448,7 @@ focus_tree = {
 		id = SOV_the_peoples_revolution
 		icon = GFX_focus_por_workers_of_iberia
 		prerequisite = { focus = SOV_strengthen_the_trade_unions }
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = SOV_strengthen_the_trade_unions
 		cost = 5
@@ -11473,10 +11469,10 @@ focus_tree = {
 	focus = {
 		id = SOV_the_supreme_soviet
 		icon = GFX_focus_SOV_the_supreme_soviet
-		prerequisite = { focus = SOV_the_peoples_revolution }
-		x = 0
+		prerequisite = { focus = SOV_strengthen_the_trade_unions }
+		x = 1
 		y = 1
-		relative_position_id = SOV_the_peoples_revolution
+		relative_position_id = SOV_strengthen_the_trade_unions
 		cost = 5
 		available = {
 			has_government = communism

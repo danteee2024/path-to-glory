@@ -4,13 +4,6 @@
  USA_higgins_industries:0 "Higgins Industries"
  USA_william_c_lee:0 "William C. Lee"
  USA_elwood_richard_quesada:0 "Elwood R. Quesada"
- rt56_j_edgar_hoover:0 "J. Edgar Hoover"
- rt56_j_edgar_hoover_desc:0 "§L"We are a fact-gathering organization only. We don't clear anybody. We don't condemn anybody."§!"
- rt56_j_edgar_hoover_mil:0 "J. Edgar Hoover"
- rt56_j_edgar_hoover_mil_desc:0 "§L"Justice is incidental to law and order"§!"
- rt56_john_j_pershing:0 "John J. Pershing"
- rt56_USA_cash_and_carry_away:0 "Cash and Carry"
- rt56_USA_cash_and_carry_away_desc:0 "The 'Cash and Carry' amendment to the Neutrality Act allows us to purchase Non-War material from [USA.getnameDEF] if we pay upfront. Even though we have no money to spare, the [USA.GETNAMEDEF] is letting us 'borrow' money from their treasury that we can turn around and use to pay for the goods."
  sons_of_liberty:0 "Sons of Liberty"
  sons_of_liberty_desc:0 "We fought tyranny once, we'll fight it again."
  deo_vindice:0 "Deo vidice"
@@ -433,9 +426,7 @@ USA_new_image_desc:0 "The time has come to declare our great leader's reign with
 
 #danteee 2024
 
-USA_foreign_economic_investment_tt:0 "§G3§! §YCivilian Factory§! and §G1§! §YInfrastructure§! will be added for each of the following countries that has an §Yopinion§! of §Y[USA.GetNameDef]§! greater than §G80§!: \n§Y[ENG.GetNameDef]§!, §Y[FRA.GetNameDef]§!, §Y[ITA.GetNameDef]§!, §Y[GER.GetNameDef]§!, and §Y[SOV.GetNameDef]§!."
-
-
+USA_foreign_economic_investment_tt:0 "Adds two §HCivilian Factory§! and one §HMilitary Factory§! for relations above §H70§! with the following nations:\n- @ENG§H[ENG.getnamedefcap]§!\n- @SOV§H[SOV.getnamedefcap]§!\n- @GER§H[GER.getnamedefcap]§!\n- @ITA§H[ITA.getnamedefcap]§!\n- @FRA§H[FRA.getnamedefcap]§!\n- @JAP§H[JAP.getnamedefcap]§!\nTherefore, it is possible to gain up to §H18§! factories in total."
 
 USA_industrial_subsidies_act_tt:0 "Reduces the construction cost of §YCivilian Factory§! and §YMilitary Factory§! by §G5.00%§!."
 USA_industrial_subsidies_act_idea:0 "Industrial Subsidies Act"
