@@ -8589,7 +8589,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_SOV_POLITICAL_PARANOIA}
 
 		completion_reward = {
-			SOV_paranoia_medium_increase_effect = yes 
+			SOV_paranoia_low_increase_effect = yes 
 			add_political_power = 50
 			custom_effect_tooltip = SOV_integrate_smirnovs_bloc_tt
 			hidden_effect = {
@@ -9702,7 +9702,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 75
-			# SOV_paranoia_medium_increase_effect = yes 
+			# SOV_paranoia_low_increase_effect = yes 
 			custom_effect_tooltip = SOV_the_right_opposition_tt
 			set_variable = { SOV_right_opposition_army_support = 0.1 }
 			set_variable = { SOV_right_opposition_navy_support = 0.05 }
@@ -9781,7 +9781,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_SOV_POLITICAL_PARANOIA FOCUS_FILTER_STABILITY}
 
 		completion_reward = {
-			SOV_paranoia_medium_increase_effect = yes 
+			SOV_paranoia_low_increase_effect = yes 
 			add_popularity = {
 				ideology = democratic 
 				popularity = 0.10
@@ -9843,7 +9843,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_SOV_POLITICAL_PARANOIA}
 
 		completion_reward = {
-			SOV_paranoia_medium_increase_effect = yes 
+			SOV_paranoia_low_increase_effect = yes 
 			add_political_power = 100
 			SOV_opposition_support_high_increase_effect = yes 
 		}
@@ -9986,7 +9986,6 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_SOV_POLITICAL_PARANOIA}
 
 		completion_reward = {
-			SOV_paranoia_medium_increase_effect = yes 
 			SOV_iosif_stalin = {
 				swap_country_leader_traits = { remove = stalin_political_paranoia add = stalin_authority_undermined }
 			}
@@ -11051,7 +11050,6 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_SOV_POLITICAL_PARANOIA FOCUS_FILTER_STABILITY}
 
 		completion_reward = {
-			SOV_paranoia_low_increase_effect = yes 
 			add_political_power = 100
 			custom_effect_tooltip = SOV_gain_support_from_party_members_tt
 			
@@ -11114,7 +11112,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_SOV_POLITICAL_PARANOIA}
 
 		completion_reward = {
-			SOV_paranoia_low_decrease_effect = yes 
+			SOV_paranoia_medium_decrease_effect = yes 
 			custom_effect_tooltip = SOV_infiltrate_the_nkvd_tt
 			set_country_flag = SOV_nkvd_aligned_flag
 			IF = {
@@ -11140,7 +11138,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_SOV_POLITICAL_PARANOIA}
 
 		completion_reward = {
-			SOV_paranoia_medium_increase_effect = yes 
+			SOV_paranoia_low_increase_effect = yes 
 			IF = {
 				limit = {
 					SOV_is_left_opposition = yes 
@@ -11195,7 +11193,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_SOV_POLITICAL_PARANOIA}
 
 		completion_reward = {
-			SOV_paranoia_medium_increase_effect = yes 
+			SOV_paranoia_low_increase_effect = yes 
 			custom_effect_tooltip = SOV_align_the_zinovyevites_tt
 			# Modify Factionalism - change tooltip if changing values!!!
 			custom_effect_tooltip = SOV_align_the_zinovyevites_factionalism_tt
@@ -11271,7 +11269,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_SOV_POLITICAL_PARANOIA}
 
 		completion_reward = {
-			SOV_paranoia_medium_increase_effect = yes 
+			SOV_paranoia_low_increase_effect = yes 
 			custom_effect_tooltip = SOV_liberate_ryutin_tt 
 			IF = {
 				limit = { SOV_is_left_opposition = yes }
@@ -13442,9 +13440,6 @@ focus_tree = {
 		}
 
 		available = {
-			OR = {
-				NOT = { has_country_flag = SOV_paranoia_system_active_flag }
-			}
 			is_subject = no
 		}
 		
@@ -13548,7 +13543,6 @@ focus_tree = {
 		}
 
 		available = {
-			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
 			is_subject = no
 		}
 		
@@ -13587,7 +13581,6 @@ focus_tree = {
 		mutually_exclusive = { focus = SOV_respect_baltic_self_determination }
 
 		available = {
-			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
 			is_subject = no
 		}
 
