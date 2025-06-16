@@ -2825,15 +2825,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POR_communist_secret_police
+		id = ITA_security_militias
 		icon = GFX_focus_SOV_military_purge
 		cost = 5
 		prerequisite = {
 			focus = POR_reorganization_of_the_communist_party
 		}
-		available = {
-
-		}
+		
 		relative_position_id = POR_reorganization_of_the_communist_party
 		x = -2
 		y = 1
@@ -2869,29 +2867,6 @@ focus_tree = {
 			}
 		}
 		search_filters = {  FOCUS_FILTER_RESEARCH FOCUS_FILTER_ESPIONAGE }
-	}
-
-	focus = {
-		id = POR_expand_the_intelligence_services
-		icon = GFX_goal_CAN_CAMP_X
-		cost = 5
-		prerequisite = {
-			focus = POR_communist_secret_police
-		}
-		available = {
-			has_intelligence_agency = yes
-			agency_upgrade_number > 4
-		}
-		relative_position_id = POR_communist_secret_police
-		x = 0
-		y = 2
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			add_ideas = POR_the_capital_of_espionage
-		}
-		search_filters = {  FOCUS_FILTER_ESPIONAGE }
 	}
 
 	focus = {
@@ -6012,9 +5987,9 @@ focus_tree = {
 		search_filters = {  FOCUS_FILTER_MANPOWER }
 	}
 	focus = {
-		id = POR_more_buildings
+		id = FRA_public_works
 
-		prerequisite = { focus = POR_the_fifth_empire }
+		prerequisite = { focus = POR_the_fifth_empire focus = POR_join_the_axis }
 		icon = GFX_SOV_russian_corporate_state_ccp_2d_sov_compatibility
 		x = 0
 		y = 1
@@ -6039,11 +6014,8 @@ focus_tree = {
 		search_filters = {  FOCUS_FILTER_MANPOWER }
 	}
 	focus = {
-		id = POR_steel_mine
+		id = CHI_mining_commission
 
-		available = {
-			
-		}
 		prerequisite = { focus = POR_the_fifth_empire focus = POR_join_the_axis }
 		icon = GFX_focus_generic_steel
 		x = -2
@@ -6054,7 +6026,7 @@ focus_tree = {
 		completion_reward = {
 			add_resource = {
 				type = steel
-				amount = 18
+				amount = 24
 				state = 179
 			}				
 			add_resource = {
@@ -6148,9 +6120,6 @@ focus_tree = {
 					}
 				}
 			}
-		}
-
-		available = {
 		}
 
 		bypass = {
@@ -6291,14 +6260,13 @@ focus_tree = {
 			has_army_manpower = {
 				size > 249999
 			}		
-			has_civil_war = no
-			r56_script_i_am_sane = yes				
+			has_civil_war = no				
 		}
 
 		bypass = {
 			owns_state = 500
 		}
-		prerequisite = { focus = POR_mapa_cor_de_rosa }
+		prerequisite = { focus = POR_mapa_cor_de_rosa focus = uk_amphibious_focus }
 
 		mutually_exclusive = { focus = POR_the_kingdom_reunited focus = POR_luso_monarchist_cooperation }
 
@@ -6307,10 +6275,17 @@ focus_tree = {
 		y = 2
 
 		relative_position_id = POR_mapa_cor_de_rosa
-		cost = 2.5
+		cost = 5
 		completion_reward = {
 			add_state_claim = 500 #Rio
-
+			add_war_support = 0.05
+			create_wargoal = {
+				target = BRA
+				type = annex_everything
+			}
+			USA = {
+				diplomatic_relation = { country = BRA relation = guarantee active = no }
+			}
 			hidden_effect = {
 				random_country = {
 					limit = { controls_state = 500 }
@@ -6424,7 +6399,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_STABILITY }
 	}
 	focus = {
-		id = POR_restore_the_navy
+		id = AUS_reestablish_austrian_navy
 
 		#available = {
 		#	BRA = {
@@ -6438,7 +6413,6 @@ focus_tree = {
 		icon = GFX_goal_generic_navy_battleship
 		x = -4
 		y = 1
-
 		relative_position_id = POR_the_return_of_duarte
 		cost = 10
 		completion_reward = {
@@ -6538,44 +6512,16 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
+
 	focus = {
-		id = POR_reconquest_of_brazil
-
-		available = {
-		}
-
-		prerequisite = { focus = POR_restore_the_navy}
-		icon = GFX_focus_por_recover_brazil
-		x = 0
-		y = 1
-		will_lead_to_war_with = BRA
-		relative_position_id = POR_restore_the_navy
-		cost = 5
-		completion_reward = {
-			add_war_support = 0.05
-			create_wargoal = {
-				target = BRA
-				type = annex_everything
-			}
-			USA = {
-				diplomatic_relation = { country = BRA relation = guarantee active = no }
-			}
-		}
-	}
-	focus = {
-		id = POR_train_our_generals_for_the_fight
-
-		available = {
-		}
-		#allow_branch = {
-		#	always = no
-		#}
-
-		prerequisite = { focus = POR_reconquest_of_brazil}
+		id = uk_amphibious_focus
+		
+		prerequisite = { focus = AUS_reestablish_austrian_navy }
+		
 		icon = GFX_focus_generic_military_academy
-		x = 0
-		y = 1
-		relative_position_id = POR_reconquest_of_brazil
+		x = -4
+		y = 2
+		relative_position_id = POR_the_return_of_duarte
 		cost = 5
 		completion_reward = {
 			add_war_support = 0.05
@@ -6602,7 +6548,7 @@ focus_tree = {
 
 		prerequisite = { focus = POR_the_return_of_duarte }
 		icon = GFX_focus_spa_supremacy_of_the_communion
-		x = 3
+		x = 2
 		y = 1
 
 		relative_position_id = POR_the_return_of_duarte
@@ -6817,7 +6763,7 @@ focus_tree = {
 		id = POR_promote_the_monarchist_cause_in_portugal
 		prerequisite = { focus = POR_the_return_of_duarte }
 		icon = GFX_focus_generic_monarchy_2
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = POR_the_return_of_duarte
 		cost = 10
@@ -7229,90 +7175,6 @@ focus_tree = {
 			set_rule = { can_create_factions = yes }
 		}
 	}
-	focus = {
-		id = POR_luso_monarchist_cooperation
-		available = {
-			is_in_faction_with = BRA
-		}
-
-		ai_will_do = {
-			factor = 5
-			modifier = {
-				factor = 50
-				has_idea = POR_unstable_monarchy
-			}
-
-		}
-
-		prerequisite = { focus = POR_restoration_of_the_monarchy }
-		prerequisite = { focus = POR_the_empire_of_brazil }
-		mutually_exclusive = { focus = POR_the_kingdom_reunited focus = POR_recover_brazil }
-		icon = GFX_goal_tfv_strengthen_commonwealth_ties
-		x = -2
-		y = 2
-
-		relative_position_id = POR_restoration_of_the_monarchy
-		cost = 10
-		completion_reward = {
-			if = {
-				limit = {
-					has_idea = POR_unstable_monarchy
-				}
-				remove_ideas = POR_unstable_monarchy
-			}
-			add_stability = 0.05
-			add_ideas = POR_luso_monarchist_cooperation
-			BRA = {
-				add_stability = 0.05
-				add_ideas = POR_luso_monarchist_cooperation
-			}
-			
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT }
-	}
-	focus = {
-		id = POR_luso_imperial_and_royal_armies
-		available = {
-			is_in_faction_with = BRA
-			NOT = {
-				has_idea = POR_unreliable_army
-			}
-		}
-
-		ai_will_do = {
-			factor = 5
-
-		}
-
-		prerequisite = { focus = POR_luso_monarchist_cooperation }
-		
-		icon = GFX_focus_generic_military_academy
-		x = 0
-		y = 1
-
-		relative_position_id = POR_luso_monarchist_cooperation
-		cost = 10
-		completion_reward = {
-			add_ideas = POR_luso_monarchist_military_cooperation
-			every_army_leader = {
-				add_planning = 1
-			}
-			every_navy_leader = {
-				add_coordination = 1
-			}
-			BRA = {
-				add_ideas = POR_luso_monarchist_military_cooperation
-				every_army_leader = {
-					add_planning = 1
-				}
-				every_navy_leader = {
-					add_coordination = 1
-				}				
-			}
-
-		}
-		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT }
-	}	
 	focus = {
 		id = POR_remember_olivenca
 		available = {
