@@ -159,11 +159,9 @@ ideas = {
 
         nationalization_FA_america_capital = {
             visible = {
-                tag = USA
+                has_completed_focus = USA_american_market
             }
-            available = {
-                always = false
-            }
+            
             removal_cost = -1
             modifier = {
                 global_building_slots_factor = 0.25
