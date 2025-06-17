@@ -2452,8 +2452,10 @@ focus = {
 			factor = 3
 		}
 		completion_reward = {
-			custom_effect_tooltip = new_advisors_tt
 			add_stability = 0.1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = FRA_vincent_auriol
 			if = {
 				limit = {
 					has_active_mission = FRA_the_popular_front
@@ -2659,8 +2661,11 @@ focus = {
 			factor = 4
 		}
 		completion_reward = {
-			custom_effect_tooltip = new_advisors_tt
 			add_political_power = 120
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = georges_bonnet
+			custom_effect_tooltip = generic_skip_one_line_tt
 			country_event = {
 				id = france.102
 				hours = 12
@@ -3650,7 +3655,7 @@ focus = {
 		completion_reward = {
 				if = {
 				limit = {
-					date < 1940.8.25
+					date < 1945.5.2
 				}
 				create_country_leader = {
 					name = "Jean III"
@@ -3955,7 +3960,7 @@ focus = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = remove_political_advisor
-			show_ideas_tooltip = FRA_charles_maurras
+			show_ideas_tooltip = charles_maurras
 			add_political_power = 200
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
