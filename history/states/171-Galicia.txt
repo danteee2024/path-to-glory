@@ -5,7 +5,9 @@ state={
 	manpower = 2295085
 	
 	state_category = metropolis
-
+    resources = {
+		tungsten = 32
+	}
 	history={
 		owner = SPR
 		add_core_of = GLC
