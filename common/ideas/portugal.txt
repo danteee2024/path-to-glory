@@ -1,5 +1,47 @@
 ideas = {
 	country = {
+
+		# PATH TO GLORY #############################################
+
+		POR_defence_of_freedom = {
+			picture = FIN_social_democratic_womens_union
+
+			allowed = {
+				original_tag = POR
+				has_government = democratic
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				drift_defence_factor = 0.1
+				army_morale_factor = 0.05
+				compliance_growth = 0.05
+				army_defence_against_major_factor = 0.05
+			}
+		}
+
+		SOV_research_grants = {
+			picture = jap_duplicate_research
+
+			allowed = {
+				original_tag = POR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				research_speed_factor = 0.07
+				scientist_research_bonus_factor = 0.10
+			}
+		}
+
+		# VANILLA ##################################################
+
 		POR_special_operations = {
 			picture = PER_fund_state_intelligence_idea
 			allowed = {
