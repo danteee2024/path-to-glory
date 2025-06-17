@@ -1,81 +1,29 @@
-﻿focus_tree = {
+focus_tree = {
 	id = manchukuo_focus
-	
 	country = {
 		factor = 0
 		modifier = {
-			add = 10
+			add = 100
 			tag = MAN
-			has_dlc = "Waking the Tiger"
 		}
 	}
-	
-
 	default = no
-
-	continuous_focus_position = { x = 20 y = 1600 }
-
-#	focus = {
-#		id = CHI_
-#		icon = GFX_
-#		prerequisite = { focus = }
-#		mutually_exclusive = { focus =  }
-#		x = -3
-#		y = 0
-#		relative_position_id = 
-#
-#		cost = 5
-#
-#		ai_will_do = {
-#			factor = 1
-#		}
-#
-#		available = {
-#
-#		}
-#		
-#		bypass = {
-#
-#		}
-#
-#		cancel_if_invalid = yes
-#		continue_if_invalid = no
-#		available_if_capitulated = no
-#
-#		complete_tooltip = {
-#
-#		}
-#
-#		completion_reward = {
-#
-#		}
-#	}
-
+	continuous_focus_position = {
+		x = 0
+		y = 1500
+	}
+####POLITICAL TREE
 	focus = {
 		id = MAN_pacify_the_countryside
-		icon = GFX_focus_BRA_end_the_state_of_emergency
-		x = 6
+		icon = GFX_goal_generic_major_war
+		x = 14
 		y = 0
 
 		cost = 5
 
 		ai_will_do = {
-			factor = 20
+			factor = 1
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		
 
 		completion_reward = {
 			unlock_decision_category_tooltip = MAN_banditry_category
@@ -83,508 +31,35 @@
 			custom_effect_tooltip = MAN_pacify_the_countryside_effect_tooltip
 		}
 	}
-
-	focus = {
-		id = MAN_army_modernization
-		icon = GFX_focus_HABSBURG_the_modern_hussar
-		prerequisite = { focus = MAN_pacify_the_countryside }
-		x = -2
-		y = 1
-		relative_position_id = MAN_pacify_the_countryside
-
-		cost = 2
-
-		ai_will_do = {
-			factor = 15
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		
-
-		completion_reward = {
-			army_experience = 30
-		}
-	}
-
-	focus = {
-		id = MAN_mukden_military_academy
-		icon = GFX_focus_generic_military_academy
-		prerequisite = { focus = MAN_army_modernization }
-		x = 0
-		y = 1
-		relative_position_id = MAN_army_modernization
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 15
-		}
-
-		available = {
-
-		}	
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		
-		
-		completion_reward = {
-			add_ideas = MAN_mukden_military_academy
-			random_owned_controlled_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = MAN_invite_japanese_settlers
-		icon = GFX_focus_RAJ_seek_allies_with_the_muslim_league
-		prerequisite = { focus = MAN_pacify_the_countryside }
-		x = 0
-		y = 1
-		relative_position_id = MAN_pacify_the_countryside
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			NOT = { has_idea = MAN_banditry }
-			NOT = { has_war_with = JAP }
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-			every_state = {
-				limit = { has_state_flag = MAN_invite_japanese_settlers_2IC }
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-
-		completion_reward = {
-			random_owned_state = {
-				limit = { is_fully_controlled_by = ROOT }
-				add_manpower = 25417
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = MAN_invite_japanese_settlers_2IC
-			}
-			random_owned_state = {
-				limit = { is_fully_controlled_by = ROOT }
-				add_manpower = 33846
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = MAN_invite_japanese_settlers_2IC
-			}
-		}
-	}
-
-	focus = {
-		id = MAN_collective_farms
-		icon = GFX_focus_generic_farmland
-		prerequisite = { focus = MAN_invite_japanese_settlers }
-		x = 0
-		y = 1
-		relative_position_id = MAN_invite_japanese_settlers
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 15
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			every_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 2
-			}
-		}
-	}
-
-	focus = {
-		id = MAN_law_university
-		icon = GFX_focus_AUS_lawmaking_leniency
-		prerequisite = { focus = MAN_collective_farms focus = MAN_mukden_military_academy focus = MAN_expand_the_textile_industry }
-		x = 0
-		y = 1
-		relative_position_id = MAN_collective_farms
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_research_slot = 1
-		}
-	}
-
-	focus = {
-		id = MAN_research_and_education_department
-		icon = GFX_focus_AFG_education_reform
-		prerequisite = { focus = MAN_law_university }
-		x = 0
-		y = 1
-		relative_position_id = MAN_law_university
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			OR = {
-				num_of_factories > 50
-				all_state = {
-					OR = {
-						NOT = { is_core_of = CHI }
-						NOT = { is_core_of = PRC }
-						OR = {
-							is_controlled_by = ROOT
-							CONTROLLER = { is_in_faction_with = ROOT }
-							CONTROLLER = { is_subject_of = ROOT }
-						}
-					}
-				}
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		
-		
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_research_slot = 1			
-		}
-	}
-
-	focus = {
-		id = MAN_trade_delegation
-		icon = GFX_focus_RAJ_go_into_hiding
-		prerequisite = { focus = MAN_pacify_the_countryside }
-		x = 2
-		y = 1
-		relative_position_id = MAN_pacify_the_countryside
-
-		cost = 2
-
-		ai_will_do = {
-			factor = 20
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
-				name = MAN_trade_delegation
-				bonus = 1.0
-				uses = 1
-				category = industry
-			}
-		}
-	}
-
-	focus = {
-		id = MAN_expand_the_textile_industry
-		icon = GFX_focus_CHL_enlarge_the_textile_industries
-		prerequisite = { focus = MAN_trade_delegation }
-		x = 0
-		y = 1
-		relative_position_id = MAN_trade_delegation
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 20
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-			random_state = {
-				limit = {
-					has_state_flag = MAN_expand_the_textile_industry_IC
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_state = {
-				limit = {
-					has_state_flag = MAN_expand_the_textile_industry_IC
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-				set_state_flag = MAN_expand_the_textile_industry_IC
-			}
-			random_owned_controlled_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-				set_state_flag = MAN_expand_the_textile_industry_IC
-			}
-		}
-		
-	}
-
 	focus = {
 		id = MAN_obedience
-		icon = GFX_focus_RAJ_union_busting
-		prerequisite = { focus = MAN_army_modernization }
+		icon = GFX_focus_jap_manchurian_project
+		#GFX_focus_CZE_german_puppet
+		prerequisite = { focus = MAN_pacify_the_countryside }
 		mutually_exclusive = { focus = MAN_assertiveness }
-		x = -2
-		y = 4
-		relative_position_id = MAN_army_modernization
+		x = -3
+		y = 1
+		relative_position_id = MAN_pacify_the_countryside
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 6
 		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
 		
+		available_if_capitulated = yes
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			#add_stability = 0.2
 			add_political_power = 120
 		}
 	}
-
 	focus = {
-		id = MAN_hoankyoku
-		icon = GFX_goal_generic_intelligence_exchange
-		prerequisite = { focus = MAN_obedience }
-		x = -2
-		y = 1
-		relative_position_id = MAN_obedience
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 2
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		search_filters = { FOCUS_FILTER_STABILITY }
-		
-
-		completion_reward = {
-			add_stability = 0.1
-			if = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
-				if = {
-					limit = {
-						has_intelligence_agency = no
-					}
-					create_intelligence_agency = yes
-				}
-				add_ideas = MAN_hoankyoku_idea
-			}
-		}
-	}
-
-	focus = {
-		id = MAN_first_five_year_plan
-		icon = GFX_goal_generic_production
-		prerequisite = { focus = MAN_obedience }
-		x = 0
+		id = MAN_national_martyr_shrine
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = MAN_obedience focus = MAN_assertiveness }
+		x = 3
 		y = 1
 		relative_position_id = MAN_obedience
 
@@ -595,59 +70,131 @@
 		}
 
 		available = {
-
 		}
 
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			country_event = wtt_manchukou.11
+			add_ideas = MAN_national_martyr_shrine_idea
 		}
 	}
-
 	focus = {
-		id = MAN_invite_japanese_investors
-		icon = GFX_goal_generic_improve_relations
-		prerequisite = { focus = MAN_first_five_year_plan }
+		id = MAN_winter_training
+		icon = GFX_focus_generic_winter_warfare
+		cost = 10
+		prerequisite = {
+			focus = MAN_national_martyr_shrine
+		}
+		relative_position_id = MAN_national_martyr_shrine
+		x = 0
+		y = 1
+		text = MAN_winter_training
+		available_if_capitulated = yes
+			
+		completion_reward = {
+			add_ideas = MAN_winter_training
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 1.0
+				uses = 1
+				category = cat_special_forces_generic 
+			}			
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				add_doctrine_cost_reduction = {
+					cost_reduction = 0.5
+					uses = 1
+					category = special_forces_doctrine
+				}
+			}			
+		}	
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+	}	
+####FIVE YEAR PLAN ECO TREE
+	focus = {
+		id = MAN_first_five_year_plan
+		icon = GFX_goal_generic_build_tank
+		x = -7
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = MAN_obedience
+		}
+		relative_position_id = MAN_obedience
+		completion_reward = {
+			country_event = wtt_manchukou.11
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = MAN_support_aikawa_yoshisuke
+		icon = GFX_SOV_restoration_and_development_ccp_2d_sov_compatibility
+		prerequisite = {
+			focus = MAN_first_five_year_plan
+		}
+		mutually_exclusive = {
+			focus = MAN_support_naoki_hoshino
+		}
+		available = {
+			OR = {
+				has_completed_focus = MAN_exile_takeover
+				is_puppet_of = JAP
+			}
+		}
+		relative_position_id = MAN_first_five_year_plan
 		x = -1
 		y = 1
-		relative_position_id = MAN_first_five_year_plan
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 4
-		}
-
-		available = {
-			NOT = { has_war_with = JAP }
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
+		cost = 7
 		completion_reward = {
-			
-			random_core_state = {
-				prioritize = { 328 }
+			activate_advisor = yoshisuke_aikawa
+			set_country_flag = MAN_civilian
+			random_owned_controlled_state = {
 				limit = {
-					is_fully_controlled_by = ROOT
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -656,55 +203,87 @@
 					instant_build = yes
 				}
 			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = MAN_songgotu_zhanshan
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
-
 	focus = {
-		id = MAN_expand_the_railways
-		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = MAN_invite_japanese_investors }
-		x = 0
-		y = 1
-		relative_position_id = MAN_invite_japanese_investors
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 4
+		id = MAN_support_naoki_hoshino
+		icon = GFX_SOV_pc_of_mechanical_engineering_ccp_2d_sov_compatibility
+		prerequisite = {
+			focus = MAN_first_five_year_plan
 		}
-
+		mutually_exclusive = {
+			focus = MAN_support_aikawa_yoshisuke
+		}
 		available = {
 			OR = {
-				716 = {
-					is_fully_controlled_by = ROOT
-				}
-				328 = {
-					is_fully_controlled_by = ROOT
-				} 
-				610 = {
-					is_fully_controlled_by = ROOT
-				} 
-				717 = {
-					is_fully_controlled_by = ROOT
-				}
+				has_completed_focus = MAN_exile_takeover
+				is_puppet_of = JAP
 			}
 		}
-
-		bypass = {
-
+		relative_position_id = MAN_first_five_year_plan
+		x = 1
+		y = 1
+		cost = 7
+		completion_reward = {
+			activate_advisor = naoki_hoshino
+			set_country_flag = MAN_military
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			
 		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		
-
 		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = MAN_acquire_the_north_manchu_railway
+		icon = GFX_focus_SOV_south_manchuria_railway
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = MAN_support_aikawa_yoshisuke focus = MAN_support_naoki_hoshino
+		}
+		relative_position_id = MAN_support_aikawa_yoshisuke
+		cost = 10
+		bypass = {
+			NOT = {
+				716 = {
+					is_controlled_by = ROOT
+				}
+				715 = {
+					is_controlled_by = ROOT
+				}
+				328 = {
+					is_controlled_by = ROOT
+				}
+				717 = {
+					is_controlled_by = ROOT
+				}
+				714 = {
+					is_controlled_by = ROOT
+				}
+				761 = {
+					is_controlled_by = ROOT
+				}
+				610 = {
+					is_controlled_by = ROOT
+				}
+			}
+			
+		}
 		completion_reward = {
 			if = {
 					limit = {
@@ -751,116 +330,304 @@
 					path = { 11771 846 9831 930 4633 4561 4506 7582 10433 }
 				}
 			}
-
-			random_owned_state = {
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 0
-					}
-				}
-
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-
-			random_owned_state = {
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 0
-					}
-				}
-
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = MAN_develop_aluminum_sources
-		icon = GFX_goal_generic_construction2
-		prerequisite = { focus = MAN_invite_japanese_investors }
-		x = -2
-		y = 1
-		relative_position_id = MAN_invite_japanese_investors
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 2
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
 			if = {
-				limit = { has_tech = excavation1 }
-				add_tech_bonus = {
-					name = MAN_develop_aluminum_sources
-					bonus = 1.0
-					uses = 1
-					category = excavation_tech
+				limit = {
+					716 = {
+						is_controlled_by = ROOT 
+					}
+				}
+				716 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+					}
 				}
 			}
-			else = {
-				set_technology = { excavation1 = 1 }
+			if = {
+				limit = {
+					715 = {
+						is_controlled_by = ROOT 
+					}
+				}
+				715 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+					}
+				}
 			}
-			unlock_decision_tooltip = MAN_develop_kirin_aluminium_deposits
+			if = {
+				limit = {
+					328 = {
+						is_controlled_by = ROOT 
+					}
+				}
+				328 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					717 = {
+						is_controlled_by = ROOT 
+					}
+				}
+				717 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					714 = {
+						is_controlled_by = ROOT 
+					}
+				}
+				714 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					610 = {
+						is_controlled_by = ROOT 
+					}
+				}
+				610 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+					}
+				}
+			}
+			add_ideas = MAN_mantetsu_railway
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
-
 	focus = {
 		id = MAN_expand_showa_steel_works
-		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = MAN_develop_aluminum_sources }
+		icon = GFX_focus_generic_steel
+		prerequisite = {
+			focus = MAN_acquire_the_north_manchu_railway
+		}
 		x = 0
 		y = 1
-		relative_position_id = MAN_develop_aluminum_sources
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 4
-		}
-
-		available = {
-			716 = { is_fully_controlled_by = ROOT }
-		}
-
+		relative_position_id = MAN_acquire_the_north_manchu_railway
+		cost = 5	
 		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
 			716 = {
+				NOT = {
+					is_owned_by = ROOT
+				}
+			}
+		}
+		completion_reward = {
+			unlock_decision_tooltip = MAN_develop_liaotung_iron_ore_deposits
+			if = {
+				limit = {
+					716 = {
+						is_owned_by = ROOT
+						is_core_of = ROOT
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+				}
+				716 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					716 = {
+						is_owned_by = ROOT
+						is_core_of = ROOT
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = industrial_complex
+							size < 1
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = ROOT
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 716 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = resource_expansion_steel
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STEEL}
+	}
+	focus = {
+		id = MAN_establish_mangyo
+		icon = GFX_SOV_restore_the_glory_of_the_motherland_ccp_2d_sov_compatibility
+		prerequisite = {
+			focus = MAN_support_aikawa_yoshisuke
+		}
+		available = {
+			OR = {
+				has_completed_focus = MAN_exile_takeover
+				is_puppet_of = JAP
+			}
+		}
+		x = -1
+		y = 1
+		relative_position_id = MAN_support_aikawa_yoshisuke
+		cost = 10
+		completion_reward = {
+			add_ideas = MAN_mangyo_idea
+			if = {
+				limit = {
+					716 = {
+						is_owned_by = ROOT
+						is_core_of = ROOT
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = industrial_complex
+							size < 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = ROOT
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = MAN_develop_aluminum_sources
+		icon = GFX_focus_generic_aluminum
+		prerequisite = {
+			focus = MAN_support_aikawa_yoshisuke
+		}
+		relative_position_id = MAN_support_aikawa_yoshisuke
+		available = {
+			715 = {
+				is_owned_by = ROOT
+				is_controlled_by = ROOT
+			}
+		}
+		x = -3
+		y = 1
+		cost = 10
+		completion_reward = {
+			unlock_decision_tooltip = MAN_develop_kirin_aluminium_deposits
+			if = {
+				limit = {
+					715 = {
+						is_controlled_by = ROOT
+						is_owned_by = ROOT
+					}
+				}
+				715 = {
+					add_resource = {
+						type = aluminium
+						amount = 26
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_tech = resource_expansion_tech_1
+					}
+				}
+				set_technology = { resource_expansion_tech_1 = 1 }
+				else = {
+					add_tech_bonus = {
+						name = construction_tech_bonus
+						bonus = 1
+						uses = 1
+						technology = resource_expansion_tech_1
+						technology = resource_expansion_tech_2
+						technology = resource_expansion_tech_3
+					}					
+				}
+			}			
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ALUMINIUM}
+	}
+	focus = {
+		id = MAN_invite_japanese_investors
+		icon = GFX_focus_jap_zaibatsu
+		prerequisite = {
+			focus = MAN_establish_mangyo
+		}
+		prerequisite = {
+			focus = MAN_develop_aluminum_sources
+		}
+		available = {
+			OR = {
+				has_completed_focus = MAN_exile_takeover
+				is_puppet_of = JAP
+			}
+		}
+		relative_position_id = MAN_establish_mangyo
+		x = -1
+		y = 1
+		cost = 10
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
@@ -868,55 +635,260 @@
 					instant_build = yes
 				}
 			}
-			unlock_decision_tooltip = MAN_develop_liaotung_iron_ore_deposits
-		}
-	}
-
-	focus = {
-		id = MAN_social_research_unit
-		icon = GFX_focus_research
-		prerequisite = { focus = MAN_expand_the_railways }
-		x = 0
-		y = 2
-		relative_position_id = MAN_invite_japanese_investors
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 8
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
+			add_tech_bonus = {
+				name = MAN_invite_japanese_investors
+				uses = 1
+				bonus = 1
+				category = industry
+			}
 			add_research_slot = 1
 		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 	}
+	focus = {
+		id = MAN_total_economic_coherence
+		icon = GFX_focus_AFG_a_modern_economy
+		prerequisite = { focus = MAN_invite_japanese_investors }
+		x = 0
+		y = 1
+		relative_position_id = MAN_invite_japanese_investors
 
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = MAN_increase_opium_production
+		icon = GFX_goal_generic_construction2
+		prerequisite = {
+			focus = MAN_support_naoki_hoshino
+		}
+		x = 3
+		y = 1
+		relative_position_id = MAN_support_naoki_hoshino
+		cost = 10
+		available = {
+			has_idea = MAN_opium_idea
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = MAN_opium_idea
+				add_idea = MAN_opium_expanded_idea
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+	}
+	focus = {
+		id = MAN_request_zaibatsu_investment_on_military_industry
+		icon = GFX_focus_jap_zaibatsu
+		prerequisite = {
+			focus = MAN_support_naoki_hoshino
+		}
+		available = {
+			OR = {
+				has_completed_focus = MAN_exile_takeover
+				is_puppet_of = JAP
+			}
+		}
+		relative_position_id = MAN_support_naoki_hoshino
+		x = 1
+		y = 1
+		cost = 10
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = MAN_request_zaibatsu_investment_on_military_industry
+				uses = 1
+				bonus = 1
+				category = industry
+				category = infantry_weapons
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+	}
+	
+	focus = {
+		id = MAN_prepare_for_war
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = {
+			focus = MAN_request_zaibatsu_investment_on_military_industry
+		}
+		x = 2
+		y = 2
+		relative_position_id = MAN_support_naoki_hoshino
+		cost = 10
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_idea = war_economy
+						has_idea = tot_economic_mobilisation
+					}
+				}
+				add_ideas = war_economy
+			}
+			if = {
+				limit = {
+					has_idea = war_economy
+				}
+				add_political_power = 150
+			}
+			
+			add_timed_idea = {
+				idea = MAN_gearing_up
+				days = 200
+			}
+			if = {
+				limit = {
+					amount_research_slots < 6
+				}
+				add_research_slot = 1
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = MAN_for_the_emperor
+		icon = GFX_focus_generic_total_war
+		prerequisite = {
+			focus = MAN_prepare_for_war
+		}
+		x = 0
+		y = 1
+		relative_position_id = MAN_prepare_for_war
+		cost = 10
+		available = {
+			has_war = yes
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+				add_ideas = MAN_for_the_emperor_idea
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
 	focus = {
 		id = MAN_second_five_year_plan
-		icon = GFX_goal_generic_production
-		prerequisite = { focus = MAN_social_research_unit }
-		prerequisite = { focus = MAN_expand_showa_steel_works }
-		prerequisite = { focus = MAN_mamc }
+		icon = GFX_SOV_aristocratic_investments_ccp_2d_sov_compatibility
+		prerequisite = { focus = MAN_invite_japanese_investors focus = MAN_prepare_for_war }
 		x = 0
-		y = 4
+		y = 5
 		relative_position_id = MAN_first_five_year_plan
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 4
@@ -960,157 +932,94 @@
 			country_event = wtt_manchukou.11
 		}
 	}
-
 	focus = {
-		id = MAN_national_defense_state
-		icon = GFX_goal_generic_build_tank
+		id = MAN_national_defense_state1
+		icon = GFX_focus_generic_military_industry
+		
 		prerequisite = { focus = MAN_second_five_year_plan }
 		x = 0
 		y = 1
 		relative_position_id = MAN_second_five_year_plan
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 5
 		}
-
 		available = {
-
+			
 		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
 
-		
-
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			add_stability = 0.10
+			add_political_power = 100
 			add_ideas = MAN_national_defense_state
-		}
-	}
-
-	focus = {
-		id = MAN_mukden_arsenal
-		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = MAN_first_five_year_plan }
-		x = 1
-		y = 1
-		relative_position_id = MAN_first_five_year_plan
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			716 = { is_fully_controlled_by = ROOT }
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			716 = {
-				add_extra_state_shared_building_slots = 2
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
 					instant_build = yes
 				}
 			}
 		}
 	}
-
-	focus = {
-		id = MAN_mamc
-		icon = GFX_focus_SMB_purchase_aircraft
-		prerequisite = { focus = MAN_mukden_arsenal }
-		x = 0
-		y = 1
-		relative_position_id = MAN_mukden_arsenal
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		
-
-		completion_reward = {
-
-			add_breakthrough_progress = {
-				specialization = specialization_air
-				value = 0.5
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			IF = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				custom_effect_tooltip = available_mio_tt
-				show_mio_tooltip = MAN_mamc_light_organization
-				show_mio_tooltip = MAN_mamc_medium_organization
-				show_mio_tooltip = MAN_mamc_heavy_organization
-
-				custom_effect_tooltip = generic_skip_one_line_tt
-
-				mio:MAN_mamc_light_organization = {
-					add_mio_funds = 500
-				}
-				mio:MAN_mamc_medium_organization = {
-					add_mio_funds = 500
-				}
-				mio:MAN_mamc_heavy_organization = {
-					add_mio_funds = 500
-				}
-			}
-
-			ELSE = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = MAN_mamc_light
-				show_ideas_tooltip = MAN_mamc_medium
-				show_ideas_tooltip = MAN_mamc_heavy
-			}
-		}
-	}
-
+#####END OF JAP INVESTMENT TREE
+###ALLIANCE WITH KWANTUNG ARMY PATH
 	focus = {
 		id = MAN_alliance_with_the_kwantung_army
 		icon = GFX_goal_generic_occupy_states_ongoing_war
-		prerequisite = { focus = MAN_first_five_year_plan }
-		x = 3
+		prerequisite = { focus = MAN_obedience }
+		available = {
+			NOT = {
+				has_completed_focus = MAN_exile_takeover
+			}
+		}
+		x = 0
 		y = 1
-		relative_position_id = MAN_first_five_year_plan
+		relative_position_id = MAN_obedience
 
 		cost = 5
 
@@ -1118,19 +1027,7 @@
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
@@ -1143,17 +1040,182 @@
 			}
 		}
 	}
-
+	focus = {
+		id = MAN_national_conscription
+		icon = GFX_SOV_barrier_troops_ccp_2d_sov_compatibility
+		prerequisite = {
+			focus = MAN_alliance_with_the_kwantung_army
+		}
+		relative_position_id = MAN_alliance_with_the_kwantung_army
+		x = 1
+		y = 1
+		available = {
+			NOT = {
+				has_completed_focus = MAN_exile_takeover
+			}
+		}
+		cost = 10
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				producer = JAP
+				amount = 2000
+			}
+			add_ideas = extensive_conscription
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }
+	}
+	focus = {
+		id = MAN_labour_service_corps
+		icon = GFX_focus_generic_public_works
+		prerequisite = {
+			focus = MAN_national_conscription focus = MAN_establish_hoankyoku
+		}
+		available = {
+			NOT = {
+				has_completed_focus = MAN_exile_takeover
+			}
+		}
+		relative_position_id = MAN_alliance_with_the_kwantung_army
+		x = 1
+		y = 2
+		cost = 10
+		completion_reward = {
+			add_ideas = MAN_labour_corps_idea
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = MAN_establish_hoankyoku
+		icon = GFX_focus_generic_secret_service_agency
+		prerequisite = {
+			focus = MAN_alliance_with_the_kwantung_army
+		}
+		available = {
+			NOT = {
+				has_completed_focus = MAN_exile_takeover
+			}
+		}
+		relative_position_id = MAN_alliance_with_the_kwantung_army
+		x = -1
+		y = 1
+		cost = 5
+		completion_reward = {
+			add_stability = 0.1
+			add_tech_bonus = {
+				name = mp_tech_bonus_name
+				bonus = 1
+				uses = 1
+				category = military_police_tech
+			}							
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+					has_intelligence_agency = no
+				}
+				create_intelligence_agency = yes
+			}
+		}		
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ESPIONAGE }
+	}
+	focus = {
+		id = MAN_river_force
+		icon = GFX_focus_generic_naval_invasion
+		prerequisite = {
+			focus = MAN_national_conscription focus = MAN_establish_hoankyoku
+		}
+		relative_position_id = MAN_alliance_with_the_kwantung_army
+		x = -1
+		y = 2
+		cost = 7
+		available = {
+			NOT = {
+				has_completed_focus = MAN_exile_takeover
+			}
+		}
+		completion_reward = {
+			army_experience = 15
+			navy_experience = 5
+			if = {
+				limit = {
+					NOT = {
+						has_tech = marines
+					}
+				}
+				set_technology = {
+					marines = 1
+				}
+			}
+			custom_effect_tooltip = MAN_river_force_tt
+			add_tech_bonus = {
+                name = special_forces_bonus
+                bonus = 1.0
+                uses = 1
+                category = cat_special_forces_generic 
+            }
+			hidden_effect = {
+				division_template = {
+					name = "Luzhan Dui Shi"
+					priority = 2
+					division_names_group = MAN_MAR_01
+					regiments = {
+						marine = { x = 0 y = 0 }
+						marine = { x = 0 y = 1 }
+						marine = { x = 0 y = 2 }
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 328 }
+					create_unit = {
+						division = "name = \"1 Man'chu Luzhan Dui Shi\" division_template = \"Luzhan Dui Shi\" start_experience_factor = 0.5" 
+						owner = MAN
+					}
+					create_unit = {
+						division = "name = \"2 Man'chu Luzhan Dui Shi\" division_template = \"Luzhan Dui Shi\" start_experience_factor = 0.5" 
+						owner = MAN
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER }
+	}
+	focus = {
+		id = MAN_send_cadets_to_japan
+		icon = GFX_focus_generic_advanced_military_studies
+		prerequisite = {
+			focus = MAN_labour_service_corps focus = MAN_river_force
+		}
+		x = 1
+		y = 1
+		relative_position_id = MAN_labour_service_corps
+		cost = 10
+		available = {
+			is_puppet_of = JAP
+			NOT = {
+				has_completed_focus = MAN_exile_takeover
+			}
+		}
+		completion_reward = {
+			army_experience = 100
+			add_ideas = MAN_cadets_in_jap_academy
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
 	focus = {
 		id = MAN_chinese_leadership
 		icon = GFX_focus_generic_support_the_left_right
-		prerequisite = { focus = MAN_alliance_with_the_kwantung_army }
-		x = 0
+		prerequisite = { focus = MAN_river_force focus = MAN_labour_service_corps }
+		x = -1
 		y = 1
-		relative_position_id = MAN_alliance_with_the_kwantung_army
+		relative_position_id = MAN_labour_service_corps
 
-		cost = 5
-
+		cost = 10
+		available = {
+			NOT = {
+				has_completed_focus = MAN_exile_takeover
+			}
+		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -1175,76 +1237,176 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			MAN_low_legitimacy_level_down = yes
+			unlock_decision_category_tooltip = MAN_espouse_legitimacy
+			####UNLOCKS DECSIONS TO RAPIDLY GAIN STAB AND WAR SUPPORT, to lower legitmiacy debuff
 		}
 	}
-
 	focus = {
-		id = MAN_vassalize_mengukuo
-		icon = GFX_goal_generic_forceful_treaty
-		prerequisite = { focus = MAN_chinese_leadership }
-		x = -1
-		y = 1
-		relative_position_id = MAN_chinese_leadership
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			is_subject_of = JAP
-			NOT = { has_war_with = JAP }
-			NOT = { has_war_with = MEN }
-			MEN = {
-				exists = yes
-				is_subject_of = JAP
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-		
-
-		completion_reward = {
-			annex_country = { target = MEN transfer_troops = yes }
-		}
-	}
-
-	focus = {
-		id = MAN_national_cooperation_government
-		icon = GFX_goal_generic_improve_relations
+		id = MAN_reinforce_the_heilongjiang
+		icon = GFX_focus_generic_mountain_fortification
 		prerequisite = { focus = MAN_chinese_leadership }
 		x = 1
 		y = 1
 		relative_position_id = MAN_chinese_leadership
 
-		cost = 5
+		cost = 7
 
 		ai_will_do = {
 			factor = 1
 		}
 
 		available = {
-
+			JAP = {
+				has_completed_focus = JAP_support_the_kodoha_faction
+			}
+			NOT = {
+				has_completed_focus = MAN_exile_takeover
+			}
 		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
+			
 		
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			build_railway = {
+  				level = 1
+  				build_only_on_allied = yes
+  				fallback = yes
+  				path = { 13278 13277 7697 12475 12537 3913 7848 }
+  				start_province = 13278
+  				target_province = 7848
+			}
+			717 = {
+				add_building_construction = {
+    				type = infrastructure
+   					level = 1
+   					instant_build = yes
+				}
+				add_building_construction = {
+  					type = air_base
+    				level = 2
+    				instant_build = yes
+				}
+			}
+			945 = {
+				add_building_construction = {
+    				type = air_base
+   					level = 2
+   					instant_build = yes
+				}
+				add_building_construction = {
+    				type = infrastructure
+    				level = 1
+    				instant_build = yes
+				}
+				add_building_construction = {
+    				type = supply_node
+    				level = 1
+    				instant_build = yes
+					province = 7848
+				}
+			}
+			761 = {
+				add_building_construction = {
+    				type = infrastructure
+    				level = 1
+    				instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = MAN_reinforce_east_hebei
+		icon = GFX_goal_fortify_the_westwall
+		prerequisite = { focus = MAN_chinese_leadership }
+		x = -1
+		y = 1
+		relative_position_id = MAN_chinese_leadership
+
+		cost = 7
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			JAP = {
+				has_completed_focus = JAP_purge_the_kodoha_faction
+			}
+			NOT = {
+				has_completed_focus = MAN_exile_takeover
+			}
+		}
+			
+		
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			build_railway = {
+  				level = 1
+  				build_only_on_allied = yes
+  				fallback = yes
+  				path = { 7633 10426 1508 10429 12469 7812 }
+  				start_province = 7633
+  				target_province = 7812
+			}
+			609 = {
+				add_building_construction = {
+    				type = naval_base
+   					level = 2
+   					instant_build = yes
+   					province = 3900
+				}
+				add_building_construction = {
+  					type = air_base
+    				level = 2
+    				instant_build = yes
+				}
+			}
+			947 = {
+				add_building_construction = {
+    				type = naval_base
+   					level = 2
+   					instant_build = yes
+   					province = 6837
+				}
+				add_building_construction = {
+    				type = infrastructure
+    				level = 1
+    				instant_build = yes
+				}
+			}
+			610 = {
+				add_building_construction = {
+    				type = infrastructure
+    				level = 1
+    				instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = MAN_national_cooperation_government
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = MAN_reinforce_east_hebei focus = MAN_reinforce_the_heilongjiang }
+		x = 0
+		y = 2
+		relative_position_id = MAN_chinese_leadership
+
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				has_completed_focus = MAN_exile_takeover
+			}
+			has_war_support > 0.50
+		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -1252,25 +1414,46 @@
 				limit = { is_core_of = CHI }
 				add_core_of = ROOT
 			}
+			MAN_low_legitimacy_level_down = yes
 		}
 	}
-
+	focus = {
+		id = MAN_reform_command_structure
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = {
+			focus = MAN_river_force focus = MAN_labour_service_corps
+		}
+		available = {
+			NOT = {
+				has_completed_focus = MAN_exile_takeover
+			}
+		}
+		relative_position_id = MAN_labour_service_corps
+		x = -3
+		y = 1
+		cost = 10
+		completion_reward = {
+			army_experience = 10
+			add_ideas = MAN_self_sufficient_military_idea
+		}
+	}
 	focus = {
 		id = MAN_the_two_emperors
 		icon = GFX_goal_anschluss
-		prerequisite = { focus = MAN_vassalize_mengukuo }
 		prerequisite = { focus = MAN_national_cooperation_government }
 		x = 0
-		y = 2
-		relative_position_id = MAN_chinese_leadership
+		y = 1
+		relative_position_id = MAN_national_cooperation_government
 
-		cost = 5
-
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
 
 		available = {
+			NOT = {
+				has_completed_focus = MAN_exile_takeover
+			}
 			is_subject_of = JAP
 			compare_autonomy_state > autonomy_wtt_imperial_protectorate			
 			MAN = { 
@@ -1304,17 +1487,18 @@
 			MAN_low_legitimacy_level_down_twice = yes
 		}
 	}
-
+####END OF ALLIANCE WITH KWANTUNG ARMY
+######ASSERATIVENESS
 	focus = {
 		id = MAN_assertiveness
 		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = MAN_trade_delegation }
+		prerequisite = { focus = MAN_pacify_the_countryside }
 		mutually_exclusive = { focus = MAN_obedience }
-		x = 2
-		y = 4
-		relative_position_id = MAN_trade_delegation
+		x = 3
+		y = 1
+		relative_position_id = MAN_pacify_the_countryside
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 4
@@ -1333,6 +1517,8 @@
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			#add_stability = 0.2
+			add_political_power = 120
 			MAN_low_legitimacy_level_down = yes
 			set_country_flag = MAN_assertiveness
 			if = {
@@ -1357,7 +1543,7 @@
 		y = 1
 		relative_position_id = MAN_assertiveness
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -1441,7 +1627,7 @@
 		y = 1
 		relative_position_id = MAN_request_control_of_the_railways
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -1473,7 +1659,7 @@
 		y = 1
 		relative_position_id = MAN_staff_the_court_with_manchus
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 3
@@ -1545,7 +1731,7 @@
 		y = 1
 		relative_position_id = MAN_expand_the_imperial_guards
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 6
@@ -1628,7 +1814,7 @@
 		y = 1
 		relative_position_id = MAN_staff_the_court_with_manchus
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 10
@@ -1663,7 +1849,7 @@
 		y = 1
 		relative_position_id = MAN_request_control_of_the_railways
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -1697,7 +1883,7 @@
 		y = 1
 		relative_position_id = MAN_five_equal_peoples
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 4
@@ -1730,7 +1916,7 @@
 		y = 1
 		relative_position_id = MAN_five_equal_peoples
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -1762,7 +1948,7 @@
 		y = 1
 		relative_position_id = MAN_white_russian_advisers
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -1840,7 +2026,7 @@
 		y = 1
 		relative_position_id = MAN_bolster_nationalism 
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 10
@@ -1883,7 +2069,7 @@
 		y = 1
 		relative_position_id = MAN_purge_the_general_affairs_council
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 5
@@ -1911,13 +2097,13 @@
 
 	focus = {
 		id = MAN_independence_war
-		icon = GFX_focus_RAJ_mountain_guns
+		icon = GFX_goal_generic_territory_or_war
 		prerequisite = { focus = MAN_purge_the_general_affairs_council }
 		x = 0
 		y = 1
 		relative_position_id = MAN_purge_the_general_affairs_council
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 100
@@ -1990,7 +2176,7 @@
 		y = 1
 		relative_position_id = MAN_independence_war
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 10
@@ -2035,7 +2221,7 @@
 		y = 1
 		relative_position_id = MAN_imperial_divinity
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 5
@@ -2070,7 +2256,7 @@
 		y = 1
 		relative_position_id = MAN_imperial_divinity
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 10
@@ -2104,7 +2290,7 @@
 		y = 1
 		relative_position_id = MAN_move_capitals
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 20
@@ -2157,6 +2343,76 @@
 	}
 
 	focus = {
+		id = MAN_revive_the_grand_council
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = {
+			focus = MAN_claim_the_mandate_of_heaven
+		}
+		relative_position_id = MAN_claim_the_mandate_of_heaven
+		x = -1
+		y = 1
+		cost = 10
+		available = {
+			has_government = neutrality
+		}
+		completion_reward = {
+			add_ideas = MAN_grand_council_idea
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = MAN_revive_zongli_yamen
+		icon = GFX_goal_research_silver
+		prerequisite = {
+			focus = MAN_claim_the_mandate_of_heaven
+		}
+		relative_position_id = MAN_claim_the_mandate_of_heaven
+		x = 1
+		y = 1
+		cost = 10
+		available = {
+			has_government = neutrality
+		}
+		completion_reward = {
+			add_ideas = MAN_zongli_yamen
+			if = {
+				limit = {
+					amount_research_slots < 6
+				}
+				add_research_slot = 1
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = MAN_subjugate_japan
+		icon = GFX_focus_attack_japan
+		prerequisite = {
+			focus = MAN_claim_the_mandate_of_heaven
+		}
+		relative_position_id = MAN_claim_the_mandate_of_heaven
+		x = 0
+		y = 2
+		cost = 10
+		available = {
+			r56_script_i_am_sane = yes
+			any_country = {
+				exists = yes
+				is_puppet = no
+				original_tag = JAP
+			}
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = JAP
+				expire = 0
+				type = puppet_wargoal_focus
+			}
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+	focus = {
 		id = MAN_reclaim_the_empire
 		icon = GFX_focus_generic_strike_at_democracy1
 		prerequisite = { focus = MAN_independence_war }
@@ -2164,7 +2420,7 @@
 		y = 1
 		relative_position_id = MAN_independence_war
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -2204,7 +2460,7 @@
 		y = 1
 		relative_position_id = MAN_reclaim_the_empire
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -2249,7 +2505,7 @@
 		y = 1
 		relative_position_id = MAN_reclaim_the_empire
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -2280,8 +2536,2440 @@
 			}
 		}
 	}
+	focus = {
+		id = MAN_restore_the_old_frontier
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = {
+			focus = MAN_assert_our_authority focus = MAN_offer_vassalization
+		}
+		relative_position_id = MAN_assert_our_authority
+		x = 1
+		y = 1
+		cost = 10
+		available = {
+			has_government = neutrality
+			custom_trigger_tooltip = {
+				tooltip = MAN_vassal_tt
+				own_china_proper = yes
+			}
+		}
+
+		available = {
+			any_state = {
+				custom_trigger_tooltip = {
+					tooltip = state_in_soviet_far_east_mongolia_sinkiang_tibet_tt
+					OR = {
+						region = 148
+						region = 149
+						region = 152
+						region = 145
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = ROOT_is_not_controlled_by_root_or_ally_tt
+					NOT = {
+						is_controlled_by_ROOT_or_ally = yes
+					}
+				}
+			}
+		}
+
+		bypass = {
+			all_state = {
+				OR = {
+					NOT = {
+						custom_trigger_tooltip = {
+							tooltip = state_in_soviet_far_east_mongolia_sinkiang_tibet_tt
+							OR = {
+								region = 148
+								region = 149
+								region = 152
+								region = 145
+							}
+						}
+					}
+					is_controlled_by_ROOT_or_ally = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					NOT = { is_in_faction_with = ROOT }
+					NOT = { is_subject_of = ROOT }
+					any_owned_state = {
+						OR = {
+							region = 148
+							region = 149
+							region = 152
+							region = 145
+						}
+					}
+				}
+				ROOT = {
+					create_wargoal = {
+						target = PREV
+						type = take_state_focus
+						expire = 0
+					}
+				}
+			}
+		}
+	}
+###END OF ASSERATIVNESS
+###ECO TREE BEGINS
+	focus = {
+		id = MAN_destroy_opium_plantations
+		icon = GFX_SOV_the_rightful_heir_to_the_empire_ccp_2d_sov_compatibility
+		x = 24
+		y = 0
+		cost = 5
+		available = {
+			OR = {
+				NOT = {
+					is_puppet_of = JAP
+				}
+				JAP = {
+					has_government = neutrality
+				}
+			}
+		}
+		completion_reward = {
+			add_stability = 0.05
+			if = {
+				limit = {
+					has_idea = MAN_opium_idea
+				}
+				remove_ideas = MAN_opium_idea
+			}
+			if = {
+				limit = {
+					has_idea = MAN_opium_expanded_idea
+				}
+				remove_ideas = MAN_opium_expanded_idea
+			}
+		}
+		search_filters = { FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = MAN_invite_japanese_settlers
+		icon = GFX_goal_generic_construct_civilian
+
+		x = 26
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = { has_idea = MAN_banditry }
+			NOT = { has_war_with = JAP }
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = MAN_invite_japanese_settlers_2IC }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = { is_fully_controlled_by = ROOT }
+				add_manpower = 25417
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = MAN_invite_japanese_settlers_2IC
+			}
+			random_owned_controlled_state = {
+				limit = { is_fully_controlled_by = ROOT }
+				add_manpower = 33846
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = MAN_invite_japanese_settlers_2IC
+			}
+		}
+	}
+	focus = {
+		id = MAN_prospect_for_resources
+		icon = GFX_focus_generic_resource_extraction
+		relative_position_id = MAN_destroy_opium_plantations
+		x = 3
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = MAN_destroy_opium_plantations focus = MAN_invite_japanese_settlers
+		}
+		available = {
+			OR = {
+				has_war = no
+				num_of_factories > 50
+			}
+			has_tech = excavation3
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					714 = {
+						is_owned_by = ROOT
+					}
+				}
+				714 = {
+					add_resource = {
+						type = oil
+						amount = 34
+					}
+				}
+			}
+			if = {
+				limit = {
+					328 = {
+						is_owned_by = ROOT
+					}
+				}
+				328 = {
+					add_resource = {
+						type = steel
+						amount = 25
+					}
+				}
+				328 = {
+					add_resource = {
+						type = chromium
+						amount = 5
+					}
+				}
+			}
+			if = {
+				limit = {
+					715 = {
+						is_owned_by = ROOT
+					}
+				}
+				715 = {
+					add_resource = {
+						type = chromium
+						amount = 5
+					}
+				}
+			}
+			if = {
+				limit = {
+					717 = {
+						is_owned_by = ROOT
+					}
+				}
+				717 = {
+					add_resource = {
+						type = chromium
+						amount = 8
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_OIL FOCUS_FILTER_CHROMIUM FOCUS_FILTER_STEEL}
+	}
+	focus = {
+		id = MAN_collective_farms
+		icon = GFX_focus_generic_farmland
+		prerequisite = { focus = MAN_invite_japanese_settlers focus = MAN_destroy_opium_plantations }
+		x = -3
+		y = 1
+		relative_position_id = MAN_invite_japanese_settlers
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = MAN_infrastructure_effort
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = {
+			focus = MAN_invite_japanese_settlers focus = MAN_destroy_opium_plantations
+		}
+		available = {
+		}
+		relative_position_id = MAN_destroy_opium_plantations
+		x = 1
+		y = 1
+		cost = 5
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = MAN_military
+					}
+				}
+				custom_effect_tooltip = MAN_if_naoki
+				effect_tooltip = {
+					add_tech_bonus = {
+						bonus = 1
+						uses = 1
+						category = cat_production
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = MAN_civilian
+					}
+				}
+				custom_effect_tooltip = MAN_if_aikawa
+				effect_tooltip = {
+					add_tech_bonus = {
+						bonus = 1
+						uses = 1
+						category = construction_tech
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = MAN_civilian
+				}
+				add_tech_bonus = {
+					bonus = 1
+					uses = 1
+					category = construction_tech
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = MAN_military
+				}
+				add_tech_bonus = {
+					bonus = 1
+					uses = 1
+					category = cat_production
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = MAN_manchuria_petroleum_company
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = MAN_expand_the_textile_industry }
+		x = -2
+		y = 1
+		relative_position_id = MAN_expand_the_textile_industry
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			has_full_control_of_state = 716
+			716 = {
+				oil > 3
+			}	
+			NOT = {
+				JAP = {
+					focus_progress = {
+						focus = JAP_manchu_oil
+						progress > 0
+					}
+				}
+			}		
+		}
+		bypass = {
+			any_other_country = {
+				has_completed_focus = JAP_manchu_oil
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 716 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = fuel_silo
+					level = 1
+					instant_build = yes
+				}
+			}			
+			
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1
+				uses = 1
+				category = refining_tech
+			}
+			add_tech_bonus = {
+				name = excavation_tech_bonus_name
+				bonus = 0.5
+				uses = 1
+				category = excavation_tech
+			}			
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_OIL}
+	}
+	focus = {
+		id = MAN_expand_the_textile_industry
+		icon = GFX_focus_CHL_enlarge_the_textile_industries
+		prerequisite = { focus = MAN_infrastructure_effort  }
+		x = -1
+		y = 1
+		relative_position_id = MAN_infrastructure_effort
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_stability = 0.05
+			random_owned_controlled_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = MAN_expand_the_textile_industry_IC
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = MAN_civilian
+					}
+				}
+				custom_effect_tooltip = MAN_if_aikawa
+				effect_tooltip = {
+					add_tech_bonus = {
+						bonus = 1
+						uses = 1
+						category = electronics
+					}
+					add_political_power = 50
+					random_owned_controlled_state = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = MAN_civilian
+				}
+				add_tech_bonus = {
+					bonus = 1
+					uses = 1
+					category = electronics
+				}
+				add_political_power = 50
+				random_owned_controlled_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			}
+		}
+	}
+	focus = {
+		id = MAN_civilian_industries
+		icon = GFX_focus_generic_industry_2
+		prerequisite = { focus = MAN_expand_the_textile_industry }
+		x = 0
+		y = 1
+		relative_position_id = MAN_expand_the_textile_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = MAN_expand_the_textile_industry_IC
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = MAN_civilian
+					}
+				}
+				custom_effect_tooltip = MAN_if_aikawa
+				effect_tooltip = {
+					random_owned_controlled_state = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+						}
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					has_country_flag = MAN_civilian
+				}
+				random_owned_controlled_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			}
+		}
+	}
+	focus = {
+		id = MAN_expand_harbin_industry
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = MAN_civilian_industries }
+		x = 0
+		y = 1
+		relative_position_id = MAN_civilian_industries
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = MAN_expand_the_textile_industry_IC
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = MAN_civilian
+					}
+				}
+				custom_effect_tooltip = MAN_if_aikawa
+				effect_tooltip = {
+					random_owned_controlled_state = {
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = industrial_complex
+							level = 2
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+						}
+					}
+					add_tech_bonus = {
+						name = MAN_civ
+						category = industry
+						bonus = 1
+						uses = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = MAN_civilian
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+					}
+				}
+				add_tech_bonus = {
+					name = MAN_civ
+					category = industry
+					bonus = 1
+					uses = 1
+				}
+			}
+		}
+	}
+	focus = {
+		id = MAN_manchurian_national_defence_industry
+		icon = GFX_focus_generic_combined_arms
+		prerequisite = { focus = MAN_infrastructure_effort  }
+		x = 1
+		y = 1
+		relative_position_id = MAN_infrastructure_effort
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_war_support = 0.05
+			random_owned_controlled_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = MAN_military
+					}
+				}
+				custom_effect_tooltip = MAN_if_naoki
+				effect_tooltip = {
+					add_ideas = MAN_national_defence_industry
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = MAN_military
+				}
+				add_ideas = MAN_national_defence_industry
+			}
+		}
+	}
+	focus = {
+		id = MAN_mukden_military_academy
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = MAN_manchurian_national_defence_industry }
+		x = 2
+		y = 1
+		relative_position_id = MAN_manchurian_national_defence_industry
+
+		cost = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = MAN_mukden_military_academy
+		}
+	}
+	focus = {
+		id = MAN_expand_military_district
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = MAN_manchurian_national_defence_industry }
+		x = 0
+		y = 1
+		relative_position_id = MAN_manchurian_national_defence_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = manchurian_arms
+				bonus = 1
+				uses = 1
+				category = infantry_tech
+				category = support_tech
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = MAN_military
+					}
+				}
+				custom_effect_tooltip = MAN_if_naoki
+				effect_tooltip = {
+					random_owned_controlled_state = {
+						limit = {
+							is_fully_controlled_by = ROOT
+							free_building_slots = {
+								building = arms_factory
+								size > 0
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+					add_tech_bonus = {
+						name = manchurian_arms
+						bonus = 1
+						uses = 1
+						category = infantry_tech
+					}
+					add_tech_bonus = {
+						name = manchurian_arms
+						bonus = 1
+						uses = 1
+						category = armor
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					has_country_flag = MAN_military
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				add_tech_bonus = {
+					name = manchurian_arms
+					bonus = 1
+					uses = 1
+					category = infantry_tech
+				}
+				add_tech_bonus = {
+					name = manchurian_arms
+					bonus = 1
+					uses = 1
+					category = armor
+				}
+			}
+		}
+	}
+	focus = {
+		id = MAN_aramament_production
+		icon = GFX_focus_generic_reorient_production
+		prerequisite = { focus = MAN_expand_military_district }
+		x = 0
+		y = 1
+		relative_position_id = MAN_expand_military_district
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = MAN_art
+				category = artillery
+				uses = 1
+				bonus = 1
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = MAN_military
+					}
+				}
+				custom_effect_tooltip = MAN_if_naoki
+				effect_tooltip = {
+					random_owned_controlled_state = {
+						limit = {
+							is_fully_controlled_by = ROOT
+							free_building_slots = {
+								building = arms_factory
+								size > 0
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+					swap_ideas = {
+						remove_idea = MAN_national_defence_industry
+						add_idea = MAN_national_defence_industry_2
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = MAN_military
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				swap_ideas = {
+					remove_idea = MAN_national_defence_industry
+					add_idea = MAN_national_defence_industry_2
+				}
+			}
+		}
+	}
+	focus = {
+		id = MAN_law_university
+		icon = GFX_focus_research
+		prerequisite = { focus = MAN_expand_harbin_industry focus = MAN_aramament_production }
+		x = 1
+		y = 1
+		relative_position_id = MAN_expand_harbin_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = MAN_research_and_education_department
+		icon = GFX_focus_research
+		prerequisite = { focus = MAN_law_university }
+		x = 0
+		y = 1
+		relative_position_id = MAN_law_university
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			num_of_factories > 75
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_research_slot = 1			
+		}
+	}
+####NAVY TREE
+	focus = {
+		id = MAN_manchurian_auxiliary_navy
+		icon = GFX_goal_generic_build_navy
+		x = 36
+		y = 0
+
+		cost = 10
+		available = {
+			is_subject_of = JAP
+		}
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			navy_experience = 25
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = MAN_new_imperial_chinese_navy
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 38
+		y = 0
+		available = {
+			OR = {
+				NOT = {
+					is_puppet_of = JAP
+				}
+				JAP = {
+					has_government = neutrality
+				}
+			}
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			navy_experience = 25
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = MAN_flexible_navy
+		icon = GFX_goal_generic_build_navy
+		prerequisite = {
+			focus = MAN_manchurian_auxiliary_navy focus = MAN_new_imperial_chinese_navy
+		}
+		mutually_exclusive = {
+			focus = MAN_large_navy
+		}
+		relative_position_id = MAN_manchurian_auxiliary_navy
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = sub_op_bonus
+				bonus = 1
+				uses = 2
+				category = submarine_doctrine
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = MAN_large_navy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = {
+			focus = MAN_manchurian_auxiliary_navy focus = MAN_new_imperial_chinese_navy
+		}
+		mutually_exclusive = {
+			focus = MAN_flexible_navy
+		}
+		relative_position_id = MAN_manchurian_auxiliary_navy
+		x = 2
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = fleet_in_being_bonus
+				bonus = 1
+				uses = 2
+				category = fleet_in_being_tree
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = MAN_submarine_effort
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = {
+			focus = MAN_flexible_navy
+			focus = MAN_large_navy
+		}
+		relative_position_id = MAN_manchurian_auxiliary_navy
+		x = 0
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1
+				ahead_reduction = 1
+				uses = 1
+				category = ss_tech
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = MAN_cruiser_effort
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = {
+			focus = MAN_flexible_navy
+			focus = MAN_large_navy
+		}
+		relative_position_id = MAN_manchurian_auxiliary_navy
+		x = 2
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1
+				ahead_reduction = 1
+				uses = 1
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = MAN_destroyer_effort
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = {
+			focus = MAN_submarine_effort
+		}
+		relative_position_id = MAN_submarine_effort
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1
+				ahead_reduction = 1
+				uses = 1
+				category = dd_tech
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = MAN_capital_ships_effort
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = {
+			focus = MAN_cruiser_effort
+		}
+		relative_position_id = MAN_cruiser_effort
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1
+				ahead_reduction = 1
+				uses = 1
+				category = bb_tech
+				category = bc_tech
+				category = cv_tech
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+#####MANCHURIAN IMPERIAL AIR FORCE
+	focus = {
+		id = MAN_mamc
+		icon = GFX_goal_generic_air_fighter
+		x = 32
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		
+
+		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.5
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = MAN_mamc_light_organization
+				show_mio_tooltip = MAN_mamc_medium_organization
+				show_mio_tooltip = MAN_mamc_heavy_organization
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+
+				mio:MAN_mamc_light_organization = {
+					add_mio_funds = 500
+				}
+				mio:MAN_mamc_medium_organization = {
+					add_mio_funds = 500
+				}
+				mio:MAN_mamc_heavy_organization = {
+					add_mio_funds = 500
+				}
+			}
+
+			ELSE = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = MAN_mamc_light
+				show_ideas_tooltip = MAN_mamc_medium
+				show_ideas_tooltip = MAN_mamc_heavy
+			}
+		}
+	}
+	focus = {
+		id = MAN_fighter_focus
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = {
+			focus = MAN_mamc
+		}
+		mutually_exclusive = {
+			focus = MAN_bomber_focus
+		}
+		relative_position_id = MAN_mamc
+		x = 1
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				name = air_plane_models
+				bonus = 1
+				uses = 2
+				category = light_air
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = MAN_bomber_focus
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = {
+			focus = MAN_mamc
+		}
+		mutually_exclusive = {
+			focus = MAN_fighter_focus
+		}
+		relative_position_id = MAN_mamc
+		x = -1
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				name = air_plane_models
+				bonus = 1
+				uses = 1
+				category = heavy_air
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = MAN_aviation_effort_2
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = {
+			focus = MAN_bomber_focus
+			focus = MAN_fighter_focus
+		}
+		relative_position_id = MAN_mamc
+		x = 0
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		complete_tooltip = {
+			air_experience = 25
+			if = {
+				limit = {
+					has_country_flag = aviation_effort_2_AB
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+		completion_reward = {
+			air_experience = 25
+			if = {
+				limit = {
+					capital_scope = {
+						OR = {
+							NOT = {
+								is_controlled_by = ROOT
+							}
+							NOT = {
+								free_building_slots = {
+									building = air_base
+									size > 1
+								}
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+						is_core_of = ROOT
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = {
+						set_country_flag = aviation_effort_2_AB
+					}
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = {
+						set_country_flag = aviation_effort_2_AB
+					}
+				}
+			}
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = MAN_CAS_effort
+		icon = GFX_goal_generic_CAS
+		prerequisite = {
+			focus = MAN_aviation_effort_2
+		}
+		relative_position_id = MAN_mamc
+		x = -1
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				name = air_plane_models
+				bonus = 1
+				uses = 1
+				category = light_air
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = MAN_NAV_effort
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = {
+			focus = MAN_aviation_effort_2
+		}
+		prerequisite = {
+			focus = MAN_flexible_navy
+		}
+		relative_position_id = MAN_mamc
+		x = 1
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				name = air_plane_models
+				bonus = 1
+				uses = 1
+				category = medium_air
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+###EXILE TAKEOVER TREE
+	focus = {
+		id = MAN_exile_takeover
+		icon = GFX_focus_MAN_exile_takeover
+		prerequisite = {
+			focus = MAN_obedience
+		}
+		x = -14
+		y = 1	
+		relative_position_id = MAN_obedience
+
+		cost = 5
+		prerequisite = {
+			
+		}
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			NOT = {
+				has_completed_focus = MAN_alliance_with_the_kwantung_army
+			}
+			JAP = {
+				OR = {
+					has_completed_focus = JAP_cast_the_die
+					has_completed_focus = JAP_pre_emptive_coup
+				}
+			}
+		}
 
 
+		available_if_capitulated = no
 
-	shared_focus = CHI_invite_foreign_investors
+		completion_reward = {
+			add_political_power = 50
+			add_opinion_modifier = {
+				target = SOV
+				modifier = hostile_status
+			}
+			add_opinion_modifier = {
+				target = CHI
+				modifier = hostile_status
+			}
+			add_opinion_modifier = {
+				target = JAP
+				modifier = hostile_status
+			}
+			remove_ideas = MAN_kwantung_veto
+			country_event = manchuria.1
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_core_of = JAP
+					}
+					add_claim_by = MAN
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = MAN_reorganize_the_nation
+		icon = GFX_focus_jap_spiritual_mobilization
+		prerequisite = { focus = MAN_exile_takeover }
+		x = -1
+		y = 1
+		relative_position_id = MAN_exile_takeover
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 50
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_corps_commander_role = {
+				character = MAN_yasuji_okamura
+				traits={ infantry_expert brilliant_strategist fortress_buster }
+				skill = 3
+				attack_skill = 4
+				defense_skill = 1
+				planning_skill = 2
+				logistics_skill = 2
+			}
+			add_corps_commander_role = {
+				character = MAN_hatazo_adachi
+				traits={ trait_reckless infantry_officer JAP_samurai_lineage trickster }
+				skill = 1
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 3
+			}
+			add_corps_commander_role = {
+				character = MAN_itagaki_seishiro
+				traits={ inflexible_strategist trait_reckless JAP_samurai_lineage }
+				skill = 4
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 3
+			}
+			add_field_marshal_role = {
+				character = MAN_shunroku_hata
+				skill = 4
+				traits = {JAP_samurai_lineage offensive_doctrine }
+				attack_skill = 3
+				defense_skill = 4
+				planning_skill = 2
+				logistics_skill = 4
+			}
+			add_stability = -0.2
+			MAN_low_legitimacy_clear_all = yes
+			add_ideas = state_shintoism
+			add_ideas = limited_exports
+			add_timed_idea = {
+				idea = MAN_new_regime
+				days = 365
+			}
+			if = { limit = { OR = { has_idea = disarmed_nation has_idea = volunteer_only } }
+				add_ideas = extensive_conscription
+			}
+			if = { limit = { OR = { has_idea = civilian_economy has_idea = low_economic_mobilisation } }
+				add_ideas = partial_economic_mobilisation
+			}
+			if = { limit = { owns_state = 609 }
+				add_state_core = 609
+			}
+			if = { limit = { owns_state = 524 }
+				add_state_core = 524
+			}
+			if = { 
+				limit = { 
+					MEN = { 
+						exists = yes 
+						NOT = { 
+							is_subject_of = MAN 
+						} 
+					} 
+				}
+				add_state_core = 611
+				add_state_core = 612
+				create_wargoal = {
+					type = annex_everything
+					target = MEN
+				}
+			}
+			if = { 
+				limit = { 
+					KOR = { 
+						exists = yes 
+						NOT = { 
+						is_subject_of = MAN 
+						} 
+					} 
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = KOR
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = MAN_dockyard_conversion
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = MAN_exile_takeover}
+		x = 1
+		y = 1
+		relative_position_id = MAN_exile_takeover
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 19
+		}
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_core_of = ROOT
+				is_controlled_by = ROOT
+			}
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 25
+			745 = {
+			add_building_construction = {
+				type = naval_base
+				province = 1150
+				level = 4
+				instant_build = yes
+			}
+			}
+			random_state = {
+				limit = {
+					is_owned_by = MAN
+					is_core_of = MAN
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = {
+					is_owned_by = MAN
+					is_core_of = MAN
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = { limit = { NOT = { has_tech = transport } }
+				set_technology = { transport = 1 }
+			}
+		}
+	}
+
+	
+
+	focus = {
+		id = MAN_prepare_for_the_strike
+		icon = GFX_SOV_swap_to_political_advisors_ccp_2d_sov_compatibility
+		prerequisite = { focus = MAN_a_bleak_outlook }
+		x = -1
+		y = 3
+		relative_position_id = MAN_exile_takeover
+
+		cost = 10
+
+		ai_will_do = {
+
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = FRA_alliance_with_industrialists
+			add_offsite_building = { type = arms_factory level = 5 }
+		}
+	}
+
+	focus = {
+		id = MAN_a_bleak_outlook
+		icon = GFX_focus_MAN_kwantung_burden
+		prerequisite = { focus = MAN_dockyard_conversion}
+		prerequisite = { focus = MAN_reorganize_the_nation}
+		x = 0
+		y = 2
+		relative_position_id = MAN_exile_takeover
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = small_plane_airframe_0
+				amount = 100
+				producer = JAP
+			}
+			add_equipment_to_stockpile = {
+				type = small_plane_cas_airframe_1
+				amount = 50
+				producer = JAP
+			}
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment_0
+			    amount = 3000
+			    producer = JAP
+			}
+			add_equipment_to_stockpile = {
+			    type = artillery_equipment_1
+			    amount = 100
+			    producer = JAP
+			}
+			add_equipment_to_stockpile = {
+			    type = support_equipment
+			    amount = 100
+			    producer = JAP
+			}
+			if = {
+				limit = {
+					has_idea = MAN_militarism
+				}
+				add_stability = 0.05
+			}
+			else = {
+				add_ideas = JAP_militarism
+			}
+			random_state = {
+				limit = {
+					is_owned_by = MAN
+					is_core_of = MAN
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = {
+					is_owned_by = MAN
+					is_core_of = MAN
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = {
+					is_owned_by = MAN
+					is_core_of = MAN
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			unlock_decision_category_tooltip = MAN_the_greatest_struggle
+			if = {
+				limit = {
+					NOT = {
+						has_intelligence_agency = yes
+					}
+				}
+				create_intelligence_agency = yes
+			}
+			else = {
+				add_stability = 0.1
+			}
+		}
+	}
+
+	focus = {
+		id = MAN_guard_the_skies
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = MAN_a_bleak_outlook}
+		x = 1
+		y = 1
+		relative_position_id = MAN_a_bleak_outlook
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+			if = { limit = { owns_state = 609 }
+				609 = { add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+			   	    }
+		  	  	}
+			}
+			if = { limit = { owns_state = 716 }
+				716 = { add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+			   	    }
+		  	  	}
+			}
+			if = { limit = { owns_state = 745 }
+				745 = { add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+			   	    }
+		  	  	}
+			}
+		}
+	}
+
+	focus = {
+		id = MAN_supply_our_air_force
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = MAN_prepare_for_the_strike focus = MAN_guard_the_skies}
+		x = 1
+		y = 4
+		relative_position_id = MAN_exile_takeover
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = { limit = { has_tech = fuel_silos }
+			add_tech_bonus = {
+				bonus = 2.0
+				uses = 1
+				category = synth_resources
+				}
+			}
+			else = {
+				set_technology = { fuel_silos = 1 }
+			}
+
+			if = { limit = { has_tech = synth_oil_experiments }
+			add_tech_bonus = {
+				bonus = 2.0
+				uses = 1
+				category = synth_resources
+				}
+			}
+			else = {
+				set_technology = { synth_oil_experiments = 1 }
+			}
+
+			random_state = {
+				limit = {
+					is_owned_by = MAN
+					is_core_of = MAN
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = MAN_embracing_the_kodoha
+		icon = GFX_focus_generic_japanese_imperial_glory
+		prerequisite = { focus = MAN_prepare_for_the_strike focus = MAN_guard_the_skies}
+		x = 0
+		y = 1
+		relative_position_id = MAN_prepare_for_the_strike
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_war_support = 0.10
+			add_ideas = JAP_superior_will
+		}
+	}
+
+	focus = {
+		id = MAN_kwantung_military_advisors
+		icon = GFX_SOV_expand_aviation_institutes_ccp_2d_sov_compatibility
+		prerequisite = { focus = MAN_embracing_the_kodoha focus = MAN_supply_our_air_force }
+		x = -1
+		y = 1
+		relative_position_id = MAN_embracing_the_kodoha
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = MAN_kwantung_advisors
+			every_army_leader = {
+				add_planning = 1
+				add_attack = 1
+			}
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.75
+				name = land_doctrine_bonus
+				uses = 3
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = MAN_begin_the_nanshin_ron
+		icon = GFX_focus_MAN_russia_or_china
+		prerequisite = { focus = MAN_embracing_the_kodoha focus = MAN_supply_our_air_force }
+		x = 3
+		y = 1
+		relative_position_id = MAN_embracing_the_kodoha
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		select_effect = {
+			add_timed_idea = {
+				idea = MAN_attack_china
+				days = 120
+			}
+		}
+		available_if_capitulated = yes
+		will_lead_to_war_with = CHI
+		will_lead_to_war_with = SOV
+
+		completion_reward = {
+			country_event = manchuria.3
+			add_named_threat = { threat = 1 name = JAP_intervene_in_china }
+			add_ideas = JAP_intervene_in_china_5
+			unlock_decision_tooltip = JAP_china_step_up_war_effort
+		}
+	}
+
+	focus = {
+		id = MAN_consolidate_the_chinese_holdings
+		icon = GFX_SOV_annex_tannu_tuva_ccp_2d_sov_compatibility
+		prerequisite = { focus = MAN_supply_our_air_force }
+		prerequisite = { focus = MAN_embracing_the_kodoha}
+		x = 1
+		y = 2
+		relative_position_id = MAN_prepare_for_the_strike
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			owns_state = 605
+			NOT = {
+				AND = {
+					country_exists = PRC
+					country_exists = CHI
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = MAN_imperial_ambitions_met
+			every_state = {
+				limit = {
+					is_core_of = CHI
+				}
+				add_core_of = MAN
+			}
+			if = { limit = { has_idea = MAN_exiled_imperial_family }
+				create_country_leader = {
+					name = "Hirohito"
+					desc = "POLITICS_Hirohito_DESC"
+					picture = "gfx/leaders/JAP/Portrait_Japan_Hirohito.dds"
+					expire = "1989.1.1"
+					ideology = rexism
+					traits = {
+						warrior_code
+						emperor_showa
+					}
+				}
+				create_country_leader = {
+					name = "Hirohito"
+					desc = "POLITICS_Hirohito_DESC"
+					picture = "gfx/leaders/JAP/Portrait_Japan_Hirohito.dds"
+					expire = "1989.1.1"
+					ideology = despotism
+					traits = {
+						warrior_code
+						emperor_showa
+					}
+				}
+			}
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_core_of = JAP
+						is_claimed_by = MAN
+					}
+					remove_claim_by = MAN
+				}
+			}
+		}
+	}
+	focus = {
+		id = MAN_retake_japan
+		icon = GFX_focus_AST_war_japan
+		prerequisite = { focus = MAN_consolidate_the_chinese_holdings }
+		prerequisite = { focus = MAN_begin_the_nanshin_ron }
+		prerequisite = { focus = MAN_kwantung_military_advisors }
+		x = 1
+		y = 2
+		relative_position_id = MAN_embracing_the_kodoha
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		will_lead_to_war_with = JAP
+		available_if_capitulated = yes
+
+		completion_reward = {
+			JAP = {
+			country_event = {
+				id = manchuria.2
+			}
+		}
+		}
+	}
+	focus = {
+		id = MAN_get_japan_tree
+		icon = GFX_goal_manpower
+		prerequisite = { focus = MAN_retake_japan}
+		x = 1
+		y = 3
+		relative_position_id = MAN_embracing_the_kodoha
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		allow_branch = {
+			has_completed_focus = MAN_consolidate_the_chinese_holdings
+		}
+		available = {
+			NOT = {
+				country_exists = JAP
+			}
+		}
+		
+		completion_reward = {
+
+			load_focus_tree = japan_wtt_focus
+			if = {
+				limit = { 
+					has_completed_focus = MAN_prepare_for_the_strike 
+				}
+				custom_effect_tooltip = loadfocusjapfasc
+			hidden_effect = {
+				if = {
+					limit = { 
+						has_completed_focus = MAN_prepare_for_the_strike 
+					}
+					unlock_national_focus = JAP_purge_the_kodoha_faction
+					complete_national_focus = JAP_liaison_conference
+					complete_national_focus = JAP_greater_east_asian_co_prosperity_sphere
+					unlock_national_focus = JAP_sign_tripartite_pact
+					unlock_national_focus = JAP_army_expansion_law
+					unlock_national_focus = JAP_army_expansion
+					complete_national_focus = JAP_supremacy_of_will
+				}
+			}
+		}
+	}
+}
 }
