@@ -1591,27 +1591,22 @@ focus_tree = {
 
 	focus = {
 		id = POR_second_navy_reequipment
-		available = {			
+		prerequisite = {
 		}
-
-		bypass = {		
-		}
-		prerequisite = {		
-		}			
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_focus_generic_refit_civilian_ships
 		x = 9
 		y = 0
 
 		relative_position_id = POR_continue_the_public_works
-		cost = 7.5
+		cost = 10
 		search_filters = {FOCUS_FILTER_INDUSTRY}
-		completion_reward = { 
+		completion_reward = {
 			if = {
 				limit = { has_full_control_of_state = 112 }
 				112 = {
 					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
-						type = dockyard		
+						type = dockyard
 						level = 2
 						instant_build = yes
 					}
@@ -1637,7 +1632,7 @@ focus_tree = {
 				}
 			}
 			unlock_decision_tooltip = POR_buy_ships_britain
-			unlock_decision_tooltip = POR_buy_ships_italy	
+			unlock_decision_tooltip = POR_buy_ships_italy
 		}
 	}
 
@@ -1649,7 +1644,7 @@ focus_tree = {
 		y = 1
 
 		relative_position_id = POR_second_navy_reequipment
-		cost = 7.5
+		cost = 10
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			if = {
@@ -1712,6 +1707,12 @@ focus_tree = {
 					}
 				}
 			}
+			add_tech_bonus = {
+				name = POR_a_powerful_merchant_marine
+			    bonus = 1.0
+			    uses = 1
+			    category = dd_tech
+			}
 			add_ideas = POR_convoy_build_efficiency
 		}
 	}
@@ -1756,14 +1757,14 @@ focus_tree = {
 		y = 1
 
 		relative_position_id = POR_second_navy_reequipment
-		cost = 5
+		cost = 10
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				name = POR_submarine_effort
 			    cost_reduction = 0.5
-			    uses = 2
-			    category = naval_doctrine
+			    uses = 1
+			    category = cat_trade_interdiction
 			}
 			add_tech_bonus = {
 				name = POR_submarine_effort
@@ -1775,60 +1776,21 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POR_intensify_torpedo_manufacturing
-		icon = GFX_focus_generic_torpedo_production
-		prerequisite = { focus = POR_second_navy_reequipment }
-
-		x = 0
-		y = 1
-		relative_position_id = POR_submarine_effort
-		cost = 5
-		available = {
-		}
-
-		search_filters = {FOCUS_FILTER_RESEARCH}
-
-		completion_reward = {
-
-			if = {
-				limit = {
-					has_dlc = "Man the Guns"
-				}
-				add_tech_bonus = {
-					name = POR_intensify_torpedo_manufacturing
-					bonus = 1
-					uses = 3
-					category = cat_torpedoes
-				}
-			}
-			else = {
-				add_doctrine_cost_reduction = {
-					name = POR_intensify_torpedo_manufacturing
-					cost_reduction = 1
-					uses = 3
-					category = naval_doctrine
-				}
-			}
-		}
-	}
-
-
-	focus = {
 		id = POR_fuzileiros
-		prerequisite = { 
-		focus = POR_intensify_torpedo_manufacturing
-		focus = POR_merchant_marine_protection }
+		prerequisite = { focus = POR_submarine_effort}
+		prerequisite = { focus = POR_merchant_marine_protection }
 		icon = GFX_goal_generic_occupy_states_coastal
 		x = 0
 		y = 3
 
 		relative_position_id = POR_submarine_effort
-		cost = 7.5
+		cost = 10
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
+			add_ideas = POR_portuguese_marines
 			add_tech_bonus = {
 				name = POR_fuzileiros
-			    bonus = 0.75
+			    bonus = 1.0
 			    uses = 2
 			    category = marine_tech
 			}
@@ -1839,6 +1801,7 @@ focus_tree = {
 			    uses = 2
 			    category = tp_tech
 			}
+			
 			# AI will build the required docks for the next focus
 			add_ai_strategy = {
 				type = building_target
@@ -1864,18 +1827,6 @@ focus_tree = {
 		completion_reward = {
 			navy_experience = 50
 			add_research_slot = 1
-			add_tech_bonus = {
-				name = POR_naval_research_institute
-			    bonus = 0.5
-			    uses = 2
-			    category = naval_artillery
-			}
-			add_tech_bonus = {
-				name = POR_naval_research_institute
-			    bonus = 0.5
-			    uses = 2
-			    category = naval_equipment
-			}
 		}
 	}
 
@@ -1888,84 +1839,46 @@ focus_tree = {
 		y = 1
 
 		relative_position_id = POR_naval_research_institute
-		cost = 7.5
+		cost = 10
 		completion_reward = {
 			navy_experience = 50
 			air_experience = 50
-			add_ideas = JAP_airframe_supplies_improvements
 		}
 	}
 
 	focus = {
 		id = POR_arsenal_do_alfeite
-	
+		available = {
+			has_full_control_of_state = 112
+		}
 		prerequisite = { focus = POR_second_navy_reequipment }
 		icon = GFX_goal_generic_navy_cruiser
 		x = 2
 		y = 1
 
 		relative_position_id = POR_second_navy_reequipment
-		cost = 5
+		cost = 10
 		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			if = {
-				limit = { has_full_control_of_state = 179 }
-				179 = { #Beja
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = dockyard
-						level = 1
-						instant_build = yes
-					}
-				}
+			add_tech_bonus = {
+				name = POR_arsenal_do_alfeite
+			    bonus = 1.0
+			    uses = 1
+			    category = ca_tech
 			}
-			else = {
-				random_owned_state = {
-					limit = {
-						is_controlled_by = ROOT
-						is_core_of = ROOT
-						free_building_slots = {
-							building = dockyard
-							size > 1
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = dockyard
-						level = 1
-						instant_build = yes
-					}
-				}
+			add_tech_bonus = {
+				name = POR_arsenal_do_alfeite
+			    bonus = 1.0
+			    uses = 1
+			    category = cl_tech
 			}
-			if = {
-				limit = { has_full_control_of_state = 180 }
-				180 = { #Porto
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = dockyard
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			else = {
-				random_owned_state = {
-					limit = {
-						is_controlled_by = ROOT
-						is_core_of = ROOT
-						free_building_slots = {
-							building = dockyard
-							size > 1
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = dockyard
-						level = 1
-						instant_build = yes
-					}
+
+			112 = { #Lisbon
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
 				}
 			}
 		}
@@ -1985,21 +1898,16 @@ focus_tree = {
 			add_tech_bonus = {
 				name = POR_national_cruiser_production
 			    bonus = 1.0
-			    uses = 2
+			    uses = 1
 			    category = ca_tech
 			}
 			add_tech_bonus = {
 				name = POR_national_cruiser_production
 			    bonus = 1.0
-			    uses = 2
+			    uses = 1
 			    category = cl_tech
 			}
-			add_tech_bonus = {
-				name = POR_national_cruiser_production
-			    bonus = 0.5
-			    uses = 4
-			    category = naval_artillery
-			}
+
 			navy_experience = 50
 		}
 	}
@@ -2023,9 +1931,9 @@ focus_tree = {
 			}
 			add_doctrine_cost_reduction = {
 				name = POR_battleship_effort
-			    cost_reduction = 1
+			    cost_reduction = 0.5
 			    uses = 1
-			    category = naval_doctrine
+			    category = cat_fleet_in_being
 			}
 			if = {
 				limit = {
@@ -2033,14 +1941,14 @@ focus_tree = {
 				}
 				add_tech_bonus = {
 					name = industrial_bonus
-					bonus = 0.5
-					uses = 3
+					bonus = 1
+					uses = 1
 					category = naval_armor
 				}
 				add_tech_bonus = {
 					name = SPR_navy_modernization
-					bonus = 0.5
-					uses = 3
+					bonus = 1
+					uses = 1
 					technology = fire_control_methods_1
 					technology = fire_control_methods_2
 					technology = fire_control_methods_3
@@ -2070,9 +1978,9 @@ focus_tree = {
 
 			add_doctrine_cost_reduction = {
 				name = POR_carrier_effort
-			    cost_reduction = 1
-			    uses = 3
-			    category = naval_doctrine
+			    cost_reduction = 1.0
+			    uses = 1
+			    category = base_strike_main
 			}
 		}
 	}
@@ -2092,21 +2000,21 @@ focus_tree = {
 		y = 2
 
 		relative_position_id = POR_national_cruiser_production
-		cost = 2.5
+		cost = 5
 		completion_reward = {
 			if = {
 				limit = { has_full_control_of_state = 698 }
 				698 = { #Azores
 					add_building_construction = {
 						type = coastal_bunker
-						level = 3
+						level = 2
 						province = 1751
 						instant_build = yes
 					}
 
 					add_building_construction = {
 						type = air_base
-						level = 2
+						level = 1
 						instant_build = yes
 					}
 				}
@@ -2117,14 +2025,14 @@ focus_tree = {
 				697 = { #Madeira
 					add_building_construction = {
 						type = coastal_bunker
-						level = 3
+						level = 1
 						province = 3118
 						instant_build = yes
 					}
 
 					add_building_construction = {
 						type = air_base
-						level = 2
+						level = 1
 						instant_build = yes
 					}
 				}
@@ -2135,14 +2043,14 @@ focus_tree = {
 				702 = { #Cape Verde
 					add_building_construction = {
 						type = coastal_bunker
-						level = 3
+						level = 1
 						province = 13014
 						instant_build = yes
 					}
 
 					add_building_construction = {
 						type = air_base
-						level = 2
+						level = 1
 						instant_build = yes
 					}
 				}
@@ -2161,7 +2069,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = POR_atlantic_defense_strategy }
 		icon = GFX_focus_generic_coastal_fort
-		x = 1
+		x = 0
 		y = 1
 
 		relative_position_id = POR_atlantic_defense_strategy
@@ -2174,21 +2082,21 @@ focus_tree = {
 	 			321 = { #Goa
 					add_building_construction = {
 						type = coastal_bunker
-						level = 2
+						level = 1
 						province = 1273
 						instant_build = yes
 					}
 
 					add_building_construction = {
 						type = bunker
-						level = 2
+						level = 1
 						province = 1273
 						instant_build = yes
 					}
 
 					add_building_construction = {
 						type = air_base
-						level = 2
+						level = 1
 						instant_build = yes
 					}
 				}
@@ -2198,21 +2106,21 @@ focus_tree = {
 				729 = { #Macau
 					add_building_construction = {
 						type = coastal_bunker
-						level = 2
+						level = 1
 						province = 4189
 						instant_build = yes
 					}
 
 					add_building_construction = {
 						type = bunker
-						level = 2
+						level = 1
 						province = 4189
 						instant_build = yes
 					}
 
 					add_building_construction = {
 						type = air_base
-						level = 2
+						level = 1
 						instant_build = yes
 					}
 				}
@@ -2222,82 +2130,26 @@ focus_tree = {
 				721 = { #Portuguese Timor
 					add_building_construction = {
 						type = coastal_bunker
-						level = 2
+						level = 1
 						province = 12190
 						instant_build = yes
 					}
 
 					add_building_construction = {
 						type = bunker
-						level = 2
+						level = 1
 						province = 12190
 						instant_build = yes
 					}
 
 					add_building_construction = {
 						type = air_base
-						level = 2
+						level = 1
 						instant_build = yes
 					}
 				}
 			}
 		}
-	}
-
-	focus = {
-		id = POR_increased_repair_capabilities
-		icon = GFX_goal_continuous_repairments
-		prerequisite = { focus = POR_atlantic_defense_strategy }
-		x = -1
-		y = 1
-		relative_position_id = POR_atlantic_defense_strategy
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 4
-		}
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 112 179 180 }
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-					is_core_of = ROOT
-					free_building_slots = {
-						building = dockyard
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				prioritize = { 112 179 180 }
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-					is_core_of = ROOT
-					free_building_slots = {
-						building = dockyard
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}			
-			add_ideas = ENG_expand_the_repair_yards
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 
@@ -6304,12 +6156,7 @@ focus_tree = {
 					level = 1
 				}
 			}
-			set_technology = {
-				resource_expansion_tech_1 = 1
-			}	
-			set_technology = {
-				resource_expansion_tech_2 = 1
-			}			
+						
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
 	}
