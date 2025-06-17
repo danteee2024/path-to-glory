@@ -135,7 +135,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				research_speed_factor = 0.05
+				research_speed_factor = 0.02
 				democratic_drift = 0.05
 			}
 		}
@@ -152,6 +152,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 				production_speed_buildings_factor = 0.1
 				consumer_goods_factor = -0.1
@@ -162,6 +163,10 @@ ideas = {
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.05
+>>>>>>> parent of e3e2441 (port update)
 			}
 		}
 
@@ -178,7 +183,10 @@ ideas = {
 			
 			modifier = {
 				non_core_manpower = 0.10
+<<<<<<< HEAD
 				compliance_growth = 0.10
+=======
+>>>>>>> parent of e3e2441 (port update)
 			}
 		}
 
@@ -195,9 +203,14 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+<<<<<<< HEAD
 				non_core_manpower = 0.15
 				compliance_growth = 0.15
 				conscription = 0.010
+=======
+				non_core_manpower = 0.10
+				conscription_factor = 0.15
+>>>>>>> parent of e3e2441 (port update)
 			}
 		}
 
@@ -214,9 +227,14 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+<<<<<<< HEAD
 				non_core_manpower = 0.20
 				compliance_growth = 0.20
 				conscription = 0.020
+=======
+				non_core_manpower = 0.10
+				conscription_factor = 0.3
+>>>>>>> parent of e3e2441 (port update)
 			}
 		}
 
@@ -248,6 +266,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 				conscription_factor = 0.10
 				conscription = 0.01
@@ -258,6 +277,9 @@ ideas = {
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+				conscription_factor = 0.05
+>>>>>>> parent of e3e2441 (port update)
 			}
 		}
 
@@ -282,6 +304,24 @@ ideas = {
 =======
 				fascism_drift = 0.10		
 >>>>>>> Stashed changes
+			}
+		}
+
+		POR_axis_syndicalism = {
+			picture = generic_fascism_drift_bonus 
+			allowed = {
+				original_tag = POR
+			}
+
+			allowed_civil_war = {
+				tag = POR
+			}
+			removal_cost = -1
+			
+			modifier = {
+				fascism_drift = 0.10
+				political_power_gain = 0.10
+				stability_weekly = 0.002
 			}
 		}
 
@@ -318,6 +358,7 @@ ideas = {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 				war_support_factor = 0.2
+<<<<<<< HEAD
 				stability_factor = 0.2
 =======
 =======
@@ -330,10 +371,10 @@ ideas = {
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of e3e2441 (port update)
 				no_supply_grace = 48
 				attrition = -0.1
-				supply_consumption_factor = -0.1
-				enemy_local_supplies = -0.1
 				non_core_manpower = 0.05
 				justify_war_goal_time = -0.5
 				#army_core_attack_factor = 0.10
@@ -359,6 +400,7 @@ ideas = {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 				war_support_weekly = 0.005
+<<<<<<< HEAD
 				conscription_factor = 0.1
 				conscription = 0.01
 =======
@@ -367,6 +409,9 @@ ideas = {
 				war_support_weekly = 0.01
 				conscription_factor = 0.05
 >>>>>>> Stashed changes
+=======
+				conscription_factor = 0.05
+>>>>>>> parent of e3e2441 (port update)
 				training_time_factor = -0.10
 				army_core_attack_factor = 0.10
 				army_core_defence_factor = 0.10
@@ -408,7 +453,7 @@ ideas = {
 			modifier = {
 				political_advisor_cost_factor = -0.25
 				political_power_gain = 0.1
-				drift_defence_factor = 0.25
+				drift_defence_factor = 0.15
 			}
 		}
 
@@ -503,13 +548,13 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				operative_slot = 2
-				civilian_intel_factor = 0.1
-				army_intel_factor = 0.1
-				navy_intel_factor = 0.1
-				airforce_intel_factor = 0.1
-				enemy_operative_capture_chance_factor = 0.25
-				intelligence_agency_defense = 0.5
+				operative_slot = 1
+				civilian_intel_factor = 0.05
+				army_intel_factor = 0.05
+				navy_intel_factor = 0.05
+				airforce_intel_factor = 0.05
+				enemy_operative_capture_chance_factor = 0.10
+				intelligence_agency_defense = -0.25
 			}
 		}
 
@@ -541,8 +586,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				trade_opinion_factor = 0.5
+				trade_opinion_factor = 0.35
 				production_factory_efficiency_gain_factor = 0.1
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 				consumer_goods_factor = -0.1
@@ -552,6 +598,9 @@ ideas = {
 =======
 				consumer_goods_factor = -0.15
 >>>>>>> Stashed changes
+=======
+				consumer_goods_factor = -0.03
+>>>>>>> parent of e3e2441 (port update)
 			}
 		}
 
@@ -567,6 +616,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 				consumer_goods_factor = -0.05
@@ -576,8 +626,10 @@ ideas = {
 =======
 				consumer_goods_factor = -0.15
 >>>>>>> Stashed changes
+=======
+				consumer_goods_factor = -0.03
+>>>>>>> parent of e3e2441 (port update)
 				production_speed_industrial_complex_factor = 0.10
-				drift_defence_factor = 0.10
 			}
 		}
 
@@ -594,6 +646,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 				stability_weekly = 0.001
@@ -604,10 +657,11 @@ ideas = {
 =======
 				consumer_goods_factor = -0.08
 >>>>>>> Stashed changes
+=======
+				consumer_goods_factor = -0.05
+>>>>>>> parent of e3e2441 (port update)
 				production_speed_industrial_complex_factor = 0.10
-				production_speed_arms_factory_factor = 0.025
-				production_speed_dockyard_factor = 0.025
-				drift_defence_factor = 0.25
+				drift_defence_factor = 0.15
 			}
 		}
 
@@ -624,6 +678,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 				stability_weekly = 0.003
 				consumer_goods_factor = -0.1
@@ -634,11 +689,13 @@ ideas = {
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+				stability_weekly = 0.002
+				consumer_goods_factor = -0.05
+>>>>>>> parent of e3e2441 (port update)
 				production_speed_industrial_complex_factor = 0.10
-				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = 0.05
-				political_power_gain = 0.10
-				drift_defence_factor = 0.1
+				political_power_gain = 0.1
+				drift_defence_factor = 0.15
 			}
 		}
 
@@ -656,6 +713,7 @@ ideas = {
 			
 			modifier = {
 				stability_weekly = 0.005
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 				consumer_goods_factor = -0.125
@@ -668,8 +726,12 @@ ideas = {
 				consumer_goods_factor = -0.08
 				production_speed_industrial_complex_factor = 0.10
 >>>>>>> Stashed changes
+=======
+				consumer_goods_factor = -0.05
+				production_speed_industrial_complex_factor = 0.10
+>>>>>>> parent of e3e2441 (port update)
 				political_power_gain = 0.2
-				drift_defence_factor = 0.2
+				drift_defence_factor = 0.15
 			}
 		}
 
@@ -687,6 +749,7 @@ ideas = {
 			
 			modifier = {
 				stability_weekly = 0.005
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 				consumer_goods_factor = -0.15
@@ -701,9 +764,14 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.1
 				production_factory_max_efficiency_factor = 0.1
 >>>>>>> Stashed changes
+=======
+				consumer_goods_factor = -0.05
+				production_speed_industrial_complex_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+>>>>>>> parent of e3e2441 (port update)
 				political_power_gain = 0.3
-				drift_defence_factor = 0.3
-				war_support_factor = 0.10
+				drift_defence_factor = 0.15
+				war_support_factor = 0.1
 			}
 		}
 
