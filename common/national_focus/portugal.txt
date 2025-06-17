@@ -2239,7 +2239,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = { 	
 			remove_ideas = POR_unreliable_army
-			army_experience	= 30
+			army_experience	= 50
 		}
 	}
 
@@ -2259,7 +2259,7 @@ focus_tree = {
 		cost = 10
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = { 	
-			army_experience	= 20
+			army_experience	= 25
 			add_tech_bonus = {
 				name = POR_metropolitan_army
 			    bonus = 1.0
@@ -2442,13 +2442,13 @@ focus_tree = {
 			add_tech_bonus = {
 				name = POR_tropas_paraquedistas
 				bonus = 1.0
-				uses = 1
+				uses = 2
 				category = para_tech
 			}
 			if = {
 				limit = { has_dlc = "Arms Against Tyranny" }
 				add_doctrine_cost_reduction = {
-					cost_reduction = 0.5
+					cost_reduction = 1
 					uses = 2
 					category = special_forces_doctrine
 				}
@@ -2505,7 +2505,8 @@ focus_tree = {
 		cost = 5
 		completion_reward = { 	
 			add_ideas = POR_corpo_do_estado_maior	
-			army_experience = 30
+			army_experience = 25
+			add_political_power = 50
 		}
 	}
 
@@ -2525,7 +2526,8 @@ focus_tree = {
 		cost = 5
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = { 
-			add_political_power = 50
+			add_political_power = 100
+			army_experience = 25
 			add_ideas = JAP_army_expansion_idea
 			add_doctrine_cost_reduction = {
 				name = POR_staff_wargames
@@ -2556,8 +2558,7 @@ focus_tree = {
 		completion_reward = { 
 			add_war_support = 0.05
 			add_manpower = 50000
-			army_experience = 15
-		
+			army_experience = 25
 			add_doctrine_cost_reduction = {
 				name = POR_field_maneuvers
 			    cost_reduction = 1
@@ -2587,6 +2588,8 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = CHI_military_affairs_commission
+			add_stability = 0.05
+			army_experience = 25
 		}
 	}
 
