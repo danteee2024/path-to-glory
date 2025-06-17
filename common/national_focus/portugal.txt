@@ -1825,7 +1825,6 @@ focus_tree = {
 		y = 1
 
 		relative_position_id = POR_second_navy_reequipment
-<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 		cost = 5
@@ -1835,9 +1834,6 @@ focus_tree = {
 =======
 		cost = 10
 >>>>>>> Stashed changes
-=======
-		cost = 7.5
->>>>>>> parent of 55ba369 (Update portugal.txt)
 		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_tech_bonus = {
@@ -1872,7 +1868,7 @@ focus_tree = {
 		y = 1
 
 		relative_position_id = POR_arsenal_do_alfeite
-		cost = 7.5
+		cost = 10
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
@@ -2470,7 +2466,7 @@ focus_tree = {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 		completion_reward = { 
-			add_political_power = 100
+			add_political_power = 50
 			army_experience = 25
 			add_ideas = JAP_army_expansion_idea
 =======
