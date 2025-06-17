@@ -274,7 +274,7 @@ ideas = {
 			
 			modifier = {
 				conscription_factor = 0.10
-				army_org_factor = -0.10
+				army_org_factor = 0.10
 				training_time_factor = -0.10
 			}
 		}
@@ -293,7 +293,7 @@ ideas = {
 			modifier = {
 				political_power_gain = 0.15
 				local_resources_factor = 0.15
-				war_support_factor = 0.10
+				stability_factor = 0.20
 				war_support_weekly = 0.005
 				no_supply_grace = 48
 				attrition = -0.1
@@ -301,8 +301,6 @@ ideas = {
 				enemy_local_supplies = -0.1
 				non_core_manpower = 0.05
 				justify_war_goal_time = -0.5
-				#army_core_attack_factor = 0.10
-				#army_core_defence_factor = 0.10
 				production_speed_buildings_factor = 0.10
 				production_lack_of_resource_penalty_factor = -0.10
 				industrial_capacity_dockyard = 0.10
@@ -321,11 +319,11 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				war_support_weekly = 0.01
-				conscription_factor = 0.05
+				war_support_weekly = 0.005
+				conscription_factor = 0.10
 				training_time_factor = -0.10
-				army_core_attack_factor = 0.10
-				army_core_defence_factor = 0.10
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
 				conscription = 0.01
 			}
 		}
@@ -515,7 +513,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_factor = -0.15
+				consumer_goods_factor = -0.05
 				production_speed_industrial_complex_factor = 0.10
 				drift_defence_factor = 0.10
 			}
@@ -534,7 +532,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_factor = -0.08
+				stability_weekly = 0.001
+				consumer_goods_factor = -0.075
 				production_speed_industrial_complex_factor = 0.10
 				production_speed_arms_factory_factor = 0.025
 				production_speed_dockyard_factor = 0.025
@@ -555,8 +554,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_weekly = 0.002
-				consumer_goods_factor = -0.08
+				stability_weekly = 0.003
+				consumer_goods_factor = -0.1
 				production_speed_industrial_complex_factor = 0.10
 				production_speed_arms_factory_factor = 0.05
 				production_speed_dockyard_factor = 0.05
@@ -579,8 +578,10 @@ ideas = {
 			
 			modifier = {
 				stability_weekly = 0.005
-				consumer_goods_factor = -0.08
-				production_speed_industrial_complex_factor = 0.10
+				consumer_goods_factor = -0.125
+				production_speed_industrial_complex_factor = 0.125
+				production_speed_arms_factory_factor = 0.075
+				production_speed_dockyard_factor = 0.075
 				political_power_gain = 0.2
 				drift_defence_factor = 0.2
 			}
@@ -600,9 +601,11 @@ ideas = {
 			
 			modifier = {
 				stability_weekly = 0.005
-				consumer_goods_factor = -0.08
-				production_speed_industrial_complex_factor = 0.1
-				production_factory_max_efficiency_factor = 0.1
+				consumer_goods_factor = -0.15
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_arms_factory_factor = 0.10
+				production_speed_dockyard_factor = 0.10
+				production_factory_max_efficiency_factor = 0.10
 				political_power_gain = 0.3
 				drift_defence_factor = 0.3
 				war_support_factor = 0.10
@@ -640,7 +643,9 @@ ideas = {
 			
 			modifier = {
 				production_speed_buildings_factor = 0.10
-				global_building_slots_factor = 0.15
+				global_building_slots_factor = 0.10
+				production_factory_efficiency_gain_factor = 0.05
+				line_change_production_efficiency_factor = 0.10
 			}
 		}
 
