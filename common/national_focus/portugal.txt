@@ -320,12 +320,10 @@ focus_tree = {
 		relative_position_id = POR_limited_self_rule
 		cost = 5
 		search_filters = {FOCUS_FILTER_INDUSTRY}
-		completion_reward = {
-			swap_ideas = {
-			remove_idea = POR_colonial_assimilation_policy
-			add_idea = POR_colonial_assimilation_policy_2
-			}
+		completion_reward = { 
+
 			796 = {		
+				
 				add_building_construction = {
 					type = naval_base
 					level = 3
@@ -518,10 +516,6 @@ focus_tree = {
 		cost = 5
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = { 
-			swap_ideas = {
-			remove_idea = POR_colonial_assimilation_policy_2
-			add_idea = POR_colonial_assimilation_policy_3
-			}
 			544 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -536,7 +530,7 @@ focus_tree = {
 				}
 				add_resource = {
 					type = aluminium
-					amount = 16
+					amount = 12
 				}
 			}
 			897 = {
@@ -549,7 +543,7 @@ focus_tree = {
 				}
 				add_resource = {
 					type = aluminium
-					amount = 16
+					amount = 12
 				}
 			}
 		}
