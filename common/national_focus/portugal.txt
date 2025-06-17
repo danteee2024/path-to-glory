@@ -63,6 +63,7 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = POR_colonial_army
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 		}
 	}
 
@@ -87,6 +88,10 @@ focus_tree = {
 				category = land_doctrine
 			}
 			add_ideas = JAP_jungle_training
+=======
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = POR_francisco_craveiro_lopes
+>>>>>>> Stashed changes
 =======
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = POR_francisco_craveiro_lopes
@@ -117,11 +122,14 @@ focus_tree = {
 			}
 		}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 		bypass = {		
 		}
 		prerequisite = { focus = POR_jungle_training }
 =======
+=======
+>>>>>>> Stashed changes
 		prerequisite = { focus = POR_colonial_assimilation_policy }
 >>>>>>> Stashed changes
 		mutually_exclusive = { focus = POR_limited_self_rule }
@@ -317,11 +325,17 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 			swap_ideas = {
 			remove_idea = POR_colonial_assimilation_policy
 			add_idea = POR_colonial_assimilation_policy_2
 			}
 			796 = {		
+=======
+
+			796 = {
+
+>>>>>>> Stashed changes
 =======
 
 			796 = {
@@ -507,11 +521,15 @@ focus_tree = {
 		cost = 10
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 		completion_reward = { 
 			swap_ideas = {
 			remove_idea = POR_colonial_assimilation_policy_2
 			add_idea = POR_colonial_assimilation_policy_3
 			}
+=======
+		completion_reward = {
+>>>>>>> Stashed changes
 =======
 		completion_reward = {
 >>>>>>> Stashed changes
@@ -529,6 +547,7 @@ focus_tree = {
 					instant_build = yes
 				}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 				add_resource = {
 					type = aluminium
 					amount = 16
@@ -536,6 +555,9 @@ focus_tree = {
 			}
 			897 = {
 				add_extra_state_shared_building_slots = 2
+=======
+
+>>>>>>> Stashed changes
 =======
 
 >>>>>>> Stashed changes
@@ -1800,7 +1822,11 @@ focus_tree = {
 
 		relative_position_id = POR_second_navy_reequipment
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 		cost = 5
+=======
+		cost = 10
+>>>>>>> Stashed changes
 =======
 		cost = 10
 >>>>>>> Stashed changes
@@ -2100,6 +2126,7 @@ focus_tree = {
 
 	focus = {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 		id = POR_increased_repair_capabilities
 		icon = GFX_goal_continuous_repairments
 		prerequisite = { focus = POR_atlantic_defense_strategy }
@@ -2156,6 +2183,8 @@ focus_tree = {
 	}
 
 	focus = {
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 		id = POR_army_reorganization
@@ -2427,10 +2456,14 @@ focus_tree = {
 		cost = 10
 		search_filters = {FOCUS_FILTER_RESEARCH}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 		completion_reward = { 
 			add_political_power = 50
 			army_experience = 25
 			add_ideas = JAP_army_expansion_idea
+=======
+		completion_reward = {
+>>>>>>> Stashed changes
 =======
 		completion_reward = {
 >>>>>>> Stashed changes
@@ -2468,6 +2501,7 @@ focus_tree = {
 
 	focus = {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 		id = POR_military_affairs_commission
 		icon = GFX_focus_secret_rearmament
 		prerequisite = { focus = POR_field_maneuvers }
@@ -2494,6 +2528,8 @@ focus_tree = {
 
 
 	focus = {
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 		id = POR_popular_front
@@ -2734,7 +2770,11 @@ focus_tree = {
 
 	focus = {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 		id = POR_security_militias
+=======
+		id = POR_communist_secret_police
+>>>>>>> Stashed changes
 =======
 		id = POR_communist_secret_police
 >>>>>>> Stashed changes
@@ -5642,6 +5682,9 @@ focus_tree = {
 				resource = steel
 				amount = 2
 			 }						
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 			every_other_country = {
 				limit = {
@@ -5922,7 +5965,11 @@ focus_tree = {
 	}
 	focus = {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 		id = POR_slums_cleaning
+=======
+		id = POR_more_buildings
+>>>>>>> Stashed changes
 =======
 		id = POR_more_buildings
 >>>>>>> Stashed changes
@@ -5943,13 +5990,19 @@ focus_tree = {
 		cost = 10
 		completion_reward = {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 			add_political_power = -100
 			add_manpower = -20000
 =======
+=======
+>>>>>>> Stashed changes
 			add_political_power = -150
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = POR_more_buildings_tt
 			custom_effect_tooltip = generic_skip_one_line_tt
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 			add_timed_idea = {
 				idea = JAP_investment
@@ -5975,6 +6028,9 @@ focus_tree = {
 					type = arms_factory
 					level = 1
 				}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 			}
 		}
@@ -5982,7 +6038,11 @@ focus_tree = {
 	}
 	focus = {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 		id = POR_extraction_efford
+=======
+		id = POR_steel_mine
+>>>>>>> Stashed changes
 =======
 		id = POR_steel_mine
 >>>>>>> Stashed changes
@@ -6005,6 +6065,23 @@ focus_tree = {
 			add_timed_idea = {
 				idea = JAP_investment
 				days = 70
+<<<<<<< Updated upstream
+=======
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_state = {
+				limit = {
+					AND = {
+						is_on_continent = europe
+						is_core_of = POR
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = resource_expansion_steel
+					level = 1
+				}
+>>>>>>> Stashed changes
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			every_state = {
@@ -6263,7 +6340,11 @@ focus_tree = {
 			owns_state = 500
 		}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 		prerequisite = { focus = POR_mapa_cor_de_rosa focus = POR_train_our_generals_for_the_fight }
+=======
+		prerequisite = { focus = POR_mapa_cor_de_rosa }
+>>>>>>> Stashed changes
 =======
 		prerequisite = { focus = POR_mapa_cor_de_rosa }
 >>>>>>> Stashed changes
@@ -6509,11 +6590,14 @@ focus_tree = {
 	}
 	focus = {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 		id = POR_train_our_generals_for_the_fight
 		
 		prerequisite = { focus = POR_restore_the_navy }
 		
 =======
+=======
+>>>>>>> Stashed changes
 		id = POR_reconquest_of_brazil
 
 		available = {
@@ -6547,6 +6631,9 @@ focus_tree = {
 		#}
 
 		prerequisite = { focus = POR_reconquest_of_brazil}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 		icon = GFX_focus_generic_military_academy
 		x = 0
@@ -7392,7 +7479,11 @@ focus_tree = {
 		relative_position_id = POR_remember_olivenca
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 		cost = 5
+=======
+		cost = 10
+>>>>>>> Stashed changes
 =======
 		cost = 10
 >>>>>>> Stashed changes

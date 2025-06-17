@@ -158,6 +158,9 @@ ideas = {
 =======
 				production_speed_buildings_factor = 0.05
 				consumer_goods_factor = -0.15
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 			}
 		}
@@ -251,6 +254,9 @@ ideas = {
 =======
 				conscription_factor = 0.05
 				mobilization_laws_cost_factor = -0.25
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 			}
 		}
@@ -268,7 +274,11 @@ ideas = {
 			
 			modifier = {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 				fascism_drift = 0.10
+=======
+				fascism_drift = 0.10		
+>>>>>>> Stashed changes
 =======
 				fascism_drift = 0.10		
 >>>>>>> Stashed changes
@@ -306,13 +316,19 @@ ideas = {
 			
 			modifier = {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 				war_support_factor = 0.2
 				stability_factor = 0.2
 =======
+=======
+>>>>>>> Stashed changes
 				political_power_gain = 0.15
 				local_resources_factor = 0.15
 				war_support_factor = 0.10
 				war_support_weekly = 0.005
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 				no_supply_grace = 48
 				attrition = -0.1
@@ -341,10 +357,13 @@ ideas = {
 			
 			modifier = {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 				war_support_weekly = 0.005
 				conscription_factor = 0.1
 				conscription = 0.01
 =======
+=======
+>>>>>>> Stashed changes
 				war_support_weekly = 0.01
 				conscription_factor = 0.05
 >>>>>>> Stashed changes
@@ -525,7 +544,11 @@ ideas = {
 				trade_opinion_factor = 0.5
 				production_factory_efficiency_gain_factor = 0.1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 				consumer_goods_factor = -0.1
+=======
+				consumer_goods_factor = -0.15
+>>>>>>> Stashed changes
 =======
 				consumer_goods_factor = -0.15
 >>>>>>> Stashed changes
@@ -545,7 +568,11 @@ ideas = {
 			
 			modifier = {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 				consumer_goods_factor = -0.05
+=======
+				consumer_goods_factor = -0.15
+>>>>>>> Stashed changes
 =======
 				consumer_goods_factor = -0.15
 >>>>>>> Stashed changes
@@ -568,8 +595,12 @@ ideas = {
 			
 			modifier = {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 				stability_weekly = 0.001
 				consumer_goods_factor = -0.075
+=======
+				consumer_goods_factor = -0.08
+>>>>>>> Stashed changes
 =======
 				consumer_goods_factor = -0.08
 >>>>>>> Stashed changes
@@ -599,6 +630,9 @@ ideas = {
 =======
 				stability_weekly = 0.002
 				consumer_goods_factor = -0.08
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 				production_speed_industrial_complex_factor = 0.10
 				production_speed_arms_factory_factor = 0.05
@@ -623,11 +657,14 @@ ideas = {
 			modifier = {
 				stability_weekly = 0.005
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 				consumer_goods_factor = -0.125
 				production_speed_industrial_complex_factor = 0.125
 				production_speed_arms_factory_factor = 0.075
 				production_speed_dockyard_factor = 0.075
 =======
+=======
+>>>>>>> Stashed changes
 				consumer_goods_factor = -0.08
 				production_speed_industrial_complex_factor = 0.10
 >>>>>>> Stashed changes
@@ -651,12 +688,15 @@ ideas = {
 			modifier = {
 				stability_weekly = 0.005
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 				consumer_goods_factor = -0.15
 				production_speed_industrial_complex_factor = 0.15
 				production_speed_arms_factory_factor = 0.10
 				production_speed_dockyard_factor = 0.10
 				production_factory_max_efficiency_factor = 0.10
 =======
+=======
+>>>>>>> Stashed changes
 				consumer_goods_factor = -0.08
 				production_speed_industrial_complex_factor = 0.1
 				production_factory_max_efficiency_factor = 0.1
@@ -680,7 +720,13 @@ ideas = {
 			
 			modifier = {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 				production_speed_buildings_factor = 0.15
+=======
+				production_speed_buildings_factor = 0.25
+				research_speed_factor = 0.10
+				scientist_breakthrough_bonus_factor = 0.15
+>>>>>>> Stashed changes
 =======
 				production_speed_buildings_factor = 0.25
 				research_speed_factor = 0.10
@@ -708,6 +754,9 @@ ideas = {
 =======
 				production_speed_buildings_factor = 0.10
 				global_building_slots_factor = 0.15
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 			}
 		}
