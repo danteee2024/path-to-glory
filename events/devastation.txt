@@ -17,7 +17,18 @@ country_event = {
 		name = devastation_event.0.a
 	}
 }
+country_event = {
+    id = devastation_event.1
+    is_triggered_only = yes
+    picture = GFX_report_event_generic
 
+    title = devastation_event.1.t
+    desc  = devastation_event.1.d
+
+    option = {
+        name = devastation_event.1.a
+    }
+}
 news_event = {
 	id = devastation_news.0
 	

@@ -186,7 +186,23 @@ on_actions = {
 			}
 		}
 	}
-	
+	on_peace = {
+  effect = {
+    # first, log what you’re seeing
+    log = "[capture_on_peace] raw mil=[casualties_k]  civ=[civ_casualties_k]"
+
+    # stash into temps
+    set_temp_variable = { casualties_mil = casualties_k }
+    set_temp_variable = { casualties_civ = civ_casualties_k }
+
+    # bank into your running totals
+    add_to_variable = { cumulative_military_casualties_k = casualties_mil }
+    add_to_variable = { cumulative_civilian_casualties_k   = casualties_civ }
+
+    # debug
+    log = "[capture_on_peace] total mil=[cumulative_military_casualties_k] civ=[cumulative_civilian_casualties_k]"
+  }
+}
 	on_nuke_drop = {
 		effect = {
 			FROM = {

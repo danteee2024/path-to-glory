@@ -1,0 +1,12 @@
+cumulative_military_casualties_k = {
+    default = 0
+    minimum = 0
+}
+
+cumulative_civilian_casualties_k = {
+    default = 0
+    minimum = 0
+}
+
+
+add_to_variable = { cumulative_military_casualties_k = casualties_mil }
