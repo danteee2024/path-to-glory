@@ -127,16 +127,12 @@ focus_tree = {
 		bypass = {		
 		}
 <<<<<<< HEAD
-<<<<<<< HEAD
 		prerequisite = { focus = POR_jungle_training }
 =======
 =======
 >>>>>>> Stashed changes
 		prerequisite = { focus = POR_colonial_assimilation_policy }
 >>>>>>> Stashed changes
-=======
-		prerequisite = { focus = POR_colonial_assimilation_policy }
->>>>>>> parent of e3e2441 (port update)
 =======
 		prerequisite = { focus = POR_colonial_assimilation_policy }
 >>>>>>> parent of e3e2441 (port update)
@@ -2138,13 +2134,9 @@ focus_tree = {
 
 	focus = {
 <<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 		id = POR_increased_repair_capabilities
-=======
-		id = JAP_increased_repair_capabilities
->>>>>>> parent of e3e2441 (port update)
 =======
 		id = JAP_increased_repair_capabilities
 >>>>>>> parent of e3e2441 (port update)
@@ -2521,13 +2513,9 @@ focus_tree = {
 
 	focus = {
 <<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 		id = POR_military_affairs_commission
-=======
-		id = CHI_military_affairs_commission
->>>>>>> parent of e3e2441 (port update)
 =======
 		id = CHI_military_affairs_commission
 >>>>>>> parent of e3e2441 (port update)
@@ -2801,7 +2789,6 @@ focus_tree = {
 
 	focus = {
 <<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 		id = POR_security_militias
@@ -2811,9 +2798,6 @@ focus_tree = {
 =======
 		id = POR_communist_secret_police
 >>>>>>> Stashed changes
-=======
-		id = ITA_security_militias
->>>>>>> parent of e3e2441 (port update)
 =======
 		id = ITA_security_militias
 >>>>>>> parent of e3e2441 (port update)
@@ -5737,7 +5721,6 @@ focus_tree = {
 			remove_ideas = POR_unstable_republic
 			add_ideas = closed_economy
 <<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 			set_technology = {
@@ -5761,17 +5744,12 @@ focus_tree = {
 =======
 >>>>>>> Stashed changes
 =======
-=======
->>>>>>> parent of e3e2441 (port update)
 			set_technology = {
 				resource_expansion_tech_1 = 1
 			}
 			set_technology = {
 				resource_expansion_tech_2 = 1
 			}						
-<<<<<<< HEAD
->>>>>>> parent of e3e2441 (port update)
-=======
 >>>>>>> parent of e3e2441 (port update)
 			every_other_country = {
 				limit = {
@@ -6054,7 +6032,6 @@ focus_tree = {
 	}
 	focus = {
 <<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 		id = POR_slums_cleaning
@@ -6064,9 +6041,6 @@ focus_tree = {
 =======
 		id = POR_more_buildings
 >>>>>>> Stashed changes
-=======
-		id = FRA_public_works
->>>>>>> parent of e3e2441 (port update)
 =======
 		id = FRA_public_works
 >>>>>>> parent of e3e2441 (port update)
@@ -6090,7 +6064,6 @@ focus_tree = {
 <<<<<<< Updated upstream
 			add_political_power = -100
 <<<<<<< HEAD
-<<<<<<< HEAD
 			add_manpower = -20000
 =======
 =======
@@ -6105,8 +6078,6 @@ focus_tree = {
 >>>>>>> Stashed changes
 =======
 >>>>>>> parent of e3e2441 (port update)
-=======
->>>>>>> parent of e3e2441 (port update)
 			add_timed_idea = {
 				idea = JAP_investment
 				days = 365
@@ -6119,7 +6090,6 @@ focus_tree = {
 						is_core_of = POR
 					}
 				}
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< Updated upstream
 				add_extra_state_shared_building_slots = 3
@@ -6140,15 +6110,11 @@ focus_tree = {
 =======
 				add_extra_state_shared_building_slots = 2
 >>>>>>> parent of e3e2441 (port update)
-=======
-				add_extra_state_shared_building_slots = 2
->>>>>>> parent of e3e2441 (port update)
 			}
 		}
 		search_filters = {  FOCUS_FILTER_MANPOWER }
 	}
 	focus = {
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -6159,9 +6125,6 @@ focus_tree = {
 =======
 		id = POR_steel_mine
 >>>>>>> Stashed changes
-=======
-		id = CHI_mining_commission
->>>>>>> parent of e3e2441 (port update)
 =======
 		id = CHI_mining_commission
 >>>>>>> parent of e3e2441 (port update)
@@ -6187,7 +6150,6 @@ focus_tree = {
 <<<<<<< Updated upstream
 =======
 			}
-<<<<<<< HEAD
 			custom_effect_tooltip = generic_skip_one_line_tt
 			every_state = {
 				limit = {
@@ -6217,8 +6179,6 @@ focus_tree = {
 					level = 1
 				}
 			}
-=======
->>>>>>> parent of e3e2441 (port update)
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
 	}
@@ -6456,7 +6416,6 @@ focus_tree = {
 			owns_state = 500
 		}
 <<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 		prerequisite = { focus = POR_mapa_cor_de_rosa focus = POR_train_our_generals_for_the_fight }
@@ -6466,9 +6425,6 @@ focus_tree = {
 =======
 		prerequisite = { focus = POR_mapa_cor_de_rosa }
 >>>>>>> Stashed changes
-=======
-		prerequisite = { focus = POR_mapa_cor_de_rosa focus = uk_amphibious_focus }
->>>>>>> parent of e3e2441 (port update)
 =======
 		prerequisite = { focus = POR_mapa_cor_de_rosa focus = uk_amphibious_focus }
 >>>>>>> parent of e3e2441 (port update)
@@ -6748,7 +6704,6 @@ focus_tree = {
 		}
 	}
 	focus = {
-<<<<<<< HEAD
 		id = POR_train_our_generals_for_the_fight
 
 		available = {
@@ -6762,12 +6717,6 @@ focus_tree = {
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
-=======
-		id = uk_amphibious_focus
-		
-		prerequisite = { focus = AUS_reestablish_austrian_navy }
-		
->>>>>>> parent of e3e2441 (port update)
 		icon = GFX_focus_generic_military_academy
 		x = 0
 		y = 1
@@ -7612,7 +7561,6 @@ focus_tree = {
 		relative_position_id = POR_remember_olivenca
 
 <<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 		cost = 5
@@ -7622,9 +7570,6 @@ focus_tree = {
 =======
 		cost = 10
 >>>>>>> Stashed changes
-=======
-		cost = 2.5
->>>>>>> parent of e3e2441 (port update)
 =======
 		cost = 2.5
 >>>>>>> parent of e3e2441 (port update)
