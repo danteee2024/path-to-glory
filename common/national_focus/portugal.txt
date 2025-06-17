@@ -5836,12 +5836,7 @@ focus_tree = {
 					level = 1
 				}
 			}
-			set_technology = {
-				resource_expansion_tech_1 = 1
-			}
-			set_technology = {
-				resource_expansion_tech_2 = 1
-			}						
+							
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY  }
 	}
