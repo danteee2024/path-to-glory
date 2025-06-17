@@ -66,8 +66,6 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 			add_ideas = POR_colonial_army
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = POR_francisco_craveiro_lopes
 		}
 	}
 
@@ -132,7 +130,7 @@ focus_tree = {
 		y = 2
 
 		relative_position_id = POR_colonial_assimilation_policy
-		cost = 5
+		cost = 2.5
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
 			unlock_decision_tooltip = POR_mozambique_overseas_territory
@@ -373,8 +371,7 @@ focus_tree = {
 
 		bypass = {		
 		}
-		prerequisite = { focus = POR_infrastructure_in_angola }
-		prerequisite = { focus = POR_roads_bridges_and_dams }  	
+		prerequisite = { focus = POR_infrastructure_in_angola }	
 			
 		icon = GFX_focus_generic_africa_factory
 		x = 0
@@ -476,10 +473,11 @@ focus_tree = {
 
 		bypass = {		
 		}
-		prerequisite = { focus = POR_develop_south_angola }
+		prerequisite = { focus = POR_develop_south_angola
+		focus = POR_extraction_industries }
 				
 		icon = GFX_goal_generic_oil_refinery
-		x = -1
+		x = 1
 		y = 1
 
 		relative_position_id = POR_develop_south_angola
@@ -511,7 +509,7 @@ focus_tree = {
 		prerequisite = { focus = POR_develop_south_angola }
 				
 		icon = GFX_focus_generic_africa_naval
-		x = 1
+		x = -1
 		y = 1
 
 		relative_position_id = POR_develop_south_angola
@@ -747,8 +745,7 @@ focus_tree = {
 			add_tech_bonus = {
 			category = air_equipment
 			uses = 2
-			bonus = 0.5
-		}
+			bonus = 0.5 }
 			if = {
 				limit = { has_full_control_of_state = 112 }
 				112 = {
@@ -817,7 +814,7 @@ focus_tree = {
 		y = 0
 
 		relative_position_id = POR_infrastructure_in_angola
-		cost = 10
+		cost = 7.5
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = { 
 			if = {
@@ -1000,7 +997,7 @@ focus_tree = {
 		y = 1
 
 		relative_position_id = POR_ogme
-		cost = 10
+		cost = 7.5
 		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY}
 		completion_reward = { 			
 			add_tech_bonus = {
@@ -1236,7 +1233,7 @@ focus_tree = {
 		y = 1
 
 		relative_position_id = POR_armor_focus
-		cost = 5
+		cost = 7.5
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = { 	
 			add_tech_bonus = {
@@ -1311,7 +1308,8 @@ focus_tree = {
 
 		bypass = {		
 		}
-		prerequisite = { focus = POR_light_aircraft_focus}
+		prerequisite = { focus = POR_light_aircraft_focus }
+		prerequisite = { focus = POR_military_research_facilities }
 		icon = GFX_goal_generic_air_bomber
 		x = 0
 		y = 2
@@ -1321,9 +1319,13 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY}
 		completion_reward = { 
 			add_tech_bonus = {
+			category = air_equipment
+			uses = 1
+			bonus = 0.5 }
+			add_tech_bonus = {
 				name = POR_advanced_light_aircraft
 			    bonus = 1.0
-			    uses = 1
+			    uses = 2
 			    category = light_air
 			}
 			air_experience = 50
@@ -1462,7 +1464,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = POR_a_new_industry
-		cost = 10
+		cost = 7.5
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = { 
 			if = {
@@ -1721,8 +1723,8 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				name = POR_submarine_effort
 			    cost_reduction = 0.5
-			    uses = 1
-			    category = cat_trade_interdiction
+			    uses = 2
+			    category = naval_doctrine
 			}
 			add_tech_bonus = {
 				name = POR_submarine_effort
@@ -1784,6 +1786,18 @@ focus_tree = {
 		completion_reward = {
 			navy_experience = 50
 			add_research_slot = 1
+			add_tech_bonus = {
+				name = POR_naval_research_institute
+			    bonus = 0.5
+			    uses = 2
+			    category = naval_artillery
+			}
+			add_tech_bonus = {
+				name = POR_naval_research_institute
+			    bonus = 0.5
+			    uses = 2
+			    category = naval_equipment
+			}
 		}
 	}
 
@@ -1876,18 +1890,6 @@ focus_tree = {
 					}
 				}
 			}
-			add_tech_bonus = {
-				name = POR_arsenal_do_alfeite
-			    bonus = 1.0
-			    uses = 1
-			    category = ca_tech
-			}
-			add_tech_bonus = {
-				name = POR_arsenal_do_alfeite
-			    bonus = 1.0
-			    uses = 1
-			    category = cl_tech
-			}
 		}
 	}
 
@@ -1905,16 +1907,21 @@ focus_tree = {
 			add_tech_bonus = {
 				name = POR_national_cruiser_production
 			    bonus = 1.0
-			    uses = 1
+			    uses = 2
 			    category = ca_tech
 			}
 			add_tech_bonus = {
 				name = POR_national_cruiser_production
 			    bonus = 1.0
-			    uses = 1
+			    uses = 2
 			    category = cl_tech
 			}
-
+			add_tech_bonus = {
+				name = POR_national_cruiser_production
+			    bonus = 0.5
+			    uses = 4
+			    category = naval_artillery
+			}
 			navy_experience = 50
 		}
 	}
@@ -1979,7 +1986,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = POR_carrier_effort
 			    bonus = 1.0
-			    uses = 1
+			    uses = 2
 			    category = cv_tech
 			}
 
@@ -2313,7 +2320,7 @@ focus_tree = {
 							all_provinces = yes
 							limit_to_naval_base = yes
 						}
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 					add_building_construction = {
@@ -2322,7 +2329,7 @@ focus_tree = {
 					        all_provinces = yes
 					        limit_to_border = yes
 					    }
-					    level = 1
+					    level = 2
 					    instant_build = yes
 					}
 				}
@@ -2336,12 +2343,12 @@ focus_tree = {
 							all_provinces = yes
 							limit_to_naval_base = yes
 						}
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 					add_building_construction = {
 					    type = bunker
-					    level = 1
+					    level = 2
 					    instant_build = yes
 					    province = {
 					        all_provinces = yes
@@ -2359,12 +2366,12 @@ focus_tree = {
 							all_provinces = yes
 							limit_to_naval_base = yes
 						}
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 					add_building_construction = {
 					    type = bunker
-					    level = 1
+					    level = 2
 					    instant_build = yes
 					    province = {
 					        all_provinces = yes
@@ -2405,7 +2412,7 @@ focus_tree = {
 
 				add_building_construction = {
 				    type = coastal_bunker
-				    level = 2
+				    level = 3
 				    instant_build = yes	
 				    province = 11805			    
 				}
@@ -2561,14 +2568,14 @@ focus_tree = {
 	}
 
 	focus = {
-		id = CHI_army_reform
-		icon = GFX_focus_chi_army_reform
+		id = CHI_military_affairs_commission
+		icon = GFX_focus_secret_rearmament
 		prerequisite = { focus = POR_field_maneuvers }
 		x = 0
 		y = 1
 		relative_position_id = POR_field_maneuvers
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -2579,7 +2586,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = general_staff
+			add_ideas = CHI_military_affairs_commission
 		}
 	}
 
@@ -2607,7 +2614,6 @@ focus_tree = {
 			    long_name = POR_communism2_party_long
 			    name = POR_communism2_party
 			}
-
 			add_popularity = {
 			    ideology = communism
 			    popularity = 0.05
@@ -2621,8 +2627,6 @@ focus_tree = {
 				days = 1250
 			}			
 			add_political_power = 100
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = POR_maria_lamas
 			custom_effect_tooltip = remove_political_advisor
 			show_ideas_tooltip = POR_fernando_dos_santos_costa
 			show_ideas_tooltip = POR_jose_adriano_pequito_rebelo
@@ -2699,7 +2703,7 @@ focus_tree = {
 			if = {
 				limit = { has_full_control_of_state = 112 }
 				112 = { #Lisbon
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 						type = industrial_complex
 						level = 2
@@ -2710,7 +2714,7 @@ focus_tree = {
 			if = {
 				limit = { has_full_control_of_state = 180 }
 				180 = { #Porto
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = industrial_complex
 						level = 1
@@ -2721,7 +2725,7 @@ focus_tree = {
 			if = {
 				limit = { has_full_control_of_state = 181 }
 				181 = { #Guarda
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = industrial_complex
 						level = 1
@@ -2732,7 +2736,7 @@ focus_tree = {
 			if = {
 				limit = { has_full_control_of_state = 795 }
 				795 = { #Santarem
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = industrial_complex
 						level = 1
@@ -2740,7 +2744,7 @@ focus_tree = {
 					}
 				}
 			}
-			add_stability = -0.20
+			add_stability = -0.1
 		}
 	}
 
@@ -3735,12 +3739,12 @@ focus_tree = {
 		y = 1
 
 		relative_position_id = POR_support_the_spanish_republic
-		cost = 10
+		cost = 5
 		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_SPA_CIVIL_WAR }
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				name = POR_visit_the_front
-			    cost_reduction = 0.5
+			    cost_reduction = 1
 			    uses = 1
 			    category = land_doctrine
 			}
@@ -3748,16 +3752,22 @@ focus_tree = {
 				name = POR_visit_the_front
 			    bonus = 0.5
 			    uses = 1
-			    category = light_air
+			    category = air_equipment
 			}
 			add_tech_bonus = {
 				name = POR_visit_the_front
 			    bonus = 0.5
 			    uses = 1
-			    category = cat_light_armor
+			    category = infantry_weapons
 			}
-			army_experience = 20
-			air_experience = 10
+			add_tech_bonus = {
+				name = POR_visit_the_front
+			    bonus = 0.5
+			    uses = 1
+			    category = armor
+			}
+			army_experience = 25
+			air_experience = 25
 
 			hidden_effect = {
 				add_ai_strategy = {
@@ -3848,7 +3858,7 @@ focus_tree = {
 		y = 2
 
 		relative_position_id = POR_visit_the_front
-		cost = 5
+		cost = 2.5
 		completion_reward = {
 			unlock_decision_tooltip = POR_fight_alongside_the_republic
 			if = {
@@ -4325,7 +4335,7 @@ focus_tree = {
 			if = {
 				limit = { has_full_control_of_state = 112 }
 				112 = { #Lisbon
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = industrial_complex
 						level = 1
@@ -4336,7 +4346,7 @@ focus_tree = {
 			if = {
 				limit = { has_full_control_of_state = 180 }
 				180 = { #Porto
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = industrial_complex
 						level = 1
@@ -4347,7 +4357,7 @@ focus_tree = {
 			if = {
 				limit = { has_full_control_of_state = 181 }
 				181 = { #Guarda
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = industrial_complex
 						level = 1
@@ -4358,7 +4368,7 @@ focus_tree = {
 			if = {
 				limit = { has_full_control_of_state = 179 }
 				179 = { #Beja
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = industrial_complex
 						level = 1
@@ -4887,28 +4897,34 @@ focus_tree = {
 		y = 1
 
 		relative_position_id = POR_portuguese_legion
-		cost = 2.5
+		cost = 5
 		completion_reward = {
 			add_doctrine_cost_reduction = {
-				name = POR_observation_mission
-			    cost_reduction = 0.5
+				name = POR_visit_the_front
+			    cost_reduction = 1
 			    uses = 1
-			    category = air_doctrine
+			    category = land_doctrine
 			}
 			add_tech_bonus = {
-				name = POR_observation_mission
+				name = POR_visit_the_front
 			    bonus = 0.5
 			    uses = 1
-			    category = light_air
+			    category = air_equipment
 			}
 			add_tech_bonus = {
-				name = POR_observation_mission
+				name = POR_visit_the_front
 			    bonus = 0.5
 			    uses = 1
-			    category = cat_light_armor
+			    category = infantry_weapons
 			}
-			army_experience = 10
-			air_experience = 20
+			add_tech_bonus = {
+				name = POR_visit_the_front
+			    bonus = 0.5
+			    uses = 1
+			    category = armor
+			}
+			army_experience = 25
+			air_experience = 25
 
 			hidden_effect = {
 				add_ai_strategy = {
@@ -5548,9 +5564,6 @@ focus_tree = {
 
 	focus = {
 		id = POR_camisas_azuis
-		available = {
-			has_government = fascism
-		}
 		prerequisite = { focus = POR_ditadura_militar }
 		icon = GFX_focus_generic_military_mission
 		x = 0
@@ -5592,6 +5605,7 @@ focus_tree = {
 		relative_position_id = POR_camisas_azuis
 		cost = 5
 		completion_reward = {
+			add_ideas = general_staff
 			if = {
 				limit = {
 					GER = {
@@ -5661,12 +5675,15 @@ focus_tree = {
 		completion_reward = {
 			112 = {
 				set_state_flag = POR_fifth_empire_flag
+				add_core_of = ROOT
 			}
 			180 = {
 				set_state_flag = POR_fifth_empire_flag
+				add_core_of = ROOT
 			}
 			181 = {
 				set_state_flag = POR_fifth_empire_flag
+				add_core_of = ROOT
 			}
 			171 = {
 				set_state_flag = POR_fifth_empire_flag
@@ -5674,39 +5691,45 @@ focus_tree = {
 			}
 			795 = {
 				set_state_flag = POR_fifth_empire_flag
+				add_core_of = ROOT
 			}
 			179 = {
 				set_state_flag = POR_fifth_empire_flag
+				add_core_of = ROOT
 			}
-			#698 = {
-			#	set_state_flag = POR_fifth_empire_flag
-			#}
-			#697 = {
-			#	set_state_flag = POR_fifth_empire_flag
-			#}
-			#702 = {
-			#	set_state_flag = POR_fifth_empire_flag
-			#	add_core_of = ROOT
-			#}
+			169 = {
+				set_state_flag = POR_fifth_empire_flag
+				add_core_of = ROOT
+			}
+			170 = {
+				set_state_flag = POR_fifth_empire_flag
+				add_core_of = ROOT
+			}
+			788 = {
+				set_state_flag = POR_fifth_empire_flag
+				add_core_of = ROOT
+			}
+			174 = {
+				set_state_flag = POR_fifth_empire_flag
+				add_core_of = ROOT
+			}
+			790 = {
+				set_state_flag = POR_fifth_empire_flag
+				add_core_of = ROOT
+			}
+			118 = {
+				set_state_flag = POR_fifth_empire_flag
+				add_core_of = ROOT
+			}
 			add_ideas = POR_the_fifth_empire
 			remove_ideas = POR_unstable_republic
 			add_ideas = closed_economy
 			set_technology = {
-				steel_production_1 = 1
+				resource_expansion_tech_1 = 1
 			}
 			set_technology = {
-				aluminum_production_1 = 1
-			}
-			modify_building_resources = {
-				building = aluminum_mill
-				resource = aluminium
-				amount = 2
-			 }
-			 modify_building_resources = {
-				building = steel_mill
-				resource = steel
-				amount = 2
-			 }						
+				resource_expansion_tech_2 = 1
+			}						
 			every_other_country = {
 				limit = {
 					NOT = { is_puppet_of = ROOT }
@@ -6135,7 +6158,7 @@ focus_tree = {
 		y = 1
 
 		relative_position_id = POR_refuse_the_naval_blockade
-		cost = 5
+		cost = 2.5
 		completion_reward = {
 			add_state_claim = 770 #Malawi
 			add_state_claim = 545 #Rhodesia
