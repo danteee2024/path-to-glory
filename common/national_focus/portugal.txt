@@ -62,35 +62,8 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 			add_ideas = POR_colonial_army
-<<<<<<< Updated upstream
-		}
-	}
-
-	focus = {
-		id = POR_jungle_training
-		ai_will_do = {
-			factor = 1
-		}
-		bypass = {		
-		}
-		prerequisite = { focus = POR_colonial_assimilation_policy }
-		icon = GFX_focus_BRA_amazon_colonization
-		x = -2
-		y = 1
-		relative_position_id = POR_colonial_assimilation_policy
-		cost = 5
-		search_filters = {FOCUS_FILTER_ANNEXATION}
-		completion_reward = {
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.5
-				uses = 2
-				category = land_doctrine
-			}
-			add_ideas = JAP_jungle_training
-=======
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = POR_francisco_craveiro_lopes
->>>>>>> Stashed changes
 		}
 	}
 
@@ -116,14 +89,7 @@ focus_tree = {
 				}
 			}
 		}
-<<<<<<< Updated upstream
-
-		bypass = {		
-		}
-		prerequisite = { focus = POR_jungle_training }
-=======
 		prerequisite = { focus = POR_colonial_assimilation_policy }
->>>>>>> Stashed changes
 		mutually_exclusive = { focus = POR_limited_self_rule }
 
 		icon = GFX_focus_por_luso_tropicalism
@@ -316,17 +282,9 @@ focus_tree = {
 		cost = 5
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-<<<<<<< Updated upstream
-			swap_ideas = {
-			remove_idea = POR_colonial_assimilation_policy
-			add_idea = POR_colonial_assimilation_policy_2
-			}
-			796 = {		
-=======
 
 			796 = {
 
->>>>>>> Stashed changes
 				add_building_construction = {
 					type = naval_base
 					level = 2
@@ -506,15 +464,7 @@ focus_tree = {
 		relative_position_id = POR_develop_south_angola
 		cost = 10
 		search_filters = {FOCUS_FILTER_INDUSTRY}
-<<<<<<< Updated upstream
-		completion_reward = { 
-			swap_ideas = {
-			remove_idea = POR_colonial_assimilation_policy_2
-			add_idea = POR_colonial_assimilation_policy_3
-			}
-=======
 		completion_reward = {
->>>>>>> Stashed changes
 			544 = {
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
@@ -528,17 +478,6 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
-<<<<<<< Updated upstream
-				add_resource = {
-					type = aluminium
-					amount = 16
-				}
-			}
-			897 = {
-				add_extra_state_shared_building_slots = 2
-=======
-
->>>>>>> Stashed changes
 				add_building_construction = {
 					type = naval_base
 					level = 2
@@ -1799,11 +1738,7 @@ focus_tree = {
 		y = 1
 
 		relative_position_id = POR_second_navy_reequipment
-<<<<<<< Updated upstream
-		cost = 5
-=======
 		cost = 10
->>>>>>> Stashed changes
 		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_tech_bonus = {
@@ -2099,65 +2034,6 @@ focus_tree = {
 	}
 
 	focus = {
-<<<<<<< Updated upstream
-		id = POR_increased_repair_capabilities
-		icon = GFX_goal_continuous_repairments
-		prerequisite = { focus = POR_atlantic_defense_strategy }
-		x = -1
-		y = 1
-		relative_position_id = POR_atlantic_defense_strategy
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 4
-		}
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 112 179 180 }
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-					is_core_of = ROOT
-					free_building_slots = {
-						building = dockyard
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				prioritize = { 112 179 180 }
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-					is_core_of = ROOT
-					free_building_slots = {
-						building = dockyard
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}			
-			add_ideas = ENG_expand_the_repair_yards
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-	}
-
-	focus = {
-=======
->>>>>>> Stashed changes
 		id = POR_army_reorganization
 		prerequisite = {
 		}
@@ -2426,14 +2302,7 @@ focus_tree = {
 		relative_position_id = POR_corpo_do_estado_maior
 		cost = 10
 		search_filters = {FOCUS_FILTER_RESEARCH}
-<<<<<<< Updated upstream
-		completion_reward = { 
-			add_political_power = 50
-			army_experience = 25
-			add_ideas = JAP_army_expansion_idea
-=======
 		completion_reward = {
->>>>>>> Stashed changes
 			add_doctrine_cost_reduction = {
 				name = POR_staff_wargames
 			    cost_reduction = 0.5
@@ -2467,35 +2336,6 @@ focus_tree = {
 	}
 
 	focus = {
-<<<<<<< Updated upstream
-		id = POR_military_affairs_commission
-		icon = GFX_focus_secret_rearmament
-		prerequisite = { focus = POR_field_maneuvers }
-		x = 0
-		y = 1
-		relative_position_id = POR_field_maneuvers
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 2
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_ideas = CHI_military_affairs_commission
-			add_stability = 0.05
-			army_experience = 25
-		}
-	}
-
-
-	focus = {
-=======
->>>>>>> Stashed changes
 		id = POR_popular_front
 		mutually_exclusive = { focus = POR_estado_novo}
 		prerequisite = {
@@ -2733,11 +2573,7 @@ focus_tree = {
 	}
 
 	focus = {
-<<<<<<< Updated upstream
-		id = POR_security_militias
-=======
 		id = POR_communist_secret_police
->>>>>>> Stashed changes
 		icon = GFX_focus_SOV_military_purge
 		cost = 10
 		prerequisite = {
@@ -5624,8 +5460,6 @@ focus_tree = {
 			add_ideas = POR_the_fifth_empire
 			remove_ideas = POR_unstable_republic
 			add_ideas = closed_economy
-<<<<<<< Updated upstream
-=======
 			set_technology = {
 				steel_production_1 = 1
 			}
@@ -5642,7 +5476,6 @@ focus_tree = {
 				resource = steel
 				amount = 2
 			 }						
->>>>>>> Stashed changes
 			every_other_country = {
 				limit = {
 					NOT = { is_puppet_of = ROOT }
@@ -5921,11 +5754,7 @@ focus_tree = {
 		search_filters = {  FOCUS_FILTER_MANPOWER }
 	}
 	focus = {
-<<<<<<< Updated upstream
-		id = POR_slums_cleaning
-=======
 		id = POR_more_buildings
->>>>>>> Stashed changes
 
 
 		select_effect = {
@@ -5942,15 +5771,10 @@ focus_tree = {
 		relative_position_id = POR_the_fifth_empire
 		cost = 10
 		completion_reward = {
-<<<<<<< Updated upstream
-			add_political_power = -100
-			add_manpower = -20000
-=======
 			add_political_power = -150
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = POR_more_buildings_tt
 			custom_effect_tooltip = generic_skip_one_line_tt
->>>>>>> Stashed changes
 			add_timed_idea = {
 				idea = JAP_investment
 				days = 365
@@ -5963,9 +5787,6 @@ focus_tree = {
 						is_core_of = POR
 					}
 				}
-<<<<<<< Updated upstream
-				add_extra_state_shared_building_slots = 3
-=======
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
@@ -5975,17 +5796,12 @@ focus_tree = {
 					type = arms_factory
 					level = 1
 				}
->>>>>>> Stashed changes
 			}
 		}
 		search_filters = {  FOCUS_FILTER_MANPOWER }
 	}
 	focus = {
-<<<<<<< Updated upstream
-		id = POR_extraction_efford
-=======
 		id = POR_steel_mine
->>>>>>> Stashed changes
 
 		available = {
 			
@@ -6262,11 +6078,7 @@ focus_tree = {
 		bypass = {
 			owns_state = 500
 		}
-<<<<<<< Updated upstream
-		prerequisite = { focus = POR_mapa_cor_de_rosa focus = POR_train_our_generals_for_the_fight }
-=======
 		prerequisite = { focus = POR_mapa_cor_de_rosa }
->>>>>>> Stashed changes
 
 		mutually_exclusive = { focus = POR_the_kingdom_reunited focus = POR_luso_monarchist_cooperation }
 
@@ -6508,12 +6320,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 	focus = {
-<<<<<<< Updated upstream
-		id = POR_train_our_generals_for_the_fight
-		
-		prerequisite = { focus = POR_restore_the_navy }
-		
-=======
 		id = POR_reconquest_of_brazil
 
 		available = {
@@ -6547,7 +6353,6 @@ focus_tree = {
 		#}
 
 		prerequisite = { focus = POR_reconquest_of_brazil}
->>>>>>> Stashed changes
 		icon = GFX_focus_generic_military_academy
 		x = 0
 		y = 1
@@ -7391,11 +7196,7 @@ focus_tree = {
 
 		relative_position_id = POR_remember_olivenca
 
-<<<<<<< Updated upstream
-		cost = 5
-=======
 		cost = 10
->>>>>>> Stashed changes
 		completion_reward = {
 			hidden_effect = {
 				every_country = {
