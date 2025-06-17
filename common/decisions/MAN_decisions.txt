@@ -1399,11 +1399,13 @@ MAN_espouse_legitimacy = {
 
 		visible = {
 			has_completed_focus = MAN_chinese_leadership
-			has_idea = MAN_low_legitimacy_5
-			has_idea = MAN_low_legitimacy_4
-			has_idea = MAN_low_legitimacy_3
-			has_idea = MAN_low_legitimacy_2
-			has_idea = MAN_low_legitimacy_1
+			OR = {
+				has_idea = MAN_low_legitimacy_5
+				has_idea = MAN_low_legitimacy_4
+				has_idea = MAN_low_legitimacy_3
+				has_idea = MAN_low_legitimacy_2
+				has_idea = MAN_low_legitimacy_1
+			}
 		}
 
 		days_remove = 90
