@@ -174,7 +174,7 @@ country_event = { ####JAPAN GETS THIS EVENT FROM MANCHU
 	is_triggered_only = yes
 	
 	option = {
-		name = manchuria.2.a
+		name = "No"
 		MAN = {
 			create_wargoal = {
 				target = FROM
@@ -184,7 +184,7 @@ country_event = { ####JAPAN GETS THIS EVENT FROM MANCHU
 		}
 	}
 	option = {
-		name = manchuria.2.b
+		name = "We have no choice"
 		MAN = {
 			puppet = JAP
 		}

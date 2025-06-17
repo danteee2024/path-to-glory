@@ -1406,8 +1406,8 @@ MAN_espouse_legitimacy = {
 			has_idea = MAN_low_legitimacy_1
 		}
 
-		days_remove = 60
-		cost = 25
+		days_remove = 90
+		cost = 50
 
 		fire_only_once = no
 		ai_will_do = {

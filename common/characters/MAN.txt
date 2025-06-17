@@ -586,7 +586,7 @@ characters={
 		name = "Runqi"
 		portraits={
 			civilian={
-				small = "gfx/interface/ideas/man/advisors/kr_idea_MAN_advisor_runqi.dds"
+				small = "gfx/interface/ideas/idea_generic_political_advisor_asia_4.dds"
 			}
 		}
 		advisor = {
@@ -596,7 +596,7 @@ characters={
 				original_tag = MAN
 			}
 			traits = {
-				royal
+				ambitious_negotiator_neutrality
 			}
 		}
 	}
@@ -636,20 +636,28 @@ characters={
 				small=GFX_portrait_JAP_kenkichi_ueda_small
 			}
 		}
+		country_leader = {
+			ideology = rexism
+			expire = "1965.1.1.1"
+			traits = { 
+				kwantung_leader
+				kwantung_exile
+			}
+		}
 		advisor={
 			slot = high_command
 			idea_token = MAN_kenkichi_ueda
 			allowed = {
 				original_tag = MAN
 			}
-			
+			cost = 100
 			available = {
 				NOT = {
 					has_completed_focus = MAN_independence_war
 				}
 			}
 			traits = {
-				army_regrouping_3
+				army_infantry_2
 			}
 		}
 	}
@@ -668,6 +676,7 @@ characters={
 			allowed = {
 				original_tag = MAN
 			}
+			cost = 100
 			available = {
 				NOT = {
 					has_completed_focus = MAN_independence_war
@@ -687,6 +696,15 @@ characters={
 				small=GFX_portrait_JAP_seishiro_itagaki_small
 			}
 		}
+		country_leader = {
+			ideology = rexism
+			expire = "1965.1.1.1"
+			traits = { 
+				kwantung_intelligence
+				kwantung_staff
+				kwantung_exile
+			}
+		}
 		advisor={
 			slot = high_command
 			idea_token = MAN_itagaki_seishiro_hc
@@ -700,7 +718,7 @@ characters={
 				}
 			}
 			traits = {
-				army_infantry_2
+				army_regrouping_2
 			}
 		}
 		advisor={
@@ -742,12 +760,14 @@ characters={
 				large=GFX_portrait_JAP_kenji_doihara
 			}
 		}
+		
 		advisor={
 			slot = army_chief
 			idea_token = doihara_kenji
 			allowed = {
 				original_tag = MAN
 			}
+			cost = 100
 			available = {
 				OR = {
 					has_completed_focus = MAN_exile_takeover
@@ -889,7 +909,7 @@ characters={
 			available = {
 				has_completed_focus = MAN_exile_takeover
 			}
-			slot = theorist
+			slot = high_command
 			idea_token = shunroku_hata
 			allowed = {
 				original_tag = MAN
@@ -898,7 +918,7 @@ characters={
 				has_completed_focus = MAN_exile_takeover
 			}
 			traits = {
-				army_artillery_3
+				army_artillery_2
 			}
 			cost = 100
 			ai_will_do = {

@@ -187,7 +187,7 @@ leader_traits = {
 		random = no
 		dig_in_speed_factor = 0.10
 		max_dig_in_factor = 0.10
-		army_defence_factor = 0.05
+		#army_defence_factor = 0.05
 		supply_consumption_factor = -0.05
 		conscription_factor = 0.10
 		mobilization_speed = 0.05
@@ -207,8 +207,9 @@ leader_traits = {
 	kwantung_staff = {
 		random = no
 		land_doctrine_cost_factor = -0.10
-		production_speed_arms_factory_factor = 0.10
-		army_advisor_cost_factor = -0.10
+		#production_speed_arms_factory_factor = 0.10
+		high_command_cost_factor = -0.10
+		army_chief_cost_factor = -0.10
 	}
 	
 	kwantung_exile = {
@@ -243,5 +244,11 @@ leader_traits = {
 		production_speed_fuel_silo_factor = 0.15
 		production_factory_max_efficiency_factor = 0.05
 		autonomy_gain = -0.1
+	}
+	puppet_prime_minister_fascism = {
+		sprite = 13
+		fascism_drift = 0.05
+		stability_factor = 0.05
+		political_power_factor = 0.05
 	}
 }

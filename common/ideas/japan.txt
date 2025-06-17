@@ -64,45 +64,6 @@ ideas = {
 				conscription_factor = 0.15
 			}
 		}
-		MAN_resource_whore = {
-			  name = "Expanded Resource Output"
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			picture = jap_supremacy_of_will
-			
-			modifier = {
-			   local_resources_factor = 0.15
-			}
-		}
-		MAN_japanese_settlers = {
-		     
-		    name = "Japanese Settlers"
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			picture = jap_supremacy_of_will
-			
-			modifier = {
-			    global_building_slots_factor = 0.1
-			}
-		}
 
 		JAP_marine_focus = {
 
