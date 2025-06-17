@@ -113,10 +113,6 @@ ideas = {
 		asymmetrical_warfare_spirit = {
 			ledger = army
 			modifier = {
-				hidden_modifier{
-					tactic_guerrilla_tactics_preferred_weight_factor = 1
-				}
-				custom_modifier_tooltip = asymmetrical_warfare_spirit_tt
 				equipment_capture = 0.02
 				cas_damage_reduction = 0.10
 				terrain_penalty_reduction = 0.05 
