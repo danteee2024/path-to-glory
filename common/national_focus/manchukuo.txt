@@ -9,7 +9,7 @@ focus_tree = {
 	}
 	default = no
 	continuous_focus_position = {
-		x = 0
+		x = 700
 		y = 1500
 	}
 ####POLITICAL TREE
@@ -933,7 +933,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = MAN_national_defense_state1
+		id = MAN_national_defense_state
 		icon = GFX_focus_generic_military_industry
 		
 		prerequisite = { focus = MAN_second_five_year_plan }
@@ -1075,7 +1075,7 @@ focus_tree = {
 		id = MAN_labour_service_corps
 		icon = GFX_focus_generic_public_works
 		prerequisite = {
-			focus = MAN_national_conscription focus = MAN_establish_hoankyoku
+			focus = MAN_national_conscription focus = MAN_hoankyoku
 		}
 		available = {
 			NOT = {
@@ -1092,7 +1092,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 	focus = {
-		id = MAN_establish_hoankyoku
+		id = MAN_hoankyoku
 		icon = GFX_focus_generic_secret_service_agency
 		prerequisite = {
 			focus = MAN_alliance_with_the_kwantung_army
@@ -1128,7 +1128,7 @@ focus_tree = {
 		id = MAN_river_force
 		icon = GFX_focus_generic_naval_invasion
 		prerequisite = {
-			focus = MAN_national_conscription focus = MAN_establish_hoankyoku
+			focus = MAN_national_conscription focus = MAN_hoankyoku
 		}
 		relative_position_id = MAN_alliance_with_the_kwantung_army
 		x = -1
@@ -2963,66 +2963,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 	focus = {
-		id = MAN_manchuria_petroleum_company
-		icon = GFX_goal_generic_oil_refinery
-		prerequisite = { focus = MAN_expand_the_textile_industry }
-		x = -2
-		y = 1
-		relative_position_id = MAN_expand_the_textile_industry
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 2
-		}
-
-		available = {
-			has_full_control_of_state = 716
-			716 = {
-				oil > 3
-			}	
-			NOT = {
-				JAP = {
-					focus_progress = {
-						focus = JAP_manchu_oil
-						progress > 0
-					}
-				}
-			}		
-		}
-		bypass = {
-			any_other_country = {
-				has_completed_focus = JAP_manchu_oil
-			}
-		}
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 716 }
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = fuel_silo
-					level = 1
-					instant_build = yes
-				}
-			}			
-			
-			add_tech_bonus = {
-				name = industrial_bonus
-				bonus = 1
-				uses = 1
-				category = refining_tech
-			}
-			add_tech_bonus = {
-				name = excavation_tech_bonus_name
-				bonus = 0.5
-				uses = 1
-				category = excavation_tech
-			}			
-		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_OIL}
-	}
-	focus = {
 		id = MAN_expand_the_textile_industry
 		icon = GFX_focus_CHL_enlarge_the_textile_industries
 		prerequisite = { focus = MAN_infrastructure_effort  }
@@ -3120,6 +3060,66 @@ focus_tree = {
 			}
 			}
 		}
+	}
+	focus = {
+		id = MAN_manchuria_petroleum_company
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = MAN_expand_the_textile_industry }
+		x = -2
+		y = 1
+		relative_position_id = MAN_expand_the_textile_industry
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			has_full_control_of_state = 716
+			716 = {
+				oil > 3
+			}	
+			NOT = {
+				JAP = {
+					focus_progress = {
+						focus = JAP_manchu_oil
+						progress > 0
+					}
+				}
+			}		
+		}
+		bypass = {
+			any_other_country = {
+				has_completed_focus = JAP_manchu_oil
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 716 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = fuel_silo
+					level = 1
+					instant_build = yes
+				}
+			}			
+			
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1
+				uses = 1
+				category = synth_resources
+			}
+			add_tech_bonus = {
+				name = excavation_tech_bonus_name
+				bonus = 0.5
+				uses = 1
+				category = excavation_tech
+			}			
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_OIL}
 	}
 	focus = {
 		id = MAN_civilian_industries
@@ -3863,9 +3863,9 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
 				name = sub_op_bonus
-				bonus = 1
 				uses = 2
 				category = submarine_doctrine
 			}
@@ -3899,9 +3899,9 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_tech_bonus = {
-				name = fleet_in_being_bonus
-				bonus = 1
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				name = sub_op_bonus
 				uses = 2
 				category = fleet_in_being_tree
 			}

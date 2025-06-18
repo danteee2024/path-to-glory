@@ -107,6 +107,11 @@ characters={
 			}
 		}
 		corps_commander={
+			visible = {
+				NOT = {
+					has_completed_focus = MAN_exile_takeover
+				}
+			}
 			skill=2
 			attack_skill=2
 			defense_skill=2
@@ -117,7 +122,7 @@ characters={
 	}
 	#####NON EXILE ---> PURGE
 	MAN_zhang_jinghui={
-		name=MAN_zhang_jinghui
+		name= "Zhang Jinghui"
 		portraits={
 			army={
 				large="GFX_portrait_man_zhang_jinghui"
@@ -134,6 +139,11 @@ characters={
 			legacy_id=-1
 		}
 		advisor = {
+			visible = {
+				NOT = {
+					has_completed_focus = MAN_exile_takeover
+				}
+			}
 			slot = political_advisor
 			idea_token = zhang_jinghui_civilian
 			allowed = {
@@ -212,6 +222,11 @@ characters={
 			}
 		}
 		advisor={
+			visible = {
+				NOT = {
+					has_completed_focus = MAN_exile_takeover
+				}
+			}
 			cost = 100
 			slot = theorist
 			idea_token = MAN_hung_zhehuang
@@ -234,6 +249,11 @@ characters={
 			}
 		}
 		advisor={
+			visible = {
+				NOT = {
+					has_completed_focus = MAN_exile_takeover
+				}
+			}
 			cost = 100	
 			slot = theorist
 			idea_token = MAN_xian_yuan
@@ -256,6 +276,11 @@ characters={
 			}
 		}
 		advisor={
+			visible = {
+				NOT = {
+					has_completed_focus = MAN_exile_takeover
+				}
+			}
 			cost = 100
 			slot = theorist
 			idea_token = MAN_deng_linge
@@ -283,6 +308,11 @@ characters={
 			}
 		}
 		advisor={	
+			visible = {
+				NOT = {
+					has_completed_focus = MAN_exile_takeover
+				}
+			}
 			slot = army_chief
 			idea_token = MAN_guan_xingde
 			allowed = {
@@ -309,6 +339,11 @@ characters={
 			}
 		}
 		advisor={
+			visible = {
+				NOT = {
+					has_completed_focus = MAN_exile_takeover
+				}
+			}
 			slot = navy_chief
 			idea_token = MAN_yin_zuoqian
 			allowed = {
@@ -411,6 +446,11 @@ characters={
 			}
 		}
 		advisor={
+			visible = {
+				NOT = {
+					has_completed_focus = MAN_exile_takeover
+				}
+			}
 			slot = high_command
 			idea_token = MAN_hesehn_tiemei
 			ledger = army
@@ -435,6 +475,11 @@ characters={
 			}
 		}
 		advisor = {
+			visible = {
+				NOT = {
+					has_completed_focus = MAN_exile_takeover
+				}
+			}
 			slot = political_advisor
 			idea_token = sun_qichang
 			allowed = {
@@ -455,6 +500,11 @@ characters={
 		}	
 
 		advisor = {
+			visible = {
+				NOT = {
+					has_completed_focus = MAN_exile_takeover
+				}
+			}
 			slot = political_advisor
 			idea_token = MAN_megata_toshiro
 			allowed = {
@@ -476,6 +526,11 @@ characters={
 		}	
 
 		advisor = {
+			visible = {
+				NOT = {
+					has_completed_focus = MAN_exile_takeover
+				}
+			}
 			slot = political_advisor
 			idea_token = MAN_songgotu_zhanshan
 			allowed = {
@@ -552,6 +607,11 @@ characters={
 			}
 		}
 		advisor = {
+			visible = {
+				NOT = {
+					has_completed_focus = MAN_exile_takeover
+				}
+			}
 			slot = political_advisor
 			idea_token = zheng_xiaoxu
 			allowed = {
@@ -571,6 +631,11 @@ characters={
 			}
 		}
 		advisor = {
+			visible = {
+				NOT = {
+					has_completed_focus = MAN_exile_takeover
+				}
+			}
 			slot = political_advisor
 			idea_token = lian_yu
 			allowed = {
@@ -586,17 +651,22 @@ characters={
 		name = "Runqi"
 		portraits={
 			civilian={
-				small = "gfx/interface/ideas/idea_generic_political_advisor_asia_4.dds"
+				small = "gfx/interface/ideas/idea_generic_political_advisor_asia_3.dds"
 			}
 		}
 		advisor = {
+			visible = {
+				NOT = {
+					has_completed_focus = MAN_exile_takeover
+				}
+			}
 			slot = political_advisor
 			idea_token = runqi
 			allowed = {
 				original_tag = MAN
 			}
 			traits = {
-				ambitious_negotiator_neutrality
+				royalist_bulldog
 			}
 		}
 	}
@@ -613,6 +683,11 @@ characters={
 			idea_token = MAN_lu_ronghuan
 			allowed = {
 				original_tag = MAN
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = MAN_exile_takeover
+				}
 			}
 			available = {
 				OR = {
@@ -676,6 +751,11 @@ characters={
 			allowed = {
 				original_tag = MAN
 			}
+			visible = {
+				NOT = {
+					has_completed_focus = MAN_independence_war
+				}
+			}
 			cost = 100
 			available = {
 				NOT = {
@@ -688,7 +768,7 @@ characters={
 		}
 	}
 	####EXILE
-	MAN_itagaki_seishiro={
+	MAN_itagaki_seishiro ={
 		name= MAN_itagaki_seishiro 
 		portraits={
 			army={
@@ -711,7 +791,11 @@ characters={
 			allowed = {
 				original_tag = MAN
 			}
-			
+			visible = {
+				NOT = {
+					has_completed_focus = MAN_independence_war
+				}
+			}
 			available = {
 				NOT = {
 					has_completed_focus = MAN_independence_war
@@ -726,6 +810,11 @@ characters={
 			idea_token = itagaki_seishiro_theorist
 			allowed = {
 				original_tag = MAN
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = MAN_independence_war
+				}
 			}
 			available = {
 				OR = {
@@ -767,6 +856,11 @@ characters={
 			allowed = {
 				original_tag = MAN
 			}
+			visible = {
+				NOT = {
+					has_completed_focus = MAN_independence_war
+				}
+			}
 			cost = 100
 			available = {
 				OR = {
@@ -801,6 +895,9 @@ characters={
 			}
 		}
 		advisor={
+			visible = {
+				has_completed_focus = MAN_exile_takeover
+			}
 			slot = political_advisor
 			idea_token = zang_shiyi
 			allowed = {
