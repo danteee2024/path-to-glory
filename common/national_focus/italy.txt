@@ -14880,7 +14880,6 @@ focus_tree = {
 		relative_position_id = ITA_triumph_in_africa_bba
 		cost = 10
 		available = {
-			date > 1937.1.1
 			NOT = {
 				has_completed_focus = ITA_unite_the_opposition
 				has_completed_focus = ITA_defy_the_duce
