@@ -12,7 +12,10 @@ RUS_UNION_SOVEREIGN_STATES = {
 	color = rgb { 78 93 135 }
 	color_ui = rgb { 78 93 135 }
 }
-
+FRA_THIRD_EMPIRE = {
+	color = rgb { 10 10 102 }
+	color_ui = rgb { 30 40 102 }
+}
 MAL_UK = {
     color = rgb { 201 56 93 }
     color_ui = rgb { 255 73 121 }
