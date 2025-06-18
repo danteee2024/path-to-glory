@@ -8,20 +8,7 @@ COG_historical_plan = {
 	}
 
 	enable = {
-		OR = {
-			AND = {
-				is_historical_focus_on = yes 
-				has_game_rule = {
-					rule = COG_AI_BEHAVIOR
-					option = DEFAULT
-				}
-			}
-			has_country_flag = COG_AI_RANDOM_HISTORICAL
-			has_game_rule = {
-				rule = COG_AI_BEHAVIOR
-				option = HISTORICAL
-			}
-		}
+		is_historical_focus_on = yes
 	}
 
 	abort = {

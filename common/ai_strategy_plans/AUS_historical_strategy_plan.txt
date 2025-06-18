@@ -6,20 +6,7 @@ AUS_historical_plan = {
 		original_tag = AUS
 	}
 	enable = {
-		OR = {
-			AND = {
-				is_historical_focus_on = yes 
-				has_game_rule = {
-					rule = AUS_AI_BEHAVIOR
-					option = DEFAULT
-				}
-			}
-			has_country_flag = AUS_AI_RANDOM_HISTORICAL
-			has_game_rule = {
-				rule = AUS_ai_behavior
-				option = HISTORICAL
-			}
-		}	
+		is_historical_focus_on = yes
 	}   
 	abort = {
 		is_subject = yes 

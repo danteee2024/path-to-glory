@@ -7,20 +7,7 @@ DEN_historical_plan = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	enable = {
-		OR = {
-			AND = {
-				is_historical_focus_on = yes 
-				has_game_rule = {
-					rule = DEN_AI_BEHAVIOR
-					option = DEFAULT
-				}
-			}
-			has_country_flag = DEN_AI_RANDOM_HISTORICAL
-			has_game_rule = {
-				rule = DEN_ai_behavior
-				option = HISTORICAL
-			}
-		}	
+		is_historical_focus_on = yes
 	}
 	abort = { #Abort if DEN did NOT become a puppet through the 'Declaration of Neutrality' Idea
 		is_subject = yes
