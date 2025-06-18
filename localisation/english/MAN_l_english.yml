@@ -150,7 +150,7 @@
  MAN_grand_council_idea:0 "Grand Council"
 ######EVENTS
  manchuria.1.t:0 "Exile Takeover"
- manchuria.1.d:0 "Following our defeat in the Japanese civil war, we have fled to Manchuria to establish an exiled Kōdōha military government. From this new base, we aim to preserve the imperial spirit, rebuild our strength, and prepare for the eventual restoration of rightful rule in Japan. We must who will lead this military government."
+ manchuria.1.desc:0 "Following our defeat in the Japanese civil war, we have fled to Manchuria to establish an exiled Kōdōha military government. From this new base, we aim to preserve the imperial spirit, rebuild our strength, and prepare for the eventual restoration of rightful rule in Japan. We must who will lead this military government."
  manchuria.1.a:0 "Kenkichi Ueda"
  manchuria.1.b:0 "Itagaki Seishiro"
  manchuria.1.c:0 "Hirohito, Tennōheika Banzai!"
