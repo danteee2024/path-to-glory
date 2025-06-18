@@ -36,8 +36,8 @@ ideas = {
 			modifier = {
 				stability_factor = -0.2
 				political_power_cost = 1
-				consumer_goods_factor = 1
-				conscription_factor = -0.8
+				consumer_goods_factor = 0.8
+				conscription_factor = -0.4
 				local_resources_factor = -0.2
 			}
 		}
@@ -57,8 +57,8 @@ ideas = {
 			modifier = {
 				stability_factor = -0.15
 				political_power_cost = 0.75
-				consumer_goods_factor = 0.75
-				conscription_factor = -0.6
+				consumer_goods_factor = 0.6
+				conscription_factor = -0.3
 				local_resources_factor = -0.15
 			}
 		}
@@ -78,8 +78,8 @@ ideas = {
 			modifier = {
 				stability_factor = -0.1
 				political_power_cost = 0.5
-				consumer_goods_factor = 0.5
-				conscription_factor = -0.4
+				consumer_goods_factor = 0.4
+				conscription_factor = -0.2
 				local_resources_factor = -0.1
 			}
 		}
@@ -99,8 +99,8 @@ ideas = {
 			modifier = {
 				stability_factor = -0.05
 				political_power_cost = 0.25
-				consumer_goods_factor = 0.25
-				conscription_factor = -0.2
+				consumer_goods_factor = 0.2
+				conscription_factor = -0.1
 				local_resources_factor = -0.05
 			}
 		}
@@ -604,8 +604,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_factor = -0.10
-				stability_factor = 0.05
+				consumer_goods_factor = -0.15
+				stability_factor = -0.05
 			}
 		}
 		USA_magic = {	

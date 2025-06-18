@@ -8,8 +8,7 @@
  sons_of_liberty_desc:0 "We fought tyranny once, we'll fight it again."
  deo_vindice:0 "Deo vidice"
  deo_vindice_desc:0 ""Under God, our Vindicator""
- rt56_office_of_econimic_warfare_idea:0 "Office of Economic Warfare"
- rt56_office_of_econimic_warfare_idea_desc:0 ""
+ 
  USA_world_loco_motive_works:0 "Worlds Locomotive Works"
  USA_world_loco_motive_works_desc:0 "While the rest of the world is worried about producing war goods. We have the industry to pick up the slack in the world's production of Locomotives."
 
@@ -21,11 +20,6 @@
  rt56_arnold_unlock_tt:0 "The Air Force has been granted autonomy through the institution of the §YAir War Plans Division§!."
  USA_NATO_overwatch_tt:0 "§RYou will only keep the last selected idea of the ones obtainable through §!§YOverwatch the Pacific§!§R and §!§YReturn to Europe§!."
 
-
- rt56_USA_cash_and_carry_home:0 "The Cash and Carry Scheme"
- rt56_USA_cash_and_carry_home_desc:0 "We are providing material aid to our allies by letting them borrow money from us to then pay for Non-war material. We can keep this up until the scheme is discovered and the White House's lawyers can no longer hold up objections to the practice in Court."
- usa_three_dimensional_assault_force:0 "Three Dimensional Assault Force"
- rt56_the_gaint_wakes_idea:0 "The Giant Wakes"
 USA_beacon_of_democracy:0 "Beacon Of Democracy"
 beacon_of_democracy_idea:0 "Beacon Of Democracy"
 USA_beacon_of_democracy_desc:0 "Now that the enemy is on the move, the American spirit shall not dwindle but we fuel it with workers from fallen nations."
@@ -465,14 +459,17 @@ nationalization_FA_america_capital:0 "§CAmerican Capitalism§!"
 
 
 
+ USA_reestablish_the_gold_standard_tt:0 "If you go this path, in November 1936 your §RSenate§! and §RHouse support§! will §Cflip§!. §YAlf Landon§! will be elected as the new President of @USA§H[USA.getnamedefcap]§!."
+ USA_the_new_deal_tt:0 "If you go this path, in November 1936 §YFranklin D. Roosevelt§! will be elected and will continue as the President of @USA§H[USA.getnamedefcap]§!."
 
+ USA_congress_desc:1 "@USA§H[USA.getnamedefcap]§! §CCongress§!:\n-§GGreen§! seats represent politicians who support your actions. \n-§RRed§! seats are in opposition to your actions."
 
 
 
 
   #danteee 2025
 USA_anti_unions_act:0 "Anti-Union Act"
-USA_anti_unions_act_desc:0 "In an effort to curb the influence of labor unions and streamline our industrial processes, we will implement the Anti-Union Act. This legislation aims to limit      union activities, reduce strikes, and ensure that businesses can operate without excessive interference from organized labor groups."
+USA_anti_unions_act_desc:0 "In an effort to curb the influence of labor unions and streamline our industrial processes, we will implement the Anti-Union Act. This legislation aims to limit union activities, reduce strikes, and ensure that businesses can operate without excessive interference from organized labor groups."
 
 
  USA_anti_unions_act_idea:0 "Anti-Union Act"

@@ -128,6 +128,8 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			custom_effect_tooltip = USA_the_new_deal_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_political_power = 100
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = new_deal
@@ -1598,7 +1600,6 @@ mutually_exclusive = {
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
 			USA_great_depression_level_down = yes
-			USA_congress_medium_opposition = yes
 			set_country_flag = USA_new_legislation_drafed_flag #Used to unlock the next focus
 		}
 	}
@@ -1650,7 +1651,7 @@ mutually_exclusive = {
 			}
 			
 			USA_great_depression_level_down = yes
-			USA_congress_medium_opposition = yes
+			USA_congress_small_opposition = yes
 			set_country_flag = USA_new_legislation_drafed_flag
 		}
 	}	
@@ -1684,7 +1685,7 @@ mutually_exclusive = {
 		completion_reward = {
 			add_stability = 0.05
 			USA_great_depression_level_down = yes
-			USA_congress_medium_opposition = yes
+			USA_congress_small_opposition = yes
 			set_country_flag = USA_new_legislation_drafed_flag
 		}
 	}	
@@ -2017,7 +2018,7 @@ mutually_exclusive = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
 			USA_great_depression_level_down = yes
-			USA_congress_medium_opposition = yes
+			USA_congress_small_opposition = yes
 			unlock_decision_tooltip = { decision = USA_give_tax_break show_effect_tooltip = yes }
 			set_country_flag = USA_new_legislation_drafed_flag
 		}
@@ -3682,6 +3683,9 @@ focus = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
+			
+				custom_effect_tooltip = USA_reestablish_the_gold_standard_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = USA_gold_standard
 			hidden_effect = {
 				if = {
@@ -3728,7 +3732,6 @@ focus = {
 				limit = {
 					not = { congress_medium_support_trigger = yes }
 				}
-				USA_congress_small_opposition = yes
 			}
 		}
 	}
@@ -3759,6 +3762,7 @@ focus = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
 			add_ideas = USA_anti_unions_act_idea
+			USA_congress_small_opposition = yes
 		}
 	}
 	focus = {
@@ -3791,15 +3795,9 @@ focus = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
 			add_ideas = USA_labour_management_relations_act
-			if = {
-				limit = {
-					communism < 0.1 
-				}
+			
 				USA_congress_small_opposition = yes
-			}
-			else = {
-				USA_congress_medium_opposition = yes
-			}
+			
 		}
 	}
 	focus = {
