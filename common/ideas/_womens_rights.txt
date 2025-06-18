@@ -58,10 +58,10 @@ ideas = {
 			}
 			picture = PB_No_Womens_Legal_Protections
 			modifier = {
-				political_power_factor = 0.05
+				political_power_factor = 0.15
 				monthly_population = 0.10
-				training_time_factor = 0.10
-				conscription_factor = -0.10
+				training_time_factor = 0.05
+				conscription_factor = -0.05
 			}
 			cancel_if_invalid = yes
 		}
