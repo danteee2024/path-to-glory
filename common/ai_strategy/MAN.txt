@@ -153,11 +153,11 @@ MAN_dont_waste_on_large_air_early = {
 
 	abort_when_not_enabled = yes
 
-	ai_strategy = {
-		type = equipment_variant_production_factor
-		id = tac_bomber_equipment
-		value = -100
-	}
+	#ai_strategy = {
+	#	type = equipment_variant_production_factor
+	#	id = tac_bomber_equipment
+	#	value = -100
+	#}
 
 	ai_strategy = {
 		type = equipment_variant_production_factor
