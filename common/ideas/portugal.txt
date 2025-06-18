@@ -40,8 +40,6 @@ ideas = {
 			}
 		}
 
-		# VANILLA ##################################################
-
 		POR_special_operations = {
 			picture = PER_fund_state_intelligence_idea
 			allowed = {
@@ -57,6 +55,8 @@ ideas = {
 				operative_slot = 2
 				civilian_intel_factor = 0.05
 				army_intel_factor = 0.05
+				navy_intel_factor = 0.05
+				airforce_intel_factor = 0.05
 			}
 		}
 		POR_portuguese_marines = {
@@ -92,6 +92,9 @@ ideas = {
 				surrender_limit = 0.6 		
 			}			
 		}
+
+		# VANILLA ##################################################
+
 		POR_unreliable_army = {
 			picture = generic_army_problems
 			allowed = {
@@ -504,8 +507,8 @@ ideas = {
 				army_intel_factor = 0.1
 				navy_intel_factor = 0.1
 				airforce_intel_factor = 0.1
-				enemy_operative_capture_chance_factor = 0.25
-				intelligence_agency_defense = 0.5
+				enemy_operative_capture_chance_factor = 0.50
+				intelligence_agency_defense = 1
 			}
 		}
 
