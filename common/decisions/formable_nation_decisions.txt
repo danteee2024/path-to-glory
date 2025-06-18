@@ -14403,9 +14403,7 @@ greater_italy_category = {
 			hidden_effect = { 
 
 				# Corsica
-				ITA = {
-					transfer_state = 1
-				}
+				
 				1 = { 
 					add_core_of = ROOT
 					set_state_name = ITA_italian_corsica_name
@@ -14416,15 +14414,11 @@ greater_italy_category = {
 				} 
 				
 				# Ticino
-				ITA = {
-					transfer_state = 846
-				}
+				
 				846 = { add_core_of = ROOT }
 				
 				# Savoy
-				ITA = {
-					transfer_state = 735
-				}
+				
 				735 = { 
 					add_core_of = ROOT
 					set_state_name = ITA_italian_savoy_name
@@ -14439,15 +14433,11 @@ greater_italy_category = {
 				} 
 				 
 				# Zara
-				ITA = {
-					transfer_state = 163
-				} 
+				 
 				163 = { add_core_of = ROOT }
 				
 				# Dalmatia
-				ITA = {
-					transfer_state = 103
-				}
+				
 				103 = { 
 					add_core_of = ROOT 
 					set_state_name = ITA_italian_dalmatia_name
@@ -14462,9 +14452,7 @@ greater_italy_category = {
 				} 
 	 
 				# Ljubljana
-				ITA = {
-					transfer_state = 853
-				}
+				
 				853 = { 
 					add_core_of = ROOT 
 					set_state_name = ITA_italian_ljubljana_state_name
@@ -14475,15 +14463,11 @@ greater_italy_category = {
 				}
 
 				# Malta
-				ITA = {
-					transfer_state = 116
-				}
+				
 				116 = { add_core_of = ROOT }
 
 				# Crete
-				ITA = {
-					transfer_state = 182
-				}
+				
 				182 = { 
 					add_core_of = ROOT 
 					set_state_name = ITA_italian_crete_name
@@ -14498,9 +14482,7 @@ greater_italy_category = {
 				} 
 
 				# Dodecaneso
-				ITA = {
-					transfer_state = 164
-				}
+				
 				164 = { add_core_of = ROOT }
 
 				news_event = { id = bba_italian_formables_news.1 hours = 8 }	
