@@ -6,22 +6,22 @@ SWE_historical_plan = {
 		SWE_AAT = yes
 	}
 	enable = {
-		SWE_AAT = yes
+		is_historical_focus_on = yes
 	}
 	abort = {
-		is_subject = yes
-		has_war = no
+		is_subject = yes 
+		has_war = no 
 	}
 
 	ai_national_focuses = {
-
+		
 		#1936
 		SWE_defense_act
 		SWE_urbanization
 		SWE_hygenic_housing
 		SWE_work_projects_for_the_unemployed
 		SWE_government_weapons_contract
-
+		
 		#1937
 		SWE_individual_liberty_and_prosperity_for_all
 		SWE_paid_holidays
@@ -38,7 +38,7 @@ SWE_historical_plan = {
 		SWE_standardize_equipment
 		SWE_radiojanst
 		SWE_research_slot_1
-
+		
 
 		#1939
 		SWE_continue_the_second_industrial_revolution
@@ -60,23 +60,33 @@ SWE_historical_plan = {
 		#SWE_hedgehog_defense
 
 		#1941
-
+		
 		SWE_train_the_sheltered
 		SWE_secret_mobilization
 		SWE_per_albin_line
-
+		
 		#1942
-
-
+		
+		
 		#1943
-
-
+		
+		
 		#1944
+		
+		
+	}
 
+	focus_factors = {
+		
+	}
+
+	research = {
 
 	}
 
-	
+	ideas = {
+
+	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)
 	# Recommended around 1.0. Useful for relation between plans

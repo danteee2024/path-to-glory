@@ -1,219 +1,143 @@
+CHI_alternate_plan_1 = {
+	name = "Nationalist China Alternate Scenario 1: Japan democratic"
+	desc = "With the threat of Japanese Imperialism gone, Nationalist China focuses on eradicating warlords instead"
 
-CHI_communist_plan = {
-	name = "Peoples Republic of China "
-	desc = "CHI becomes communist, has a civil war"
-
+	allowed = {
+		is_literally_china = yes
+		has_dlc = "Waking the Tiger"
+	}
 	enable = {
-		original_tag = CHI
 		OR = {
-			has_completed_focus = CHI_jingwei_punitive_expedition
-			has_country_flag = CHI_AI_RANDOM_CHI_COMMUNIST
-			has_game_rule = {
-				rule = CHI_ai_behavior
-				option = CHI_COMMUNIST
+			original_tag = CHI
+			AND = {
+				is_chinese_warlord = yes
+				has_focus_tree = china_nationalist_focus
 			}
 		}
+		is_historical_focus_on = no
 	}
 	abort = {
-		OR = {
-			has_government = fascism
-			has_government = NEUTRALITY
-			has_government = democratic
+		has_war_with = JAP
+		has_game_rule = {
+			rule = CHI_ai_behavior
+			option = DEFAULT
 		}
 	}
-
 	ai_national_focuses = {
-		#1936
-		CHI_the_big_rear_concept
-		CHI_lure_them_in_strategy
-		CHI_develop_the_rear
-		CHI_military_affairs_commission
 		CHI_unified_industrial_planning
-		CHI_jingwei_punitive_expedition
-		CHI_mao_zedong_civil_war
-		CHI_army_reform
-		CHI_unified_industrial_planning
-		CHI_financial_policy
-		CHI_finish_the_fight
-		CHI_call_upon_peasants
-		CHI_60_divisions_plan
-		CHI_destroy_the_remenants_of_the_traitors
-		CHI_purge_the_bureaucracy
-		CHI_purge_the_army
-		CHI_proclaim_the_peoples_republic
-		CHI_assistance_from_our_brethern
-		CHI_maos_little_red_book
-		CHI_instutional_reorganization
-		CHI_restaff_the_military
-		CHI_chinese_military_command
-		CHI_peoples_liberation_army
-		CHI_reform_the_national_bank
-		CHI_national_reform
 		CHI_expand_the_academica_sinica
-		CHI_mining_commission
-		CHI_national_resources_commission
-		CHI_demand_return_of_trade_ports
-		CHI_prepare_for_the_inevitable
-		CHI_military_industries
-		CHI_retake_manchuria_CCP
-		CHI_demand_taiwan
-		CHI_land_reform
-		CHI_suppress_counterrevolutionaries
-		CHI_cult_of_personality
-		CHI_great_leap_forawrd
-		CHI_state_controlled_education
-		CHI_begin_cultural_revolution
+		CHI_invite_foreign_investors
+		CHI_financial_policy
+		CHI_three_principles_of_the_people
+		#1937
+		CHI_nationalism
+		CHI_prioritize_the_interior
+		CHI_subjugate_the_warlords
+		CHI_military_affairs_commission
+		CHI_army_reform
+		#1938
+		CHI_anti_communism
 	}
-
-	traits = {
-		army_infantry_2 = 100
-	}
-
 	focus_factors = {
-		CHI_mao_zedong_civil_war = 500
+		CHI_rural_reconstruction_movement = 5
+		CHI_mission_to_germany = 15
+		CHI_closer_ties_with_germany = 15
+		CHI_purchase_tanks = 5
+		CHI_give_falkenhausen_citizenship = 5
+		CHI_mining_commission = 5
+		CHI_bureau_of_investigation_and_statistics = 5
+		CHI_experimental_mechanised_unit = 5
+		CHI_chinese_general_staff = 5
+		CHI_chinese_panzers = 5
+		CHI_develop_the_hanyan_arsenal = 5
+		CHI_taiyuan_arsenal = 5
+		CHI_price_controls = 5
+		CHI_welfare = 5
+		CHI_land_tax_reform = 5
+		CHI_reform_the_national_bank = 5
+		CHI_forced_loans = 5
+		CHI_democracy = 5
+		CHI_constitutional_reform = 5
+		CHI_60_divisions_plan = 5
+		CHI_whampoa_military_academy = 5
+		CHI_refugee_relief_agency = 5
+		CHI_new_life_movement = 5
+		CHI_executive_yuan = 5
+		CHI_republicanism = 5
+		CHI_inter_party_coordination_council = 5
+		CHI_judicial_yuan = 5
+		CHI_combined_arms_warfare = 5
+		CHI_renegotiate_the_unequal_treaties = 5
+		CHI_pick_a_fight_with_japan = 0
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)
 	# Recommended around 1.0. Useful for relation between plans
 	weight = {
-		factor = 1.0
+		factor = 1
 		modifier = {
-			factor = 1.0
+			factor = 2.0
 		}
 	}
-
 }
 
-CHI_democratic_plan = {
-	name = "Republic of China Democratic Plan"
-	desc = "China will seek democratic path and bring Sun Yat-Sen values around Asia!"
+CHI_alternate_plan_2 = {
+	name = "Nationalist China Alternate Scenario 1: Germany aims to befriend China"
+	desc = "China selects Germany over Soviet Union"
 
+	allowed = {
+		is_literally_china = yes
+	}
 	enable = {
-		original_tag = CHI
 		OR = {
-			has_completed_focus = CHI_democritization
-			has_country_flag = CHI_AI_RANDOM_CHI_DEMOCRATIC
-			has_game_rule = {
-				rule = CHI_ai_behavior
-				option = CHI_DEMOCRATIC
+			original_tag = CHI
+			AND = {
+				is_chinese_warlord = yes
+				has_focus_tree = china_nationalist_focus
 			}
+		}
+		GER = {
+			has_completed_focus = GER_befriend_china
 		}
 	}
 	abort = {
-		OR = {
-			has_government = fascism
-			has_government = communism
-		}
-	}
-
-	ai_national_focuses = {			#no China-related policy - PRC bad, but rather indifferent, if Japan attacks - then unite
-		CHI_military_affairs_commission
-		CHI_unified_industrial_planning
-		CHI_army_reform
-		CHI_democritization
-		CHI_legislative_yuan
-		CHI_call_for_fair_elections
-		CHI_universal_suffrage
-		CHI_spread_democracy_to_the_warlords
-		CHI_financial_policy
-		CHI_rural_reconstruction_movement
-		CHI_the_big_rear_concept
-		CHI_develop_the_rear
-		CHI_lure_them_in_strategy
-		CHI_dare_to_die_corps
-		CHI_reform_the_national_bank
-		CHI_national_reform
-	}
-
-	traits = {
-		silent_workhorse = 50
-		democratic_reformer = 50
+		always = no
 	}
 
 	focus_factors = {
-		CHI_call_for_fair_elections = 50
+		CHI_mission_to_germany = 5
+		CHI_closer_ties_with_germany = 10
+		CHI_purchase_tanks = 5
+		CHI_give_falkenhausen_citizenship = 5
+		CHI_anti_communism = 5
+		CHI_experimental_mechanised_unit = 5
+		CHI_chinese_general_staff = 5
+		CHI_chinese_panzers = 5
+		CHI_combined_arms_warfare = 5
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)
 	# Recommended around 1.0. Useful for relation between plans
 	weight = {
-		factor = 1.0
+		factor = 1
 		modifier = {
-			factor = 1.0
+			factor = 2.0
 		}
 	}
-
-}
-
-CHI_blueshirt_plan = {
-	name = "Republic of China Fascist Plan"
-	desc = "CHI will align facist"
-
-	enable = {
-		original_tag = CHI
-		OR = {
-			has_completed_focus = CHI_escape_from_captivity
-			has_country_flag = CHI_AI_RANDOM_CHI_FASCIST
-			has_game_rule = {
-				rule = CHI_ai_behavior
-				option = CHI_FASCIST
-			}
-		}
-	}
-	abort = {
-		OR = {
-			has_government = communism
-			has_government = democratic
-		}
-	}
-
-	ai_national_focuses = {
-		#1936
-		CHI_military_affairs_commission
-		CHI_unified_industrial_planning
-		CHI_escape_from_captivity
-		CHI_army_reform
-		CHI_financial_policy
-		CHI_send_regards_to_warlords
-		CHI_continue_the_civil_war
-		CHI_raid_communist_strongholds
-		CHI_learn_from_the_civil_war
-		CHI_integrate_allied_warlords
-		CHI_rural_reconstruction_movement
-		CHI_develop_the_hanyan_arsenal
-		CHI_taiyuan_arsenal
-		CHI_reform_the_national_bank
-		CHI_national_reform
-		CHI_expand_the_academica_sinica
-		CHI_executive_yuan
-		CHI_institute_nationwide_healthcare
-		CHI_strengthen_the_regime
-		CHI_defence_contracts
-		CHI_form_an_education_department
-		CHI_the_big_rear_concept
-		CHI_lure_them_in_strategy
-		CHI_develop_the_rear
-		CHI_dare_to_die_corps
-		CHI_mining_commission
-		CHI_national_resources_commission
-	}
-
-	traits = {
-		silent_workhorse = 50
-		fascist_demagogue = 80
-	}
-
-	focus_factors = {
-		CHI_escape_from_captivity = 100
-	}
-
-	# Keep small, as it is used as a factor for some things (such as research needs)
-	# Recommended around 1.0. Useful for relation between plans
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
-	}
-
 }

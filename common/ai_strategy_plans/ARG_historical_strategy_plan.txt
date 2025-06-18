@@ -6,7 +6,20 @@ ARG_historical_plan = {
 		original_tag = ARG
 	}
 	enable = {
-		original_tag = ARG
+		OR = {
+			AND = {
+				is_historical_focus_on = yes 
+				has_game_rule = {
+					rule = ARG_AI_BEHAVIOR
+					option = DEFAULT
+				}
+			}
+			has_country_flag = ARG_AI_RANDOM_HISTORICAL
+			has_game_rule = {
+				rule = ARG_ai_behavior
+				option = HISTORICAL
+			}
+		}	
 	}
 	abort = {
 		is_subject = yes 
@@ -87,7 +100,7 @@ ARG_historical_plan = {
 		ARG_yacimientos_petroliferos_fiscales
 
 		#1944
-	#	ARG_the_american_push
+		ARG_the_american_push
 		SMB_establish_aircraft_industry
 		SMB_nimble_air_force
 		SMB_winning_the_air_war
@@ -103,6 +116,18 @@ ARG_historical_plan = {
 
 	}
 
+	focus_factors = {
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
 	# Keep small, as it is used as a factor for some things (such as research needs)
 	# Recommended around 1.0. Useful for relation between plans
 	weight = {
@@ -111,4 +136,5 @@ ARG_historical_plan = {
 			factor = 1.0
 		}
 	}
+
 }

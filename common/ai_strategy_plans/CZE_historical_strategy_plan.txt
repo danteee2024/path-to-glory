@@ -2,8 +2,10 @@ CZE_historical_strategy_plan = {
 	name = "CZE historical plan"
 	desc = "Let's die to Germany! Yaaaaaaaaaay!"
 
-	enable = {
+	allowed = {
 		original_tag = CZE
+	}
+	enable = {
 		OR = {
 			AND = {
 				is_historical_focus_on = yes
@@ -15,7 +17,7 @@ CZE_historical_strategy_plan = {
 			has_country_flag = CZE_AI_RANDOM_HISTORICAL
 			has_game_rule = {
 				rule = CZE_ai_behavior
-				option = DEMOCRATIC_HISTORICAL
+				option = HISTORICAL
 			}
 		}
 	}
@@ -30,17 +32,34 @@ CZE_historical_strategy_plan = {
 				not = { has_government = democratic }
 			}
 		}
-	#	has_game_rule = {
-#			rule = CZE_ai_behavior
-#			option = DEFAULT
-	#	}
+		has_game_rule = {
+			rule = CZE_ai_behavior
+			option = DEFAULT
+		}
 	}
 
 	ai_national_focuses = {
+		CZE_fortification_studies
+		CZE_sudeten_1
 		CZE_industrial_legacy
-		CZE_favor_czechs_1
-		CZE_favor_czechs_2
-		CZE_favor_czechs_3
+		CZE_political_direction
+		CZE_sudeten_2
+		CZE_democratic_bastion
+		CZE_strategy_decisions
+		CZE_trust_in_the_west
+		CZE_sudeten_3
+		CZE_arms_exports_1
+		CZE_military_research_institute
+		CZE_inf_and_artillery_advancement
+		CZE_military_aeronautical_institute
+		CZE_air_is_our_sea
+		CZE_fallback_line
+		CZE_internal_redoubts
+		CZE_balanced_1
+		CZE_balanced_2
+		CZE_armour_bonus_1
+		CZE_hungarian_line
+		CZE_polish_line
 	}
 
 	research = {
@@ -51,6 +70,9 @@ CZE_historical_strategy_plan = {
 		support_tech = 0
 	}
 
+	ideas = {
+		
+	}
 	ai_strategy = {
 		type = alliance
 		id = "FRA"
@@ -93,11 +115,8 @@ CZE_historical_strategy_plan = {
 	}
 
 	focus_factors = {
-		CZKE_state_defense_law = 0
-		CZKE_democratic_reforms = 0
-		CZKE_military_coup = 0
-		CZKE_infiltrate_abwehr = 0
-		CZKE_claims_bohemian_crown = 0
+		
 	}
+
 }
 

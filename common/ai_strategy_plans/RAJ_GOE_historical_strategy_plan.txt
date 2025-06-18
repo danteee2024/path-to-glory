@@ -7,8 +7,7 @@ RAJ_historical = {
 		has_dlc = "Graveyard of Empires"
 	}
 	enable = {
-		original_tag = RAJ
-		has_dlc = "Graveyard of Empires"
+		is_historical_focus_on = yes
 	}
 	abort = {
 		#is_subject = no

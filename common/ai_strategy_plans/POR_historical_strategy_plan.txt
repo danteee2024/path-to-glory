@@ -6,7 +6,7 @@ POR_historical_plan = {
 		original_tag = POR
 	}
 	enable = {
-		original_tag = POR	
+		is_historical_focus_on = yes
 	}
 	abort = {
 		OR = {
