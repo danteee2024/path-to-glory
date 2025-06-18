@@ -7,20 +7,7 @@ BUL_historical_plan = {
 		has_dlc = "Battle for the Bosporus"
 	}
 	enable = {
-		OR = {
-			AND = {
-				is_historical_focus_on = yes
-				has_game_rule = {
-					rule = BUL_ai_behavior
-					option = DEFAULT
-				}
-			}
-			has_country_flag = BUL_AI_RANDOM_HISTORICAL
-			has_game_rule = {
-				rule = BUL_ai_behavior
-				option = HISTORICAL
-			}
-		}	
+		is_historical_focus_on = yes	
 	}
 	abort = {
 		has_war_with = GER

@@ -7,20 +7,7 @@ BRA_historical_plan = {
 		has_dlc = "Trial of Allegiance"
 	}
 	enable = {
-		OR = {
-			AND = {
-				is_historical_focus_on = yes 
-				has_game_rule = {
-					rule = BRA_AI_BEHAVIOR
-					option = DEFAULT
-				}
-			}
-			has_country_flag = BRA_AI_RANDOM_HISTORICAL
-			has_game_rule = {
-				rule = BRA_ai_behavior
-				option = HISTORICAL
-			}
-		}	
+		is_historical_focus_on = yes	
 	}
 	abort = {
 		is_subject = yes 

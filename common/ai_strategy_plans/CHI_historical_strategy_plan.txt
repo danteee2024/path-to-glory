@@ -6,20 +6,7 @@ CHI_nationalist_historical_plan = {
 		original_tag = CHI
 	}
 	enable = {
-		OR = {
-			AND = {
-				is_historical_focus_on = yes
-				has_game_rule = {
-					rule = CHI_ai_behavior
-					option = DEFAULT
-				}	
-			}
-			has_country_flag = CHI_AI_RANDOM_HISTORICAL
-			has_game_rule = {
-				rule = CHI_ai_behavior
-				option = HISTORICAL
-			}
-		}
+		is_historical_focus_on = yes
 	}
 	abort = {
 		JAP = {
