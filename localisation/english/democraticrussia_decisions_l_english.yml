@@ -42,3 +42,6 @@
  RUS_ask_for_leadership_desc:0 "The truth is, [ROOT.getfactionname] would be better off if we led it."
  RUS_invite_new_country_to_security_pact:0 "Invite §H[FROM.getname]§! to [ROOT.getfactionname]"
  RUS_invite_new_country_to_security_pact_desc:0 "We must expand our diplomatic reach to the Balkans and Nordics as well! Therefore, [FROM.getname] would be perfect for our alliance."
+
+
+ SOV_embrace_the_black_hundreds_ptg_tt:0 "You will own everything east of the Urals once the civil war begins."

@@ -15615,6 +15615,7 @@ ai_will_do = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 
 		completion_reward = {
+		
 			custom_effect_tooltip = SOV_beaten_but_not_defeated_tt
 			add_political_power = 25
 			hidden_effect = {
@@ -15671,7 +15672,6 @@ ai_will_do = {
 
 		completion_reward = {
 			add_political_power = 75
-			SOV_paranoia_low_increase_effect = yes
 			custom_effect_tooltip = SOV_unification_of_the_exiles_tt
 			add_popularity = {
 				ideology = democratic
@@ -15715,6 +15715,7 @@ ai_will_do = {
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
+			SOV_opposition_support_high_increase_effect = yes 
 			add_popularity = {
 				ideology = fascism
 				popularity = 0.05
@@ -15798,6 +15799,7 @@ ai_will_do = {
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
+
 			add_popularity = {
 				ideology = fascism
 				popularity = 0.15
@@ -15848,9 +15850,24 @@ ai_will_do = {
 		search_filters = {}
 
 		completion_reward = {
-			set_country_flag = SOV_embrace_the_black_hundreds_flag
-			custom_effect_tooltip = SOV_embrace_the_black_hundreds_tt
-			add_political_power = 50 
+			custom_effect_tooltip = SOV_embrace_the_black_hundreds_ptg_tt
+			hidden_effect = {
+				SOV_set_up_exile_civil_war = yes
+			}
+			SOV_paranoia_medium_increase_effect = yes
+			#set_country_flag = SOV_embrace_the_black_hundreds_flag
+			#custom_effect_tooltip = SOV_embrace_the_black_hundreds_tt
+			add_political_power = 60
+			hidden_effect = {
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					SOV_paranoia_low_decrease_effect = yes
+					add_command_power = 1
+					add_political_power = 10
+				}
+			}
 		}
 
 	}
@@ -15861,7 +15878,7 @@ ai_will_do = {
 		x = -3
 		y = 1
 		relative_position_id = SOV_embrace_the_black_hundreds
-		cost = 5
+		cost = 1.75
 		ai_will_do = {
 			factor = 1
 		}
@@ -15912,6 +15929,7 @@ ai_will_do = {
 		search_filters = {}
 
 		completion_reward = {
+			SOV_increase_opposition_army_support = yes
 			custom_effect_tooltip = SOV_muster_the_old_guard_tt
 			add_popularity = {
 				ideology = neutrality
@@ -15980,6 +15998,7 @@ ai_will_do = {
 		search_filters = {}
 
 		completion_reward = {
+			SOV_increase_opposition_army_support = yes
 			set_country_flag = SOV_fascist_youth_union_flag
 			custom_effect_tooltip = SOV_fascist_youth_union_tt
 			add_popularity = {
