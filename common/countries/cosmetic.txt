@@ -3042,6 +3042,6 @@ LGF_UNIFIED = {
 }
 
 MAN_kwantung_army = {
-	color = { 255 191 191 }
-	color_ui = rgb { 255 191 191 }
+	color = { 205 205 205 } 
+	color_ui = rgb { 205 205 205 }
 }
