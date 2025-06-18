@@ -1,0 +1,50 @@
+URG_historical_plan = {
+	name = "Uruguay Historical Plan"
+	desc = ""
+
+	allowed = {
+		OR = {
+			original_tag = URG
+			original_tag = PAR
+		}
+	}
+	enable = {
+		is_historical_focus_on = yes
+	}
+	abort = {
+		is_subject = yes 
+		#has_war = no 
+	}
+
+	ai_national_focuses = {
+		
+		#1936
+		#GUAY_disperse_military_power
+		#GUAY_nationalize_foreign_owned_companies
+		#1944
+		
+		
+	}
+
+	focus_factors = {
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+		communist_revolutionary = 40
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

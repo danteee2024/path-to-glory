@@ -7,7 +7,27 @@ CHL_historical_plan = {
 		has_dlc = "Trial of Allegiance"
 	}
 	enable = {
-		original_tag = CHL
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = CHL_ai_behavior
+					option = DEFAULT
+				}
+			}
+			AND = {
+				is_historical_focus_on = no
+				has_game_rule = {
+					rule = CHL_ai_behavior
+					option = RANDOM
+				}
+				has_country_flag = CHL_AI_RANDOM_HISTORICAL
+			}
+			has_game_rule = {
+				rule = CHL_ai_behavior
+				option = HISTORICAL
+			}
+		}
 	}
 	abort = {
 		is_subject = yes
@@ -89,12 +109,12 @@ CHL_historical_plan = {
 
 		#1944
 		SMB_merchant_marine # 70
+		CHL_protect_the_easter_island # 35
 		SMB_mountain_guns # 35
 		SMB_special_forces_option_1_continuation # 35
 		SMB_atacama_training # 35
 		SMB_women_in_aviation # 35
 		CHL_domestic_production_of_the_willys_mb # 70
-		#removed one 35 day focus here
 		
 		#1945
 		SMB_nimble_air_force # 70
@@ -107,6 +127,18 @@ CHL_historical_plan = {
 		CHL_the_nationalization_of_copper # 70
 		
 	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+
+	}
+
 	
 
 	# Keep small, as it is used as a factor for some things (such as research needs)

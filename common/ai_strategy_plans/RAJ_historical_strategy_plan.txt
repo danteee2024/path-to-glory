@@ -8,7 +8,21 @@ RAJ_historical = {
 		NOT = { has_dlc = "Graveyard of Empires" }
 	}
 	enable = {
-		original_tag = RAJ
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = RAJ_ai_behavior
+					option = DEFAULT
+				}
+			}
+			has_country_flag = RAJ_AI_RANDOM_DEMOCRATIC_HISTORICAL 
+			has_game_rule = {
+				rule = RAJ_ai_behavior
+				option = DEMOCRATIC_HISTORICAL
+			}
+			has_country_flag = britain_enforced_our_loyalty
+		}
 	}
 	abort = {
 		is_subject = no

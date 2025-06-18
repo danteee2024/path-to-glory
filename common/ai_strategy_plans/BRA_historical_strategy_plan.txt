@@ -6,11 +6,22 @@ BRA_historical_plan = {
 		original_tag = BRA
 		has_dlc = "Trial of Allegiance"
 	}
-
 	enable = {
-		original_tag = BRA
+		OR = {
+			AND = {
+				is_historical_focus_on = yes 
+				has_game_rule = {
+					rule = BRA_AI_BEHAVIOR
+					option = DEFAULT
+				}
+			}
+			has_country_flag = BRA_AI_RANDOM_HISTORICAL
+			has_game_rule = {
+				rule = BRA_ai_behavior
+				option = HISTORICAL
+			}
+		}	
 	}
-	
 	abort = {
 		is_subject = yes 
 		has_war = no 
@@ -78,6 +89,18 @@ BRA_historical_plan = {
 		#1944
 		
 		
+	}
+
+	focus_factors = {
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)

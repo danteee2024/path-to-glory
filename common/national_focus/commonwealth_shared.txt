@@ -25,7 +25,7 @@ shared_focus = {
 	}
 	
 	offset = {
-		x = 30
+		x = 31
 		y = -8
 		trigger = {
 			has_focus_tree = new_zealander_focus
