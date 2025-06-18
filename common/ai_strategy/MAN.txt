@@ -239,7 +239,9 @@ MAN_hunker_down_now  = {
 		has_completed_focus = MAN_exile_takeover
 	}
 	abort = {
-		own_china_proper = yes
+		CHI = {
+			exists = no
+		}
 	}
 	ai_strategy = {
 		type = front_control
