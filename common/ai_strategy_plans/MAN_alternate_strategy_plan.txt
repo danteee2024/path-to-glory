@@ -201,26 +201,21 @@ MAN_we_are_japan_now = {
 		MAN_a_bleak_outlook
 		MAN_prepare_for_the_strike
 		MAN_first_five_year_plan
-		MAN_acquire_the_north_manchu_railway
-		MAN_expand_showa_steel_works
 		MAN_support_naoki_hoshino
 		MAN_request_zaibatsu_investment_on_military_industry
 		MAN_prepare_for_war
 		MAN_for_the_emperor
-		MAN_guard_the_skies
 		MAN_embracing_the_kodoha
 		MAN_begin_the_nanshin_ron
 		MAN_kwantung_military_advisors
 		MAN_increase_opium_production
+		MAN_guard_the_skies
+		MAN_acquire_the_north_manchu_railway
+		MAN_expand_showa_steel_works
 	}
 
 	focus_factors = {
 
-	}
-	ai_strategy = {
-		type = antagonize 
-		id = "JAP"			
-		value = 500
 	}
 	ai_strategy = {
 		type = conquer 
