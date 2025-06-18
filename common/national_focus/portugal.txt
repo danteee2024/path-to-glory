@@ -1913,11 +1913,16 @@ focus_tree = {
 		y = 1
 
 		relative_position_id = POR_naval_research_institute
-		cost = 5
+		cost = 7.5
 		completion_reward = {
 			navy_experience = 50
 			air_experience = 50
-			add_ideas = JAP_airframe_supplies_improvements
+			add_tech_bonus = {
+				name = POR_advanced_light_aircraft
+			    bonus = 1.0
+			    uses = 2
+			    category = air_equipment
+			}
 		}
 	}
 
