@@ -49,9 +49,6 @@ if = {
 	}
 }
 
-recruit_character = FRA_felix_eboue
-recruit_character = FRA_georges_thierry_d_argenlieu
-recruit_character = FRA_frederic_gaston
 recruit_character = FRA_pierre_laval
 recruit_character = FRA_edouard_daladier
 recruit_character = FRA_maurice_thorez
@@ -69,58 +66,16 @@ recruit_character = FRA_jean_decoux
 recruit_character = FRA_emile_muselier
 recruit_character = FRA_marcel_bucard
 recruit_character = FRA_charles_maurras
-recruit_character = FRA_maurice_pujo
 recruit_character = FRA_paul_reynaud
-recruit_character = FRA_pierre_mendes_france
-recruit_character = FRA_benoit_frachon
-recruit_character = FRA_paul_faure
 recruit_character = FRA_charles_tillon
-recruit_character = FRA_lucien_midol
-recruit_character = FRA_abel_bonnard
-recruit_character = FRA_paul_marion
 recruit_character = FRA_jacques_duclos
-recruit_character = FRA_Édouard_daladier
 recruit_character = FRA_felix_gouin
-recruit_character = FRA_henri_barbe
 recruit_character = FRA_pierre_pucheu
-recruit_character = FRA_léon_blum
-recruit_character = FRA_leon_daudet
-recruit_character = FRA_robert_brasillach
-recruit_character = FRA_paul_granier_de_cassagnac
-recruit_character = FRA_edouard_herriot
-recruit_character = FRA_georges_mandel
 recruit_character = FRA_georges_bonnet
-recruit_character = FRA_guy_la_chambre
 recruit_character = FRA_vincent_auriol
-recruit_character = FRA_georges_monnet
-recruit_character = FRA_marx_dormoy
-recruit_character = FRA_paul_ramadier
-recruit_character = FRA_marceau_pivert
-recruit_character = FRA_rene_lefeuvre
-recruit_character = FRA_daniel_mayer
-recruit_character = FRA_pierre_brossolette
-recruit_character = FRA_xavier_vallat
 recruit_character = FRA_philippe_henriot
-recruit_character = FRA_joseph_darnaud
-recruit_character = FRA_georges_loustaunau_lacau
-recruit_character = FRA_eugene_deloncle
-recruit_character = FRA_henri_martin
-recruit_character = FRA_jean_filiol
 recruit_character = FRA_maurice_gauche
-recruit_character = FRA_albert_sarraut
-recruit_character = FRA_camille_chautemps
-recruit_character = FRA_marcel_déat
-recruit_character = FRA_jacques_doriot
 recruit_character = FRA_marcel_gensoul
-recruit_character = FRA_victorhenri_schweisguth
-recruit_character = FRA_françois_darlan
-recruit_character = FRA_renéÉmile_godfroy
-recruit_character = FRA_georges_blanchard
-recruit_character = FRA_gaston_billotte
-recruit_character = FRA_rené_olry
-recruit_character = FRA_aimé_doumenc
-recruit_character = FRA_adolphe_guillaumat
-recruit_character = FRA_charles_noguès
 recruit_character = FRA_joseph_vuillemin
 recruit_character = FRA_robert_odic
 recruit_character = FRA_philippe_fequant
@@ -131,17 +86,10 @@ recruit_character = FRA_philippe_leclerc
 recruit_character = FRA_rene_prioux
 recruit_character = FRA_pierre_alombert_goget
 recruit_character = FRA_henri_marie_auguste_bineau
-recruit_character = FRA_philippe_kieffer
-recruit_character = FRA_adolphe_cise
-recruit_character = FRA_henry_de_rancourt_de_mimerand
-recruit_character = FRA_georges_catroux
-recruit_character = FRA_edgard_de_larminat
 recruit_character = FRA_louis_kahn
 recruit_character = FRA_victor_denain
-recruit_character = FRA_frederic_irene_joliot_curie
 recruit_character = FRA_jean_marie_bergeret
 #recruit_character = FRA_edmond_barrachin #related branch currently hidden
-recruit_character = FRA_eugene_bridoux
 recruit_character = FRA_irene_joliot_curie
 recruit_character = FRA_frederic_joliot_curie
 recruit_character = FRA_francois_hussenot
@@ -979,7 +927,7 @@ if = {
 		obsolete = yes
 	}
 	create_equipment_variant = {
-		name = "La Melpomène Class"		
+		name = "Chacal Class"				# represents Chacal, Guépard, Agile, and Vauquelin classes
 		type = ship_hull_light_1
 		name_group = FRA_DD_HISTORICAL
 		parent_version = 0
@@ -988,12 +936,28 @@ if = {
 			fixed_ship_anti_air_slot = ship_anti_air_1
 			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_engine_slot = light_ship_engine_2
 			fixed_ship_torpedo_slot = ship_torpedo_1
-			mid_1_custom_slot = empty
+			mid_1_custom_slot = ship_torpedo_1
 			rear_1_custom_slot = ship_depth_charge_1
 		}
 		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Le Fantasque Class"
+		type = ship_hull_light_1
+		name_group = FRA_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_3
+			fixed_ship_torpedo_slot = ship_torpedo_2
+			mid_1_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_depth_charge_1
+		}
 	}
 	create_equipment_variant = {
 		name = "Chacal Class"				
@@ -1044,77 +1008,41 @@ if = {
 			rear_1_custom_slot = ship_depth_charge_1
 		}
 	}
-	# Light Cruisers #
+	# Heavy Cruisers #
 	create_equipment_variant = {
-		name = "Duguay-Trouin Class"			
+		name = "Suffren Class"				# Duquesne and Suffren classes
 		type = ship_hull_cruiser_1
-		name_group = FRA_CL_HISTORICAL
+		name_group = FRA_CA_HISTORICAL
 		parent_version = 0
 		modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_battery_slot = ship_medium_battery_1
 			fixed_ship_anti_air_slot = ship_anti_air_1
 			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 			fixed_ship_radar_slot = empty
 			fixed_ship_engine_slot = cruiser_ship_engine_2
-			mid_1_custom_slot = ship_torpedo_2
-			mid_2_custom_slot = ship_light_medium_battery_1
-			rear_1_custom_slot = ship_airplane_launcher_1
-		}
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "Pluton Class"			
-		type = ship_hull_cruiser_1
-		name_group = FRA_CL_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
-			fixed_ship_armor_slot = empty
-			mid_1_custom_slot = ship_mine_layer_1
-			mid_2_custom_slot = ship_mine_layer_1
-			rear_1_custom_slot = ship_mine_layer_1
-		}
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "Jeanne d’Arc Class"			
-		type = ship_hull_cruiser_1
-		name_group = FRA_CL_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
-			mid_1_custom_slot = ship_torpedo_1
-			mid_2_custom_slot = ship_light_medium_battery_1
-			rear_1_custom_slot = ship_airplane_launcher_1
-		}
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "Commandant Teste Class"			
-		type = ship_hull_cruiser_1
-		name_group = FRA_CL_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_2
-			fixed_ship_anti_air_slot = ship_anti_air_2
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
 			fixed_ship_armor_slot = ship_armor_cruiser_1
-			fixed_ship_secondaries_slot = ship_secondaries_1
-			mid_1_custom_slot = ship_airplane_launcher_1
-			mid_2_custom_slot = ship_airplane_launcher_1
+			mid_1_custom_slot = ship_medium_battery_1
+			mid_2_custom_slot = ship_torpedo_1
 			rear_1_custom_slot = ship_airplane_launcher_1
 		}
 		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Algérie Class"
+		type = ship_hull_cruiser_1
+		name_group = FRA_CA_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = ship_medium_battery_1
+			mid_2_custom_slot = ship_anti_air_1
+			rear_1_custom_slot = ship_airplane_launcher_1
+		}
 	}
 	create_equipment_variant = {
 		name = "Émile Bertin Class"					# minelaying cruiser
