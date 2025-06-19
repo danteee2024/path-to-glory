@@ -1747,7 +1747,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_STABILITY}
 		completion_reward = {
-			custom_effect_tooltip = SPR_recovering_from_civil_war_focus_tt
+			
 			add_stability = 0.1
 			every_owned_state = {
 				limit = {
@@ -5545,7 +5545,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			custom_effect_tooltip = SPR_recovering_from_civil_war_focus_tt
+			
 		}
 	}
 
@@ -8555,7 +8555,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			custom_effect_tooltip = SPR_recovering_from_civil_war_focus_tt
+			
 			add_ideas = SPR_the_inevitable_counterblow
 			add_country_leader_trait = anarchist_zeal
 			hidden_effect = {
@@ -10539,7 +10539,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			custom_effect_tooltip = SPR_recovering_from_civil_war_focus_tt
+			
 			if = {
 				limit = {
 					has_idea = SPA_recovering_from_civil_war_3

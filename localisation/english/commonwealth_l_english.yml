@@ -469,3 +469,6 @@
   Commonwealth_unlocks_to_arms_against_tyranny_TT: "Unlocks Shared Focus §Y$Commonwealth_to_arms_against_tyranny$§!"
   Commonwealth_is_joint_focus_member_TT: "Is part of the §Y[Commonwealth_get_alliance_name]§!"
   Commonwealth_will_autocomplete_once_valid: "§YWill be auto-completed once the conditions are met or through certain focuses§!"
+
+  Commonwealth_service_focus: "Commonewealth Service Overseas"
+  Commonwealth_service_focus_desc: "Service overseas is a great way to show our commitment to the Commonwealth, and to the world. We will send our best and brightest to serve in the Commonwealth, and to help those in need."

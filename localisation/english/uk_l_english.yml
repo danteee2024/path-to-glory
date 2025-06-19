@@ -177,19 +177,19 @@
  
  ENG_Trade_Union_Leadership:0 "Trade Union Leadership"
  ENG_Trade_Union_Leadership_desc:0 ""
+
+ ENG_Re_Establish_Triple_Alliance:0 "Nationalise All Transport"
+ ENG_Re_Establish_Triple_Alliance_desc:0 "The nationalisation of all transport services is essential for the smooth functioning of the economy and the war effort."
+
+ ENG_Setup_Union_Councils:0 "Setup Local Union Councils In Constituencies"
+ ENG_Setup_Union_Councils_desc:0 "Establishing local union councils in constituencies will help to better organise and represent the interests of workers at a local level."
+
+ ENG_Pass_Ownership_To_Unions:0 "Nationalise War Industry"
+ ENG_Pass_Ownership_To_Unions_desc:0 "Passing ownership of the war industry to unions will ensure that workers have a say in the production process and that their interests are represented."
  
- ENG_Re_Establish_Triple_Alliance:0 "Re-Establish Triple Alliance"
- ENG_Re_Establish_Triple_Alliance_desc:0 ""
- 
- ENG_Setup_Union_Councils:0 "Setup Union Councils"
- ENG_Setup_Union_Councils_desc:0 ""
- 
- ENG_Pass_Ownership_To_Unions:0 "Pass Ownership To Unions"
- ENG_Pass_Ownership_To_Unions_desc:0 ""
- 
- ENG_Approach_The_PRC:0 "Approach PRC"
- ENG_Approach_The_PRC_desc:0 ""
- 
+ ENG_Approach_The_PRC:0 "Approach Communist China"
+ ENG_Approach_The_PRC_desc:0 "Approaching the People's Republic of China will help to strengthen our ties with the communist bloc."
+
  ENG_Revolution_In_Norway:0 "Revolution in Norway"
  ENG_Revolution_In_Norway_desc:0 ""
  
@@ -259,7 +259,7 @@
  
  ENG_International_Brigades:0 "International Brigades"
  ENG_The_Permanent_Revolution:0 "The Permanent Revolution"
- ENG_Triple_Alliance:0 "Triple Alliance"
+ ENG_Triple_Alliance:0 "Nationalized All Transport"
  
  ENG_State_Investment:0 "State Investment and Recruitment"
  
@@ -567,3 +567,6 @@ GBR_british_mobilisation_support:0 "British Mobilisation Support"
  ENG_tank_variant_focus:0 "Tank Variants"
  ENG_artillery_focus:0 "Artillery Investments"
  ENG_artillery_focus_desc:0 "Investing in artillery will enhance our firepower and support capabilities on the battlefield."
+
+ ENG_communism_independent_party_long:0 "General Council of the Trades Union Congress"
+ ENG_communism_independent_party:0 "TUC"
