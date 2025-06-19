@@ -1282,10 +1282,6 @@ country_event = {
 			KOR = {
 				transfer_state = 525
 				transfer_state = 527
-				transfer_state = 917
-				transfer_state = 918
-				transfer_state = 919
-				transfer_state = 920
 			}			
 			set_autonomy = { target = KOR autonomy_state = autonomy_free }			
 		}
