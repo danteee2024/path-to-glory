@@ -4479,7 +4479,7 @@ focus_tree = {
 				}
 			}
 		}
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL FOCUS_FILTER_TUNGSTEN}
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -4976,7 +4976,6 @@ focus_tree = {
 			unlock_decision_tooltip = POR_iberian_summit_pro_axis
 			unlock_decision_tooltip = POR_iberian_summit_pro_allies
 		}
-		search_filters = { FOCUS_FILTER_ALLIANCE }
 	}
 
 	focus = {
