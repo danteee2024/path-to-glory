@@ -21,16 +21,20 @@ NDefines_Graphics.NGraphics.MAP_ICONS_GROUP_SPLIT_SELECTED_LIMIT = 10
 NDefines_Graphics.NGraphics.MAP_ICONS_COARSE_COUNTRY_GROUPING_DISTANCE = 125 --90 --200
 NDefines_Graphics.NGraphics.MAP_ICONS_COARSE_COUNTRY_GROUPING_DISTANCE_STRATEGIC = 350
 
+NDefines.NGraphics.COUNTRY_COLOR_SATURATION_MODIFIER = 0.85
+NDefines.NGraphics.COUNTRY_COLOR_BRIGHTNESS_MODIFIER = 0.8
+NDefines_Graphics.NMapMode.MAP_MODE_TERRAIN_TRANSPARENCY = 0.8
+NDefines_Graphics.NGraphics.BORDER_WIDTH = 1
 NDefines_Graphics.NGraphics.COMMANDGROUP_PRESET_COLORS_HSV = {
-	0.0/360.0, 1.0, 0.75,	--red
-	10.0/360.0, 1.0, 0.75,	--orange
-	60.0/360.0, 1.0, 0.75,	--yellow
-	120.0/360.0, 0.85, 0.75,	--green
-	155.0/360.0, 1.0, 0.75,	--greenish
-	180.0/360.0, 1.0, 0.75,	--turq
-	220.0/360.0, 1.0, 0.75,	--blue
-	260.0/360.0, 1.0, 0.85,	--dark purple
-	330.0/360.0, 0, 0.75		--white
+	0.0/360.0, 1.0, 1.0,	--red
+	10.0/360.0, 1.0, 1.0,	--orange
+	60.0/360.0, 1.0, 1.0,	--yellow
+	120.0/360.0, 0.75, 1.0,	--green
+	180.0/360.0, 1.0, 1.0,	--turq
+	235.0/360.0, 1.0, 1.0,	--blue
+	260.0/360.0, 1.0, 1.0,	--dark purple
+	300.0/360.0, 1.0, 1.0,	--light purple
+	330.0/360.0, 0, 1.0		--white
 }
 
 NDefines_Graphics.NGraphics.CAMERA_ZOOM_SPEED_DISTANCE_MULT = 20
