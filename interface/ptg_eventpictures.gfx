@@ -1,0 +1,10 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_ptg_startup_event_1"
+		texturefile = "gfx/event_pictures/ptg_startup_event_1.dds"
+	}
+
+	
+	
+}

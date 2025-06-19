@@ -1,0 +1,6 @@
+﻿l_english: 
+
+ ptg_startup_event.1.t:0 "You're on the Road, are you ready to RP?"
+ ptg_startup_event.1.desc:0 "Welcome to The Road to 56 RP - Discardian Edition!\n\nThis mod has many features, too many to guide you through in this space alone. Therefore, if you need help with the mod or have questions about features, please go to the Cookie Crumb Studios Discord server. A link can be found on the workshop page.\n\n\n§RIMPORTANT\n---------------------§!\n\nThis mod is officially compatible with only the latest version of RT56 - RT56 Beta and any other mods are not and will not be supported. When RT56 updates, please give us time to patch the mod. We'll get you on the road again as soon as possible!"
+ ptg_startup_event.1.a:0 "Let's RP!"
+ ptg_startup_event_tt.1.a:0 "Thanks for choosing our mod, have fun!"

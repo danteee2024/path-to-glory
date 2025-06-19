@@ -1,0 +1,22 @@
+add_namespace = ptg_startup_event
+country_event = {
+    id = ptg_startup_event.1
+    title = ptg_startup_event.1.t
+    desc = ptg_startup_event.1.desc
+	picture = GFX_ptg_startup_event_1
+
+    is_triggered_only = yes
+
+	
+	trigger = {
+		date < 1936.1.1
+		is_ai = no
+	}
+	
+
+    option = {
+        name = ptg_startup_event.1.a
+		custom_effect_tooltip = ptg_startup_event_tt.1.a
+    }
+	
+}
