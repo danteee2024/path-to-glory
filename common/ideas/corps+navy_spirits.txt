@@ -39,6 +39,23 @@ ideas = {
 	}
 
 	navy_spirit = {
+		efficient_shipping_spirit = {
+			ledger = navy
+			available = { has_naval_academy = yes }
+			
+			modifier = {
+				transport_capacity = -0.1
+				floating_harbor_supply = 0.05
+				trade_opinion_factor = 0.15
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
 		green_water_navy_spirit = {
             picture = green_water_navy_spirit
 			ledger = navy
@@ -100,46 +117,7 @@ ideas = {
 				}
 			}
 		}
-		marines_spirit = {
-			ledger = navy
-			available = { has_naval_academy = yes }
-			research_bonus = {
-				marine_tech = 0.20
-			}
-			modifier = {
-				weekly_manpower = 50
-				naval_invasion_penalty = -0.1
-				unit_marine_design_cost_factor = -1
-			}
-			ai_will_do = {
-				factor = 1
-				modifier = {
-					factor = 0
-					NOT = { has_dlc = "No Step Back" }
-				}
-			}
-		}
-		efficient_shipping_spirit = {
-			ledger = navy
-			available = { has_naval_academy = yes }
-			#equipment_bonus = {
-				#floating_harbor_equipment = {
-					#build_cost_ic = -0.1 instant = yes
-				#}
-			#}
-			modifier = {
-				min_export = -0.05
-				transport_capacity = -0.2
-				floating_harbor_supply = 0.2
-			}
-			ai_will_do = {
-				factor = 1
-				modifier = {
-					factor = 0
-					NOT = { has_dlc = "No Step Back" }
-				}
-			}
-		}
+		
 	}
 
 	naval_command_spirit = {
@@ -149,7 +127,7 @@ ideas = {
 			modifier = {
 				naval_has_potf_in_combat_attack = 0.1
 				naval_has_potf_in_combat_defense = 0.1
-				critical_receive_chance = -0.2
+				critical_receive_chance = -0.05
 			}
 			ai_will_do = {
 				factor = 1
@@ -159,21 +137,6 @@ ideas = {
 				}
 			}
 		} 
-		aa_experts_spirit = {
-			ledger = navy
-			picture = aa_experts_spirit
-			modifier = {
-				navy_anti_air_attack_factor = 0.1
-				trait_fly_swatter_xp_gain_factor = 0.5
-				fighter_sortie_efficiency = 0.1				
-			}
-			ai_will_do = {
-				factor = 1
-				modifier = {
-					factor = 0
-					NOT = { has_dlc = "No Step Back" }
-				}
-			}
-		}
+	
 	}
 }
