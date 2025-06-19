@@ -8,19 +8,7 @@ shared_focus = {
 	}
 	x = 38
 	y = 0
-	allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = ENG_revisit_colonial_policy
-				}
-			}
-		}
+	
 	offset = {
 		x = 30
 		y = 0
