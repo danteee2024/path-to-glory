@@ -8,7 +8,6 @@ NDefines.NDiplomacy.BASE_SEND_ATTACHE_COST = 50				-- Political power cost to se
 NDefines.NDiplomacy.BASE_SEND_ATTACHE_CP_COST = 25				-- Command Power sent attache usage cost
 NDefines.NDiplomacy.MIN_WARGOAL_JUSTIFY_COST = 7.0					-- It always takes atleast 10 days to justify a wargoal
 NDefines.NDiplomacy.PEACE_SCORE_PER_PASS = 100.0
-NDefines.NDiplomacy.IDEOLOGY_JOIN_FACTION_MIN_LEVEL = 0
 NDefines.NDiplomacy.VOLUNTEERS_TRANSFER_SPEED = 5
 NDefines.NDiplomacy.IDEOLOGY_JOIN_FACTION_MIN_LEVEL = 0		-- ideology limit required to join faction 
 ----------------------------------
