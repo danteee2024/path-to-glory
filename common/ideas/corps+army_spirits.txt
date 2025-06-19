@@ -74,8 +74,8 @@ ideas = {
 			available = { has_military_academy = yes }
 			modifier = {
 				production_factory_start_efficiency_factor = 0.05
-				materiel_manufacturer_cost_factor = -0.25
-				tank_manufacturer_cost_factor  = -0.25
+				materiel_manufacturer_cost_factor = -0.15
+				tank_manufacturer_cost_factor  = -0.15
 			}
 			ai_will_do = {
 				factor = 1
