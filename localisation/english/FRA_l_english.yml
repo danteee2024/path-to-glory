@@ -1184,4 +1184,23 @@ france.36.t:0 "Germany demands Alsace-Lorraine"
 france.36.d:0 "The German delegation has approached us, citing that Alsace-Lorraine is rightful German territory. They demand we hand it over in the next twenty four hours or face war."
 france.36.a:0 "This can work in our favour. Sign the deal!"
 france.36.b:0 "It is rightful French territory, and will stay French!"
+
+
+ FRA_industrial_expansion_effect_civ_tt:0 "We will build one §YCivilian Factory§! for §CEvery State§! previously developed."
+ FRA_industrial_expansion_effect_mil_tt:0 "We will build one §YMilitary Factory§! for §CEvery State§! previously developed."
+  FRA_investment:0 "Directed Investment"
+ FRA_investment_desc:0 "We will invest in the development of our industry, which will allow us to build more factories in the future." 
+ FRA_develop_mali:0 "Develop Mali"
+ FRA_develop_mali_desc:0 "Mali is a vast territory with a small population. We will develop it to make it more useful for the war effort."
+ FRA_develop_syria:0 "Develop Syria"
+ FRA_develop_syria_desc:0 "Our stronghold in the Middle East, Syria, is a key territory for our war effort. We will develop it to make it more useful.""
+ FRA_alpine_development:0 "Alpine Development"
+ FRA_alpine_development_desc:0 "The Alps in south-eastern France are amazing and beautiful, but they are also a key strategic point. We will develop them to make them more useful for the war effort."
+ FRA_northern_development:0 "Northern Development"
+ FRA_northern_development_desc:0 "The north of France is a key strategic point. We will develop it to make it more useful for the war effort."
+ FRA_southern_development:0 "Southern Development"
+ FRA_southern_development_desc:0 "The south of France is a key strategic point. We will develop it to make it more useful for the war effort."
+ FRA_develop_burgundy_desc:0 "We must develop the Burgundy region to make it more useful for the war effort."
+ FRA_develop_centre_desc:0 "We must develop the Centre region to make it more useful for the war effort."
+
  
