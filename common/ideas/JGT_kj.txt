@@ -39,16 +39,6 @@ ideas = {
 				factor = 0
 			}
 		}
-		JGT03_btfw= {
-			ledger = air
-			modifier = {
-				enemy_army_bonus_air_superiority_factor = -0.05
-				air_intercept_efficiency =0.05
-				STATIC_ANTI_AIR_DAMAGE_FACTOR = 0.1
-			}
-			ai_will_do = {
-				factor = 1
-			}
-		}
+		
     }
 }
