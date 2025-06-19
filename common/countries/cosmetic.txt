@@ -3041,7 +3041,7 @@ LGF_UNIFIED = {
 	color_ui = rgb { 205 69 69 }
 }
 
-MAN_kwantung_army = {
-	color = { 205 205 205 } 
-	color_ui = rgb { 205 205 205 }
-}
+#MAN_kwantung_army = {
+#	color = { 254 205 33 } 
+#	color_ui = rgb { 254 205 33 }
+#}
