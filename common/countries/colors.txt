@@ -169,7 +169,7 @@ ELS = {
 	color_ui = rgb { 198 169 248 }
 }
 ETH = {
-	color = rgb { 152 130 191 }
+	color = rgb { 156 97 156 }
 	color_ui = rgb { 198 169 248 }
 }
 GUA = {
