@@ -1725,17 +1725,7 @@
 
 		completion_reward = {
 			unlock_decision_category_tooltip = CHI_army_reform
-			hidden_effect = {
-				
 			
-			if = {
-				limit = {
-					is_ai = yes
-				}
-				complete_national_focus = CHI_united_front
-				complete_national_focus = CHI_foreign_threats
-			}
-		}
 			
 		}
 	}
@@ -1769,16 +1759,7 @@
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = {
 			add_stability = 0.1
-			custom_effect_tooltip = available_political_advisor
-			if = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
-				show_ideas_tooltip = CHI_dai_li_political_advisor
-			}
-			else = {
-				show_ideas_tooltip = CHI_dai_li_wtt_political_advisor
-			}
+			
 		}
 	}
 
@@ -2181,8 +2162,23 @@
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = CHI_t_v_soong_political_advisor
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			CHI_hyper_inflation_level_up = yes
 		}
 	}
 

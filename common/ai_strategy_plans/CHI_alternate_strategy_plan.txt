@@ -26,7 +26,6 @@ CHI_alternate_plan_1 = {
 	ai_national_focuses = {
 		CHI_unified_industrial_planning
 		CHI_expand_the_academica_sinica
-		CHI_invite_foreign_investors
 		CHI_financial_policy
 		CHI_three_principles_of_the_people
 		#1937
