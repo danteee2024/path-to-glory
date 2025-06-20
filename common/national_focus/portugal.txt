@@ -6224,7 +6224,7 @@ focus_tree = {
 				days = 364
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			every_state = {
+			every_controlled_state = {
 				limit = {
 					AND = {
 						is_on_continent = europe
@@ -6240,7 +6240,7 @@ focus_tree = {
 					type = arms_factory
 					level = 1
 				}
-			}
+			} 
 		}
 		search_filters = {  FOCUS_FILTER_MANPOWER }
 	}
@@ -6267,7 +6267,7 @@ focus_tree = {
 				days = 90
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			every_state = {
+			every_controlled_state = {
 				limit = {
 					AND = {
 						is_on_continent = europe
