@@ -215,7 +215,6 @@ ideas = {
 			
 			modifier = {
 				non_core_manpower = 0.10
-				compliance_growth = 0.10
 			}
 		}
 
@@ -669,9 +668,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				production_speed_buildings_factor = 0.25
-				research_speed_factor = 0.10
-				scientist_breakthrough_bonus_factor = 0.15
+				production_speed_buildings_factor = 0.10
+				research_speed_factor = 0.075
+				scientist_breakthrough_bonus_factor = 0.05
 			}
 		}
 
