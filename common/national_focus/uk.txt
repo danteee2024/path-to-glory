@@ -706,7 +706,6 @@ focus_tree = {
 		x = 2
 		y = 4
 		relative_position_id = ENG_Provoke_british_patriotism
-		bypass = { has_idea = free_trade }
 		search_filters = { FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 				#trade bonuses
