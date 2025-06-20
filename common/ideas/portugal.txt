@@ -232,7 +232,7 @@ ideas = {
 			
 			modifier = {
 				non_core_manpower = 0.15
-				compliance_growth = 0.15
+				compliance_growth = 0.05
 				conscription = 0.010
 			}
 		}
@@ -251,7 +251,7 @@ ideas = {
 			
 			modifier = {
 				non_core_manpower = 0.20
-				compliance_growth = 0.20
+				compliance_growth = 0.10
 				conscription = 0.020
 			}
 		}
