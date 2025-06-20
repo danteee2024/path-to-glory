@@ -7,10 +7,10 @@ ideas = {
 			available = { has_military_academy = yes }
 			modifier = {
 				    army_speed_factor = 0.05
-					trait_urban_assault_specialist_xp_gain_factor = 0.5
+					trait_urban_assault_specialist_xp_gain_factor = 0.15
 					army_leader_start_attack_level = 1
 					army_leader_start_defense_level = 1
-					trait_cavalry_leader_xp_gain_factor = 0.25
+					trait_cavalry_leader_xp_gain_factor = 0.15
 			}
 			ai_will_do = {
 				factor = 1
@@ -27,7 +27,6 @@ ideas = {
 			modifier = {
 				trait_skilled_staffer_xp_gain_factor = 1
 				land_reinforce_rate = 0.02
-				max_planning = 0.05
 				army_leader_start_planning_level = 1
 				army_leader_start_logistics_level = 1
 				
@@ -43,31 +42,11 @@ ideas = {
 	}
 	army_spirit = {
 
-		petrol_is_blood_spirit = {
-			picture = petrol_is_blood_spirit
-			ledger = army
-			research_bonus = {
-				synth_resources = 0.05
-			}
-			available = { has_military_academy = yes }
-			modifier = {
-				unit_logistics_company_design_cost_factor = -1
-				army_fuel_consumption_factor = -0.10
-				trait_organizer_xp_gain_factor = 0.25
-			}
-			ai_will_do = {
-				factor = 1
-				modifier = {
-					factor = 0
-					NOT = { has_dlc = "No Step Back" }
-				}
-			}
-		}
 		recruitment_drive_spirit = {
 			picture = recruitment_drive_spirit
 			ledger = army 
 			available = { has_military_academy = yes }
-			modifier {
+			modifier = {
 				weekly_manpower = 150
 				mobilization_speed = 0.1
 			}
@@ -93,12 +72,10 @@ ideas = {
 			#	artillery = 0.1
 			#}
 			available = { has_military_academy = yes }
-			modifier {
-				land_equipment_upgrade_xp_cost = -0.25
-				#production_factory_start_efficiency_factor = 0.05
-				unit_maintenance_company_design_cost_factor = -1
-				materiel_manufacturer_cost_factor = -0.5
-				tank_manufacturer_cost_factor  = -0.5
+			modifier = {
+				production_factory_start_efficiency_factor = 0.05
+				materiel_manufacturer_cost_factor = -0.15
+				tank_manufacturer_cost_factor  = -0.15
 			}
 			ai_will_do = {
 				factor = 1
@@ -114,8 +91,8 @@ ideas = {
 			ledger = army
 			modifier = {
 				equipment_capture = 0.02
-				cas_damage_reduction = 0.10
-				terrain_penalty_reduction = 0.05 
+				cas_damage_reduction = 0.05
+				terrain_penalty_reduction = 0.02
 			}
 			ai_will_do = {
 				factor = 0
@@ -132,12 +109,12 @@ ideas = {
 		adaptable_modernizers_spirit = {
 			ledger = army
 			modifier = {
-				hidden_modifier{
+				hidden_modifier = {
 					tactic_backhand_blow_preferred_weight_factor = 1
 				}
 				custom_modifier_tooltip = adaptable_modernizers_spirit_tt
-				experience_gain_army = 0.075
-				land_doctrine_cost_factor = -0.075
+				experience_gain_army = 0.05
+				land_doctrine_cost_factor = -0.05
 				special_forces_training_time_factor = -0.1
 
 			}

@@ -1747,7 +1747,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_STABILITY}
 		completion_reward = {
-			custom_effect_tooltip = SPR_recovering_from_civil_war_focus_tt
+			
 			add_stability = 0.1
 			every_owned_state = {
 				limit = {
@@ -2053,7 +2053,12 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-
+         	every_owned_state = {
+				limit = {
+					is_on_continent = europe
+				}
+				add_core_of = SPR
+			}
 			every_state = {
 				limit = {
 					NOT = {
@@ -3553,11 +3558,39 @@ focus_tree = {
 			add_political_power = -125
 			add_stability = -0.05
 			add_war_support = 0.05
+			custom_effect_tooltip = generic_skip_one_line_tt
 			every_owned_state = {
 				limit = {
 					is_on_continent = europe
 				}
 				add_core_of = SPR
+			}
+		}
+	}
+	focus = {
+		id = SPA_reopen_asturias_mines
+		available = {
+
+		}
+		bypass = {
+		}
+		prerequisite = { focus = SPA_reclaim_the_power }
+		
+		icon = GFX_focus_generic_coal_mining
+		x = 0
+		y = 1
+		relative_position_id = SPA_reclaim_the_power
+		cost = 5
+
+		available_if_capitulated = yes
+		completion_reward = {
+			add_stability = -0.05
+			custom_effect_tooltip = generic_skip_one_line_tt
+			790 = {
+				add_resource = {
+					type = steel
+					amount = 14
+				}
 			}
 		}
 	}
@@ -5512,7 +5545,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			custom_effect_tooltip = SPR_recovering_from_civil_war_focus_tt
+			
 		}
 	}
 
@@ -6701,8 +6734,13 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			add_stability = 0.05
-			add_war_support = 0.05
+				every_owned_state = {
+				limit = {
+					is_on_continent = europe
+				}
+				add_core_of = SPR
+			}
+			
 			swap_ideas = {
 				remove_idea = SPA_recovering_from_civil_war
 				add_idea = SPA_recovering_from_civil_war_2
@@ -8517,7 +8555,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			custom_effect_tooltip = SPR_recovering_from_civil_war_focus_tt
+			
 			add_ideas = SPR_the_inevitable_counterblow
 			add_country_leader_trait = anarchist_zeal
 			hidden_effect = {
@@ -9051,6 +9089,12 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = {
+				every_owned_state = {
+				limit = {
+					is_on_continent = europe
+				}
+				add_core_of = SPR
+			}
 			add_ideas = SPR_anarchism_knows_no_borders
 		}
 	}
@@ -10495,7 +10539,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			custom_effect_tooltip = SPR_recovering_from_civil_war_focus_tt
+			
 			if = {
 				limit = {
 					has_idea = SPA_recovering_from_civil_war_3
@@ -11076,8 +11120,12 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			custom_effect_tooltip = SPR_recovering_from_civil_war_focus_tt
-			custom_effect_tooltip = SPA_prepare_the_pyrenees_defenses_tt
+				every_owned_state = {
+				limit = {
+					is_on_continent = europe
+				}
+				add_core_of = SPR
+			}
 			hidden_effect = {
 				792 = {
 					add_building_construction = {
@@ -12768,8 +12816,13 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_STABILITY}
 		completion_reward = {
-			custom_effect_tooltip = SPR_recovering_from_civil_war_focus_tt
-			add_stability = 0.2
+			every_owned_state = {
+				limit = {
+					is_on_continent = europe
+				}
+				add_core_of = SPR
+			}
+			add_stability = 0.05
 		}
 	}
 

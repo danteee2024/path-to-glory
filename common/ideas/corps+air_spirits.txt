@@ -4,14 +4,10 @@ ideas = {
 			ledger = air
 			available = { has_air_academy = yes }
 			research_bonus = {
-				naval_air = 0.05
+				naval_air = 0.15
 			}
 			modifier = {
-				custom_modifier_tooltip = torpedo_bombers_spirit_tt
-				hidden_modifier = {
-				small_plane_nav_airframe_design_cost_factor = -0.75
-				cv_small_plane_airframe_design_cost_factor = -0.75
-				}
+				naval_strike = 0.1
 			}
 			ai_will_do = {
 				factor = 1
@@ -21,31 +17,7 @@ ideas = {
 				}
 			}
 		}
-	aeronautical_production_spirit = {
-			ledger = air
-			available = { has_air_academy = yes }
-			equipment_bonus = {
-				small_plane_airframe = {
-					build_cost_ic = -0.03 instant = yes
-				}
-				medium_plane_airframe = {
-					build_cost_ic = -0.03 instant = yes
-				}
-				large_plane_airframe = {
-					build_cost_ic = -0.03 instant = yes
-				}
-			}
-			modifier = {
-				###
-				}
-			ai_will_do = {
-				factor = 1
-				modifier = {
-					factor = 0
-					NOT = { has_dlc = "No Step Back" }
-				}
-			}
-		}
+
 	}
 	air_force_command_spirit = {
 		

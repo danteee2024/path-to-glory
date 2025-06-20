@@ -61,8 +61,8 @@ SPR = {
 	color_ui = rgb { 255 255 122 }
 }
 ITA = {
-	color = rgb {  67 127 63 }
-	color_ui = rgb { 87 165 82 }
+	color = rgb { 0 102 0 }
+ color_ui = rgb { 0 51 0 }
 }
 ROM = {
 	color = rgb { 215 196 72 }
@@ -169,7 +169,7 @@ ELS = {
 	color_ui = rgb { 198 169 248 }
 }
 ETH = {
-	color = rgb { 152 130 191 }
+	color = rgb { 156 97 156 }
 	color_ui = rgb { 198 169 248 }
 }
 GUA = {

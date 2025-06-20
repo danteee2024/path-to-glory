@@ -473,8 +473,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				production_factory_efficiency_gain_factor = -0.10
-				production_factory_max_efficiency_factor = 0.15
+				production_factory_efficiency_gain_factor = -0.05
+				production_factory_max_efficiency_factor = 0.10
 				consumer_goods_factor = 0.05
 			}
 		}
@@ -544,7 +544,6 @@ ideas = {
 			modifier = {
 				army_attack_factor = 0.1
 				army_morale_factor = 0.1
-				send_volunteers_tension = -1.0
 			}
 		}
 		
@@ -1576,8 +1575,8 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_factory = 0.2
-				industrial_capacity_dockyard = 0.2
+				industrial_capacity_factory = 0.25
+				industrial_capacity_dockyard = 0.25
 			}
 
 			picture = eng_spirit_of_the_industrial_revolution

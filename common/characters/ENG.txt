@@ -70,6 +70,23 @@ characters={
 		}
 		
 	}
+	ENG_TUC={
+		name = "General Council of the Trades Union Congress"
+		portraits={
+			civilian = {
+				large= GFX_portrait_SPR_anarchist_commune
+			}
+		}
+		country_leader = {
+			expire = "1965.1.1"
+					
+			ideology = democratic_socialism
+			traits = {
+			SWI_trade_unionist
+						}
+		}
+		
+	}
 	ENG_oswald_mosley={
 		name=ENG_oswald_mosley
 		portraits={

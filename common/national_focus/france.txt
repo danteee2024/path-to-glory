@@ -9,12 +9,14 @@ focus_tree = {
 	}
 	default = no
 	continuous_focus_position = { x = 50 y = 925 }
-
+initial_show_position = {
+	    focus = FRA_rearmament
+	}
 
 	#### ECO
 	focus = {
 		id = FRA_vienot_agreement
-		icon = GFX_focus_generic_currency_reforms
+		icon = GFX_focus_GER_customs_union
 		cost = 10
 		x = 0
 		y = 0
@@ -29,21 +31,6 @@ focus_tree = {
 				idea = FRA_devalue_the_franc
 				days = 365
 			}
-			33 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-
-		
 		}
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_TFV_AUTONOMY FOCUS_FILTER_POLITICAL }
 	}
@@ -62,6 +49,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = industrial_bonus
 				bonus = 1
+				ahead_reduction = 1
 				uses = 2
 				category = industry
 			}
@@ -75,7 +63,7 @@ focus_tree = {
 						include_locked = yes
 					}	
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -93,7 +81,6 @@ focus_tree = {
 		prerequisite = {
 			focus = FRA_tools_modernisation
 			focus = FRA_vienot_agreement
-			focus = FRA_colonial_investments
 		}
 		relative_position_id = FRA_tools_modernisation
 		x = 1
@@ -212,7 +199,7 @@ focus = {
 	#
 	focus = {
 		id = FRA_monetary_tripartite_agreement
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_focus_generic_industry_1
 		cost = 10
 		prerequisite = {
 			focus = FRA_sncf
@@ -353,7 +340,7 @@ focus = {
 
 	focus = {
 		id = FRA_colonial_investments
-		icon = GFX_SOV_aristocratic_investments_ccp_2d_sov_compatibility
+		icon = GFX_focus_BRA_amazon_colonization
 		cost = 5
 		x = 6
 		y = 0
@@ -368,7 +355,7 @@ focus = {
 	}
 
 	focus = {
-		id = FRA_continue_mandat
+		id = FRA_develop_syria
 		icon = GFX_focus_GER_align_middle_east
 		cost = 5
 		prerequisite = {
@@ -383,11 +370,11 @@ focus = {
 		}
 		available_if_capitulated = yes
 		available = {
+			not = { has_idea = FRA_investment }
 			OR = {
 				ROOT = {
 					controls_state = 677
 					controls_state = 554
-					controls_state = 553
 				}
 				any_other_country = {
 					OR = {
@@ -398,14 +385,18 @@ focus = {
 					OR = {
 						controls_state = 677
 						controls_state = 554
-						controls_state = 553
 					}
 				}
 			}
 		}
 		completion_reward = {
 			add_political_power = 25
-
+			custom_effect_tooltip = generic_skip_one_line_tt
+add_timed_idea = {
+				idea = FRA_investment
+				days = 14
+			}
+            custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
 				limit = {
 					554 = {
@@ -424,7 +415,7 @@ focus = {
 			}
 			if = {
 				limit = {
-					553 = {
+					677 = {
 						controller = {
 							OR = {
 								tag = ROOT
@@ -433,7 +424,7 @@ focus = {
 						}
 					}
 				}
-				553 = {
+				677 = {
 					set_state_flag = FRA_industrial_expansion_target
 					add_extra_state_shared_building_slots = 2
 				}
@@ -444,7 +435,6 @@ focus = {
 					OR = {
 						controls_state = 677
 						controls_state = 554
-						controls_state = 553
 					}
 				}
 				add_autonomy_ratio = {
@@ -463,10 +453,11 @@ focus = {
 			focus = FRA_colonial_investments
 		}
 		relative_position_id = FRA_colonial_investments
-		x = 0
-		y = 1
+		x = -1
+		y = 2
 		
 		available = {
+			not = { has_idea = FRA_investment }
 			459 = {
 				controls_or_subject_of = yes
 			}
@@ -480,6 +471,12 @@ focus = {
 		available_if_capitulated = yes
 		completion_reward = {
 			add_political_power = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
+add_timed_idea = {
+				idea = FRA_investment
+				days = 14
+			}
+            custom_effect_tooltip = generic_skip_one_line_tt
 
 			if = {
 				limit = {
@@ -546,14 +543,15 @@ focus = {
 		prerequisite = {
 			focus = FRA_colonial_investments
 		}
-		relative_position_id = FRA_develop_algeria
+		relative_position_id = FRA_colonial_investments
 		x = 1
-		y = 1
+		y = 2
 		available_if_capitulated = yes
 		ai_will_do = {
 			factor = 2
 		}
 		available = {
+			not = { has_idea = FRA_investment }
 			OR = {
 				ROOT = {
 					controls_state = 461
@@ -568,6 +566,12 @@ focus = {
 		}
 		completion_reward = {
 			add_political_power = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
+add_timed_idea = {
+				idea = FRA_investment
+				days = 14
+			}
+            custom_effect_tooltip = generic_skip_one_line_tt
 			461 = {
 				set_state_flag = FRA_industrial_expansion_target
 				add_extra_state_shared_building_slots = 2
@@ -602,11 +606,12 @@ focus = {
 			focus = FRA_colonial_investments
 		}
 		available_if_capitulated = yes
-		relative_position_id = FRA_develop_algeria
-		x = -1
+		relative_position_id = FRA_colonial_investments
+		x = 0
 		y = 1
 		
 		available = {
+			not = { has_idea = FRA_investment }
 			OR = {
 				ROOT = {
 					controls_state = 458
@@ -624,6 +629,12 @@ focus = {
 		}
 		completion_reward = {
 			add_political_power = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
+add_timed_idea = {
+				idea = FRA_investment
+				days = 14
+			}
+            custom_effect_tooltip = generic_skip_one_line_tt
 			458 = {
 				set_state_flag = FRA_industrial_expansion_target
 				add_extra_state_shared_building_slots = 2
@@ -653,7 +664,7 @@ focus = {
 
 
 	focus = {
-		id = FRA_develop_indochine
+		id = FRA_develop_mali
 		icon = GFX_focus_generic_befriend_rwanda
 		cost = 5
 		prerequisite = {
@@ -662,15 +673,33 @@ focus = {
 		relative_position_id = FRA_colonial_investments
 		x = -2
 		y = 1
-		
 		available = {
+			not = { has_idea = FRA_investment }
+			OR = {
+				ROOT = {
+					controls_state = 780
+					controls_state = 556
+				}
+				TUN = {
+					is_subject_of = ROOT
+					controls_state = 780
+					controls_state = 556
+				}
+			}
 		}
+	
 		available_if_capitulated = yes
 		ai_will_do = {
 			factor = 2
 		}
 		completion_reward = {
 			add_political_power = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
+add_timed_idea = {
+				idea = FRA_investment
+				days = 14
+			}
+            custom_effect_tooltip = generic_skip_one_line_tt
 
 			780 = {
 				set_state_flag = FRA_industrial_expansion_target
@@ -685,8 +714,8 @@ focus = {
 	}
 
 	focus = {
-		id = FRA_rewrite_protectorate_treaties
-		icon = GFX_goal_generic_consumer_goods
+		id = FRA_southern_development
+		icon = GFX_focus_generic_electrification
 		cost = 5
 		prerequisite = {
 			focus = FRA_vienot_agreement
@@ -695,12 +724,20 @@ focus = {
 		y = 1
 		relative_position_id = FRA_vienot_agreement
 
-		
+		available = {
+			not = { has_idea = FRA_investment }
+		}
 		ai_will_do = {
 			factor = 1.5
 		}
 		completion_reward = {
 			add_political_power = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
+add_timed_idea = {
+				idea = FRA_investment
+				days = 14
+			}
+            custom_effect_tooltip = generic_skip_one_line_tt
 			31 = {
 				set_state_flag = FRA_industrial_expansion_target
 				add_extra_state_shared_building_slots = 2
@@ -715,7 +752,7 @@ focus = {
 	#newfocus
 	focus = {
 		id = FRA_develop_burgundy
-		icon = GFX_focus_generic_military_industry
+		icon = GFX_focus_GER_kdf_wagen
 		cost = 5
 		prerequisite = {
 			focus = FRA_vienot_agreement
@@ -723,13 +760,21 @@ focus = {
 		x = 2
 		y = 1
 		relative_position_id = FRA_vienot_agreement
-
+available = {
+			not = { has_idea = FRA_investment }
+		}
 		
 		ai_will_do = {
 			factor = 1.5
 		}
 		completion_reward = {
 			add_political_power = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
+add_timed_idea = {
+				idea = FRA_investment
+				days = 14
+			}
+            custom_effect_tooltip = generic_skip_one_line_tt
 			28 = {
 				set_state_flag = FRA_industrial_expansion_target
 				add_extra_state_shared_building_slots = 2
@@ -744,21 +789,29 @@ focus = {
 
 	focus = {
 		id = FRA_develop_centre
-		icon = GFX_SOV_paced_industrialization_ccp_2d_sov_compatibility
+		icon = GFX_focus_generic_public_works
 		cost = 5
 		prerequisite = {
 			focus = FRA_vienot_agreement
 		}
 		x = 1
 		y = 1
-		relative_position_id = FRA_rewrite_protectorate_treaties
-
+		relative_position_id = FRA_southern_development
+available = {
+			not = { has_idea = FRA_investment }
+		}
 		
 		ai_will_do = {
 			factor = 1.5
 		}
 		completion_reward = {
 			add_political_power = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
+add_timed_idea = {
+				idea = FRA_investment
+				days = 14
+			}
+            custom_effect_tooltip = generic_skip_one_line_tt
 			24 = {
 				set_state_flag = FRA_industrial_expansion_target
 				add_extra_state_shared_building_slots = 2
@@ -772,8 +825,8 @@ focus = {
 	}
 	#
 	focus = {
-		id = FRA_consolidate_african_federations
-		icon = GFX_focus_BEL_dam_the_consequences
+		id = FRA_alpine_development
+		icon = GFX_focus_GRE_a_land_of_mountains
 		cost = 5
 		prerequisite = {
 			focus = FRA_vienot_agreement
@@ -782,12 +835,20 @@ focus = {
 		y = 1
 		relative_position_id = FRA_vienot_agreement
 
-		
+		available = {
+			not = { has_idea = FRA_investment }
+		}
 		ai_will_do = {
 			factor = 1.5
 		}
 		completion_reward = {
 			add_political_power = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_timed_idea = {
+				idea = FRA_investment
+				days = 14
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			735 = {
 				set_state_flag = FRA_industrial_expansion_target
 				add_extra_state_shared_building_slots = 2
@@ -800,22 +861,30 @@ focus = {
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 	}
 	focus = {
-		id = FRA_autonomy_indochina
-		icon = GFX_focus_AFG_a_modern_economy
+		id = FRA_northern_development
+		icon =GFX_focus_generic_mining_industry
 		cost = 5
 		prerequisite = {
 			focus = FRA_vienot_agreement
 		}
-		
+		available = {
+			not = { has_idea = FRA_investment }
+		}
 		x = -1
 		y = 1
-		relative_position_id = FRA_rewrite_protectorate_treaties
+		relative_position_id = FRA_southern_development
 
 		ai_will_do = {
 			factor = 1.5
 		}
 		completion_reward = {
 			add_political_power = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
+add_timed_idea = {
+				idea = FRA_investment
+				days = 14
+			}
+            custom_effect_tooltip = generic_skip_one_line_tt
 			14 = {
 				set_state_flag = FRA_industrial_expansion_target
 				add_extra_state_shared_building_slots = 2
@@ -829,15 +898,15 @@ focus = {
 	}
 	focus = {
 		id = FRA_gueye_lamine_law
-		icon = GFX_focus_generic_tank_production
+		icon = GFX_focus_generic_military_industry
 		cost = 10
 		prerequisite = {
-			focus = FRA_develop_indochine
-			focus = FRA_autonomy_indochina
-			focus = FRA_rewrite_protectorate_treaties
-			focus = FRA_consolidate_african_federations
+			focus = FRA_develop_mali
+			focus = FRA_northern_development
+			focus = FRA_southern_development
+			focus = FRA_alpine_development
 			focus = FRA_develop_algeria
-			focus = FRA_continue_mandat
+			focus = FRA_develop_syria
 			focus = FRA_develop_morocco
 			focus = FRA_develop_tunisia
 			focus = FRA_develop_burgundy
@@ -845,7 +914,7 @@ focus = {
 		}
 		x = 5
 		y = 1
-		relative_position_id = FRA_autonomy_indochina
+		relative_position_id = FRA_northern_development
 		ai_will_do = {
 			factor = 1.5
 		}
@@ -868,7 +937,7 @@ focus = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = FRA_military_factories_effect_tt
+			custom_effect_tooltip = FRA_industrial_expansion_effect_mil_tt
 			every_owned_state = {
 				limit = {
 					is_controlled_by = ROOT
@@ -889,15 +958,15 @@ focus = {
 
 	focus = {
 		id = FRA_investment_civ
-		icon = GFX_goal_generic_construct_civilian
+		icon = GFX_focus_generic_modernize_industry
 		cost = 10
 		prerequisite = {
-			focus = FRA_develop_indochine
-			focus = FRA_autonomy_indochina
-			focus = FRA_rewrite_protectorate_treaties
-			focus = FRA_consolidate_african_federations
+			focus = FRA_develop_mali
+			focus = FRA_northern_development
+			focus = FRA_southern_development
+			focus = FRA_alpine_development
 			focus = FRA_develop_algeria
-			focus = FRA_continue_mandat
+			focus = FRA_develop_syria
 			focus = FRA_develop_morocco
 			focus = FRA_develop_tunisia
 			focus = FRA_develop_burgundy
@@ -905,7 +974,7 @@ focus = {
 		}
 		x = 3
 		y = 1
-		relative_position_id = FRA_autonomy_indochina
+		relative_position_id = FRA_northern_development
 		available_if_capitulated = yes
 		ai_will_do = {
 			factor = 1.5
@@ -925,7 +994,7 @@ focus = {
 			}
 		}
 		completion_reward = {
-			custom_effect_tooltip = FRA_industrial_expansion_effect_tt
+			custom_effect_tooltip = FRA_industrial_expansion_effect_civ_tt
 			every_owned_state = {
 				limit = {
 					is_controlled_by = ROOT
@@ -945,7 +1014,7 @@ focus = {
 	}
 	focus = {
 		id = FRA_cnrs
-		icon = GFX_focus_research
+		icon = GFX_focus_generic_university_3
 		cost = 10
 		prerequisite = {
 			focus = FRA_investment_civ
@@ -2470,7 +2539,7 @@ focus = {
 	}
 	focus = {
 		id = FRA_increase_military_spendings
-		icon = GFX_focus_RAJ_war_taxes
+		icon =GFX_focus_generic_mass_production
 		cost = 5
 		prerequisite = {
 			focus = FRA_support_blum
@@ -2488,7 +2557,7 @@ focus = {
 	}
 	focus = {
 		id = FRA_further_the_reforms
-		icon = GFX_focus_AFG_education_reform
+		icon = GFX_focus_generic_land_reclamation
 		cost = 5
 		prerequisite = {
 			focus = FRA_support_blum
@@ -2639,7 +2708,7 @@ focus = {
 	}		
 	focus = {
 		id = FRA_support_daladier
-		icon = GFX_focus_NOR_approach_kretsen
+		icon = GFX_focus_generic_election
 		cost = 5
 		prerequisite = {
 			focus = FRA_social_reforms
@@ -2675,7 +2744,7 @@ focus = {
 	}
 	focus = {
 		id = FRA_reynaud_economic_reforms
-		icon = GFX_focus_generic_currency_reforms
+		icon = GFX_focus_generic_full_employment
 		cost = 5
 		prerequisite = {
 			focus = FRA_support_daladier
@@ -2693,7 +2762,7 @@ focus = {
 	}
 	focus = {
 		id = FRA_rearmament_policy
-		icon = GFX_goal_generic_military_deal
+		icon = GFX_focus_generic_full_social_mobilization
 		cost = 5
 		prerequisite = {
 			focus = FRA_support_daladier
@@ -2971,7 +3040,7 @@ focus = {
 	
 	focus = {
 		id = FRA_support_ppf
-		icon =GFX_focus_BRA_utilize_security_law
+		icon = GFX_focus_BRA_utilize_security_law
 		cost = 10
 		prerequisite = {
 			focus = FRA_front_liberte

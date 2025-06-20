@@ -2869,7 +2869,10 @@ NOR_alt_democratic = {
 	color = rgb { 0 0 105 }
 	color_ui = rgb { 0 0 105 }
 }
-
+GER_RMTR = {
+	color = rgb { 9 9 9}
+	color_ui = rgb { 122 145 93 }
+}
 NSE_UNIFIED = {
 	color = rgb { 30 10 50 }
 	color_ui = rgb { 30 10 50 }

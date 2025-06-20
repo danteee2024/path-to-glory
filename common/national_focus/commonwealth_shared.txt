@@ -2,39 +2,40 @@ shared_focus = {
 	id = Commonwealth_form_joint_alliance
 	
 	dynamic = yes 
-	
 	icon = GFX_focus_generic_improve_the_administration
-
-	x = 18
-	y = 8
+    mutually_exclusive = {
+		focus = ENG_revisit_colonial_policy
+	}
+	x = 38
+	y = 0
 	
 	offset = {
-		x = 43
-		y = -8
+		x = 22
+		y = 0
 		trigger = {
 			has_focus_tree = canadian_focus
 		}
 	}
 	
 	offset = {
-		x = 42
-		y = -8
+		x = 22
+		y = 0
 		trigger = {
 			has_focus_tree = australian_focus
 		}
 	}
 	
 	offset = {
-		x = 31
-		y = -8
+		x = 12
+		y = 0
 		trigger = {
 			has_focus_tree = new_zealander_focus
 		}
 	}
 	
 	offset = {
-		x = 32
-		y = -8
+		x = 12
+		y = 0
 		trigger = {
 			has_focus_tree = south_african_focus
 		}
@@ -115,6 +116,49 @@ joint_focus = {
 		army_experience = 25
 		add_command_power = 25		
 		add_ideas = { Commonwealth_command_ns }
+	}
+}
+
+joint_focus = {
+	id = Commonwealth_service_focus
+	icon = GFX_goal_generic_position_armies
+	prerequisite = { focus = Commonwealth_command }
+
+	x = -10
+	y = 1
+	relative_position_id = Commonwealth_command
+	cost = 5
+    
+	
+
+	available = {
+		Commonwealth_basic_available_trigger = yes
+		is_faction_leader = yes
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	joint_trigger = {
+  		Commonwealth_basic_joint_trigger = yes 
+	}
+
+	completion_reward = {
+
+	}
+
+	completion_reward_joint_originator = {
+		army_experience = 25
+			navy_experience = 25
+			air_experience = 25
+			add_ideas = ENG_service_overseas_idea
+				
+	}
+		completion_reward_joint_member = {
+		    army_experience = 5
+			navy_experience = 5
+			air_experience = 5
+			add_ideas = ENG_service_overseas_idea
+			
 	}
 }
 
@@ -776,10 +820,7 @@ joint_focus = {
 	available = {
 		Commonwealth_basic_available_trigger = yes
 		has_tech = motorised_infantry
-		has_army_size = {
-			size > 7
-			type = motorized
-		}
+		has_army_manpower = { size > 149999 } 
 
 	}
 
@@ -843,10 +884,6 @@ joint_focus = {
 
 	available = {
 		Commonwealth_basic_available_trigger = yes
-		has_army_size = {
-			size > 30
-			type = infantry
-		}
 		has_army_manpower = { size > 99999 } 
 	}
 
@@ -1614,8 +1651,6 @@ joint_focus = {
 
 	available = {
 		Commonwealth_basic_available_trigger = yes
-		has_tech = decimetric_radar
-		has_tech = interwar_antiair
 		air_base > 9
 		any_owned_state = {
 			air_base > 3 
@@ -1751,8 +1786,6 @@ joint_focus = {
 
 	available = {
 		Commonwealth_basic_available_trigger = yes
-		has_tech = decimetric_radar
-		has_tech = interwar_antiair
 		air_base > 9
 		any_owned_state = {
 			air_base > 3 
@@ -1894,8 +1927,6 @@ joint_focus = {
 
 	available = {
 		Commonwealth_basic_available_trigger = yes
-		has_tech = decimetric_radar
-		has_tech = interwar_antiair
 		air_base > 9
 		any_owned_state = {
 			air_base > 3 
@@ -2349,7 +2380,7 @@ joint_focus = {
 	
 	prerequisite = { focus = Commonwealth_form_joint_alliance }
 
-	x = 5
+	x = 6
 	y = 1
 	relative_position_id = Commonwealth_form_joint_alliance
 	cost = 10

@@ -6276,7 +6276,9 @@ focus = {
 				add_political_power = 150
 			}
 			
-				set_war_support = 0.1
+				add_war_support = 0.10
+
+				USA_congress_medium_opposition = yes
 			
 			
 		}

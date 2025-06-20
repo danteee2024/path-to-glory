@@ -121,7 +121,7 @@ ideas = {
 			}
 		}
 		JAP_north_east_asian_bank = {
-			picture = golden_currency
+			picture = tur_balkan_central_bank_wealthy_greece
 			allowed = {
 				always = yes
 			}
