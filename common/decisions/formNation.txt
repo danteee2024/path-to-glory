@@ -5691,47 +5691,6 @@ formable_nations_mod_category = {
 		}
 	}
 
-	formable_nations_world = {
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				has_global_flag = ai_disabled 
-			}
-		}
-		
-		cost = 0  days_re_enable = 0
-		
-		visible = {
-			NOT = { has_country_flag = unform_available }
-			NOT = { has_global_flag = hide_formable_nations }
-		}
-		
-		available = {
-			OR = {
-				AND = {
-					OR = { is_subject = no has_global_flag = puppets_allowed }
-					all_state = { is_controlled_by = ROOT }
-					
-				}
-				AND = {
-					is_ai = no
-					has_global_flag = debug_mode
-				}
-			}
-			custom_trigger_tooltip = { tooltip = not_already_existing_tt NOT = { any_country = { has_cosmetic_tag = FORM_WOR } } }
-			
-		}
-		icon = formable_nations_world
-		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
-			set_cosmetic_tag = FORM_WOR
-			
-			custom_effect_tooltip = core_land
-			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
-				every_state = { add_core_of = ROOT }
-			}
-		}
-	}
 
 	formable_nations_ottomans = {
 	
