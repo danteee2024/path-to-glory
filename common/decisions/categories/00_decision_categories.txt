@@ -350,7 +350,6 @@ prospect_for_resources = {
 
 	allowed = {
 		has_dlc = "Waking the Tiger"
-		always = no
 	}
 }
 
