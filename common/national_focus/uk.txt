@@ -8414,7 +8414,7 @@ focus = {
 		relative_position_id = ENG_steady_as_she_goes
 
 		offset = {
-			x = -22
+			x = -21
 			y = 0
 			trigger = {
 				has_game_rule = {
