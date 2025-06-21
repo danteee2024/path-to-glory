@@ -313,7 +313,7 @@ focus_tree = {
 
 	focus = {
 		id = GRE_theban_warriors #HELLENES2
-		icon = GFX_focus_GRE_spartan_spirit
+		icon = GFX_focus_GER_the_peoples_victory
 		prerequisite = { focus = GRE_venerate_the_ancient_hellenes }
 		x = -2
 		y = 2
@@ -434,7 +434,7 @@ focus_tree = {
 
 	focus = {
 		id = GRE_macedonian_generals #HELLENES4
-		icon = GFX_goal_generic_officers
+		icon = GFX_focus_generic_military_dictatorship
 		prerequisite = { focus = GRE_venerate_the_ancient_hellenes }
 		x = 2
 		y = 2
@@ -727,7 +727,7 @@ focus_tree = {
 
 	focus = {
 		id = GRE_nenikikamen
-		icon = GFX_focus_GRE_megali_idea
+		icon = GFX_focus_PER_form_oil_company
 		available = { 
 			ROOT = {
 				controls_state = 797 
@@ -772,7 +772,7 @@ focus_tree = {
 
 	focus = {
 		id = GRE_the_die_is_cast
-		icon = GFX_goal_research_silver
+		icon = GFX_focus_BEL_maritime_phoenix
 		prerequisite = { focus = GRE_nenikikamen }
 		x = 0
 		y = 1
@@ -826,7 +826,7 @@ focus_tree = {
 
 	focus = {
 		id = GRE_phoideratoi
-		icon = GFX_focus_generic_manpower
+		icon = GFX_focus_PER_march_on_saadabad
 		prerequisite = { focus = GRE_reviving_the_double_headed_eagle }
 		x = 0
 		y = 1
@@ -948,7 +948,7 @@ focus_tree = {
 
 	focus = {
 		id = GRE_a_socialist_economy
-		icon = GFX_goal_generic_communist_economy
+		icon = GFX_SOV_socialist_emulation_ccp_2d_sov_compatibility
 		prerequisite = { focus = GRE_request_communist_support }
 		x = 2
 		y = 1
@@ -966,7 +966,7 @@ focus_tree = {
 
 	focus = {
 		id = GRE_nationalized_banks
-		icon = GFX_goal_generic_ban_aristocrats
+		icon = GFX_focus_generic_monetary_union
 		prerequisite = { focus = GRE_a_socialist_economy }
 		x = -2
 		y = 1
@@ -1150,7 +1150,7 @@ focus_tree = {
 
 	focus = {
 		id = GRE_depose_the_reactionaries
-		icon = GFX_focus_GRE_kke
+		icon = GFX_focus_SWE_neither_death_nor_dishonor
 		prerequisite = { focus = GRE_clearing_land_for_industrial_expansion }
 		prerequisite = { focus = GRE_red_militias }
 		prerequisite = { focus = GRE_the_greek_industrial_revolution }
@@ -1200,7 +1200,7 @@ focus_tree = {
 
 	focus = {
 		id = GRE_the_greek_industrial_revolution
-		icon = GFX_goal_communist_brain
+		icon = GFX_focus_generic_spur_communist_revolutions
 		prerequisite = { focus = GRE_nationalized_banks }
 		x = 0
 		y = 1
@@ -1474,7 +1474,7 @@ focus_tree = {
 
 	focus = {
 		id = GRE_ally_tito
-		icon = GFX_goal_generic_befriend_yugoslavia_communist
+		icon = GFX_goal_tripartite_pact
 		prerequisite = { focus = GRE_prepare_for_the_great_anti_fascist_war }
 		available = {
 			NOT = { 
@@ -1758,7 +1758,7 @@ focus_tree = {
 
 	focus = {
 		id = GRE_the_kings_government
-		icon = GFX_goal_GRE_coat_of_arms
+		icon = GFX_focus_ICE_break_with_the_crown
 		mutually_exclusive = { focus = GRE_bring_home_the_exiled_republicans }
 		available = {
 			NOT = {	has_country_flag = GRE_king_arrested }
@@ -1782,7 +1782,7 @@ focus_tree = {
 
 	focus = {
 		id = GRE_the_right_to_rule
-		icon = GFX_focus_GRE_royal
+		icon = GFX_focus_rom_royal_dictatorship
 		prerequisite = { focus = GRE_the_kings_government }
 		mutually_exclusive = { focus = GRE_metaxism_focus }
 		x = -1
@@ -1875,7 +1875,7 @@ focus_tree = {
 		icon = GFX_focus_generic_little_entente
 		prerequisite = { focus = GRE_the_right_to_rule }
 		
-		x = -1
+		x = 0
 		y = 1
 
 		relative_position_id = GRE_the_right_to_rule
@@ -1890,12 +1890,16 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
 
-			add_manpower = 5000
+			add_manpower = 10000
 			add_war_support = 0.12
 			
 			hidden_effect = {
 				delete_unit_template_and_units = {
 					division_template = "Tmíma Vasilikís Synodeías"
+					disband = yes #if yes, will refund equipment/manpower.
+				}
+				delete_unit_template_and_units = {
+					division_template = "Íli Vasilikís Frourás"
 					disband = yes #if yes, will refund equipment/manpower.
 				}
 				delete_unit_template_and_units = {
@@ -1916,6 +1920,21 @@ focus_tree = {
 					}
 					support = {  
 						artillery = { x = 0 y = 0 } 
+					}
+				}
+				division_template = {
+					name = "Íli Vasilikís Frourás"		
+					division_names_group = GRE_CAV_01
+					is_locked = no
+					regiments = {
+						cavalry = { x = 0 y = 0 }
+						cavalry = { x = 0 y = 1 }
+						cavalry = { x = 1 y = 0 }
+						cavalry = { x = 1 y = 1 }
+						cavalry = { x = 2 y = 0 }
+					}
+					support = {  
+						recon = { x = 0 y = 0 } 
 					}
 				}
 				division_template = {
@@ -1958,52 +1977,21 @@ focus_tree = {
 				    owner = ROOT
 				}
 			}
-
-		}
-	}
-	focus = {
-		id = GRE_Alexander_Legacy
-		icon = GFX_focus_GRE_macedon_culture
-		available = {
-			
-		 } 
-		 prerequisite = { focus = GRE_the_right_to_rule }
-		x = -3
-		y = 1
-		relative_position_id = GRE_the_right_to_rule
-		cost = 5
-		ai_will_do = {
-			base = 0
-		}
-
-		completion_reward = {
-			add_ideas = GRE_Alexander_Legacy_idea
-		}
-	}
-	focus = {
-		id = GRE_Alexander_tactics
-		icon = GFX_goal_plan
-		available = {
-			
-		} 
-		 prerequisite = { focus = GRE_Alexander_Legacy }
-		 prerequisite = { focus = GRE_reorganize_the_royal_guard }
-		x = -1
-		y = 1
-		relative_position_id = GRE_reorganize_the_royal_guard
-		cost = 10
-		ai_will_do = {
-			base = 0
-		}
-
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = GRE_Alexander_Legacy_idea
-				add_idea = GRE_Alexander_Legacy_idea2
+			random_state = { 
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_owned_by = ROOT
+					is_core_of = ROOT
+				}
+				create_unit = {
+				    division = "name = \"Íli Vasilikís Frourás'\" division_template = \"Íli Vasilikís Frourás\" start_experience_factor = 0.4 start_equipment_factor = 0.9"
+				    owner = ROOT
+				}
 			}
-		}
-	}		
 
+		}
+	}
+	
 
 	focus = {
 		id = GRE_petition_britain_for_aid
@@ -2011,7 +1999,7 @@ focus_tree = {
 		available = { 
 			GRE = { has_country_flag = GRE_monarchist_civil_war }
 		}
-		prerequisite = { focus = GRE_the_right_to_rule }
+		prerequisite = { focus = GRE_reorganize_the_royal_guard }
 		x = 0
 		y = 2
 		relative_position_id = GRE_the_right_to_rule
@@ -2036,41 +2024,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			if = {
-				limit = { 
-					ENG = { 
-						NOT = { has_government = communism }
-					}
-				}	
-				ENG = { country_event = { id = bftb_greece.51 } }
+			swap_ideas = {
+				remove_idea = GRE_schachtplan_modified
+				add_idea = GRE_schachtplan_fascistised
 			}
-			if = {
-				limit = { 
-					GER = { 
-						has_government = neutrality
-					}
-				}	
-				GER = { country_event = { id = bftb_greece.51 } }
-			}
-			if = {
-				limit = { 
-					GER = { 
-						NOT = { has_government = neutrality }
-					}
-				}	
-				remove_ideas = GRE_schachtplan 
-			}
-			if = {
-				limit = { 
-					GER = { has_government = fascism } 
-				}
-				GER = { 
-					add_opinion_modifier = { 
-						target = GRE
-						modifier = GRE_discarded_the_schachtplan
-					}
-				}
-			}
+			add_research_slot = 1
+			add_stability = 0.10
 		}
 	}
 
@@ -2099,8 +2058,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
-			add_political_power = 75
+			add_political_power = 100
 			add_stability = 0.05
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -2141,7 +2099,7 @@ focus_tree = {
 
 	focus = {
 		id = GRE_the_hellenic_spirit
-		icon = GFX_focus_GRE_4th_august
+		icon = GFX_focus_CHL_departemento_de_las_tropas_nacistas_de_asalto
 		prerequisite = { focus = GRE_metaxism_focus }
 		x = 0
 		y = 1
@@ -2175,7 +2133,7 @@ focus_tree = {
 
 	focus = {
 		id = GRE_the_national_youth_organisation
-		icon = GFX_focus_GRE_EON
+		icon = GFX_focus_CHL_incorporate_machi_into_the_army
 		prerequisite = { focus = GRE_the_hellenic_spirit }
 		x = 0
 		y = 1
@@ -2212,7 +2170,7 @@ focus_tree = {
 
 	focus = {
 		id = GRE_use_the_military
-		icon = GFX_focus_GRE_greek_militarism
+		icon = GFX_focus_AFG_mountain_training
 		prerequisite = { focus = GRE_crack_down_on_the_republicans }
 		mutually_exclusive = { focus = GRE_recruit_the_fascists }
 		x = -2
@@ -2281,7 +2239,7 @@ focus_tree = {
 
 	focus = {
 		id = GRE_recruit_the_fascists
-		icon = GFX_goal_GRE_metaxism
+		icon = GFX_focus_AFG_adopt_nufus
 		prerequisite = { focus = GRE_crack_down_on_the_republicans }
 		prerequisite = { focus = GRE_the_national_youth_organisation }
 		mutually_exclusive = { focus = GRE_use_the_military }
@@ -2350,7 +2308,7 @@ focus_tree = {
 
 	focus = {
 		id = GRE_War_Economy
-		icon = GFX_goal_polish_wartime_industry
+		icon = GFX_focus_generic_economic_recovery
 		available = {
 			
 		 } 
@@ -2395,7 +2353,7 @@ focus_tree = {
 
 	focus = {
 		id = GRE_our_traditional_allies_in_the_aegean
-		icon = GFX_allies
+		icon = GFX_focus_RAJ_seek_allies_with_the_muslim_league
 		prerequisite = { focus = GRE_use_the_military }
 		x = -2
 		y = 1
@@ -2497,7 +2455,7 @@ focus_tree = {
 
 	focus = {
 		id = GRE_prepare_against_the_mediterranean_threat
-		icon = GFX_goal_italy_stab_in_the_back
+		icon = GFX_focus_generic_mediterranean_sea_focus
 		prerequisite = { focus = GRE_use_the_military }
 		x = 0
 		y = 1
@@ -2608,7 +2566,7 @@ focus_tree = {
 
 	focus = {
 		id = GRE_the_greater_enosis
-		icon = GFX_focus_GRE_cyprus_for_war
+		icon = GFX_focus_generic_attack_cyprus
 		prerequisite = { focus = GRE_prepare_against_the_mediterranean_threat }
 		x = 0
 		y = 1
@@ -2668,7 +2626,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GRE_expansion_of_athens_university
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 0
 			modifier = { 
@@ -2863,7 +2821,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GRE_reclaiming_the_wayward_ally
-		icon = GFX_goal_generic_attack_turkey
+		icon = GFX_focus_generic_attack_turkey
 		prerequisite = { focus = GRE_securing_the_bulgarian_menace }
 		mutually_exclusive = {
 			focus = GRE_realign_ourselves_with_the_central_powers
@@ -2991,7 +2949,7 @@ focus_tree = {
 
 	focus = {
 		id = GRE_third_hellenic_civilization
-		icon = GFX_focus_GRE_third_civ
+		icon = GFX_focus_SWI_helvetic_junta
 		prerequisite = { focus = GRE_an_orthodox_state }
 		available = { 
 			has_country_leader = { 
@@ -3033,7 +2991,7 @@ focus_tree = {
 
 	focus = {
 		id = GRE_defending_our_kingdom
-		icon = GFX_focus_GRE_continue_the_fight
+		icon = GFX_goal_generic_defence
 		prerequisite = { focus = GRE_third_hellenic_civilization }
 		available = { 
 			has_country_leader = { 
@@ -3237,7 +3195,7 @@ focus_tree = {
 		icon = GFX_focus_generic_little_entente
 		prerequisite = { focus = GRE_following_in_the_footsteps_of_giants }
 		available = { 
-			fascism > 0.4
+			fascism > 0.3
 		}
 		x = 0
 		y = 1
@@ -3346,7 +3304,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GRE_cement_greco_german_ties
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 0
 			modifier = { 
@@ -3472,7 +3430,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GRE_Proclaim_Macedonia
-		icon = GFX_goal_AFG_alexanders_footsteps
+		icon = GFX_focus_ARG_firmes_volamos
 		available = {
 			OR = {
 				has_government = fascism
@@ -3547,7 +3505,7 @@ focus_tree = {
 
 	focus = {
 		id = GRE_Recover_Babylon
-		icon = GFX_goal_generic_attack_iraq
+		icon = GFX_focus_generic_attack_iraq
 		available = {
 			341 = { is_owned_and_controlled_by = GRE }
 			797 = { is_owned_and_controlled_by = GRE }
@@ -3587,7 +3545,7 @@ focus_tree = {
 
 	focus = {
 		id = GRE_Demand_Bactria
-		icon = GFX_goal_generic_attack_afghanistan
+		icon = GFX_focus_generic_attack_afghanistan
 		available = {
 			341 = { is_owned_and_controlled_by = GRE }
 			797 = { is_owned_and_controlled_by = GRE }
