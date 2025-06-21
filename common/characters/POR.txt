@@ -7,7 +7,8 @@ characters = {
 			}
 		}
 		country_leader = {
-			ideology = despotism
+			ideology=despotism
+			traits = { conservative_nationalist_lar r56_trait_opposed_to_communism }
 			expire = "1965.1.1"
 			id = -1
 		}
@@ -74,7 +75,7 @@ characters = {
 			visible ={
 				has_government = democratic
 			}
-			traits = { old_guard }
+			traits = { old_guard homeland_connoisseur }
 			skill = 3
 			attack_skill = 4
 			defense_skill = 2
@@ -1428,8 +1429,7 @@ characters = {
 			}
 		}
 	}
-
-	POR_afonso_de_almeida_fernandes={
+	POR_afonso_de_almeida_fernandes={ #r56
 		name = "Afonso de Almeida Fernandes"
 		portraits = {
 			army = {
@@ -1446,8 +1446,7 @@ characters = {
 			legacy_id = -1
 		}
 	}
-
-	POR_jaime_silverio_marques={
+	POR_jaime_silverio_marques={ #r56
 		name = "Jaime Silvério Marques"
 		portraits = {
 			army = {
@@ -1465,7 +1464,7 @@ characters = {
 		}
 	}
 	
-	POR_anibal_de_passos_e_sousa={
+	POR_anibal_de_passos_e_sousa={ #r56
 		name = "Aníbal de Passos e Sousa"
 		portraits = {
 			army = {
@@ -1498,7 +1497,7 @@ characters = {
 			}
 		}		
 	}
-	POR_comandante_gomes_da_costa= {
+	POR_comandante_gomes_da_costa={ #r56
 		name = "Gomes da Costa"
 		portraits = {
 			army = {
@@ -1515,7 +1514,6 @@ characters = {
 			legacy_id = -1
 		}
 	}
-
 	POR_fernando_augusto_borges = {
 		advisor = {
 			slot = high_command

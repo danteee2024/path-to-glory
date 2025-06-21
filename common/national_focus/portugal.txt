@@ -731,7 +731,6 @@ focus_tree = {
 
 	focus = {
 		id = POR_modernising_infantry_equipement
-		
 		prerequisite = { focus = POR_instituto_superior_tecnico }
 		icon = GFX_SOV_rehabilitated_military_ccp_2d_sov_compatibility
 		x = -3		
@@ -742,8 +741,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = { 
 			if = {
-				limit = { has_full_control_of_state = 112 }
-				112 = {
+				limit = { has_full_control_of_state = 179 }
+				179 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = arms_factory
@@ -843,6 +842,152 @@ focus_tree = {
 			ELSE = {
 				custom_effect_tooltip = available_designer
 				show_ideas_tooltip = ogma
+			}
+		}
+	}
+
+	focus = {
+		id = POR_modernising_support_equipement
+		prerequisite = { focus = POR_instituto_superior_tecnico }
+		icon = GFX_focus_AUS_raid_military_storages
+		x = 3		
+		y = 1
+		relative_position_id = POR_instituto_superior_tecnico
+		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = { 
+			if = {
+				limit = { has_full_control_of_state = 180 }
+				180 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				random_owned_state = {
+					limit = {
+						is_controlled_by = ROOT
+						is_core_of = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}	
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = POR_fabrica_material_guerra_organization
+				mio:POR_fabrica_material_guerra_organization = {
+					add_mio_size = 2
+					add_mio_funds = 1500
+				}
+			}
+			ELSE = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = fabrica_material_guerra
+			}
+			add_tech_bonus = {
+				name = POR_metropolitan_army
+			    bonus = 0.5
+			    uses = 2
+			    category = support_tech
+			}
+			army_experience	= 50
+		}
+	}
+
+focus = {
+		id = POR_portuguese_companies
+		prerequisite = { focus = POR_modernising_support_equipement
+	focus = POR_ogma }
+		icon = GFX_goal_generic_military_sphere
+		x = 0		
+		y = 1
+		relative_position_id = POR_modernising_support_equipement
+		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = { 
+			if = {
+				limit = { has_full_control_of_state = 180 }
+				180 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				random_owned_state = {
+					limit = {
+						is_controlled_by = ROOT
+						is_core_of = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			add_tech_bonus = {
+				name = POR_metropolitan_army
+			    bonus = 0.75
+			    uses = 2
+			    category = support_tech
+			}
+			army_experience	= 50
+		}
+	}
+
+	focus = {
+		id = POR_advanced_companies
+		prerequisite = { focus = POR_portuguese_companies}
+		prerequisite = { focus = POR_military_research_facilities}
+		icon = GFX_focus_RAJ_a_private_military
+		x = 0
+		y = 2
+
+		relative_position_id = POR_portuguese_companies
+		cost = 10
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			add_tech_bonus = {
+				name = POR_advanced_companies
+			    bonus = 1.0
+			    uses = 3
+			    category = support_tech
+			}
+
+			add_doctrine_cost_reduction = {
+				name = POR_advanced_companies
+			    cost_reduction = 1
+			    uses = 3
+			    category = land_doctrine
+			    category = naval_doctrine
+			    category = air_doctrine
 			}
 		}
 	}
@@ -1107,7 +1252,7 @@ focus_tree = {
 
 	focus = {
 		id = POR_military_vehicles
-		prerequisite = { focus = POR_ogme focus = POR_modernising_infantry_equipement }
+		prerequisite = { focus = POR_ogme }
 
 		icon = GFX_goal_generic_army_motorized
 		x = 0
@@ -1257,9 +1402,10 @@ focus_tree = {
 
 	focus = {
 		id = POR_military_research_facilities
-		prerequisite = { focus = POR_military_vehicles focus = POR_portuguese_artillery focus = POR_light_aircraft_focus }
+		prerequisite = { focus = POR_military_vehicles focus = POR_portuguese_artillery 
+		focus = POR_light_aircraft_focus focus = POR_portuguese_companies }
 		icon = GFX_focus_generic_military_industry
-		x = 0
+		x = 1
 		y = 1
 
 		relative_position_id = POR_military_vehicles
@@ -1272,10 +1418,11 @@ focus_tree = {
 
 	focus = {
 		id = POR_armor_focus
-		prerequisite = { focus = POR_military_research_facilities}
+		prerequisite = { focus = POR_military_research_facilities }
+		prerequisite = { focus = POR_military_vehicles }
 		mutually_exclusive = { focus = POR_advanced_light_aircraft}
 		icon = GFX_goal_generic_army_tanks
-		x = 0
+		x = -1
 		y = 1
 
 		relative_position_id = POR_military_research_facilities
@@ -1343,7 +1490,7 @@ focus_tree = {
 
 	focus = {
 		id = POR_light_aircraft_focus
-		prerequisite = { focus = POR_ogma}
+		prerequisite = { focus = POR_ogma }
 		icon = GFX_focus_BRA_air_force
 		x = 0
 		y = 1
@@ -1403,10 +1550,10 @@ focus_tree = {
 		prerequisite = { focus = POR_military_research_facilities }
 		mutually_exclusive = { focus = POR_armor_focus}
 		icon = GFX_goal_generic_air_bomber
-		x = 0
-		y = 2
+		x = 1
+		y = 1
 
-		relative_position_id = POR_light_aircraft_focus
+		relative_position_id = POR_military_research_facilities
 		cost = 10
 		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
@@ -1423,7 +1570,7 @@ focus_tree = {
 
 	focus = {
 		id = POR_jet_research
-		prerequisite = { focus = POR_advanced_light_aircraft}
+		prerequisite = { focus = POR_advanced_light_aircraft }
 		icon = GFX_focus_generic_jet_planes
 		x = 0
 		y = 1
@@ -1447,9 +1594,8 @@ focus_tree = {
 		prerequisite = { focus = POR_instituto_superior_tecnico }
 		mutually_exclusive = { focus = POR_food_industries}
 		icon = GFX_focus_generic_modernize_industry
-		x = 3
+		x = 5
 		y = 1
-
 		relative_position_id = POR_instituto_superior_tecnico
 		cost = 5
 		search_filters = {FOCUS_FILTER_RESEARCH}
@@ -1471,24 +1617,37 @@ focus_tree = {
 		y = 1
 
 		relative_position_id = POR_industrial_modernization
-		cost = 10
+		cost = 7.5
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_ideas = POR_a_new_industry
 		}
 	}
-focus = {
-		id = POR_reestablish_portuguese_science_and_technology_affairs
-		prerequisite = { focus = POR_a_new_industry focus = POR_textile_industry }
+    focus = {
+		id = POR_establish_portuguese_science_and_technology_affairs
+		prerequisite = { focus = POR_a_new_industry }
 		icon = GFX_focus_research2
-		x = 1
+		x = 0
 		y = 1
-
 		relative_position_id = POR_a_new_industry
-		cost = 10
-		search_filters = {FOCUS_FILTER_INDUSTRY}
+		cost = 7.5
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			add_research_slot = 1
+			add_ideas = POR_science_and_technology_affairs
+		}
+	}
+
+    focus = {
+		id = POR_a_new_economy
+		prerequisite = { focus = POR_establish_portuguese_science_and_technology_affairs }
+		icon = GFX_SOV_planned_economy_ccp_2d_sov_compatibility
+		x = 0
+		y = 1
+		relative_position_id = POR_establish_portuguese_science_and_technology_affairs
+		cost = 7.5
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			add_ideas = free_trade
 		}
 	}
 
@@ -1503,7 +1662,7 @@ focus = {
 		prerequisite = { focus = POR_continue_the_public_works }
 		mutually_exclusive = { focus = POR_industrial_modernization }
 		icon = GFX_focus_SWE_rations
-		x = 5
+		x = 7
 		y = 2
 
 		relative_position_id = POR_continue_the_public_works
@@ -1537,20 +1696,18 @@ focus = {
 	}
 
 	focus = {
-		id = POR_textile_industry
+		id = POR_cork_exports
 		available = {
 			OR = {
 				has_full_control_of_state = 179
-				has_full_control_of_state = 112
 			}
 		}
 		prerequisite = { focus = POR_food_industries }
-		icon = GFX_focus_CHL_enlarge_the_textile_industries
+		icon = GFX_goal_generic_positive_trade_relations
 		x = 0
 		y = 1
-
 		relative_position_id = POR_food_industries
-		cost = 10
+		cost = 5
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			if = {
@@ -1564,14 +1721,36 @@ focus = {
 					}
 				}
 			}
+			add_ideas = POR_cork_exports_idea
+		}
+	}
 
+	focus = {
+		id = POR_textile_industry
+		available = {
+			OR = {
+				has_full_control_of_state = 179
+				has_full_control_of_state = 112
+				has_full_control_of_state = 180
+				has_full_control_of_state = 181
+				has_full_control_of_state = 785
+			}
+		}
+		prerequisite = { focus = POR_cork_exports }
+		icon = GFX_focus_SWE_rations
+		x = 0
+		y = 1
+		relative_position_id = POR_cork_exports
+		cost = 10
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
 			if = {
 				limit = { has_full_control_of_state = 112 }
 				112 = {
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = industrial_complex
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -1580,36 +1759,28 @@ focus = {
 			if = {
 				limit = { has_full_control_of_state = 795 }
 				795 = {
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = industrial_complex		
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 				}
 			}
-			if = {
-				limit = { has_full_control_of_state = 179 }
-				180 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			if = {
-				limit = { has_full_control_of_state = 179 }
-				181 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
+		}
+	}
+
+	focus = {
+		id = POR_kickstart_the_economy
+		prerequisite = { focus = POR_textile_industry }
+		icon = GFX_SOV_planned_economy_ccp_2d_sov_compatibility
+		x = 0
+		y = 1
+		relative_position_id = POR_textile_industry
+		cost = 7.5
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			upgrade_economy_law = 1
 		}
 	}
 
@@ -1623,7 +1794,7 @@ focus = {
 		prerequisite = {		
 		}			
 		icon = GFX_goal_generic_build_navy
-		x = 9
+		x = 11
 		y = 0
 
 		relative_position_id = POR_continue_the_public_works
@@ -1840,7 +2011,7 @@ focus = {
 		focus = POR_intensify_torpedo_manufacturing
 		focus = POR_merchant_marine_protection }
 		icon = GFX_goal_generic_occupy_states_coastal
-		x = 0
+		x = 1
 		y = 3
 
 		relative_position_id = POR_submarine_effort
@@ -1906,7 +2077,9 @@ focus = {
 	focus = {
 		id = POR_air_naval_research
 		prerequisite = { focus = POR_naval_research_institute }
-		prerequisite = { focus = POR_advanced_light_aircraft }
+		available = {
+			has_completed_focus = aircraft_production_focus
+		}
 		icon = GFX_goal_generic_air_naval_bomber
 		x = 0
 		y = 1
@@ -2342,17 +2515,10 @@ focus = {
 
 	focus = {
 		id = POR_army_reorganization
-		available = {			
-		}
-
-		bypass = {		
-		}
-		prerequisite = {
-		}
 		icon = GFX_focus_generic_combined_arms
-		x = 27	
+		x = 7	
 		y = 0
-
+		relative_position_id = POR_second_navy_reequipment
 		cost = 10
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = { 	
