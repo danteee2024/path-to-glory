@@ -6735,6 +6735,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		completion_reward = {
 			add_stability = -0.10
 			remove_ideas = ENG_the_war_to_end_all_wars
+custom_effect_tooltip = generic_skip_one_line_tt
 		}
 	}
 
@@ -7307,7 +7308,7 @@ focus = {
 		}		
 		prerequisite = { focus = ENG_home_defence }
 
-		icon = GFX_goal_generic_construction
+		icon = GFX_focus_BRA_rubber_war
 
 		x = 2
 		y = 1
@@ -7420,7 +7421,7 @@ focus = {
 
 		will_lead_to_war_with = IRQ
 		prerequisite = { focus = ENG_home_defence }
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_focus_generic_attack_iraq
 		x = -6
 		y = 1
 		offset = {
@@ -7462,7 +7463,7 @@ focus = {
 
 		will_lead_to_war_with = PER
 		prerequisite = { focus = uk_iraq_focus }
-		icon = GFX_goal_generic_forceful_treaty
+		icon = GFX_focus_generic_attack_iran
 		x = 0
 		y = 1
 		relative_position_id = uk_iraq_focus
@@ -7615,6 +7616,7 @@ focus = {
 		}	
 		completion_reward = {
 			remove_ideas = ENG_the_war_to_end_all_wars
+custom_effect_tooltip = generic_skip_one_line_tt
 			set_rule = { can_send_volunteers = yes }
 		}
 	}
@@ -7633,7 +7635,7 @@ focus = {
 		available_if_capitulated = yes
 
 		prerequisite = { focus = ENG_military_training_act focus = uk_iran_focus }
-		icon = GFX_goal_generic_trade
+		icon = GFX_focus_generic_german_trade
 		x = -1
 		y = 1
 		relative_position_id = ENG_military_training_act
@@ -7660,7 +7662,7 @@ focus = {
 		}
 		will_lead_to_war_with = GER
 		prerequisite = { focus = ENG_embargo_germany }
-		icon = GFX_focus_attack_germany
+		icon = GFX_SOV_war_measures_in_the_east_ccp_2d_sov_compatibility
 		x = 0
 		y = 1
 		relative_position_id = ENG_embargo_germany
@@ -7709,7 +7711,7 @@ focus = {
 			}			
 		}
 		prerequisite = { focus = ENG_home_defence }
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_SOV_control_scandinavia_ccp_2d_sov_compatibility
 		x = 4
 		y = 1
 		offset = {
@@ -7774,7 +7776,7 @@ focus = {
 		}
 		will_lead_to_war_with = SWE
 		prerequisite = { focus = uk_scandinavian_focus }
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_focus_generic_attack_sweden
 		x = -1
 		y = 1
 		relative_position_id = uk_scandinavian_focus
@@ -7807,7 +7809,7 @@ focus = {
 		}	
 		will_lead_to_war_with = NOR
 		prerequisite = { focus = uk_scandinavian_focus }
-		icon = GFX_goal_generic_more_territorial_claims
+		icon = GFX_focus_generic_attack_norway
 		x = 0
 		y = 2
 		relative_position_id = uk_scandinavian_focus
@@ -7840,7 +7842,7 @@ focus = {
 		}		
 		will_lead_to_war_with = DEN
 		prerequisite = { focus = uk_scandinavian_focus }
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_focus_generic_attack_denmark
 		x = 1
 		y = 1
 		relative_position_id = uk_scandinavian_focus
@@ -7870,7 +7872,7 @@ focus = {
 		}		
 		prerequisite = { focus = ENG_home_defence }
 
-		icon = GFX_goal_generic_construction
+		icon =GFX_focus_BRA_rubber_war
 
 		x = -1
 		y = 1
@@ -7915,7 +7917,7 @@ focus = {
 			}			
 		}
 		prerequisite = { focus = ENG_home_defence }
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_focus_generic_influence_benelux
 		x = -1
 		y = 1
 		offset = {
@@ -7959,7 +7961,7 @@ focus = {
 			}
 		}		
 		prerequisite = { focus = ENG_benelux_intervention }
-		icon = GFX_goal_generic_attack_allies
+		icon = GFX_focus_BEL_broken_neutrality
 		x = -1
 		y = 1
 		relative_position_id = ENG_benelux_intervention
@@ -7992,7 +7994,7 @@ focus = {
 		}		
 		will_lead_to_war_with = HOL
 		prerequisite = { focus = ENG_benelux_intervention }
-		icon = GFX_goal_generic_attack_allies
+		icon = GFX_focus_BEL_flanders_ascendant
 		x = 1
 		y = 1
 		relative_position_id = ENG_benelux_intervention
@@ -8048,7 +8050,7 @@ focus = {
 		id = ENG_Operation_Sextant
 		prerequisite = { focus = ENG_Allied_Operations }
 		
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_focus_attack_japan
 		x = 2
 		y = 1
 		relative_position_id = ENG_Allied_Operations
@@ -8074,7 +8076,7 @@ focus = {
 		id = ENG_Operation_Husky
 		prerequisite = { focus = ENG_Allied_Operations }
 		
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_focus_attack_italy
 		x = 0
 		y = 1
 		relative_position_id = ENG_Allied_Operations
@@ -8099,7 +8101,7 @@ focus = {
 		id = ENG_Operation_Overlord
 		prerequisite = { focus = ENG_Allied_Operations }
 		
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_focus_attack_germany
 		x = -2
 		y = 1
 		relative_position_id = ENG_Allied_Operations
@@ -8177,7 +8179,7 @@ focus = {
 		}
 
 		offset = {
-			x = 1
+			x = -8
 			y = 0
 			trigger = {
 				has_game_rule = {
@@ -8617,7 +8619,7 @@ focus = {
 		}
 		icon = GFX_focus_GER_european_confederation
 		x = -1
-		y = 1
+		y = 2
 		relative_position_id = ENG_the_kings_party
 		cost = 10
 		ai_will_do = {
@@ -8626,6 +8628,7 @@ focus = {
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}	
 		completion_reward = {
 			remove_ideas = ENG_the_war_to_end_all_wars
+custom_effect_tooltip = generic_skip_one_line_tt
 			add_war_support = 0.05
 			FRA = {
 				if = {
@@ -8970,7 +8973,7 @@ focus = {
 		}
 
 		offset = {
-			x = -10
+			x = -2
 			y = 0
 			trigger = {
 				has_game_rule = {
@@ -8992,7 +8995,7 @@ focus = {
 			}
 		}
 		icon = GFX_focus_eng_organise_the_blackshirts
-		x = 10
+		x = 2
 		y = 1
 		relative_position_id = ENG_a_change_in_course
 		cancel_if_invalid = yes
@@ -9104,9 +9107,9 @@ focus = {
 			is_subject = no
 			has_government = fascism
 		}
-		icon = GFX_goal_support_fascism
-		x = 6
-		y = 1
+		icon = GFX_focus_BEL_the_european_crusade
+		x = 8
+		y = 2
 		relative_position_id = ENG_organize_the_blackshirts
 		cost = 10
 		ai_will_do = {
@@ -9115,6 +9118,7 @@ focus = {
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = {
 			remove_ideas = ENG_the_war_to_end_all_wars
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_stability = 0.05
 			add_war_support = 0.05
 			GER = {
@@ -9142,8 +9146,8 @@ focus = {
 			is_in_faction_with = GER
 		}
 		icon = GFX_focus_chi_mission_to_germany
-		x = 4
-		y = 1
+		x = 6
+		y = 2
 		relative_position_id = ENG_organize_the_blackshirts
 		cost = 10
 		ai_will_do = {
@@ -9152,6 +9156,7 @@ focus = {
 		completion_reward = {
 		
 			remove_ideas = ENG_the_war_to_end_all_wars
+custom_effect_tooltip = generic_skip_one_line_tt
 		
 			hidden_effect = {
 				set_temp_variable = {
@@ -9220,7 +9225,7 @@ focus = {
 				BEL = { exists = no }	
 			}
 		}
-		icon = GFX_goal_generic_territory_or_war
+		icon = GFX_focus_generic_influence_benelux
 		x = -2
 		y = 1
 		relative_position_id = ENG_the_british_path_to_fascism
@@ -9274,7 +9279,7 @@ focus = {
 				}
 			}
 		}
-		icon = GFX_goal_generic_major_alliance
+		icon = GFX_focus_ITA_italian_irredentism
 		x = 0
 		y = 1
 		relative_position_id = ENG_the_british_path_to_fascism
@@ -9350,11 +9355,11 @@ focus = {
 		available = {
 			GER = { threat > 0.1 }
 		}
-		icon = GFX_goal_generic_military_deal
+		icon = GFX_focus_generic_scandinavia_flags
 		x = -4
 		y = 1
 		relative_position_id = ENG_secure_the_italian_alliance
-		cost = 10
+		cost = 2.5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -9363,26 +9368,7 @@ focus = {
 			# Relations toward Britain
 			# Fascist Acceptance
 			
-			SWE = { 
-				add_opinion_modifier = {
-					target = ENG
-					modifier = eng_offers_of_protection
-				} 
-			}
-			
-			NOR = { 
-				add_opinion_modifier = {
-					target = ENG
-					modifier = eng_offers_of_protection
-				} 
-			}
-			
-			DEN = { 
-				add_opinion_modifier = {
-					target = ENG
-					modifier = eng_offers_of_protection
-				} 
-			}
+			add_war_support = 0.10
 		}
 	}
 	
@@ -9396,7 +9382,7 @@ focus = {
 		x = 2
 		y = 1
 		relative_position_id = ENG_Preemptive_Measures_In_Scandinavia
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -9440,7 +9426,7 @@ focus = {
 		x = -2
 		y = 1
 		relative_position_id = ENG_Preemptive_Measures_In_Scandinavia
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -9480,7 +9466,7 @@ focus = {
 			}
 			has_global_flag = scw_over
 		}
-		icon = GFX_goal_generic_dangerous_deal
+		icon = GFX_focus_generic_befriend_nationalist_spain_focus
 		x = -1
 		y = 1
 		relative_position_id = ENG_secure_the_italian_alliance
@@ -9565,7 +9551,7 @@ focus = {
 			}
 			has_global_flag = scw_over
 		}
-		icon = GFX_goal_generic_more_territorial_claims
+		icon = GFX_focus_generic_attack_nationalist_spain_focus
 		x = 1
 		y = 1
 		relative_position_id = ENG_secure_the_italian_alliance
@@ -9644,11 +9630,11 @@ focus = {
 			NOT = { is_in_faction_with = GER }
 		}
 		will_lead_to_war_with = GER
-		icon = GFX_goal_generic_major_war
+		icon = GFX_focus_attack_germany
 		x = 1
 		y = 1
 		relative_position_id = ENG_gibraltar_for_spanish_support
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -9668,18 +9654,22 @@ focus = {
 
 	focus = {
 		id = ENG_enact_the_mosley_manifesto
-		prerequisite = { focus = ENG_the_british_path_to_fascism focus = ENG_alliance_with_germany_fascism }
+		prerequisite = { focus = ENG_organize_the_blackshirts }
 		available = {
-
+            is_subject = no
+			OR = {
+				has_government = fascism
+			}
 		}
-		icon = GFX_focus_generic_treaty
-		x = 5
+		icon = GFX_focus_AUS_lawmaking_leniency
+		x = 2
 		y = 1
-		relative_position_id = ENG_the_british_path_to_fascism
+		relative_position_id = ENG_organize_the_blackshirts
 		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
+
 		complete_tooltip = {
 			every_state = {
 				limit = { has_state_flag = enact_the_mosley_memorandum_2IC }
@@ -9758,7 +9748,7 @@ focus = {
 				has_government = fascism
 			}
 		}
-		icon = GFX_goal_generic_production2
+		icon = GFX_focus_ITA_generic_fascist_workers
 		x = 0
 		y = 1
 		relative_position_id = ENG_enact_the_mosley_manifesto
@@ -9783,7 +9773,7 @@ focus = {
 				has_government = fascism
 			}
 		}
-		icon = GFX_focus_research
+		icon = GFX_focus_AUS_womens_education_initiative
 		x = 2
 		y = 1
 		relative_position_id = ENG_enact_the_mosley_manifesto
@@ -9808,7 +9798,7 @@ focus = {
 				has_government = fascism
 			}
 		}
-		icon = GFX_goal_generic_intelligence_exchange
+		icon = GFX_focus_ICE_state_corporatism
 		x = 1
 		y = 2
 		relative_position_id = ENG_enact_the_mosley_manifesto
@@ -9833,7 +9823,7 @@ focus = {
 				has_government = fascism
 			}
 		}
-		icon = GFX_goal_generic_construction
+		icon = GFX_focus_SOV_the_road_of_life
 		x = -2
 		y = 1
 		relative_position_id = ENG_enact_the_mosley_manifesto
@@ -9859,7 +9849,7 @@ focus = {
 				has_government = fascism
 			}
 		}
-		icon = GFX_goal_support_fascism
+		icon = GFX_focus_RAJ_military_into_the_workforce
 		x = -1
 		y = 2
 		relative_position_id = ENG_enact_the_mosley_manifesto
@@ -9888,7 +9878,7 @@ focus = {
 			}
 		}
 		offset = {
-			x = -10
+			x = -2
 			y = 0
 			trigger = {
 				has_game_rule = {
@@ -9902,7 +9892,7 @@ focus = {
 		x = 6
 		y = 1
 		relative_position_id = ENG_the_kings_party
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -9926,419 +9916,6 @@ focus = {
 		}
 	}
 	
-	focus = {
-		id = ENG_Imperial_Ambitions
-		prerequisite = { focus = ENG_god_save_the_king }
-		available = {
-			is_subject = no
-		}
-		icon = GFX_focus_eng_global_defense
-		x = 6
-		y = 1
-		relative_position_id = ENG_god_save_the_king
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT}	
-		completion_reward = {
-			add_war_support = 0.1
-		}
-	}
-	
-	focus = {
-		id = ENG_Asian_Colonial_Charter
-		prerequisite = { focus = ENG_Imperial_Ambitions }
-		available = {
-			is_subject = no
-		}
-		icon = GFX_goal_generic_position_armies
-		x = -2
-		y = 1
-		relative_position_id = ENG_Imperial_Ambitions
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT}	
-		completion_reward = {
-			add_war_support = 0.1
-		}
-	}
-	
-	focus = {
-		id = ENG_Return_To_China
-		prerequisite = { focus = ENG_Asian_Colonial_Charter }
-		available = {
-			is_subject = no
-			
-			CHI = { exists = yes }
-		}
-		icon = GFX_focus_attack_china
-		x = -1
-		y = 1
-		relative_position_id = ENG_Asian_Colonial_Charter
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT}	
-		completion_reward = {
-			# China
-			ENG_mosley_pacifism_level_down = yes
-			create_wargoal = {
-				type = puppet_wargoal_focus
-				target = CHI
-				expire = 0
-			}
-			create_wargoal = {
-				type = puppet_wargoal_focus
-				target = GXC
-				expire = 0
-			}
-		}
-	}
-	
-	focus = {
-		id = ENG_Expand_Indochinese_Presence
-		prerequisite = { focus = ENG_Asian_Colonial_Charter }
-		available = {
-			is_subject = no
-		}
-		icon = GFX_goal_generic_occupy_states_ongoing_war
-		x = 0
-		y = 2
-		relative_position_id = ENG_Asian_Colonial_Charter
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT}	
-		completion_reward = {
-			# Thailand
-			ENG_mosley_pacifism_level_down = yes
-			create_wargoal = {
-				type = puppet_wargoal_focus
-				target = SIA
-				expire = 0
-			}
-		}
-	}
-	
-	focus = {
-		id = ENG_Establish_British_Indochina
-		prerequisite = { focus = ENG_Expand_Indochinese_Presence }
-		available = {
-			724 = { owns_or_subject_of = yes }
-			289 = { owns_or_subject_of = yes }
-			868 = { owns_or_subject_of = yes }
-			869 = { owns_or_subject_of = yes }
-		}
-		icon = GFX_focus_generic_self_management
-		x = 0
-		y = 1
-		relative_position_id = ENG_Expand_Indochinese_Presence
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT}	
-		completion_reward = {
-			# Thailand
-			# Malaya
-			
-			hidden_effect = { release_puppet = MAL }
-			
-			MAL = { set_cosmetic_tag = MAL_SIA_UK }
-			
-			MAL = { transfer_state = 724 add_state_core = 724 transfer_state = 289 add_state_core = 289 transfer_state = 868 add_state_core = 868 transfer_state = 869 add_state_core = 869 } 
-		}
-	}
-	
-	focus = {
-		id = ENG_Expand_British_Indochina_Into_Vietnam
-		prerequisite = { focus = ENG_Establish_British_Indochina }
-		available = {
-			741 = { owns_or_subject_of = yes }
-			670 = { owns_or_subject_of = yes }
-			286 = { owns_or_subject_of = yes }
-			671 = { owns_or_subject_of = yes }
-		}
-		icon = GFX_focus_generic_self_management
-		x = 0
-		y = 1
-		relative_position_id = ENG_Establish_British_Indochina
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT}	
-		completion_reward = {
-			# Thailand
-			# Malaya
-			
-			MAL = { transfer_state = 741 add_state_core = 741 transfer_state = 670 add_state_core = 670 transfer_state = 286 add_state_core = 286 transfer_state = 671 add_state_core = 671 }
-		}
-	}
-	
-	focus = {
-		id = ENG_pre_empt_the_strategic_threat
-		prerequisite = { focus = ENG_Asian_Colonial_Charter }	
-		available = {
-			is_subject = no
-			country_exists = JAP
-			NOT = { is_in_faction_with = JAP }
-		}
-		bypass = {
-			has_war_with = JAP
-		}
-		will_lead_to_war_with = JAP
-		icon = GFX_focus_attack_japan
-		x = 1
-		y = 1
-		relative_position_id = ENG_Asian_Colonial_Charter
-		cost = 10
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
-		}	
-		completion_reward = {
-			ENG_mosley_pacifism_level_down = yes
-			create_wargoal = {
-				type = puppet_wargoal_focus
-				target = JAP
-				expire = 0
-			}
-		}
-	}
-	
-	focus = {
-		id = ENG_South_American_Colonial_Charter
-		prerequisite = { focus = ENG_Imperial_Ambitions }
-		available = {
-			is_subject = no
-		}
-		icon = GFX_goal_generic_position_armies
-		x = 2
-		y = 1
-		relative_position_id = ENG_Imperial_Ambitions
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT}	
-		completion_reward = {
-			add_war_support = 0.1
-			
-			USA = { add_war_support = 0.05 }
-			
-			# Event to USA, Warning them to not get involved
-			
-			# USA Embargoes UK if negotiations do not go well, and get a malus to opinion plus war support!
-		}
-	}
-	
-	focus = {
-		id = ENG_Secure_Brazil
-		prerequisite = { focus = ENG_South_American_Colonial_Charter }
-		available = {
-			is_subject = no
-			BRA = { exists = yes }
-		}
-		icon = GFX_focus_BRA_third_republic
-		x = -1
-		y = 1
-		relative_position_id = ENG_South_American_Colonial_Charter
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT}	
-		completion_reward = {
-			# Brazil
-			ENG_mosley_pacifism_level_down = yes
-			create_wargoal = {
-				type = puppet_wargoal_focus
-				target = BRA
-				expire = 0
-			}
-		}
-	}
-	
-	focus = {
-		id = ENG_British_Grand_Colombia
-		prerequisite = { focus = ENG_South_American_Colonial_Charter }
-		available = {
-			is_subject = no
-		}
-		icon = GFX_focus_por_recover_latin_america
-		x = 0
-		y = 2
-		relative_position_id = ENG_South_American_Colonial_Charter
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT}	
-		completion_reward = {
-			# Venezuala
-			ENG_mosley_pacifism_level_down = yes
-			create_wargoal = {
-				type = annex_everything
-				target = VEN
-				expire = 0
-			}
-			# Colombia
-			create_wargoal = {
-				type = annex_everything
-				target = COL
-				expire = 0
-			}
-			# Ecuador
-			create_wargoal = {
-				type = annex_everything
-				target = ECU
-				expire = 0
-			}
-		}
-	}
-	
-	focus = {
-		id = ENG_Establish_British_Grand_Colombia
-		prerequisite = { focus = ENG_British_Grand_Colombia }
-		available = {
-			687 = { owns_or_subject_of = yes }
-			488 = { owns_or_subject_of = yes }
-			307 = { owns_or_subject_of = yes }
-			489 = { owns_or_subject_of = yes }
-			305 = { owns_or_subject_of = yes }
-			490 = { owns_or_subject_of = yes }			
-		}
-		icon = GFX_focus_generic_self_management
-		x = 0
-		y = 1
-		relative_position_id = ENG_British_Grand_Colombia
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT}	
-		completion_reward = {
-			hidden_effect = { release_puppet = COL }
-		
-			COL = { set_cosmetic_tag = BGC_UK }
-						
-			COL = { transfer_state = 687 add_state_core = 687 transfer_state = 488 add_state_core = 488 transfer_state = 307 add_state_core = 307 transfer_state = 489 add_state_core = 489 transfer_state = 305 add_state_core = 305 transfer_state = 490 add_state_core = 490 }
-		}
-	}
-	
-	focus = {
-		id = ENG_Conquer_The_Andes
-		prerequisite = { focus = ENG_South_American_Colonial_Charter }
-		available = {
-			is_subject = no
-		}
-		icon = GFX_focus_GRE_a_land_of_mountains
-		x = 1
-		y = 1
-		relative_position_id = ENG_South_American_Colonial_Charter
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT}	
-		completion_reward = {
-			# Peru
-			ENG_mosley_pacifism_level_down = yes
-			create_wargoal = {
-				type = annex_everything
-				target = PRU
-				expire = 0
-			}
-			# Bolivia
-			create_wargoal = {
-				type = annex_everything
-				target = BOL
-				expire = 0
-			}
-			# Paraguay
-			create_wargoal = {
-				type = annex_everything
-				target = CHL
-				expire = 0
-			}
-			# Argentina
-			create_wargoal = {
-				type = annex_everything
-				target = PAR
-				expire = 0
-			}
-			# Chile
-			create_wargoal = {
-				type = annex_everything
-				target = ARG
-				expire = 0
-			}
-			# Uruguay
-			create_wargoal = {
-				type = annex_everything
-				target = URG
-				expire = 0
-			}
-		}
-	}
-	
-	focus = {
-		id = ENG_Establish_British_Andes
-		prerequisite = { focus = ENG_Conquer_The_Andes }
-		available = {
-			487 = { owns_or_subject_of = yes }
-			302 = { owns_or_subject_of = yes }
-			688 = { owns_or_subject_of = yes }
-			301 = { owns_or_subject_of = yes }
-			951 = { owns_or_subject_of = yes }
-			506 = { owns_or_subject_of = yes }	
-			952 = { owns_or_subject_of = yes }	
-			279 = { owns_or_subject_of = yes }	
-			950 = { owns_or_subject_of = yes }	
-			949 = { owns_or_subject_of = yes }	
-			507 = { owns_or_subject_of = yes }	
-			959 = { owns_or_subject_of = yes }	
-			957 = { owns_or_subject_of = yes }	
-			509 = { owns_or_subject_of = yes }	
-			508 = { owns_or_subject_of = yes }	
-			960 = { owns_or_subject_of = yes }	
-			510 = { owns_or_subject_of = yes }	
-			956 = { owns_or_subject_of = yes }	
-			958 = { owns_or_subject_of = yes }	
-			511 = { owns_or_subject_of = yes }	
-			278 = { owns_or_subject_of = yes }	
-			512 = { owns_or_subject_of = yes }	
-			955 = { owns_or_subject_of = yes }	
-			954 = { owns_or_subject_of = yes }	
-			953 = { owns_or_subject_of = yes }	
-		}
-		icon = GFX_focus_generic_self_management
-		x = 1
-		y = 1
-		relative_position_id = ENG_Conquer_The_Andes
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT}	
-		completion_reward = {
-		
-			hidden_effect = { release_puppet = PRU }
-			
-			PRU = { set_cosmetic_tag = ANDES_UK }
-			
-			PRU = { transfer_state = 487 add_state_core = 487 transfer_state = 302 add_state_core = 302 transfer_state = 688 add_state_core = 688 transfer_state = 301 add_state_core = 301 transfer_state = 951 add_state_core = 951 transfer_state = 506 add_state_core = 506 transfer_state = 952 add_state_core = 952 transfer_state = 279 add_state_core = 279 transfer_state = 950 add_state_core = 950 transfer_state = 949 add_state_core = 949 transfer_state = 507 add_state_core = 507 transfer_state = 959 add_state_core = 959 transfer_state = 957 add_state_core = 957 transfer_state = 509 add_state_core = 509 transfer_state = 508 add_state_core = 508 transfer_state = 960 add_state_core = 960 transfer_state = 510 add_state_core = 510 transfer_state = 956 add_state_core = 956 transfer_state = 958 add_state_core = 958 transfer_state = 511 add_state_core = 511 transfer_state = 278 add_state_core = 278 transfer_state = 512 add_state_core = 512 transfer_state = 955 add_state_core = 955 transfer_state = 954 add_state_core = 954 transfer_state = 953 add_state_core = 953 }
-		}
-	}
 
 	focus = {
 		id = ENG_ceylon_forward_operating_base
@@ -10362,7 +9939,7 @@ focus = {
 		x = -1
 		y = 1
 		relative_position_id = ENG_god_save_the_king
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -10957,7 +10534,7 @@ focus = {
 		}
 
 		offset = {
-			x = -28
+			x = -18
 			y = 0
 			trigger = {
 				has_game_rule = {
@@ -10979,7 +10556,7 @@ focus = {
 			}
 		}
 		icon = GFX_focus_GER_the_peoples_victory
-		x = 28
+		x = 18
 		y = 1
 		relative_position_id = ENG_a_change_in_course
 		cancel_if_invalid = yes
@@ -11079,7 +10656,7 @@ focus = {
 		prerequisite = { focus = ENG_organize_the_blackshirts focus = ENG_concessions_to_the_trade_unions }
 
 		offset = {
-			x = -26
+			x = -16	
 			y = 0
 			trigger = {
 				has_game_rule = {
@@ -11090,7 +10667,7 @@ focus = {
 			}
 		}
         offset = {
-			x = -14
+			x = -3
 			y = 0
 			trigger = {
 				has_game_rule = {
@@ -11116,7 +10693,7 @@ focus = {
 			}
 		}
 		icon = GFX_focus_eng_move_to_secure_the_dominions
-		x = 23
+		x = 13
 		y = 2
 		relative_position_id = ENG_a_change_in_course
 		cost = 5
@@ -11231,6 +10808,7 @@ focus = {
 		}	
 		completion_reward = {
 			remove_ideas = ENG_the_war_to_end_all_wars
+custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = ENG_for_the_good_of_the_revolution_idea
 		}
 	}
@@ -12350,7 +11928,7 @@ focus = {
 
 	focus = {
 		id = ENG_tackle_fascism
-		prerequisite = { focus = ENG_British_Communism_Abroad focus = ENG_spirit_of_the_industrial_revolution focus = ENG_The_Permanent_Revolution focus = ENG_Regional_Development }
+		prerequisite = {  focus = ENG_spirit_of_the_industrial_revolution  focus = ENG_Regional_Development }
 		mutually_exclusive = { focus = ENG_tackle_capitalism }
 		available = {
 			is_subject = no
@@ -12365,7 +11943,7 @@ focus = {
 		}
 		icon = GFX_focus_generic_anti_fascist_diplomacy
 		x = 3
-		y = 3
+		y = 2
 		relative_position_id = ENG_The_Permanent_Revolution
 		cost = 10
 		ai_will_do = {
@@ -12412,7 +11990,7 @@ focus = {
 		}
 		icon = GFX_focus_generic_strike_at_democracy3
 		x = -3
-		y = 3
+		y = 2
 		relative_position_id = ENG_The_Permanent_Revolution
 		cost = 10
 		ai_will_do = {
@@ -12462,7 +12040,7 @@ focus = {
 		x = 0
 		y = 1
 		relative_position_id = ENG_tackle_capitalism
-		cost = 10
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}	
@@ -12531,7 +12109,7 @@ focus = {
 		x = -1
 		y = 1
 		relative_position_id = ENG_follow_moscow
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
