@@ -3196,7 +3196,7 @@ focus_tree = {
 		icon = GFX_focus_generic_little_entente
 		prerequisite = { focus = GRE_following_in_the_footsteps_of_giants }
 		available = { 
-			fascism > 0.4
+			fascism > 0.25
 		}
 		x = 0
 		y = 1
@@ -3881,7 +3881,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GRE_force_the_farmers_into_factories
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 1
 		}
@@ -5435,7 +5435,7 @@ focus_tree = {
 		id = GRE_Gift_of_Poseidon
 		icon = GFX_focus_PER_establish_the_navy
 		prerequisite = { focus = GRE_abandon_the_greek_turkish_naval_treaty focus = GRE_a_modern_navy }
-		x = +2
+		x = 2
 		y = 1
 		relative_position_id = GRE_abandon_the_greek_turkish_naval_treaty
 		cost = 10
@@ -5629,6 +5629,7 @@ focus_tree = {
 
 		completion_reward = {
 			army_experience = 10
+        add_ideas = cheaper_weapons_idea
 			add_tech_bonus = {
 				name = GRE_new_weapons_old_tricks
 				bonus = 1.0
@@ -5641,7 +5642,7 @@ focus_tree = {
 				name = GRE_new_weapons_old_tricks
 				bonus = 0.5
 				uses = 2
-				category = artillery
+				category = artillery 
 			}
 		}
 	}	
