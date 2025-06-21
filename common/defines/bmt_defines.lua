@@ -8,11 +8,11 @@ NDefines.NMilitary.UNIT_EXPERIENCE_SCALE = 0.30
 NDefines.NMilitary.UNIT_EXPERIENCE_PER_TRAINING_DAY = 0.00270 
 NDefines.NMilitary.TRAINING_MAX_LEVEL = 4 
 NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2 
-NDefines.NMilitary.ARMY_EXP_BASE_LEVEL = 3 
-NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.10 
+NDefines.NMilitary.ARMY_EXP_BASE_LEVEL = 3
+--NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.10 
 NDefines.NMilitary.UNIT_EXP_LEVELS = { 0.137,  0.225,  0.374,  0.452,  0.573,  0.681,  0.765,  0.879,  0.999 } 		-- Experience needed to progress to the next level
-NDefines.NMilitary.EXPEDITIONARY_FIELD_EXPERIENCE_SCALE = 0.66 		-- reduction factor in Xp from expeditionary forces
-NDefines.NMilitary.LEADER_EXPERIENCE_SCALE = 0.87 	
+--NDefines.NMilitary.EXPEDITIONARY_FIELD_EXPERIENCE_SCALE = 0.66 		-- reduction factor in Xp from expeditionary forces
+--NDefines.NMilitary.LEADER_EXPERIENCE_SCALE = 0.87 	
 
 
 NDefines.NAir.AIR_WING_XP_MAX = 1000.0 											--Per plane XP.

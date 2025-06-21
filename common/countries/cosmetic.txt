@@ -3048,3 +3048,8 @@ LGF_UNIFIED = {
 #	color = { 254 205 33 } 
 #	color_ui = rgb { 254 205 33 }
 #}
+
+JAP_shogunate_tag = {
+	color = rgb { 0 73 75 }
+	color_ui = rgb { 0 73 75 }
+}

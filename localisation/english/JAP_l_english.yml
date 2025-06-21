@@ -756,3 +756,7 @@ JAP_strengthen_the_divine_wind_desc:0 "Kamikaze, the tactics of the Special Atta
  japan.26.b:0 "Small arms can be inspected to ensure their quality prevails."
  japan.26.c:0 "Aircraft factories could benefit from foreign expertise."
  japan.26.e:0 "We have no interest of sharing secrets."
+
+###THUNDERDOME 
+ JAP_shogun_party:0 "Tokugawa Shogunate"
+ JAP_shogun_party_long:0 "The Tokugawa Shogunate"

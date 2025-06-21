@@ -1,91 +1,6 @@
 ideas = {
 
 	country = {
-		JAP_mountaineer_focus = {
-
-			name = "Japanese Mountaineer Focus"
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			picture = jap_supremacy_of_will
-			
-			modifier = {
-				modifier_army_sub_unit_mountaineers_attack_factor = 0.05
-				modifier_army_sub_unit_mountaineers_defence_factor = 0.05
-			}
-		}
-		JAP_manchu_special = {
-
-			name = "Manchurian Special Forces"
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			picture = jap_supremacy_of_will
-			
-			modifier = {
-				special_forces_attack_factor = 0.1
-				special_forces_defence_factor = 0.1
-			}
-		}
-		JAP_manchu_generic = {
-
-			name = "Manchurian Special Forces"
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			picture = jap_supremacy_of_will
-			
-			modifier = {
-			    army_org_factor = 0.1
-				conscription_factor = 0.15
-			}
-		}
-
-		JAP_marine_focus = {
-
-			name = "Japanese Marine Focus"
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
-
-			picture = jap_supremacy_of_will
-			
-			modifier = {
-				modifier_army_sub_unit_marine_attack_factor = 0.05
-				modifier_army_sub_unit_marine_defence_factor = 0.05
-			}
-		}
 
 		JAP_black_dragon_society = {
 			name = "Black Dragon Society"
@@ -472,7 +387,7 @@ ideas = {
 			
 			removal_cost = -1
 
-			picture = jap_militarism_showa
+			picture = samurai
 			
 			modifier = {
 				political_power_gain = 0.10
@@ -2540,9 +2455,9 @@ ideas = {
 			picture = ast_naval_auxiliary_patrol
 			
 			modifier = {
-				army_core_defence_factor = 0.2
-				no_supply_grace = 96
-				out_of_supply_factor = -0.2
+				army_core_defence_factor = 0.1
+				no_supply_grace = 72
+				out_of_supply_factor = -0.1
 			}
 		}
 		
