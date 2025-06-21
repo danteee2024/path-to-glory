@@ -85,7 +85,7 @@ ideas = {
 			picture = AFG_adopt_nufus
 
 			modifier = {
-				conscription = 0.015
+				conscription = 0.025
 				mobilization_speed = 0.1
 				max_planning = 0.10
 				

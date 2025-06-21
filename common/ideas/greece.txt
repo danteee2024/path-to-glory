@@ -971,7 +971,7 @@ ideas = {
 			removal_cost = -1
 				
 			modifier = {
-				conscription = 0.01
+				conscription = 0.005
 			}
 		}
 
@@ -991,7 +991,7 @@ ideas = {
 				
 			modifier = {
 				army_morale_factor = 0.10
-				army_org_factor = 0.05
+				army_org_factor = 0.03
 			}
 		}
 
@@ -2696,16 +2696,4 @@ ideas = {
 		}
 
 	}
-}
-cheaper_weapons_idea = {
-    icon = GFX_goal_generic_axis_build_infantry
-	allowed = {
-        original_tag = GRE
-    }
-
-    modifier = {
-        infantry_equipment_production_cost = -0.10
-		army_infantry_attack_factor = 0.05
-
-    }
 }
