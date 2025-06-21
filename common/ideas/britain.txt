@@ -525,7 +525,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				puppet_cost_factor = -0.25
+				army_attack_against_major_factor = 0.1
+				army_breakthrough_against_major_factor = 0.1
 				justify_war_goal_time = -0.5
 				non_core_manpower = 0.15
 			}
