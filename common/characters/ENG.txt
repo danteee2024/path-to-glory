@@ -145,7 +145,7 @@ characters={
 					limit  = {
 						has_dlc = "Man the Guns"
 					}
-					has_government  = communism 
+					has_completed_focus = ENG_concessions_to_the_trade_unions
 				}
 				if  = {
 					limit  = {

@@ -773,7 +773,8 @@ ideas = {
 			removal_cost = -1
 						
 			modifier = {
-				conscription_factor = -0.30
+				conscription_factor = -0.5
+				political_power_factor = 0.10
 				#conscription = -0.006
 			}
 		}
@@ -1575,8 +1576,8 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_factory = 0.25
-				industrial_capacity_dockyard = 0.25
+				industrial_capacity_factory = 0.20
+				industrial_capacity_dockyard = 0.20
 			}
 
 			picture = eng_spirit_of_the_industrial_revolution
