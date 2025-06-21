@@ -792,32 +792,32 @@ characters = {
 		}
 	}
 
-	POR_jose_adriano_rebelo_pequito = {
-		advisor = {
-			slot = high_command
-			idea_token = POR_jose_adriano_rebelo_pequito
-			allowed = {
-				original_tag = POR
-				NOT = {
-					has_dlc = "La Resistance"
-				}
-			}
-			traits = {
-				army_infantry_2
-			}
-			cost = 100
-			ledger = army
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-		name = POR_jose_adriano_rebelo_pequito
-		portraits = {
-			army = {
-				small = "GFX_idea_generic_army_europe_2"
-			}
-		}
-	}
+#	POR_jose_adriano_rebelo_pequito = {
+#		advisor = {
+#			slot = high_command
+#			idea_token = POR_jose_adriano_rebelo_pequito
+#			allowed = {
+#				original_tag = POR
+#				NOT = {
+#					has_dlc = "La Resistance"
+#				}
+#			}
+#			traits = {
+#				army_infantry_2
+#			}
+#			cost = 100
+#			ledger = army
+#			ai_will_do = {
+#				factor = 1.000
+#			}
+#		}
+#		name = POR_jose_adriano_rebelo_pequito
+#		portraits = {
+#			army = {
+#				small = "GFX_idea_generic_army_europe_2"
+#			}
+#		}
+#	}
 
 	POR_jaime_cortesao_r56 = {
 		advisor = {

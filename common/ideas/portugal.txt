@@ -23,33 +23,6 @@ ideas = {
 			}
 		}
 
-		POR_defence_of_the_atlantic = {
-			picture = generic_navy_cruiser_warfare
-			allowed = {
-				original_tag = POR
-			}
-
-			allowed_civil_war = {
-				tag = POR
-			}
-			removal_cost = -1
-
-			modifier = {
-				convoy_escort_efficiency = 0.10
-			}
-
-			equipment_bonus = {
-				destroyer = {
-					instant = yes
-					build_cost_ic = -0.10
-				}
-				ship_hull_cruiser = {
-					instant = yes
-					build_cost_ic = -0.10
-				}
-			}
-		}
-
 		SOV_research_grants = {
 			picture = jap_duplicate_research
 
@@ -120,42 +93,6 @@ ideas = {
 			}			
 		}
 
-			POR_science_and_technology_affairs = {
-			picture = generic_research_bonus
-			allowed = {
-				original_tag = POR
-			}
-
-			allowed_civil_war = {
-				tag = POR
-			}
-			removal_cost = -1
-			
-			modifier = {
-				research_speed_factor = 0.10
-				special_project_speed_factor = 0.10
-				scientist_breakthrough_bonus_factor = 0.10
-			}
-		}
-
-		POR_cork_exports_idea = {
-			picture = can_wartime_prices_and_trade_board
-			allowed = {
-				original_tag = POR
-			}
-
-			allowed_civil_war = {
-				tag = POR
-			}
-			removal_cost = -1
-			
-			modifier = {
-				political_power_cost = -0.10
-				consumer_goods_factor = -0.05
-				trade_opinion_factor = 0.25
-			}
-		}
-
 		# VANILLA ##################################################
 
 		POR_unreliable_army = {
@@ -189,7 +126,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				political_power_gain = -0.25
+				political_power_gain = -0.5
 				stability_weekly = -0.005
 				production_speed_buildings_factor = -0.20	
 			}
@@ -732,8 +669,8 @@ ideas = {
 			
 			modifier = {
 				production_speed_buildings_factor = 0.10
-				local_building_slots_factor = 0.10
-
+				research_speed_factor = 0.075
+				scientist_breakthrough_bonus_factor = 0.05
 			}
 		}
 
@@ -750,8 +687,7 @@ ideas = {
 			
 			modifier = {
 				production_speed_buildings_factor = 0.10
-				production_lack_of_resource_penalty_factor = -0.10
-				production_factory_start_efficiency_factor = 0.10
+				global_building_slots_factor = 0.10
 				production_factory_efficiency_gain_factor = 0.05
 				line_change_production_efficiency_factor = 0.10
 			}

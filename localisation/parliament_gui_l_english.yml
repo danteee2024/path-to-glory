@@ -13,7 +13,7 @@
 
   ENG_party_1_text:0 "§2Conservative Party§!"
   ENG_party_2_text:0 "§tLabour Party§!"
-  ENG_party_3_text:0 "§OUnion of Fascists§!"
+  ENG_party_3_text:0 "§OLiberal Party§!"
   ENG_party_4_text:0 "§0King's Party§!"
   
   # §RC§! §YN§! §8F§! §BD§!
@@ -42,14 +42,14 @@
   parliament_policy_1_desc:0 "With over 51% of our seats occupied by members of the [GetFirstParliamentPartyName], we can encourage the Free Market. Current [GetFirstParliamentPartyName] popularity: [?first_party_popularity|%Y]"
   parliament_policy_2:0 "National Construction Projects"
   parliament_policy_2_desc:0 "With over 51% of our seats occupied by members of the [GetSecondParliamentPartyName], we can start National Construction Projects. Current [GetSecondParliamentPartyName] popularity: [?second_party_popularity|%Y]"
-  parliament_policy_3:0 "Issue Military Grants"
-  parliament_policy_3_desc:0 "With over 51% of our seats occupied by members of the [GetThirdParliamentPartyName], we can Issue Military Grants. Current [GetThirdParliamentPartyName] popularity: [?third_party_popularity|%Y]"
+  parliament_policy_3:0 "Issue MIO Grants"
+  parliament_policy_3_desc:0 "With over 51% of our seats occupied by members of the [GetSecondParliamentPartyName], we can start National Construction Projects. Current [GetSecondParliamentPartyName] popularity: [?second_party_popularity|%Y]"
   parliament_policy_4:0 "Issue State Propaganda"
-  parliament_policy_4_desc:0 "With over 51% of our seats occupied by members of the [GetFourthParliamentPartyName], we can Issue State Propaganda. Current [GetFourthParliamentPartyName] popularity: [?fourth_party_popularity|%Y]"
+  parliament_policy_4_desc:0 "With over 51% of our seats occupied by members of the [GetSecondParliamentPartyName], we can start National Construction Projects. Current [GetSecondParliamentPartyName] popularity: [?second_party_popularity|%Y]"
   parliament_policy_5:0 "Issue A Draft"
-  parliament_policy_5_desc:0 "With over 51% of our seats occupied by members of the [GetSecondParliamentPartyName] or [GetThirdParliamentPartyName], we can Issue A Draft. Current [GetSecondParliamentPartyName] popularity: [?second_party_popularity|%Y]. Current [GetThirdParliamentPartyName] popularity: [?third_party_popularity|%Y]"
-  parliament_policy_6:0 "Assemble Volunteer Corps"
-  parliament_policy_6_desc:0 "With over 51% of our seats occupied by members of the [GetFirstParliamentPartyName], [GetSecondParliamentPartyName], or [GetThirdParliamentPartyName], we can Assemble Volunteer Corps. Current [GetFirstParliamentPartyName] popularity: [?first_party_popularity|%Y]. Current [GetSecondParliamentPartyName] popularity: [?second_party_popularity|%Y]. Current [GetThirdParliamentPartyName] popularity: [?third_party_popularity|%Y]"
+  parliament_policy_5_desc:0 "With over 51% of our seats occupied by members of the [GetFirstParliamentPartyName], we can assemble British volunteer corps. Current [GetFirstParliamentPartyName] popularity: [?first_party_popularity|%Y]"
+  parliament_policy_6:0 "Assemble British Volunteer Corps"
+  parliament_policy_6_desc:0 "With over 51% of our seats occupied by members of the [GetFirstParliamentPartyName], we can assemble British volunteer corps. Current [GetFirstParliamentPartyName] popularity: [?first_party_popularity|%Y]"
   
   ENG_call_general_election_tt:0 "With over 51% of our seats occupied by members of the [GetSecondParliamentPartyName], we can start National Construction Projects. Current [GetSecondParliamentPartyName] popularity: [?second_party_popularity|%Y]"
   eng_parliament_policy:0 "Enforce Imperial Rule"

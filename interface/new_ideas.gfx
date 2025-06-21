@@ -4,5 +4,9 @@ spriteTypes = {
 		name = "GFX_idea_RUS_republic_flag"
 		texturefile = "gfx/interface/ideas/RUS_republic_flag.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_samurai"
+		texturefile = "gfx/interface/ideas/jap/JAP_samurai.dds"
+	}
 
 }

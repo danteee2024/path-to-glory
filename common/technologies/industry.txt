@@ -2113,6 +2113,7 @@ technologies = {
 		}
 		
 		categories = {
+			industrial_expansion_tech
 			industry
 		}
 		
@@ -2141,6 +2142,7 @@ technologies = {
 		}
 		
 		categories = {
+			industrial_expansion_tech
 			industry
 		}
 		
@@ -2169,6 +2171,7 @@ technologies = {
 		}
 		
 		categories = {
+			industrial_expansion_tech
 			industry
 		}
 		
@@ -2197,6 +2200,7 @@ technologies = {
 		}
 		
 		categories = {
+			industrial_expansion_tech
 			industry
 		}
 		
@@ -2220,11 +2224,11 @@ technologies = {
 		}
 		
 		path = {
-			leads_to_tech = industrial_expansion_tech_6
 			research_cost_coeff = 1
 		}
 		
 		categories = {
+			industrial_expansion_tech
 			industry
 		}
 		
@@ -2275,6 +2279,7 @@ technologies = {
 		}
 		
 		categories = {
+			extractor_tech
 			industry
 		}
 		
@@ -2324,6 +2329,7 @@ technologies = {
 		}
 		
 		categories = {
+			extractor_tech
 			industry
 		}
 		
@@ -2375,6 +2381,7 @@ technologies = {
 		}
 		
 		categories = {
+			extractor_tech
 			industry
 		}
 		
@@ -2472,6 +2479,7 @@ technologies = {
 		}
 		
 		categories = {
+			extractor_tech
 			industry
 		}
 		

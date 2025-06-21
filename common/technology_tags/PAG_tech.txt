@@ -1,0 +1,20 @@
+#####-----------------------------------------------------------> Mod by Sig "Greatexperiment" Altre
+
+technology_categories = {
+	extractor_tech
+	industrial_expansion_tech
+	naval_artillery
+}
+
+technology_folders = {
+	
+	#r56_vechicles_folder = {
+	#	ledger = army
+	#}
+	#
+	#etax_folder = {
+	#	ledger = civilian
+	#}
+}
+
+#####-----------------------------------------------------------> End

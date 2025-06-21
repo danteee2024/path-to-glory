@@ -2,96 +2,53 @@
 
  POR_restore_the_navy:0 "Restore the Navy"
  POR_restore_the_navy_desc:0 "The Portuguese Navy has been in a state of disrepair for years, with many ships decommissioned and others in need of extensive repairs. We must invest in our naval forces to ensure we can protect our maritime interests and project power across the seas."
-
  POR_reconquest_of_brazil:0 "Reconquest of Brazil"
  POR_reconquest_of_brazil_desc:0 "The loss of Brazil was a significant blow to the Portuguese Empire. We must do everything in our power to reclaim our former colony and restore our nation's honor."
-
  POR_train_our_generals_for_the_fight:0 "Train Our Generals for the Fight"
  POR_train_our_generals_for_the_fight_desc:0 "To effectively lead our forces in the coming conflicts, we must ensure our generals are well-trained and prepared for the challenges ahead. Investing in their training will be crucial for our success."
-
  POR_more_buildings:0 "§CNew Buildings Plan§! Investments"
  POR_more_buildings_desc:0 "To support our growing economy and military needs, we must invest in new infrastructure and buildings across our territories. This will provide the necessary resources and facilities to strengthen our nation."
-
  POR_steel_mine:0 "§CSteel Mines§! Development"
  POR_steel_mine_desc:0 "The development of steel mines will provide us with the essential materials needed for our industrial and military expansion. Investing in this sector will ensure we have a steady supply of steel for our construction and armaments."
-
  POR_more_buildings_tt:0 "For each of your §Ycore states§! in §YEurope§! you will build one §YCivilian Factory§! and one §YMilitary Factory§!."
  POR_steel_mine_tt:0 "For each of your §Ycore states§! in §YEurope§! you will build one §YSteel Extractor§!."
-
  POR_align_against_the_comintern:0 "Align Against the Comintern"
  POR_align_against_the_comintern_desc:0 "The Comintern poses a significant threat to our interests and the stability of Europe. We must align ourselves with other nations that share our concerns and work together to counter their influence."
-
  POR_communist_secret_police:0 "Communist Secret Police"
  POR_communist_secret_police_desc:0 "To maintain control and suppress dissent, we must establish a secret police force dedicated to rooting out potential threats to the regime."
  POR_add_secret_police_tt:0 "We will add §YSecret Police§! to our §YState Security§!."
-
  POR_expand_the_intelligence_services:0 "Special Operations Over Europe"
  POR_expand_the_intelligence_services_desc:0 "To effectively counter the influence of the Comintern and other threats, we must expand our intelligence services. This will allow us to gather crucial information and stay one step ahead of our adversaries. Especially in Europe, where tensions are high and the balance of power is shifting."
-
  POR_special_operations:0 "Special Operations"
  POR_special_operations_desc:0 "Our special operations forces will be tasked with conducting covert missions across Europe, gathering intelligence, and undermining enemy efforts. By investing in these capabilities, we can ensure that we are prepared for any challenges that may arise."
-
  POR_elastic_defense:0 "Elastic Defense"
  POR_elastic_defense_desc:0 "In the face of potential invasions, we must adopt an elastic defense strategy. This approach will allow us to respond flexibly to threats, ensuring that we can protect our territory and maintain our sovereignty."
-
  POR_luso_monarchist_cooperation:0 "Luso-Monarchist Cooperation"
  POR_luso_monarchist_cooperation_desc:0 "To strengthen our ties with other monarchies and promote stability in the region, we must engage in cooperation with like-minded nations. This will help us build a united front against common threats and foster a sense of solidarity among monarchies."
-
  POR_luso_imperial_and_royal_armies:0 "Luso-Imperial and Royal Armies"
  POR_luso_imperial_and_royal_armies_desc:0 "The Luso-Imperial and Royal Armies will serve as the backbone of our military forces, ensuring that we have a strong and capable fighting force to defend our interests and uphold our sovereignty."
-
  POR_luso_monarchist_military_cooperation:0 "Luso-Monarchist Military Cooperation"
  POR_luso_monarchist_military_cooperation_desc:0 "To enhance our military capabilities and promote cooperation among monarchies, we must engage in joint military exercises and training programs. This will help us build a more cohesive and effective fighting force."
-
  POR_increased_repair_capabilities:0 "Repair and Re-fleet Bases"
  POR_increased_repair_capabilities_desc:0 "The Portuguese Navy has been in a state of disrepair for years, with many ships decommissioned and others in need of extensive repairs. We must invest in our naval forces to ensure we can protect our maritime interests and project power across the seas."
-
  POR_military_affairs_commission:0 "Appoint a New Military Commission"
  POR_military_affairs_commission_desc:0 "Our old military staff is unable to keep up with the demands of modern warfare. We must renew the military structure with a commission of talented advisors."
-
  POR_western_democratic_bastion:0 "Western Democratic Bastion"
  POR_western_democratic_bastion_desc:0 "We are the most western democratic bastion in continental europe. Democracy will not be pushed out of europe into the atlantic!"
-
  POR_defence_of_freedom:0 "Defence of Freedom"
  POR_defence_of_freedom_desc:0 "We must stand for what is right! We must stand for the freedom of all of our citizens!"
-
  SOV_research_grants:0 "Soviet Research Grants"
  SOV_research_grants_desc:0 "With the help of the Soviet Union, our research institudes will be faster and more efficient!"
  POR_intensify_torpedo_manufacturing:0 "Better Torpedoes"
  POR_intensify_torpedo_manufacturing_desc:0 "Better torpedoes for better raiding!"
-
  POR_embrace_jungle_warfare:0 "Jungle training"
  POR_embrace_jungle_warfare_desc:0 "Jungles are a hostile environment, we must train even for the worse terrains, so we can be ready for anything!"
-
  POR_modernising_infantry_equipement:0 "Modernizing Infantry Equipment"
- POR_modernising_infantry_equipement_desc:0 "Modernizing outdated infantry equipment will put us on the same level as our enemies. We must not fall behind in this race!"
-
+ POR_modernising_infantry_equipement_desc:0 "Modernizing outdated infantry equipment will put us on the same level as our enemies. We must not fall behind in the arms"
  POR_portuguese_marines:0 "Portuguese Marines"
  POR_portuguese_marines_desc:0 "The Portuguese Marines will be a highly trained and specialized force, capable of conducting amphibious operations and rapid deployments. They will serve as a key component of our military strategy, ensuring that we can respond effectively to threats across the globe."
- 
- POR_defence_of_the_atlantic:0 "Defence of the Atlantic Plan"
- POR_defence_of_the_atlantic_desc:0 "The Atlantic is a vast theather to fight in, having enough quantity without compromising quality will make the ocean more favourable to us."
 
- POR_establish_portuguese_science_and_technology_affairs:0 "Establish Portuguese Technological Affairs"
- POR_establish_portuguese_science_and_technology_affairs_desc:0 "To ensure that we remain at the forefront of scientific and technological advancements, we must reestablish our science and technology affairs. This will involve investing in research and development, fostering innovation, and promoting collaboration with other nations."
-
- POR_science_and_technology_affairs:0 "Science and Technology Affairs Committee"
- POR_science_and_technology_affairs_desc:0 "Establishing a Science and Technology Affairs Committee will help focusing our research were it matters, making better decisions and improving the overall efficiency of our research centers."
- 
- POR_cork_exports:0 "Cork Exports Income"
- POR_cork_exports_desc:0 "The south of Portugal is known for its cork production, in fact portugal is the N.1 cork producer of the globe."
-
- POR_cork_exports_idea:0 "Cork Exporter"
- POR_cork_exports_idea:0 ""Cork Exporter" is a prestigious title. People would not be able to drink wine without us producing the cork for the bottles."
- 
- POR_a_new_economy:0 "Believing in the New Economy"
- POR_a_new_economy:0 "With the rise of capitalism we must embrace it's culture to the fullest!"
-
- POR_modernising_support_equipement:0 "Modernizing Support Equipment"
- POR_modernising_support_equipement_desc:0 "Modernizing outdated support equipment will put us on the same level as our enemies. We must not fall behind in this race!"
- 
- POR_portuguese_companies:0 "Portuguese Companies"
- POR_portuguese_companies_desc:0 "Portugal shall improve its support companies to ensure line battalions work at their best efficiency!"
- 
- POR_advanced_companies:0 "Advanced Companies"
- POR_advanced_companies_desc:0 "Portugal shall innovate with advanced support companies to ensure line battalions will not be overunned!"
+ POR_reestablish_portuguese_science_and_technology_affairs:0 "Re-establish Portuguese Technological Affairs"
+ POR_reestablish_portuguese_science_and_technology_affairs_desc:0 "To ensure that we remain at the forefront of scientific and technological advancements, we must reestablish our science and technology affairs. This will involve investing in research and development, fostering innovation, and promoting collaboration with other nations."
+PER_exract_iron_resources:0 "Increase Iron Extraction"
+PER_extract_iron_resources_with_the_help_of_germany:0 "Increase Iron Extraction with German Investment"

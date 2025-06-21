@@ -1,6 +1,6 @@
 parliament_gui_decision_category = {
 	parliament_lobby_for_party_1 = {
-		icon = generic_civil_support
+		icon = GFX_decision_generic_speech
 		
 		allowed = {
 			#tag = ENG
@@ -36,7 +36,7 @@ parliament_gui_decision_category = {
 	}
 	
 	parliament_lobby_for_party_2 = {
-		icon = generic_civil_support
+		icon = GFX_decision_generic_speech
 		
 		allowed = {
 			#tag = ENG
@@ -69,76 +69,10 @@ parliament_gui_decision_category = {
 		}
 	}
 	
-	parliament_lobby_for_party_3 = {
-		icon = generic_civil_support
-		
-		allowed = {
-			#tag = ENG
-		}
-		
-		visible = { }
-		
-		available = { 
-			parliament_party_3_member_max_trigger = yes
-		}
-		
-		days_remove = 1
-		days_re_enable = 60
-		cost = 25
-		modifier = {
-	
-		}
-		remove_effect = {
-			set_temp_variable = { temp_member = 3 }
-			set_temp_variable = { temp_seats = 10 }
-			modify_parliament_seat = yes
-			
-			#set_temp_variable = { temp_popularity = ENG_parliament_seat_array^0 }
-			#add_political_power  = var:temp_popularity
-			
-			custom_effect_tooltip = parliament_gain_10_party_3_tooltip
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	parliament_lobby_for_party_4 = {
-		icon = generic_civil_support
-		
-		allowed = {
-			#tag = ENG
-		}
-		
-		visible = { }
-		
-		available = { 
-			parliament_party_4_member_max_trigger = yes
-		}
-		
-		days_remove = 1
-		days_re_enable = 60
-		cost = 25
-		modifier = {
-	
-		}
-		remove_effect = {
-			set_temp_variable = { temp_member = 4 }
-			set_temp_variable = { temp_seats = 10 }
-			modify_parliament_seat = yes
-			
-			#set_temp_variable = { temp_popularity = ENG_parliament_seat_array^0 }
-			#add_political_power  = var:temp_popularity
-			
-			custom_effect_tooltip = parliament_gain_10_party_4_tooltip
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
+
 	
 	parliament_discredit_for_party_1 = {
-		icon = generic_political_discourse
+		icon = GFX_decision_generic_political_rally
 		
 		allowed = {
 			#tag = ENG
@@ -172,7 +106,7 @@ parliament_gui_decision_category = {
 	}
 	
 	parliament_discredit_for_party_2 = {
-		icon = generic_political_discourse
+		icon = GFX_decision_generic_political_rally
 		
 		allowed = {
 			#tag = ENG
@@ -205,118 +139,12 @@ parliament_gui_decision_category = {
 		}
 	}
 	
-	parliament_discredit_for_party_3 = {
-		icon = generic_political_discourse
-		
-		allowed = {
-			#tag = ENG
-		}
-		
-		visible = { }
-		
-		available = { 
-			parliament_party_3_member_min_trigger = yes
-		}
-		
-		days_remove = 1
-		days_re_enable = 60
-		cost = 25
-		modifier = {
+
 	
-		}
-		remove_effect = {
-			set_temp_variable = { temp_member = 3 }
-			set_temp_variable = { temp_seats = -10 }
-			modify_parliament_seat = yes
-			
-			#set_temp_variable = { temp_popularity = ENG_parliament_seat_array^0 }
-			#add_political_power  = var:temp_popularity
-			
-			custom_effect_tooltip = parliament_lose_5_party_3_tooltip
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	parliament_discredit_for_party_4 = {
-		icon = generic_political_discourse
-		
-		allowed = {
-			#tag = ENG
-		}
-		
-		visible = { }
-		
-		available = { 
-			parliament_party_4_member_min_trigger = yes
-		}
-		
-		days_remove = 1
-		days_re_enable = 60
-		cost = 25
-		modifier = {
-	
-		}
-		remove_effect = {
-			set_temp_variable = { temp_member = 4 }
-			set_temp_variable = { temp_seats = -10 }
-			modify_parliament_seat = yes
-			
-			#set_temp_variable = { temp_popularity = ENG_parliament_seat_array^0 }
-			#add_political_power  = var:temp_popularity
-			
-			custom_effect_tooltip = parliament_lose_5_party_4_tooltip
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	parliament_policy_1 = {
-		icon = generic_democracy
-		
-		allowed = {
-			#tag = ENG
-		}
-		
-		visible = { }
-		
-		available = {
-			NOT = { has_country_flag = parliament_has_ongoing_law }
-			check_variable = { first_party_popularity > 0.51 }
-		}
-		
-		days_remove = 60
-		days_re_enable = 60
-		cost = 50
-		
-		modifier = {
-			trade_opinion_factor = 0.25
-			consumer_goods_factor = -0.025
-			democratic_drift = 0.03
-		}
-		
-		complete_effect = {
-			set_country_flag = parliament_has_ongoing_law
-		}
-		
-		remove_effect = {
-			set_temp_variable = { temp_member = 1 }
-			set_temp_variable = { temp_seats = -5 }
-			modify_parliament_seat = yes
-			
-			clr_country_flag = parliament_has_ongoing_law
-			
-			custom_effect_tooltip = parliament_lose_5_party_1_tooltip
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
+
 	
 	parliament_policy_2 = {
-		icon = generic_construction
+		icon = GFX_decision_gre_paying_ifc_debt
 		
 		allowed = {
 			#tag = ENG
@@ -367,7 +195,7 @@ parliament_gui_decision_category = {
 		
 		available = {
 			NOT = { has_country_flag = parliament_has_ongoing_law }
-			check_variable = { third_party_popularity > 0.51 }
+			check_variable = { second_party_popularity > 0.51 }
 		}
 		
 		days_remove = 60
@@ -375,8 +203,8 @@ parliament_gui_decision_category = {
 		cost = 50
 		
 		modifier = {
-			industrial_capacity_factory = 0.15
-			fascism_drift = 0.03
+			industrial_capacity_factory = 0.10
+			democratic_drift = 0.03
 		}
 		
 		complete_effect = {
@@ -398,8 +226,7 @@ parliament_gui_decision_category = {
 	}
 	
 	parliament_policy_4 = {
-		icon = generic_monarchism
-		
+		icon = GFX_decision_eng_blackshirt_march
 		allowed = {
 			#tag = ENG
 		}
@@ -408,7 +235,7 @@ parliament_gui_decision_category = {
 		
 		available = {
 			NOT = { has_country_flag = parliament_has_ongoing_law }
-			check_variable = { fourth_party_popularity > 0.51 }
+			check_variable = { second_party_popularity > 0.51 }
 		}
 		
 		days_remove = 60
@@ -437,9 +264,8 @@ parliament_gui_decision_category = {
 			factor = 1
 		}
 	}
-	
-	parliament_policy_5 = {
-		icon = generic_monarchism
+		parliament_policy_1 = {
+		icon = GFX_decision_generic_fundraising
 		
 		allowed = {
 			#tag = ENG
@@ -449,7 +275,48 @@ parliament_gui_decision_category = {
 		
 		available = {
 			NOT = { has_country_flag = parliament_has_ongoing_law }
-			OR = { check_variable = { second_party_popularity > 0.51 } check_variable = { third_party_popularity > 0.51 } }
+			check_variable = { first_party_popularity > 0.51 }
+		}
+		
+		days_remove = 60
+		days_re_enable = 60
+		cost = 50
+		
+		modifier = {
+			trade_opinion_factor = 0.25
+			consumer_goods_factor = -0.15
+			democratic_drift = 0.03
+		}
+		
+		complete_effect = {
+			set_country_flag = parliament_has_ongoing_law
+		}
+		
+		remove_effect = {
+			set_temp_variable = { temp_member = 1 }
+			set_temp_variable = { temp_seats = -5 }
+			modify_parliament_seat = yes
+			
+			clr_country_flag = parliament_has_ongoing_law
+			
+			custom_effect_tooltip = parliament_lose_5_party_1_tooltip
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	parliament_policy_5 = {
+		icon = GFX_decision_generic_assassination
+		
+		allowed = {
+			#tag = ENG
+		}
+		
+		visible = { }
+		
+		available = {
+			NOT = { has_country_flag = parliament_has_ongoing_law }
+			check_variable = { first_party_popularity > 0.51 }
 		}
 		
 		days_remove = 60
@@ -473,7 +340,7 @@ parliament_gui_decision_category = {
 	}
 	
 	parliament_policy_6 = {
-		icon = generic_monarchism
+		icon = GFX_decision_generic_operation
 		
 		allowed = {
 			#tag = ENG
@@ -483,7 +350,7 @@ parliament_gui_decision_category = {
 		
 		available = {
 			NOT = { has_country_flag = parliament_has_ongoing_law }
-			OR = { check_variable = { second_party_popularity > 0.51 } check_variable = { third_party_popularity > 0.51 } check_variable = { first_party_popularity > 0.51 } }
+			check_variable = { first_party_popularity > 0.51 } #conservative
 		}
 		
 		days_remove = 60
@@ -506,43 +373,6 @@ parliament_gui_decision_category = {
 		}
 	}
 	
-	eng_parliament_policy = {
-		icon = generic_monarchism
-		
-		allowed = {
-			tag = ENG
-		}
-		
-		visible = { }
-		
-		available = {
-			NOT = { has_country_flag = parliament_has_ongoing_law }
-			check_variable = { fourth_party_popularity > 0.51 }
-		}
-		
-		days_remove = 30
-		days_re_enable = 60
-		cost = 50
-		
-		modifier = {
-			subjects_autonomy_gain = -0.1
-		}
-		
-		complete_effect = {
-			set_country_flag = parliament_has_ongoing_law
-		}
-		
-		remove_effect = {
-			set_temp_variable = { temp_member = 4 }
-			set_temp_variable = { temp_seats = -5 }
-			modify_parliament_seat = yes
-			
-			clr_country_flag = parliament_has_ongoing_law
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
 	#path to glory - danteee
 	
 	

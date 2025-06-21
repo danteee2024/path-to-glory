@@ -1224,7 +1224,7 @@
  mtg_news.22.b:0 "Our flanks are secured."
  mtg_news.22.c:0 "They are divvying up the world..."
  mtg_news.23.t:0 "Blackshirts Organize in [From.GetName]"
- mtg_news.23.desc:0 "Under the leadership of Oswald Mosley, the British Union of Fascists has begun an organized campaign of marches across the country, thus seeking to grow the number of fascist supporters throughout [From.GetNameDef].\n\nThe violent counter-reaction by anti-fascist elements of the public have already caused a number of street fights, however, and it is uncertain whether stability will be maintained or whether the political unrest will become even worse. The B.U.F. leadership, for their part, have already vowed not to stop "until they have marched on Downing Street and demanded a change of government"."
+ mtg_news.23.desc:0 "Under the leadership of Oswald Mosley, the British Liberal Party has begun an organized campaign of marches across the country, thus seeking to grow the number of fascist supporters throughout [From.GetNameDef].\n\nThe violent counter-reaction by anti-fascist elements of the public have already caused a number of street fights, however, and it is uncertain whether stability will be maintained or whether the political unrest will become even worse. The B.U.F. leadership, for their part, have already vowed not to stop "until they have marched on Downing Street and demanded a change of government"."
  mtg_news.23.a:0 "We will emerge from the crucible stronger than ever."
  mtg_news.23.b:0 "Let us see if they manage to avoid civil war."
  mtg_news.24.t:0 "Anglo-Italian Alliance"
