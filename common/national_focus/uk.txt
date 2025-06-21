@@ -19,7 +19,7 @@ focus_tree = {
 	}
 	default = no
 	
-	continuous_focus_position = { x = 20 y = 1200 }
+	continuous_focus_position = { x = 100 y = 1300 }
 
 	shared_focus = Commonwealth_form_joint_alliance
 
@@ -3152,7 +3152,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		continue_if_invalid = yes
 
 		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
-		x = 55
+		x = 53
 		y = 0
         
 		
@@ -3208,7 +3208,8 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		}	
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
 		completion_reward = {
-			add_political_power = 60
+			add_political_power = 100
+			add_stability = 0.05
 			CAN = {
 				if = {
 					limit = {
@@ -3270,7 +3271,6 @@ custom_effect_tooltip = generic_skip_one_line_tt
 	focus = {
 		id = ENG_towards_dominion_independence
 		prerequisite = { focus = ENG_guide_the_colonies }
-		mutually_exclusive = { focus = ENG_Dominion_Cooperation }
 		available = { 
 			is_subject = no
 			OR = {
@@ -3362,102 +3362,8 @@ custom_effect_tooltip = generic_skip_one_line_tt
 	}
 	
 	focus = {
-		id = ENG_Dominion_Cooperation
-		prerequisite = { focus = ENG_guide_the_colonies }
-		mutually_exclusive = { focus = ENG_towards_dominion_independence }
-		available = { 
-			is_subject = no
-			OR = {
-				CAN = { is_subject_of = ENG }
-				SAF = { is_subject_of = ENG }
-				AST = { is_subject_of = ENG }
-				NZL = { is_subject_of = ENG }
-			}
-		}
-		bypass = {
-			OR = {
-				AND = {
-					CAN = { is_subject = no }
-					SAF = { is_subject = no }
-					AST = { is_subject = no }
-					NZL = { is_subject = no }
-				}
-				has_completed_focus = ENG_bring_the_dominions_back_into_the_fold
-			}
-		}
-
-		continue_if_invalid = yes
-
-		icon = GFX_focus_RAJ_to_shake_the_world
-		x = -3
-		y = 1
-		relative_position_id = ENG_guide_the_colonies
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER}	
-		completion_reward = {
-			add_political_power = 100
-			add_manpower = 100000
-			CAN = {
-				if = {
-					limit = {
-						is_subject_of = ENG
-						has_idea = ENG_guided_by_britain_1
-					}
-					swap_ideas = {
-						remove_idea = ENG_guided_by_britain_1
-						add_idea = ENG_guided_by_britain_3
-					}
-					#hidden_effect = { country_event = { id =  mtg_britain.18 hours = 6 } }
-				}
-			}
-			SAF = {
-				if = {
-					limit = {
-						is_subject_of = ENG
-						has_idea = ENG_guided_by_britain_1
-					}
-					swap_ideas = {
-						remove_idea = ENG_guided_by_britain_1
-						add_idea = ENG_guided_by_britain_3
-					}
-					#hidden_effect = { country_event = { id =  mtg_britain.18 hours = 6 } }
-				}
-			}
-			AST = {
-				if = {
-					limit = {
-						is_subject_of = ENG
-						has_idea = ENG_guided_by_britain_1
-					}
-					swap_ideas = {
-						remove_idea = ENG_guided_by_britain_1
-						add_idea = ENG_guided_by_britain_3
-					}
-					#hidden_effect = { country_event = { id =  mtg_britain.18 hours = 6 } }
-				}
-			}
-			NZL = {
-				if = {
-					limit = {
-						is_subject_of = ENG
-						has_idea = ENG_guided_by_britain_1
-					}
-					swap_ideas = {
-						remove_idea = ENG_guided_by_britain_1
-						add_idea = ENG_guided_by_britain_3
-					}
-					#hidden_effect = { country_event = { id =  mtg_britain.18 hours = 6 } }
-				}
-			}
-		}
-	}
-
-	focus = {
 		id = ENG_foundations_for_an_indian_state
-		prerequisite = { focus = ENG_towards_dominion_independence focus = ENG_Dominion_Cooperation}
+		prerequisite = { focus = ENG_towards_dominion_independence }
 		available = { 
 			is_subject = no
 			RAJ = { is_subject_of = ENG }
@@ -3492,7 +3398,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		}
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			add_political_power = 60
+			add_political_power = 100
 			RAJ = {
 				if = {
 					limit = { is_subject_of = ENG }
@@ -3640,11 +3546,9 @@ custom_effect_tooltip = generic_skip_one_line_tt
 	focus = {
 		id = ENG_towards_indian_independence
 		prerequisite = { focus = ENG_foundations_for_an_indian_state }
-		mutually_exclusive = { focus = ENG_Towards_Indian_Partnership }
 		available = { 
 			is_subject = no
 			RAJ = { is_subject_of = ENG }
-			NOT = { has_completed_focus = ENG_concessions_to_the_trade_unions }
 		}
 		bypass = {
 			OR = {
@@ -3734,104 +3638,6 @@ custom_effect_tooltip = generic_skip_one_line_tt
 			}
 		}
 	}
-	
-	focus = {
-		id = ENG_Towards_Indian_Partnership
-		prerequisite = { focus = ENG_foundations_for_an_indian_state }
-		mutually_exclusive = { focus = ENG_towards_indian_independence }
-		available = { 
-			is_subject = no
-			RAJ = { is_subject_of = ENG }
-		}
-		bypass = {
-			OR = {
-				RAJ = { is_subject = no }
-				has_completed_focus = ENG_reclaim_the_jewel_in_the_crown
-			}
-		}
-
-		continue_if_invalid = yes
-
-		icon = GFX_focus_RAJ_the_return_of_the_east_india_trading_company_alt
-		x = -2
-		y = 2
-		relative_position_id = ENG_foundations_for_an_indian_state
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER}	
-		completion_reward = {
-			add_political_power = 150
-			add_manpower = 150000
-			RAJ = {
-				swap_ideas = {
-					remove_idea = ENG_guided_by_britain_RAJ_1
-					add_idea = ENG_guided_by_britain_raj_3
-				}
-				hidden_effect = { country_event = { id = mtg_britain.21  hours = 6 } }
-			}
-			if = {
-				limit = {
-					country_exists = PAK
-				}
-				PAK = {
-					swap_ideas = {
-						remove_idea = ENG_guided_by_britain_RAJ_1
-						add_idea = ENG_guided_by_britain_raj_3
-					}
-					hidden_effect = { country_event = { id = mtg_britain.21  hours = 6 } }
-				}
-			}
-			if = {
-				limit = {
-					country_exists = BAN
-				}
-				BAN = {
-					swap_ideas = {
-						remove_idea = ENG_guided_by_britain_RAJ_1
-						add_idea = ENG_guided_by_britain_raj_3
-					}
-					hidden_effect = { country_event = { id = mtg_britain.21  hours = 6 } }
-				}
-			}
-			if = {
-				limit = {
-					has_dlc = "Together for Victory"
-					RAJ = {
-						is_subject = yes
-						NOT = { has_autonomy_state = autonomy_dominion }
-					}
-				}
-				set_autonomy = { target = RAJ autonomy_state = autonomy_dominion }
-			}
-			if = {
-				limit = {
-					has_dlc = "Together for Victory"
-					BAN = {
-						is_subject = yes
-						NOT = { has_autonomy_state = autonomy_dominion }
-					}
-				}
-				set_autonomy = { target = BAN autonomy_state = autonomy_dominion }
-			}
-			if = {
-				limit = {
-					has_dlc = "Together for Victory"
-					PAK = {
-						is_subject = yes
-						NOT = { has_autonomy_state = autonomy_dominion }
-					}
-				}
-				set_autonomy = { target = PAK autonomy_state = autonomy_dominion }
-			}
-			RAJ = {
-				drop_cosmetic_tag = yes
-				retire_country_leader = yes
-			}
-		}
-	}
-
 	focus = {
 		id = ENG_withdraw_from_contested_territories
 		prerequisite = { focus = ENG_guide_the_colonies }
@@ -4158,7 +3964,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 
 		continue_if_invalid = no
 
-		icon = GFX_focus_generic_self_management
+		icon = GFX_focus_ETH_the_african_union
 		x = 0
 		y = 2
 		relative_position_id = ENG_self_government_for_the_mediterranean
@@ -5199,76 +5005,6 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		}
 	}
 	
-	focus = {
-		id = ENG_Dominion_Federalization
-		prerequisite = { focus = ENG_self_government_for_africa }
-		prerequisite = { focus = ENG_self_government_for_asia }
-		prerequisite = { focus = ENG_Towards_Indian_Partnership }
-		available = { 
-			is_subject = no
-		}
-		bypass = {
-			num_subjects < 1
-		}
-
-		continue_if_invalid = yes
-
-		icon = GFX_focus_eng_imperial_federation
-		x = -3
-		y = 1
-		relative_position_id = ENG_self_government_for_africa
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}	
-		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY}
-		completion_reward = {
-			set_global_flag = ENG_decolonized
-			add_stability = 0.1
-			#add_popularity = { ideology = communism popularity = 0.05 }
-			add_political_power = 100
-			add_manpower = 100000
-			every_other_country = {
-				limit = {
-					is_subject_of = ENG
-					has_idea = ENG_guided_by_britain_3
-				}
-				
-				swap_ideas = {
-						remove_idea = ENG_guided_by_britain_3
-						add_idea = ENG_guided_by_britain_4
-				}
-				
-			}
-			every_other_country = {
-				limit = {
-					is_subject_of = ENG
-					has_idea = ENG_guided_by_britain_raj_3
-				}
-				
-				swap_ideas = {
-						remove_idea = ENG_guided_by_britain_raj_3
-						add_idea = ENG_guided_by_britain_raj_4
-				}
-				
-				hidden_effect = {
-					if = {
-						limit = {
-							has_dlc = "Together for Victory"
-							ENG = { has_completed_focus = ENG_the_three_nation_solution }
-							OR = {
-								has_idea = RAJ_marginalized_muslim_community
-								has_idea = RAJ_marginalized_muslim_community_angry
-							}
-						}
-						remove_ideas = RAJ_marginalized_muslim_community
-						remove_ideas = RAJ_marginalized_muslim_community_angry
-						add_ideas = RAJ_marginalized_muslim_community_happy
-					}
-				}
-			}
-		}
-	}
 
 	### END OF DECOLONIZATION ###
 
@@ -8414,7 +8150,7 @@ focus = {
 		relative_position_id = ENG_steady_as_she_goes
 
 		offset = {
-			x = -21
+			x = -22
 			y = 0
 			trigger = {
 				has_game_rule = {
@@ -8685,13 +8421,13 @@ focus = {
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}	
 		completion_reward = {
 		
-			clr_country_flag = Parliament_Disabled_Flag
 		
 			set_rule = { can_send_volunteers = yes }
 			add_ideas = ENG_the_kings_party_idea
 			set_party_name = { ideology = neutrality long_name = ENG_neutrality_party_kings_party_long name = ENG_neutrality_party_kings_party }
 			hidden_effect = {
 				kill_country_leader = yes
+				set_country_flag = Parliament_Disabled_Flag
 			}
 			set_politics = { ruling_party = neutrality elections_allowed = no }
 			add_popularity = { ideology = neutrality popularity = 0.15 }
@@ -9273,6 +9009,7 @@ focus = {
 			add_political_power = 200
 			custom_effect_tooltip = ENG_organize_the_blackshirts_tt
 			hidden_effect = {
+				set_country_flag = Parliament_Disabled_Flag
 				news_event = { id = mtg_news.23 days = 1 }
 				add_ai_strategy = {
 					type = alliance
@@ -11266,6 +11003,8 @@ focus = {
 			custom_effect_tooltip = ENG_concessions_to_the_trade_unions_tt_3
 			custom_effect_tooltip = ENG_concessions_to_the_trade_unions_tt_2
 			hidden_effect = {
+			set_country_flag = Parliament_Disabled_Flag
+
 				random_list = {
 					10 = {
 						random_list = {
