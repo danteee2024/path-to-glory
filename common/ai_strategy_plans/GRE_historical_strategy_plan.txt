@@ -6,7 +6,7 @@ GRE_historical_plan = {
 		original_tag = GRE
 	}
 	enable = {
-		is_historical_focus_on = yes
+		original_tag = GRE
 	}
 	abort = {
 		OR = {
@@ -14,7 +14,11 @@ GRE_historical_plan = {
 			is_in_faction_with = ITA
 			is_in_faction_with = GER
 			has_government = communism
-			has_government = democratic
+			AND = {
+				has_government = democratic
+				date > 1938.01.01
+			}
+
 			has_government = fascism
 		}
 	}
@@ -59,10 +63,6 @@ GRE_historical_plan = {
 		GRE_extracting_more_from_our_soil #May 20 1943
 		GRE_the_hellenic_air_force #July 30 1943
 		GRE_protecting_our_skies #October 10 1943
-	}
-
-	research = {
-
 	}
 
 	ideas = {
