@@ -669,8 +669,14 @@ ideas = {
 			
 			modifier = {
 				production_speed_buildings_factor = 0.10
+<<<<<<< HEAD
 				research_speed_factor = 0.075
 				scientist_breakthrough_bonus_factor = 0.05
+=======
+				research_speed_factor = 0.10
+				scientist_breakthrough_bonus_factor = 0.10
+				local_building_slots_factor = 0.10
+>>>>>>> parent of 7a432e5 (PORTUGAL Pushing to move into Different branch)
 			}
 		}
 
