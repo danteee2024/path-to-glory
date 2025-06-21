@@ -9,11 +9,11 @@ country_event = {
 
 	immediate = {
 		random_list = {
-			20 = { country_event = { id = parliament.2 days = 90 random_days = 30 } } #missing
-			20 = { country_event = { id = parliament.3 days = 90 random_days = 30 } } #heart attack
-			20 = { country_event = { id = parliament.4 days = 90 random_days = 30 } } #stepping down
-			20 = { country_event = { id = parliament.5 days = 90 random_days = 30 } } #arrested
-			20 = { country_event = { id = parliament.6 days = 90 random_days = 30 } } #caught doing fraud
+			20 = { country_event = { id = parliament.2 days = 180 random_days = 30 } } #missing
+			20 = { country_event = { id = parliament.3 days = 180 random_days = 30 } } #heart attack
+			20 = { country_event = { id = parliament.4 days = 180 random_days = 30 } } #stepping down
+			20 = { country_event = { id = parliament.5 days = 180 random_days = 30 } } #arrested
+			20 = { country_event = { id = parliament.6 days = 180 random_days = 30 } } #caught doing fraud
 		}
 	}
 }

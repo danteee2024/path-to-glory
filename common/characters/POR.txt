@@ -7,8 +7,7 @@ characters = {
 			}
 		}
 		country_leader = {
-			ideology=despotism
-			traits = { conservative_nationalist_lar r56_trait_opposed_to_communism }
+			ideology = despotism
 			expire = "1965.1.1"
 			id = -1
 		}
@@ -75,7 +74,7 @@ characters = {
 			visible ={
 				has_government = democratic
 			}
-			traits = { old_guard homeland_connoisseur }
+			traits = { old_guard }
 			skill = 3
 			attack_skill = 4
 			defense_skill = 2
@@ -792,32 +791,32 @@ characters = {
 		}
 	}
 
-#	POR_jose_adriano_rebelo_pequito = {
-#		advisor = {
-#			slot = high_command
-#			idea_token = POR_jose_adriano_rebelo_pequito
-#			allowed = {
-#				original_tag = POR
-#				NOT = {
-#					has_dlc = "La Resistance"
-#				}
-#			}
-#			traits = {
-#				army_infantry_2
-#			}
-#			cost = 100
-#			ledger = army
-#			ai_will_do = {
-#				factor = 1.000
-#			}
-#		}
-#		name = POR_jose_adriano_rebelo_pequito
-#		portraits = {
-#			army = {
-#				small = "GFX_idea_generic_army_europe_2"
-#			}
-#		}
-#	}
+	POR_jose_adriano_rebelo_pequito = {
+		advisor = {
+			slot = high_command
+			idea_token = POR_jose_adriano_rebelo_pequito
+			allowed = {
+				original_tag = POR
+				NOT = {
+					has_dlc = "La Resistance"
+				}
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ledger = army
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		name = POR_jose_adriano_rebelo_pequito
+		portraits = {
+			army = {
+				small = "GFX_idea_generic_army_europe_2"
+			}
+		}
+	}
 
 	POR_jaime_cortesao_r56 = {
 		advisor = {
@@ -1429,7 +1428,8 @@ characters = {
 			}
 		}
 	}
-	POR_afonso_de_almeida_fernandes={ #r56
+
+	POR_afonso_de_almeida_fernandes={
 		name = "Afonso de Almeida Fernandes"
 		portraits = {
 			army = {
@@ -1446,7 +1446,8 @@ characters = {
 			legacy_id = -1
 		}
 	}
-	POR_jaime_silverio_marques={ #r56
+
+	POR_jaime_silverio_marques={
 		name = "Jaime Silvério Marques"
 		portraits = {
 			army = {
@@ -1464,7 +1465,7 @@ characters = {
 		}
 	}
 	
-	POR_anibal_de_passos_e_sousa={ #r56
+	POR_anibal_de_passos_e_sousa={
 		name = "Aníbal de Passos e Sousa"
 		portraits = {
 			army = {
@@ -1497,7 +1498,7 @@ characters = {
 			}
 		}		
 	}
-	POR_comandante_gomes_da_costa={ #r56
+	POR_comandante_gomes_da_costa= {
 		name = "Gomes da Costa"
 		portraits = {
 			army = {
@@ -1514,6 +1515,7 @@ characters = {
 			legacy_id = -1
 		}
 	}
+
 	POR_fernando_augusto_borges = {
 		advisor = {
 			slot = high_command

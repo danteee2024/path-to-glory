@@ -150,7 +150,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "stronghold_network_speed"   
-			position = { x = 488 y = 66  } 
+			position = { x = 536 y = 66  } 
 			font = "cg_16b"              
 			text = "[?modifier@production_speed_stronghold_network_factor|%0=+]"	   
 			maxWidth = 50  
@@ -161,7 +161,7 @@ guiTypes = {
 		
 		instantTextBoxType = {
 			name = "dockyard_speed"   
-			position = { x = 536 y = 66 } 
+			position = { x = 488 y = 66 } 
 			font = "cg_16b"              
 			text = "[?modifier@production_speed_dockyard_factor|%0=+]"	   
 			maxWidth = 50  

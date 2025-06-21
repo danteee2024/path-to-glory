@@ -2981,8 +2981,8 @@ technologies = {
 		xp_unlock_cost = 100
 		supply_consumption_factor = -0.10
 		
-		infantry = {
-			combat_width = -0.3
+		light_armor = {
+			combat_width = -0.2
 		}
 
 		

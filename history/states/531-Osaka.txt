@@ -26,15 +26,13 @@ state = {
 			}
 
 		}
-
-		victory_points = {
-			7072 40 # Osaka
-		}
-
 		victory_points = {
 			11960 20 # Kyoto
 		}
 
+		victory_points = {
+			7072 40 # Osaka
+		}
 		1939.1.1 = {
 			buildings = {
 				arms_factory = 3

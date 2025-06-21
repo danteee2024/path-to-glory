@@ -180,6 +180,15 @@ scripted_gui = {
 						} 
 					}
 				}
+				PREV = {
+					NOT = {
+						has_idea = japanese_closed_eco
+					}
+					#has_offensive_war = no
+					#NOT = {
+					#	has_country_flag = JAP_no_state_transfer_till_1939_flag
+					#}
+				}
 			}
 		
 		}
