@@ -5764,7 +5764,7 @@ ENG_concessions_to_the_trade_unions = {
 			has_country_flag = ENG_trade_unions_demand_minister_appointment
 		}
 
-		days_mission_timeout = 200
+		days_mission_timeout = 100
 
 		fire_only_once = no
 
@@ -6956,7 +6956,7 @@ ENG_concessions_to_the_trade_unions = {
 			has_country_flag = ENG_trade_unions_demand_mandatory_union_days_done_flag
 		}
 
-		days_mission_timeout = 200
+		days_mission_timeout = 100
 
 		fire_only_once = no
 
@@ -7078,7 +7078,7 @@ ENG_concessions_to_the_trade_unions = {
 			has_government = communism
 		}
 
-		days_mission_timeout = 200
+		days_mission_timeout = 100
 
 		fire_only_once = no
 

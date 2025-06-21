@@ -3202,7 +3202,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 
 		
 
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -3378,7 +3378,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		x = -1
 		y = 1
 		relative_position_id = ENG_towards_dominion_independence
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -3462,11 +3462,14 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		x = 1
 		y = 1
 		relative_position_id = ENG_foundations_for_an_indian_state
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
 		completion_reward = {
+			add_political_power = 150
+			add_manpower = 15000
+			add_cic = 350
 			RAJ = {
 				if = {
 					limit = {
@@ -3679,7 +3682,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		}
 		search_filters = {FOCUS_FILTER_MANPOWER}	
 		completion_reward = {
-			add_stability = -0.15
+			add_stability = -0.05
 			add_manpower = 25000
 			if = {
 				limit = {
@@ -10980,7 +10983,7 @@ focus = {
 		y = 1
 		relative_position_id = ENG_a_change_in_course
 		cancel_if_invalid = yes
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 			modifier = {
