@@ -453,12 +453,12 @@ focus_tree = {
 
 				add_resource = {
 					type = steel
-					amount = 5
+					amount = 2
 				}
 
 				add_resource = {
 					type = rubber
-					amount = 5
+					amount = 3
 				}
 			}
 		}
@@ -491,7 +491,7 @@ focus_tree = {
 			796 = {
 				add_resource = {
 					type = oil
-					amount = 16
+					amount = 6
 				}
 			}
 		}
@@ -538,7 +538,7 @@ focus_tree = {
 				}
 				add_resource = {
 					type = aluminium
-					amount = 5
+					amount = 2
 				}
 			}
 			897 = {
@@ -678,6 +678,7 @@ focus_tree = {
 		cost = 5
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 		completion_reward = {
+			
 			if = {
 				limit = { has_full_control_of_state = 112 }
 				112 = {
@@ -707,13 +708,6 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
-			}
-			set_technology = {
-				gwtank_chassis = 1
-				armor_tech_1 = 1
-				engine_tech_1 = 1
-				basic_light_tank_chassis = 1
-				basic_heavy_tank_chassis = 1
 			}
 			IF = {
 				limit = {
@@ -740,7 +734,14 @@ focus_tree = {
 		relative_position_id = POR_instituto_superior_tecnico
 		cost = 5
 		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = { 
+		completion_reward = { 	
+			army_experience	= 50
+			add_tech_bonus = {
+				name = POR_metropolitan_army
+			    bonus = 0.5
+			    uses = 2
+			    category = infantry_weapons
+			}
 			if = {
 				limit = { has_full_control_of_state = 112 }
 				112 = {
@@ -770,14 +771,7 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
-			}	
-			add_tech_bonus = {
-				name = POR_metropolitan_army
-			    bonus = 0.5
-			    uses = 2
-			    category = infantry_weapons
 			}
-			army_experience	= 50
 		}
 	}
 
@@ -821,13 +815,6 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
-			}
-			set_technology = {
-				iw_small_airframe = 1
-				iw_medium_airframe = 1
-				iw_large_airframe = 1
-				aa_lmg = 1
-				engines_1 = 1
 			}
 			IF = {
 				limit = {
@@ -969,7 +956,7 @@ focus_tree = {
 			179 = {
 				add_resource = {
 					type = steel
-					amount = 8
+					amount = 3
 				}
 			}
 			if = {
@@ -1153,9 +1140,6 @@ focus_tree = {
 				ahead_reduction = 1
 				bonus = 0.75
 				category = motorized_equipment
-			}
-			set_technology = {
-				motorised_infantry = 1
 			}
 		}
 	}
@@ -1384,7 +1368,6 @@ focus_tree = {
 			}
 			set_technology = {
 				basic_small_airframe = 1
-				engines_2 = 1
 			}
 
 			add_tech_bonus = {
@@ -1588,28 +1571,6 @@ focus = {
 					}
 				}
 			}
-			if = {
-				limit = { has_full_control_of_state = 179 }
-				180 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			if = {
-				limit = { has_full_control_of_state = 179 }
-				181 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
 		}
 	}
 
@@ -1783,7 +1744,7 @@ focus = {
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				name = POR_submarine_effort
-			    cost_reduction = 1
+			    cost_reduction = 0.5
 			    uses = 2
 			    category = naval_doctrine
 			}
@@ -1848,9 +1809,6 @@ focus = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_ideas = POR_portuguese_marines
-			set_technology = {
-				marines = 1
-			}
 			add_tech_bonus = {
 				name = POR_fuzileiros
 			    bonus = 1
@@ -2011,10 +1969,6 @@ focus = {
 		cost = 10
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			set_technology = {
-				early_ship_hull_cruiser = 1
-				basic_cruiser_armor_scheme = 1
-			}
 			add_tech_bonus = {
 				name = POR_national_cruiser_production
 			    bonus = 1.0
@@ -2048,9 +2002,6 @@ focus = {
 		cost = 10
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			set_technology = {
-			early_ship_hull_heavy = 1
-			}
 			add_tech_bonus = {
 				name = POR_battleship_effort
 			    bonus = 1.0
@@ -2097,12 +2048,9 @@ focus = {
 		cost = 10
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			set_technology = {
-			early_carrier = 1
-			}
 			add_tech_bonus = {
 				name = POR_carrier_effort
-			    bonus = 1
+			    bonus = 1.0
 			    uses = 2
 			    category = cv_tech
 			}
@@ -2131,9 +2079,8 @@ focus = {
 		y = 2
 
 		relative_position_id = POR_national_cruiser_production
-		cost = 5
+		cost = 2.5
 		completion_reward = {
-			add_ideas = POR_defence_of_the_atlantic
 			if = {
 				limit = { has_full_control_of_state = 698 }
 				698 = { #Azores
@@ -6503,7 +6450,7 @@ focus = {
 
 		available = {
 			has_army_manpower = {
-				size > 149999
+				size > 249999
 			}		
 			has_civil_war = no			
 		}
@@ -6740,19 +6687,12 @@ focus = {
 				}
 			}
 			add_war_support = 0.05
-			add_political_power = 100
+			add_political_power = 70
 			set_technology = {
-				basic_light_battery = 1
-				basic_medium_battery = 1
 				basic_heavy_battery = 1
 				basic_fire_control_system = 1
 				basic_cruiser_armor_scheme = 1
-				basic_depth_charges = 1
 				basic_heavy_shell = 1
-				early_ship_hull_heavy = 1
-			    basic_ship_hull_heavy = 1
-				early_ship_hull_cruiser = 1
-				basic_ship_hull_cruiser = 1
 				marines = 1
 			}
 			division_template = {

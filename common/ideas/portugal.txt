@@ -23,33 +23,6 @@ ideas = {
 			}
 		}
 
-		POR_defence_of_the_atlantic = {
-			picture = generic_navy_cruiser_warfare
-			allowed = {
-				original_tag = POR
-			}
-
-			allowed_civil_war = {
-				tag = POR
-			}
-			removal_cost = -1
-
-			modifier = {
-				convoy_escort_efficiency = 0.10
-			}
-
-			equipment_bonus = {
-				destroyer = {
-					instant = yes
-					build_cost_ic = -0.10
-				}
-				ship_hull_cruiser = {
-					instant = yes
-					build_cost_ic = -0.10
-				}
-			}
-		}
-
 		SOV_research_grants = {
 			picture = jap_duplicate_research
 
@@ -696,9 +669,8 @@ ideas = {
 			
 			modifier = {
 				production_speed_buildings_factor = 0.10
-				research_speed_factor = 0.10
-				scientist_breakthrough_bonus_factor = 0.10
-				local_building_slots_factor = 0.10
+				research_speed_factor = 0.075
+				scientist_breakthrough_bonus_factor = 0.05
 			}
 		}
 
