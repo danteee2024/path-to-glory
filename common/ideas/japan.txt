@@ -2540,9 +2540,9 @@ ideas = {
 			picture = ast_naval_auxiliary_patrol
 			
 			modifier = {
-				army_core_defence_factor = 0.2
-				no_supply_grace = 96
-				out_of_supply_factor = -0.2
+				army_core_defence_factor = 0.1
+				no_supply_grace = 72
+				out_of_supply_factor = -0.1
 			}
 		}
 		
