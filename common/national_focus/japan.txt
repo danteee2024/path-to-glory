@@ -4317,18 +4317,6 @@
 				target = CHI
 				days = 800
 			}
-			#hidden_effect = {
-			#	if = {
-			#		limit = {
-			#			date < 1936.01.17
-			#		}
-			#		country_event = {		
-			#			# id = cuba.10
-			#		}
-			#		
-			#	}
-			#}
-			#custom_effect_tooltip = JAP_support_tt
 			add_political_power = 100
 			609 = {
 				if = {
@@ -4411,7 +4399,6 @@
 			    long_name = JAP_neutrality_party_kodoha_long
 			    name = JAP_neutrality_party_kodoha
 			}
-			retire_character = JAP_Okada_Keisuke
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -4570,7 +4557,7 @@
 
 	focus = {
 		id = JAP_modern_shogunate
-		icon = GFX_focus_generic_japanese_imperial_glory
+		icon = GFX_goal_generic_military_deal
 		prerequisite = { focus = JAP_support_the_kodoha_faction }
 		mutually_exclusive = { focus = JAP_showa_restoration }
 		x = -1
@@ -4612,20 +4599,18 @@
 
 
 		completion_reward = {
-			add_stability = 0.05
-			add_war_support = 0.05
-			add_political_power = 50
+			country_event = { id = japan_kodoha.1 days = 14 }
 		}
 		search_filters = {  FOCUS_FILTER_ANNEXATION FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
 	}
 	focus = {
 		id = JAP_the_old_ways
-		icon = GFX_goal_JAP_samurai_focus
+		icon = GFX_focus_JAP_samurai
 		prerequisite = { focus = JAP_purge_the_toseiha }
 		x = 0
 		y = 3
 		relative_position_id = JAP_support_the_kodoha_faction
-		allow_branch = {
+		available = {
 			has_completed_focus = JAP_modern_shogunate
 			has_country_leader = { ruling_only = yes name = "Sadao Araki" }
 			has_idea = JAP_hiroshi_oshima
@@ -4639,6 +4624,10 @@
 		completion_reward = {
 			country_event = { id = japan_kodoha.10 days = 14 }
 			set_cosmetic_tag = JAP_shogunate_tag
+			add_victory_points = {
+				province = 11960
+				value = 30
+			}
 			set_province_name = { id = 1182 name = "Edo" }
 			set_province_name = { id = 11960 name = "Kyoto" }
 			set_capital = {
@@ -5130,6 +5119,7 @@
 		}
 
 		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
 			528 = {
 				add_building_construction = {
 					type = dockyard
@@ -7912,7 +7902,7 @@
 
 		completion_reward = {
 			MAN = {
-				add_ideas = JAP_manchu_generic
+				add_ideas = MAN_manchurian_army
 			}
 		}
 		search_filters = {  }
@@ -7942,7 +7932,7 @@
 
 		completion_reward = {
 			MAN = {
-				add_ideas = JAP_manchu_special
+				add_ideas = MAN_specialized_units
 			}
 		}
 		search_filters = {  }
