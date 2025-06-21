@@ -521,8 +521,8 @@ JAP_emperors_untiversity:0 "University Expanded"
  JAP_rebuild_our_navy_desc:0 ""
  JAP_retake_manchuria:0 "Finish the Fight"
  JAP_retake_manchuria_desc:0 "Finish our fight with the facist and reclaim our legitmacy"
- JAP_cede_eastern_manchuria_for_help:0 "Cede East Manchu for aid"
- JAP_cede_eastern_manchuria_for_help_desc:0 "Hopefully they accept"
+ JAP_cede_eastern_manchuria_for_help:0 "Take Back Our Investment"
+ JAP_cede_eastern_manchuria_for_help_desc:0 "For years we had invested into manchuria in hopes of building up adequate infrastructure to invade the rest of china and extract their resources. This has all gone to naught now. We shall extract bring those investments back to the mainland."
  JAP_cede_manchu_tt:0 "The event will ask for soviet economic help §YFactories§! and §YResearch§! bonuses in turn for the Eastern half of Manchuria"
  JAP_air_blueprints:0 "Air Blueprints from the Soviets"
  JAP_air_blueprints_desc:0 "Viewing some blueprints from the soviets may allow us the help our own fighter designs"
@@ -749,4 +749,9 @@ JAP_strengthen_the_divine_wind_effect_bba:0 "Enables the §HFixed Explosive Char
 JAP_strengthen_the_divine_wind_desc:0 "Kamikaze, the tactics of the Special Attack Unit, have changed suicide attacks
 
 #ptg
- warning_to_japan_player:0 "Do §RNOT§! Touch §YState Transfer Tool§! until your civil war is over. §RYou will mess up your states§! and will be unable to do §CClose the Island§!."
+ japan.26.t:0 "[JAP.getAdjective] Specialists Suggest Technological Cooperation"
+ japan.26.desc:0 "Diplomats from [JAP.getNameDef] has approached our governmental officials with an offer to conclude a facilities inspection which could allow [JAP.getAdjective] engineers to learn from our production methods and improve the product quality of their own. \n\nTheir representatives have already assured us of confidentiality and discreetness of this agreement, providing written promises of security of any of our various technological innovations discussed in-situ. \nThe decision is pending and the delegation expects a response in the overseen future. What should the answer be?"
+ japan.26.a:0 "Let them full access to our tank manufacturing plants."
+ japan.26.b:0 "Small arms can be inspected to ensure their quality prevails."
+ japan.26.c:0 "Aircraft factories could benefit from foreign expertise."
+ japan.26.e:0 "We have no interest of sharing secrets."

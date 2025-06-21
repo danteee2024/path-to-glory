@@ -1003,7 +1003,7 @@ country_event = {
 	id = japan.25
 	title = japan.25.t
 	desc = japan.25.desc
-	picture = GFX_news_event_jap_election
+	picture = GFX_report_event_election_vote
 
 	is_triggered_only = yes
 	
@@ -1044,5 +1044,81 @@ country_event = {
 				traits = { right_industrialist }
 			}
 		}
+	}
+}
+
+####EVENT TO FACTION LEADER
+country_event = {
+	id = japan.26
+	title = japan.26.t
+	desc = japan.26.desc
+	picture = GFX_report_event_generic_factory
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = japan.26.a
+		set_country_flag = JAP_importer_wants_tanks_flag
+		JAP = {
+			#add_opinion_modifier = {
+			#	target = ROOT
+			#	modifier = trade_deal
+			#}
+			add_ideas = JAP_sent_us_their_technicians_tanks
+		}
+		add_timed_idea = {
+			idea = JAP_we_sent_our_technicians_tanks
+			days = 180
+		}
+		ai_chance = { base = 25 }
+	}
+	option = {
+		name = japan.26.b
+		set_country_flag = JAP_importer_wants_guns_flag
+		JAP = {
+			#add_opinion_modifier = {
+			#	target = ROOT
+			#	modifier = trade_deal
+			#}
+			add_ideas = JAP_sent_us_their_technicians_infantry
+		}
+		add_timed_idea = {
+			idea = JAP_we_sent_our_technicians_infantry
+			days = 180
+		}
+		ai_chance = { base = 25 }
+	}
+	option = {
+		name = japan.26.c 
+		set_country_flag = JAP_importer_wants_planes_flag
+		JAP = {
+			#add_opinion_modifier = {
+			#	target = ROOT
+			#	modifier = trade_deal
+			#}
+			add_ideas = JAP_sent_us_their_technicians_planes
+		}
+		add_timed_idea = {
+			idea = JAP_we_sent_our_technicians_planes
+			days = 180
+		}
+		ai_chance = { base = 25 }
+	}
+	option = {
+		name = japan.26.e 
+		JAP = {
+			mark_focus_tree_layout_dirty = yes
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = medium_decrease
+			}
+			swap_ideas = {
+				remove_idea = JAP_influenced_economy
+				add_idea = JAP_focus_on_our_own_economy
+			}
+			set_country_flag = JAP_inwards_focused_flag
+		}
+		ai_chance = { base = 25 }
 	}
 }
