@@ -51,7 +51,7 @@ ideas = {
 		}
 
 		ROM_expanded_axis_oil_trade = {
-			picture = generic_production_bonus
+			picture = generic_exploit_mines
 			removal_cost = -1
 			
 			allowed = {
@@ -74,7 +74,7 @@ ideas = {
 		}
 
 		ROM_expanded_axis_oil_trade2 = {
-			picture = generic_production_bonus
+			picture = generic_exploit_mines
 			name = ROM_expanded_axis_oil_trade
 
 			removal_cost = -1
@@ -241,7 +241,7 @@ ideas = {
 
 			name = SPA_national_recovery
 
-			picture = generic_production_bonus
+			picture = ARG_public_works_investment
 
 			allowed = {
 				original_tag = ROM
