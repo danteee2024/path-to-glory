@@ -1422,7 +1422,7 @@ focus_tree = {
 
 	focus = {
 		id = GRE_dominate_the_bulgarians
-		icon = GFX_goal_ROM_puppet_bulgaria
+		icon = GFX_focus_BUL_the_fate_of_the_balkans
 		prerequisite = { focus = GRE_prepare_for_the_great_anti_fascist_war }
 		available = {
 			NOT = { 
@@ -2034,8 +2034,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GRE_utilize_british_capital
-		icon = GFX_focus_generic_british_trade
+		id = One_party_state
+		icon = GFX_focus_ARG_keep_it_in_the_party
 		available = { 
 			NOT = {
 				OR = {
@@ -2051,15 +2051,15 @@ focus_tree = {
 		y = 1
 		relative_position_id = GRE_petition_britain_for_aid
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			base = 1
 		}
 
 		completion_reward = {
-			add_political_power = 100
-			add_stability = 0.05
+			add_political_power = 50
+			add_stability = -0.10
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			every_state = {
@@ -2080,15 +2080,15 @@ focus_tree = {
 					}
 				}
 				47 = {
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = infrastructure
-						level = 1
+						level = 2
 						instant_build = yes
 					}	
 					add_building_construction = {
 						type = industrial_complex
-						level = 1
+						level = 2
 						instant_build = yes
 					}	
 				}
@@ -3579,7 +3579,7 @@ focus_tree = {
 
 	focus = {
 		id = GRE_Retake_land_took_by_colonialists
-		icon = GFX_goal_generic_middle_east
+		icon = GFX_focus_AUS_disregard_the_treaties
 		available = {
 			341 = { is_owned_and_controlled_by = GRE }
 			797 = { is_owned_and_controlled_by = GRE }
@@ -3653,7 +3653,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GRE_Economic_Prosperity
-		icon = GFX_goal_generic_freedom
+		icon = GFX_focus_CONGO_gold_and_diamonds
 		available = {
 			GRE = {
 				owns_state = 907
@@ -3811,7 +3811,7 @@ focus_tree = {
 
 	focus = {
 		id = GRE_utilize_our_strengths
-		icon = GFX_goal_generic_agriculture2
+		icon = GFX_SOV_industrial_modernization_ccp_2d_sov_compatibility
 		prerequisite = { focus = GRE_reevaluating_the_drachma }
 		mutually_exclusive = { focus = GRE_force_the_farmers_into_factories }
 		x = 0
@@ -3906,7 +3906,7 @@ focus_tree = {
 		x = 6
 		y = 1
 		relative_position_id = GRE_reevaluating_the_drachma
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			base = 1
 		}
@@ -4117,7 +4117,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GRE_force_the_farmers_into_factories
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 1
 		}
@@ -4160,7 +4160,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GRE_open_foreign_subsidized_factories
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 1
 		}
@@ -4312,7 +4312,7 @@ focus_tree = {
 	}		
 
 	focus = {
-		id = GRE_sophistry_and_science
+		id = GRE_Platos_books_of_wisdom
 		icon = GFX_focus_research2
 		prerequisite = { focus = GRE_connecting_our_prefectures }
 		x = 0
@@ -4692,9 +4692,9 @@ focus_tree = {
 		id = GRE_rejuvenating_athens
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = GRE_encourage_tourism focus = GRE_mobilise_our_economy }
-		x = 1
-		y = 2
-		relative_position_id = GRE_sophistry_and_science
+		x = 29
+		y = 6
+		
 		cost = 10
 		ai_will_do = {
 			base = 1
@@ -4935,7 +4935,7 @@ focus_tree = {
 
 	focus = {
 		id = GRE_crack_down_on_foreign_monopolies
-		icon = GFX_goal_generic_ban_aristocrats
+		icon = GFX_SOV_the_onslaught_on_colonialism_ccp_2d_sov_compatibility
 		dynamic = yes
 		prerequisite = { focus = GRE_bedrock_of_balkan_financial_stability }
 		prerequisite = { focus = GRE_rejuvenating_athens focus = GRE_making_use_of_our_islands focus = GRE_clear_the_slums }
@@ -4994,7 +4994,7 @@ focus_tree = {
 
 	focus = {
 		id = GRE_cooperate_with_foreign_monopolies
-		icon = GFX_goal_FRA_class_collaboration
+		icon = GFX_focus_AFG_a_modern_economy
 		dynamic = yes
 		prerequisite = { focus = GRE_sophistry_and_science }
 		prerequisite = { focus = GRE_rejuvenating_athens focus = GRE_making_use_of_our_islands focus = GRE_clear_the_slums }
@@ -5351,7 +5351,7 @@ focus_tree = {
 
 	focus = {
 		id = GRE_the_hellenic_air_force
-		icon = GFX_goal_GRE_coa_air_force
+		icon = GFX_focus_ETH_the_ethiopian_air_force
 		prerequisite = { focus = GRE_hellenic_armed_forces }
 		x = -5
 		y = 1
@@ -5492,7 +5492,7 @@ focus_tree = {
 
 	focus = {
 		id = GRE_the_hellenic_army
-		icon = GFX_goal_GRE_coa_army
+		icon = GFX_focus_PER_clash_of_titans
 		prerequisite = { focus = GRE_hellenic_armed_forces }
 		x = 0
 		y = 1
@@ -5527,7 +5527,7 @@ focus_tree = {
 
 	focus = {
 		id = GRE_the_hellenic_navy 
-		icon = GFX_goal_GRE_coa_navy
+		icon = GFX_focus_NOR_the_royal_norwegian_navy
 		prerequisite = { focus = GRE_hellenic_armed_forces }
 		x = 5
 		y = 1

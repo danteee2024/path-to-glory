@@ -338,14 +338,13 @@ ideas = {
 				always = yes
 			}
 			
-			picture = generic_research_bonus
+			picture = gre_venerate_the_ancient_hellenes_plato
 
 			removal_cost = -1
 			
 			modifier = {
-				political_power_factor	= 0.05
-				research_speed_factor = 0.10
-				scientist_research_bonus_factor = 0.10
+				research_speed_factor = 0.06
+				scientist_research_bonus_factor = 0.06
 			}
 		}
 
