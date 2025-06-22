@@ -2156,7 +2156,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GRE_petition_britain_for_aid
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 1
 		}
@@ -5028,7 +5028,7 @@ focus_tree = {
 		id = GRE_cooperate_with_foreign_monopolies
 		icon = GFX_focus_AFG_a_modern_economy
 		dynamic = yes
-		prerequisite = { focus = GRE_sophistry_and_science }
+		prerequisite = { focus = GRE_Platos_books_of_wisdom }
 		prerequisite = { focus = GRE_rejuvenating_athens focus = GRE_making_use_of_our_islands focus = GRE_clear_the_slums }
 		mutually_exclusive = { focus = GRE_crack_down_on_foreign_monopolies }
 		x = -4
@@ -5365,7 +5365,7 @@ focus_tree = {
 		icon = GFX_focus_GRE_hellenic_armed_forces
 		x = 46
 		y = 0
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			base = 1
 		}
@@ -5990,7 +5990,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 			name = GRE_embracing_modern_warfare
-   			 army_infantry_attack_factor = 0.10  
+   			 
 			}
 			add_tech_bonus = {
 				name = GRE_embracing_modern_warfare
