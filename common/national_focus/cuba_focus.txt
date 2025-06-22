@@ -25,6 +25,9 @@ focus_tree = {
 		y = 0
 		cost = 10
 		search_filters = {  FOCUS_FILTER_RESEARCH }
+		available = {
+			is_ai = no
+		}
 		
 		available_if_capitulated = yes
 
@@ -218,7 +221,7 @@ focus_tree = {
 
 	focus = {
 		id = CUB_politika
-		icon = GFX_focus_POL_complete_april_constitution
+		icon = GFX_focus_BRA_repeale_national_security_law
 		x = 0
 		y = 1
 		prerequisite = { focus = CUB_Reform }
@@ -228,24 +231,24 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			
+			add_stability = 0.1
 		}
 	}
 
 	focus = {
 		id = CUB_totalwar
-		icon = GFX_goal_generic_major_war
+		icon = GFX_focus_ARG_anti_american_propaganda
 		x = 3
 		y = 2
 		prerequisite = { focus = CUB_politika }
 		mutually_exclusive = { focus = CUB_totalpeace }
-		cost = 3
+		cost = 5
 		
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_war_support = 0.05
-			add_ideas = cuba_collectivist_manpower_idea
+			add_war_support = 0.1
+			remove_ideas = american_infulence
 		}
 	}
 
@@ -325,8 +328,8 @@ focus_tree = {
 
 	focus = {
 		id = CUB_komunist1
-		icon = GFX_focus_SOV_the_path_of_marxism_leninism
-		x = 5
+		icon = GFX_focus_SWE_refuge_for_revolutionaries
+		x = 6
 		y = 3
 		mutually_exclusive = { focus = CUB_fasist1 }
 		prerequisite = { focus = CUB_totalwar }
@@ -349,32 +352,30 @@ focus_tree = {
 
 	focus = {
 		id = CUB_komunist2
-		icon = GFX_focus_SOV_proclaim_soviet_hegemony
+		icon = GFX_focus_GER_the_peoples_victory
 		x = 0
 		y = 1
 		prerequisite = { focus = CUB_komunist1 }
 		relative_position_id = CUB_komunist1
 		cost = 5
+		available = {
+			communism > 0.3
+		}
 		
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_war_support = 0.05
-			add_popularity = { 
-				ideology = communism
-				popularity = 0.15
-			}
-			swap_ideas = {
-				remove_idea = bad_geurilla_staff
-				add_idea = good_geurilla_staff
-			}
+	       set_politics = {
+			ruling_party = communism
+			elections_allowed = no
+		   }
 		}
 	}
 
 	focus = {
 		id = CUB_komunist3
-		icon = GFX_focus_SOV_the_supreme_soviet
-		x = 0
+		icon = GFX_focus_generic_communist_industry
+		x = 1
 		y = 1
 		prerequisite = { focus = CUB_komunist2 }
 		relative_position_id = CUB_komunist2
@@ -383,19 +384,29 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_timed_idea = {
-				idea = good_geurilla_indepence
-				days = 730
+			315 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
 			}
-			add_war_support = 0.05
-			add_popularity = { 
-				ideology = communism
-				popularity = 0.35
-			}
-			set_politics = {
-				ruling_party = communism
-				elections_allowed = no
-			}
+		}
+	}
+	focus = {
+		id = CUB_integrate_guerrila_leadership
+		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		x = -1
+		y = 1
+		prerequisite = { focus = CUB_komunist2 }
+		relative_position_id = CUB_komunist2
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = good_geurilla_staff
 		}
 	}
 
@@ -419,10 +430,10 @@ focus_tree = {
 
 	focus = {
 		id = CUB_join_comintern
-		icon = GFX_focus_SOV_builder_of_the_red_army
-		x = 0
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		x = -1
 		y = 1
-		prerequisite = { focus = CUB_komunist3 }
+		prerequisite = { focus = CUB_komunist3 focus = CUB_integrate_guerrila_leadership }
 		relative_position_id = CUB_komunist3
 		cost = 5
 		
@@ -435,79 +446,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = CUB_annex
-		icon = GFX_focus_generic_provoke_border_clashes
-		x = 3
-		y = 7
-		prerequisite = { focus = CUB_join_comintern focus = CUB_join_axis }
-		cost = 10
-		
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_state_core = 318
-			add_state_core = 319
-			add_state_core = 313
-			add_state_core = 312
-			add_state_core = 311
-			add_state_core = 314
-			add_state_core = 317
-			add_state_core = 316
-			add_state_core = 304
-			add_state_core = 685
-			add_state_core = 493
-			add_state_core = 306
-			add_state_core = 486
-			add_state_core = 489
-			add_state_core = 307
-			add_state_core = 488
-			create_wargoal = {
-				type = annex_everything
-				target = BLZ
-			}
-			create_wargoal = {
-				type = annex_everything
-				target = HAI
-			}
-			create_wargoal = {
-				type = annex_everything
-				target = DOM
-			}
-			create_wargoal = {
-				type = annex_everything
-				target = HON
-			}
-			create_wargoal = {
-				type = annex_everything
-				target = ELS
-			}
-			create_wargoal = {
-				type = annex_everything
-				target = GUA
-			}
-			create_wargoal = {
-				type = annex_everything
-				target = NIC
-			}
-			create_wargoal = {
-				type = annex_everything
-				target = COS
-			}
-			create_wargoal = {
-				type = annex_everything
-				target = PAN
-			}
-			create_wargoal = {
-				type = annex_everything
-				target = COL
-			}
-			create_wargoal = {
-				type = annex_everything
-				target = VEN
-			}
-		}
-	}
+	
 
 	focus = {
 		id = CUB_totalpeace
@@ -775,12 +714,10 @@ focus_tree = {
 		id = CUB_ekonomi
 		icon = GFX_focus_ITA_devaluate_the_lire
 		prerequisite = { focus = CUB_Reform }
-		x = 10
+		x = 12
 		y = 1
 		cost = 5
-		available = {
-			is_ai = no
-		}
+		
 		
 		available_if_capitulated = yes
 
@@ -799,6 +736,9 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CUB_build_wide_focus
 		}
+		available = {
+			NOT = { has_idea = CUB_investment }
+		}
 		x = 11
 		y = 2
 		cost = 5
@@ -806,6 +746,10 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_timed_idea = {
+				idea = CUB_investment
+				days = 60
+			}
 		315 = {
 				add_dynamic_modifier = {
 					modifier = CUB_build_tall
@@ -817,16 +761,23 @@ focus_tree = {
 	}
 	focus = {
 		id = CUB_improve_island
-		icon = GFX_focus_DEN_limited_regulations
+		icon = GFX_focus_generic_monetary_union
 		prerequisite = { focus = CUB_build_tall_focus }
+		available = {
+			NOT = { has_idea = CUB_investment }
+		}
 		
-		x = 12
+		x = 14
 		y = 3
 		cost = 5
 		
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_timed_idea = {
+				idea = CUB_investment
+				days = 60
+			}
 		315 = {
 
 				add_dynamic_modifier = {
@@ -847,14 +798,20 @@ focus_tree = {
 		id = CUB_build_dam
 		icon = GFX_focus_BEL_dam_the_consequences
 		prerequisite = { focus = CUB_build_tall_focus }
-		
-		x = 12
+		available = {
+			NOT = { has_idea = CUB_investment }
+		}
+		x = 14
 		y = 4
 		cost = 5
 		
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_timed_idea = {
+				idea = CUB_investment
+				days = 60
+			}
 		315 = {
 			
 				add_building_construction = {
@@ -876,16 +833,22 @@ focus_tree = {
 	}
 	focus = {
 		id = CUB_more_resource
-		icon = GFX_focus_BEL_dam_the_consequences
+		icon = GFX_focus_generic_coal_mining
 		prerequisite = { focus = CUB_build_tall_focus }
-		
-		x = 12
+		available = {
+			NOT = { has_idea = CUB_investment }
+		}
+		x = 14
 		y = 5
 		cost = 5
 		
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_timed_idea = {
+				idea = CUB_investment
+				days = 60
+			}
 		315 = {
 			add_dynamic_modifier = {
 					modifier = CUB_build_tall_3
@@ -901,16 +864,22 @@ focus_tree = {
 }
 focus = {
 		id = CUB_improved_industry
-		icon = GFX_focus_BEL_dam_the_consequences
+		icon = GFX_focus_generic_modernize_industry
 		prerequisite = { focus = CUB_build_tall_focus }
 		
-		x = 12
+		x = 14
 		y = 6
 		cost = 5
-		
+		available = {
+			NOT = { has_idea = CUB_investment }
+		}
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_timed_idea = {
+				idea = CUB_investment
+				days = 60
+			}
 		315 = {
 			add_dynamic_modifier = {
 					modifier = CUB_build_tall_4
@@ -924,6 +893,38 @@ focus = {
 		}
 	}
 }
+focus = {
+		id = CUB_other_islands
+		icon = GFX_focus_generic_low_cost_housing
+		prerequisite = { focus = CUB_improved_industry }
+		available = {
+			owns_state = 318
+			owns_state = 319
+		}
+		
+		x = 14
+		y = 7
+		cost = 12
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		318 = {
+			add_dynamic_modifier = {
+					modifier = CUB_build_tall_4
+					scope = CUB
+				}
+		}
+		319 = {
+			add_dynamic_modifier = {
+					modifier = CUB_build_tall_4
+					scope = CUB
+				}
+				
+		   
+		}
+	}
+}
 	focus = {
 		id = CUB_build_wide_focus
 		icon = GFX_focus_DEN_heavy_regulations
@@ -931,14 +932,24 @@ focus = {
 			focus = CUB_build_tall_focus
 		}
 		prerequisite = { focus = CUB_ekonomi }
-		x = 9
+		x = 13
 		y = 2
 		cost = 5
 		
 		available_if_capitulated = yes
 
 		completion_reward = {
+			
 		    add_ideas = cub_build_wide
+			315 = {
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 		   
 		}
 	}
@@ -948,7 +959,7 @@ focus = {
 		icon = GFX_focus_GER_vereinigte_stahlwerke
 		prerequisite = { focus = CUB_build_tall_focus focus = CUB_build_wide_focus }
 		
-		x = 10
+		x = 12
 		y = 3
 		cost = 5
 		
@@ -956,11 +967,11 @@ focus = {
 
 		completion_reward = {
 			315 = {
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 5
 				
 				add_building_construction = {
 					type = industrial_complex
-					level = 4
+					level = 5
 					instant_build = yes
 				}
 			}
@@ -982,10 +993,10 @@ focus = {
 
 		completion_reward = {
 			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = arms_factory
-					level = 4
+					level = 5
 					instant_build = yes
 				}
 			}
@@ -997,7 +1008,7 @@ focus = {
 		id = CUB_produksiyon
 		icon = GFX_focus_ETH_freedom_at_gunpoint
 		prerequisite = { focus = CUB_build_wide_focus }
-		x = 8
+		x = 10
 		y = 3
 		cost = 5
 		
@@ -1012,9 +1023,7 @@ focus = {
 		id = CUB_arastirma
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = CUB_produksiyon }
-		mutually_exclusive = {
-			focus = CUB_insaat
-		}
+	
 		relative_position_id = CUB_produksiyon
 		x = -1
 		y = 2
@@ -1031,10 +1040,8 @@ focus = {
 		id = CUB_insaat
 		icon = GFX_goal_generic_construction
 		prerequisite = { focus = CUB_produksiyon }
-		mutually_exclusive = {
-			focus = CUB_arastirma
-		}
-		x = 9
+	
+		x = 11
 		y = 5
 		cost = 5
 		
@@ -1048,11 +1055,11 @@ focus = {
 	focus = {
 		id = CUB_fixing_the_island
 		icon = GFX_focus_RAJ_special_economic_zones
-		prerequisite = { focus = CUB_insaat focus = CUB_arastirma }
+		prerequisite = { focus = CUB_insaat focus = CUB_arastirma focus = CUB_improved_industry }
 		mutually_exclusive = {
 			focus = CUB_arastirma
 		}
-		x = 10
+		x = 12
 		y = 7
 		cost = 5
 		
