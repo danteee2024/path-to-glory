@@ -533,7 +533,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GRE_the_anatolian_refugees
 		will_lead_to_war_with = TUR
-		cost = 45
+		cost = 15
 		ai_will_do = {
 			base = 1
 		}
@@ -1879,7 +1879,7 @@ focus_tree = {
 		y = 1
 
 		relative_position_id = GRE_the_right_to_rule
-		cost = 3
+		cost = 9
 		ai_will_do = {
 			base = 5
 		}
