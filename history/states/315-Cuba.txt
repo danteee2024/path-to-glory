@@ -7,7 +7,7 @@ state= {
 		chromium=90 # was: 160
 	}
 	
-	state_category = town
+	state_category = megalopolis
 
 	history= {
 		owner = CUB

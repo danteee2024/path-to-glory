@@ -1,0 +1,1066 @@
+focus_tree = {
+	id = cuba_focus
+	
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = CUB
+		}
+	}
+
+	continuous_focus_position = { x = 50 y = 1500 }
+	
+	default = no
+
+	initial_show_position = {
+		focus = CUB_Reform
+	}
+
+	focus = {
+		id = CUB_Reform
+		icon = GFX_focus_BRA_utilize_security_law
+		x = 0
+		y = 0
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = CUB_ordu
+		icon = GFX_goal_generic_axis_build_infantry
+		x = -10
+		y = 1
+		prerequisite = { focus = CUB_Reform }
+		relative_position_id = CUB_Reform
+		cost = 2
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 40
+			air_experience = 30
+			navy_experience = 25
+		}
+	}
+
+	focus = {
+		id = CUB_ucuzluk
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		x = -2
+		y = 1
+		prerequisite = { focus = CUB_ordu }
+		relative_position_id = CUB_ordu
+		mutually_exclusive = { focus = CUB_kalite }
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = ucuz_army_idea
+		}
+	}
+
+	focus = {
+		id = CUB_ucuzluk_donanma
+		icon = GFX_goal_continuous_naval_production
+		x = 0
+		y = 1
+		prerequisite = { focus = CUB_ucuzluk }
+		relative_position_id = CUB_ucuzluk
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = ucuz_navy_idea
+		}
+	}
+
+	focus = {
+		id = CUB_ucuzluk_ucak
+		icon = GFX_goal_continuous_air_production
+		x = 0
+		y = 1
+		prerequisite = { focus = CUB_ucuzluk_donanma }
+		relative_position_id = CUB_ucuzluk_donanma
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_equipment_to_stockpile = { type = small_plane_airframe_0 amount = 400 }
+		}
+	}
+
+	focus = {
+		id = CUB_ucuzluk_ekipman
+		icon = GFX_goal_generic_army_motorized
+		x = 0
+		y = 1
+		prerequisite = { focus = CUB_ucuzluk_ucak }
+		relative_position_id = CUB_ucuzluk_ucak
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_equipment_to_stockpile = { type = motorized_equipment amount = 500 }
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 3500 }
+		}
+	}
+
+	focus = {
+		id = CUB_kalite
+		icon = GFX_focus_chi_army_reform
+		x = 2
+		y = 1
+		prerequisite = { focus = CUB_ordu }
+		relative_position_id = CUB_ordu
+		mutually_exclusive = { focus = CUB_ucuzluk }
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = kaliteli_army_idea
+		}
+	}
+
+	focus = {
+		id = CUB_kalite_donanma
+		icon = GFX_focus_generic_navy_battleship2
+		x = 0
+		y = 1
+		prerequisite = { focus = CUB_kalite }
+		relative_position_id = CUB_kalite
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = kaliteli_navy_idea
+		}
+	}
+
+	focus = {
+		id = CUB_kalite_general
+		icon = GFX_focus_generic_vatican_agents
+		x = 0
+		y = 1
+		prerequisite = { focus = CUB_kalite_donanma }
+		relative_position_id = CUB_kalite_donanma
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_corps_commander_role = {
+				character = CUB_teo_general
+				traits = { infantry_officer winter_specialist }
+				skill = 4
+				legacy_id = -1
+				attack_skill = 7
+				defense_skill = 4
+				planning_skill = 6
+				logistics_skill = 7
+			}
+		}
+	}
+
+	focus = {
+		id = CUB_kalite_general_2
+		icon = GFX_focus_ETH_ecole_militaire_haile_selassie_1er
+		x = 0
+		y = 1
+		prerequisite = { focus = CUB_kalite_general }
+		relative_position_id = CUB_kalite_general
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_corps_commander_role = {
+				character = CUB_tolga_general
+				traits={ armor_officer desert_fox }
+			    skill=5
+			    attack_skill=6
+			    defense_skill=6
+			    planning_skill=8
+			    logistics_skill=7
+			    legacy_id=-1
+			}
+		}
+	}
+
+	focus = {
+		id = CUB_ace
+		icon = GFX_focus_generic_copy_plane_designs
+		x = 2
+		y = 1
+		prerequisite = { focus = CUB_ucuzluk_ekipman focus = CUB_kalite_general_2 }
+		relative_position_id = CUB_ucuzluk_ekipman
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = ace_gen
+		}
+	}
+
+	focus = {
+		id = CUB_politika
+		icon = GFX_focus_POL_complete_april_constitution
+		x = 0
+		y = 1
+		prerequisite = { focus = CUB_Reform }
+		relative_position_id = CUB_Reform
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = CUB_totalwar
+		icon = GFX_goal_generic_major_war
+		x = 3
+		y = 2
+		prerequisite = { focus = CUB_politika }
+		mutually_exclusive = { focus = CUB_totalpeace }
+		cost = 3
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_ideas = cuba_collectivist_manpower_idea
+		}
+	}
+
+	focus = {
+		id = CUB_fasist1
+		icon = GFX_focus_generic_fascist_propaganda
+		x = 1
+		y = 3
+		mutually_exclusive = { focus = CUB_komunist1 }
+		prerequisite = { focus = CUB_totalwar }
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_stability = -0.025
+			add_popularity = { 
+				ideology = fascism
+				popularity = 0.15
+			}
+		}
+	}
+
+	focus = {
+		id = CUB_fasist2
+		icon = GFX_focus_ITA_generic_fascist_workers
+		x = 0
+		y = 1
+		prerequisite = { focus = CUB_fasist1 }
+		relative_position_id = CUB_fasist1
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_popularity = { 
+				ideology = fascism
+				popularity = 0.15
+			}
+			remove_ideas = bad_geurilla_problem
+		}
+	}
+
+	focus = {
+		id = CUB_fasist3
+		icon = GFX_focus_generic_fascist_troops
+		x = 0
+		y = 1
+		prerequisite = { focus = CUB_fasist2 }
+		relative_position_id = CUB_fasist2
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_popularity = { 
+				ideology = fascism
+				popularity = 0.35
+			}
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+			remove_ideas = bad_geurilla_staff
+			hidden_effect = {
+				set_party_name = { 
+					ideology = fascism
+					long_name = CUB_fascism_party
+					name = CUB_fascism_party_long
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CUB_komunist1
+		icon = GFX_focus_SOV_the_path_of_marxism_leninism
+		x = 5
+		y = 3
+		mutually_exclusive = { focus = CUB_fasist1 }
+		prerequisite = { focus = CUB_totalwar }
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_popularity = { 
+				ideology = communism
+				popularity = 0.15
+			}
+			swap_ideas = {
+				remove_idea = bad_geurilla_problem
+				add_idea = good_geurilla_problem
+			}
+		}
+	}
+
+	focus = {
+		id = CUB_komunist2
+		icon = GFX_focus_SOV_proclaim_soviet_hegemony
+		x = 0
+		y = 1
+		prerequisite = { focus = CUB_komunist1 }
+		relative_position_id = CUB_komunist1
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_popularity = { 
+				ideology = communism
+				popularity = 0.15
+			}
+			swap_ideas = {
+				remove_idea = bad_geurilla_staff
+				add_idea = good_geurilla_staff
+			}
+		}
+	}
+
+	focus = {
+		id = CUB_komunist3
+		icon = GFX_focus_SOV_the_supreme_soviet
+		x = 0
+		y = 1
+		prerequisite = { focus = CUB_komunist2 }
+		relative_position_id = CUB_komunist2
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = good_geurilla_indepence
+				days = 730
+			}
+			add_war_support = 0.05
+			add_popularity = { 
+				ideology = communism
+				popularity = 0.35
+			}
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+		}
+	}
+
+	focus = {
+		id = CUB_join_axis
+		icon = GFX_focus_ger_reichskommisariats
+		x = 0
+		y = 1
+		prerequisite = { focus = CUB_fasist3 }
+		relative_position_id = CUB_fasist3
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			GER = {
+				country_event = { id = generic.2 }
+			}
+		}
+	}
+
+	focus = {
+		id = CUB_join_comintern
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		x = 0
+		y = 1
+		prerequisite = { focus = CUB_komunist3 }
+		relative_position_id = CUB_komunist3
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			SOV = {
+				country_event = { id = generic.2 }
+			}
+		}
+	}
+
+	focus = {
+		id = CUB_annex
+		icon = GFX_focus_generic_provoke_border_clashes
+		x = 3
+		y = 7
+		prerequisite = { focus = CUB_join_comintern focus = CUB_join_axis }
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_state_core = 318
+			add_state_core = 319
+			add_state_core = 313
+			add_state_core = 312
+			add_state_core = 311
+			add_state_core = 314
+			add_state_core = 317
+			add_state_core = 316
+			add_state_core = 304
+			add_state_core = 685
+			add_state_core = 493
+			add_state_core = 306
+			add_state_core = 486
+			add_state_core = 489
+			add_state_core = 307
+			add_state_core = 488
+			create_wargoal = {
+				type = annex_everything
+				target = BLZ
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = HAI
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = DOM
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = HON
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = ELS
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = GUA
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = NIC
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = COS
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = PAN
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = COL
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = VEN
+			}
+		}
+	}
+
+	focus = {
+		id = CUB_totalpeace
+		icon = GFX_goal_generic_improve_relations
+		x = -3
+		y = 2
+		prerequisite = { focus = CUB_politika }
+		mutually_exclusive = { focus = CUB_totalwar }
+		cost = 3
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_ideas = cuba_liberty_manpower_idea
+		}
+	}
+
+	focus = {
+		id = CUB_kral1
+		icon = GFX_focus_generic_home_defense
+		x = -1
+		y = 3
+		mutually_exclusive = { focus = CUB_demokrat1 }
+		prerequisite = { focus = CUB_totalpeace }
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_popularity = { 
+				ideology = neutrality
+				popularity = 0.15
+			}
+		}
+	}
+
+	focus = {
+		id = CUB_kral2
+		icon = GFX_focus_generic_royal_wedding
+		x = 0
+		y = 1
+		prerequisite = { focus = CUB_kral1 }
+		relative_position_id = CUB_kral1
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_popularity = { 
+				ideology = neutrality
+				popularity = 0.15
+			}
+			remove_ideas = bad_geurilla_problem
+		}
+	}
+
+	focus = {
+		id = CUB_kral3
+		icon = GFX_focus_generic_monarchy_2
+		x = 0
+		y = 1
+		prerequisite = { focus = CUB_kral2 }
+		relative_position_id = CUB_kral2
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_popularity = { 
+				ideology = neutrality
+				popularity = 0.35
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			remove_ideas = bad_geurilla_staff
+			hidden_effect = {
+				set_party_name = { 
+					ideology = neutrality
+					long_name = CUB_neutrality_party
+					name = CUB_neutrality_party_long
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CUB_join_faction
+		icon = GFX_goal_generic_alliance
+		x = 0
+		y = 1
+		prerequisite = { focus = CUB_kral3 }
+		relative_position_id = CUB_kral3
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			set_rule = {
+				can_create_factions = yes
+			}
+		}
+	}
+
+	focus = {
+		id = CUB_demokrat1
+		icon = GFX_focus_generic_population_growth
+		x = -2
+		y = 1
+		mutually_exclusive = { focus = CUB_kral1 }
+		prerequisite = { focus = CUB_totalpeace }
+		relative_position_id = CUB_totalpeace
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_popularity = { 
+				ideology = democratic
+				popularity = 0.15
+			}
+		}
+	}
+
+	focus = {
+		id = CUB_demokrat2
+		icon = GFX_focus_generic_improve_the_administration
+		x = 0
+		y = 1
+		prerequisite = { focus = CUB_demokrat1 }
+		relative_position_id = CUB_demokrat1
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_popularity = { 
+				ideology = democratic
+				popularity = 0.15
+			}
+			remove_ideas = bad_geurilla_problem
+		}
+	}
+
+	focus = {
+		id = CUB_demokrat3
+		icon = GFX_focus_generic_horse_studs
+		x = 0
+		y = 1
+		prerequisite = { focus = CUB_demokrat2 }
+		relative_position_id = CUB_demokrat2
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_popularity = { 
+				ideology = democratic
+				popularity = 0.35
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = no
+			}
+			remove_ideas = bad_geurilla_staff
+		}
+	}
+
+	focus = {
+		id = CUB_join_allies
+		icon = GFX_focus_eng_imperial_federation
+		x = 0
+		y = 1
+		prerequisite = { focus = CUB_demokrat3 }
+		relative_position_id = CUB_demokrat3
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			ENG = {
+				country_event = { id = generic.2 }
+			}
+		}
+	}
+
+	focus = {
+		id = CUB_kraliyet
+		icon = GFX_focus_generic_monarchy_1
+		x = 0
+		y = 4
+		prerequisite = { focus = CUB_kral3 focus = CUB_demokrat3 }
+		relative_position_id = CUB_totalpeace
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_state_core = 318
+			add_state_core = 319
+			add_state_core = 313
+			add_state_core = 312
+			add_state_core = 311
+			add_state_core = 314
+			add_state_core = 317
+			add_state_core = 316
+			add_state_core = 304
+			add_state_core = 685
+			add_state_core = 493
+			add_state_core = 306
+			add_state_core = 486
+			add_state_core = 489
+			add_state_core = 307
+			add_state_core = 488
+			create_wargoal = {
+				type = annex_everything
+				target = BLZ
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = HAI
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = DOM
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = HON
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = ELS
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = GUA
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = NIC
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = COS
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = PAN
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = COL
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = VEN
+			}
+		}
+	}
+
+	focus = {
+		id = CUB_ekonomi
+		icon = GFX_focus_ITA_devaluate_the_lire
+		prerequisite = { focus = CUB_Reform }
+		x = 10
+		y = 1
+		cost = 5
+		available = {
+			is_ai = no
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = cub_more_taxes
+				days = 1095
+			}
+		}
+	}
+	
+	focus = {
+		id = CUB_build_tall_focus
+		icon = GFX_focus_DEN_limited_regulations
+		prerequisite = { focus = CUB_ekonomi }
+		mutually_exclusive = {
+			focus = CUB_build_wide_focus
+		}
+		x = 11
+		y = 2
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		315 = {
+				add_dynamic_modifier = {
+					modifier = CUB_build_tall
+					scope = CUB
+				}	
+			}
+		   
+		}
+	}
+	focus = {
+		id = CUB_improve_island
+		icon = GFX_focus_DEN_limited_regulations
+		prerequisite = { focus = CUB_build_tall_focus }
+		
+		x = 12
+		y = 3
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		315 = {
+
+				add_dynamic_modifier = {
+					modifier = CUB_build_tall_2
+					scope = CUB
+				}
+				remove_dynamic_modifier = {
+					modifier = CUB_build_tall
+					scope = CUB
+				}
+				
+				
+			}
+		   
+		}
+	}
+	focus = {
+		id = CUB_build_dam
+		icon = GFX_focus_BEL_dam_the_consequences
+		prerequisite = { focus = CUB_build_tall_focus }
+		
+		x = 12
+		y = 4
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		315 = {
+			
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = {
+						id = 7622
+					}
+				}
+			}
+			custom_effect_tooltip = {
+				localization_key = building_state_modifier|dam
+				INDENT = "    "
+				
+			}
+		   
+		}
+	}
+	focus = {
+		id = CUB_more_resource
+		icon = GFX_focus_BEL_dam_the_consequences
+		prerequisite = { focus = CUB_build_tall_focus }
+		
+		x = 12
+		y = 5
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		315 = {
+			add_dynamic_modifier = {
+					modifier = CUB_build_tall_3
+					scope = CUB
+				}
+				remove_dynamic_modifier = {
+					modifier = CUB_build_tall_2
+					scope = CUB
+				}
+		   
+		}
+	}
+}
+focus = {
+		id = CUB_improved_industry
+		icon = GFX_focus_BEL_dam_the_consequences
+		prerequisite = { focus = CUB_build_tall_focus }
+		
+		x = 12
+		y = 6
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		315 = {
+			add_dynamic_modifier = {
+					modifier = CUB_build_tall_4
+					scope = CUB
+				}
+				remove_dynamic_modifier = {
+					modifier = CUB_build_tall_3
+					scope = CUB
+				}
+		   
+		}
+	}
+}
+	focus = {
+		id = CUB_build_wide_focus
+		icon = GFX_focus_DEN_heavy_regulations
+		mutually_exclusive = {
+			focus = CUB_build_tall_focus
+		}
+		prerequisite = { focus = CUB_ekonomi }
+		x = 9
+		y = 2
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		    add_ideas = cub_build_wide
+		   
+		}
+	}
+
+	focus = {
+		id = CUB_fabrika1
+		icon = GFX_focus_GER_vereinigte_stahlwerke
+		prerequisite = { focus = CUB_build_tall_focus focus = CUB_build_wide_focus }
+		
+		x = 10
+		y = 3
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			315 = {
+				add_extra_state_shared_building_slots = 4
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+			
+			
+		}
+	}
+
+	focus = {
+		id = CUB_fabrika2
+		icon = GFX_focus_generic_reorient_production
+		prerequisite = { focus = CUB_fabrika1 }
+		relative_position_id = CUB_fabrika1
+		x = 0
+		y = 1
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+
+		}
+	}
+
+	focus = {
+		id = CUB_produksiyon
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		prerequisite = { focus = CUB_build_wide_focus }
+		x = 8
+		y = 3
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = cuba_production_idea
+		}
+	}
+
+	focus = {
+		id = CUB_arastirma
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = CUB_produksiyon }
+		mutually_exclusive = {
+			focus = CUB_insaat
+		}
+		relative_position_id = CUB_produksiyon
+		x = -1
+		y = 2
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = cuba_research_idea
+		}
+	}
+
+	focus = {
+		id = CUB_insaat
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = CUB_produksiyon }
+		mutually_exclusive = {
+			focus = CUB_arastirma
+		}
+		x = 9
+		y = 5
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = cuba_construction_idea
+			
+		}
+	}
+	focus = {
+		id = CUB_fixing_the_island
+		icon = GFX_focus_RAJ_special_economic_zones
+		prerequisite = { focus = CUB_insaat focus = CUB_arastirma }
+		mutually_exclusive = {
+			focus = CUB_arastirma
+		}
+		x = 10
+		y = 7
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			remove_ideas = CUB_great_depression
+			
+		}
+	}
+}

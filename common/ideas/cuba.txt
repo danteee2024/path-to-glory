@@ -1,0 +1,341 @@
+ideas = {
+	country = {
+
+		ace_gen = {
+
+			picture = generic_soldiers_good
+			
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				air_ace_generation_chance_factor = 0.50
+		        air_mission_xp_gain_factor = 0.15
+			}
+		}
+
+		american_infulence = {
+			
+			picture = ARG_american_allyship
+
+			allowed = {
+				always = yes
+			}
+			targeted_modifier = {
+				tag = USA
+				trade_cost_for_target_factor = -0.75
+			}
+
+			modifier = {
+				trade_laws_cost_factor = 3
+				democratic_drift = 0.01
+			}
+		}
+		cub_more_taxes = {
+			
+			picture = HUN_revaluing_the_pengo
+
+			allowed = {
+				always = yes
+			}
+		
+
+			modifier = {
+				consumer_goods_factor = -0.25
+				stability_factor = -0.15
+			}
+		}
+		cub_build_wide = {
+			
+			picture = HUN_revaluing_the_pengo
+
+			allowed = {
+				always = yes
+			}
+		
+
+			modifier = {
+				production_speed_buildings_factor = 0.075
+			}
+		}
+
+		bad_geurilla_problem = {
+
+			picture = generic_communist_army
+			
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = -0.25
+				communism_drift = 0.02
+			}
+		}
+
+		
+
+		good_geurilla_problem = {
+
+			picture = generic_soldiers_good
+			
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = 0.25
+				communism_drift = 0.05
+			}
+		}
+
+		good_geurilla_staff = {
+
+			picture = generic_lead_by_example
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_Factor = 0.15
+				planning_speed = 0.15
+			}
+		}
+
+		good_geurilla_indepence = {
+
+			picture = communist_victory
+			
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 1.0
+				drift_defence_factor = 0.75
+			}
+			rule = {
+				can_create_factions = yes
+			}
+		}
+
+		ucuz_army_idea = {
+
+			picture = chi_army_corruption2
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				land_doctrine_cost_factor = -0.15
+				air_doctrine_cost_factor = -0.15
+				minimum_training_level = -0.05
+				training_time_factor = -0.15
+				mobilization_speed = -0.15
+				weekly_manpower = 500
+			}
+			equipment_bonus = {
+				artillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.25
+				}
+			}
+		}
+
+		ucuz_navy_idea = {
+
+			picture = generic_the_london_naval_treaty
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				navy_leader_cost_factor = -0.25
+				experience_gain_navy_factor = 0.25
+				naval_doctrine_cost_factor = -0.25
+				refit_ic_cost = -0.25
+				refit_speed = 0.25
+			}
+			equipment_bonus = {
+				screen_ship = {
+					naval_speed = 0.15
+					naval_range = 0.25
+					instant = yes
+					build_cost_ic = -0.30
+				}
+				carrier = {
+					naval_speed = 0.15
+					naval_range = 0.25
+					instant = yes
+					build_cost_ic = -0.30
+				}
+				capital_ship = {
+					naval_speed = 0.15
+					naval_range = 0.25
+					instant = yes
+					build_cost_ic = -0.35
+				}
+				submarine = {
+					naval_speed = 0.15
+					naval_range = 0.25
+					instant = yes
+					build_cost_ic = -0.25
+				}
+			}
+		}
+
+		kaliteli_army_idea = {
+
+			picture = generic_reserve_divisions
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				command_power_gain_mult = 0.2
+				army_core_defence_factor = 0.20
+				army_core_attack_factor = 0.20
+				surrender_limit = 0.15
+				training_time_factor = 0.10
+				minimum_training_level = 0.05
+			}
+		}
+
+		kaliteli_navy_idea = {
+
+			picture = generic_navy_bonus
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				positioning = 0.25
+				naval_coordination = 0.25
+				experience_gain_navy_factor = -0.05
+			}
+		}
+
+		cuba_construction_idea = {
+
+			picture = revolutionized_industry
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+		}
+
+		cuba_production_idea = {
+
+			picture = r56production
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		cuba_research_idea = {
+
+			picture = ElizarIncrease
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.05
+		}
+		}
+		CUB_great_depression = {
+
+			picture = great_depression
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				industrial_capacity_factory = -0.35
+		}
+		}
+
+		cuba_collectivist_manpower_idea = {
+
+			picture = system_decentralization
+
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				political_power_gain = 0.15
+				monthly_population = 0.25
+				weekly_manpower = 2750
+			}
+		}
+
+		cuba_liberty_manpower_idea = {
+
+			picture = democratic_bastion
+
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				political_power_gain = 0.25
+				monthly_population = 0.85
+				weekly_manpower = 750
+			}
+		}
+	}
+}
