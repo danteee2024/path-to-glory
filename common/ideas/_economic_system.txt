@@ -161,16 +161,15 @@ ideas = {
             visible = {
                 has_completed_focus = USA_american_market
             }
-            
             removal_cost = -1
             modifier = {
                 global_building_slots_factor = 0.25
-                consumer_goods_factor = -0.25
-                research_speed_factor = 0.10
+                consumer_goods_factor = -0.20
+                research_speed_factor = 0.075
                 production_speed_buildings_factor = -0.15
-                local_resources_factor = 0.3
+                local_resources_factor = 0.2
                 political_power_factor = -0.1
-                min_export = 0.05
+                min_export = 0.1
             }
             cost = 200
             cancel_if_invalid = yes
