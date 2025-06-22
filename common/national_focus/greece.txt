@@ -1151,9 +1151,7 @@ focus_tree = {
 	focus = {
 		id = GRE_depose_the_reactionaries
 		icon = GFX_focus_SWE_neither_death_nor_dishonor
-		prerequisite = { focus = GRE_clearing_land_for_industrial_expansion }
-		prerequisite = { focus = GRE_red_militias }
-		prerequisite = { focus = GRE_the_greek_industrial_revolution }
+		prerequisite = { focus = GRE_clearing_land_for_industrial_expansion focus = GRE_the_greek_industrial_revolution focus = GRE_red_militias }
 		x = 0
 		y = 3
 		relative_position_id = GRE_a_socialist_economy
@@ -3237,7 +3235,6 @@ focus_tree = {
 		id = GRE_cement_greco_german_ties
 		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = GRE_the_modern_movement }
-		available = { has_completed_focus = GRE_bolster_the_schachtplan }
 		x = 0
 		y = 1
 		relative_position_id = GRE_the_modern_movement
@@ -3875,12 +3872,12 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
 		completion_reward = {
-			add_political_power = -100
+			add_political_power = -120
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_timed_idea = {
 				idea = JAP_investment
-				days = 100
+				days = 160
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			182 = {
@@ -3900,7 +3897,7 @@ focus_tree = {
 						instant_build = yes
 					}
 					add_building_construction = {
-						type = dockyard
+						type = arms_factory
 						level = 1
 						instant_build = yes
 					}
@@ -3918,7 +3915,7 @@ focus_tree = {
 					}
 					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
-						type = industrial_complex
+						type = arms_factory
 						level = 1
 						instant_build = yes
 					}
@@ -3946,7 +3943,7 @@ focus_tree = {
 						instant_build = yes
 					}
 					add_building_construction = {
-						type = dockyard
+						type = arms_factory
 						level = 1
 						instant_build = yes
 					}
@@ -3969,7 +3966,7 @@ focus_tree = {
 						instant_build = yes
 					}
 					add_building_construction = {
-						type = dockyard
+						type = arms_factory
 						level = 1
 						instant_build = yes
 					}
@@ -4631,10 +4628,10 @@ focus_tree = {
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = industrial_complex
-						level = 2
+						level = 1
 						instant_build = yes
 					}
 				}
