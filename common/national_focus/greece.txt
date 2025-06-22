@@ -2026,7 +2026,7 @@ focus_tree = {
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = GRE_schachtplan_modified
-				add_idea = GRE_schachtplan_fascistised
+				add_idea = GRE_Recovery
 			}
 			add_research_slot = 1
 			add_stability = 0.10

@@ -327,6 +327,26 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.15
 			}
 		}
+		
+		GRE_Recovery = {
+			
+			allowed = {
+				original_tag = GRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_civilian_economy_boost
+
+			removal_cost = -2	
+			modifier = {
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_arms_factory_factor = 0.05
+				consumer_goods_factor = -0.3
+			}
+		}
 
 		GRE_sophistry_and_science_idea = {
 			removal_cost = -1
