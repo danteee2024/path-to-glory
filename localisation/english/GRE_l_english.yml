@@ -391,12 +391,13 @@
  GRE_democratic_party_appointed:0 "Panagis Tsaldaris was appointed Prime Minister."
  GRE_divided_nation_tt:0 "§WUnlocks a§! §YEvent Option§! §Wto prevent the§! §RUnion Strikes§! §Wfrom deteriorating into a§! §YCivil War.§!"
  GRE_divided_no_commie_cw_tt:"§WOn Focus Selection:§! §RRemoves§! §Wthe§! §YEvent Option§! §Wthat allows the§! §RUnion Strikes§! §Wto deteriorate into a§! §YCivil War.§!"
- GRE_military_industry:0 "Invest in our Military"
- GRE_military_industry_desc:0 ""
+ GRE_Big_industry:0 "Invest in our Industry"
+ GRE_Big_industry_desc:0 ""
  GRE_the_hellenic_air_force_expanded:0 "Hellenic Air Force Expanded"
  GRE_the_hellenic_air_force_expanded_desc:0 ""
  GRE_the_hellenic_air_equipment:0 "Hellenic Air Equipment Modernization"
  GRE_the_hellenic_air_equipment_desc:0 ""
+ GRE_Big_Industry_tt:0 "For each of your §Ycore states§! in §YEurope§! you will build one §YCivilian Factory§! and one §YDockyard§!."
 # Macedonia
 
  GRE_Macedonian_Nationalism:0 "Oppose Metaxas"
@@ -866,6 +867,7 @@
  GRE_metaxism_2_r56:0 "Metaxism"
  GRE_george_ii_r56:0 "George II"
  GRE_Greco_Autarky:0 "Greco Autarky"
+ GRE_Industry_of_Ships:0 "Industry of Ships"
 
  #Advisors
  GRE_damaskinos:0 "Archbishop Damaskinos"

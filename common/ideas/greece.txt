@@ -946,6 +946,24 @@ ideas = {
 				navy_leader_start_maneuvering_level = 2
 			}
 		}
+				
+		GRE_Industry_of_Ships = {
+				
+			allowed = {
+				original_tag = GRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_coastal_navy
+				
+			removal_cost = -1
+			modifier = {
+				production_speed_dockyard_factor = 0.15
+			}
+		}
 
 		GRE_improving_our_defensive_lines = {
 				
@@ -982,7 +1000,7 @@ ideas = {
 			removal_cost = -1
 				
 			modifier = {
-				conscription = 0.005
+				conscription = 0.01
 			}
 		}
 
