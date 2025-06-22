@@ -2227,7 +2227,7 @@ technologies = {
 	central_planning = {
 		xp_research_type = army
 		xp_unlock_cost = 100
-		max_planning = 0.1
+		max_planning = 0.05
 		max_command_power = 30
 		
 		logistics_company = {
@@ -2981,8 +2981,8 @@ technologies = {
 		xp_unlock_cost = 100
 		supply_consumption_factor = -0.10
 		
-		infantry = {
-			combat_width = -0.3
+		light_armor = {
+			combat_width = -0.2
 		}
 
 		
@@ -3116,6 +3116,9 @@ technologies = {
 			max_organisation = 10
 			default_morale = 0.1
 		}	
+		light_armor = {
+			max_organisation = 0.5
+		}	
 		
 		armored_car_recon = {
 			battalion_mult = {
@@ -3172,7 +3175,7 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 		org_loss_when_moving = -0.25
-		land_reinforce_rate = 0.05
+		land_reinforce_rate = 0.075
 		
 		enable_tactic = tactic_backhand_blow
 
