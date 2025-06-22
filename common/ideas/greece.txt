@@ -981,7 +981,7 @@ ideas = {
 			removal_cost = -1
 				
 			modifier = {
-				conscription = 0.005
+				conscription = 0.01
 			}
 		}
 
@@ -1025,6 +1025,26 @@ ideas = {
 				army_org_factor = 0.04
 			}
 		}		
+		GRE_hellenic_army_4 = { 
+				
+			allowed = {
+				original_tag = GRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_reserve_divisions
+				
+			removal_cost = -1
+				
+			modifier = {
+				conscription = 0.01
+				army_morale_factor = 0.10
+				army_org_factor = 0.10
+			}
+		}	
 
 		GRE_byzantine_army = { 	
 				

@@ -5533,13 +5533,15 @@ focus_tree = {
 		ai_will_do = {
 			base = 1
 		}
-
 		completion_reward = {
+			
+			
+		
 			army_experience = 25
 			add_doctrine_cost_reduction = {
 				name = GRE_the_hellenic_army
 				cost_reduction = 0.5
-				uses = 2
+				uses = 3
 				category = land_doctrine
 			}
 			add_tech_bonus = {
@@ -5547,15 +5549,33 @@ focus_tree = {
 				bonus = 1.0
 				uses = 1
 				category = engineers_tech
-			}
 			add_tech_bonus = {
-				name = GRE_new_weapons_old_tricks
-				bonus = 0.5
-				uses = 2
+				name = GRE_the_backbone_of_our_army
+				bonus = 1.0
+				uses = 1
 				category = infantry_weapons
 			}
+			if = {
+				limit = {
+					NOT = { 
+						has_idea = GRE_hellenic_army_2
+					}
+				}
+				add_ideas = GRE_hellenic_army
+			}
+			if = {
+				limit = {
+					has_idea = GRE_hellenic_army_2
+				}
+				swap_ideas = {
+					remove_idea = GRE_hellenic_army_2
+					add_idea = GRE_hellenic_army_3
+				}
+			}
+
 		}
-	}			
+	}	
+}		
 
 	focus = {
 		id = GRE_the_hellenic_navy 
@@ -5890,8 +5910,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GRE_the_backbone_of_our_army
-		icon = GFX_focus_generic_military_mission
+		id = GRE_new_weapons_old_tricks
+		icon = GFX_goal_generic_army_artillery2
 		prerequisite = { focus = GRE_the_hellenic_army }
 		x = -1
 		y = 1
@@ -5901,36 +5921,13 @@ focus_tree = {
 			base = 1
 		}
 
-		search_filters = { FOCUS_FILTER_MANPOWER }
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = GRE_the_backbone_of_our_army
-				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
-			}
+			army_experience = 10
 			add_tech_bonus = {
-				name = GRE_the_backbone_of_our_army
-				bonus = 1.0
-				uses = 1
-				category = infantry_weapons
-			}
-			if = {
-				limit = {
-					NOT = { 
-						has_idea = GRE_hellenic_army_2
-					}
-				}
-				add_ideas = GRE_hellenic_army
-			}
-			if = {
-				limit = {
-					has_idea = GRE_hellenic_army_2
-				}
-				swap_ideas = {
-					remove_idea = GRE_hellenic_army_2
-					add_idea = GRE_hellenic_army_3
-				}
+				name = GRE_new_weapons_old_tricks
+				bonus = 0.5
+				uses = 3 
+				category = artillery
 			}
 		}
 	}
@@ -5976,12 +5973,11 @@ focus_tree = {
 
 	focus = {
 		id = GRE_embracing_modern_warfare
-		icon = GFX_focus_generic_tank_production
-		prerequisite = { focus = GRE_the_backbone_of_our_army }
-		mutually_exclusive = { focus = GRE_new_weapons_old_tricks }
+		icon = GFX_focus_HABSBURG_the_modern_hussar
+		prerequisite = { focus = GRE_Spartan_Revival }
 		x = 0
 		y = 1
-		relative_position_id = GRE_the_backbone_of_our_army
+		relative_position_id = GRE_Spartan_Revival 
 		cost = 10
 		ai_will_do = {
 			base = 0
@@ -5993,10 +5989,8 @@ focus_tree = {
 
 		completion_reward = {
 			add_tech_bonus = {
-				name = GRE_embracing_modern_warfare
-				bonus = 1
-				uses = 2
-				category = cat_light_armor
+			name = GRE_embracing_modern_warfare
+   			 army_infantry_attack_factor = 0.10  
 			}
 			add_tech_bonus = {
 				name = GRE_embracing_modern_warfare
@@ -6008,10 +6002,10 @@ focus_tree = {
 	}		
 
 	focus = {
-		id = GRE_new_weapons_old_tricks
-		icon = GFX_goal_generic_army_artillery2
+		id = GRE_Spartan_Revival
+		icon = GFX_focus_GRE_reviving_the_spartan_warrior_spirit
 		prerequisite = { focus = GRE_a_legacy_of_war }
-		mutually_exclusive = { focus = GRE_embracing_modern_warfare }
+		mutually_exclusive = { focus = GRE_greek_mechanisation }
 		x = 0
 		y = 1
 		relative_position_id = GRE_a_legacy_of_war
@@ -6021,20 +6015,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			army_experience = 10
-			add_tech_bonus = {
-				name = GRE_new_weapons_old_tricks
-				bonus = 1.0
-				uses = 1
-				technology = tech_recon
-				technology = tech_recon2
-				technology = tech_recon3
-			}
+			army_experience = 30
 			add_tech_bonus = {
 				name = GRE_new_weapons_old_tricks
 				bonus = 0.5
-				uses = 2
-				category = artillery
+				uses = 3 
+				category = infantry_weapons 
 			}
 		}
 	}	
@@ -6042,10 +6028,10 @@ focus_tree = {
 	focus = {
 		id = GRE_hellenic_armoured_corp
 		icon = GFX_focus_generic_combined_arms
-		prerequisite = { focus = GRE_embracing_modern_warfare }
+		prerequisite = { focus = GRE_greek_mechanisation }
 		x = 0
 		y = 1
-		relative_position_id = GRE_embracing_modern_warfare
+		relative_position_id = GRE_greek_mechanisation
 		cost = 10
 		ai_will_do = {
 			base = 1
@@ -6067,6 +6053,7 @@ focus_tree = {
 		id = GRE_greek_mechanisation
 		icon = GFX_goal_generic_build_tank
 		prerequisite = { focus = GRE_new_weapons_old_tricks }
+		mutually_exclusive  = { focus = GRE_Spartan_Revival }
 		x = 0
 		y = 1
 		relative_position_id = GRE_new_weapons_old_tricks
@@ -6089,7 +6076,7 @@ focus_tree = {
 	focus = {
 		id = GRE_a_land_of_mountains
 		icon = GFX_focus_GRE_a_land_of_mountains
-		prerequisite = { focus = GRE_hellenic_armoured_corp focus = GRE_greek_mechanisation }
+		prerequisite = { focus = GRE_hellenic_armoured_corp focus = GRE_embracing_modern_warfare }
 		x = 1
 		y = 1
 		relative_position_id = GRE_hellenic_armoured_corp
