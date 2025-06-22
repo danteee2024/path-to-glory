@@ -946,6 +946,24 @@ ideas = {
 			}
 		}
 
+		GRE_Industry_of_Ships = {
+				
+			allowed = {
+				original_tag = GRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_coastal_navy
+				
+			removal_cost = -1
+			modifier = {
+				production_speed_dockyard_factor = 0.05
+			}
+		}
+
 		GRE_improving_our_defensive_lines = {
 				
 			allowed = {
@@ -2829,5 +2847,32 @@ ideas = {
 			}
 		}
 
+	
+
+    GRE_Modern_Warfare = {
+			
+			picture = generic_infantry_equipment_manufacturer_2
+
+			allowed = {
+				original_tag = GRE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				
+			}
+
+			equipment_bonus = {
+				Infantry_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+			}
+		}
 	}
 }

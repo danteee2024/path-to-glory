@@ -2320,37 +2320,15 @@ focus_tree = {
 		ai_will_do = {
 			base = 0
 		}
-		available = {
+			available = {
+			threat > 0.30
 		}
 		completion_reward = {
 			add_war_support = 0.05
-			if = {
-				limit = {
-					has_idea = civilian_economy
-				}
-				add_ideas = Macedonian_economy
-			}
-			else_if = {
-				limit = {
-					has_idea = low_economic_mobilisation
-				}
-				add_ideas = Macedonian_economy
-			}
-			else_if = {
-				limit = {
-					has_idea = partial_economic_mobilisation
-				}
-				add_ideas = Macedonian_economy
-			}
-			else_if = {
-				limit = {
-					has_idea = war_economy
-				}
-				add_ideas = Macedonian_economy
+			add_ideas = war_economy
 			}
 		}
-	}		
-
+			 
 	focus = {
 		id = GRE_our_traditional_allies_in_the_aegean
 		icon = GFX_focus_RAJ_seek_allies_with_the_muslim_league
@@ -3759,21 +3737,17 @@ focus_tree = {
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 4
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = arms_factory
 						level = 2
 						instant_build = yes
 					}
-					add_building_construction = {
-						type = dockyard
-						level = 2
-						instant_build = yes
 					}
 				}	
 			}		
 		}
-	}
+
 
 	focus = {
 		id = GRE_extracting_more_from_our_soil
@@ -5028,7 +5002,7 @@ focus_tree = {
 		id = GRE_cooperate_with_foreign_monopolies
 		icon = GFX_focus_AFG_a_modern_economy
 		dynamic = yes
-		prerequisite = { focus = GRE_sophistry_and_science }
+		prerequisite = { focus = GRE_Platos_books_of_wisdom }
 		prerequisite = { focus = GRE_rejuvenating_athens focus = GRE_making_use_of_our_islands focus = GRE_clear_the_slums }
 		mutually_exclusive = { focus = GRE_crack_down_on_foreign_monopolies }
 		x = -4
@@ -5988,18 +5962,15 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = {
-			name = GRE_embracing_modern_warfare
-   			 army_infantry_attack_factor = 0.10  
-			}
+			 add_ideas = GRE_Modern_Warfare
 			add_tech_bonus = {
 				name = GRE_embracing_modern_warfare
 				bonus = 1.0
 				uses = 1
 				category = motorized_equipment
 			}
-		}
-	}		
+			}
+		}	
 
 	focus = {
 		id = GRE_Spartan_Revival
