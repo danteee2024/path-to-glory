@@ -2156,7 +2156,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GRE_petition_britain_for_aid
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 1
 		}
@@ -5339,7 +5339,7 @@ focus_tree = {
 		icon = GFX_focus_GRE_hellenic_armed_forces
 		x = 46
 		y = 0
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			base = 1
 		}

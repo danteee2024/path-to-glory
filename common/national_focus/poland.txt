@@ -577,7 +577,7 @@ focus_tree = {
 		prerequisite = { focus = POL_the_four_year_plan }
 		x = 0
 		y = 1
-		cost = 10 #maybe 20?
+		cost = 5 #maybe 20?
 
 		ai_will_do = {
 			factor = 10
@@ -776,7 +776,7 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = POL_fill_the_railways_gaps
-		cost = 10
+		cost = 5
 
 		cancelable = no
 
