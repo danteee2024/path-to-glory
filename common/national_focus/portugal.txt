@@ -6741,7 +6741,20 @@ focus = {
 			}
 			add_war_support = 0.05
 			add_political_power = 100
-			
+			set_technology = {
+				basic_light_battery = 1
+				basic_medium_battery = 1
+				basic_heavy_battery = 1
+				basic_fire_control_system = 1
+				basic_cruiser_armor_scheme = 1
+				basic_depth_charges = 1
+				basic_heavy_shell = 1
+				early_ship_hull_heavy = 1
+			    basic_ship_hull_heavy = 1
+				early_ship_hull_cruiser = 1
+				basic_ship_hull_cruiser = 1
+				marines = 1
+			}
 			division_template = {
 				name = "Fuzileiros"
 				regiments = { 
