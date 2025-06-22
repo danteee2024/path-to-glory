@@ -1,0 +1,55 @@
+﻿l_english:
+
+CHECK_CORE_STATE_DESC: "§YCalculate cost§!\n\n£population_icon  §YPopulation§! /£pol_power_icon §Y[core_state_cost_game_rule]k§!.\nThe cost will be §Yhalved§! if you have a §Yclaim§!.\n[check_core_button_enabled_desc]"
+CORE_STATE_DESC: "§YCore State§!\n[core_state_claimed]It will cost you£pol_power_icon£§Y[?ROOT.cost_to_core]§! to core this state.\n[core_state_button_desc]"
+
+core_state_req_not_owned_peace: "--------------------------------------------\n§RYou do not own this state!§!"
+core_state_req_not_owned_war: "--------------------------------------------\n§RYou do not control this state!§!"
+core_state_req_already_cored: "--------------------------------------------\n§RThis state is already your core!§!"
+core_state_req_no_compliance_100: "--------------------------------------------\n§RThis state has less than 100% compliance!§!"
+core_state_req_no_compliance_80: "--------------------------------------------\n§RThis state has less than 80% compliance!§!"
+core_state_req_no_compliance_60: "--------------------------------------------\n§RThis state has less than 60% compliance!§!"
+core_state_req_no_compliance_40: "--------------------------------------------\n§RThis state has less than 40% compliance!§!"
+core_state_req_no_compliance_20: "--------------------------------------------\n§RThis state has less than 20% compliance!§!"
+core_state_req_no_pp: "--------------------------------------------\n§RYou do not have enough political power!§!"
+core_state_req_no_claim: "--------------------------------------------\n§RYou do not have a claim on this state!§!"
+
+CWC_FORMULA_PP_COST_GROUP: "Core With Compliance++"
+CWC_FORMULA_PP_COST: "Cost to core states"
+CWC_COMP_COST: "Compliance requirement"
+CWC_OCCUPY: "Occupy/fully control"
+CWC_CLAIM_FOR_CORE: "Only core claimed states"
+
+core_state_claimed_true: "§CYou have a claim on this state, therefore reducing the cost by half!§!\n"
+
+CWC_FORMULA_PP_COST_5K_NAME: "§YPopulation§! / §Y5k§!"
+CWC_FORMULA_PP_COST_10K_NAME: "§YPopulation§! / §Y10k§!"
+CWC_FORMULA_PP_COST_20K_NAME: "§YPopulation§! / §Y20k§!"
+CWC_FORMULA_PP_COST_40K_NAME: "§YPopulation§! / §Y40k§!"
+
+CWC_FORMULA_PP_COST_5K_DESC: "Roughly £pol_power_icon2 §Y4§!  per £manpower_icon2  §Y1k§!.\n\n£population_icon  §YPopulation§! / £pol_power_icon2 §Y5k§!\n--------------------------------------\n§gMakes coring very expensive.§!"
+CWC_FORMULA_PP_COST_10K_DESC: "Roughly £pol_power_icon2 §Y2§!  per £manpower_icon2  §Y1k§!.\n\n£population_icon  §YPopulation§! / £pol_power_icon2 §Y10k§!\n--------------------------------------\n§gMakes coring expensive.§!"
+CWC_FORMULA_PP_COST_20K_DESC: "Roughly £pol_power_icon2 §Y1§!  per £manpower_icon2  §Y1k§!.\n\n£population_icon  §YPopulation§! / £pol_power_icon2 §Y20k§!\n--------------------------------------\n§gMakes coring cheap.§!"
+CWC_FORMULA_PP_COST_40K_DESC: "Roughly £pol_power_icon2 §Y0.5§!  per £manpower_icon2  §Y1k§!.\n\n£population_icon  §YPopulation§! / £pol_power_icon2 §Y40k§!\n--------------------------------------\n§gMakes coring very cheap.§!"
+
+CWC_COMP_COST_20_NAME: "§C20%§! Compliance"
+CWC_COMP_COST_40_NAME: "§C40%§! Compliance"
+CWC_COMP_COST_60_NAME: "§C60%§! Compliance"
+CWC_COMP_COST_80_NAME: "§C80%§! Compliance"
+CWC_COMP_COST_100_NAME: "§C100%§! Compliance"
+
+CWC_COMP_COST_20_DESC: "Requires £compliance_icon2 §C20%§! to core states"
+CWC_COMP_COST_40_DESC: "Requires £compliance_icon2 §C40%§! to core states"
+CWC_COMP_COST_60_DESC: "Requires £compliance_icon2 §C60%§! to core states"
+CWC_COMP_COST_80_DESC: "Requires £compliance_icon2 §C80%§! to core states"
+CWC_COMP_COST_100_DESC: "Requires £compliance_icon2 §C100%§! to core states"
+
+CWC_OCCUPY_PEACE_NAME: "Fully control"
+CWC_OCCUPY_PEACE_DESC: "Only allows you to core states when you have §tfull control§! of them."
+CWC_OCCUPY_WAR_NAME: "Occupy"
+CWC_OCCUPY_WAR_DESC: "Also allows you to core states when you §toccupy§! them."
+
+CWC_NO_CLAIM_FOR_CORE_NAME: "No claim required"
+CWC_NO_CLAIM_FOR_CORE_DESC: "Does not require you to have a §tclaim§! on a state to core it."
+CWC_CLAIM_FOR_CORE_NAME: "Claim required"
+CWC_CLAIM_FOR_CORE_DESC: "Requires you to have a §tclaim§! on a state to core it."
