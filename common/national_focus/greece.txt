@@ -1055,7 +1055,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GRE_a_socialist_economy
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 1
 		}
@@ -1123,8 +1123,8 @@ focus_tree = {
 	}				
 
 	focus = {
-		id = GRE_clearing_land_for_industrial_expansion
-		icon = GFX_goal_reichsautobahn
+		id = GRE_The_New_Agora
+		icon = GFX_focus_RAJ_crush_the_anathema
 		prerequisite = { focus = GRE_agricultural_communes }
 		x = 0
 		y = 1
@@ -1151,7 +1151,7 @@ focus_tree = {
 	focus = {
 		id = GRE_depose_the_reactionaries
 		icon = GFX_focus_SWE_neither_death_nor_dishonor
-		prerequisite = { focus = GRE_clearing_land_for_industrial_expansion focus = GRE_the_greek_industrial_revolution focus = GRE_red_militias }
+		prerequisite = { focus = GRE_The_New_Agora  focus = GRE_the_greek_industrial_revolution focus = GRE_red_militias }
 		x = 0
 		y = 3
 		relative_position_id = GRE_a_socialist_economy
@@ -1904,6 +1904,10 @@ focus_tree = {
 					division_template = "Íli Vasilikís Frourás"
 					disband = yes #if yes, will refund equipment/manpower.
 				}
+				delete_unit_template_and_units = {
+					division_template = "Íli Vasilikís Frourás"
+					disband = yes #if yes, will refund equipment/manpower.
+				}
 
 				division_template = {
 					name = "Tmíma Vasilikís Synodeías"		
@@ -1920,6 +1924,22 @@ focus_tree = {
 						artillery = { x = 0 y = 0 } 
 					}
 				}
+				division_template = {
+					name = "Tmíma Vasilikís Synodeías"		
+					division_names_group = GRE_INF_01
+					is_locked = no
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 2 y = 0 }
+					}
+					support = {  
+						artillery = { x = 0 y = 0 } 
+					}
+				}
+
 				division_template = {
 					name = "Íli Vasilikís Frourás"		
 					division_names_group = GRE_CAV_01
@@ -1964,6 +1984,17 @@ focus_tree = {
 				}
 			}
 
+			random_state = { 
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_owned_by = ROOT
+					is_core_of = ROOT
+				}
+				create_unit = {
+				    division = "name = \"Íli Vasilikís Frourás'\" division_template = \"Íli Vasilikís Frourás\" start_experience_factor = 0.4 start_equipment_factor = 0.9"
+				    owner = ROOT
+				}
+			}
 			random_state = { 
 				limit = {
 					is_fully_controlled_by = ROOT
@@ -5276,7 +5307,7 @@ focus_tree = {
 		available = {
 			OR = { 
 			has_idea = GRE_schachtplan
-			has_idea = GRE_recovery
+			has_idea = GRE_Recovery
 			}
 			NOT = {
 				has_country_flag = GRE_germany_rebuffed
