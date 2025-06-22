@@ -2156,7 +2156,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GRE_petition_britain_for_aid
-		cost = 5
+		cost = 3
 		ai_will_do = {
 			base = 1
 		}
@@ -3173,7 +3173,7 @@ focus_tree = {
 		icon = GFX_focus_generic_little_entente
 		prerequisite = { focus = GRE_following_in_the_footsteps_of_giants }
 		available = { 
-			fascism > 0.3
+			fascism > 0.30
 		}
 		x = 0
 		y = 1
