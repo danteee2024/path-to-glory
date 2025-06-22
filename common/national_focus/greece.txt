@@ -3736,6 +3736,46 @@ focus_tree = {
     }						
 
 	focus = {
+		id = GRE_The_Great_Crete_Industry
+		icon = GFX_focus_generic_industry_2
+		prerequisite = { focus = GRE_lignite_liquefaction }
+		x = -2
+		y = 1
+		relative_position_id = GRE_lignite_liquefaction
+		cost = 10
+		ai_will_do = {
+			base = 1
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = GRE_Industry_of_Ships
+			182 = {
+				if = { 
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}	
+			}		
+		}
+	}
+
+	focus = {
 		id = GRE_extracting_more_from_our_soil
 		icon = GFX_goal_generic_construction
 		prerequisite = { focus = GRE_lignite_liquefaction }
@@ -3847,7 +3887,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GRE_military_industry
+		id = GRE_Big_industry
 		icon = GFX_focus_generic_reorient_production
 		prerequisite = { focus = GRE_utilize_our_strengths focus = GRE_force_the_farmers_into_factories }
 		
@@ -3860,43 +3900,35 @@ focus_tree = {
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
-		completion_reward = { 
-			47 = {
-				if = { 
-					limit = {
-						free_building_slots = {
-							building = arms_factory
-							size > 2
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = arms_factory
-						level = 2
-						instant_build = yes
-					}
-				}	
+		completion_reward = {
+			add_political_power = -100
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = GRE_Big_Industry_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_timed_idea = {
+				idea = JAP_investment
+				days = 180
 			}
-			185 = {
-				if = { 
-					limit = {
-						free_building_slots = {
-							building = arms_factory
-							size > 2
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = arms_factory
-						level = 2
-						instant_build = yes
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_controlled_state = {
+				limit = {
+					AND = {
+						is_on_continent = europe
+						is_core_of = GRE
 					}
 				}
-			}	
-		}	
-	}	
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+				}
+			} 
+		}
+	}
 
 	focus = {
 		id = GRE_force_the_farmers_into_factories
@@ -4449,7 +4481,7 @@ focus_tree = {
 			add_stability = 0.1
 			swap_ideas = {
 				remove_idea = export_focus
-				add_idea = GRE_Greco_Autarky
+				add_idea = limited_exports
 			}
 		}
 	}		
@@ -4583,14 +4615,14 @@ focus_tree = {
 				if = { 
 					limit = {
 						free_building_slots = {
-							building = arms_factory
+							building = industrial_complex
 							size > 2
 							include_locked = yes
 						}
 					}
 					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
-						type = arms_factory
+						type = resource_expansion_steel
 						level = 2
 						instant_build = yes
 					}
@@ -4600,14 +4632,14 @@ focus_tree = {
 				if = { 
 					limit = {
 						free_building_slots = {
-							building = arms_factory
+							building = industrial_complex
 							size > 1
 							include_locked = yes
 						}
 					}
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
-						type = arms_factory
+						type = resource_expansion_tungsten
 						level = 1
 						instant_build = yes
 					}
@@ -4725,7 +4757,7 @@ focus_tree = {
 				increase_state_category = yes
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				add_building_construction = {
@@ -5528,6 +5560,7 @@ focus_tree = {
 	focus = {
 		id = GRE_the_hellenic_navy 
 		icon = GFX_focus_NOR_the_royal_norwegian_navy
+		icon = GFX_focus_generic_navy_battleship2
 		prerequisite = { focus = GRE_hellenic_armed_forces }
 		x = 5
 		y = 1
@@ -5962,7 +5995,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = GRE_embracing_modern_warfare
 				bonus = 1
-				uses = 1
+				uses = 2
 				category = cat_light_armor
 			}
 			add_tech_bonus = {
@@ -6023,7 +6056,7 @@ focus_tree = {
 				name = GRE_hellenic_armoured_corp
 				bonus = 1.0
 				ahead_reduction = 1
-				uses = 1
+				uses = 2
 				category = cat_light_armor
 				category = cat_medium_armor
 			}
