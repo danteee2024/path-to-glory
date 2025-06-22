@@ -6283,7 +6283,7 @@ focus = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_timed_idea = {
 				idea = JAP_investment
-				days = 364
+				days = 365
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			every_controlled_state = {
