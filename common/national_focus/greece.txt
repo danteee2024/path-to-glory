@@ -1524,7 +1524,7 @@ focus_tree = {
 	}
 
 		focus = {
-			id = Liberate_our_People
+			id = GRE_Liberate_our_People
 			icon = GFX_focus_generic_attack_yugoslavia
 			prerequisite = { focus = GRE_secure_the_aegean }
 			relative_position_id = GRE_secure_the_aegean 
