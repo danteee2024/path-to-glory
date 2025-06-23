@@ -12,16 +12,19 @@ scripted_gui = {
 			always = yes
 		}
 
-		effects = {
-			check_core_button_click = {
-				ROOT = {
-					every_state = { clr_state_flag = core_cost_checked }
-					set_variable = { cost_to_core = PREV.state_population_k }
-					CWC++_cost_divider = yes
-					round_variable = cost_to_core
-				}
-				PREV = { set_state_flag = core_cost_checked }
-			}
+		 effects = {
+        check_core_button_click = {
+            ROOT = {
+                every_state = { clr_state_flag = core_cost_checked }
+                set_variable = { cost_to_core = PREV.state_population_k }
+                CWC++_cost_divider = yes
+                round_variable = cost_to_core
+
++               # clamp max cost to 500
++               clamp_variable = { cost_to_core = { min = 0 max = 500 } }
+            }
+            PREV = { set_state_flag = core_cost_checked }
+        }
 
 			core_state_button_click = {
 				log = [?cost_to_core]
