@@ -452,7 +452,7 @@ ideas = {
 				war_support_factor = 0.1
 				training_time_factor = -0.1
 				neutrality_drift = 0.02
-				fascism_drift = 0.03
+				fascism_drift = 0.05
 			}
 		}
 
