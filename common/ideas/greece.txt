@@ -2891,7 +2891,7 @@ ideas = {
 
 			equipment_bonus = {
 				Infantry_equipment = {
-					build_cost_ic = -0.1
+					build_cost_ic = -0.15
 					instant = yes
 			}
 		}

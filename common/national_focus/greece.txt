@@ -1475,14 +1475,6 @@ focus_tree = {
 		id = GRE_secure_the_aegean
 		icon = GFX_focus_generic_attack_turkey
 		prerequisite = { focus = GRE_prepare_for_the_great_anti_fascist_war }
-		available = {
-			TUR = { fascism > 0.3 }
-			OR = { 
-				TUR = { has_government = fascism }
-				TUR = { has_added_tension_amount > 5 }
-			}	
-			is_subject = no
-		}
 		x = -2
 		y = 1
 		relative_position_id = GRE_prepare_for_the_great_anti_fascist_war
@@ -1530,6 +1522,24 @@ focus_tree = {
 			add_war_support = -0.05
 		}
 	}
+
+		focus = {
+			id = Liberate_our_People
+			icon = GFX_focus_generic_attack_yugoslavia
+			prerequisite = { focus = GRE_secure_the_aegean }
+			relative_position_id = GRE_secure_the_aegean 
+			cost = 5
+			x = 0 
+			y = 1
+		
+		completion_reward = {
+		create_wargoal = {
+					type = puppet_wargoal_focus
+					target = YUG
+					expire = 0
+				}
+			}
+		}
 
 	focus = {
 		id = GRE_attack_the_fascists
@@ -2279,7 +2289,7 @@ focus_tree = {
 			base = 0
 		}
 			available = {
-			threat > 0.30
+			threat > 0.35
 		}
 		completion_reward = {
 			add_war_support = 0.05
@@ -2765,7 +2775,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GRE_securing_the_bulgarian_menace
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 1
 		}
@@ -3131,7 +3141,7 @@ focus_tree = {
 		icon = GFX_focus_generic_little_entente
 		prerequisite = { focus = GRE_following_in_the_footsteps_of_giants }
 		available = { 
-			fascism > 0.30
+			fascism > 0.35
 		}
 		x = 0
 		y = 1
@@ -3326,7 +3336,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = GRE_subjugating_the_bulgarians
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 1
 		}
@@ -4039,6 +4049,7 @@ focus_tree = {
 				FRA = { exists = no }
 				GER = { exists = no }
 				SOV = { exists = no }
+				USA = { exists = no }
 			}
 		}
 
@@ -4046,6 +4057,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = GRE_open_foreign_subsidized_factories_tt
 			hidden_effect = {
+				
 				if = { 
 					limit = { 
 						country_exists = GER
@@ -4189,6 +4201,7 @@ focus_tree = {
 							instant_build = yes
 						}
 					}
+					
 				}
 			}
 		}
@@ -4427,7 +4440,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			add_political_power = 200
+			add_political_power = 150
 			custom_effect_tooltip = GRE_bedrock_of_balkan_financial_stability_tt
 			hidden_effect = {
 				if = { 
@@ -6076,7 +6089,7 @@ focus_tree = {
 				bonus = 0.5
 				uses = 3 
 				category = infantry_weapons 
-			}
+			 }
 		}
 	}	
 
