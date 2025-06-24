@@ -2278,7 +2278,7 @@ focus_tree = {
 		id = GRE_War_Economy
 		icon = GFX_focus_generic_economic_recovery
 		available = {
-			
+			date > 1938.01.01
 		 } 
 		 prerequisite = { focus = GRE_recruit_the_fascists }
 		x = 2
@@ -3847,7 +3847,7 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_timed_idea = {
 				idea = JAP_investment
-				days = 180
+				days = 200
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
