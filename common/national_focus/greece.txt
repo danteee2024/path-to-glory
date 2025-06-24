@@ -871,7 +871,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GRE_phoideratoi
-		cost = 10
+		cost = 5
 		ai_will_do = { 
 			base = 1
 		}
@@ -4559,7 +4559,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GRE_exporting_more_luxury_commodoties
-		cost = 5
+		cost = 7.5
 		ai_will_do = {
 			base = 1
 		}
@@ -4752,7 +4752,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GRE_increase_our_mining_operations
-		cost = 5
+		cost = 7.5
 		ai_will_do = {
 			base = 1
 		}
@@ -4882,10 +4882,10 @@ focus_tree = {
 						}
 						is_fully_controlled_by = ROOT
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = industrial_complex
-						level = 2
+						level = 1
 						instant_build = yes
 					}
 				}
@@ -5449,6 +5449,7 @@ focus_tree = {
 			every_army_leader = {
 				add_planning = 1
 			}
+			add_war_support = 0.10
 		}
 	}
 
@@ -5979,6 +5980,26 @@ focus_tree = {
 			}
 		}
 	}
+
+
+    focus = {
+		id = Masters_of_the_Sea
+		icon = GFX_focus_GRE_a_long_and_proud_tradition
+		prerequisite = { focus = GRE_a_long_and_proud_tradition }
+		x = 0
+		y = 2
+		relative_position_id = GRE_a_long_and_proud_tradition
+		cost = 10
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+
+
+
+
+
 
 	focus = {
 		id = GRE_new_weapons_old_tricks
