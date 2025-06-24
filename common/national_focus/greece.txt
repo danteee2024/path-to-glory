@@ -4822,7 +4822,7 @@ focus_tree = {
 				increase_state_category = yes
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 				add_building_construction = {
@@ -5993,13 +5993,13 @@ focus_tree = {
 		ai_will_do = {
 			base = 1
 		}
+	
+        focus = {
+			completion_reward  = {
+				add_ideas = The_Grand_Macendonian_Navy
+			}
+		}
 	}
-
-
-
-
-
-
 
 	focus = {
 		id = GRE_new_weapons_old_tricks

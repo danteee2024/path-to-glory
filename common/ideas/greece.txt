@@ -2921,7 +2921,7 @@ ideas = {
 				ship_hull_light = {
 					build_cost_ic = -0.10
 					instant = yes
-				production_speed_dockyard_factor = 0.05
+				production_speed_dockyard_factor = 0.15
 			}
 		}
 	}
