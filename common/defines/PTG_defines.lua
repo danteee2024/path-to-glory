@@ -24,7 +24,7 @@ NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 5000
 NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 5000
 NDefines.NMilitary.MAX_AIR_EXPERIENCE = 5000
 
-NDefines.NDeployment.BASE_DEPLOYMENT_TRAINING = 4        -- Base training time for a division in days. This is multiplied by the training time factor of the division template.
+NDefines.NDeployment.BASE_DEPLOYMENT_TRAINING = 2       -- Base training time for a division in days. This is multiplied by the training time factor of the division template.
 
 
 
