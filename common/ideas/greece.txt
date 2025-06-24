@@ -2897,31 +2897,3 @@ ideas = {
 		}
 	}
 }
-
-	The_Grand_Macendonian_Navy = {
-			
-			picture = GFX_focus_PER_establish_the_navy
-
-			allowed = {
-				original_tag = GRE
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				
-			}
-
-			equipment_bonus = {
-				ship_hull_light = {
-					build_cost_ic = -0.10
-					instant = yes
-				production_speed_dockyard_factor = 0.15
-			}
-		}
-	}

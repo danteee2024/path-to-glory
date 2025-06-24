@@ -5981,26 +5981,6 @@ focus_tree = {
 		}
 	}
 
-
-    focus = {
-		id = Masters_of_the_Sea
-		icon = GFX_focus_GRE_a_long_and_proud_tradition
-		prerequisite = { focus = GRE_a_long_and_proud_tradition }
-		x = 0
-		y = 2
-		relative_position_id = GRE_a_long_and_proud_tradition
-		cost = 10
-		ai_will_do = {
-			base = 1
-		}
-	
-        focus = {
-			completion_reward  = {
-				add_ideas = The_Grand_Macendonian_Navy
-			}
-		}
-	}
-
 	focus = {
 		id = GRE_new_weapons_old_tricks
 		icon = GFX_goal_generic_army_artillery2
