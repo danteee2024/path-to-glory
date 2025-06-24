@@ -13544,6 +13544,7 @@ focus_tree = {
 
 		available = {
 			is_subject = no
+			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
 		}
 		
 		search_filters = {}
@@ -13582,6 +13583,7 @@ focus_tree = {
 
 		available = {
 			is_subject = no
+			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
 		}
 
 		bypass = {
