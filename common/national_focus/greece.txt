@@ -5983,7 +5983,7 @@ focus_tree = {
 
 
     focus = {
-		id = Masters_of_the_Sea
+		id = GRE_Masters_of_the_Sea
 		icon = GFX_focus_GRE_a_long_and_proud_tradition
 		prerequisite = { focus = GRE_a_long_and_proud_tradition }
 		x = 0
@@ -5996,7 +5996,7 @@ focus_tree = {
 	
         focus = {
 			completion_reward  = {
-				add_ideas = The_Grand_Macendonian_Navy
+				add_ideas = GRE_The_Grand_Macendonian_Navy
 			}
 		}
 	}

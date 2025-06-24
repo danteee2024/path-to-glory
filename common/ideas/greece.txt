@@ -2896,9 +2896,9 @@ ideas = {
 			}
 		}
 	}
-}
 
-	The_Grand_Macendonian_Navy = {
+
+	GRE_The_Grand_Macendonian_Navy = {
 			
 			picture = GFX_focus_PER_establish_the_navy
 
@@ -2925,3 +2925,4 @@ ideas = {
 			}
 		}
 	}
+}
