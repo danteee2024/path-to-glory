@@ -1550,6 +1550,9 @@ mutually_exclusive = {
 				add_ideas = nationalization_FA_america_capital
 			}
 			custom_effect_tooltip = USA_american_capitalism_tt
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			show_ideas_tooltip = nationalization_FA_america_capital
 			custom_effect_tooltip = generic_skip_one_line_tt
 			USA_congress_medium_opposition = yes
 		}
