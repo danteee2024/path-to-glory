@@ -9,6 +9,7 @@ state = {
 
 		owner = ENG
 		add_core_of = JOR
+		add_core_of = RAJ
 
 		buildings = {
 			infrastructure = 2
