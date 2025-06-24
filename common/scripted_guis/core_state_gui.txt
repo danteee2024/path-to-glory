@@ -1,162 +1,140 @@
 # ROOT = Player country
 # PREV = Clicked state
-
 scripted_gui = {
 
-	core_state_button_gui = {
-		context_type = selected_state_context
-		window_name = "core_state_button_window"
-		parent_window_token = selected_state_view
+    core_state_button_gui = {
+        context_type = selected_state_context
+        window_name = "core_state_button_window"
+        parent_window_token = selected_state_view
 
-		visible = {
-			always = yes
-		}
-
-		 effects = {
-        check_core_button_click = {
-            ROOT = {
-                every_state = { clr_state_flag = core_cost_checked }
-                set_variable = { cost_to_core = PREV.state_population_k }
-                CWC++_cost_divider = yes
-                round_variable = cost_to_core
-
-+               # clamp max cost to 500
-+               clamp_variable = { cost_to_core = { min = 0 max = 500 } }
-            }
-            PREV = { set_state_flag = core_cost_checked }
+        visible = {
+            always = yes
         }
 
-			core_state_button_click = {
-				log = [?cost_to_core]
-				ROOT = {
-					multiply_variable = { cost_to_core = -1 }
-					add_political_power = cost_to_core
-					add_state_core = PREV
-					multiply_variable = { cost_to_core = -1 }
-				}
-			}
-		}
+        effects = {
+            check_core_button_click = {
+                ROOT = {
+                    every_state = { clr_state_flag = core_cost_checked }
+                    set_variable = { cost_to_core = PREV.state_population_k }
+                    CWC++_cost_divider = yes
+                    round_variable = cost_to_core
 
-		triggers = {
-			check_core_button_visible = {
-				NOT = {
-					PREV = { has_state_flag = core_cost_checked }
-				}
-			}
-			check_core_button_click_enabled = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = CWC_only_core_claims
-							option = CWC_CLAIM_FOR_CORE
-						}
-					}
-					PREV = { is_claimed_by = ROOT }
-				}
-				PREV = {
-					NOT = { is_core_of = ROOT }
+                    # clamp max cost to 500
+                    if = {
+                        limit = { check_variable = { cost_to_core > 500 } }
+                        set_variable = { cost_to_core = 500 }
+                    }
+                }
+                PREV = { set_state_flag = core_cost_checked }
+            }
 
-					# Occupation check
-					if = {
-						limit = {
-							has_game_rule = {
-								rule = CWC_occupy_to_core
-								option = CWC_OCCUPY_PEACE
-							}
-						}
-						is_owned_and_controlled_by = ROOT
-					}
-					if = {
-						limit = {
-							has_game_rule = {
-								rule = CWC_occupy_to_core
-								option = CWC_OCCUPY_WAR
-							}
-						}
-						ROOT = { has_full_control_of_state = PREV }
-					}
-				}
-			}
+            core_state_button_click = {
+                log = [?cost_to_core]
+                ROOT = {
+                    multiply_variable = { cost_to_core = -1 }
+                    add_political_power = cost_to_core
+                    add_state_core = PREV
+                    multiply_variable = { cost_to_core = -1 }
+                }
+            }
+        }
 
-			core_state_button_click_enabled = {
-				OR  = {
-					check_variable = { ROOT.cost_to_core < ROOT.political_power }
-					check_variable = { ROOT.cost_to_core = ROOT.political_power }
-				}
+        triggers = {
+            check_core_button_visible = {
+                NOT = {
+                    PREV = { has_state_flag = core_cost_checked }
+                }
+            }
 
-				PREV = {
-					# Occupation check
-					if = {
-						limit = {
-							has_game_rule = {
-								rule = CWC_occupy_to_core
-								option = CWC_OCCUPY_PEACE
-							}
-						}
-						is_owned_and_controlled_by = ROOT
-					}
-					if = {
-						limit = {
-							has_game_rule = {
-								rule = CWC_occupy_to_core
-								option = CWC_OCCUPY_WAR
-							}
-						}
-						ROOT = { has_full_control_of_state = PREV }
-					}
+            check_core_button_click_enabled = {
+                if = {
+                    limit = {
+                        has_game_rule = {
+                            rule = CWC_only_core_claims
+                            option = CWC_CLAIM_FOR_CORE
+                        }
+                    }
+                    PREV = { is_claimed_by = ROOT }
+                }
+                PREV = {
+                    NOT = { is_core_of = ROOT }
+                    if = {
+                        limit = {
+                            has_game_rule = {
+                                rule = CWC_occupy_to_core
+                                option = CWC_OCCUPY_PEACE
+                            }
+                        }
+                        is_owned_and_controlled_by = ROOT
+                    }
+                    if = {
+                        limit = {
+                            has_game_rule = {
+                                rule = CWC_occupy_to_core
+                                option = CWC_OCCUPY_WAR
+                            }
+                        }
+                        ROOT = { has_full_control_of_state = PREV }
+                    }
+                }
+            }
 
+            core_state_button_click_enabled = {
+                OR = {
+                    check_variable = { ROOT.cost_to_core < ROOT.political_power }
+                    check_variable = { ROOT.cost_to_core = ROOT.political_power }
+                }
 
-					# Compliance check
-					if = {
-						limit = {
-							has_game_rule = {
-								rule = CWC_comp_to_core
-								option = CWC_COMP_COST_100
-							}
-						}
-						compliance > 99.99
-					}
-					if = {
-						limit = {
-							has_game_rule = {
-								rule = CWC_comp_to_core
-								option = CWC_COMP_COST_80
-							}
-						}
-						compliance > 79.99
-					}
-					else_if = {
-						limit = {
-							has_game_rule = {
-								rule = CWC_comp_to_core
-								option = CWC_COMP_COST_60
-							}
-						}
-						compliance > 59.99
-					}
-					else_if = {
-						limit = {
-							has_game_rule = {
-								rule = CWC_comp_to_core
-								option = CWC_COMP_COST_40
-							}
-						}
-						compliance > 29.99
-					}
-					else_if = {
-						limit = {
-							has_game_rule = {
-								rule = CWC_comp_to_core
-								option = CWC_COMP_COST_20
-							}
-						}
-						compliance > 19.99
-					}
+                PREV = {
+                    if = {
+                        limit = {
+                            has_game_rule = {
+                                rule = CWC_occupy_to_core
+                                option = CWC_OCCUPY_PEACE
+                            }
+                        }
+                        is_owned_and_controlled_by = ROOT
+                    }
+                    if = {
+                        limit = {
+                            has_game_rule = {
+                                rule = CWC_occupy_to_core
+                                option = CWC_OCCUPY_WAR
+                            }
+                        }
+                        ROOT = { has_full_control_of_state = PREV }
+                    }
 
+                    # Compliance check
+                    if = {
+                        limit = {
+                            has_game_rule = {
+                                rule = CWC_comp_to_core
+                                option = CWC_COMP_COST_50
+                            }
+                        }
+                        compliance > 49.99
+                    }
+                    else_if = {
+                        limit = {
+                            has_game_rule = {
+                                rule = CWC_comp_to_core
+                                option = CWC_COMP_COST_25
+                            }
+                        }
+                        compliance > 24.99
+                    }
 
-					NOT = { is_core_of = ROOT }
-				}
-			}
-		}
-	}
+                    NOT = { is_core_of = ROOT }
+                }
+            }
+        }
+    }
 }
+
+
+
+
+
+
+

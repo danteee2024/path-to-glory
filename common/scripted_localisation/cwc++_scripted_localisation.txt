@@ -31,59 +31,28 @@ defined_text = {
 defined_text = {
 	name = core_state_button_desc
 
+	
+
 	text = {
 		trigger = {
 			has_game_rule = {
 				rule = CWC_comp_to_core
-				option = CWC_COMP_COST_100
+				option = CWC_COMP_COST_50
 			}
-			PREV = { compliance < 100 } 
+			PREV = { compliance < 50 } 
 		}
-		localization_key = core_state_req_no_compliance_100
+		localization_key = core_state_req_no_compliance_50
 	}
 
 	text = {
 		trigger = {
 			has_game_rule = {
 				rule = CWC_comp_to_core
-				option = CWC_COMP_COST_80
+				option = CWC_COMP_COST_25
 			}
-			PREV = { compliance < 80 } 
+			PREV = { compliance < 25 } 
 		}
-		localization_key = core_state_req_no_compliance_80
-	}
-
-	text = {
-		trigger = {
-			has_game_rule = {
-				rule = CWC_comp_to_core
-				option = CWC_COMP_COST_60
-			}
-			PREV = { compliance < 60 } 
-		}
-		localization_key = core_state_req_no_compliance_60
-	}
-
-	text = {
-		trigger = {
-			has_game_rule = {
-				rule = CWC_comp_to_core
-				option = CWC_COMP_COST_40
-			}
-			PREV = { compliance < 40 } 
-		}
-		localization_key = core_state_req_no_compliance_40
-	}
-
-	text = {
-		trigger = {
-			has_game_rule = {
-				rule = CWC_comp_to_core
-				option = CWC_COMP_COST_20
-			}
-			PREV = { compliance < 20 } 
-		}
-		localization_key = core_state_req_no_compliance_20
+		localization_key = core_state_req_no_compliance_25
 	}
 
 	text = {
