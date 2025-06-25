@@ -1187,7 +1187,7 @@ focus_tree = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
-				show_mio_tooltip = POR_ogme_organization
+				show_mio_tooltip = POR_fabrica_material_guerra_organization
 				mio:POR_fabrica_material_guerra_organization = {
 					add_mio_size = 2
 					add_mio_funds = 1500
@@ -1309,7 +1309,6 @@ focus_tree = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
-				custom_effect_tooltip = available_mio_tt
 				show_mio_tooltip = POR_fabrica_material_guerra_organization
 				mio:POR_fabrica_material_guerra_organization = {
 					add_mio_size = 2
@@ -1909,7 +1908,7 @@ focus = {
 	focus = {
 		id = POR_mechanized_focus
 		prerequisite = { focus = POR_armor_focus}
-		icon = GFX_goal_generic_build_tank
+		icon = GFX_focus_generic_mechanized
 		x = -2
 		y = 1
 
@@ -1932,7 +1931,7 @@ focus = {
 	focus = {
 		id = POR_further_armor_developements
 		prerequisite = { focus = POR_armor_focus}
-		icon = GFX_goal_generic_build_tank
+		icon = GFX_focus_generic_tank_assembly
 		x = 0
 		y = 1
 
