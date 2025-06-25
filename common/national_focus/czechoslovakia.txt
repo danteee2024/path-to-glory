@@ -2595,6 +2595,8 @@ focus = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			set_rule = { can_create_factions = yes }
+			create_faction = "CZE_Union_of_Middle_Europe"
 			 }
 		}
 		focus = {
@@ -2765,7 +2767,7 @@ focus = {
 	}
 
 	focus = {
-		id = CZE_Cominter_Researcg_Group_Invest
+		id = CZE_Cominter_Research_Group_Invest
 		icon = GFX_focus_research
 		prerequisite = { focus = CZE_the_polish_division }
 		x = 1
@@ -3123,7 +3125,7 @@ focus = {
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = CZE_beacon_of_liberty }
 		x = 0
-		y = 3
+		y = 2
 		relative_position_id = CZE_democratic_bastion
 
 		cost = 10
@@ -3155,6 +3157,280 @@ focus = {
 
 		completion_reward = {
 			add_ideas = extensive_conscription
+		}
+	}
+
+focus = {
+		id = CZE_The_Enlightened_Republic
+		icon = GFX_focus_research
+		prerequisite = { focus = CZE_defensive_preparations }
+		x = 0
+		y = 1
+		relative_position_id = CZE_defensive_preparations
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = CZE_Industrial_Republic
+		icon = GFX_SOV_heavy_industry_ccp_2d_sov_compatibility
+		prerequisite = { focus = CZE_The_Enlightened_Republic }
+		x = 0
+		y = 1
+		relative_position_id = CZE_The_Enlightened_Republic
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = CZE_Industrial_Republic
+		}
+	}
+
+	focus = {
+		id = CZE_Invest_into_our_Army
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = CZE_Industrial_Republic }
+		mutually_exclusive = {
+			focus = CZE_Invest_into_our_Trade
+		}
+		x = 1
+		y = 1
+		relative_position_id = CZE_Industrial_Republic
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = CZE_Invest_into_our_Army
+		}
+	}
+
+	focus = {
+		id = CZE_Invest_into_our_Trade
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = CZE_Industrial_Republic }
+		mutually_exclusive = {
+			focus = CZE_Invest_into_our_Army
+		}
+		x = -1
+		y = 1
+		relative_position_id = CZE_Industrial_Republic
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = CZE_Invest_into_our_Economy
+		}
+	}
+
+focus = {
+		id = CZE_Democracy_Shall_Prevail
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = CZE_Invest_into_our_Trade focus = CZE_Invest_into_our_Army }
+		x = -1
+		y = 1
+		relative_position_id = CZE_Invest_into_our_Army
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = CZE_Democracy_Shall_Prevail
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = CZE_investment_into_the_Front
+		icon = GFX_focus_AUS_frontmiliz_focus
+		prerequisite = { focus = CZE_Democracy_Shall_Prevail }
+		x = 0
+		y = 1
+		relative_position_id = CZE_Democracy_Shall_Prevail
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = CZE_investment_into_the_Front
+		}
+	}
+
+	focus = {
+		id = CZE_Greater_Republic
+		icon = GFX_focus_EST_republican_defence_league
+		prerequisite = { focus = CZE_investment_into_the_Front }
+		x = 0
+		y = 2
+		relative_position_id = CZE_Democracy_Shall_Prevail
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.2
+			swap_ideas = {
+				remove_idea = CZE_beacon_of_liberty
+				add_idea = CZE_Greater_Republic
+			}
+		}
+	}
+
+focus = {
+		id = CZE_Join_Allies
+		icon = GFX_focus_RAJ_seek_allies_with_the_muslim_league
+		prerequisite = { focus = CZE_Invest_into_our_Trade focus = CZE_Invest_into_our_Army }
+		x = 1
+		y = 1
+		relative_position_id = CZE_Invest_into_our_Army
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
 		}
 	}
 
@@ -3312,8 +3588,8 @@ focus = {
 	focus = {
 		id = CZE_the_polish_question
 		icon = GFX_focus_generic_attack_poland
-		prerequisite = { focus = CZE_aggressive_wars focus = CZE_german_puppet }
-		x = -1
+		prerequisite = { focus = CZE_german_minor_ally focus = CZE_german_puppet }
+		x = 4
 		y = 4
 		relative_position_id = CZE_go_right
 
@@ -3550,6 +3826,50 @@ focus = {
 			GER = { country_event = { hours = 1 id = czech.16 } }
 		}
 	}
+
+	focus = {
+		id = CZE_Expansion_into_the_North
+		icon = GFX_focus_generic_attack_poland 
+		prerequisite = { focus = CZE_german_ally }
+		prerequisite = { focus = CZE_aggressive_wars }
+		x = -2
+		y = 1
+		relative_position_id = CZE_german_ally
+		ai_will_do = {
+			base = 0
+			modifier = { 
+				add = 1
+				AND = { 
+					has_war = no
+					strength_ratio = { 
+						tag = POL
+						ratio > 0.4
+					}
+				}
+			}
+		}
+		available = {
+			is_subject = no
+		}
+
+		bypass = { 
+			POL = { 
+				OR = { 
+					exists = no
+					is_puppet_of = CZE
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = POL
+				expire = 0
+			}
+		}
+	}	
 
 	#######################################
 	######### STRATEGY DECISIONS ##########
