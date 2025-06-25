@@ -2763,6 +2763,42 @@ focus = {
 			SOV = { country_event = { hours = 1 id = czech.7 } }
 		}
 	}
+
+	focus = {
+		id = CZE_Cominter_Researcg_Group_Invest
+		icon = GFX_focus_research
+		prerequisite = { focus = CZE_the_polish_division }
+		x = 1
+		y = 1
+		relative_position_id = CZE_the_polish_division
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+			available = {
+
+		}
+
+		bypass = {
+			NOT = { can_declare_war_on = POL }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+	}
+
 	focus = {
 		id = CZE_Czechs_Red_Army
 		icon = GFX_focus_generic_communist_attack_czechoslovakia
@@ -2780,7 +2816,6 @@ focus = {
 				HABSBURG_joint_trigger = yes
 			}
 		}
-
 		available = {
 
 		}
@@ -2796,6 +2831,41 @@ focus = {
 		completion_reward = {
 			add_ideas = CZE_Red_Czechs_Army
 		}
+	}
+		focus = {
+		id = CZE_Union_Academy
+		icon = GFX_focus_research
+		prerequisite = { focus = CZE_Czechs_Red_Army }
+		x = -1
+		y = 1
+		relative_position_id = CZE_Czechs_Red_Army
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+			available = {
+
+		}
+
+		bypass = {
+			NOT = { can_declare_war_on = POL }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+			add_ideas = CZE_Union_Academy
+		}
+
 	}
 	focus = {
 		id = CZE_Influence_Middle_Europe
@@ -3085,43 +3155,6 @@ focus = {
 
 		completion_reward = {
 			add_ideas = extensive_conscription
-		}
-	}
-
-	focus = {
-		id = CZE_bonus_research_slot_1
-		icon = GFX_focus_research
-		prerequisite = { focus = CZE_the_romanian_question focus = CZE_defensive_preparations focus = CZE_the_polish_question }
-		x = 0
-		y = 5
-		relative_position_id = CZE_democratic_bastion
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 100
-			modifier = {
-				factor = 0.1
-				HABSBURG_joint_trigger = yes
-			}
-		}
-
-		available = {
-			num_of_factories > 34
-			amount_research_slots < 5
-		}
-
-		bypass = {
-			
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_research_slot = 1
-			custom_effect_tooltip = CZE_war_college_effect_tt
 		}
 	}
 

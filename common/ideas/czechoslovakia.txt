@@ -242,8 +242,8 @@ ideas = {
 
 			removal_cost = -2	
 			modifier = {
-				production_speed_industrial_complex_factor = 0.15
-				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
 			}
 		}
 		CZE_Mobilize_the_Masses =  {
@@ -296,6 +296,24 @@ ideas = {
 			removal_cost = -2	
 			modifier = {
 				research_speed_factor = 0.10
+			}
+		}
+
+		CZE_Union_Academy =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_economic_reactivation
+
+			removal_cost = -2	
+			modifier = {
+			research_speed_factor = 0.15
 			}
 		}
 
