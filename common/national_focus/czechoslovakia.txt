@@ -1948,7 +1948,7 @@ focus = {
 		}
 	}	
 	focus = {
-		id = CZE_The_Great_Kigndom
+		id = CZE_The_Great_Kingdom
 		icon = GFX_focus_BEL_king_of_the_belgians 
 		prerequisite = { focus = CZE_Expansion_is_Needed }
 		prerequisite = { focus = CZE_Demand_Austria_Annexation }
@@ -1990,7 +1990,337 @@ focus = {
 			}
 		}
 
+		focus = {
+		id = CZE_Invest_into_Austria
+		icon = GFX_focus_generic_mining_industry 
+		prerequisite = { focus = CZE_The_Great_Kingdom }
+		mutually_exclusive = {
+		 focus = CZE_Invest_into_Hungary
+		}
+		x = -1
+		y = 1
+		relative_position_id = CZE_The_Great_Kingdom
 
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+
+		available = {
+			CZE = { controls_state = 4 }
+			CZE = { controls_state = 976 }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+		    4 = { 
+				add_resource = { 
+					type = Oil
+					amount = 18
+				}
+			
+			}
+			976 = { 
+				add_resource = { 
+					type = Steel
+					amount = 22
+				}
+			
+			}
+			4 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = CZE_Invest_into_Hungary
+		icon = GFX_focus_generic_aluminum 
+		prerequisite = { focus = CZE_The_Great_Kingdom }
+		mutually_exclusive = { focus = CZE_Invest_into_Austria }
+		x = 1
+		y = 1
+		relative_position_id =  CZE_The_Great_Kingdom
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+
+		available = {
+			CZE = { controls_state = 43 }
+			CZE = { controls_state = 974 }
+			CZE = { controls_state = 155 }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+		    974 = { 
+				add_resource = { 
+					type = Oil
+					amount = 8
+				}
+			
+			}
+			155 = { 
+				add_resource = { 
+					type = aluminium
+					amount = 10
+				}
+			
+			}
+			43 = { 
+				add_resource = { 
+					type = Steel
+					amount = 11
+				}
+			
+			}
+			43 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = CZE_University_of_Bohemia
+		icon = GFX_focus_NORDIC_dem_capstone_research
+		prerequisite = { focus = CZE_Invest_into_Austria focus = CZE_Invest_into_Hungary }
+		x = 1
+		y = 1
+		relative_position_id = CZE_Invest_into_Austria
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+		   add_research_slot = 1
+		   add_ideas = CZE_Research_of_Praha
+		   }
+		}
+	focus = {
+		id = CZE_Expansion_into_the_North
+		icon = GFX_focus_generic_attack_poland 
+		prerequisite = { focus = CZE_University_of_Bohemia }
+		mutually_exclusive = {
+			focus = CZE_The_Crowned_Brotherhood
+		}
+		x = -1
+		y = 1
+		relative_position_id = CZE_University_of_Bohemia
+		cost = 5
+		ai_will_do = {
+			base = 0
+			modifier = { 
+				add = 1
+				AND = { 
+					has_war = no
+					strength_ratio = { 
+						tag = POL
+						ratio > 0.4
+					}
+				}
+			}
+		}
+		available = {
+			is_subject = no
+		}
+
+		bypass = { 
+			POL = { 
+				OR = { 
+					exists = no
+					is_puppet_of = CZE
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = POL
+				expire = 0
+			}
+		}
+	}	
+	focus = {
+		id = CZE_The_Crowned_Brotherhood
+		icon = GFX_focus_generic_monarchy_1  
+		prerequisite = { focus = CZE_University_of_Bohemia }
+		mutually_exclusive = {
+			focus = CZE_Expansion_into_the_North
+		}
+		x = 1
+		y = 1
+		relative_position_id = CZE_University_of_Bohemia
+		cost = 5
+		ai_will_do = {
+			base = 0
+			modifier = { 
+				add = 1
+				AND = { 
+					has_war = no
+					strength_ratio = { 
+						tag = POL
+						ratio > 0.4
+					}
+				}
+			}
+		}
+		available = {
+			is_subject = no
+		}
+
+		bypass = { 
+			POL = { 
+				OR = { 
+					exists = no
+					is_puppet_of = CZE
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+
+		}
+	}	
+	focus = {
+		id = CZE_War_for_Silesia
+		icon = GFX_focus_attack_germany
+		prerequisite = { focus = CZE_Expansion_into_the_North focus = CZE_The_Crowned_Brotherhood }
+		x = 1
+		y = 1
+		relative_position_id = CZE_Expansion_into_the_North
+		cost = 5
+		ai_will_do = {
+			base = 0
+			modifier = { 
+				add = 1
+				AND = { 
+					has_war = no
+					strength_ratio = { 
+						tag = GER
+						ratio > 0.4
+					}
+				}
+			}
+		}
+		available = {
+			is_subject = no
+		}
+
+		bypass = { 
+			GER = { 
+				OR = { 
+					exists = no
+					is_puppet_of = CZE
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = GER
+				expire = 0
+			}
+		}
+	}	
+	focus = {
+		id = CZE_The_Holy_Kingdom
+		icon = GFX_focus_ETH_the-italo_ethiopian_empire 
+		prerequisite = { focus = CZE_War_for_Silesia }
+		x = 0
+		y = 1
+		relative_position_id = CZE_War_for_Silesia
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+		   swap_ideas = {
+			remove_idea = CZE_Bohemia_Army
+			add_idea = CZE_Holy_Bohemia_Army
+		   }
+		   }
+		}
 	focus = {
 		id = CZE_go_left
 		icon = GFX_focus_generic_soviet_politics

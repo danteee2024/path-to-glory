@@ -117,6 +117,25 @@ ideas = {
 				training_time_army_factor = 0.1
 			}
 		}
+		CZE_Holy_Bohemia_Army =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FIN_finnish_army
+
+			removal_cost = -2	
+			modifier = {
+				army_org_factor = 0.06
+				army_morale_factor = 0.1
+				training_time_army_factor = 0.1
+			}
+		}
 		CZE_Joint_Czech_Slovakia_Plan =  {
 			
 			allowed = {
@@ -152,6 +171,23 @@ ideas = {
 				consumer_goods_factor = -0.20
 				production_speed_industrial_complex_factor = -0.10
 				production_speed_arms_factory_factor = 0.15
+			}
+		}
+		CZE_Research_of_Praha =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_economic_reactivation
+
+			removal_cost = -2	
+			modifier = {
+				research_speed_factor = 0.10
 			}
 		}
 
