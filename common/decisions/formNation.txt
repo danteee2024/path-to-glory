@@ -7755,7 +7755,8 @@ formable_nations_mod_category = {
 			NOT = { has_global_flag = hide_formable_nations }
 			OR = {
 				has_global_flag = no_limit
-				capital_scope = { is_on_continent = north_america }
+				original_tag = CAN
+				original_tag = MEX
 			}
 		}
 		
