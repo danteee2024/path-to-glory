@@ -113,7 +113,7 @@ ideas = {
 
 			removal_cost = -2	
 			modifier = {
-				army_org_factor = 0.04
+				army_org_factor = 0.05
 				training_time_army_factor = 0.1
 			}
 		}
@@ -131,7 +131,7 @@ ideas = {
 
 			removal_cost = -2	
 			modifier = {
-				army_org_factor = 0.06
+				army_org_factor = 0.1
 				army_morale_factor = 0.1
 				training_time_army_factor = 0.1
 			}
