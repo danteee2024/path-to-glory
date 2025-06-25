@@ -42,6 +42,118 @@ ideas = {
 
 			}
 		}
+			CZE_Call_of_the_Kingdom = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			picture = HUN_apostolic_kingdom_idea
+
+			removal_cost = -1
+
+			modifier = {
+				neutrality_drift = 0.05
+				political_power_factor = -0.1
+
+			}
+		}
+		CZE_The_Revival_of_the_Kingdom = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			picture = HUN_apostolic_kingdom_idea
+
+			removal_cost = -1
+
+			modifier = {
+				neutrality_drift = 0.05
+			}
+		}
+		CZE_Bohemia_Economy =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_economic_reactivation
+
+			removal_cost = -2	
+			modifier = {
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				consumer_goods_factor = -0.10
+			}
+		}
+		CZE_Bohemia_Army =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FIN_finnish_army
+
+			removal_cost = -2	
+			modifier = {
+				army_org_factor = 0.04
+				training_time_army_factor = 0.1
+			}
+		}
+		CZE_Joint_Czech_Slovakia_Plan =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_second_five_year_plan
+
+			removal_cost = -2	
+			modifier = {
+				consumer_goods_factor = -0.10
+				production_speed_industrial_complex_factor = 0.10
+			}
+		}
+		CZE_Joint_Czech_Slovakia_Plan_2 =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_third_five_year_plan
+
+			removal_cost = -2	
+			modifier = {
+				consumer_goods_factor = -0.20
+				production_speed_industrial_complex_factor = -0.10
+				production_speed_arms_factory_factor = 0.15
+			}
+		}
 
 		CZE_beacon_of_liberty = {
 
@@ -256,7 +368,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = -0.15
+				consumer_goods_factor = -0.10
 				production_factory_efficiency_gain_factor = 0.05
 			}
 
@@ -282,8 +394,8 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = -0.15
-				production_factory_efficiency_gain_factor = 0.1
+				consumer_goods_factor = -0.10
+				production_factory_efficiency_gain_factor = 0.15
 			}
 
 			equipment_bonus = {
@@ -294,7 +406,7 @@ ideas = {
 					build_cost_ic = -0.15 instant = yes
 				}
 				medium_tank_chassis = {
-					build_cost_ic = -0.05 instant = yes
+					build_cost_ic = -0.10 instant = yes
 				}
 			}
 		}

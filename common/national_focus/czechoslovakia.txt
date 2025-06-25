@@ -948,8 +948,66 @@
 		id = CZE_favor_czechs_1
 		icon = GFX_focus_generic_industry_1
 		prerequisite = { focus = CZE_industrial_legacy }
-		mutually_exclusive = { focus = CZE_balanced_1 }
 		x = -2
+		y = 1
+		relative_position_id = CZE_industrial_legacy
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 2
+				has_completed_focus = CZE_go_right
+			}
+			modifier = {
+				factor = 2
+				has_completed_focus = CZE_german_leanings
+			}
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+		
+		available = {
+			CZE = { controls_state = 9 }
+			CZE = { controls_state = 75 }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+		 9 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		75 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = CZE_favor_Slovakia
+		icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = CZE_industrial_legacy }
+		x = 0
 		y = 1
 		relative_position_id = CZE_industrial_legacy
 
@@ -972,8 +1030,8 @@
 		}
 
 		available = {
-			CZE = { controls_state = 9 }
-			CZE = { controls_state = 75 }
+			CZE = { controls_state = 70 }
+			CZE = { controls_state = 664 }
 		}
 
 		bypass = {
@@ -986,19 +1044,19 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			9 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			75 = {
+		 70 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
+					instant_build = yes
+				}
+			}
+		664 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1008,10 +1066,10 @@
 	focus = {
 		id = CZE_favor_czechs_2
 		icon = GFX_focus_generic_industry_2
-		prerequisite = { focus = CZE_favor_czechs_1 }
+		prerequisite = { focus = CZE_balanced_2 }
 		x = 0
 		y = 1
-		relative_position_id = CZE_favor_czechs_1
+		relative_position_id = CZE_balanced_2
 
 		cost = 10
 
@@ -1024,7 +1082,97 @@
 		}
 
 		available = {
+			CZE = { controls_state = 70 }
 			CZE = { controls_state = 9 }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+		    70 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			9 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = CZE_Change_of_the_Planning
+		icon = GFX_focus_GER_prioritize_the_four_year_plan
+		prerequisite = { focus = CZE_favor_czechs_2 }
+	
+		x = 0
+		y = 1
+		relative_position_id = CZE_favor_czechs_2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+		swap_ideas = {
+				remove_idea = CZE_Joint_Czech_Slovakia_Plan
+				add_idea = CZE_Joint_Czech_Slovakia_Plan_2
+			}
+		}
+	}
+focus = {
+		id = CZE_Invest_in_our_Land
+		icon = GFX_focus_generic_land_reclamation
+		prerequisite = { focus = CZE_favor_czechs_2 }
+		x = -2
+		y = 1
+		relative_position_id = CZE_favor_czechs_2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+
+		available = {
+			CZE = { controls_state = 70 }
+			CZE = { controls_state = 71 }
 			CZE = { controls_state = 75 }
 		}
 
@@ -1038,32 +1186,39 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			9 = {
+		    70 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					type = industrial_complex
+					type = resource_expansion_tungsten
+					level = 2
+					instant_build = yes
+				}
+			}
+			71 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = resource_expansion_steel
 					level = 2
 					instant_build = yes
 				}
 			}
 			75 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					type = industrial_complex
-					level = 1
+					type = synthetic_refinery
+					level = 2
 					instant_build = yes
 				}
 			}
 		}
 	}
-
 	focus = {
 		id = CZE_favor_czechs_3
 		icon = GFX_focus_generic_industry_3
-		prerequisite = { focus = CZE_favor_czechs_2 }
-		x = 0
-		y = 2
-		relative_position_id = CZE_favor_czechs_1
+		prerequisite = { focus = CZE_University_of_Praha }
+		x = 2
+		y = 1
+		relative_position_id = CZE_University_of_Praha
 
 		cost = 10
 
@@ -1076,125 +1231,8 @@
 		}
 
 		available = {
-			CZE = { controls_state = 9 }
+			CZE = { controls_state = 664 }
 			CZE = { controls_state = 75 }
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			9 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			75 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = CZE_balanced_1
-		icon = GFX_goal_generic_construction
-		prerequisite = { focus = CZE_industrial_legacy }
-		mutually_exclusive = { focus = CZE_favor_czechs_1 }
-		x = 0
-		y = 1
-		relative_position_id = CZE_industrial_legacy
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 70
-			modifier = {
-				factor = 0.5
-				has_completed_focus = CZE_go_right
-			}
-			modifier = {
-				factor = 0.5
-				has_completed_focus = CZE_german_leanings
-			}
-			modifier = {
-				factor = 0.1
-				HABSBURG_joint_trigger = yes
-			}
-		}
-
-		available = {
-			CZE = { controls_state = 9 }
-			CZE = { controls_state = 70 }
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			9 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			70 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = CZE_balanced_2
-		icon = GFX_focus_eng_concessions_to_the_trade_unions
-		prerequisite = { focus = CZE_balanced_1 }
-		x = 0
-		y = 1
-		relative_position_id = CZE_balanced_1
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 80
-			modifier = {
-				factor = 0.1
-				HABSBURG_joint_trigger = yes
-			}
-		}
-
-		available = {
-			CZE = { controls_state = 9 }
 			CZE = { controls_state = 71 }
 		}
 
@@ -1208,7 +1246,15 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			9 = {
+			664 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			75 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -1217,14 +1263,9 @@
 				}
 			}
 			71 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = infrastructure
 					level = 1
 					instant_build = yes
 				}
@@ -1233,12 +1274,13 @@
 	}
 
 	focus = {
-		id = CZE_balanced_3
-		icon = GFX_goal_generic_construct_civilian
-		prerequisite = { focus = CZE_balanced_2 }
-		x = 0
-		y = 2
-		relative_position_id = CZE_balanced_1
+		id = CZE_balanced_2
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = CZE_favor_Slovakia }
+		prerequisite = { focus = CZE_favor_czechs_1 }
+		x = -2
+		y = 1
+		relative_position_id = CZE_favor_Slovakia
 
 		cost = 10
 
@@ -1251,8 +1293,51 @@
 		}
 
 		available = {
-			CZE = { controls_state = 9 }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+		add_ideas = CZE_Joint_Czech_Slovakia_Plan
+			}
+		}
+
+	focus = {
+		id = CZE_balanced_3
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = CZE_University_of_Praha }
+		x = 0
+		y = 1
+		relative_position_id = CZE_University_of_Praha
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+
+		available = {
+			CZE = { controls_state = 70 }
+			CZE = { controls_state = 71 }
+			CZE = { controls_state = 75 }
+			CZE = { controls_state = 664 }
+			CZE = { controls_state = 69 }
+			CZE = { controls_state = 972 }
+			CZE = { controls_state = 74 }
 			CZE = { controls_state = 73 }
+			CZE = { controls_state = 72 }
+			CZE = { controls_state = 9 }
 		}
 
 		bypass = {
@@ -1268,18 +1353,77 @@
 			9 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = industrial_complex
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			71 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			72 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			75 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			70 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			664 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
 					level = 1
 					instant_build = yes
 				}
 			}
 			73 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = industrial_complex
+					type = infrastructure
 					level = 1
 					instant_build = yes
 				}
+			}
+			74 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			972 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			69 = {
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -1292,10 +1436,10 @@
 	focus = {
 		id = CZE_united_population
 		icon = GFX_goal_tripartite_pact
-		prerequisite = { focus = CZE_balanced_3 }
+		prerequisite = { focus = CZE_favor_Slovakia focus = CZE_favor_czechs_1 }
 		x = 0
-		y = 3
-		relative_position_id = CZE_balanced_1
+		y = 1
+		relative_position_id = CZE_favor_Slovakia
 
 		cost = 10
 
@@ -1330,6 +1474,41 @@
 				add_stability = 0.1
 				add_war_support = 0.1
 			}
+		}
+	}
+	focus = {
+		id = CZE_University_of_Praha
+		icon = GFX_focus_research
+		prerequisite = { focus = CZE_united_population }
+		x = 0
+		y = 1
+		relative_position_id = CZE_united_population
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			add_research_slot = 1
 		}
 	}
 
@@ -1472,7 +1651,7 @@
 	focus = {
 		id = CZE_political_direction
 		icon = GFX_goal_generic_intelligence_exchange
-		x = 8
+		x = 14
 		y = 0
 		relative_position_id = CZE_industrial_legacy
 
@@ -1503,13 +1682,321 @@
 			add_political_power = 120
 		}
 	}
+	
+	focus = {
+		id = CZE_Return_of_the_Monarchie
+		icon = GFX_focus_hun_elect_a_king 
+		prerequisite = { focus = CZE_political_direction }
+		mutually_exclusive = { focus = CZE_democratic_bastion focus = CZE_go_right focus = CZE_go_left }
+		x = -9
+		y = 1
+		relative_position_id = CZE_political_direction
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				factor = 0
+				has_completed_focus = CZE_go_right
+			}
+			modifier = {
+				factor = 0
+				has_completed_focus = CZE_german_leanings
+			}
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_war_support = 0.1
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}	
+		}
+		}
+		focus = {
+		id = CZE_The_Return_of_the_King
+		icon =  GFX_SOV_romanov_reconstruction_ccp_2d_sov_compatibility
+		prerequisite = { focus = CZE_Return_of_the_Monarchie }
+		x = 0
+		y = 1
+		relative_position_id = CZE_Return_of_the_Monarchie
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = CZE_Call_of_the_Kingdom
+			}
+		}
+
+		focus = {
+		id = CZE_Revival_of_the_Kingdom
+		icon =  GFX_focus_generic_befriend_bohemia 
+		prerequisite = { focus = CZE_The_Return_of_the_King }
+		x = 0
+		y = 1
+		relative_position_id = CZE_The_Return_of_the_King
+
+		cost = 05
+
+		ai_will_do = {
+			factor = 80
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+
+		available = {
+			neutrality > 0.4
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			swap_ideas = {
+				remove_idea = CZE_Call_of_the_Kingdom
+				add_idea = CZE_The_Revival_of_the_Kingdom
+			}
+		}
+	}
+		focus = {
+		id = CZE_Bohemia_Economy
+		icon = GFX_focus_generic_economic_recovery 
+		prerequisite = { focus = CZE_Revival_of_the_Kingdom }
+		x = 0
+		y = 1
+		relative_position_id = CZE_Revival_of_the_Kingdom
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = CZE_Bohemia_Economy
+			}
+		}
+		focus = {
+		id = CZE_Prepare_for_War
+		icon = GFX_goal_generic_major_war 
+		prerequisite = { focus = CZE_Bohemia_Economy }
+		x = 0
+		y = 1
+		relative_position_id = CZE_Bohemia_Economy
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = CZE_Bohemia_Army
+			}
+		}
+		focus = {
+		id = CZE_Demand_Austria_Annexation
+		icon =  GFX_goal_demand_sudetenland 
+		prerequisite = { focus = CZE_Prepare_for_War }
+		x = 1
+		y = 1
+		relative_position_id = CZE_Prepare_for_War
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		
+			}
+		}
+		focus = {
+		id = CZE_Expansion_is_Needed
+		icon = GFX_focus_generic_attack_hungary 
+		prerequisite = { focus = CZE_Prepare_for_War }
+		x = -1
+		y = 1
+		relative_position_id = CZE_Prepare_for_War
+		cost = 5
+		ai_will_do = {
+			base = 0
+			modifier = { 
+				add = 1
+				AND = { 
+					has_war = no
+					strength_ratio = { 
+						tag = HUN
+						ratio > 0.4
+					}
+				}
+			}
+		}
+		
+
+		available = {
+			is_subject = no
+		}
+
+		bypass = { 
+			HUN = { 
+				OR = { 
+					exists = no
+					is_puppet_of = CZE
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = HUN
+				expire = 0
+			}
+		}
+	}	
+	focus = {
+		id = CZE_The_Great_Kigndom
+		icon = GFX_focus_BEL_king_of_the_belgians 
+		prerequisite = { focus = CZE_Expansion_is_Needed }
+		prerequisite = { focus = CZE_Demand_Austria_Annexation }
+		x = -1
+		y = 1
+		relative_position_id = CZE_Demand_Austria_Annexation
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.1
+			every_state = {
+				limit = { is_core_of = HUN }
+				add_core_of = ROOT
+			}
+			every_state = {
+				limit = { is_core_of = AUS }
+				add_core_of = ROOT
+			}
+		
+			}
+		}
+
 
 	focus = {
 		id = CZE_go_left
 		icon = GFX_focus_generic_soviet_politics
 		prerequisite = { focus = CZE_political_direction }
-		mutually_exclusive = { focus = CZE_democratic_bastion focus = CZE_go_right }
-		x = -2
+		mutually_exclusive = { focus = CZE_democratic_bastion focus = CZE_go_right focus = CZE_Return_of_the_Monarchie}
+		x = -3
 		y = 1
 		relative_position_id = CZE_political_direction
 
@@ -1816,8 +2303,8 @@
 		id = CZE_democratic_bastion
 		icon = GFX_focus_generic_the_giant_wakes
 		prerequisite = { focus = CZE_political_direction }
-		mutually_exclusive = { focus = CZE_go_right focus = CZE_go_left }
-		x = 0
+		mutually_exclusive = { focus = CZE_go_right focus = CZE_go_left focus = CZE_Return_of_the_Monarchie}
+		x = 3
 		y = 1
 		relative_position_id = CZE_political_direction
 
@@ -1971,8 +2458,8 @@
 		id = CZE_go_right
 		icon = GFX_focus_generic_strike_at_democracy1
 		prerequisite = { focus = CZE_political_direction }
-		mutually_exclusive = { focus = CZE_democratic_bastion focus = CZE_go_left }
-		x = 2
+		mutually_exclusive = { focus = CZE_democratic_bastion focus = CZE_go_left focus = CZE_Return_of_the_Monarchie}
+		x = 9
 		y = 1
 		relative_position_id = CZE_political_direction
 
@@ -2367,7 +2854,7 @@
 	focus = {
 		id = CZE_strategy_decisions
 		icon = GFX_goal_generic_position_armies
-		x = 12
+		x = 20
 		y = 0
 		relative_position_id = CZE_political_direction
 
