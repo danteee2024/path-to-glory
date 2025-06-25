@@ -67,7 +67,6 @@ country_event = {
 			set_variable = { var = GRE_communist_loyalty value = 0 }
 			GRE_political_instability_update_effect = yes
 			set_country_flag = GRE_dem_monarchy_flag
-			GRE_set_appropriate_cosmetic_tag = yes
 		}
 	}		
 }

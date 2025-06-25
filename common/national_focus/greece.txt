@@ -1356,7 +1356,6 @@ focus_tree = {
 			}
 			hidden_effect = {
 				set_country_flag = GRE_com_independent_flag
-				GRE_set_appropriate_cosmetic_tag = yes
 				set_country_flag = GRE_soviets_rebuffed
 			}
 		}
@@ -1996,7 +1995,6 @@ focus_tree = {
 				remove_idea = GRE_schachtplan
 				add_idea = GRE_Recovery
 			}
-			add_research_slot = 1
 			add_stability = 0.10
 		}
 	}
@@ -2813,8 +2811,8 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_research_slot = 1
 			add_stability = 0.10
+			add_research_slot = 1
 		}
 	}
 
