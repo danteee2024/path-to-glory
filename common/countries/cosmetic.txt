@@ -1345,6 +1345,11 @@ HUN_AUS_danubian_state = {
 	color_ui = rgb { 224  228  255 }
 }
 
+CZE_neutrality = {
+	color = rgb { 205 25 25 }
+	color_ui = rgb { 205 25 25 }
+}
+
 CZE_AUS_danubian_state = {
 	color = rgb { 224  228  255 }
 	color_ui = rgb { 224  228  255 }

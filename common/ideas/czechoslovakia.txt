@@ -136,6 +136,61 @@ ideas = {
 				training_time_army_factor = 0.1
 			}
 		}
+			CZE_Red_Czechs_Army =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FIN_finnish_army
+
+			removal_cost = -2	
+			modifier = {
+				planning_speed = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+		CZE_Communist_Politics =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FIN_finnish_army
+
+			removal_cost = -2	
+			modifier = {
+				political_power_factor = -0.05
+				war_stability_factor = 0.10
+				stability_weekly_factor = 0.025
+			}
+		}
+			CZE_Red_Czechs_Army =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FIN_finnish_army
+
+			removal_cost = -2	
+			modifier = {
+				planning_speed = 0.05
+				army_morale_factor = 0.05
+			}
+		}
 		CZE_Joint_Czech_Slovakia_Plan =  {
 			
 			allowed = {
@@ -171,6 +226,59 @@ ideas = {
 				consumer_goods_factor = -0.20
 				production_speed_industrial_complex_factor = -0.10
 				production_speed_arms_factory_factor = 0.15
+			}
+		}
+		CZE_The_Union_Worker =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FIN_finnish_federation_of_trade_unions_light
+
+			removal_cost = -2	
+			modifier = {
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_arms_factory_factor = 0.15
+			}
+		}
+		CZE_Mobilize_the_Masses =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_manpower_bonus
+
+			removal_cost = -2	
+			modifier = {
+				recruitable_population_factor = 0.1
+			}
+		}
+		CZE_The_Great_Army =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FIN_finnish_federation_of_trade_unions_light
+
+			removal_cost = -2	
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
 			}
 		}
 		CZE_Research_of_Praha =  {
