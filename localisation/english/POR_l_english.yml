@@ -288,5 +288,15 @@ l_english:
  POR_elastic_defence_idea:0 "Elastic Defense"
  POR_elastic_defence_idea_desc:0 "In the face of potential invasions, we must adopt an elastic defense strategy. This approach will allow us to respond flexibly to threats, ensuring that we can protect our territory and maintain our sovereignty."
 
+ POR_tropas_paraquedistas_idea:0 "Tropas Paraquedistas Special Training"
+ POR_tropas_paraquedistas_idea_desc:0 "Tropas Paraquedistas will cunduct a series of specialised training, improving their efficiency in conducting airborn assaults in the most hostile environments."
+ 
+ POR_tropas_paraquedistas_idea2:0 "Tropas Paraquedistas Special Training"
+ POR_tropas_paraquedistas_idea2_desc:0 "Tropas Paraquedistas will cunduct a series of specialised training, improving their efficiency in conducting airborn assaults in the most hostile environments."
+
+ POR_tropas_paraquedistas_idea3:0 "Tropas Paraquedistas Special Training"
+ POR_tropas_paraquedistas_idea3_desc:0 "Tropas Paraquedistas will cunduct a series of specialised training, improving their efficiency in conducting airborn assaults in the most hostile environments."
+
+
 l_english:
 ################## MISCELLANEOUS/NOT USED ###############
