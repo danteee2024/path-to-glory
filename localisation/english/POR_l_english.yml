@@ -166,11 +166,11 @@
  POR_colonial_army_primacy:0 "Colonial Army Primacy"
  POR_colonial_army_primacy_desc:0 "A decision needs to be taken, the Colonial Army should be our main land focus."
 
- POR_colonial_army_dominance:0 "colonial Army Dominance"
+ POR_colonial_army_dominance:0 "Colonial Army Dominance"
  POR_colonialarmy_dominance_desc:0 "A decision was taken, we need to stand with it and accpet that the Colonial Army has asserted its dominance in the army."
 
- POR_elastic_defense:0 "Elastic Defense"
- POR_elastic_defense_desc:0 "In the face of potential invasions, we must adopt an elastic defense strategy. This approach will allow us to respond flexibly to threats, ensuring that we can protect our territory and maintain our sovereignty."
+ POR_elastic_defence:0 "Elastic Defense"
+ POR_elastic_defence_desc:0 "In the face of potential invasions, we must adopt an elastic defense strategy. This approach will allow us to respond flexibly to threats, ensuring that we can protect our territory and maintain our sovereignty."
  
  POR_general_staff_focus:0 "General Staff Reform"
  POR_general_staff_focus_desc:0 "A General Staff reform is necessary for the efficiency of the army."
@@ -189,6 +189,9 @@
 
  POR_further_armor_developements:0 "Further Armor Developements"
  POR_urther_armor_developements_desc:0 "Armor is the main pushing force, we must use it to our advantage in the various branches of our army."
+
+ POR_border_defence_networks:0 "Border Defence Network"
+ POR_border_defence_networks_desc:0 "Creating a Border Defence Network will make us less vulnerable to attacks on our homeland."
 
 l_english:
 ##################### TOOLTIPS ######################
@@ -267,17 +270,23 @@ l_english:
  POR_metropolitan_army_primacy_idea:0 "Metropolitan Army Primacy"
  POR_metropolitan_army_primacy_idea_desc:0 "A decision needs to be taken, the Metropolitan Army should be our main land focus."
 
- POR_metropolitan_army_dominance_idea_:0 "Metropolitan Army Dominance"
+ POR_metropolitan_army_dominance_idea:0 "Metropolitan Army Dominance"
  POR_metropolitan_army_dominance_idea_desc:0 "A decision was taken, we need to stand with it and accpet that the Metropolitan Army has asserted its dominance in the army."
 
  POR_colonial_army_primacy_idea:0 "Colonial Army Primacy"
  POR_colonial_army_primacy_idea_desc:0 "A decision needs to be taken, the Colonial Army should be our main land focus."
 
- POR_colonial_army_dominance_idea:0 "colonial Army Dominance"
+ POR_colonial_army_dominance_idea:0 "Colonial Army Dominance"
  POR_colonialarmy_dominance_idea_desc:0 "A decision was taken, we need to stand with it and accpet that the Colonial Army has asserted its dominance in the army."
 
  POR_armor_focus_idea:0 "Tank Production Focus"
  POR_armor_focus_idea_desc:0 "Tank Production is essential for our Metropolitan Army, we must develope it and make sure its efficient."
+
+ POR_fortification_focus_idea:0 "Fortification Focus"
+ POR_fortification_idea_desc:0 "Defending is as important as attacking,focusing on building fortification lines will help us in this task."
+
+ POR_elastic_defence_idea:0 "Elastic Defense"
+ POR_elastic_defence_idea_desc:0 "In the face of potential invasions, we must adopt an elastic defense strategy. This approach will allow us to respond flexibly to threats, ensuring that we can protect our territory and maintain our sovereignty."
 
 l_english:
 ################## MISCELLANEOUS/NOT USED ###############
