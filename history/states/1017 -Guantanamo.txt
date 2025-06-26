@@ -1,6 +1,6 @@
 state= {
-	id=315
-	name="STATE_315"
+	id=1017
+	name="Guantanamo"
 	manpower = 3607919
 	resources={
 		steel=3 # was: 4
@@ -12,23 +12,25 @@ state= {
 	history= {
 		owner = CUB
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
 			arms_factory = 2
-			industrial_complex = 5
+			industrial_complex = 4
+			dockyard = 1
 			air_base = 1
-			7622 = {
-				naval_base = 3
+			
+			1550 = {
+				naval_base = 1
 			}
-		
 		}
 		add_core_of = CUB
+		
 		victory_points = {
-			7622 5 
+			7590 1
 		}
 
 	}
 	provinces={
-	    4600 7451 7622 10374 10498 
+		1550 4476 7546 7590 12347
 	}
 
 	local_supplies=0.0 

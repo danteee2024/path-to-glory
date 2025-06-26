@@ -977,6 +977,12 @@ focus_tree = {
 				idea = CUB_investment
 				days = 60
 			}
+		1017 = {
+			add_dynamic_modifier = {
+					modifier = CUB_build_tall
+					scope = CUB
+				}	
+		}
 		315 = {
 				add_dynamic_modifier = {
 					modifier = CUB_build_tall
@@ -1018,6 +1024,19 @@ focus_tree = {
 				
 				
 			}
+			1017 = {
+
+				add_dynamic_modifier = {
+					modifier = CUB_build_tall_2
+					scope = CUB
+				}
+				remove_dynamic_modifier = {
+					modifier = CUB_build_tall
+					scope = CUB
+				}
+				
+				
+			}
 		   
 		}
 	}
@@ -1039,6 +1058,21 @@ focus_tree = {
 				idea = CUB_investment
 				days = 60
 			}
+		1017 = {
+			add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = {
+						id = 7590
+					}
+				}
+				custom_effect_tooltip = {
+				localization_key = building_state_modifier|dam
+				INDENT = "    "
+				
+			}
+		}
 		315 = {
 			
 				add_building_construction = {
@@ -1087,6 +1121,17 @@ focus_tree = {
 				}
 		   
 		}
+		1017 = {
+			add_dynamic_modifier = {
+					modifier = CUB_build_tall_3
+					scope = CUB
+				}
+				remove_dynamic_modifier = {
+					modifier = CUB_build_tall_2
+					scope = CUB
+				}
+		   
+		}
 	}
 }
 focus = {
@@ -1108,6 +1153,17 @@ focus = {
 				days = 60
 			}
 		315 = {
+			add_dynamic_modifier = {
+					modifier = CUB_build_tall_4
+					scope = CUB
+				}
+				remove_dynamic_modifier = {
+					modifier = CUB_build_tall_3
+					scope = CUB
+				}
+		   
+		}
+		1017 = {
 			add_dynamic_modifier = {
 					modifier = CUB_build_tall_4
 					scope = CUB
