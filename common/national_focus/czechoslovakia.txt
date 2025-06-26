@@ -1505,7 +1505,7 @@ focus = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
 			add_research_slot = 1
@@ -1759,6 +1759,7 @@ focus = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			add_ideas = CZE_Call_of_the_Kingdom
@@ -1794,6 +1795,7 @@ focus = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			set_cosmetic_tag = CZE_neutrality
@@ -1834,6 +1836,7 @@ focus = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			add_ideas = CZE_Bohemia_Economy
@@ -1898,6 +1901,7 @@ focus = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
 		
@@ -1968,6 +1972,17 @@ focus = {
 		}
 
 		available = {
+			CZE = { controls_state = 4 }
+			CZE = { controls_state = 975 }
+			CZE = { controls_state = 976 }
+			CZE = { controls_state = 153 }
+			CZE = { controls_state = 848 }
+			CZE = { controls_state = 152 }
+			CZE = { controls_state = 155 }
+			CZE = { controls_state = 974 }
+			CZE = { controls_state = 973 }
+			CZE = { controls_state = 43 }
+			CZE = { controls_state = 154 }
 		}
 
 		bypass = {
@@ -1976,9 +1991,9 @@ focus = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
-			add_stability = 0.1
 			every_state = {
 				limit = { is_core_of = HUN }
 				add_core_of = ROOT
@@ -2145,7 +2160,7 @@ focus = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
 		   add_research_slot = 1
@@ -2235,7 +2250,6 @@ focus = {
 			}
 		}
 
-		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 
 		}
@@ -2311,7 +2325,7 @@ focus = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
 
 		completion_reward = {
 			add_stability = 0.05
@@ -2657,6 +2671,7 @@ focus = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			add_ideas = CZE_The_Union_Worker
@@ -2794,6 +2809,7 @@ focus = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
 			add_research_slot = 1
@@ -2862,6 +2878,7 @@ focus = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
 			add_research_slot = 1
@@ -2924,6 +2941,7 @@ focus = {
 		available = {
 
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 
 		bypass = {
 			NOT = { can_declare_war_on = POL }
@@ -2967,6 +2985,7 @@ focus = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
 			add_ideas = CZE_Mobilize_the_Masses
@@ -3001,6 +3020,7 @@ focus = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			add_ideas = tot_economic_mobilisation
@@ -3154,6 +3174,7 @@ focus = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
 			add_ideas = extensive_conscription
@@ -3187,6 +3208,7 @@ focus = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
 			add_research_slot = 1
@@ -3220,6 +3242,7 @@ focus = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			add_ideas = CZE_Industrial_Republic
@@ -3256,6 +3279,7 @@ focus = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			add_ideas = CZE_Invest_into_our_Army
@@ -3292,9 +3316,10 @@ focus = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_ideas = CZE_Invest_into_our_Economy
+			add_ideas = CZE_Invest_into_our_Trade
 		}
 	}
 
@@ -3325,6 +3350,7 @@ focus = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
 
 		completion_reward = {
 			add_ideas = CZE_Democracy_Shall_Prevail
@@ -3385,6 +3411,7 @@ focus = {
 
 		available = {
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_WAR_SUPPORT }
 
 		bypass = {
 		}
@@ -3516,7 +3543,7 @@ focus = {
 
 	focus = {
 		id = CZE_czech_fascism
-		icon = GFX_goal_support_fascism
+		icon = GFX_focus_generic_fascist_propaganda
 		prerequisite = { focus = CZE_go_right }
 		x = 0
 		y = 1
@@ -3551,12 +3578,47 @@ focus = {
 	}
 
 	focus = {
-		id = CZE_aggressive_wars
-		icon = GFX_goal_generic_political_pressure
+		id = CZE_Bohemia_Empire
+		icon = GFX_goal_support_fascism
 		prerequisite = { focus = CZE_czech_fascism }
 		x = 0
-		y = 2
-		relative_position_id = CZE_go_right
+		y = 1
+		relative_position_id = CZE_czech_fascism
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+
+		available = {
+			fascism > 0.35
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = CZE_Bohemia_Empire
+		}
+	}
+
+	focus = {
+		id = CZE_aggressive_wars
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = CZE_Bohemia_Empire }
+		x = 0
+		y = 1
+		relative_position_id = CZE_Bohemia_Empire
 
 		cost = 10
 
@@ -3590,10 +3652,10 @@ focus = {
 		icon = GFX_focus_generic_attack_poland
 		prerequisite = { focus = CZE_german_minor_ally focus = CZE_german_puppet }
 		x = 4
-		y = 4
+		y = 5
 		relative_position_id = CZE_go_right
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 90
@@ -3631,10 +3693,10 @@ focus = {
 		id = CZE_exclude_the_slovaks
 		icon = GFX_goal_generic_propaganda
 		mutually_exclusive = { focus = CZE_national_fascism }
-		prerequisite = { focus = CZE_czech_fascism }
+		prerequisite = { focus = CZE_Bohemia_Empire }
 		x = 2
-		y = 2
-		relative_position_id = CZE_go_right
+		y = 1
+		relative_position_id = CZE_Bohemia_Empire
 
 		cost = 5
 
@@ -3692,10 +3754,10 @@ focus = {
 		id = CZE_national_fascism
 		icon = GFX_focus_ITA_generic_fascist_workers
 		mutually_exclusive = { focus = CZE_exclude_the_slovaks }
-		prerequisite = { focus = CZE_czech_fascism }
+		prerequisite = { focus = CZE_Bohemia_Empire }
 		x = 4
-		y = 2
-		relative_position_id = CZE_go_right
+		y = 1
+		relative_position_id = CZE_Bohemia_Empire
 
 		cost = 15
 
@@ -3737,7 +3799,7 @@ focus = {
 		mutually_exclusive = { focus = CZE_german_ally focus = CZE_german_puppet }
 		prerequisite = { focus = CZE_exclude_the_slovaks focus = CZE_national_fascism }
 		x = 4
-		y = 3
+		y = 4
 		relative_position_id = CZE_go_right
 
 		cost = 5
@@ -3786,7 +3848,7 @@ focus = {
 		prerequisite = { focus = CZE_exclude_the_slovaks focus = CZE_national_fascism }
 		mutually_exclusive = { focus = CZE_german_puppet focus = CZE_german_minor_ally }
 		x = 2
-		y = 3
+		y = 4
 		relative_position_id = CZE_go_right
 
 		cost = 10
@@ -3828,7 +3890,7 @@ focus = {
 	}
 
 	focus = {
-		id = CZE_Expansion_into_the_North
+		id = CZE_Polish_Situation
 		icon = GFX_focus_generic_attack_poland 
 		prerequisite = { focus = CZE_german_ally }
 		prerequisite = { focus = CZE_aggressive_wars }
@@ -3848,6 +3910,7 @@ focus = {
 				}
 			}
 		}
+		cost = 5
 		available = {
 			is_subject = no
 		}
@@ -3860,7 +3923,6 @@ focus = {
 				}
 			}
 		}
-
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
 			create_wargoal = {
@@ -3870,6 +3932,398 @@ focus = {
 			}
 		}
 	}	
+
+		focus = {
+		id = CZE_Germanys_Production
+		icon = GFX_focus_generic_reorient_production
+		prerequisite = { focus = CZE_the_polish_question }
+		x = 1
+		y = 1
+		relative_position_id = CZE_the_polish_question
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 2
+				has_completed_focus = CZE_german_leanings
+			}
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = CZE_Germanys_production
+		}
+	}
+
+	focus = {
+		id = CZE_Strong_Force
+		icon = GFX_focus_generic_tank_assault
+		prerequisite = { focus = CZE_Germanys_Production }
+		prerequisite = { focus = CZE_Bohemias_Researcher
+			
+		}
+		x = -1
+		y = 1
+		relative_position_id = CZE_Germanys_Production
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 2
+			}
+			modifier = {
+				factor = 0.1
+			}
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = CZE_Strong_Force
+		}
+	}
+
+	focus = {
+		id = CZE_Territorial_Expansion_into_the_East
+		icon = GFX_focus_generic_attack_romania
+		prerequisite = { focus = CZE_Polish_Situation }
+		prerequisite = { focus = CZE_hungarian_situation }
+		x = -1
+		y = 1
+		relative_position_id = CZE_hungarian_situation
+		ai_will_do = {
+			base = 0
+			modifier = { 
+				add = 1
+				AND = { 
+					has_war = no
+					strength_ratio = { 
+						tag = ROM
+						ratio > 0.4
+					}
+				}
+			}
+		}
+		cost = 5
+		available = {
+			is_subject = no
+		}
+
+		bypass = { 
+			ROM = { 
+				OR = { 
+					exists = no
+					is_puppet_of = CZE
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = ROM
+				expire = 0
+			}
+		}
+	}
+
+	focus = {
+		id = CZE_Blitz_War
+		icon = GFX_focus_generic_fascist_troops
+		prerequisite = { focus = CZE_Territorial_Expansion_into_the_East }
+		x = 0
+		y = 1
+		relative_position_id = CZE_Territorial_Expansion_into_the_East
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 2
+				has_completed_focus = CZE_german_leanings
+			}
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = CZE_Blitz_War
+		}
+	}
+
+	focus = {
+		id = CZE_Plan_of_Ressources
+		icon = GFX_focus_generic_resource_extraction
+		prerequisite = { focus = CZE_Blitz_War }
+		mutually_exclusive = {
+			focus = CZE_Plan_of_Logistic
+		}
+		x = -1
+		y = 1
+		relative_position_id = CZE_Blitz_War
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 2
+				has_completed_focus = CZE_german_leanings
+			}
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = CZE_Plan_of_Ressources
+		}
+	}
+
+	focus = {
+		id = CZE_Plan_of_Logistic
+		icon = GFX_focus_generic_supply_line
+		prerequisite = { focus = CZE_Blitz_War }
+		mutually_exclusive = {
+			focus = CZE_Plan_of_Ressources
+		}
+		x = 1
+		y = 1
+		relative_position_id = CZE_Blitz_War
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 2
+				has_completed_focus = CZE_german_leanings
+			}
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = CZE_Plan_of_Logistic
+		}
+	}
+
+	focus = {
+		id = CZE_The_Great_Bohemia_Empire
+		icon = GFX_focus_BUL_the_third_bulgarian_empire
+		prerequisite = { focus = CZE_Plan_of_Logistic focus = CZE_Plan_of_Ressources }
+		x = 0
+		y = 2
+		relative_position_id = CZE_Blitz_War
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 2
+				has_completed_focus = CZE_german_leanings
+			}
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		completion_reward = { swap_ideas = {
+			remove_idea = CZE_Bohemia_Empire
+		
+			add_idea = CZE_The_Great_Bohemia_Empire
+		}
+		}
+		}
+
+			focus = {
+		id = CZE_Territorial_Question
+		icon = GFX_focus_GER_weltpolitik
+		prerequisite = { focus = CZE_Strong_Force }
+		x = 0
+		y = 1
+		relative_position_id = CZE_Strong_Force
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 2
+			}
+			modifier = {
+				factor = 0.1
+			}
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		completion_reward = { 
+		}
+			}
+	
+
+		focus = {
+		id = CZE_Bohemias_War_Industry
+		icon = GFX_SOV_war_economy_ccp_2d_sov_compatibility
+		prerequisite = { focus = CZE_Territorial_Expansion_into_the_East }
+		x = -2
+		y = 1
+		relative_position_id = CZE_Territorial_Expansion_into_the_East
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 2
+				has_completed_focus = CZE_german_leanings
+			}
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = CZE_Bohemias_War_Industry
+		}
+	}
+
+	focus = {
+		id = CZE_Bohemias_Researcher
+		icon = GFX_focus_ARG_fascist_researchers
+		prerequisite = { focus = CZE_hungarian_situation }
+		x = 1
+		y = 1
+		relative_position_id = CZE_hungarian_situation
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 2
+				has_completed_focus = CZE_german_leanings
+			}
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+			add_ideas = CZE_Bohemias_Researcher
+		}
+	}
 
 	#######################################
 	######### STRATEGY DECISIONS ##########
@@ -3965,7 +4419,7 @@ focus = {
 		prerequisite = { focus = CZE_deliver_sudetenland }
 		mutually_exclusive = { focus = CZE_german_ally focus = CZE_german_minor_ally }
 		x = -2
-		y = 3
+		y = 4
 		relative_position_id = CZE_german_leanings
 
 		cost = 2
@@ -4002,12 +4456,12 @@ focus = {
 		icon = GFX_focus_generic_attack_hungary
 		prerequisite = { focus = CZE_german_puppet focus = CZE_aggressive_wars }
 		x = -7
-		y = 4
+		y = 5
 		relative_position_id = CZE_german_leanings
 		
 		will_lead_to_war_with = HUN
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 90
@@ -4035,6 +4489,7 @@ focus = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
 			create_wargoal = {

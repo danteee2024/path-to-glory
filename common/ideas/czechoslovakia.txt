@@ -42,6 +42,133 @@ ideas = {
 
 			}
 		}
+
+		CZE_Bohemia_Empire = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = generic_fascism_drift_bonus
+
+			removal_cost = -1
+
+			modifier = {
+				fascism_drift = 0.05
+				war_support_weekly = 0.005
+
+			}
+		}
+
+		CZE_Germanys_Production = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = generic_production_bonus
+
+			removal_cost = -1
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+		}
+
+		CZE_Strong_Force = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = ETH_peacekeeping_forces
+
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.1
+			}
+		}
+
+		CZE_Plan_of_Ressources = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = ARG_resource_extration_focus
+
+			removal_cost = -1
+
+			modifier = {
+				local_resources = 0.15
+			}
+		}
+
+		CZE_Plan_of_Logistic = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = generic_supply_line
+
+			removal_cost = -1
+
+			modifier = {
+				supply_consumption_factor = -0.15
+			}
+		}
+		CZE_The_Great_Bohemia_Empire = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = generic_fascism_drift_bonus
+
+			removal_cost = -1
+
+			modifier = {
+				fascism_drift = 0.05
+				war_support_weekly = 0.005
+				stability_weekly_factor = 0.005
+				resistance_growth = -0.05
+				resistance_damage_to_garrison = -0.1
+				conscription_factor = 0.05
+			}
+		}
+
+
 			CZE_Call_of_the_Kingdom = {
 
 			allowed = {
@@ -330,7 +457,7 @@ ideas = {
 
 			removal_cost = -2	
 			modifier = {
-			consumer_goods_factor = -0.20
+			consumer_goods_factor = -0.10
 			}
 		}
 		CZE_Invest_into_our_Army =  {
@@ -378,6 +505,64 @@ ideas = {
 				resource_trade_cost_bonus_per_factory = 1
 			}
 		}
+		CZE_Blitz_War =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_war_division
+
+			removal_cost = -2	
+			modifier = {
+				army_speed_factor = 0.1
+				planning_speed = 0.05
+			}
+		}
+
+		CZE_Bohemias_War_Industry =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_fourth_five_year_plan
+
+			removal_cost = -2	
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = -0.05
+			}
+		}
+
+		CZE_Bohemias_Researcher =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_fourth_five_year_plan
+
+			removal_cost = -2	
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+
 
 		CZE_beacon_of_liberty = {
 
