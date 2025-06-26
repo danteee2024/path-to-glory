@@ -255,9 +255,9 @@ focus_tree = {
 	focus = {
 		id = CUB_fasist1
 		icon = GFX_focus_generic_fascist_propaganda
-		x = 1
+		x = -2
 		y = 3
-		mutually_exclusive = { focus = CUB_komunist1 }
+		mutually_exclusive = { focus = CUB_komunist1 focus = CUB_the_need_for_state }
 		prerequisite = { focus = CUB_totalwar }
 		cost = 5
 		
@@ -331,7 +331,7 @@ focus_tree = {
 		icon = GFX_focus_SWE_refuge_for_revolutionaries
 		x = 6
 		y = 3
-		mutually_exclusive = { focus = CUB_fasist1 }
+		mutually_exclusive = { focus = CUB_fasist1 focus = CUB_the_need_for_state }
 		prerequisite = { focus = CUB_totalwar }
 		cost = 5
 		
@@ -445,13 +445,83 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		id = CUB_break_the_chains
+		icon = GFX_focus_RAJ_give_me_blood_and_i_will_grant_you_freedom
+		x = -1
+		y = 2
+		prerequisite = { focus = CUB_join_comintern  }
+		relative_position_id = CUB_komunist3
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = CUB_breaking_the_chains
+		}
+	}
+	focus = {
+		id = CUB_the_need_for_state
+		icon = GFX_focus_ARG_no_gods_no_masters
+		x = 2
+		y = 3
+		mutually_exclusive = { focus = CUB_fasist1 focus = CUB_komunist1 }
+		prerequisite = { focus = CUB_totalwar }
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_stability = -0.2
+	
+			add_popularity = { 
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_ideas = cub_anarchism_on_the_rise
+			set_party_name = {
+				ideology = neutrality
+				long_name = "Movimiento Libertario Cubano"
+				name = "MLC"
+			}
+			create_country_leader = {
+				name = "Anarchist Council"
+				desc = ""
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					propaganda_expert
+				}
+			}
+		}
+	}
+	focus = {
+		id = CUB_dismantle_the_state
+		icon = GFX_focus_CHL_union_of_hispanic_republics
+		x = 2
+		y = 4
+		prerequisite = { focus = CUB_the_need_for_state }
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = neutrality
+			}
+			add_ideas = SPR_collectivized_society
+			add_ideas = SPR_anarchist_society_19
+			add_ideas = closed_economy
+		}
+	}
 
 	
 
 	focus = {
 		id = CUB_totalpeace
 		icon = GFX_goal_generic_improve_relations
-		x = -3
+		x = -7
 		y = 2
 		prerequisite = { focus = CUB_politika }
 		mutually_exclusive = { focus = CUB_totalwar }
@@ -468,7 +538,7 @@ focus_tree = {
 	focus = {
 		id = CUB_kral1
 		icon = GFX_focus_generic_home_defense
-		x = -1
+		x = -5
 		y = 3
 		mutually_exclusive = { focus = CUB_demokrat1 }
 		prerequisite = { focus = CUB_totalpeace }
@@ -961,7 +1031,7 @@ focus = {
 		
 		x = 12
 		y = 3
-		cost = 5
+		cost = 12
 		
 		available_if_capitulated = yes
 
@@ -987,7 +1057,7 @@ focus = {
 		relative_position_id = CUB_fabrika1
 		x = 0
 		y = 1
-		cost = 5
+		cost = 12
 		
 		available_if_capitulated = yes
 

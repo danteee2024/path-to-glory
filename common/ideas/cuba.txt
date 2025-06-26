@@ -82,7 +82,7 @@ ideas = {
 
 		good_geurilla_problem = {
 
-			picture = generic_soldiers_good
+			picture = ARG_women_in_industry
 			
 			allowed = {
 				always = yes
@@ -94,10 +94,24 @@ ideas = {
 				communism_drift = 0.1
 			}
 		}
+			cub_anarchism_on_the_rise = {
+
+			picture = ARG_no_gods_no_masters
+			
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				neutrality_drift = 0.15
+			}
+		}
 
 		good_geurilla_staff = {
 
-			picture = generic_lead_by_example
+			picture = FIN_socialist_welfare
 
 			allowed = {
 				always = yes
@@ -108,6 +122,21 @@ ideas = {
 			modifier = {
 				army_org_Factor = 0.1
 				army_core_defence_factor = 0.1
+			}
+		}
+			CUB_breaking_the_chains = {
+
+			picture = GER_wage_war_on_capitalism
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_against_major_factor = 0.1
+				army_defence_against_major_factor = 0.1
 			}
 		}
 

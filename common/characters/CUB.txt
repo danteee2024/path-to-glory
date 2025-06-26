@@ -21,7 +21,7 @@ characters={
 		}
 		country_leader={
 			ideology=marxism
-			traits={ guerilla_leader }
+			traits={  }
 			expire="1985.1.1.1"
 			id=-1
 		}
@@ -62,11 +62,11 @@ characters={
 		}
 		field_marshal={
 			traits={ career_officer logistics_wizard politically_connected }
-			skill=6
-			attack_skill=5
-			defense_skill=5
-			planning_skill=7
-			logistics_skill=6
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=4
 			legacy_id=-1
 		}
 	}
@@ -80,10 +80,10 @@ characters={
 		}
 		corps_commander={
 			traits={ career_officer cavalry_officer hill_fighter trait_mountaineer politically_connected }
-			skill=5
+			skill=4
 			attack_skill=4
-			defense_skill=6
-			planning_skill=4
+			defense_skill=1
+			planning_skill=2
 			logistics_skill=5
 			legacy_id=-1
 		}
@@ -99,10 +99,10 @@ characters={
 		corps_commander={
 			traits={ infantry_officer hill_fighter trait_mountaineer politically_connected }
 			skill=4
-			attack_skill=6
+			attack_skill=2
 			defense_skill=5
-			planning_skill=6
-			logistics_skill=6
+			planning_skill=3
+			logistics_skill=3
 			legacy_id=-1
 		}
 	}
@@ -259,7 +259,7 @@ characters={
 					original_tag = CUB
 				}
 				traits = {
-					guerilla_war_expert
+					army_infantry_2
 				}
 				cost = 350
 		    }
