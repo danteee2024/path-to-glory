@@ -63,7 +63,7 @@
 		x = 3
 		y = 0
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 200
@@ -103,7 +103,7 @@
 		y = 1
 		relative_position_id = CZE_fortification_studies
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 60
@@ -154,7 +154,7 @@
 		y = 1
 		relative_position_id = CZE_fortification_studies
 
-		cost = 10
+		cost = 7.5
 
 		ai_will_do = {
 			factor = 90
@@ -843,7 +843,7 @@
 		y = 1
 		relative_position_id = CZE_fortification_studies
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 60
@@ -1855,6 +1855,10 @@ focus = {
 
 		completion_reward = {
 			add_ideas = CZE_Bohemia_Economy
+			add_timed_idea = {
+				idea = CZE_Bohemia_Economy_2 
+				days = 120
+			}
 			}
 		}
 		focus = {
@@ -1972,7 +1976,7 @@ focus = {
 		icon = GFX_focus_BEL_king_of_the_belgians 
 		prerequisite = { focus = CZE_Expansion_is_Needed }
 		prerequisite = { focus = CZE_Demand_Austria }
-		x = -1
+		x = 1
 		y = 1
 		relative_position_id = CZE_Demand_Austria
 
@@ -2150,10 +2154,10 @@ focus = {
 	focus = {
 		id = CZE_University_of_Bohemia
 		icon = GFX_focus_NORDIC_dem_capstone_research
-		prerequisite = { focus = CZE_Invest_into_Austria focus = CZE_Invest_into_Hungary }
-		x = 1
+		prerequisite = { focus = CZE_Demand_Austria focus = CZE_Expansion_is_Needed }
+		x = -1
 		y = 1
-		relative_position_id = CZE_Invest_into_Austria
+		relative_position_id = CZE_Expansion_is_Needed
 
 		cost = 10
 
@@ -2266,6 +2270,10 @@ focus = {
 		}
 
 		completion_reward = {
+			set_rule = { can_create_factions = yes }
+			create_faction = "CZE_Crowned_Brotherhood"
+			POL = { country_event =  generic.5 }
+			
 
 		}
 	}	
@@ -2673,7 +2681,6 @@ focus = {
 			factor = 100
 			modifier = {
 				factor = 0.1
-				HABSBURG_joint_trigger = yes
 			}
 		}
 
@@ -2690,6 +2697,10 @@ focus = {
 
 		completion_reward = {
 			add_ideas = CZE_The_Union_Worker
+			add_timed_idea = {
+				idea = CZE_The_Union_Worker_2
+				days = 160
+			}
 			 }
 		}
 
@@ -4237,8 +4248,8 @@ focus = {
 		}
 
 		focus = {
-		id = CZE_Territorial_Question
-		icon = GFX_focus_GER_weltpolitik
+		id = CZE_Strength_Through_Unity
+		icon = GFX_focus_generic_full_employment
 		prerequisite = { focus = CZE_Strong_Force }
 		x = 0
 		y = 1
@@ -4269,6 +4280,7 @@ focus = {
 	
 
 		completion_reward = { 
+		add_ideas = CZE_Strength_Through_Unity
 		}
 			}
 	

@@ -228,6 +228,23 @@ ideas = {
 				consumer_goods_factor = -0.10
 			}
 		}
+		CZE_Bohemia_Economy_2 =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_economic_reactivation
+
+			removal_cost = -2	
+			modifier = {
+				consumer_goods_factor = 0.2
+			}
+		}
 		CZE_Bohemia_Army =  {
 			
 			allowed = {
@@ -375,6 +392,43 @@ ideas = {
 				production_speed_arms_factory_factor = 0.10
 			}
 		}
+
+		CZE_The_Union_Worker_2 =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FIN_finnish_federation_of_trade_unions_light
+
+			removal_cost = -2	
+			modifier = {
+			 consumer_goods_factor = 0.15
+			}
+		}
+		CZE_Strength_Through_Unity =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = YUG_all_yugoslavian_regiments
+
+			removal_cost = -2	
+			modifier = {
+			conscription = 0.1
+			war_support_factor = 0.05
+			}
+		}
+
 		CZE_Mobilize_the_Masses =  {
 			
 			allowed = {
@@ -389,7 +443,7 @@ ideas = {
 
 			removal_cost = -2	
 			modifier = {
-				conscription_factor = 0.1
+				conscription = 0.1
 			}
 		}
 		CZE_The_Great_Army =  {
@@ -461,6 +515,7 @@ ideas = {
 			modifier = {
 			consumer_goods_factor = -0.10
 			production_speed_industrial_complex_factor = 0.1
+			production_speed_arms_factory_factor = -0.1
 			}
 		}
 		CZE_Invest_into_our_Army =  {
@@ -798,7 +853,7 @@ ideas = {
 				army_artillery_defence_factor = 0.1
 					}
 			}
-		}
+		
 
 		CZE_air_focus = {
 
@@ -1139,8 +1194,8 @@ ideas = {
 				max_planning = 0.15
 			}
 		}
-
 	}
+	
 
 	# TECHNOLOGY
 	tank_manufacturer = {
@@ -1450,3 +1505,5 @@ ideas = {
 			}
 		}
 	}
+}
+
