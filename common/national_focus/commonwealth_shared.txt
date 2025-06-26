@@ -3225,11 +3225,11 @@ joint_focus = {
 		hidden_effect = {
 			add_to_variable = {
 				var = Commonwealth_mil_industry_originator_dmod_efficiency_gain_factor
-				value = 0.2
+				value = 0.1
 			}
 			add_to_variable = {
 				var = Commonwealth_mil_industry_member_dmod_efficiency_gain_factor
-				value = 0.1
+				value = 0.05
 			}
 		}
 	}
@@ -3240,7 +3240,7 @@ joint_focus = {
 		effect_tooltip = {
 			add_to_variable = {
 				var = Commonwealth_mil_industry_originator_dmod_efficiency_gain_factor
-				value = 0.10
+				value = 0.1
 				tooltip = production_factory_efficiency_gain_factor_tt
 			}
 		}
@@ -3252,7 +3252,7 @@ joint_focus = {
 		effect_tooltip = {
 			add_to_variable = {
 				var = Commonwealth_mil_industry_member_dmod_efficiency_gain_factor
-				value = 0.15
+				value = 0.05
 				tooltip = production_factory_efficiency_gain_factor_tt
 			}
 		}
