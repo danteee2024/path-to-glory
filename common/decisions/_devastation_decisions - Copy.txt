@@ -1,0 +1,141 @@
+fascist_cuba = {
+
+		CUB_influnce = {
+		priority = 50
+
+		icon = generic_political_discourse
+
+		ai_will_do = {
+			base = 0.8
+			modifier = {
+				factor = 2
+				has_political_power > 160
+			}
+			modifier = { #If ideological rallies happened, then it's better
+				factor = 4
+				FROM = { has_country_flag = FIN_ideological_rallies_promoted_flag }
+			}
+			modifier = { #Do it only once, don't spam
+				factor = 0
+				FROM = { has_country_flag = FIN_government_pressured_flag }
+			}
+		}
+
+		targets = { HAI DOM GUA HON ELS NIC COS PAN }
+
+
+
+		target_root_trigger = {
+			has_completed_focus = CUB_pan_cubanism
+			is_subject = no
+		}
+
+		allowed = {
+			original_tag = CUB
+		}
+
+		available = {
+			is_faction_leader = yes
+			FROM = {
+				has_opinion = {
+					target = ROOT
+					value > 49
+				}
+				NOT = { has_war_with = ROOT }
+				
+			}
+		}
+
+		visible = {
+			FROM = {
+                NOT = {
+					has_government = fascism
+				}
+			}
+		}
+
+	
+		
+
+		cost = 100
+
+		
+
+		complete_effect = {
+			FROM = {
+				country_event = cuba.7
+			}
+		}
+
+		remove_effect = {
+		
+		}
+	}
+	CUB_faction = {
+		priority = 50
+
+		icon = generic_political_discourse
+
+		ai_will_do = {
+			base = 0.8
+			modifier = {
+				factor = 2
+				has_political_power > 160
+			}
+			modifier = { #If ideological rallies happened, then it's better
+				factor = 4
+				FROM = { has_country_flag = FIN_ideological_rallies_promoted_flag }
+			}
+			modifier = { #Do it only once, don't spam
+				factor = 0
+				FROM = { has_country_flag = FIN_government_pressured_flag }
+			}
+		}
+
+		targets = { HAI DOM GUA HON ELS NIC COS PAN }
+
+	
+
+		target_root_trigger = {
+			has_completed_focus = CUB_pan_cubanism
+			is_subject = no
+		}
+
+		allowed = {
+			original_tag = CUB
+		}
+
+		available = {
+			is_faction_leader = yes
+			FROM = {
+				has_government = fascism
+
+			}
+		}
+
+		visible = {
+			FROM = {
+				NOT = {
+					is_in_faction = yes
+				}
+			}
+		}
+		cost = 50
+
+
+		
+
+		complete_effect = {
+			FROM = {
+                country_event = cuba.8
+			}
+			
+		}
+
+		remove_effect = {
+		
+		}
+	}
+
+	
+}

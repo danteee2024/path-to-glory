@@ -111,6 +111,79 @@ ideas = {
 				neutrality_drift = 0.15
 			}
 		}
+			cub_fascism_on_the_rise = {
+
+			name = "Cuban Blackshirts"
+
+			picture = generic_fascism_drift_bonus
+			
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			
+			modifier = {
+
+				fascism_drift = 0.1
+			}
+		}
+			cub_martial_law = {
+
+			name = "Martial Law"
+
+			picture = generic_constitutional_guarantees
+			
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = 0.2
+				
+			}
+		}
+			cub_crack_down = {
+
+			name = "Communist Crack Down"
+
+			picture = NOR_anti_communist_sentiment
+			
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			
+			modifier = {
+				stability_factor = 0.05
+				communism_drift = -0.1
+				industrial_capacity_factory = -0.1
+			}
+		}
+			cub_angry_commi = {
+
+			name = "Revolting Guerillas"
+
+			picture = generic_fascism_drift_bonus
+			
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			
+			modifier = {
+			    stability_weekly = -0.03
+			}
+		}
 
 		good_geurilla_staff = {
 

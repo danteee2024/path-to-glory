@@ -1,0 +1,12 @@
+fascist_cuba = {
+	icon = border_war
+	picture = GFX_decision_cat_picture_generic_devastation
+	visible = {
+	original_tag = CUB
+		CUB = {
+			has_completed_focus = CUB_pan_cubanism
+		}
+	}
+	priority = 9999
+}
+

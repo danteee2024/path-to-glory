@@ -178,4 +178,93 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	id = cuba.6
+	picture = GFX_report_event_AUS_military_march
+	title = "Communist Revolution"
+	desc = "Across the country, workers, peasants, and disillusioned soldiers are rising with one voice. They no longer plead for change—they demand it. Banners are raised in the streets, slogans echo from factories, and the halls of power tremble. Land for the landless, bread for the hungry, and freedom from tyranny—these are the cries of a people who will not return to silence."
+	
+	trigger = {
+		tag = CUB
+		has_government = fascism
+		has_stability < 40
+		has_idea = cub_angry_commi
+	}
+	
+	option = {
+		
+		name = "Put it down"
+		
+		start_civil_war = {
+			ideology = communism
+			army_ratio = 1
+		}
+		
+	}
+	
+}
+country_event = {
+	id = cuba.7
+	picture = GFX_report_event_AUS_military_march
+	title = "Spread of fascism"
+	desc = "Cuba is demanding our goverment to change"
+	
+    is_triggered_only = yes
+	
+	option = {
+
+		ai_chance = {
+			base = 100
+		}
+		
+		name = "Accept their demands"
+		
+			set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		   }
+			add_popularity = { 
+				ideology = fascism
+				popularity = 0.40
+			}
+		
+	}
+	option = {
+		
+		name = "Decline"
+		
+		
+		
+	}
+	
+}
+country_event = {
+	id = cuba.8
+	picture = GFX_report_event_AUS_military_march
+	title = "Invite to Cuban faction"
+	desc = "Cuba has invited us to their faction"
+	
+	 is_triggered_only = yes
+	
+	option = {
+			ai_chance = {
+			base = 100
+			}
+		name = "Accept"
+		CUB = {
+            add_to_faction = ROOT
+		}
+		
+		
+		
+	}
+	option = {
+		
+		name = "Decline"
+		
+		
+		
+	}
+	
+}
 

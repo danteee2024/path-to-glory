@@ -1,0 +1,138 @@
+fascist_cuba = {
+
+		CUB_influnce = {
+		priority = 50
+
+		icon = generic_political_discourse
+
+		ai_will_do = {
+			base = 0.8
+			modifier = {
+				factor = 2
+				has_political_power > 160
+			}
+			modifier = { #If ideological rallies happened, then it's better
+				factor = 4
+				FROM = { has_country_flag = FIN_ideological_rallies_promoted_flag }
+			}
+			modifier = { #Do it only once, don't spam
+				factor = 0
+				FROM = { has_country_flag = FIN_government_pressured_flag }
+			}
+		}
+
+		targets = { HAI DOM GUA HON ELS NIC COS PAN }
+
+		target_trigger = {
+			SOV_basic_pressure_government_triggers = yes #Reusable
+		}
+
+		target_root_trigger = {
+			has_completed_focus = FIN_united_under_the_north_star
+			is_subject = no
+		}
+
+		allowed = {
+			original_tag = FIN
+		}
+
+		available = {
+			is_faction_leader = yes
+			FROM = {
+				has_opinion = {
+					target = ROOT
+					value > 49
+				}
+				SOV_is_valid_subject = yes # Reusable
+				NOT = { has_war_with = ROOT }
+			}
+			NOT = { has_country_flag = FIN_pressure_government_active_flag }
+		}
+
+		visible = {
+		}
+
+		days_remove = FIN_pressure_government_days
+
+		days_re_enable = FIN_pressure_government_cd
+
+		cost = FIN_pressure_country_government_cost
+
+		modifier = {
+			political_power_gain = -0.25
+		}
+
+		complete_effect = {
+			set_country_flag = FIN_pressure_government_active_flag
+		}
+
+		remove_effect = {
+			FROM = {
+				country_event = { id = NSB_soviet_foreign_politics_events.1 hours = 4 random_hours = 2 } #Reusable
+				set_country_flag = FIN_government_pressured_flag #For AI weights - don't spam
+			}
+			clr_country_flag = FIN_pressure_government_active_flag
+			custom_effect_tooltip = SOV_pressure_government_effects_tt
+			custom_effect_tooltip = FIN_pressure_government_cd_tt
+		}
+	}
+
+	CUB_promote_ideology_rallies_central = {
+		priority = 50
+
+		icon = generic_political_rally
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				has_political_power > 160
+			}
+		}
+
+		targets = {  HAI DOM GUA HON ELS NIC COS PAN  }
+
+		target_trigger = {
+			SOV_basic_promote_rallies_triggers = yes #Reusable
+		}
+
+		target_root_trigger = {
+			has_completed_focus = FIN_united_under_the_north_star
+		}
+
+		allowed = {
+			original_tag = FIN
+		}
+
+		available = {
+			FROM = {
+				SOV_is_valid_subject = yes #Reusable
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		visible = {
+		}
+
+		days_remove = FIN_ideological_rallies_days
+
+		fire_only_once = yes
+
+		cost = FIN_promote_ideology_rallies_cost
+
+		modifier = {
+			political_power_gain = -0.25
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			FROM = {
+				country_event = { id = NSB_soviet_foreign_politics_events.2 hours = 4 random_hours = 2 }
+			}
+			custom_effect_tooltip = SOV_promote_rallies_effects_tt
+			custom_effect_tooltip = SOV_promote_ideological_rallies_cd_tt
+		}
+	}
+}
