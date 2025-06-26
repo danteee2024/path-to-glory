@@ -3560,7 +3560,6 @@ focus = {
 		}
 
 		available = {
-			fascism > 0.35
 		}
 
 		bypass = {
@@ -3595,7 +3594,7 @@ focus = {
 		}
 
 		available = {
-			fascism > 0.35
+		fascism > 0.3
 		}
 
 		bypass = {
@@ -3605,9 +3604,13 @@ focus = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
 
 		completion_reward = {
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
 			add_ideas = CZE_Bohemia_Empire
 		}
 	}
@@ -3683,6 +3686,7 @@ focus = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
 			GER = { country_event = { hours = 1 id = czech.10 } }
@@ -3965,6 +3969,7 @@ focus = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			add_ideas = CZE_Germanys_production
@@ -4127,6 +4132,7 @@ focus = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			add_ideas = CZE_Plan_of_Ressources
@@ -4167,6 +4173,7 @@ focus = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			add_ideas = CZE_Plan_of_Logistic
@@ -4204,6 +4211,7 @@ focus = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER }
 
 		completion_reward = { swap_ideas = {
 			remove_idea = CZE_Bohemia_Empire
@@ -4213,7 +4221,7 @@ focus = {
 		}
 		}
 
-			focus = {
+		focus = {
 		id = CZE_Territorial_Question
 		icon = GFX_focus_GER_weltpolitik
 		prerequisite = { focus = CZE_Strong_Force }
@@ -4242,6 +4250,8 @@ focus = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	
 
 		completion_reward = { 
 		}
@@ -4271,6 +4281,7 @@ focus = {
 		}
 
 		available = {
+			threat = 0.7
 		}
 
 		bypass = {
@@ -4280,6 +4291,7 @@ focus = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			add_ideas = CZE_Bohemias_War_Industry
@@ -4318,6 +4330,8 @@ focus = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
 			add_research_slot = 1
@@ -4709,46 +4723,9 @@ focus = {
 	}
 
 	focus = {
-		id = CZE_bonus_research_slot_2
-		icon = GFX_focus_generic_university_2
-		prerequisite = { focus = CZE_doctrinal_innovation }
-		x = 0
-		y = 1
-		relative_position_id = CZE_doctrinal_innovation
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 100
-			modifier = {
-				factor = 0.1
-				HABSBURG_joint_trigger = yes
-			}
-		}
-
-		available = {
-			num_of_factories > 34
-		}
-
-		bypass = {
-			NOT = { amount_research_slots < 5 }
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			add_research_slot = 1
-			custom_effect_tooltip = CZE_war_college_effect_tt	
-		}
-	}
-
-	focus = {
 		id = CZE_secret_weapons
 		icon = GFX_goal_generic_radar
-		prerequisite = { focus = CZE_bonus_research_slot_2 }
+		prerequisite = { focus = CZE_doctrinal_innovation }
 		mutually_exclusive = { focus = CZE_nukes }
 		x = -1
 		y = 2
@@ -4801,7 +4778,7 @@ focus = {
 	focus = {
 		id = CZE_nukes
 		icon = GFX_focus_wonderweapons
-		prerequisite = { focus = CZE_bonus_research_slot_2 }
+		prerequisite = { focus = CZE_doctrinal_innovation }
 		mutually_exclusive = { focus = CZE_secret_weapons }
 		x = 1
 		y = 2
@@ -5755,9 +5732,81 @@ focus = {
 				limit = {
 					NOT = { amount_research_slots > 4 }
 				}
-				add_research_slot = 1
-				custom_effect_tooltip = CZE_war_college_effect_tt
 			}
+		}
+	}
+
+		focus = {
+		id = CZE_Czechs_Armor_Power
+		icon = GFX_focus_PER_czech_tanks
+		prerequisite = { focus = CZE_war_college }
+		mutually_exclusive = {
+			focus = CZE_Czechs_Fire_Power
+		}
+		x = 1
+		y = 5
+		relative_position_id = CZE_military_research_institute
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+			modifier = {
+				factor = 0.1
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = CZE_Czechs_Armor_Power
+		}
+	}
+
+		focus = {
+		id = CZE_Czechs_Fire_Power
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = CZE_war_college }
+		mutually_exclusive = {
+			focus = CZE_Czechs_Armor_Power
+		}
+		x = -1
+		y = 5
+		relative_position_id = CZE_military_research_institute
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 90
+			modifier = {
+				factor = 0.1
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = CZE_Czechs_Fire_Power
 		}
 	}
 
