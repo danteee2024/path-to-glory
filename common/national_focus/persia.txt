@@ -79,7 +79,29 @@ focus_tree = {
 		ai_will_do = {
 			factor = 15
 		}
+		offset = {
+		    x = -50
+		    y = 0
+		    trigger = {
+		        has_game_rule = {
+		            rule = obsolete_focus_branches_visibility
+		            option = HIDE
+		        }
+		        has_completed_focus = PER_legacy_of_greatness
+		    }
+		}
 
+		offset = {
+		    x = -50
+		    y = 0
+		    trigger = {
+		        has_game_rule = {
+		            rule = obsolete_focus_branches_visibility
+		            option = HIDE
+		        }
+		        has_completed_focus = PER_stand_with_giants
+		    }
+		}
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
@@ -1274,7 +1296,7 @@ focus_tree = {
 	focus = { #ARMY
 		id = PER_restructure_army
 		icon = GFX_focus_PER_restructure_army
-		x = 34
+		x = 32
 		y = 0
 		relative_position_id = PER_modernizing_iran
 		cost = 5

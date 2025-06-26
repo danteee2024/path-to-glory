@@ -700,7 +700,11 @@ focus_tree = {
 		icon = GFX_goal_generic_positive_trade_relations
 		cost = 10
 		prerequisite = {
+			focus = ENG_amplify_the_exploitation_of_welsh_coal
 			focus = ENG_industrialise_celtic_areas
+		}
+		mutually_exclusive = {
+			focus = ENG_increase_military_budget
 		}
 		ai_will_do = { factor = 1 }
 		x = 2
@@ -738,7 +742,9 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY}
 		
-
+        mutually_exclusive = {
+			focus = ENG_Open_our_Markets
+		}
 		cost = 10
 
 		ai_will_do = {
@@ -747,6 +753,7 @@ focus_tree = {
 		
 		prerequisite = {
 			focus = ENG_amplify_the_exploitation_of_welsh_coal
+			focus = ENG_industrialise_celtic_areas
 		}
 		
          available = {

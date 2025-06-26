@@ -1310,7 +1310,13 @@ technologies = {
 			leads_to_tech = modern_oil_processing
 			research_cost_coeff = 1
 		}
-		
+		on_research_complete = {
+			modify_building_resources = {
+				building = synthetic_refinery
+				resource = oil
+				amount = 1
+			}
+		}
 		research_cost = 1.5
 		start_year = 1941
 		
@@ -1363,7 +1369,13 @@ technologies = {
 		
 		research_cost = 1.5
 		start_year = 1943
-		
+		on_research_complete = {
+			modify_building_resources = {
+				building = synthetic_refinery
+				resource = oil
+				amount = 1
+			}
+		}
 		folder = {
 			name = industry_folder
 			position = { x = -1 y = 10 }

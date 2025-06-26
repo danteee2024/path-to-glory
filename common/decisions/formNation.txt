@@ -1097,6 +1097,7 @@ formable_nations_mod_category = {
 				}
 			}
 			custom_trigger_tooltip = { 
+				tooltip = britain_requirement_tooltip 
 				OR = {
 					AND = {	
 						113 = { is_controlled_by = ROOT }
@@ -1297,7 +1298,10 @@ formable_nations_mod_category = {
 						972 = { is_controlled_by = ROOT }
 
 
-						
+						OR = {
+							39 = { is_controlled_by = ROOT }
+							28 = { is_controlled_by = ROOT }
+						}
 					}
 					AND = {
 						has_global_flag = debug_mode
@@ -1307,12 +1311,17 @@ formable_nations_mod_category = {
 			}
 
 			custom_trigger_tooltip = {
-				
+				tooltip = germany_expansion_continued_requirement_tooltip
+				OR = {
+					OR = {
+						39 = { is_controlled_by = ROOT }
+						28 = { is_controlled_by = ROOT }
+					}
 					AND = {
 						has_global_flag = debug_mode
 						is_ai = no
 					}
-				
+				}
 			}
 			custom_trigger_tooltip = { tooltip = not_already_existing_tt NOT = { any_country = { has_cosmetic_tag = FORM_GRO } } }
 			
@@ -1320,6 +1329,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_grossdeutschland
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_GRO
+			
 			set_capital = { state = 64 }
 			custom_effect_tooltip = core_land
 			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
@@ -7729,7 +7739,7 @@ formable_nations_mod_category = {
 	}
 
 	formable_nations_north_america = {#continent
-	           
+	
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -7745,7 +7755,8 @@ formable_nations_mod_category = {
 			NOT = { has_global_flag = hide_formable_nations }
 			OR = {
 				has_global_flag = no_limit
-				capital_scope = { is_on_continent = north_america }
+				original_tag = CAN
+				original_tag = MEX
 			}
 		}
 		

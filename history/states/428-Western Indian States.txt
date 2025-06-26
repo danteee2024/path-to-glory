@@ -13,6 +13,7 @@ state = {
 
 		owner = RAJ
 		add_core_of = WIS
+		add_core_of = RAJ
 
 		victory_points = {
 			10118 1 # Jamnagar

@@ -3163,7 +3163,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = generic_naval_bonus
+			picture = generic_navy_submarines
 
 			removal_cost = -1
 			
