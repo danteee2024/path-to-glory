@@ -3573,7 +3573,7 @@ focus = {
 
 	focus = {
 		id = POR_metropolitan_army_primacy
-		icon = GFX_focus_NORDIC_com_selector_army
+		icon = GFX_focus_generic_full_social_mobilization
 		prerequisite = { focus = POR_standardization }
 		mutually_exclusive = { focus = POR_colonial_army_primacy }
 		x = 0
@@ -3599,7 +3599,7 @@ focus = {
 
 	focus = {
 		id = POR_metropolitan_army_dominance
-		icon = GFX_focus_NORDIC_com_army
+		icon = GFX_focus_ITA_banda_carita
 		prerequisite = { focus = POR_metropolitan_army_primacy }
 		x = -1
 		y = 1
@@ -3663,7 +3663,7 @@ focus = {
 
 	focus = {
 		id = POR_colonial_army_dominance
-		icon = GFX_focus_NORDIC_dem_army
+		icon = GFX_focus_GER_afrikakorps
 		prerequisite = { focus = POR_colonial_army_primacy }
 		x = 1
 		y = 1
