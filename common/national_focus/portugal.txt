@@ -3471,7 +3471,7 @@ focus = {
 		y = 1
 
 		relative_position_id = POR_army_reorganization
-		cost = 10
+		cost = 7.5
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = { 	
 			army_experience	= 25
@@ -3602,7 +3602,7 @@ focus = {
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = POR_metropolitan_army_primacy_idea
-				add_idea = POR_metropolitan_army_primacy_idea2
+				add_idea = POR_metropolitan_army_dominance_idea
 			}
 		}
 	}
@@ -3666,7 +3666,7 @@ focus = {
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = POR_colonial_army_primacy_idea
-				add_idea = POR_colonial_army_primacy_idea2
+				add_idea = POR_colonial_army_dominance_idea
 			}
 		}
 	}
@@ -3961,7 +3961,7 @@ focus = {
 	}
 
 	focus = {
-		id = POR_elastic_defense
+		id = POR_elastic_defence
 		prerequisite = { focus = POR_rebuild_the_lines_of_torres_vedras }
 		icon = GFX_goal_generic_defence
 		x = 0		
@@ -7533,7 +7533,10 @@ focus = {
 		completion_reward = {
 			set_cosmetic_tag = POR_empire
 			custom_effect_tooltip = POR_the_fifth_empire_tt
-			add_ideas = POR_the_fifth_empire
+			swap_ideas = {
+				remove_idea = POR_national_syndicalism
+				add_idea = POR_the_fifth_empire
+			}
 			remove_ideas = POR_unstable_republic
 			add_ideas = closed_economy
 			add_stability = 0.20
