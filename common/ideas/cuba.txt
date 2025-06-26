@@ -103,8 +103,11 @@ ideas = {
 			}
 
 			removal_cost = -1
+
 			
 			modifier = {
+				trade_laws_cost_factor = 99
+				stability_weekly = -0.01	
 				neutrality_drift = 0.15
 			}
 		}

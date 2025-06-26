@@ -1,0 +1,181 @@
+﻿
+
+add_namespace = cuba
+
+country_event = {
+	id = cuba.1
+	picture = GFX_report_event_DEN_celebration
+	title = "Revolutionary demands"
+	desc = "Across the country, workers, peasants, and disillusioned soldiers are rising with one voice. They no longer plead for change—they demand it. Banners are raised in the streets, slogans echo from factories, and the halls of power tremble. Land for the landless, bread for the hungry, and freedom from tyranny—these are the cries of a people who will not return to silence."
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = "Accept Their Demands"
+		CUB = {
+			annex_country = {
+				target = root
+			}
+		}
+		
+	}
+	option = {
+		
+		name = "Reject Demands"
+		CUB = {
+			create_wargoal = {
+				target = root
+				type = annex_everything
+			}
+		}
+	}
+}
+country_event = {
+	id = cuba.2
+	picture = GFX_report_event_DEN_celebration
+	title = "Revolutionary demands"
+	desc = "Across the country, workers, peasants, and disillusioned soldiers are rising with one voice. They no longer plead for change—they demand it. Banners are raised in the streets, slogans echo from factories, and the halls of power tremble. Land for the landless, bread for the hungry, and freedom from tyranny—these are the cries of a people who will not return to silence."
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = "Accept Their Demands"
+		ENG = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 3
+			}
+		}
+		CUB = {
+			transfer_state = 690
+			transfer_state = 689
+			transfer_state = 693
+			transfer_state = 308
+			transfer_state = 692
+			transfer_state = 691
+		}
+		
+	}
+	option = {
+		
+		name = "Reject Demands"
+		CUB = {
+			create_wargoal = {
+				target = root
+				type = annex_everything
+			}
+		}
+	}
+}
+country_event = {
+	id = cuba.3
+	picture = GFX_report_event_DEN_celebration
+	title = "Revolutionary demands"
+	desc = "Across the country, workers, peasants, and disillusioned soldiers are rising with one voice. They no longer plead for change—they demand it. Banners are raised in the streets, slogans echo from factories, and the halls of power tremble. Land for the landless, bread for the hungry, and freedom from tyranny—these are the cries of a people who will not return to silence."
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = "Accept Their Demands"
+		FRA = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+		CUB = {
+			transfer_state = 694
+		}
+		
+	}
+	option = {
+		
+		name = "Reject Demands"
+		CUB = {
+			create_wargoal = {
+				target = root
+				type = annex_everything
+			}
+		}
+	}
+}
+country_event = {
+	id = cuba.4
+	picture = GFX_report_event_DEN_celebration
+	title = "Revolutionary demands"
+	desc = "Across the country, workers, peasants, and disillusioned soldiers are rising with one voice. They no longer plead for change—they demand it. Banners are raised in the streets, slogans echo from factories, and the halls of power tremble. Land for the landless, bread for the hungry, and freedom from tyranny—these are the cries of a people who will not return to silence."
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = "Accept Their Demands"
+		USA = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+		CUB = {
+			transfer_state = 686
+		}
+		
+	}
+	option = {
+		
+		name = "Reject Demands"
+		CUB = {
+			create_wargoal = {
+				target = root
+				type = annex_everything
+			}
+		}
+	}
+}
+country_event = {
+	id = cuba.5
+	picture = GFX_report_event_DEN_celebration
+	title = "Revolutionary demands"
+	desc = "Across the country, workers, peasants, and disillusioned soldiers are rising with one voice. They no longer plead for change—they demand it. Banners are raised in the streets, slogans echo from factories, and the halls of power tremble. Land for the landless, bread for the hungry, and freedom from tyranny—these are the cries of a people who will not return to silence."
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = "Accept Their Demands"
+		HOL = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+		CUB = {
+			transfer_state = 695
+		}
+		
+	}
+	option = {
+		
+		name = "Reject Demands"
+		CUB = {
+			create_wargoal = {
+				target = root
+				type = annex_everything
+			}
+		}
+	}
+}
+

@@ -506,6 +506,10 @@ focus_tree = {
 		
 		available_if_capitulated = yes
 
+		available = {
+			neutrality > 0.3
+		}
+
 		completion_reward = {
 			set_politics = {
 				ruling_party = neutrality
@@ -513,6 +517,71 @@ focus_tree = {
 			add_ideas = SPR_collectivized_society
 			add_ideas = SPR_anarchist_society_19
 			add_ideas = closed_economy
+			hidden_effect = {
+				add_popularity = {
+					ideology = neutrality
+					popularity = 20
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = CUB_spread_the_revolution
+		icon = GFX_focus_generic_workers_and_farmers_rise
+		x = 2
+		y = 5
+		prerequisite = { focus = CUB_dismantle_the_state }
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		
+
+		completion_reward = {
+			hidden_effect = {
+			   318 = {
+				add_core_of = CUB
+			   }
+			   319 = {
+				add_core_of = CUB
+			   }
+			}
+			HAI = {
+               country_event = cuba.1
+			}
+			DOM = {
+				country_event = cuba.1
+			}
+			
+		}
+	}
+	focus = {
+	    id = CUB_free_the_caribbean_workers
+		icon = GFX_focus_GER_proletarian_solidarity
+		x = 2
+		y = 6
+		prerequisite = { focus = CUB_spread_the_revolution }
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		
+
+		completion_reward = {
+			FRA = {
+               country_event = cuba.3
+			}
+			ENG = {
+				country_event = cuba.2
+			}
+			USA = {
+				country_event = cuba.4
+			}
+			HOL = {
+				country_event = cuba.5
+			}
+			
 		}
 	}
 
@@ -809,7 +878,7 @@ focus_tree = {
 		available = {
 			NOT = { has_idea = CUB_investment }
 		}
-		x = 11
+		x = 13
 		y = 2
 		cost = 5
 		
@@ -1002,7 +1071,7 @@ focus = {
 			focus = CUB_build_tall_focus
 		}
 		prerequisite = { focus = CUB_ekonomi }
-		x = 13
+		x = 11
 		y = 2
 		cost = 5
 		
