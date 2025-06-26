@@ -18,7 +18,7 @@ focus_tree = {
   # Collectivization Tree
 
 	focus = {
-		id = MON_address_the_nation_of_1936
+		id = MON_collectivisation
 		icon = GFX_focus_prc_agrarian_socialism
 		x = 6
 		y = 0
@@ -43,8 +43,8 @@ focus_tree = {
 			add_political_power = 150
 			custom_effect_tooltip = generic_skip_one_line_tt
 			swap_ideas = {
-				remove_idea = MON_address_the_nation_of_1936_1
-				add_idea = MON_address_the_nation_of_1936_2			
+				remove_idea = MON_collectivisation_1
+				add_idea = MON_collectivisation_2			
 			}
 			
 		}
@@ -58,12 +58,12 @@ focus_tree = {
 		x = -3
 		y = 1
 		cost = 10
-		prerequisite = { focus = MON_address_the_nation_of_1936 }
+		prerequisite = { focus = MON_collectivisation }
 		mutually_exclusive = { focus = MON_buddhist_compromise }
 
 		available_if_capitulated = yes
 		
-		relative_position_id = MON_address_the_nation_of_1936
+		relative_position_id = MON_collectivisation
 		
 		ai_will_do = {
 			factor = 2
@@ -231,10 +231,9 @@ focus_tree = {
 
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = MON_address_the_nation_of_1936_2
-				add_idea = MON_address_the_nation_of_1936_3		
+				remove_idea = MON_collectivisation_2
+				add_idea = MON_collectivisation_3		
 			}
-			add_political_power = 150
 			330 = {
 				add_extra_state_shared_building_slots = 4
 			}
@@ -302,8 +301,8 @@ focus_tree = {
 
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = MON_address_the_nation_of_1936_3
-				add_idea = MON_address_the_nation_of_1936_4
+				remove_idea = MON_collectivisation_3
+				add_idea = MON_collectivisation_4
 			}
 			add_political_power = 300
 			330 = {
@@ -500,12 +499,12 @@ focus_tree = {
 		x = 3
 		y = 1
 		cost = 10
-		prerequisite = { focus = MON_address_the_nation_of_1936 }
+		prerequisite = { focus = MON_collectivisation }
 		mutually_exclusive = { focus = MON_buddhist_prosecution }
 
 		available_if_capitulated = yes
 		
-		relative_position_id = MON_address_the_nation_of_1936
+		relative_position_id = MON_collectivisation
 		
 		ai_will_do = {
 			factor = 2
@@ -628,8 +627,8 @@ focus_tree = {
 			add_war_support = 0.15
 
 			swap_ideas = {
-				remove_idea = MON_address_the_nation_of_1936_2
-				add_idea = MON_address_the_nation_of_1936_3		
+				remove_idea = MON_collectivisation_2
+				add_idea = MON_collectivisation_3		
 			}
 		}
 	}
@@ -656,8 +655,8 @@ focus_tree = {
 
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = MON_address_the_nation_of_1936_3
-				add_idea = MON_address_the_nation_of_1936_4
+				remove_idea = MON_collectivisation_3
+				add_idea = MON_collectivisation_4
 			}
 		}
 	}
@@ -1128,9 +1127,9 @@ focus_tree = {
 	focus = {
 		id = MON_invite_soviet_researchers
 		icon = GFX_focus_NOR_moscows_education_centers
-		x = 0
-		y = 4
-	    cost = 5
+		x = -1
+		y = 3
+	    cost = 10
 		prerequisite = { focus = MON_soviet_investments }
 		relative_position_id = MON_forced_urbanisation
 		
@@ -2049,7 +2048,9 @@ add_timed_idea = {
 			focus = MON_investment_complete_military
 			
 		}
-	
+	    available = {
+			num_of_factories > 30
+		}	
 		x = 1
 		y = 1
 		relative_position_id = MON_investment_complete
@@ -2090,7 +2091,9 @@ add_timed_idea = {
 		x = -2
 		y = 1
 		relative_position_id = MON_mongolia_people_army
-
+        mutually_exclusive = {
+			focus = MON_army_traditions
+		}
 		cost = 10
 
 		ai_will_do = {
@@ -2098,15 +2101,20 @@ add_timed_idea = {
 		}
 
 		completion_reward = {
-			army_experience = 100
+			add_doctrine_cost_reduction = {
+				name = "Army Modernisation"
+				cost_reduction = 0.5 
+				uses = 2
+				category = land_doctrine
+			}
 		}
 	}
 	
 	focus = {
-		id = MON_new_rifles
-		icon = GFX_goal_generic_small_arms
+		id = MON_army_modernisation_breakthroughs
+		icon = GFX_focus_generic_military_academy
 		prerequisite = { focus = MON_army_modernisation }
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = MON_army_modernisation
 
@@ -2117,8 +2125,93 @@ add_timed_idea = {
 		}
 
 		completion_reward = {
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.25
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			swap_ideas = {
+				remove_idea = MON_state_of_the_armed_forces
+				add_idea = MON_army_modernisation_breakthroughs_idea
+			}
+		}
+	}
+	
+	focus = {
+		id = MON_motorisation_of_the_army
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = MON_motorisation }
+		
+		prerequisite = {
+			focus = MON_army_modernisation_breakthroughs
+		}
+		x = 0
+		y = 2
+		relative_position_id = MON_army_modernisation
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 27
+		}
+
+		completion_reward = {
+			
+			swap_ideas = {
+				remove_idea = MON_army_modernisation_breakthroughs_idea
+				add_idea = MON_army_modernisation_breakthroughs_idea_2
+			}
+		}
+	}
+	focus = {
+		id = MON_a_gun_in_every_hand
+		icon = GFX_focus_generic_military_academy
+		prerequisite = {
+			focus = MON_motorisation_of_the_army
+		}
+		x = 0
+		y = 3
+		relative_position_id = MON_army_modernisation
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 27
+		}
+
+		completion_reward = {
+			
+			swap_ideas = {
+				remove_idea = MON_army_modernisation_breakthroughs_idea_2
+				add_idea = MON_army_modernisation_breakthroughs_idea_3
+			}
+		}
+	}
+	focus = {
+		id = MON_new_rifles
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = MON_army_modernisation }
+		x = -2
+		y = 1
+		relative_position_id = MON_army_modernisation
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 27
+		}
+
+		completion_reward = {
+			add_equipment_subsidy = {
+				cic = 2500
+				equipment_type = infantry_equipment
+				seller_tags = {
+					USA JAP CHI PRC SIK MAN SHX XSM
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
-				name = MONgaria
+				name = "New Arms"
 				bonus = 1
 				uses = 2
 				category = infantry_weapons
@@ -2131,7 +2224,7 @@ add_timed_idea = {
 		icon = GFX_goal_generic_army_artillery2
 		prerequisite = { focus = MON_new_rifles }
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = MON_new_rifles
 
 		cost = 10
@@ -2142,9 +2235,9 @@ add_timed_idea = {
 
 		completion_reward = {
 			add_tech_bonus = {
-				name = MONgaria
-				bonus = 1
-				uses = 2
+				name = "New Artillery"
+				bonus = 0.25
+				uses = 4
 				category = artillery
 			}
 		}
@@ -2154,7 +2247,7 @@ add_timed_idea = {
 		id = MON_motorisation
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = MON_army_modernisation }
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = MON_army_modernisation
 
@@ -2166,8 +2259,8 @@ add_timed_idea = {
 
 		completion_reward = {
 			add_tech_bonus = {
-				name = MONgaria
-				bonus = 0.5
+				name = "New Motorized"
+				bonus = 1
 				uses = 2
 				category = cat_mechanized_equipment
 			}
@@ -2179,7 +2272,7 @@ add_timed_idea = {
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = MON_motorisation }
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = MON_motorisation
 
 		cost = 10
@@ -2190,7 +2283,7 @@ add_timed_idea = {
 
 		completion_reward = {
 			add_tech_bonus = {
-				name = MONgaria
+				name = "New Armor"
 				bonus = 0.5
 				uses = 2
 				category = armor
@@ -2203,7 +2296,7 @@ add_timed_idea = {
 		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = MON_armour }
 		prerequisite = { focus = MON_new_artillery }
-		x = -1
+		x = -2
 		y = 1
 		relative_position_id = MON_armour
 
@@ -2214,19 +2307,14 @@ add_timed_idea = {
 		}
 
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = MONgaria
-				cost_reduction = 0.40
-				uses = 3
-				category = land_doctrine
-			}
+			add_ideas = MON_modern_tactics 
 		}
 	}
 
 	focus = {
 		id = MON_volunteers
 		icon = GFX_goal_generic_position_armies
-		x = 0
+		x = 5
 		y = 1
 		cost = 3
 		
@@ -2258,10 +2346,12 @@ add_timed_idea = {
 		id = MON_army_traditions
 		icon = GFX_goal_generic_CAS
 		prerequisite = { focus = MON_mongolia_people_army }
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = MON_mongolia_people_army
-
+        mutually_exclusive = {
+			focus = MON_army_modernisation
+		}
 		cost = 10
 
 		ai_will_do = {
@@ -2269,7 +2359,8 @@ add_timed_idea = {
 		}
 
 		completion_reward = {
-			army_experience = 100
+			add_war_support = 0.1
+			add_stability = 0.05
 		}
 	}
 	
@@ -2309,7 +2400,7 @@ add_timed_idea = {
 		y = 1
 		relative_position_id = MON_army_traditions
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 27
@@ -2318,6 +2409,67 @@ add_timed_idea = {
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = MON_buyannmeh
+		}
+	}
+
+	focus = {
+		id = MON_appoint_generals_accordingly
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = MON_legacy_of_khanate }
+		x = -1
+		y = 2
+		relative_position_id = MON_army_traditions
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 27
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = MON_state_of_the_armed_forces
+				add_idea = MON_appoint_generals_accordingly_idea
+			}
+		}
+	}
+
+	focus = {
+		id = MON_khaany_tölöö
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = MON_spirit_of_genghis }
+		x = 1
+		y = 2
+		relative_position_id = MON_army_traditions
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 27
+		}
+
+		completion_reward = {
+			add_ideas = MON_khanny_tonnoo
+		}
+	}
+
+focus = {
+		id = MON_remenisent_of_the_khanate
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = MON_khaany_tölöö }
+		prerequisite = { focus = MON_appoint_generals_accordingly }
+		x = 0
+		y = 3
+		relative_position_id = MON_army_traditions
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 27
+		}
+
+		completion_reward = {
+			add_ideas = MON_reminiscent_of_the_khanate_idea
 		}
 	}
 

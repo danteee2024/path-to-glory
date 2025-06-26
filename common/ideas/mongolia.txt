@@ -1,6 +1,142 @@
 ideas = {
 
-	country = {
+	country = {  
+		MON_khanny_tonnoo= {
+
+			picture = tur_coordinated_balkan_armed_forces
+			
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				initiative_factor = 0.04
+				recon_factor = 0.2
+				mobilization_laws_cost_factor = -0.10
+			}
+		}
+MON_appoint_generals_accordingly_idea = {
+
+			picture = tur_coordinated_balkan_armed_forces
+			
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.15
+				army_speed_factor = 0.10
+				army_core_defence_factor = 0.15
+				max_planning = 0.10
+				max_command_power_mult = 0.10
+				army_advisor_cost_factor = -0.5
+				conscription_factor = 0.05
+			}
+		}
+		MON_state_of_the_armed_forces = {
+
+			picture = tur_coordinated_balkan_armed_forces
+			
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.15
+				army_morale_factor = -0.10
+				army_speed_factor = 0.10
+				army_core_defence_factor = 0.15
+			}
+		}
+		MON_army_modernisation_breakthroughs_idea_3 = {
+
+			picture = generic_manpower_bonus
+			
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				motorized_attack_factor = 0.1
+				motorized_defence_factor = 0.1
+			    army_fuel_consumption_factor = -0.05
+				army_speed_factor = 0.15
+				army_morale_factor = 0.05
+				leader_experience_gain = 0.05
+				army_org_factor = -0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+	MON_army_modernisation_breakthroughs_idea_2 = {
+
+			picture = generic_manpower_bonus
+			
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_defence_factor = 0.05
+				motorized_attack_factor = 0.1
+				motorized_defence_factor = 0.1
+			    army_fuel_consumption_factor = -0.05
+				army_speed_factor = 0.15
+				army_morale_factor = 0.05
+				army_org_factor = -0.15
+			}
+		}
+		MON_army_modernisation_breakthroughs_idea = {
+
+			picture = generic_manpower_bonus
+			
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_defence_factor = 0.05
+				motorized_attack_factor = 0.1
+				motorized_defence_factor = 0.1
+			    army_fuel_consumption_factor = -0.05
+				army_org_factor = -0.15
+			}
+		}
 		MON_great_industrial_revolution = {
 
 			picture = generic_manpower_bonus
@@ -17,6 +153,7 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor               = -0.01  # Factor of factories reserved for consumer goods
+				 
 conversion_cost_civ_to_mil_factor   = -0.01  # Cost to convert civilian to military factories
 equipment_conversion_speed          = 0.01  # Speed of equipment conversion
 global_building_slots_factor        = 0.01  # Number of extra building slots
@@ -195,7 +332,54 @@ research_speed_factor               = 0.01  # Flat research bonus
 				local_resources_factor = 0.10
 			}
 		}
+		MON_modern_tactics = {
 
+			allowed = {
+				original_tag = GER
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_exploit_mines
+
+			modifier = {
+				army_attack_speed_factor = 0.10
+				cas_damage_reduction = 0.05
+				heat_attrition = -0.05
+				winter_attrition = -0.05
+			}
+		}
+        	MON_reminiscent_of_the_khanate_idea = {
+
+			picture = generic_volunteer_expedition_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			rule = {
+				can_send_volunteers = yes
+			}
+
+			modifier = {
+				planning_speed = 0.15
+                army_leader_start_attack_level = 2
+				army_leader_start_planning_level = 2
+				army_leader_start_logistics_level = 2
+			}
+
+		}
 		MON_volunteers_idea = {
 			
 			picture = generic_volunteer_expedition_bonus
@@ -217,7 +401,7 @@ research_speed_factor               = 0.01  # Flat research bonus
 			modifier = {
 				send_volunteer_divisions_required = -1
 				send_volunteers_tension = -0.5
-				send_volunteer_size = 1
+				send_volunteer_size = 3
 			}
 
 		}
@@ -251,6 +435,7 @@ research_speed_factor               = 0.01  # Flat research bonus
 			modifier = {
 				cavalry_attack_factor = 0.1
 				cavalry_defence_factor = 0.1
+                trait_cavalry_expert_xp_gain_factor = 0.15
 			}		
 
 		}
@@ -406,9 +591,9 @@ research_speed_factor               = 0.01  # Flat research bonus
 			removal_cost = -1
 			
 			modifier = {
-				MONTHLY_POPULATION = -0.5
-				conscription_factor = -0.50
-				political_power_factor = -0.40
+				MONTHLY_POPULATION = -0.22
+				conscription_factor = -0.22
+				political_power_factor = -0.2
 				consumer_goods_factor = -0.15
 			}
 		}
@@ -428,8 +613,8 @@ research_speed_factor               = 0.01  # Flat research bonus
 			removal_cost = -1
 			
 			modifier = {
-				MONTHLY_POPULATION = -0.1
-				conscription_factor = -0.1
+				MONTHLY_POPULATION = -0.11
+				conscription_factor = -0.11
 				political_power_factor = -0.1
 				consumer_goods_factor = -0.15
 			}
@@ -538,7 +723,7 @@ research_speed_factor               = 0.01  # Flat research bonus
 				}
 			}
 		}
-		MON_nomadism_1 = {
+		MON_nomad_1 = {
 
 			picture = chi_army_corruption2
 			
