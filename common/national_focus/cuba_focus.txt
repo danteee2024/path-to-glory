@@ -329,7 +329,7 @@ focus_tree = {
 	focus = {
 		id = CUB_komunist1
 		icon = GFX_focus_SWE_refuge_for_revolutionaries
-		x = 6
+		x = 7
 		y = 3
 		mutually_exclusive = { focus = CUB_fasist1 focus = CUB_the_need_for_state }
 		prerequisite = { focus = CUB_totalwar }
@@ -446,6 +446,41 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = CUB_import_clean_energy
+		icon = GFX_focus_generic_nuclear_development
+		x = 1
+		y = 2
+		prerequisite = { focus = CUB_join_comintern }
+		relative_position_id = CUB_komunist3
+		cost = 10
+		available = {
+			is_in_faction_with = SOV
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_breakthrough_progress = {
+				value = 1
+				specialization = specialization_nuclear
+			}
+			315 = {
+			add_building_construction = {
+				type = nuclear_facility
+				level = 1
+				instant_build = yes
+				province = 7622
+			}
+			add_building_construction = {
+				type = nuclear_reactor
+				level = 1
+			}
+			
+ 
+			}
+		
+		}
+	}
+	focus = {
 		id = CUB_break_the_chains
 		icon = GFX_focus_RAJ_give_me_blood_and_i_will_grant_you_freedom
 		x = -1
@@ -463,7 +498,7 @@ focus_tree = {
 	focus = {
 		id = CUB_the_need_for_state
 		icon = GFX_focus_ARG_no_gods_no_masters
-		x = 2
+		x = 3
 		y = 3
 		mutually_exclusive = { focus = CUB_fasist1 focus = CUB_komunist1 }
 		prerequisite = { focus = CUB_totalwar }
@@ -499,7 +534,7 @@ focus_tree = {
 	focus = {
 		id = CUB_dismantle_the_state
 		icon = GFX_focus_CHL_union_of_hispanic_republics
-		x = 2
+		x = 3
 		y = 4
 		prerequisite = { focus = CUB_the_need_for_state }
 		cost = 5
@@ -527,11 +562,28 @@ focus_tree = {
 
 	}
 	focus = {
+		id = CUB_end_the_communist
+		icon = GFX_focus_SWE_attack_landsorganisationen
+		x = 3
+		y = 5
+		prerequisite = { focus = CUB_dismantle_the_state }
+		cost = 5
+		
+		available_if_capitulated = yes
+
+
+		completion_reward = {
+			add_war_support = -0.1
+			remove_ideas = bad_geurilla_problem
+		}
+
+	}
+	focus = {
 		id = CUB_spread_the_revolution
 		icon = GFX_focus_generic_workers_and_farmers_rise
 		x = 2
-		y = 5
-		prerequisite = { focus = CUB_dismantle_the_state }
+		y = 6
+		prerequisite = { focus = CUB_end_the_communist }
 		cost = 10
 		
 		available_if_capitulated = yes
@@ -559,9 +611,9 @@ focus_tree = {
 	focus = {
 	    id = CUB_free_the_caribbean_workers
 		icon = GFX_focus_GER_proletarian_solidarity
-		x = 2
+		x = 4
 		y = 6
-		prerequisite = { focus = CUB_spread_the_revolution }
+		prerequisite = { focus = CUB_end_the_communist }
 		cost = 10
 		
 		available_if_capitulated = yes
@@ -581,6 +633,42 @@ focus_tree = {
 			HOL = {
 				country_event = cuba.5
 			}
+			
+		}
+	}
+	focus = {
+	    id = CUB_disolve_imperialism
+		icon = GFX_focus_ETH_callout_to_the_world
+		x = 3
+		y = 7
+		prerequisite = { focus = CUB_spread_the_revolution }
+		prerequisite = { focus = CUB_free_the_caribbean_workers }
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = CUB_anarchism_army
+				days = 365
+			}
+
+				create_wargoal = {
+					target = USA
+					type = annex_everything
+				}
+				create_wargoal = {
+					target = FRA
+					type = annex_everything
+				}
+				create_wargoal = {
+					target = ENG
+					type = annex_everything
+				}
+			
+			
 			
 		}
 	}
@@ -853,7 +941,7 @@ focus_tree = {
 		id = CUB_ekonomi
 		icon = GFX_focus_ITA_devaluate_the_lire
 		prerequisite = { focus = CUB_Reform }
-		x = 12
+		x = 13
 		y = 1
 		cost = 5
 		
@@ -878,7 +966,7 @@ focus_tree = {
 		available = {
 			NOT = { has_idea = CUB_investment }
 		}
-		x = 13
+		x = 14
 		y = 2
 		cost = 5
 		
@@ -906,7 +994,7 @@ focus_tree = {
 			NOT = { has_idea = CUB_investment }
 		}
 		
-		x = 14
+		x = 15
 		y = 3
 		cost = 5
 		
@@ -940,7 +1028,7 @@ focus_tree = {
 		available = {
 			NOT = { has_idea = CUB_investment }
 		}
-		x = 14
+		x = 15
 		y = 4
 		cost = 5
 		
@@ -977,7 +1065,7 @@ focus_tree = {
 		available = {
 			NOT = { has_idea = CUB_investment }
 		}
-		x = 14
+		x = 15
 		y = 5
 		cost = 5
 		
@@ -1006,7 +1094,7 @@ focus = {
 		icon = GFX_focus_generic_modernize_industry
 		prerequisite = { focus = CUB_build_tall_focus }
 		
-		x = 14
+		x = 15
 		y = 6
 		cost = 5
 		available = {
@@ -1041,7 +1129,7 @@ focus = {
 			owns_state = 319
 		}
 		
-		x = 14
+		x = 15
 		y = 7
 		cost = 12
 		
@@ -1071,7 +1159,7 @@ focus = {
 			focus = CUB_build_tall_focus
 		}
 		prerequisite = { focus = CUB_ekonomi }
-		x = 11
+		x = 12
 		y = 2
 		cost = 5
 		
@@ -1098,7 +1186,7 @@ focus = {
 		icon = GFX_focus_GER_vereinigte_stahlwerke
 		prerequisite = { focus = CUB_build_tall_focus focus = CUB_build_wide_focus }
 		
-		x = 12
+		x = 13
 		y = 3
 		cost = 12
 		
@@ -1147,7 +1235,7 @@ focus = {
 		id = CUB_produksiyon
 		icon = GFX_focus_ETH_freedom_at_gunpoint
 		prerequisite = { focus = CUB_build_wide_focus }
-		x = 10
+		x = 11
 		y = 3
 		cost = 5
 		
@@ -1180,7 +1268,7 @@ focus = {
 		icon = GFX_goal_generic_construction
 		prerequisite = { focus = CUB_produksiyon }
 	
-		x = 11
+		x = 12
 		y = 5
 		cost = 5
 		
@@ -1198,7 +1286,7 @@ focus = {
 		mutually_exclusive = {
 			focus = CUB_arastirma
 		}
-		x = 12
+		x = 13
 		y = 7
 		cost = 5
 		
