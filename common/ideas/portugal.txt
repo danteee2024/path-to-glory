@@ -636,7 +636,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				political_power_cost = -0.10
+				political_power_gain = 0.10
 				consumer_goods_factor = -0.10
 				trade_opinion_factor = 0.25
 			}
@@ -654,7 +654,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				political_power_gain = 0.10
+				political_power_factor = 0.10
 				consumer_goods_factor = -0.10
 				local_building_slots_factor = 0.10
 				production_speed_buildings_factor = 0.10
@@ -802,6 +802,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+				political_power_factor = 0.05
 				non_core_manpower = 0.10
 			}
 		}
@@ -819,6 +820,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+				political_power_factor = 0.10
 				non_core_manpower = 0.15
 				compliance_growth = 0.05
 				conscription = 0.005
@@ -838,9 +840,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+				political_power_factor = 0.15
 				non_core_manpower = 0.25
 				compliance_growth = 0.10
-				extra_trade_to_overlord_factor = 0.25
 				conscription = 0.010
 				trade_opinion_factor = 0.25
 			}

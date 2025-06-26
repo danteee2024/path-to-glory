@@ -1824,15 +1824,8 @@ focus = {
 		cost = 10
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			custom_effect_tooltip = POR_no_7th_research_slot_tt
-			if = {
-				limit = { amount_research_slots = 6 }
-				add_political_power = 50
-				add_stability = 0.05
-			}
-			else = {
-				add_research_slot = 1
-			}
+			add_research_slot = 1
+				
 			random_owned_controlled_state = {
 					limit = {
 						is_core_of = ROOT
@@ -1850,6 +1843,11 @@ focus = {
 				province = 924
 			    }
 			}
+			add_breakthrough_progress = {
+				value = 1
+				specialization = specialization_air
+			}
+
 			add_tech_bonus = {
 				name = POR_naval_research_institute
 			    bonus = 0.5
@@ -1869,6 +1867,8 @@ focus = {
 			    category = air_doctrine
 			}
 			air_experience = 50
+			add_political_power = 50
+			add_stability = 0.05
 		}
 	}
 
@@ -1967,6 +1967,10 @@ focus = {
 			    bonus = 1.0
 			    uses = 2
 			    category = armor
+			}
+			add_breakthrough_progress = {
+				value = 1
+				specialization = specialization_land
 			}
 		}
 	}
@@ -2083,7 +2087,10 @@ focus = {
 			    uses = 2
 			    category = jet_technology
 			}
-			complete_special_project = sp:sp_air_jet_engine
+			add_breakthrough_progress = {
+				value = 1
+				specialization = specialization_air
+			}
 		}
 	}
 
@@ -2799,15 +2806,15 @@ focus = {
 		cost = 10
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			custom_effect_tooltip = POR_no_7th_research_slot_tt
-			if = {
-				limit = { amount_research_slots = 6 }
-				add_political_power = 50
-				add_stability = 0.05
-			}
-			else = {
-				add_research_slot = 1
-			}
+			# custom_effect_tooltip = POR_no_7th_research_slot_tt
+			# if = {
+			#	limit = { amount_research_slots = 6 }
+			#	add_political_power = 50
+			#	add_stability = 0.05
+			# }
+			# else = {
+			#	add_research_slot = 1
+			# }
 			random_owned_controlled_state = {
 					limit = {
 						is_core_of = ROOT
@@ -2823,6 +2830,10 @@ focus = {
 				type = naval_facility
 				level = 1
 				province = 11805
+			}
+			add_breakthrough_progress = {
+				value = 1
+				specialization = specialization_naval
 			}
 			}
 			add_tech_bonus = {
@@ -2844,6 +2855,8 @@ focus = {
 			    category = naval_equipment
 			}
 			navy_experience = 50
+			add_political_power = 50
+			add_stability = 0.05
 		}
 	}
 
@@ -3022,17 +3035,17 @@ focus = {
 		cost = 5
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			if = {
-				limit = {
-					has_dlc = "Man the Guns"
-				}
-				add_tech_bonus = {
+			add_breakthrough_progress = {
+				value = 1
+				specialization = specialization_naval
+			}
+			add_tech_bonus = {
 					name = naval_bonus
 					bonus = 0.5
 					uses = 3
 					category = naval_armor
 				}
-				add_tech_bonus = {
+			add_tech_bonus = {
 					name = SPR_navy_modernization
 					bonus = 0.5
 					uses = 3
@@ -3040,15 +3053,13 @@ focus = {
 					technology = fire_control_methods_2
 					technology = fire_control_methods_3
 				}	
-				else = {
-					add_tech_bonus = {
-						name = POR_navy_modernization
-						bonus = 1
-						uses = 2
-						category = naval_equipment
-					}
-				}										
-			}			
+			add_tech_bonus = {
+					name = POR_navy_modernization
+					bonus = 1
+					uses = 2
+					category = naval_equipment
+				}
+														
 		}
 	}
 
@@ -3700,15 +3711,15 @@ focus = {
 		cost = 10
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			custom_effect_tooltip = POR_no_7th_research_slot_tt
-			if = {
-				limit = { amount_research_slots = 6 }
-				add_political_power = 50
-				add_stability = 0.05
-			}
-			else = {
-				add_research_slot = 1
-			}
+			# custom_effect_tooltip = POR_no_7th_research_slot_tt
+			# if = {
+			#	limit = { amount_research_slots = 6 }
+			#	add_political_power = 50
+			#	add_stability = 0.05
+			# }
+			# else = {
+			#	add_research_slot = 1
+			# }
 			random_owned_controlled_state = {
 					limit = {
 						is_core_of = ROOT
@@ -3724,6 +3735,10 @@ focus = {
 				type = land_facility
 				level = 1
 				province = 6996
+			}
+			add_breakthrough_progress = {
+				value = 1
+				specialization = specialization_land
 			}
 			}
 			add_tech_bonus = {
@@ -3751,6 +3766,8 @@ focus = {
 			    category = land_doctrine
 			}
 			army_experience = 50
+			add_political_power = 50
+			add_stability = 0.05
 		}
 	}
 
