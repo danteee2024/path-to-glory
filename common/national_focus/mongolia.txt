@@ -18,7 +18,7 @@ focus_tree = {
   # Collectivization Tree
 
 	focus = {
-		id = MON_collectivisation
+		id = MON_address_the_nation_of_1936
 		icon = GFX_focus_prc_agrarian_socialism
 		x = 6
 		y = 0
@@ -40,14 +40,13 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = MON_collectivisation_1
-				add_idea = MON_collectivisation_2			
-			}
 			add_political_power = 150
-			819 = {
-				add_extra_state_shared_building_slots = 8
+			custom_effect_tooltip = generic_skip_one_line_tt
+			swap_ideas = {
+				remove_idea = MON_address_the_nation_of_1936_1
+				add_idea = MON_address_the_nation_of_1936_2			
 			}
+			
 		}
 	}
 
@@ -59,12 +58,12 @@ focus_tree = {
 		x = -3
 		y = 1
 		cost = 10
-		prerequisite = { focus = MON_collectivisation }
+		prerequisite = { focus = MON_address_the_nation_of_1936 }
 		mutually_exclusive = { focus = MON_buddhist_compromise }
 
 		available_if_capitulated = yes
 		
-		relative_position_id = MON_collectivisation
+		relative_position_id = MON_address_the_nation_of_1936
 		
 		ai_will_do = {
 			factor = 2
@@ -232,8 +231,8 @@ focus_tree = {
 
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = MON_collectivisation_2
-				add_idea = MON_collectivisation_3		
+				remove_idea = MON_address_the_nation_of_1936_2
+				add_idea = MON_address_the_nation_of_1936_3		
 			}
 			add_political_power = 150
 			330 = {
@@ -303,8 +302,8 @@ focus_tree = {
 
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = MON_collectivisation_3
-				add_idea = MON_collectivisation_4
+				remove_idea = MON_address_the_nation_of_1936_3
+				add_idea = MON_address_the_nation_of_1936_4
 			}
 			add_political_power = 300
 			330 = {
@@ -501,12 +500,12 @@ focus_tree = {
 		x = 3
 		y = 1
 		cost = 10
-		prerequisite = { focus = MON_collectivisation }
+		prerequisite = { focus = MON_address_the_nation_of_1936 }
 		mutually_exclusive = { focus = MON_buddhist_prosecution }
 
 		available_if_capitulated = yes
 		
-		relative_position_id = MON_collectivisation
+		relative_position_id = MON_address_the_nation_of_1936
 		
 		ai_will_do = {
 			factor = 2
@@ -629,8 +628,8 @@ focus_tree = {
 			add_war_support = 0.15
 
 			swap_ideas = {
-				remove_idea = MON_collectivisation_2
-				add_idea = MON_collectivisation_3		
+				remove_idea = MON_address_the_nation_of_1936_2
+				add_idea = MON_address_the_nation_of_1936_3		
 			}
 		}
 	}
@@ -657,8 +656,8 @@ focus_tree = {
 
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = MON_collectivisation_3
-				add_idea = MON_collectivisation_4
+				remove_idea = MON_address_the_nation_of_1936_3
+				add_idea = MON_address_the_nation_of_1936_4
 			}
 		}
 	}
@@ -1022,13 +1021,13 @@ focus_tree = {
 		}
 	}
 	
-  # Industrail Deveoplment
+  # Industrial Deveoplment
 	
 	focus = {
 		id = MON_industrial_development
 		icon = GFX_focus_generic_industry_3
 		mutually_exclusive = { focus = MON_traditional_way }
-		x = 14
+		x = 15
 		y = 0
 		cost = 10
 
@@ -1051,10 +1050,25 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 4
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1066,7 +1080,7 @@ focus_tree = {
 		icon = GFX_SOV_capitals_of_socialism_1
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 		prerequisite = { focus = MON_industrial_development }
 		relative_position_id = MON_industrial_development
 		
@@ -1077,10 +1091,16 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_stability = -0.01
+			custom_effect_tooltip = generic_skip_one_line_tt
 			330 = {
-				add_extra_state_shared_building_slots = 4
+				add_manpower = 12000
+				add_extra_state_shared_building_slots = 2
 			}
-			add_stability = -0.15
+			
+			819 = {
+				add_manpower = -12000
+			}
 		}
 	}
 	
@@ -1088,9 +1108,9 @@ focus_tree = {
 		id = MON_soviet_investments
 		icon = GFX_focus_chi_mission_to_the_soviet_union
 		x = 0
-		y = 1
-		cost = 10
-		prerequisite = { focus = MON_forced_urbanisation }
+		y = 2
+	    cost = 5
+		prerequisite = { focus = MON_industrialised_nation }
 		relative_position_id = MON_forced_urbanisation
 		
 		available_if_capitulated = yes
@@ -1100,32 +1120,40 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 4
-				add_building_construction = {
-					type = industrial_complex
-					level = 4
-					instant_build = yes
-				}
-			}
+			
 			add_timed_idea = {idea = MON_sov_investments days = 365}
 		}
 	}
 	
 	focus = {
-		id = MON_soviet_model
-		icon = GFX_SOV_stakhonovite
+		id = MON_invite_soviet_researchers
+		icon = GFX_focus_NOR_moscows_education_centers
 		x = 0
+		y = 4
+	    cost = 5
+		prerequisite = { focus = MON_soviet_investments }
+		relative_position_id = MON_forced_urbanisation
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = MON_finalise_moderisation_of_industry
+		icon = GFX_SOV_stakhonovite
+		x = 1
 		y = 1
 		cost = 10
 		prerequisite = { focus = MON_soviet_investments }
+		prerequisite = { focus = MON_ulaanbaatar_railway }
 		relative_position_id = MON_soviet_investments
 		
 		available_if_capitulated = yes
@@ -1136,8 +1164,8 @@ focus_tree = {
 
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = MON_nomad_2
-				add_idea = MON_nomad_3	
+				remove_idea = MON_nomad_3
+				add_idea = MON_nomad_4	
 			}
 			random_owned_controlled_state = {
 				limit = {
@@ -1196,10 +1224,15 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1211,10 +1244,15 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1225,10 +1263,13 @@ focus_tree = {
 		id = MON_industrialised_nation
 		icon = GFX_focus_YUG_pan_slavic_congress
 		x = 0
-		y = 1
+		y = 2
 		cost = 10
 		prerequisite = { focus = MON_local_arms_production }
-		relative_position_id = MON_local_arms_production
+		prerequisite = {
+			focus = MON_forced_urbanisation
+		}
+		relative_position_id = MON_industrial_development
 		
 		available_if_capitulated = yes
 		
@@ -1237,16 +1278,15 @@ focus_tree = {
 		}
 
 		available = {
-			has_completed_focus = MON_soviet_model
 			NOT = {
 				has_idea = MON_sov_investments
 			}
 		}
 
 		completion_reward = {
-			remove_ideas = MON_nomad_3
-			330 = {
-				add_extra_state_shared_building_slots = 4
+			swap_ideas = {
+				remove_idea = MON_nomad_2
+				add_idea = MON_nomad_3
 			}
 		}
 	}
@@ -1257,7 +1297,7 @@ focus_tree = {
 		id = MON_traditional_way
 		icon = GFX_focus_generic_strike_at_democracy1
 		mutually_exclusive = { focus = MON_industrial_development }
-		x = 18
+		x = 19
 		y = 0
 		cost = 10
 		
@@ -1288,10 +1328,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			329 = {
+			820 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = steel_refinery
+					type = resource_expansion_steel
 					level = 1
 					instant_build = yes
 				}
@@ -1299,24 +1339,24 @@ focus_tree = {
 			330 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = steel_refinery
+					type = resource_expansion_steel
 					level = 1
 					instant_build = yes
 				}
 			}
-			819 = {
+			818 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = steel_refinery
+					type = resource_expansion_steel
 					level = 1
 					instant_build = yes
 				}
 			}
 
-			618 = {
+			819 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = steel_refinery
+					type = resource_expansion_steel
 					level = 1
 					instant_build = yes
 				}
@@ -1327,7 +1367,7 @@ focus_tree = {
 
 	focus = {
 		id = MON_expansion_of_refineries
-		icon = GFX_rubber_2
+		icon = GFX_focus_generic_resource_extraction
 		x = 0
 		y = 1
 		cost = 10
@@ -1344,7 +1384,7 @@ focus_tree = {
 			329 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					type = synthetic_rubber_refinery
+					type = synthetic_refinery
 					level = 2
 					instant_build = yes
 				}
@@ -1353,14 +1393,54 @@ focus_tree = {
 			820 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					type = synthetic_rubber_refinery
+					type = synthetic_refinery
 					level = 2
 					instant_build = yes
 				}
 			}
 		}
 	}
+    
+	focus = {
+		id = MON_ulaanbaatar_railway
+		icon = GFX_focus_generic_resource_extraction
+		x = 1
+		y = 3
+		cost = 5
+		prerequisite = { 
+	focus = MON_industrialised_nation }
+		relative_position_id = MON_industrial_development
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 2
+		}
 
+		completion_reward = {
+			build_railway = {
+				level = 2
+				path = { 7843 12695 10669 1689 12649 1834 10623 1798 4732 4801 7752 7749 10575 10647 12557 }
+			}
+			1000 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 7843
+					instant_build = yes
+				}
+			}
+
+			416 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 12557
+					instant_build = yes
+				}
+			}
+		}
+	}
 	focus = {
 		id = MON_self_sufficient
 		icon = GFX_SOV_tractor_factories
@@ -1378,8 +1458,56 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = MON_nomadism_1
+				add_idea = MON_nomadism_2
+			}
 			add_ideas = { MON_self_sufficient_idea }
+		}
+	}
+	
+	focus = {
+		id = MON_strong_nomadic_warriors_of_the_steppes
+		icon = GFX_SOV_tractor_factories
+		x = -1
+		y = 4
+		cost = 10
+		prerequisite = { focus = MON_self_sufficient }
+		relative_position_id = MON_traditional_way
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 2
+		}
+        mutually_exclusive = {
+			focus = MON_many_men_of_the_steppes
+		}
+		completion_reward = {
+			
+			add_ideas = MON_strong_nomadic_warriors_of_the_steppes_idea
+		}
+	}
+	focus = {
+		id = MON_many_men_of_the_steppes
+		icon = GFX_SOV_tractor_factories
+		x = 1
+		y = 4
+		cost = 10
+		prerequisite = { focus = MON_self_sufficient }
+		relative_position_id = MON_traditional_way
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 2
+		}
+        mutually_exclusive = {
+			focus = MON_strong_nomadic_warriors_of_the_steppes
+		}
+		completion_reward = {
+			
+			add_ideas = MON_many_men_idea
 		}
 	}
 	focus = {
@@ -1400,7 +1528,7 @@ focus_tree = {
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = MON_nomad_1
-				add_idea = MON_nomad_4
+				add_idea = MON_nomadism_1
 			}
 
 			add_ideas = { MON_nomadic_priortize_horses_ideas }
@@ -1453,12 +1581,495 @@ focus_tree = {
 		}
 	}
 
+
+	focus = {
+		id = MON_state_investments
+		icon = GFX_focus_generic_court
+		cost = 5
+		x = -2
+		y = 2
+		relative_position_id = MON_self_sufficient
+		prerequisite = {
+			focus = MON_strong_nomadic_warriors_of_the_steppes
+			focus = MON_finalise_moderisation_of_industry
+			focus = MON_many_men_of_the_steppes
+
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_ideas =  MON_state_investments_idea
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_TFV_AUTONOMY }
+	}
+
+	focus = {
+		id = MON_develop_gobi
+		icon = GFX_focus_generic_industry_1
+		cost = 5
+		prerequisite = {
+			focus = MON_state_investments
+		}
+		relative_position_id = MON_state_investments
+		x = -4
+		y = 1
+		
+		ai_will_do = {
+			factor = 2
+		}
+		available_if_capitulated = yes
+		available = {
+			not = { has_idea = FRA_investment }
+			OR = {
+				ROOT = {
+					controls_state = 817
+				}
+				any_other_country = {
+					is_subject_of = ROOT
+					OR = {
+						controls_state = 817
+					}
+				}
+			}
+		}
+		completion_reward = {
+			
+add_timed_idea = {
+				idea = FRA_investment
+				days = 30
+			}
+            custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+				817 = {
+						controller = {
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
+						}
+					}
+				}
+				817 = {
+					set_state_flag = FRA_industrial_expansion_target
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+
+			every_other_country = {
+				limit = {
+					is_subject_of = ROOT
+					controls_state = 817
+				}
+				add_autonomy_ratio = {
+					value = -0.1
+					localization = MON_state_investments
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_TFV_AUTONOMY }
+	}
+	focus = {
+		id = MON_develop_ulaanbaatar
+		icon = GFX_focus_generic_industry_3
+		cost = 5
+		prerequisite = {
+			focus = MON_state_investments
+		}
+		relative_position_id = MON_state_investments
+	x = 0
+		y = 1
+		
+		available = {
+			not = { has_idea = FRA_investment }
+			OR = {
+				ROOT = {
+					controls_state = 330
+				}
+				any_other_country = {
+					is_subject_of = ROOT
+					OR = {
+						controls_state = 330
+					}
+				}
+			}
+		}
+		completion_reward = {
+			
+add_timed_idea = {
+				idea = FRA_investment
+				days = 30
+			}
+            custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+				330 = {
+						controller = {
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
+						}
+					}
+				}
+				330 = {
+					set_state_flag = FRA_industrial_expansion_target
+					add_extra_state_shared_building_slots = 3
+				}
+			}
+
+			every_other_country = {
+				limit = {
+					is_subject_of = ROOT
+					controls_state = 330
+				}
+				add_autonomy_ratio = {
+					value = -0.1
+					localization = MON_state_investments
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = MON_develop_dornod
+		icon = GFX_focus_generic_industry_1
+		cost = 5
+		prerequisite = {
+			focus = MON_state_investments
+		}
+		relative_position_id = MON_state_investments
+		x = 4
+		y = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			not = { has_idea = FRA_investment }
+			OR = {
+				ROOT = {
+					controls_state = 819
+				}
+				any_other_country = {
+					is_subject_of = ROOT
+					OR = {
+						controls_state = 819
+					}
+				}
+			}
+		}
+		completion_reward = {
+			
+add_timed_idea = {
+				idea = FRA_investment
+				days = 30
+			}
+            custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+				819 = {
+						controller = {
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
+						}
+					}
+				}
+				819 = {
+					set_state_flag = FRA_industrial_expansion_target
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+
+			every_other_country = {
+				limit = {
+					is_subject_of = ROOT
+					controls_state = 819
+				}
+				add_autonomy_ratio = {
+					value = -0.1
+					localization = MON_state_investments
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_TFV_AUTONOMY }
+	}
+	focus = {
+		id = MON_develop_khovd
+		icon = GFX_focus_generic_industry_2
+		cost = 5
+		prerequisite = {
+			focus = MON_state_investments
+		}
+		available_if_capitulated = yes
+		relative_position_id = MON_state_investments
+		x = 2
+		y = 1
+		
+		available = {
+			not = { has_idea = FRA_investment }
+			OR = {
+				ROOT = {
+					controls_state = 818
+				}
+				any_other_country = {
+					is_subject_of = ROOT
+					OR = {
+						controls_state = 818
+					}
+				}
+			}
+		}
+		completion_reward = {
+			
+add_timed_idea = {
+				idea = FRA_investment
+				days = 30
+			}
+            custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+				818 = {
+						controller = {
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
+						}
+					}
+				}
+				818 = {
+					set_state_flag = FRA_industrial_expansion_target
+					add_extra_state_shared_building_slots = 2
+				}
+			}
+
+			every_other_country = {
+				limit = {
+					is_subject_of = ROOT
+					controls_state = 818
+				}
+				add_autonomy_ratio = {
+					value = -0.1
+					localization = MON_state_investments
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_TFV_AUTONOMY }
+	}
+
+
+	focus = {
+		id = MON_develop_khovsgol
+		icon = GFX_focus_generic_industry_2
+		cost = 5
+		prerequisite = {
+			focus = MON_state_investments
+		}
+		relative_position_id = MON_state_investments
+		x = -2
+		y = 1
+		available = {
+			not = { has_idea = FRA_investment }
+			OR = {
+				ROOT = {
+					controls_state = 820
+				}
+				any_other_country = {
+					is_subject_of = ROOT
+					OR = {
+						controls_state = 820
+					}
+				}
+			}
+		}
+		completion_reward = {
+			
+add_timed_idea = {
+				idea = FRA_investment
+				days = 30
+			}
+            custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+				820 = {
+						controller = {
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
+						}
+					}
+				}
+				820 = {
+					set_state_flag = FRA_industrial_expansion_target
+					add_extra_state_shared_building_slots = 2
+				}
+			}
+
+			every_other_country = {
+				limit = {
+					is_subject_of = ROOT
+					controls_state = 820
+				}
+				add_autonomy_ratio = {
+					value = -0.1
+					localization = MON_state_investments
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_TFV_AUTONOMY }
+	}
+
+	focus = {
+		id = MON_investment_complete
+		icon = GFX_focus_generic_modernize_industry
+		cost = 10
+		prerequisite = {
+			focus = MON_develop_khovd
+			focus = MON_develop_dornod
+			focus = MON_develop_gobi
+			focus = MON_develop_khovsgol
+			focus = MON_develop_ulaanbaatar
+			
+		}
+		mutually_exclusive = {
+			focus = MON_investment_complete_military
+		}
+		x = -1
+		y = 3
+		relative_position_id = MON_state_investments
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1.5
+		}
+
+		complete_tooltip = {
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					has_state_flag = FRA_industrial_expansion_target
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		completion_reward = {
+			add_cic = 125
+			  custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = FRA_industrial_expansion_effect_civ_tt
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					OR = {
+						has_state_flag = FRA_industrial_expansion_target
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+	}
+	focus = {
+		id = MON_investment_complete_military
+		icon = GFX_focus_generic_military_industry
+		cost = 10
+		prerequisite = {
+			focus = MON_develop_khovd
+			focus = MON_develop_dornod
+			focus = MON_develop_gobi
+			focus = MON_develop_khovsgol
+			focus = MON_develop_ulaanbaatar
+			
+		}
+		mutually_exclusive = {
+			focus = MON_investment_complete
+		}
+		x = 1
+		y = 3
+		relative_position_id = MON_state_investments
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1.5
+		}
+
+		complete_tooltip = {
+
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					has_state_flag = FRA_industrial_expansion_target
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		completion_reward = {
+        army_experience = 25
+		  custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = FRA_industrial_expansion_effect_mil_tt
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					OR = {
+						has_state_flag = FRA_industrial_expansion_target
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+	}
+	
+	focus = {
+		id = MON_great_industrial_revolution_of_mongolia
+		icon = GFX_focus_generic_reorient_production
+		cost = 10
+		prerequisite = {
+			focus = MON_investment_complete
+			focus = MON_investment_complete_military
+			
+		}
+	
+		x = 1
+		y = 1
+		relative_position_id = MON_investment_complete
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1.5
+		}
+
+	
+		completion_reward = {
+		add_ideas = MON_great_industrial_revolution
+	}
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+	}
   # Army
 
 	focus = {
 		id = MON_mongolia_people_army
 		icon = GFX_SOV_red_army
-		x = 25
+		x = 28
 		y = 0
 
 		cost = 10

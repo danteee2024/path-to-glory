@@ -1,7 +1,126 @@
 ideas = {
 
 	country = {
+		MON_great_industrial_revolution = {
 
+			picture = generic_manpower_bonus
+			
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor               = -0.01  # Factor of factories reserved for consumer goods
+conversion_cost_civ_to_mil_factor   = -0.01  # Cost to convert civilian to military factories
+equipment_conversion_speed          = 0.01  # Speed of equipment conversion
+global_building_slots_factor        = 0.01  # Number of extra building slots
+industrial_capacity_factory         = 0.01  # Military factory output factor
+industry_air_damage_factor          = -0.01  # Bomb damage to industry
+local_resources_factor              = 0.01  # Domestic resource yield factor
+min_export                          = -0.01  # Minimum resource export factor
+line_change_production_efficiency_factor = 0.01  # Production efficiency gain from changing production lines
+production_factory_efficiency_gain_factor  = 0.01  # Production efficiency gain
+production_factory_start_efficiency_factor = 0.01  # Starting production efficiency
+production_speed_air_base_factor    = 0.01  # Air Base construction speed
+production_speed_anti_air_building_factor = 0.01  # Anti-Air construction speed
+production_speed_arms_factory_factor= 0.01  # Military Factory construction speed
+production_speed_buildings_factor   = 0.01  # Any building construction speed :contentReference[oaicite:1]{index=1}
+production_speed_bunker_factor      = 0.01  # Land Bunker construction speed
+production_speed_coastal_bunker_factor = 0.01  # Coastal Bunker speed
+production_speed_dockyard_factor    = 0.01  # Dockyard construction speed
+production_speed_industrial_complex_factor = 0.01  # Civilian Factory speed
+production_speed_infrastructure_factor = 0.01  # Infrastructure build speed
+production_speed_naval_base_factor  = 0.01  # Naval Base build speed
+production_speed_nuclear_reactor_factor = 0.01  # Nuclear Reactor build speed
+production_speed_radar_station_factor = 0.01  # Radar Station build speed
+production_speed_rocket_site_factor = 0.01  # Rocket Site build speed
+production_speed_synthetic_refinery_factor = 0.01  # Synthetic Refinery build speed
+research_speed_factor               = 0.01  # Flat research bonus
+ production_speed_resource_expansion_steel_factor = 0.01
+                production_speed_resource_expansion_chromium_factor = 0.01
+                production_speed_resource_expansion_tungsten_factor = 0.01
+                production_speed_resource_expansion_aluminium_factor = 0.01
+
+			}
+
+
+			
+		}
+			MON_many_men_idea = {
+
+			picture = generic_manpower_bonus
+			
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.02
+				mobilization_speed = 0.25
+				supply_consumption_factor = 0.01
+			    org_loss_when_moving = 0.05
+
+
+			}
+		}
+		MON_strong_nomadic_warriors_of_the_steppes_idea = {
+
+			picture = generic_manpower_bonus
+			
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				special_forces_attack_factor = 0.1
+				special_forces_out_of_supply_factor = -0.10
+				special_forces_cap = 0.20
+			
+
+
+			}
+		}
+        MON_state_investments_idea = {
+
+			picture = generic_manpower_bonus
+			
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				political_advisor_cost_factor = -0.15
+			
+
+
+			}
+		}
 		MON_nomadic_war_idea = {
 
 			picture = generic_manpower_bonus
@@ -50,6 +169,10 @@ ideas = {
 				armor = {
 					build_cost_ic = 0.33 instant = yes
 				}
+			}
+			modifier = {
+				cavalry_attack_factor = 0.15
+				cavalry_defence_factor = 0.1
 			}
 		}
 
@@ -354,13 +477,12 @@ ideas = {
 				mobilization_speed = -0.75
 			}
 			equipment_bonus = {
-				horse_equipment = {
+				infantry_equipment = {
 					build_cost_ic = -0.50 instant = yes
 				}
 			}
 		}
-		
-		MON_nomad_1 = {
+			MON_nomadism_1 = {
 
 			picture = chi_army_corruption2
 			
@@ -375,7 +497,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				local_building_slots_factor = -0.4
+				local_building_slots_factor = -0.25
 				industrial_capacity_factory = -0.2
 				local_resources_factor = -0.2
 				production_speed_buildings_factor = -0.2
@@ -383,7 +505,63 @@ ideas = {
 				mobilization_speed = -0.5
 			}
 			equipment_bonus = {
-				horse_equipment = {
+				infantry_equipment = {
+					build_cost_ic = -0.25 instant = yes
+				}
+			}
+		}
+			MON_nomadism_2 = {
+
+			picture = chi_army_corruption2
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				local_building_slots_factor = -0.10
+				industrial_capacity_factory = -0.30
+				local_resources_factor = -0.2
+				production_speed_buildings_factor = -0.25
+				supply_consumption_factor = -0.2
+				mobilization_speed = -0.35	
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.35 instant = yes
+				}
+			}
+		}
+		MON_nomadism_1 = {
+
+			picture = chi_army_corruption2
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				local_building_slots_factor = -0.25
+				industrial_capacity_factory = -0.25
+				local_resources_factor = -0.2
+				production_speed_buildings_factor = -0.2
+				supply_consumption_factor = -0.15
+				mobilization_speed = -0.5
+			}
+			equipment_bonus = {
+				infantry_equipment = {
 					build_cost_ic = -0.30 instant = yes
 				}
 			}
@@ -404,7 +582,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				local_building_slots_factor = -0.2
+				local_building_slots_factor = -0.10
 				industrial_capacity_factory = -0.1
 				local_resources_factor = -0.1
 				production_speed_buildings_factor = -0.1
@@ -412,8 +590,8 @@ ideas = {
 				mobilization_speed = -0.25
 			}
 			equipment_bonus = {
-				horse_equipment = {
-					build_cost_ic = -0.15 instant = yes
+				infantry_equipment = {
+					build_cost_ic = -0.2 instant = yes
 				}
 			}
 		}	
@@ -433,14 +611,14 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				local_building_slots_factor = -0.1
+				local_building_slots_factor = -0.05
 				industrial_capacity_factory = -0.05
 				production_speed_buildings_factor = -0.05
 				mobilization_speed = -0.1
 			}
 			equipment_bonus = {
-				horse_equipment = {
-					build_cost_ic = -0.10 instant = yes
+				infantry_equipment = {
+					build_cost_ic = -0.15 instant = yes
 				}
 			}
 		}
@@ -460,12 +638,11 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				local_building_slots_factor = -0.1
 				mobilization_speed = -0.1
 			}
 			equipment_bonus = {
-				horse_equipment = {
-					build_cost_ic = -0.30 instant = yes
+				infantry_equipment = {
+					build_cost_ic = -0.1 instant = yes
 				}
 			}
 		}
