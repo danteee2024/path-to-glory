@@ -1803,6 +1803,21 @@ focus = {
 				ruling_party = neutrality
 				elections_allowed = no
 			}
+			set_party_name = {
+                ideology = neutrality
+                long_name = "Korunní Rada"
+                name = "KR"
+            }
+            create_country_leader = {
+                name = "Karl Albrecht I"
+                desc = ""
+                picture = "GFX_portrait_POL_karl_albrecht"
+                expire = "1965.1.1"
+                ideology = despotism
+                traits = {
+                    patriot_king
+                }
+            }
 			swap_ideas = {
 				remove_idea = CZE_Call_of_the_Kingdom
 				add_idea = CZE_The_Revival_of_the_Kingdom
@@ -1875,7 +1890,7 @@ focus = {
 			}
 		}
 		focus = {
-		id = CZE_Demand_Austria_Annexation
+		id = CZE_Demand_Austria
 		icon =  GFX_goal_demand_sudetenland 
 		prerequisite = { focus = CZE_Prepare_for_War }
 		x = 1
@@ -1888,7 +1903,6 @@ focus = {
 			factor = 80
 			modifier = {
 				factor = 0.1
-				HABSBURG_joint_trigger = yes
 			}
 		}
 
@@ -1904,6 +1918,7 @@ focus = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
+	 AUS = { country_event =  generic.20 }
 		
 			}
 		}
@@ -1956,10 +1971,10 @@ focus = {
 		id = CZE_The_Great_Kingdom
 		icon = GFX_focus_BEL_king_of_the_belgians 
 		prerequisite = { focus = CZE_Expansion_is_Needed }
-		prerequisite = { focus = CZE_Demand_Austria_Annexation }
+		prerequisite = { focus = CZE_Demand_Austria }
 		x = -1
 		y = 1
-		relative_position_id = CZE_Demand_Austria_Annexation
+		relative_position_id = CZE_Demand_Austria
 
 		cost = 10
 
