@@ -3053,3 +3053,25 @@ JAP_shogunate_tag = {
 	color = rgb { 0 73 75 }
 	color_ui = rgb { 0 73 75 }
 }
+
+# SIAM
+
+SIA_PSA = {
+    color = rgb { 125 13 24 }
+	color_ui = rgb { 163 17 31 }
+}
+
+SIA_AYU = {
+    color = rgb { 165 25 49 }
+    color_ui = rgb { 255 73 121 }
+}
+
+SIA_THAI = {
+    color = rgb { 45 42 74 }
+    color_ui = rgb { 255 73 121 }
+}
+
+SIA_SEA = {
+    color = rgb { 0 36 124 }
+    color_ui = rgb { 255 73 121 }
+}

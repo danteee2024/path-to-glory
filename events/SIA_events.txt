@@ -1,0 +1,1290 @@
+	add_namespace = SIA
+	
+## Ask for Japan Mediation
+
+	country_event = {
+		id = SIA.1
+		title = SIA.1.t
+		desc = SIA.1.desc
+		
+		is_triggered_only = yes
+		
+		fire_only_once = yes
+		
+		option = {
+			name = SIA.1.a
+			
+			SIA = { country_event = SIA.6 }
+			
+			ai_chance = {
+			
+				base = 0
+				
+				modifier = {	
+					AND = { NOT = { SIA = { has_war_with  = BRI}
+							SIA = { has_war_with  = FRA } }
+					}		
+
+					add = 50
+				}
+			}
+		}
+		
+		option = {
+			name = SIA.1.b
+			
+			SIA = { country_event = SIA.7 }
+			
+			ai_chance = {
+			
+				base = 0
+				
+				modifier = {
+					
+					SIA = { has_war_with = BRI}
+					
+					add = 100
+				}
+			}
+		}
+	}
+	
+## Call for Vote Phibun
+	
+	country_event = {
+		id = SIA.2
+		title = SIA.2.t
+		desc = SIA.2.desc
+		
+		picture = GFX_report_event_czech_soldiers_01
+		
+		is_triggered_only = yes
+		
+		fire_only_once = yes
+		
+		option = {
+			name = SIA.2.a
+			
+			set_politics = {
+			ruling_party = fascism
+			elections_allowed = yes
+			}
+			
+			add_country_leader_role = {
+				character = SIA_Plaek_Phibun
+					country_leader = { 
+						ideology = fascism_ideology
+						traits = { dictator }
+						expire = "1965.1.1"
+						id = -1
+					}
+				promote_leader = yes				
+			}
+		}
+	}
+	
+	# What path?
+	
+	country_event = {
+		id = SIA.3
+		title = SIA.3.t
+		desc = SIA.3.desc
+		
+		is_triggered_only = yes
+		
+		fire_only_once = yes
+		
+		
+		## Attempt to maintain control
+		
+		option = {
+			name = SIA.3.a
+			
+			set_country_flag = SIA_Fascism_Rise
+			
+			ai_chance = {
+			
+				base = 5
+				
+			}
+		}
+		
+		## Ask the Monarchy for Support
+		
+		option = {
+			name = SIA.3.b
+			
+			set_country_flag = SIA_Monarchy_Support
+		}
+	}
+	
+	# Growth of Phibon influence
+	
+	country_event = {
+		id = SIA.4
+		title = SIA.4.t
+		desc = SIA.4.desc
+		
+		picture = GFX_report_event_czech_soldiers_01
+				
+		fire_only_once = yes
+
+		trigger = {
+			
+			has_country_flag = SIA_Fascism_Rise
+		
+		}
+
+		mean_time_to_happen = {
+			days = 10
+		}
+
+		
+		## Attempt to maintain control
+		
+		option = {
+			name = SIA.4.a
+					
+			add_popularity = {
+				ideology = fascism
+				popularity = .1
+			}
+			
+			set_country_flag = SIA_Phibon_Gaining_Power
+		}
+	}
+	
+	# Rama VII shows public support for Phahon
+	
+	country_event = {
+		id = SIA.5
+		title = SIA.5.t
+		desc = SIA.5.desc
+		
+		picture = GFX_report_event_czech_soldiers_01
+				
+		fire_only_once = yes
+
+		trigger = {
+			
+			has_country_flag = SIA_Monarchy_Support
+		
+		}
+
+		mean_time_to_happen = {
+			days = 10
+		}
+		
+		option = {
+			name = SIA.5.a
+						
+			add_popularity = {
+				ideology = fascism
+				popularity = -.2
+			}
+			
+			set_country_flag = SIA_Phahon_Scandal_Resolved_With_Monarchy_Support
+		}
+	}
+	
+	
+	# Japanese Mediation Accept
+	
+	country_event = {
+		id = SIA.6
+		title = SIA.6.t
+		desc = SIA.6.desc
+		
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = {
+			name = SIA.6.a
+			
+			white_peace = FRA
+			
+			set_state_owner = 670
+			set_state_owner = 741
+			transfer_state = 670
+			transfer_state = 741
+		}
+	}
+	
+	# Japanese Mediation Decline
+
+	country_event = {
+		id = SIA.7
+		title = SIA.7.t
+		desc = SIA.7.desc
+		
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = {
+			name = SIA.7.a
+		}
+	}
+	
+	# France Demand Event
+	
+	country_event = {
+		id = SIA.8
+		title = SIA.8.t
+		desc = SIA.8.desc
+		
+		is_triggered_only = yes
+		
+		fire_only_once = yes
+		
+		
+		## Not give it
+		
+		option = {
+			name = SIA.8.a
+			
+			SIA = { country_event = SIA.10 }
+			
+			ai_chance = {
+			
+				base = 7
+			}
+		}
+		
+		# Give it
+		
+		option = {
+			name = SIA.8.b
+			
+			SIA = { country_event = SIA.9 }
+			
+			ai_chance = {
+			
+				base = 3
+				
+				modifier = {
+					factor = 10
+					FRA = { has_war = true }
+				}
+			}
+		}
+	}
+	
+	# Accept
+	
+	country_event = {
+		id = SIA.9
+		title = SIA.9.t
+		desc = SIA.9.desc
+		
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = {
+			name = SIA.9.a
+						
+			set_state_owner = 670
+			set_state_owner = 741
+			set_state_owner = 671
+			set_state_owner = 286
+			transfer_state = 670
+			transfer_state = 741
+			transfer_state = 671
+			transfer_state = 286
+		}
+	}
+	
+	# Decline
+	
+	country_event = {
+		id = SIA.10
+		title = SIA.10.t
+		desc = SIA.10.desc
+		
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = {
+			name = SIA.10.a
+			
+			add_timed_idea = {
+					idea = SIA_Revenge_Against_France
+					days = 365
+			}
+		}
+	}
+	
+	# Japan bully event
+	
+	country_event = {
+		id = SIA.11
+		title = SIA.11.t
+		desc = SIA.11.desc
+		
+		fire_only_once = yes
+		is_triggered_only = yes
+
+		## Join
+		
+		option = {
+			name = SIA.11.a
+			
+			JAP = { add_to_faction = SIA }
+			
+			ai_chance = {
+			
+				base = 50
+			}
+		}
+		
+		# Decline
+		
+		option = {
+			name = SIA.11.b
+						
+			ai_chance = {
+			
+				base = 0
+				
+				JAP = {
+						create_wargoal = {
+						type = puppet_wargoal_focus 
+						target = SIA
+					}
+				}
+			}
+		}
+	}
+	
+	country_event = {
+		id = SIA.12
+		title = SIA.12.t
+		desc = SIA.12.desc
+		
+		picture = GFX_report_event_czech_soldiers_01
+		
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = {
+			name = SIA.12.a
+			
+			add_country_leader_role = {
+				character = SIA_Rama_VII
+					country_leader = { 
+						ideology = despotism
+						traits = { royal_dictator }
+						expire = "1965.1.1"
+						id = -1
+					}
+				promote_leader = yes				
+			}
+		}
+	}
+	
+	# England Demand Event
+	
+	country_event = {
+		id = SIA.13
+		title = SIA.13.t
+		desc = SIA.13.desc
+		
+		is_triggered_only = yes
+		
+		fire_only_once = yes
+		
+		## Not give it
+		
+		option = {
+			name = SIA.13.a
+			
+			SIA = { country_event = SIA.15 }
+			
+			ai_chance = {
+			
+				base = 8
+			}
+		}
+		
+		# Give it
+		
+		option = {
+			name = SIA.13.b
+			
+			SIA = { country_event = SIA.14 }
+			
+			ai_chance = {
+			
+				base = 2
+				
+				modifier = {
+					factor = 10
+					ENG = { has_war = true }
+				}
+			}
+		}
+	}
+	
+	# Accept
+	
+	country_event = {
+		id = SIA.14
+		title = SIA.14.t
+		desc = SIA.14.desc
+		
+		picture = GFX_report_event_generic_read_write
+		
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = {
+			name = SIA.14.a
+						
+			set_state_owner = 640
+			set_state_owner = 288
+			transfer_state = 640
+			transfer_state = 288
+		}
+	}
+	
+	# Decline
+	
+	country_event = {
+		id = SIA.15
+		title = SIA.15.t
+		desc = SIA.15.desc
+		
+		picture = GFX_report_event_generic_read_write
+		
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = {
+			name = SIA.15.a
+			
+			add_timed_idea = {
+					idea = SIA_Revenge_Against_ENG
+					days = 365
+			}
+		}
+	}
+	
+	# Democratic Referendum
+	
+	country_event = {
+		id = SIA.16
+		title = SIA.16.t
+		desc = SIA.16.desc
+		
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = {
+			name = SIA.16.a
+			
+			set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+			}
+			
+			add_country_leader_role = {
+				character = SIA_pridi_bhanomyong
+					country_leader = { 
+						ideology = socialism
+						traits = { tenacious_negotiator financial_expert }
+						expire = "1965.1.1"
+						id = -1
+					}
+				promote_leader = yes				
+			}
+		}
+	}
+	
+	# Renegotiate Unequal Treaties
+	
+	## England
+	
+	country_event = {
+		id = SIA.17
+		title = SIA.17.t
+		desc = SIA.17.desc
+		
+		is_triggered_only = yes
+		
+		fire_only_once = yes
+		
+		## Not give it
+		
+		option = {
+			name = SIA.17.a
+			
+			SIA = { country_event = SIA.19 }
+			
+			ai_chance = {
+			
+				base = 1
+			}
+		}
+		
+		# Give it
+		
+		option = {
+			name = SIA.17.b
+			
+			SIA = { country_event = SIA.18 }
+			
+			ai_chance = {
+			
+				base = 5
+				
+				modifier = {
+					
+					ENG = { has_war = true }
+					
+					factor = 99
+				}
+			}
+		}
+	}
+	
+	# Accept
+	
+	country_event = {
+		id = SIA.18
+		title = SIA.18.t
+		desc = SIA.18.desc
+		
+		picture = GFX_report_event_generic_read_write
+		
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = {
+			name = SIA.18.a
+						
+			set_state_owner = 640
+			set_state_owner = 288
+			transfer_state = 640
+			transfer_state = 288
+			
+			add_state_core = 640
+			add_state_core = 288
+		}
+	}
+	
+	# Decline
+	
+	country_event = {
+		id = SIA.19
+		title = SIA.19.t
+		desc = SIA.19.desc
+		
+		picture = GFX_report_event_generic_read_write
+		
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = {
+			name = SIA.19.a
+			
+			add_popularity = {
+				ideology = democratic
+				popularity = -.1
+			}
+		}
+	}
+	
+	## France
+	
+	country_event = {
+		id = SIA.20
+		title = SIA.20.t
+		desc = SIA.20.desc
+		
+		is_triggered_only = yes
+		
+		fire_only_once = yes
+		
+		
+		## Not give it
+		
+		option = {
+			name = SIA.20.a
+			
+			SIA = { country_event = SIA.22 }
+			
+			ai_chance = {
+			
+				base = 1
+			}
+		}
+		
+		# Give it
+		
+		option = {
+			name = SIA.20.b
+			
+			SIA = { country_event = SIA.21 }
+			
+			ai_chance = {
+			
+				base = 5
+				
+				modifier = {
+					
+					FRA = { has_war = true }
+					
+					factor = 99
+				}
+			}
+		}
+	}
+	
+	# Accept
+	
+	country_event = {
+		id = SIA.21
+		title = SIA.21.t
+		desc = SIA.21.desc
+		
+		picture = GFX_report_event_generic_read_write
+		
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = {
+			name = SIA.21.a
+						
+			set_state_owner = 670
+			set_state_owner = 741
+			transfer_state = 670
+			transfer_state = 741
+			
+			add_state_core = 670
+			add_state_core = 741
+		}
+	}
+	
+	# Decline
+	
+	country_event = {
+		id = SIA.22
+		title = SIA.22.t
+		desc = SIA.22.desc
+		
+		picture = GFX_report_event_generic_read_write
+		
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = {
+			name = SIA.22.a
+			
+			add_popularity = {
+				ideology = democratic
+				popularity = -.1
+			}
+		}
+	}
+	
+	## Indonesia
+	
+	#England
+	
+	country_event = {
+		id = SIA.23
+		title = SIA.23.t
+		desc = SIA.23.desc
+		
+		is_triggered_only = yes
+		
+		fire_only_once = yes
+		
+		
+		## Not give it
+		
+		option = {
+			name = SIA.23.a
+			
+			SIA = { country_event = SIA.25 }
+			
+			ai_chance = {
+			
+				base = 5
+			}
+		}
+		
+		# Give it
+		
+		option = {
+			name = SIA.23.b
+			
+			SIA = { country_event = SIA.24 }
+			
+			ai_chance = {
+			
+				base = 10
+				
+				modifier = {
+					
+					ENG = { has_war = true }
+					
+					factor = 99
+				}
+			}
+		}
+	}
+	
+	# Accept
+	
+	country_event = {
+		id = SIA.24
+		title = SIA.24.t
+		desc = SIA.24.desc
+		
+		picture = GFX_report_event_generic_read_write
+		
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = {
+			name = SIA.24.a
+			
+			set_state_owner = 422
+			set_state_owner = 733
+			set_state_owner = 336
+			set_state_owner = 333
+			transfer_state = 336
+			transfer_state = 333
+			transfer_state = 422
+			transfer_state = 733
+		}
+	}
+	
+	# Decline
+	
+	country_event = {
+		id = SIA.25
+		title = SIA.25.t
+		desc = SIA.25.desc
+		
+		picture = GFX_report_event_generic_read_write
+		
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = {
+			name = SIA.25.a
+			
+			add_popularity = {
+				ideology = democratic
+				popularity = -.1
+			}
+		}
+	}
+	
+	# France
+	
+	country_event = {
+		id = SIA.26
+		title = SIA.23.t
+		desc = SIA.23.desc
+		
+		is_triggered_only = yes
+		
+		fire_only_once = yes
+		
+		
+		## Not give it
+		
+		option = {
+			name = SIA.23.a
+			
+			SIA = { country_event = SIA.28 }
+			
+			ai_chance = {
+			
+				base = 5
+			}
+		}
+		
+		# Give it
+		
+		option = {
+			name = SIA.23.b
+			
+			SIA = { country_event = SIA.27 }
+			
+			ai_chance = {
+			
+				base = 10
+				
+				modifier = {
+					
+					FRA = { has_war = true }
+					
+					factor = 99
+				}
+			}
+		}
+	}
+	
+	# Accept
+	
+	country_event = {
+		id = SIA.27
+		title = SIA.27.t
+		desc = SIA.27.desc
+		
+		picture = GFX_report_event_generic_read_write
+		
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = {
+			name = SIA.27.a
+						
+			set_state_owner = 671
+			set_state_owner = 286
+			transfer_state = 671
+			transfer_state = 286
+		}
+	}
+	
+	# Decline
+	
+	country_event = {
+		id = SIA.28
+		title = SIA.28.t
+		desc = SIA.28.desc
+		
+		picture = GFX_report_event_generic_read_write
+		
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = {
+			name = SIA.28.a
+			
+			add_popularity = {
+				ideology = democratic
+				popularity = -.1
+			}
+		}
+	}
+	
+	# Communism sieze power
+	
+	country_event = {
+		id = SIA.29
+		title = SIA.29.t
+		desc = SIA.29.desc
+		
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = {
+			name = SIA.29.a
+			
+			set_politics = {
+			ruling_party = communism
+			elections_allowed = no
+			}
+			
+			add_country_leader_role = {
+				character = SIA_pridi_bhanomyong
+					country_leader = {
+						ideology = social_democracy
+						traits = { disillusioned_with_democracy }
+						expire = "1965.1.1"
+						id = -1
+					}
+				promote_leader = yes				
+			}
+			
+			set_party_name = { 
+				ideology = communism 
+				long_name = SIA_empowered_communist_party_long
+				name = SIA_empowered_communist_party
+			}
+		}
+	}
+	
+	country_event = {
+		id = SIA.30
+		title = SIA.30.t
+		desc = SIA.30.desc
+		
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = {
+			name = SIA.30.a
+			
+			# Re-permit elections
+			
+			add_country_leader_role = {
+				character = SIA_Peoples_Assembly
+					country_leader = { 
+						ideology = social_democracy
+						traits = { peoples_assembly }
+						expire = "1965.1.1"
+						id = -1
+					}
+				promote_leader = yes				
+			}
+		}
+	}
+	
+	country_event = {
+		id = SIA.31
+		title = SIA.31.t
+		desc = SIA.31.desc
+		
+		picture = GFX_report_event_generic_factory
+		
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = {
+			name = SIA.31.a
+			
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_2
+				amount = 5000
+				producer = SOV
+			}
+			
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 1000
+				producer = SOV
+			}
+			
+			add_equipment_subsidy = {
+				cic = 1000
+				equipment_type = infantry_equipment
+				seller_tags = { SOV }
+			}
+		}
+	}
+	
+	# Boworadet Return
+	
+	country_event = {
+		id = SIA.32
+		title = SIA.32.t
+		desc = SIA.32.desc
+		picture = GFX_event_boworadet
+		
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = {
+			name = SIA.32.a
+			
+			add_field_marshal_role   = {
+				character = SIA_Prince_Boworadet
+				traits={politically_connected old_guard infantry_expert infantry_leader commando}
+				skill=5
+				attack_skill=4
+				defense_skill=5
+				planning_skill=3
+				logistics_skill=4
+			}
+		}
+	}
+	
+	# Boworadet Return
+	
+	country_event = {
+		id = SIA.33
+		title = SIA.33.t
+		desc = SIA.33.desc
+		picture = GFX_event_boworadet
+		
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = {
+			name = SIA.33.a
+			
+			swap_ideas = { 
+			  remove_idea = SIA_Phrayas_Support 
+			  add_idea = SIA_Phrayas_President 
+			}
+		}
+		
+		option = {
+			name = SIA.33.b
+			
+			remove_ideas = SIA_Phrayas_Support 
+			
+			start_civil_war = {
+				ideology = neutrality
+				size = 0.2
+			}
+			
+			hidden_effect = { retire_character = SIA_phraya_phahon }
+		}
+	}
+	
+	country_event = {
+		id = SIA.34
+		title = SIA.34.t
+		desc = SIA.34.desc
+		
+		picture = GFX_event_bangkok_floods
+				
+		fire_only_once = yes
+		is_triggered_only = no
+
+		trigger = {
+			date > 1942.11.01
+		}
+
+		mean_time_to_happen = {
+			days = 29
+		}
+		
+		## Attempt to maintain control
+		
+		option = {
+			name = SIA.34.a
+			
+			add_ideas = SIA_Pad_Thai
+		}
+		
+		option = {
+			name = SIA.34.b
+			
+			add_ideas = SIA_Pad_Thai_II
+		}
+	}
+	
+	# Mandates
+		#1
+	country_event = {
+		id = SIA.35
+		title = SIA.35.t
+		desc = SIA.35.desc
+		
+		picture = GFX_event_cultural_mandate_1
+				
+		fire_only_once = yes
+		is_triggered_only = yes
+				
+		option = {
+			name = SIA.35.a
+		}
+	}
+		#2
+	country_event = {
+		id = SIA.36
+		title = SIA.36.t
+		desc = SIA.36.desc
+		
+		picture = GFX_event_cultural_mandate_2
+				
+		fire_only_once = yes
+		is_triggered_only = yes
+				
+		option = {
+			name = SIA.36.a
+		}
+	}
+		#3
+	country_event = {
+		id = SIA.37
+		title = SIA.37.t
+		desc = SIA.37.desc
+		
+		picture = GFX_event_cultural_mandate_5
+				
+		fire_only_once = yes
+		is_triggered_only = yes
+				
+		option = {
+			name = SIA.37.a
+		}
+	}
+		#4
+	country_event = {
+		id = SIA.38
+		title = SIA.38.t
+		desc = SIA.38.desc
+		
+		picture = GFX_event_cultural_mandate_10
+				
+		fire_only_once = yes
+		is_triggered_only = yes
+				
+		option = {
+			name = SIA.38.a
+		}
+	}
+	
+	# Allied Bombing
+	
+	country_event = {
+		id = SIA.39
+		title = SIA.39.t
+		desc = SIA.39.desc
+		
+		picture = GFX_event_bangkok_bombing
+				
+		fire_only_once = yes
+		is_triggered_only = no
+
+		trigger = {
+			is_ally_with = JAP
+			has_war_with = ENG
+		}
+
+		mean_time_to_happen = {
+			days = 29
+		}
+				
+		option = {
+			name = SIA.39.a
+			
+			add_war_support = 0.05
+			
+			289 = {
+				damage_building = {
+					type = infrastructure
+					damage = 1
+				}
+				
+				add_local_manpower= -728
+			}
+		}
+	}
+	
+	# Burma Railroad
+	
+	country_event = {
+		id = SIA.40
+		title = SIA.40.t
+		desc = SIA.40.desc
+		
+		picture = GFX_event_burma_railway
+				
+		fire_only_once = yes
+		is_triggered_only = no
+
+		trigger = {
+			is_ally_with = JAP
+			
+			288 = { is_controlled_by = SIA }
+		}
+
+		mean_time_to_happen = {
+			days = 60
+			
+			set_country_flag = SIA_Burma_Railroad_Started_1
+		}
+				
+		option = {
+			name = SIA.40.a
+			
+			build_railway = {
+				level = 1
+				build_only_on_allied = no
+				controller_priority = {
+					base = 1
+					modifier = {
+						tag = SIA
+						add = 2
+					}
+				}
+				fallback = no
+				start_province = 7408
+				target_province = 1330
+			} 
+		}
+	}
+	
+	country_event = {
+		id = SIA.41
+		title = SIA.41.t
+		desc = SIA.41.desc
+		
+		picture = GFX_event_burma_railway
+				
+		fire_only_once = yes
+		is_triggered_only = no
+
+		trigger = {
+			is_ally_with = JAP
+		
+			has_country_flag = SIA_Burma_Railroad_Started_1
+		}
+
+		mean_time_to_happen = {
+			days = 60
+		}
+				
+		option = {
+			name = SIA.41.a
+			
+			build_railway = {
+				level = 2
+				build_only_on_allied = no
+				controller_priority = {
+					base = 1
+					modifier = {
+						tag = SIA
+						add = 2
+					}
+				}
+				fallback = no
+				start_province = 7408
+				target_province = 1330
+			}
+		}
+	}
+	
+	country_event = {
+		id = SIA.42
+		title = SIA.42.t
+		desc = SIA.42.desc
+		
+		fire_only_once = yes
+
+		trigger = {
+			AND = {	
+				SIA = { NOT = { has_national_focus = SIA_Thai_Neutrality } } 
+				JAP = { is_faction_leader = yes }
+				TAG = JAP
+			}
+		}
+		
+		mean_time_to_happen = {
+			days = 14
+		}
+
+		## Force Them To Join
+		
+		option = {
+			name = SIA.42.a
+			
+			SIA = { country_event = { id = SIA.11 hours = 12 } }
+			
+			ai_chance = {
+			
+				base = 100
+			}
+		}
+		
+		# Decline
+		
+		option = {
+			name = SIA.42.b
+						
+			add_political_power = -100
+						
+			ai_chance = {	
+				base = 0
+			}
+		}
+	}
