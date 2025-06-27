@@ -34,6 +34,9 @@ characters={
 			}
 		}
 		country_leader={
+			traits = {
+				silent_workhorse
+			}
 			ideology=falangism
 			expire="1982.1.1.1"
 			id=-1

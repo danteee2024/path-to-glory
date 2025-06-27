@@ -62,7 +62,7 @@ focus_tree = {
 		prerequisite = { focus = CUB_ordu }
 		relative_position_id = CUB_ordu
 		mutually_exclusive = { focus = CUB_kalite }
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -78,7 +78,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = CUB_ucuzluk }
 		relative_position_id = CUB_ucuzluk
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -94,7 +94,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = CUB_ucuzluk_donanma }
 		relative_position_id = CUB_ucuzluk_donanma
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -110,7 +110,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = CUB_ucuzluk_ucak }
 		relative_position_id = CUB_ucuzluk_ucak
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -128,7 +128,7 @@ focus_tree = {
 		prerequisite = { focus = CUB_ordu }
 		relative_position_id = CUB_ordu
 		mutually_exclusive = { focus = CUB_ucuzluk }
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -144,7 +144,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = CUB_kalite }
 		relative_position_id = CUB_kalite
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -160,7 +160,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = CUB_kalite_donanma }
 		relative_position_id = CUB_kalite_donanma
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -185,7 +185,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = CUB_kalite_general }
 		relative_position_id = CUB_kalite_general
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -210,7 +210,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = CUB_ucuzluk_ekipman focus = CUB_kalite_general_2 }
 		relative_position_id = CUB_ucuzluk_ekipman
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -226,7 +226,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = CUB_Reform }
 		relative_position_id = CUB_Reform
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -242,7 +242,7 @@ focus_tree = {
 		y = 2
 		prerequisite = { focus = CUB_politika }
 		mutually_exclusive = { focus = CUB_totalpeace }
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -259,7 +259,7 @@ focus_tree = {
 		y = 3
 		mutually_exclusive = { focus = CUB_komunist1 focus = CUB_the_need_for_state }
 		prerequisite = { focus = CUB_totalwar }
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -278,7 +278,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = CUB_fasist1 }
 		relative_position_id = CUB_fasist1
-		cost = 5
+		cost = 10
 		available = {
 			fascism > 0.3
 		}
@@ -363,6 +363,42 @@ focus_tree = {
 		   remove_ideas = cub_angry_commi
 		}
 	}
+		focus = {
+		id = CUB_join_axis
+		icon = GFX_focus_ger_reichskommisariats
+		x = 0
+		y = 2
+		prerequisite = { focus = CUB_final_strike }
+		relative_position_id = CUB_fasist3
+		cost = 10
+		
+		available_if_capitulated = yes
+		mutually_exclusive = {
+			focus = CUB_pan_cubanism
+		}
+
+		completion_reward = {
+			GER = {
+				country_event = { id = generic.2 }
+			}
+		}
+	}
+	focus = {
+		id = CUB_axis_invesment
+		icon = GFX_focus_RAJ_war_taxes
+		x = 2
+		y = 4
+		prerequisite = { focus = CUB_join_axis }
+		relative_position_id = CUB_fasist2
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = CUB_axis		
+		
+		}
+	}
 	focus = {
 		id = CUB_pan_cubanism
 		icon = GFX_focus_generic_south_america
@@ -373,12 +409,13 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = CUB_join_axis
 		}
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
 		completion_reward = {
 			create_faction = "Cruzada Caribeña"
+			custom_effect_tooltip = "YUnlocks decisions to influence other nations in Central America to become fascist and join your faction."
 		
 		}
 	}
@@ -390,7 +427,7 @@ focus_tree = {
 		y = 3
 		mutually_exclusive = { focus = CUB_fasist1 focus = CUB_the_need_for_state }
 		prerequisite = { focus = CUB_totalwar }
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -415,7 +452,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = CUB_komunist1 }
 		relative_position_id = CUB_komunist1
-		cost = 5
+		cost = 10
 		available = {
 			communism > 0.3
 		}
@@ -437,7 +474,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = CUB_komunist2 }
 		relative_position_id = CUB_komunist2
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -459,7 +496,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = CUB_komunist2 }
 		relative_position_id = CUB_komunist2
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -468,26 +505,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = CUB_join_axis
-		icon = GFX_focus_ger_reichskommisariats
-		x = 0
-		y = 2
-		prerequisite = { focus = CUB_final_strike }
-		relative_position_id = CUB_fasist3
-		cost = 5
-		
-		available_if_capitulated = yes
-		mutually_exclusive = {
-			focus = CUB_pan_cubbanism
-		}
 
-		completion_reward = {
-			GER = {
-				country_event = { id = generic.2 }
-			}
-		}
-	}
 
 	focus = {
 		id = CUB_join_comintern
@@ -496,7 +514,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = CUB_komunist3 focus = CUB_integrate_guerrila_leadership }
 		relative_position_id = CUB_komunist3
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -548,7 +566,7 @@ focus_tree = {
 		y = 2
 		prerequisite = { focus = CUB_join_comintern  }
 		relative_position_id = CUB_komunist3
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -563,7 +581,7 @@ focus_tree = {
 		y = 3
 		mutually_exclusive = { focus = CUB_fasist1 focus = CUB_komunist1 }
 		prerequisite = { focus = CUB_totalwar }
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -601,7 +619,7 @@ focus_tree = {
 		x = 3
 		y = 4
 		prerequisite = { focus = CUB_the_need_for_state }
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -631,7 +649,7 @@ focus_tree = {
 		x = 3
 		y = 5
 		prerequisite = { focus = CUB_dismantle_the_state }
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -763,7 +781,7 @@ focus_tree = {
 		y = 3
 		mutually_exclusive = { focus = CUB_demokrat1 }
 		prerequisite = { focus = CUB_totalpeace }
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -782,7 +800,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = CUB_kral1 }
 		relative_position_id = CUB_kral1
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -802,7 +820,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = CUB_kral2 }
 		relative_position_id = CUB_kral2
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -833,7 +851,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = CUB_kral3 }
 		relative_position_id = CUB_kral3
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -852,7 +870,7 @@ focus_tree = {
 		mutually_exclusive = { focus = CUB_kral1 }
 		prerequisite = { focus = CUB_totalpeace }
 		relative_position_id = CUB_totalpeace
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -871,7 +889,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = CUB_demokrat1 }
 		relative_position_id = CUB_demokrat1
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -891,7 +909,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = CUB_demokrat2 }
 		relative_position_id = CUB_demokrat2
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -915,7 +933,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = CUB_demokrat3 }
 		relative_position_id = CUB_demokrat3
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -1007,7 +1025,7 @@ focus_tree = {
 		prerequisite = { focus = CUB_Reform }
 		x = 13
 		y = 1
-		cost = 5
+		cost = 10
 		
 		
 		available_if_capitulated = yes
@@ -1032,7 +1050,7 @@ focus_tree = {
 		}
 		x = 14
 		y = 2
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -1066,7 +1084,7 @@ focus_tree = {
 		
 		x = 15
 		y = 3
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -1081,10 +1099,13 @@ focus_tree = {
 					modifier = CUB_build_tall_2
 					scope = CUB
 				}
-				remove_dynamic_modifier = {
+				hidden_effect = {
+					remove_dynamic_modifier = {
 					modifier = CUB_build_tall
 					scope = CUB
 				}
+				}
+				
 				
 				
 			}
@@ -1094,9 +1115,11 @@ focus_tree = {
 					modifier = CUB_build_tall_2
 					scope = CUB
 				}
-				remove_dynamic_modifier = {
+				hidden_effect = {
+					remove_dynamic_modifier = {
 					modifier = CUB_build_tall
 					scope = CUB
+				}
 				}
 				
 				
@@ -1113,7 +1136,7 @@ focus_tree = {
 		}
 		x = 15
 		y = 4
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -1165,7 +1188,7 @@ focus_tree = {
 		}
 		x = 15
 		y = 5
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -1179,10 +1202,13 @@ focus_tree = {
 					modifier = CUB_build_tall_3
 					scope = CUB
 				}
-				remove_dynamic_modifier = {
+				hidden_effect = {
+					remove_dynamic_modifier = {
 					modifier = CUB_build_tall_2
 					scope = CUB
 				}
+				}
+				
 		   
 		}
 		1017 = {
@@ -1190,9 +1216,11 @@ focus_tree = {
 					modifier = CUB_build_tall_3
 					scope = CUB
 				}
-				remove_dynamic_modifier = {
+				hidden_effect = {
+					remove_dynamic_modifier = {
 					modifier = CUB_build_tall_2
 					scope = CUB
+				}
 				}
 		   
 		}
@@ -1205,7 +1233,7 @@ focus = {
 		
 		x = 15
 		y = 6
-		cost = 5
+		cost = 10
 		available = {
 			NOT = { has_idea = CUB_investment }
 		}
@@ -1221,10 +1249,13 @@ focus = {
 					modifier = CUB_build_tall_4
 					scope = CUB
 				}
-				remove_dynamic_modifier = {
+				hidden_effect = {
+					remove_dynamic_modifier = {
 					modifier = CUB_build_tall_3
 					scope = CUB
 				}
+				}
+				
 		   
 		}
 		1017 = {
@@ -1232,9 +1263,11 @@ focus = {
 					modifier = CUB_build_tall_4
 					scope = CUB
 				}
-				remove_dynamic_modifier = {
+				hidden_effect = {
+					remove_dynamic_modifier = {
 					modifier = CUB_build_tall_3
 					scope = CUB
+				}
 				}
 		   
 		}
@@ -1281,7 +1314,7 @@ focus = {
 		prerequisite = { focus = CUB_ekonomi }
 		x = 12
 		y = 2
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -1374,7 +1407,7 @@ focus = {
 		prerequisite = { focus = CUB_build_wide_focus }
 		x = 11
 		y = 3
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -1391,7 +1424,7 @@ focus = {
 		relative_position_id = CUB_produksiyon
 		x = -1
 		y = 2
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -1407,7 +1440,7 @@ focus = {
 	
 		x = 12
 		y = 5
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -1425,7 +1458,7 @@ focus = {
 		}
 		x = 13
 		y = 7
-		cost = 5
+		cost = 10
 		
 		available_if_capitulated = yes
 

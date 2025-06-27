@@ -13,7 +13,7 @@ CUB_build_tall_2 = {
 
 	icon = SPR_seize_the_gold_reserves
 	
-	state_resources_factor = 0.2
+	local_building_slots_factor =  0.5
 	state_production_speed_buildings_factor = 0.2
 	
 }

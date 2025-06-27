@@ -184,6 +184,20 @@ ideas = {
 			    stability_weekly = -0.03
 			}
 		}
+		CUB_axis = {
+				picture = generic_fascism_drift_2
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
 
 		good_geurilla_staff = {
 
