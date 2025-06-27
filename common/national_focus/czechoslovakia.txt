@@ -2634,10 +2634,12 @@ focus = {
 		focus = {
 		id = CZE_Ask_for_Union
 		icon = GFX_SOV_reverse_the_collectivization_process_ccp_2d_sov_compatibility
-		prerequisite = { focus = CZE_Influence_Middle_Europe }
-		x = 0
+		prerequisite = { focus = CZE_Czechs_Red_Army }
+		prerequisite = { focus = CZE_communism_with_a_human_face }
+		x = 1
 		y = 1
-		relative_position_id = CZE_Influence_Middle_Europe
+		relative_position_id = CZE_Czechs_Red_Army
+
 
 		cost = 5
 
@@ -2660,6 +2662,11 @@ focus = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			 AUS = { country_event =  generic.5 }
+			POL = { country_event =  generic.5 }
+			   HUN = { country_event =  generic.5 }
+			   GER = { country_event =  generic.5 }
+
 			 }
 		}
 		focus = {
@@ -2680,6 +2687,7 @@ focus = {
 		}
 
 		available = {
+			communism > 0.5
 		}
 
 		bypass = {
@@ -2707,13 +2715,12 @@ focus = {
 		y = 1
 		relative_position_id = CZE_The_Union_Worker
 
-		cost = 10
+		cost = 20
 
 		ai_will_do = {
 			factor = 100
 			modifier = {
 				factor = 0.1
-				HABSBURG_joint_trigger = yes
 			}
 		}
 
@@ -2728,8 +2735,163 @@ focus = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			AUS = { country_event =  generic.20 }
+			POL = { country_event =  generic.20 }
+			HUN = { country_event =  generic.20 }
+			GER = { country_event =  generic.20 }
+
 			 }
 		}
+
+		focus = {
+		id = CZE_Austria_Integration
+		icon = GFX_focus_GER_integration_of_puppet_economies
+		prerequisite = { focus = CZE_The_Great_Union }
+		x = -1
+		y = 1
+		relative_position_id = CZE_The_Great_Union
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0.1
+			}
+		}
+
+		available = { AUS ={
+			is_subject_of = CZE
+		} }
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		completion_reward = {
+			set_country_name = Union_of_Middle_Europe
+			every_state = {
+				limit = { is_core_of = AUS }
+				add_core_of = ROOT
+			}
+			
+			 }
+		}
+
+		focus = {
+		id = CZE_Hungary_Integration
+		icon = GFX_focus_GER_integration_of_puppet_economies
+		prerequisite = { focus = CZE_The_Great_Union }
+		x = 1
+		y = 1
+		relative_position_id = CZE_The_Great_Union
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0.1
+			}
+		}
+
+		available = { HUN ={
+			is_subject_of = CZE
+		} }
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		completion_reward = {
+			set_country_name = Union_of_Middle_Europe
+			every_state = {
+				limit = { is_core_of = HUN }
+				add_core_of = ROOT
+			}
+			
+			 }
+		}
+
+		focus = {
+		id = CZE_Poland_Integration
+		icon = GFX_focus_GER_integration_of_puppet_economies
+		prerequisite = { focus = CZE_The_Great_Union }
+		x = -3
+		y = 1
+		relative_position_id = CZE_The_Great_Union
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0.1
+			}
+		}
+
+		available = { POL ={
+			is_subject_of = CZE
+		} }
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+			every_state = {
+				limit = { is_core_of = Pol }
+				add_core_of = ROOT
+			}
+		}
+	}
+
+	focus = {
+		id = CZE_Germany_Integration
+		icon = GFX_focus_GER_integration_of_puppet_economies
+		prerequisite = { focus = CZE_The_Great_Union }
+		x = 3
+		y = 1
+		relative_position_id = CZE_The_Great_Union
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0.1
+			}
+		}
+
+		available = { GER ={
+			is_subject_of = CZE
+		} }
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+			every_state = {
+				limit = { is_core_of = GER }
+				add_core_of = ROOT
+			}
+		}
+	}
 	
 
 	focus = {
@@ -2907,40 +3069,7 @@ focus = {
 		}
 
 	}
-	focus = {
-		id = CZE_Influence_Middle_Europe
-		icon = GFX_focus_GER_spheres_of_influence
-		prerequisite = { focus = CZE_Czechs_Red_Army }
-		prerequisite = { focus = CZE_communism_with_a_human_face }
-		x = 1
-		y = 1
-		relative_position_id = CZE_Czechs_Red_Army
 
-		cost = 10
-
-		ai_will_do = {
-			factor = 80
-			modifier = {
-				factor = 0.1
-				HABSBURG_joint_trigger = yes
-			}
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			
-		}
-	}
 	focus = {
 		id = CZE_Communist_Politics
 		icon = GFX_focus_generic_soviet_politics

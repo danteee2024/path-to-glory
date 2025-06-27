@@ -444,7 +444,7 @@ ideas = {
 
 			removal_cost = -2	
 			modifier = {
-				conscription = 0.1
+				conscription = 0.05
 			}
 		}
 		CZE_The_Great_Army =  {
