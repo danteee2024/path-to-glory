@@ -1484,7 +1484,7 @@ focus = {
 		y = 1
 		relative_position_id = CZE_united_population
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 100
@@ -1520,7 +1520,7 @@ focus = {
 		y = 1
 		relative_position_id = CZE_industrial_legacy
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 80
@@ -1655,7 +1655,7 @@ focus = {
 		y = 0
 		relative_position_id = CZE_industrial_legacy
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 90
@@ -1679,7 +1679,7 @@ focus = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 120
+			add_political_power = 100
 		}
 	}
 	
@@ -1692,7 +1692,7 @@ focus = {
 		y = 1
 		relative_position_id = CZE_political_direction
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 30
@@ -2358,7 +2358,7 @@ focus = {
 		y = 1
 		relative_position_id = CZE_political_direction
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 30
@@ -3092,7 +3092,7 @@ focus = {
 		y = 1
 		relative_position_id = CZE_political_direction
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 90
@@ -3133,7 +3133,7 @@ focus = {
 		y = 1
 		relative_position_id = CZE_democratic_bastion
 
-		cost = 2
+		cost = 5
 
 		ai_will_do = {
 			factor = 70
@@ -3492,7 +3492,7 @@ focus = {
 		y = 1
 		relative_position_id = CZE_political_direction
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 40

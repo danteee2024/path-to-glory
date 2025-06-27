@@ -243,7 +243,7 @@ ideas = {
 
 			removal_cost = -2	
 			modifier = {
-				consumer_goods_factor = 0.2
+				consumer_goods_factor = 0.15
 			}
 		}
 		CZE_Bohemia_Army =  {
