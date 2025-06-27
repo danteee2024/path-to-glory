@@ -261,7 +261,7 @@ ideas = {
 			removal_cost = -2	
 			modifier = {
 				army_org_factor = 0.05
-				training_time_army_factor = 0.1
+				training_time_army_factor = -0.1
 			}
 		}
 		CZE_Holy_Bohemia_Army =  {
@@ -280,7 +280,7 @@ ideas = {
 			modifier = {
 				army_org_factor = 0.1
 				army_morale_factor = 0.1
-				training_time_army_factor = 0.1
+				training_time_army_factor = -0.1
 			}
 		}
 			CZE_Red_Czechs_Army =  {
