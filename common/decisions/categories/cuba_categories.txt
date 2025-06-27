@@ -3,13 +3,10 @@ fascist_cuba = {
 	picture = GFX_decision_cat_picture_generic_devastation
 	allowed = {
 		original_tag = CUB
-		has_completed_focus = CUB_pan_cubanism
 	}
 	visible = {
-	original_tag = CUB
-		CUB = {
-			has_completed_focus = CUB_pan_cubanism
-		}  
+	original_tag = CUB 
+	has_completed_focus = CUB_pan_cubanism 
    } 
 	priority = 9999
 }

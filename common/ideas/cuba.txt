@@ -198,6 +198,19 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.05
 			}
 		}
+		CUB_storm = {
+				picture = generic_fascism_drift_2
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				breakthrough_factor = 0.1
+			}
+		}
 
 		good_geurilla_staff = {
 

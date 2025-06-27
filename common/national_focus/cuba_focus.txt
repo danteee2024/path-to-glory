@@ -400,6 +400,40 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = CUB_chromium_for_factory
+		icon = GFX_focus_generic_chromium
+		x = 2
+		y = 5
+		prerequisite = { focus = CUB_axis_invesment }
+		relative_position_id = CUB_fasist2
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			GER = {
+				country_event = cuba.9
+			}
+		
+		}
+	}
+	focus = {
+		id = CUB_cuban_stormtroppers
+		icon = GFX_focus_RAJ_a_private_military
+		x = 0
+		y = 4
+		prerequisite = { focus = CUB_join_axis focus = CUB_pan_cubanism }
+		relative_position_id = CUB_fasist2
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = CUB_storm		
+		
+		}
+	}
+	focus = {
 		id = CUB_pan_cubanism
 		icon = GFX_focus_generic_south_america
 		x = -1
@@ -416,6 +450,40 @@ focus_tree = {
 		completion_reward = {
 			create_faction = "Cruzada Caribeña"
 			custom_effect_tooltip = "YUnlocks decisions to influence other nations in Central America to become fascist and join your faction."
+		
+		}
+	}
+	focus = {
+		id = CUB_closer_integration
+		icon = GFX_focus_generic_south_america
+		x = -2
+		y = 4
+		prerequisite = { focus = CUB_pan_cubanism }
+		relative_position_id = CUB_fasist2
+		mutually_exclusive = {
+			focus = CUB_join_axis
+		}
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			hidden_effect = {
+					every_allied_country = {
+				if = { 
+					limit = { is_in_faction_with = CUB has_government = fascism OR = {
+						original_tag = GUA original_tag = HON original_tag = ELS original_tag = NIC original_tag = COS original_tag = PAN original_tag = HAI original_tag = DOM
+					}  }
+					country_event = cuba.10
+				}
+			}
+			}
+
+		
+				
+			
+
+			custom_effect_tooltip = "YEvery fascist centeral american nation in your faction will get the chance to be puppeted into you"
 		
 		}
 	}
@@ -1130,7 +1198,7 @@ focus_tree = {
 	focus = {
 		id = CUB_build_dam
 		icon = GFX_focus_BEL_dam_the_consequences
-		prerequisite = { focus = CUB_build_tall_focus }
+		prerequisite = { focus = CUB_improve_island }
 		available = {
 			NOT = { has_idea = CUB_investment }
 		}
@@ -1182,7 +1250,7 @@ focus_tree = {
 	focus = {
 		id = CUB_more_resource
 		icon = GFX_focus_generic_coal_mining
-		prerequisite = { focus = CUB_build_tall_focus }
+		prerequisite = { focus = CUB_build_dam }
 		available = {
 			NOT = { has_idea = CUB_investment }
 		}
@@ -1229,7 +1297,7 @@ focus_tree = {
 focus = {
 		id = CUB_improved_industry
 		icon = GFX_focus_generic_modernize_industry
-		prerequisite = { focus = CUB_build_tall_focus }
+		prerequisite = { focus = CUB_more_resource }
 		
 		x = 15
 		y = 6
