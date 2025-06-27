@@ -1350,6 +1350,11 @@ CZE_neutrality = {
 	color_ui = rgb { 205 25 25 }
 }
 
+CZE_fascism = {
+	color = rgb { 155 40 40 }
+	color_ui = rgb { 155 40 40 }
+}
+
 CZE_AUS_danubian_state = {
 	color = rgb { 224  228  255 }
 	color_ui = rgb { 224  228  255 }

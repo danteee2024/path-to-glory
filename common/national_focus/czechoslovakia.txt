@@ -2596,6 +2596,10 @@ focus = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
 			SOV = { country_event = { hours = 1 id = czech.1 } }
 		}
 	}
@@ -2632,6 +2636,10 @@ focus = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+				set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
 			set_rule = { can_create_factions = yes }
 			create_faction = "CZE_Union_of_Middle_Europe"
 			 }
@@ -2808,7 +2816,7 @@ focus = {
 	}
 
 	focus = {
-		id = CZE_Cominter_Research_Group_Invest
+		id = CZE_Comintern_Research_Group_Invest
 		icon = GFX_focus_research
 		prerequisite = { focus = CZE_the_polish_division }
 		x = 1
@@ -3484,6 +3492,7 @@ focus = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			ENG = { country_event =  generic.2 }
 		}
 	}
 
@@ -3603,7 +3612,7 @@ focus = {
 	}
 
 	focus = {
-		id = CZE_Bohemia_Empire
+		id = CZE_Bohemian_Empire
 		icon = GFX_goal_support_fascism
 		prerequisite = { focus = CZE_czech_fascism }
 		x = 0
@@ -3633,21 +3642,22 @@ focus = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
 
 		completion_reward = {
+			set_cosmetic_tag = CZE_fascism
 			set_politics = {
 				ruling_party = fascism
 				elections_allowed = no
 			}
-			add_ideas = CZE_Bohemia_Empire
+			add_ideas = CZE_Bohemian_Empire
 		}
 	}
 
 	focus = {
 		id = CZE_aggressive_wars
 		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = CZE_Bohemia_Empire }
+		prerequisite = { focus = CZE_Bohemian_Empire }
 		x = 0
 		y = 1
-		relative_position_id = CZE_Bohemia_Empire
+		relative_position_id = CZE_Bohemian_Empire
 
 		cost = 10
 
@@ -3723,10 +3733,10 @@ focus = {
 		id = CZE_exclude_the_slovaks
 		icon = GFX_goal_generic_propaganda
 		mutually_exclusive = { focus = CZE_national_fascism }
-		prerequisite = { focus = CZE_Bohemia_Empire }
+		prerequisite = { focus = CZE_Bohemian_Empire }
 		x = 2
 		y = 1
-		relative_position_id = CZE_Bohemia_Empire
+		relative_position_id = CZE_Bohemian_Empire
 
 		cost = 5
 
@@ -3784,10 +3794,10 @@ focus = {
 		id = CZE_national_fascism
 		icon = GFX_focus_ITA_generic_fascist_workers
 		mutually_exclusive = { focus = CZE_exclude_the_slovaks }
-		prerequisite = { focus = CZE_Bohemia_Empire }
+		prerequisite = { focus = CZE_Bohemian_Empire }
 		x = 4
 		y = 1
-		relative_position_id = CZE_Bohemia_Empire
+		relative_position_id = CZE_Bohemian_Empire
 
 		cost = 15
 
@@ -4207,7 +4217,7 @@ focus = {
 	}
 
 	focus = {
-		id = CZE_The_Great_Bohemia_Empire
+		id = CZE_The_Great_Bohemian_Empire
 		icon = GFX_focus_BUL_the_third_bulgarian_empire
 		prerequisite = { focus = CZE_Plan_of_Logistic focus = CZE_Plan_of_Ressources }
 		x = 0
@@ -4240,9 +4250,9 @@ focus = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER }
 
 		completion_reward = { swap_ideas = {
-			remove_idea = CZE_Bohemia_Empire
+			remove_idea = CZE_Bohemian_Empire
 		
-			add_idea = CZE_The_Great_Bohemia_Empire
+			add_idea = CZE_The_Great_Bohemian_Empire
 		}
 		}
 		}

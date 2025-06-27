@@ -145,7 +145,7 @@ ideas = {
 				supply_consumption_factor = -0.15
 			}
 		}
-		CZE_The_Great_Bohemia_Empire = {
+		CZE_The_Great_Bohemian_Empire = {
 
 			allowed = {
 				always = no
