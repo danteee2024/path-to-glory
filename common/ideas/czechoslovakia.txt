@@ -43,7 +43,7 @@ ideas = {
 			}
 		}
 
-		CZE_Bohemia_Empire = {
+		CZE_Bohemian_Empire = {
 
 			allowed = {
 				always = no
@@ -145,6 +145,7 @@ ideas = {
 				supply_consumption_factor = -0.15
 			}
 		}
+		
 		CZE_The_Great_Bohemian_Empire = {
 
 			allowed = {
@@ -316,7 +317,7 @@ ideas = {
 			modifier = {
 				political_power_factor = -0.05
 				war_stability_factor = 0.10
-				stability_weekly_factor = 0.025
+				stability_weekly_factor = 0.01
 			}
 		}
 			CZE_Red_Czechs_Army =  {
@@ -496,7 +497,7 @@ ideas = {
 
 			removal_cost = -2	
 			modifier = {
-			research_speed_factor = 0.15
+			research_speed_factor = 0.1
 			}
 		}
 		CZE_Industrial_Republic =  {
@@ -872,7 +873,7 @@ ideas = {
 
 			equipment_bonus = {
 				small_plane_airframe = {
-					build_cost_ic = -0.15 instant = yes
+					build_cost_ic = -0.2 instant = yes
 				}
 			}
 		}

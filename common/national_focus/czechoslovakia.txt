@@ -2596,6 +2596,7 @@ focus = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			set_cosmetic_tag = CZE_Comintern
 			set_politics = {
 				ruling_party = communism
 				elections_allowed = no
@@ -2636,6 +2637,7 @@ focus = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			set_cosmetic_tag = CZE_Union
 				set_politics = {
 				ruling_party = communism
 				elections_allowed = no
@@ -4251,7 +4253,6 @@ focus = {
 
 		completion_reward = { swap_ideas = {
 			remove_idea = CZE_Bohemian_Empire
-		
 			add_idea = CZE_The_Great_Bohemian_Empire
 		}
 		}
@@ -5489,7 +5490,7 @@ focus = {
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = CZE_support_bonus }
 		prerequisite = { focus = CZE_inf_and_artillery_advancement_2 }
-		x = -2
+		x = -3
 		y = 3
 		relative_position_id = CZE_military_research_institute
 
@@ -5694,7 +5695,7 @@ focus = {
 		icon = GFX_focus_FIN_motti_tactics
 		prerequisite = { focus = CZE_mechanization }
 		prerequisite = { focus = CZE_armour_bonus_ii }
-		x = 2
+		x = 3
 		y = 3
 		relative_position_id = CZE_military_research_institute
 
@@ -5776,15 +5777,16 @@ focus = {
 		focus = {
 		id = CZE_Czechs_Armor_Power
 		icon = GFX_focus_PER_czech_tanks
-		prerequisite = { focus = CZE_war_college }
+		prerequisite = { focus = CZE_mechanization }
+		prerequisite = { focus = CZE_armour_bonus_ii }
 		mutually_exclusive = {
 			focus = CZE_Czechs_Fire_Power
 		}
 		x = 1
-		y = 5
+		y = 3
 		relative_position_id = CZE_military_research_institute
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 90
@@ -5813,15 +5815,16 @@ focus = {
 		focus = {
 		id = CZE_Czechs_Fire_Power
 		icon = GFX_goal_generic_army_artillery2
-		prerequisite = { focus = CZE_war_college }
+		prerequisite = { focus = CZE_support_bonus }
+		prerequisite = { focus = CZE_inf_and_artillery_advancement_2 }
 		mutually_exclusive = {
 			focus = CZE_Czechs_Armor_Power
 		}
 		x = -1
-		y = 5
+		y = 3
 		relative_position_id = CZE_military_research_institute
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 90
