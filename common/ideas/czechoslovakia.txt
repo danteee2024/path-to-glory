@@ -187,7 +187,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				neutrality_drift = 0.05
+				neutrality_drift = 0.3
 				political_power_factor = -0.1
 
 			}
@@ -207,7 +207,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				neutrality_drift = 0.05
+				neutrality_drift = 0.3
 			}
 		}
 		CZE_Bohemia_Economy =  {
@@ -226,7 +226,7 @@ ideas = {
 			modifier = {
 				production_speed_industrial_complex_factor = 0.05
 				production_speed_arms_factory_factor = 0.05
-				consumer_goods_factor = -0.10
+				consumer_goods_factor = -0.05
 			}
 		}
 		CZE_Bohemia_Economy_2 =  {
@@ -372,7 +372,7 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = -0.20
 				production_speed_industrial_complex_factor = -0.10
-				production_speed_arms_factory_factor = 0.15
+				production_speed_arms_factory_factor = 0.10
 			}
 		}
 		CZE_The_Union_Worker =  {
@@ -599,7 +599,7 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = 0.05
 				production_factory_efficiency_gain_factor = 0.05
-				production_speed_arms_factory_factor = 0.15
+				production_speed_arms_factory_factor = 0.1
 				production_speed_industrial_complex_factor = -0.1
 			}
 		}
