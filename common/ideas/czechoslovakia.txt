@@ -187,7 +187,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				neutrality_drift = 0.3
+				neutrality_drift = 0.5
 				political_power_factor = -0.1
 
 			}
@@ -207,7 +207,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				neutrality_drift = 0.3
+				neutrality_drift = 0.5
 			}
 		}
 		CZE_Bohemia_Economy =  {
@@ -445,6 +445,23 @@ ideas = {
 			removal_cost = -2	
 			modifier = {
 				conscription = 0.05
+			}
+		}
+		CZE_go_left =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_manpower_bonus
+
+			removal_cost = -2	
+			modifier = {
+				communism_drift = 0.5
 			}
 		}
 		CZE_The_Great_Army =  {

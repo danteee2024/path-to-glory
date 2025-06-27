@@ -2392,8 +2392,9 @@ focus = {
 			add_political_power = 120
 			add_popularity = {
 				ideology = communism
-				popularity = 0.1
+				popularity = 0.05
 			}	
+			add_ideas = CZE_go_left
 			#allow communist reformer
 			# relations changes
 			custom_effect_tooltip = generic_skip_one_line_tt
