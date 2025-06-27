@@ -1,6 +1,7 @@
 ideas = {
 
-	country = {  
+	country = { 
+	
 		MON_khanny_tonnoo= {
 
 			picture = tur_coordinated_balkan_armed_forces

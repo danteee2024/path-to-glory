@@ -189,3 +189,20 @@
 
  MON_state_of_the_armed_forces:0 "State of the Armed Forces"
  MON_state_of_the_armed_forces_desc:0 "The Mongolian armed forces are in a state of disarray, with outdated equipment and a lack of training. The government must take immediate action to modernize and strengthen the military to ensure the country's security and sovereignty."
+
+
+  MON_reestablished_army_recon_factor_tooltip:0 "Modify §Y$MON_reestablished_army$§! by \n£recon_texticon Reconnaissance: §G+25.0%§!\n\n"
+ MON_reestablished_army:0 "Re-established Army"
+ MON_reestablished_army_desc:0 "The Mongolian army has been reestablished and is undergoing significant reforms to improve its effectiveness on the battlefield."
+
+  MON_reestablished_army_cas_reduction:0 "Modify §Y$MON_reestablished_army$§! by \nCAS reduction: §Y-10.0%§!\n\n"
+  MON_reestablished_army_cas_reduction_desc:0 "The Mongolian army has been reestablished and is undergoing significant reforms to improve its effectiveness on the battlefield, including a reduction in CAS."
+ MON_reestablished_army_cavalry_factor_tooltip:0 "Modify §Y$MON_reestablished_army$§! by \n£attack_cavalry_texticon Cavalry Attack: §G+10.0%§!\n\n"
+
+  MON_mongolian_peoples_army:0 "Mongolian Peoples Army"
+  MON_mongolian_peoples_army_desc:0 "The Mongolian Peoples Army is the newly-established Mongolian division of the Red Army, tasked with securing the interests of international communism wherever it is threatened."
+
+ MON_reestablished_army_cavalry_defence_factor_tooltip:0 "Modify §Y$MON_reestablished_army$§! by \n£defence_cavalry_texticon Cavalry Defence: §G+10.0%§!\n\n"
+
+
+ winters_past_MON_tt:0 "§RThe harsh winters of Mongolia have shaped the resilience and adaptability of its people, fostering a deep connection to the land and a strong sense of community. The Mongolian Armed Forces will spend less time training for the battlefield, but instead will be conscripted to military infrastructure accross our great nation. This will relinquish the §YRe-established Army§!, but will also provide a small boost to our Military infrastructure.§!"

@@ -37,6 +37,7 @@ set_popularities = {
 
 
 recruit_character = MON_anandyn_amar
+recruit_character = MEN_prince_demchugdongrub
 recruit_character = MON_mingzhu_zhanshan
 recruit_character = MON_fu_shangzhi
 recruit_character = MON_songgotu_kangan
