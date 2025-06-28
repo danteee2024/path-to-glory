@@ -1,7 +1,171 @@
 ideas = {
 
 	country = { 
-	
+		MON_loyalists_in_mvd = {
+
+			picture = tur_coordinated_balkan_armed_forces
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				operative_slot = 1
+				operation_infiltrate_risk = -0.25
+			}
+		}
+		MON_peace_and_prosperity_idea = {
+
+			picture = tur_coordinated_balkan_armed_forces
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.15
+			}
+		}
+		MON_secular_education_idea = {
+
+			picture = tur_coordinated_balkan_armed_forces
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				line_change_production_efficiency_factor = 0.1
+				production_factory_start_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.03
+				production_factory_max_efficiency_factor = 0.02
+			}
+		}
+		MON_buddhist_opposition = {
+
+			picture = tur_coordinated_balkan_armed_forces
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+			}
+		}
+		MON_neutral_foreign_policy_idea = {
+
+			picture = tur_coordinated_balkan_armed_forces
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = -0.15
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_arms_factory_factor = -0.05
+				political_power_gain = 0.20
+				conscription_factor = -0.05
+			}
+		}
+		MON_repaying_old_debt_idea  = {
+
+			picture = tur_coordinated_balkan_armed_forces
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+		MON_country_in_disarray_better_idea = {
+
+			picture = tur_coordinated_balkan_armed_forces
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = 0.001
+				political_power_factor = -0.05
+			}
+		}
+		MON_tech_coop_idea = {
+
+			picture = tur_coordinated_balkan_armed_forces
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+	MON_rely_on_national_strength_idea= {
+
+			picture = tur_coordinated_balkan_armed_forces
+			
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.05
+				neutrality_drift = 0.10
+				neutrality_acceptance = 80
+			}
+		}
 		MON_khanny_tonnoo= {
 
 			picture = tur_coordinated_balkan_armed_forces

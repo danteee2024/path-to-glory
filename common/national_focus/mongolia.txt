@@ -20,7 +20,7 @@ focus_tree = {
 	focus = {
 		id = MON_collectivisation
 		icon = GFX_focus_prc_agrarian_socialism
-		x = -20
+		x = -5
 		y = 0
 		cost = 10
 		mutually_exclusive = {
@@ -57,7 +57,7 @@ focus_tree = {
 	focus = {
 		id = MON_buddhist_prosecution
 		icon = GFX_focus_mex_triumph_over_the_cristeros
-		x = -3
+		x = -5
 		y = 1
 		cost = 10
 		prerequisite = { focus = MON_collectivisation }
@@ -76,7 +76,18 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_stability = -0.1
+			add_stability = 0.05
+			SOV = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = medium_increase
+				}
+				add_ai_strategy = {
+					type = alliance
+					id = ROOT
+					value = 20
+				}
+			}
 		}
 	}
 
@@ -85,7 +96,7 @@ focus_tree = {
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		x = -2
 		y = 1
-		cost = 10
+		cost = 5
 		prerequisite = { focus = MON_buddhist_prosecution }
 
 		available_if_capitulated = yes
@@ -101,6 +112,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_war_support = 0.05
 			add_stability = -0.1
 		}
 	}
@@ -167,7 +179,6 @@ focus_tree = {
 		prerequisite = { focus = MON_sack_the_monastries }
 		available = {
 			has_government = communism
-			date > 1937.1.1
 		}
 		
 		relative_position_id = MON_crush_the_counter_revolutionaries
@@ -187,7 +198,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_timed_idea = { idea = MON_purge_1 days = 360 }
+			add_timed_idea = { idea = MON_purge_1 days = 365 }
 		}
 	}
 	
@@ -237,19 +248,17 @@ focus_tree = {
 				add_idea = MON_collectivisation_3		
 			}
 			330 = {
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 2
 			}
 
-			build_railway = {
-				path = { 6380 6414 }
-			}
+			
 		}
 	}
 
 	focus = {
 		id = MON_soviet_transportation
 		icon = GFX_goal_generic_soviet_infrastructure
-		x = 0
+		x = -3
 		y = 1
 		cost = 10
 		prerequisite = { focus = MON_finish_collectivisation }
@@ -286,7 +295,7 @@ focus_tree = {
 	focus = {
 		id = MON_collectivised_society
 		icon = GFX_focus_prc_agrarian_socialism
-		x = -2
+		x = -5
 		y = 1
 		cost = 10
 		prerequisite = { focus = MON_finish_collectivisation }
@@ -370,7 +379,7 @@ focus_tree = {
 	focus = {
 		id = MON_choibalsan_university
 		icon = GFX_focus_generic_socialist_science
-		x = 2
+		x = -1
 		y = 1
 		cost = 10
 		prerequisite = { focus = MON_finish_collectivisation }
@@ -498,7 +507,7 @@ focus_tree = {
 	focus = {
 		id = MON_buddhist_compromise
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
-		x = 3
+		x = 5
 		y = 1
 		cost = 10
 		prerequisite = { focus = MON_collectivisation }
@@ -517,7 +526,18 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_stability = 0.1
+			add_stability = -0.05
+			SOV = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = medium_decrease
+				}
+				add_ai_strategy = {
+					type = alliance
+					id = ROOT
+					value = -20
+				}
+			}
 		}
 	}
 
@@ -621,13 +641,19 @@ focus_tree = {
 
 		available = {
 			has_government = communism
-			date > 1937.1.1
 		}
 
 		completion_reward = {
-			add_stability = 0.15
-			add_war_support = 0.15
-
+			OVERLORD = {
+				set_autonomy = {
+					target = MON
+					autonomy_state = autonomy_free
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_stability = -0.05
+			add_war_support = 0.05
+custom_effect_tooltip = generic_skip_one_line_tt
 			swap_ideas = {
 				remove_idea = MON_collectivisation_2
 				add_idea = MON_collectivisation_3		
@@ -664,9 +690,34 @@ focus_tree = {
 	}
 
 	focus = {
+		id = MON_speaker_of_the_people
+		icon = GFX_goal_generic_soviet_construction
+		x = -1
+		y = 1
+		cost = 5
+		prerequisite = { focus =MON_society_reforms }
+
+		available_if_capitulated = yes
+		
+		relative_position_id = MON_society_reforms
+		
+		ai_will_do = {
+			factor = 2
+		}
+
+		complete_tooltip = {
+			
+		}
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_manpower = 25000
+		}
+	}
+	focus = {
 		id = MON_new_constitution
 		icon = GFX_focus_prc_agrarian_socialism
-		x = 0
+		x = -3
 		y = 1
 		cost = 5
 		prerequisite = { focus = MON_society_reforms }
@@ -691,7 +742,7 @@ focus_tree = {
 	focus = {
 		id = MON_unite_steppes
 		icon = GFX_focus_YUG_pan_slavic_congress
-		x = 0
+		x = -3
 		y = 1
 		cost = 10
 		prerequisite = { focus = MON_new_constitution }
@@ -709,6 +760,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_stability = -0.10
+			add_political_power = -75
 			add_state_core = 329
 			add_state_core = 618
 			add_state_core = 760
@@ -726,7 +779,7 @@ focus_tree = {
 	focus = {
 		id = MON_soviet_subsidies
 		icon = GFX_focus_chi_mission_to_the_soviet_union
-		x = -2
+		x = -5
 		y = 1
 		cost = 10
 		prerequisite = { focus = MON_new_constitution }
@@ -781,10 +834,10 @@ focus_tree = {
 	focus = {
 		id = MON_paving_the_road
 		icon = GFX_focus_SOV_the_road_of_life
-		x = 0
+		x = -1
 		y = 1
 		cost = 10
-		prerequisite = { focus = MON_soviet_subsidies }
+		prerequisite = { focus = MON_soviet_subsidies focus = MON_finish_collectivisation }
 
 		available_if_capitulated = yes
 		
@@ -843,11 +896,14 @@ focus_tree = {
 	focus = {
 		id = MON_mobilise_the_workers
 		icon = GFX_goal_generic_production
-		x = 0
+		x = 1
 		y = 1
 		cost = 10
-		prerequisite = { focus = MON_paving_the_road }
-		relative_position_id = MON_paving_the_road
+		prerequisite = { focus = MON_soviet_subsidies }
+
+		available_if_capitulated = yes
+		
+		relative_position_id = MON_soviet_subsidies
 
 		available_if_capitulated = yes
 		
@@ -871,7 +927,7 @@ focus_tree = {
 	focus = {
 		id = MON_invite_soviet_scientists
 		icon = GFX_SOV_progress_cult
-		x = 2
+		x = -1
 		y = 1
 		cost = 10
 		prerequisite = { focus = MON_new_constitution }
@@ -896,7 +952,7 @@ focus_tree = {
 	focus = {
 		id = MON_industrial_expansion
 		icon = GFX_goal_generic_soviet_infrastructure
-		x = 0
+		x = -1
 		y = 1
 		cost = 10
 		prerequisite = { focus = MON_invite_soviet_scientists }
@@ -950,10 +1006,13 @@ focus_tree = {
 	focus = {
 		id = MON_war_industry
 		icon = GFX_SOV_production_speed
-		x = 0
+		x = -1
 		y = 1
 		cost = 10
 		prerequisite = { focus = MON_industrial_expansion }
+		prerequisite = {
+			focus = MON_mobilise_the_workers
+		}
 
 		available_if_capitulated = yes
 		
@@ -968,10 +1027,12 @@ focus_tree = {
 		}
 
 		available = {
-			SOV = { has_war_with = GER }
+			has_war = yes
 		}
 
 		completion_reward = {
+			add_ideas = war_economy
+			custom_effect_tooltip = generic_skip_one_line_tt
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -2669,52 +2730,33 @@ focus = {
 		}
 
 		completion_reward = {
-			
+			add_war_support = 0.1
+			add_stability = -0.05
 		}
 	}
 	
 	focus = {
 		id = MON_rely_on_national_strength
 		icon = GFX_focus_generic_support_the_left_right
-		x = -10
+		x = 0
 		y = 1
 		relative_position_id = MON_reconfigure_mongolia
 		cost = 6
-
+		prerequisite = { focus = MON_reconfigure_mongolia }
 		ai_will_do = {
 			factor = 30	
 		}
 
 		available = {
-			NOT = {
-				has_active_mission = MON_external_policy_negotiations
-			}
-			has_country_flag = mon_1935_defence_soviet_yes_self_reliance
+			add_ideas = MON_rely_on_national_strength_idea
 		}
-		mutually_exclusive = {
-			focus = MON_hold_plenum_of_central_committee
-			focus = MON_form_the_provisional_government
-			focus = MON_host_emergency_great_khural_assembly
-		}
+	
 		
 		completion_reward = {
-			add_ideas = MON_rely_on_national_strength_idea
-			if = {
-				limit = {
-					has_country_flag = mon_1935_defence_soviet_imprison_genden_or_empty_train
-				}
-				add_country_leader_role = {
-					character = MON_gelegdorjiin_demid
-					promote_leader = yes
-					country_leader = {
-					  	ideology = marxism
-					  	expire = "1965.1.1"
-						traits = {
-							army_connections silent_mule
-					  	}
-				  	}
-				}
-				mark_focus_tree_layout_dirty = yes
+			add_political_power = 100
+			add_timed_idea = {
+				idea = MON_rely_on_national_strength_idea
+				days = 849
 			}
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER }
@@ -2760,12 +2802,12 @@ focus = {
 	}
 
 	focus = {
-		id = MON_expel_choibalsan
+		id =MON_cut_our_chains
 		icon = GFX_focus_eng_move_to_secure_the_dominions
 		x = 1
 		y = 1
 		relative_position_id = MON_rely_on_national_strength
-		cost = 7
+		cost = 10
 
 		prerequisite = { focus = MON_rely_on_national_strength }
 
@@ -2774,15 +2816,14 @@ focus = {
 		}
 
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = MON_khorloogiin_choibalsan
+			add_stability = 0.05
+				OVERLORD = {
+				set_autonomy = {
+					target = MON
+					autonomy_state = autonomy_free
 				}
-				remove_ideas = MON_khorloogiin_choibalsan
 			}
-			retire_character = MON_khorloogiin_choibalsan
-			add_ideas = MON_intelligence_compromised_idea
-			MON_soviet_low_influence_decrease_effect = yes
+			SOV = { remove_from_faction = ROOT }
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INFLUENCE_DECREASE }
 	}
@@ -2794,25 +2835,25 @@ focus = {
 		y = 1
 		relative_position_id = MON_subvert_soviet_control
 		cost = 5
-
+        available = {
+			is_subject = no
+		}
 		prerequisite = { focus = MON_subvert_soviet_control }
-		prerequisite = { focus = MON_expel_choibalsan }
+		prerequisite = { focus =MON_cut_our_chains }
 
 		ai_will_do = {
 			factor = 30	
 		}
 
 		completion_reward = {
+			add_ideas = MON_buddhist_opposition
+			custom_effect_tooltip = generic_skip_one_line_tt
 			hidden_effect = {
 kill_country_leader = yes
 				
 			}
 			set_politics = { ruling_party = neutrality elections_allowed = no }
-		set_party_name = {
-					ideology = despotism
-					long_name = "Mongol National Council"
-					name = "Mongol National Council"
-				}
+		
 			create_country_leader = {
                 name = "Prince Demchugdongrub"
                 desc = ""
@@ -2823,6 +2864,11 @@ kill_country_leader = yes
                     spirit_of_genghis naval_expert
                 }
             }
+			set_party_name = {
+					ideology = neutrality
+					long_name = "Mongol National Council"
+					name = "Mongol National Council"
+				}
 		}
 	}
 
@@ -2957,11 +3003,10 @@ kill_country_leader = yes
 		}
 
 		completion_reward = {
-			add_political_power = 100
-			swap_ideas = { 
-				remove_idea = MON_country_in_disarray_idea
-				add_idea = MON_country_in_disarray_better_idea
-			}
+			add_political_power = 25
+				add_ideas = MON_country_in_disarray_better_idea
+
+			
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 	}
@@ -2984,7 +3029,9 @@ kill_country_leader = yes
 				}
 			}
 		}
-
+        mutually_exclusive = {
+			focus = MON_form_the_rightist_cabinet
+		}
 		ai_will_do = {
 			factor = 30	
 		}
@@ -3029,17 +3076,7 @@ kill_country_leader = yes
 					value = -100
 				}
 			}
-			remove_ideas = MON_intelligence_compromised_idea
-			MON_soviet_medium_influence_increase_effect = yes
-			custom_effect_tooltip = remove_political_advisor	#can't have him if Soviets want to like you
-			show_ideas_tooltip = MON_sereenengiin_givaapil
-			if = {
-				limit = {
-					has_idea = MON_sereenengiin_givaapil
-				}
-				remove_ideas = MON_sereenengiin_givaapil
-			}
-			custom_effect_tooltip = MON_pro_sov_ideological_agenda_tt
+			
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INFLUENCE_INCREASE }
 	}
@@ -3052,7 +3089,7 @@ kill_country_leader = yes
 		relative_position_id = MON_reach_out_to_moscow
 		cost = 5
 
-		prerequisite = { focus = MON_reach_out_to_moscow focus = MON_establish_socialist_society }
+		prerequisite = { focus = MON_reach_out_to_moscow focus = MON_new_constitution }
 
 		available = {
 			is_subject = no
@@ -3081,12 +3118,8 @@ kill_country_leader = yes
 					}
 					create_intelligence_agency = yes
 				}
-				add_ideas = MON_loyalists_in_mvd_lar
 			}
-			else = {
 				add_ideas = MON_loyalists_in_mvd
-			}
-			MON_soviet_low_influence_decrease_effect = yes
 		}
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INFLUENCE_DECREASE }
 	}
@@ -3104,6 +3137,7 @@ kill_country_leader = yes
 		mutually_exclusive = { focus = MON_contest_the_insurgents }
 
 		available = {
+				NOT = { has_completed_focus = MON_new_constitution  }
 			is_subject = no
 			any_other_country = {
 				original_tag = SOV
@@ -3111,12 +3145,7 @@ kill_country_leader = yes
 					has_war_with = ROOT
 				}
 			}
-			SOV = {
-				has_global_flag = SOV_soviet_civil_war
-			}
-			any_other_country = {
-				has_country_flag = SOV_breakaway_country_flag
-			}
+		
 		}
 
 		ai_will_do = {
@@ -3125,24 +3154,7 @@ kill_country_leader = yes
 
 		completion_reward = {
 			add_war_support = 0.15
-			custom_effect_tooltip = MON_will_join_the_war_against_ussr_tt
-			every_other_country = {
-				limit = {
-					has_country_flag = SOV_breakaway_country_flag
-					OR = {
-						has_war_with = SOV
-						has_war_with = SOS
-					}
-				}
-				every_other_country = {
-					limit = {
-						original_tag = SOV
-					}
-					country_event = { id = mongol_foreign_influence.6 days = 1}
-					ROOT = { add_to_war = { targeted_alliance = PREV.PREV enemy = PREV hostility_reason = asked_to_join } }
-				}
-			}
-			MON_soviet_high_influence_decrease_effect = yes
+			
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INFLUENCE_DECREASE FOCUS_FILTER_ANNEXATION }
 	}
@@ -3221,6 +3233,7 @@ kill_country_leader = yes
 		mutually_exclusive = { focus = MON_support_the_rebels }
 
 		available = {
+			NOT = { has_completed_focus = MON_new_constitution  }
 			any_other_country = {
 				original_tag = SOV
 				NOT = {
@@ -3552,11 +3565,11 @@ kill_country_leader = yes
 
 		completion_reward = {
 			add_offsite_building = { type = industrial_complex level = 1 }
-			add_ideas = MON_foreign_investors_idea
-			MON_mongol_bank_funds_increase = yes
+			
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
+
 
 	focus = {
 		id = MON_form_the_rightist_cabinet
@@ -3570,13 +3583,12 @@ kill_country_leader = yes
 		ai_will_do = {
 			factor = 30	
 		}
-
+ mutually_exclusive = {
+			focus = MON_form_the_rightist_cabinet
+		}
 		completion_reward = {
-			add_ideas = MON_right_cabinet_idea
 			add_political_power = 200
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = MON_jamsrangiin_tseveen
-			show_ideas_tooltip = MON_navaandorjiin_jadambaa
+			
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -3648,8 +3660,7 @@ kill_country_leader = yes
 		relative_position_id = MON_compromise_with_lamas
 		cost = 10
 		
-		prerequisite = { focus = MON_compromise_with_lamas }
-		prerequisite = { focus = MON_invite_foreign_investors }
+		prerequisite = { focus = MON_compromise_with_lamas focus = MON_invite_foreign_investors }
 
 		mutually_exclusive = {
 			focus = MON_prepare_for_the_inevitable
@@ -3669,7 +3680,37 @@ kill_country_leader = yes
 		}
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 	}
+focus = {
+		id = MON_seek_japanese_support
+		icon = GFX_focus_chi_collaboration_with_the_japanese
+		prerequisite = { focus = MON_form_the_rightist_cabinet }
+		x = 2
+		y = 2
+		relative_position_id = MON_form_the_rightist_cabinet
 
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_subject = no
+			NOT = { has_war_with = JAP }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			JAP = { country_event = generic.2 }
+		}
+	}
 	focus = {
 		id = MON_secularization_of_education
 		icon = GFX_goal_FRA_social_reforms
@@ -3703,8 +3744,11 @@ kill_country_leader = yes
 		}
 
 		completion_reward = {
-			add_ideas = MON_politized_army_denounced_idea
-			unlock_decision_tooltip = MON_expand_the_recruitment_campaign
+			swap_ideas = {
+				remove_idea = MON_collectivisation_1
+				add_idea = MON_collectivisation_2
+			}
+			
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -3756,7 +3800,7 @@ kill_country_leader = yes
 		relative_position_id = MON_rely_on_national_strength
 		cost = 10
 		prerequisite = {
-			focus = MON_expel_choibalsan
+			focus =MON_cut_our_chains
 		}
 		
 		available = {
@@ -3919,12 +3963,76 @@ kill_country_leader = yes
 		}
 
 		completion_reward = {
-			add_political_power = 100
-			custom_effect_tooltip = MON_Kurultai_treaty_expansion_tt
+			PRC = {
+				country_event = generic.5
+			}
+			YUN = {
+				country_event = generic.5
+			}
+			XSM = {
+				country_event = generic.5
+			}
+			GXC = {
+				country_event = generic.5
+			}
+			SHX = {
+				country_event = generic.5
+			}
+			SIK = {
+				country_event = generic.5
+			}
+			BHU = {
+				country_event = generic.5
+			}
+			NEP = {
+				country_event = generic.5
+			}
+			BHU = {
+				country_event = generic.5
+			}
 		}
 		search_filters = { FOCUS_FILTER_ALLIANCE FOCUS_FILTER_POLITICAL }
 	}
 
+	focus = {
+		id = MON_offer_vassalization
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = MON_expand_the_treaty }
+		x = 0
+		y = 1
+		relative_position_id = MON_expand_the_treaty
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			every_country = {
+				limit = {
+					is_chinese_warlord = yes
+					not = { tag = event_target:WTT_current_china_leader }
+				}
+				country_event = { id = wtt_manchukou.1 }
+			}
+		}
+	}
 
 	focus = {
 		id = MON_open_up_the_country
@@ -3938,13 +4046,9 @@ kill_country_leader = yes
 			focus = MON_prepare_for_the_inevitable
 		}
 		
-		mutually_exclusive = {
-			focus = MON_dream_of_greater_mongolia
-			focus = MON_central_asia_defensive_pact
-			focus = MON_open_up_the_country
-		}
 
 		available = {
+			has_completed_focus = MON_denounce_politizised_army
 			OR = {
 				has_government = democratic
 				democratic > 0.3
@@ -3956,6 +4060,10 @@ kill_country_leader = yes
 		}
 
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = MON_collectivisation_2
+				add_idea = MON_collectivisation_3
+			}
 			if = {
 				limit = {
 					OR = {
@@ -3994,7 +4102,7 @@ kill_country_leader = yes
 
 	focus = {
 		id = MON_riders_of_the_storm
-		icon = GFX_goal_generic_into_fire
+		icon = GFX_focus_man_claim_the_mandate_of_heaven
 		prerequisite = { focus = MON_open_up_the_country }
 		x = 0
 		y = 1
@@ -4007,14 +4115,17 @@ kill_country_leader = yes
 		available = {
 			is_subject = no
 			OR = {
-				has_government = democratic
+				has_government = neutrality
 				democratic > 0.35
 			}
 		}
 
 		completion_reward = {
+			remove_ideas = MON_collectivisation_3
+			add_stability = 0.25
+			add_war_support = 0.25
 			set_rule = { can_send_volunteers = yes }
-			add_ideas = MON_riders_of_the_storm_idea
+			set_cosmetic_tag = FORM_MOE
 		}
 	}
 }
