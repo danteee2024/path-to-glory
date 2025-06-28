@@ -299,6 +299,28 @@ ideas = {
 				land_reinforce_rate = 0.05
 			}
 		}
+		CZE_Pan-Slavic_Empire =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FIN_finnish_army
+
+			removal_cost = -2	
+			modifier = {
+				fascism_drift = 0.05
+				war_support_weekly = 0.005
+				political_power_factor = 0.05
+				army_attack_factor = 0.05
+				stability_weekly_factor = 0.05
+
+			}
+		}
 			CZE_Red_Czechs_Army =  {
 			
 			allowed = {
@@ -317,6 +339,7 @@ ideas = {
 				army_morale_factor = 0.05
 			}
 		}
+
 		CZE_Communist_Politics =  {
 			
 			allowed = {
@@ -883,8 +906,8 @@ ideas = {
 
 			removal_cost = -2	
 			modifier = {
-				army_artillery_attack_factor = 0.1
-				army_artillery_defence_factor = 0.1
+				army_infantry_attack_factor = 0.1
+				army_infantry_defence_factor = 0.1
 					}
 			}
 		
@@ -1102,6 +1125,28 @@ ideas = {
 				production_speed_bunker_factor = 0.3
 				conscription = 0.012
 				bunker_max_level_terrain_limit = 3
+				coastal_bunker_max_level_terrain_limit = 1
+			}
+		}
+		CZE_fortification_focus5 = {
+
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_fortification_focus
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_bunker_factor = 0.4
+				conscription = 0.015
+				bunker_max_level_terrain_limit = 4
 				coastal_bunker_max_level_terrain_limit = 1
 			}
 		}
