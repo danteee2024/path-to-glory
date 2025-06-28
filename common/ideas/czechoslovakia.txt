@@ -42,6 +42,21 @@ ideas = {
 
 			}
 		}
+		CZE_army_of_aggression_focus = {
+			picture = FRA_army_of_aggression_focus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			modifier = {
+				army_org = 5
+				justify_war_goal_time = -0.25
+			}
+		}
 
 		CZE_Bohemian_Empire = {
 
@@ -281,6 +296,7 @@ ideas = {
 				army_org_factor = 0.1
 				army_morale_factor = 0.1
 				training_time_army_factor = -0.1
+				land_reinforce_rate = 0.05
 			}
 		}
 			CZE_Red_Czechs_Army =  {
@@ -596,7 +612,7 @@ ideas = {
 			removal_cost = -2	
 			modifier = {
 				army_speed_factor = 0.1
-				planning_speed = 0.05
+				planning_speed = 0.1
 			}
 		}
 

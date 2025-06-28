@@ -103,7 +103,7 @@
 		y = 1
 		relative_position_id = CZE_fortification_studies
 
-		cost = 5
+		cost = 3.4
 
 		ai_will_do = {
 			factor = 60
@@ -154,7 +154,7 @@
 		y = 1
 		relative_position_id = CZE_fortification_studies
 
-		cost = 7.5
+		cost = 5
 
 		ai_will_do = {
 			factor = 90
@@ -346,7 +346,7 @@
 		y = 1
 		relative_position_id = CZE_sudeten_1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 90
@@ -528,7 +528,7 @@
 		y = 2
 		relative_position_id = CZE_sudeten_1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 80
@@ -720,7 +720,7 @@
 		y = 2
 		relative_position_id = CZE_sudeten_1
 
-		cost = 5
+		cost = 3.4
 
 		ai_will_do = {
 			factor = 60
@@ -786,7 +786,7 @@
 		y = 2
 		relative_position_id = CZE_sudeten_1
 
-		cost = 5
+		cost = 3.4
 
 		ai_will_do = {
 			factor = 50
@@ -843,7 +843,7 @@
 		y = 1
 		relative_position_id = CZE_fortification_studies
 
-		cost = 5
+		cost = 3.4
 
 		ai_will_do = {
 			factor = 60
@@ -3799,7 +3799,7 @@ focus = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = FRA_army_of_aggression_focus
+			add_ideas = CZE_army_of_aggression_focus
 		}
 	}
 
