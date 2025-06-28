@@ -10,7 +10,8 @@ ideas = {
                 foreign_subversive_activites = -0.10    # less sabotage
                 stability_factor = 0.05                  # more stability
                 intelligence_agency_defense = 0.20       # stronger intel defense
-                encryption_factor = 0.05                 # better code security
+                encryption_factor = 0.05 
+                agency_upgrade_time = -0.20                # better code security
             }
             ai_will_do = { base = 30 }
             cancel_if_invalid = no
@@ -20,11 +21,12 @@ ideas = {
         counter_terrorism_operatives = {
             available = { }
             modifier = {
-                foreign_subversive_activites = -0.25  
+                resistance_activity = 0.05
+                initiative_factor = 0.02
+                foreign_subversive_activites = -0.15 
                 army_advisor_cost_factor = -0.10 
-                war_support = 0.05                  # slight stability gain
+                war_support = 0.02               
                 decryption_factor = 0.05                 # better codebreaking
-                compliance_growth = 0.05                 # modest compliance up
             }
             ai_will_do = { base = 20 }
             cancel_if_invalid = no
@@ -36,7 +38,7 @@ ideas = {
             modifier = {
                 operation_risk = -0.10
                 drift_defence_factor = -0.15             # less drift
-                resistance_growth = -0.05                # slow resistance
+                resistance_growth = -0.15              # slow resistance
                 civilian_intel_to_others = -25
                 intelligence_agency_defense = 0.05         # slight intel leak
             }
@@ -52,8 +54,8 @@ ideas = {
                 foreign_subversive_activites = -0.15   
                 stability_factor = -0.05            
                 intelligence_agency_defense = 0.30
-                coordination_bonus = 0.10  
-                compliance_growth = -0.05          
+                coordination_bonus = 0.25
+                recon_factor = 0.25  
             }
             ai_will_do = { base = 25 }
             cancel_if_invalid = yes
