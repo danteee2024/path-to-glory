@@ -490,10 +490,10 @@ ideas = {
 				submarine = {
 					build_cost_ic = -0.1
 				}
-			}}
-			
+			}
 		}
-			CUB_obsolete_navy_show  = {
+			
+		CUB_obsolete_navy_show  = {
 			
 				name = "Reformed Fleet"
 
@@ -527,6 +527,176 @@ ideas = {
 				army_org_factor = -0.33
 		}
 		}
+				CUB_obsolete_army_1 = {
+
+				name = "Obsolete Army"
+
+			picture = SWE_hodgepodge_of_equipment
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+				army_org_factor = -0.33
+
+		}
+			equipment_bonus = {
+				mechanized = {
+					build_cost_ic = -0.1
+				} 
+			}
+			}
+				CUB_obsolete_army_2 = {
+
+				name = "Obsolete Army"
+
+			picture = SWE_hodgepodge_of_equipment
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+				army_org_factor = -0.33
+				army_armor_attack_factor = 0.1
+
+		}
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.1
+				} 
+				mechanized = {
+					build_cost_ic = -0.1
+				}
+			}
+			}
+			CUB_obsolete_army_3 = {
+
+				name = "Obsolete Army"
+
+			picture = SWE_hodgepodge_of_equipment
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+				army_org_factor = -0.33
+				army_infantry_attack_factor = 0.1
+
+		}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1
+				}
+			}
+			}
+				CUB_obsolete_army_4 = {
+
+				name = "Obsolete Army"
+
+			picture = SWE_hodgepodge_of_equipment
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+				army_org_factor = -0.33
+				army_infantry_attack_factor = 0.1
+
+		}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1
+				}
+				artillery = {
+					build_cost_ic = -0.1
+				} 
+			}
+			}
+			CUB_obsolete_army_final = {
+
+				name = "Reformed Army"
+
+			picture = SWE_hodgepodge_of_equipment
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_armor_attack_factor = 0.15
+				army_defence_factor = 0.15
+
+		}
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.1
+				} 
+				mechanized = {
+					build_cost_ic = -0.1
+				}
+			}
+			}
+				CUB_obsolete_army_final_2 = {
+
+				name = "Reformed Army"
+
+			picture = SWE_hodgepodge_of_equipment
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_infantry_attack_factor = 0.1
+				special_forces_attack_factor = 0.05
+
+		}
+			equipment_bonus = {
+				infantry = {
+					build_cost_ic = -0.1
+				} 
+			}
+			}
+			CUB_obsolete_army_final_show = {
+
+				name = "Reformed Army"
+
+			picture = SWE_hodgepodge_of_equipment
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+		
+			}
+		
+	
 			CUB_obsolete_air_force = {
 
 				name = "Obsolete Airforce "
