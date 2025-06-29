@@ -331,7 +331,7 @@ ideas = {
 				always = yes
 			}
 
-			picture = FIN_finnish_army
+			picture = GFX_focus_SOV_builder_of_the_red_army
 
 			removal_cost = -2	
 			modifier = {
@@ -350,7 +350,7 @@ ideas = {
 				always = yes
 			}
 
-			picture = FIN_finnish_army
+			picture = generic_communism_drift_bonus
 
 			removal_cost = -2	
 			modifier = {
@@ -369,7 +369,7 @@ ideas = {
 				always = yes
 			}
 
-			picture = FIN_finnish_army
+			picture = generic_communist_army
 
 			removal_cost = -2	
 			modifier = {
@@ -513,8 +513,8 @@ ideas = {
 				always = yes
 			}
 
-			picture = FIN_finnish_federation_of_trade_unions_light
-
+			picture = NORDIC_army_communist
+			
 			removal_cost = -2	
 			modifier = {
 				army_attack_factor = 0.05
@@ -756,7 +756,7 @@ ideas = {
 				has_government = democratic
 			}
 
-			picture = generic_democratic_drift_bonus
+			picture = generic_supply_lines
 
 			removal_cost = -1
 
