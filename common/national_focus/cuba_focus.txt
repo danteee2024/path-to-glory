@@ -39,10 +39,10 @@ focus_tree = {
 	}
 
 	focus = {
-		id = CUB_the_hellenic_air_force
-		icon = GFX_goal_generic_build_airforce
+		id = CUB_the_cuban_air_force
+		icon = GFX_focus_PER_luftwaffe_planes
 		prerequisite = { focus = CUB_armed_forces }
-		x = -7
+		x = -8
 		y = 1
 		relative_position_id = CUB_armed_forces
 		cost = 5
@@ -51,53 +51,16 @@ focus_tree = {
 		}
 
 		available = {
-			OR = {
-				has_full_control_of_state = 182
-				has_full_control_of_state = 185
-				has_full_control_of_state = 47
-			}
+			
 		}
 
 		completion_reward = {
-			air_experience = 50
-			random_owned_controlled_state = {
-				prioritize = { 182 }
-				if = {
-					limit = { 
-						is_controlled_by = ROOT
-					}
-					add_building_construction = {
-						type = air_base
-						level = 4
-						instant_build = yes
-					}
-				}
-			}
-			random_owned_controlled_state = {	
-				prioritize = { 185 } 
-					if = {
-						limit = { 
-							is_controlled_by = ROOT
-						}
-						add_building_construction = {
-							type = air_base
-							level = 3
-							instant_build = yes
-						}
-					}
-				}
-			random_owned_controlled_state = {	
-				prioritize = { 47 }
-				if = {
-					limit = { 
-						is_controlled_by = ROOT
-					}
-					add_building_construction = {
-						type = air_base
-						level = 4
-						instant_build = yes
-					}
-				}
+			air_experience = 15
+			add_doctrine_cost_reduction = {
+				name = CUB_the_cuban_army
+				cost_reduction = 0.5
+				uses = 2
+				category = air_doctrine
 			}
 		}
 	}
@@ -139,23 +102,11 @@ focus_tree = {
 
 		completion_reward = {
 			navy_experience = 15
-			random_owned_controlled_state = {
-			
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-		
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}	
+		add_doctrine_cost_reduction = {
+				name = CUB_the_cuban_army
+				cost_reduction = 0.5
+				uses = 2
+				category = naval_doctrine
 			}	
 		}
 	}
@@ -421,17 +372,23 @@ focus_tree = {
 
 		completion_reward = {
 			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
+				prioritize = {
+					315
+				}
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
-					level = 1
+					level = 2
 				}
 			}
 			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
+				prioritize = {
+					1017
+				}
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
-					level = 1
+					level = 2
 				}
 			}
 		}
@@ -556,7 +513,7 @@ focus_tree = {
 
 	focus = {
 		id = CUB_hellenic_armoured_corp
-		icon = GFX_focus_SWE_let_fly_all_guns
+		icon = GFX_focus_generic_anti_tank_guns
 		prerequisite = { focus = CUB_embracing_modern_warfare }
 		x = -1
 		y = 1
@@ -577,7 +534,7 @@ focus_tree = {
 	}	
 
 	focus = {
-		id = CUB_greek_mechanisation
+		id = CUB_marines
 		icon = GFX_focus_generic_naval_invasion
 		prerequisite = { focus = CUB_new_weapons_old_tricks }
 		x = 1
@@ -590,7 +547,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_tech_bonus = {
-				name = CUB_greek_mechanisation
+				name = "Special forces bonus"
 				bonus = 0.5
 				uses = 2
 				category = cat_special_forces_generic
@@ -617,7 +574,7 @@ focus_tree = {
 	focus = {
 		id = CUB_a_land_of_mountains
 		icon = GFX_goal_generic_army_doctrines
-		prerequisite = { focus = CUB_hellenic_armoured_corp focus = CUB_greek_mechanisation }
+		prerequisite = { focus = CUB_hellenic_armoured_corp focus = CUB_marines }
 		x = 3
 		y = 2
 		relative_position_id = CUB_hellenic_armoured_corp
@@ -687,12 +644,12 @@ focus_tree = {
 
 	focus = {
 		id = CUB_destroying_our_foes
-		icon = GFX_goal_generic_CAS
-		prerequisite = { focus = CUB_the_hellenic_air_force }
+		icon = GFX_focus_chi_flying_tigers
+		prerequisite = { focus = CUB_the_cuban_air_force }
 		mutually_exclusive = { focus = CUB_protecting_our_skies }
 		x = -2
 		y = 1
-		relative_position_id = CUB_the_hellenic_air_force
+		relative_position_id = CUB_the_cuban_air_force
 		cost = 10
 		ai_will_do = {
 			base = 0
@@ -703,66 +660,44 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = CUB_destroying_our_foes
-				cost_reduction = 0.5
-				uses = 2
-				category = air_doctrine
-			}
-			add_doctrine_cost_reduction = {
-				name = CUB_destroying_our_foes
-				cost_reduction = 0.25
-				uses = 1
-				category = strategic_destruction_tree
-			}
+		
 			add_tech_bonus = {
-				name = CUB_destroying_our_foes
+				name = "Against the odds"
 				bonus = 1.0
+				ahead_reduction = 1
 				uses = 1
-				category = cat_strategic_bomber
-				category = tactical_bomber
+				category = light_air
 			}
 		}
 	}	
 
 	focus = {
 		id = CUB_protecting_our_skies
-		icon = GFX_goal_generic_air_fighter
-		prerequisite = { focus = CUB_the_hellenic_air_force }
+		icon = GFX_focus_SMB_special_forces_option_3
+		prerequisite = { focus = CUB_the_cuban_air_force }
 		mutually_exclusive = { focus = CUB_destroying_our_foes }
 		x = 2
 		y = 1
-		relative_position_id = CUB_the_hellenic_air_force
+		relative_position_id = CUB_the_cuban_air_force
 		cost = 10
 		ai_will_do = {
 			base = 1
 		}
 
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = CUB_protecting_our_skies
-				cost_reduction = 0.5
-				uses = 2
-				category = air_doctrine
-			}
-			add_doctrine_cost_reduction = {
-				name = CUB_protecting_our_skies
-				cost_reduction = 0.25
-				uses = 1
-				category = battlefield_support_tree
-			}
 			add_tech_bonus = {
-				name = CUB_protecting_our_skies
+				name = "Bomber Bonus"
 				bonus = 1.0
+				ahead_reduction = 1
 				uses = 1
-				category = light_fighter
+				category = medium_air
 			}
 		}
 	}	
 
 	focus = {
 		id = CUB_escorts_for_our_bombers
-		icon = GFX_goal_generic_air_bomber
+		icon = GFX_goal_generic_air_fighter2
 		prerequisite = { focus = CUB_destroying_our_foes }
 		x = 0
 		y = 1
@@ -773,24 +708,73 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = CUB_escorts_for_our_bombers
-				cost_reduction = 0.25
-				uses = 1
-				category = air_doctrine
+			swap_ideas = {
+				remove_idea = CUB_obsolete_air_force
+				add_idea = CUB_obsolete_air_force_1
 			}
-			add_tech_bonus = {
-				name = CUB_escorts_for_our_bombers
-				bonus = 1.0
-				uses = 1
-				category = cat_heavy_fighter
-			}
+		
 		}
-	}		
+	}
+	focus = {
+		id = CUB_fighter_guns
+		icon = GFX_focus_generic_air_defense
+		prerequisite = { focus = CUB_escorts_for_our_bombers }
+		x = -1
+		y = 2
+		relative_position_id = CUB_destroying_our_foes
+		cost = 10
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = "Fighter gun bonus"
+				bonus = 0.5
+				uses = 2
+				category = cat_air_guns
+			}
+		
+		}
+	}	
+	focus = {
+		id = CUB_air_port
+		icon = GFX_focus_generic_air_defense
+		prerequisite = { focus = CUB_escorts_for_our_bombers focus = CUB_defending_our_seas }
+		x = 2
+		y = 2
+		relative_position_id = CUB_destroying_our_foes
+		cost = 10
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = {
+					315
+				}
+				add_building_construction = {
+					type = air_base
+					level = 4
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = {
+					1017
+				}
+				add_building_construction = {
+					type = air_base
+					level = 4
+				}
+			}
+		
+		}
+	}
 
 	focus = {
 		id = CUB_defending_our_seas
-		icon = GFX_goal_generic_air_naval_bomber
+		icon = GFX_focus_generic_armored_air_support
 		prerequisite = { focus = CUB_protecting_our_skies }
 		x = 0
 		y = 1
@@ -801,27 +785,41 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = CUB_defending_our_seas
-				cost_reduction = 0.5
-				uses = 2
-				category = air_doctrine
+		    swap_ideas = {
+				remove_idea = CUB_obsolete_air_force
+				add_idea = CUB_obsolete_air_force_2
 			}
+		}
+	}
+	focus = {
+		id = CUB_fighter_bombs
+		icon = GFX_goal_generic_occupy_start_war
+		prerequisite = { focus = CUB_defending_our_seas }
+		x = 5
+		y = 2
+		relative_position_id = CUB_destroying_our_foes
+		cost = 10
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
 			add_tech_bonus = {
-				name = CUB_defending_our_seas
-				bonus = 1.0
-				uses = 1
-				category = naval_bomber
+				name = "Fighter gun bonus"
+				bonus = 0.5
+				uses = 2
+				category = cat_air_bombs
 			}
+		
 		}
 	}
 
 	focus = {
-		id = CUB_fund_the_hellenic_air_force_academy
+		id = CUB_final_air_reform
 		icon = GFX_goal_generic_air_doctrine
-		prerequisite = { focus = CUB_escorts_for_our_bombers focus = CUB_defending_our_seas }
+		prerequisite = { focus = CUB_fighter_guns focus = CUB_fighter_bombs }
 		x = 2
-		y = 1
+		y = 3
 		relative_position_id = CUB_escorts_for_our_bombers
 		cost = 10
 		ai_will_do = {
@@ -829,124 +827,58 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			air_experience = 10
-			add_ideas = CUB_hellenic_air_force_academy
-		}
-	}	
-
-	focus = {
-		id = CUB_the_double_headed_aquila
-		icon = GFX_goal_generic_air_production
-		prerequisite = { focus = CUB_fund_the_hellenic_air_force_academy }
-
-		allow_branch = {
-			has_completed_focus = CUB_reviving_the_double_headed_eagle
-		}
-
-		available = { has_global_flag = form_byzantine_empire_flag }
-
-		x = 0
-		y = 1
-		relative_position_id = CUB_fund_the_hellenic_air_force_academy
-
-		cost = 10
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = CUB_the_double_headed_aquila
-				bonus = 1.0
+				if = {
+ 				limit = {
+					has_idea = CUB_obsolete_air_force_1
+				}
+				add_doctrine_cost_reduction = {
+				name = "Final air reform"
+				cost_reduction = 1
 				uses = 2
-				ahead_reduction = 1
-				category = light_fighter
-				category = cat_heavy_fighter
+				category = air_doctrine
 			}
-		}
-	}		
+				swap_ideas = {
+					remove_idea = CUB_obsolete_air_force_1
+					add_idea = CUB_obsolete_air_force_final
+				}
 
-	focus = {
-		id = CUB_modern_cataphracts
-		icon = GFX_focus_generic_army_tanks2
-		prerequisite = { focus = CUB_a_land_of_mountains }
-
-		allow_branch = {
-			has_completed_focus = CUB_reviving_the_double_headed_eagle
-		}
-
-		available = { has_global_flag = form_byzantine_empire_flag }
-
-		x = 0
-		y = 1
-		relative_position_id = CUB_a_land_of_mountains
-
-		cost = 10
-
-		ai_will_do = {
-			base = 1
-		}
-
-		search_filters = { FOCUS_FILTER_MANPOWER }
-
-		completion_reward = {
-
-			add_tech_bonus = {
-				bonus = 1.0
-				uses = 1
-				name = CUB_modern_cataphracts
-				technology = mechanised_infantry
-			}
-			add_tech_bonus = {
-				name = CUB_modern_cataphracts
-				bonus = 0.5
-				ahead_reduction = 2
-				uses = 1
-				category = cat_heavy_armor
+ 			
+				
+ 			}	
+			if = {
+				limit = {
+					has_idea = CUB_obsolete_air_force_2
+				}
+				add_doctrine_cost_reduction = {
+				name = "Final air reform"
+				cost_reduction = 1
+				uses = 2
+				category = air_doctrine
 			}
 			swap_ideas = {
-				remove_idea = CUB_hellenic_army_3
-				add_idea = CUB_byzantine_army
+					remove_idea = CUB_obsolete_air_force_2
+					add_idea = CUB_obsolete_air_force_final_2
+				}
+                
 			}
-
-		}
-	}
-
-	focus = {
-		id = CUB_thema_nautikon
-		icon = GFX_goal_generic_amphibious_assault
-		prerequisite = { focus = CUB_a_long_and_proud_tradition }
-
-		allow_branch = {
-			has_completed_focus = CUB_reviving_the_double_headed_eagle
-		}
-		
-		available = { has_global_flag = form_byzantine_empire_flag }
-
-		x = 0
-		y = 1
-		relative_position_id = CUB_a_long_and_proud_tradition
-
-		cost = 10
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = CUB_thema_nautikon
-				cost_reduction = 0.35
+		 if = {
+			limit = {
+				NOT = {
+             has_idea = CUB_obsolete_air_force_2 has_idea = CUB_obsolete_air_force_1	
+				}
+			}
+			 swap_ideas = {
+				remove_idea = CUB_obsolete_air_force
+				add_idea = CUB_obsolete_air_force_final_show
+			}
+				add_doctrine_cost_reduction = {
+				name = "Final air reform"
+				cost_reduction = 1
 				uses = 2
-				category = naval_doctrine
+				category = air_doctrine
+			
 			}
-			add_tech_bonus = {
-				name = CUB_thema_nautikon
-				bonus = 1.0
-				uses = 2
-				category = bb_tech
-			}
+		 }
 		}
 	}	
 

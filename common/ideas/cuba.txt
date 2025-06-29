@@ -636,7 +636,7 @@ ideas = {
 
 				name = "Reformed Army"
 
-			picture = SWE_hodgepodge_of_equipment
+			picture = SWE_varnplikt
 
 			allowed = {
 				always = yes
@@ -646,7 +646,7 @@ ideas = {
 			
 			modifier = {
 				army_armor_attack_factor = 0.15
-				army_defence_factor = 0.15
+				army_armor_defence_factor = 0.15
 
 		}
 			equipment_bonus = {
@@ -662,7 +662,7 @@ ideas = {
 
 				name = "Reformed Army"
 
-			picture = SWE_hodgepodge_of_equipment
+			picture = SWE_varnplikt
 
 			allowed = {
 				always = yes
@@ -685,7 +685,7 @@ ideas = {
 
 				name = "Reformed Army"
 
-			picture = SWE_hodgepodge_of_equipment
+			picture = SWE_varnplikt
 
 			allowed = {
 				always = yes
@@ -714,6 +714,112 @@ ideas = {
 				air_defence_factor = -0.15
 				air_agility_factor = -0.15
 		}
+		}
+		
+			CUB_obsolete_air_force_1 = {
+
+				name = "Obsolete Airforce "
+
+			picture = SOV_ground_based_training
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				air_attack_factor = -0.15
+				air_defence_factor = -0.15
+				air_agility_factor = -0.15
+		}
+		equipment_bonus = {
+		     fighter = {
+				build_cost_ic = -0.1
+			 }
+		}
+		}
+		CUB_obsolete_air_force_2 = {
+
+				name = "Obsolete Airforce "
+
+			picture = SOV_ground_based_training
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				air_attack_factor = -0.15
+				air_defence_factor = -0.15
+				air_agility_factor = -0.15
+		}
+		equipment_bonus = {
+		     cas  = {
+				build_cost_ic = -0.1
+			 }
+		}
+		}
+		CUB_obsolete_air_force_final = {
+
+				name = "Reformed Airforce"
+
+			picture = SOV_ground_based_training
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				air_attack_factor = 0.05
+				air_defence_factor = 0.05
+				air_agility_factor = 0.05
+		}
+		equipment_bonus = {
+		     fighter = {
+				build_cost_ic = -0.1
+			 }
+		}
+		}
+		CUB_obsolete_air_force_final_2 = {
+
+				name = "Reformed Airforce"
+
+			picture = SOV_ground_based_training
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				ground_attack_factor = 0.15
+		}
+		equipment_bonus = {
+		     cas  = {
+				build_cost_ic = -0.1
+			 }
+		}
+		}
+		CUB_obsolete_air_force_final_show = {
+
+				name = "Reformed Airforce"
+
+			picture = SOV_ground_based_training
+
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+		
+		
 		}
 
 
