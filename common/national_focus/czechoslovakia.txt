@@ -4484,7 +4484,7 @@ focus = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER }
 
 		completion_reward = { 
-			set_cosmetic_tag = CZE_Pan_Slavic-Empire
+			set_cosmetic_tag = CZE_Pan_Slavic_Empire
 			swap_ideas = {
 			remove_idea = CZE_Bohemian_Empire
 			add_idea = CZE_Pan-Slavic_Empire

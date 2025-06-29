@@ -1361,8 +1361,8 @@ CZE_Comintern = {
 }
 
 CZE_Pan_Slavic_Empire = {
-	color = rgb { 87 184 115 }
-	color_ui = rgb { 87 184 115 }
+	color = rgb { 0 135 0 }
+	color_ui = rgb { 0 135 0 }
 }
 
 CZE_Union = {
