@@ -1,6 +1,59 @@
 ideas = {
 
-	country = { 
+	country = {
+		MON_buddhist_support = {
+
+			picture = tur_coordinated_balkan_armed_forces
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.15
+				political_power_factor = 0.30
+			}
+		}
+		MON_soviet_science_idea = {
+
+			picture = tur_coordinated_balkan_armed_forces
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.075
+			}
+		}
+		MON_transfer_territory = {
+
+			picture = tur_coordinated_balkan_armed_forces
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				political_power_factor = 0.10
+			}
+		}
 		MON_soviet_conscripts = {
 
 			picture = tur_coordinated_balkan_armed_forces
@@ -599,7 +652,7 @@ research_speed_factor               = 0.01  # Flat research bonus
 			removal_cost = -1
 			
 			modifier = {
-				industrial_capacity_factory = 0.1
+				industrial_capacity_factory = 0.05
 			}
 
 		}

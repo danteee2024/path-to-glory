@@ -1,7 +1,7 @@
 ﻿l_english:
 
   #### FOCUSES ####
-  MON_collectivisation:0 "State Visit to Moscow of 1935"
+  MON_collectivisation:0 "State Visit to Moscow of 1936"
   MON_collectivisation_desc:0 "For true socialism to reign supreme in these great steppes, further agricultural and industrial centralization must take place. Let the teachings of Marx guide us!"
   MON_buddhist_prosecution:0 "Exile Genden"
   MON_buddhist_prosecution_desc:0 "Those with loyalties to entities other than the state are, simply put, dangerous. Buddhism is one of the most prominent religions of Mongolia, and as such, represents a major security threat. To be reborn as a modern socialist nation, these people must be quietly removed."
@@ -119,10 +119,10 @@
   MON_volunteers_desc:0 "As a socialist state, we believe in the international solidarity of the working class and the struggle against imperialism and fascism. Therefore, we will send Mongolia volunteers to support our Soviet comrades in Spain who are fighting against Franco's fascist regime."
 
   #### EVENTS ####
-  mongolia.1.t:0 "Mongolia Calls for Mongol Unity" #pretty much all of these events seem outdated
-  mongolia.1.d:0 "Mongolia has requested that we allow them to take control of Tannu Tuva."
-  mongolia.1.a:0 "Sure"
-  mongolia.1.b:0 "No"
+  mongolia.1.t:0 "Mongolia Calls for Mongol Unity in Southern Siberia" #pretty much all of these events seem outdated
+  mongolia.1.d:0 "Mongolia has requested that we allow them to take control of multiple states in southern Siberia, including the Tuva and Buryatia regions."
+  mongolia.1.a:0 "We must support our Mongolian brothers!"
+  mongolia.1.b:0 "No way, we will not allow this!"
   mongolia.2.t:0 "Mongolia Calls for Mongol Unity"
   mongolia.2.d:0 "Mongolia has requested that we allow them to take control of Sinkiang."
   mongolia.2.a:0 "Sure"
@@ -259,3 +259,7 @@
  MON_army_reform_recon_desc:0 "The Mongolian government is committed to reforming the reconnaissance forces, in order to improve their effectiveness and adaptability on the modern battlefield. This policy is seen as a key part of the government's commitment to national security and sovereignty."
  MON_army_reform_winter_past:0 "Army Reform Winter Past"
  MON_army_reform_winter_past_desc:0 "The Armed forces is at a crossroads, the harsh winters of Mongolia have shaped the resilience and adaptability of its people, fostering a deep connection to the land and a strong sense of community. The Mongolian Armed Forces will spend less time training for the battlefield, but instead will be conscripted to military infrastructure accross our great nation. This will relinquish the §YRe-established Army§!, but will also provide a small boost to our Military infrastructure."
+
+ MON_buddhist_support_tooltip:0 "§YBuddhist Support§! §Rwill stop when at war§!."
+
+ MON_invite_all_independent_anti_sovet_tt:0 "Invite all independent anti-Soviet factions to join our cause."

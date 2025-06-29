@@ -47,12 +47,30 @@ country_event = {
 		# else = {
 			MON = {
 				transfer_state = 329
+				transfer_state = 563
+				transfer_state = 564
+				transfer_state = 565
+				transfer_state = 566
+			
+			}
+			SOV = {
+				add_timed_idea = {
+					idea = MON_transfer_territory
+					days = 365
+				}
+			}
+			MON = {
+				563 = { add_core_of = MON }
+				564 = { add_core_of = MON }
+				565 = { add_core_of = MON }
+				566 = { add_core_of = MON }
+				329 = { add_core_of = MON }
 			}
 		# }
 	}
 	option = { # Refuse
 		name = mongolia.1.b
-		ai_chance = { factor = 0 }
+		ai_chance = { factor = 10 }
 		
 	}
 }
@@ -118,4 +136,26 @@ country_event = {
 			}
 		}
 	}
+}
+
+
+# Hidden event to remove Industrial Support idea when France go to war
+country_event = {
+    id = mongolia.4
+    hidden = yes
+ 
+    fire_only_once = yes
+
+    trigger = {
+        tag = MON
+		has_war = yes
+	}
+
+    immediate = {
+    	remove_ideas = MON_buddhist_support
+    }
+
+    option = {
+        
+    }
 }
