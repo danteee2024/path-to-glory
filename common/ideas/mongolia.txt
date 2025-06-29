@@ -1,6 +1,23 @@
 ideas = {
 
 	country = { 
+		MON_soviet_conscripts = {
+
+			picture = tur_coordinated_balkan_armed_forces
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				weekly_manpower = 7500
+			}
+		}
 		MON_loyalists_in_mvd = {
 
 			picture = tur_coordinated_balkan_armed_forces

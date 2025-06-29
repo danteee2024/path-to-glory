@@ -1,9 +1,9 @@
 ﻿l_english:
 
   #### FOCUSES ####
-  MON_collectivisation:0 "Continue Collectivisation"
+  MON_collectivisation:0 "State Visit to Moscow of 1935"
   MON_collectivisation_desc:0 "For true socialism to reign supreme in these great steppes, further agricultural and industrial centralization must take place. Let the teachings of Marx guide us!"
-  MON_buddhist_prosecution:0 "Buddhist Prosecution"
+  MON_buddhist_prosecution:0 "Exile Genden"
   MON_buddhist_prosecution_desc:0 "Those with loyalties to entities other than the state are, simply put, dangerous. Buddhism is one of the most prominent religions of Mongolia, and as such, represents a major security threat. To be reborn as a modern socialist nation, these people must be quietly removed."
   MON_trial_of_the_llamas:0 "Trial of the Llamas"
   MON_trial_of_the_llamas_desc:0 "These secretive enemies of the state shall finally be brought to the stage as we cement their treason for all to see."
@@ -77,7 +77,7 @@
   MON_mobilize_the_steppes_desc:0 "In the face of true war, every man of the steppes must be prepared to put his life on the line for the glory of communism."
 
 #Right-side political/new focuses
-  MON_buddhist_compromise:0 "Buddhism Compromise"
+  MON_buddhist_compromise:0 "Glory To Genden"
   MON_buddhist_compromise_desc:0 "Buddhism has played an important role in the history and culture of Mongolia for centuries. However, in recent years, there has been tension between the government and certain Buddhist sects over issues such as political influence."
   MON_religious_taxations:0 "Religious Taxation"
   MON_religious_taxations_desc:0 "Religious institutions in Mongolia play an important role in society, providing spiritual guidance, education, and social services. However, many of these institutions are exempt from taxation, leading to a disparity in tax burdens between religious and non-religious entities."

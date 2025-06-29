@@ -35,25 +35,45 @@ set_popularities = {
 	neutrality = 40
 }
 
+### Starting leaders
+recruit_character = MON_peljidiin_genden
+recruit_character = MON_sambadondogiin_tserendorj
 
+### Starting advisers
 recruit_character = MON_anandyn_amar
-recruit_character = MEN_prince_demchugdongrub
-recruit_character = MON_mingzhu_zhanshan
-recruit_character = MON_fu_shangzhi
-recruit_character = MON_songgotu_kangan
-recruit_character = MON_haidav
-recruit_character = MON_dagva
-recruit_character = MON_chimid
-recruit_character = MON_sukhbaataryn_yanjmaa
-recruit_character = MON_ganbaatar
-recruit_character = MON_ulanhu
-recruit_character = MON_vg_pyrselov
-recruit_character = MON_lee_shou_hsin
-recruit_character = MON_buyannmeh
-recruit_character = MON_horloogiyn_choybalsan
-recruit_character = MON_olziytrygyn_badrak
-recruit_character = MON_dashdorj
-recruit_character = MON_gomgchigryn_bumtsend
-recruit_character = MON_dansrabilegyin_dogsam
-recruit_character = MON_yundunwangcug
-recruit_character = MON_pai_yun_ti
+recruit_character = MON_dansranbilegiin_dogsom
+recruit_character = MON_darijavyn_losol
+recruit_character = MON_gonchigiin_bumtsend 
+recruit_character = MON_dorjjavyn_luvsansharav
+recruit_character = MON_bat_ochiryn_eldev_ochir
+recruit_character = MON_banzarjavyn_baasanjav
+
+### Starting generals
+recruit_character = MON_khorloogiin_choibalsan
+recruit_character = MON_gelegdorjiin_demid
+recruit_character = MON_gonchingiin_sambuu
+recruit_character = MON_gombojavyn_damba
+recruit_character = MON_jigdengiin_malj
+recruit_character = MON_gotovyn_damba
+recruit_character = MON_tomoriin_dashzeveg
+
+### Military advisers
+recruit_character = MON_ochiryn_dashchirav 
+recruit_character = MON_dorjiin_gonchig 
+recruit_character = MON_hamza_zaisanov 
+recruit_character = MON_lkhamkhuugiin_darzav
+recruit_character = MON_olziiburengiin_puntsag
+recruit_character = MON_jantsankhorloo
+recruit_character = MON_choimbolyn_shagdarsuren 
+recruit_character = MON_gelenkhuu
+
+### Historical path advisers & generals
+recruit_character = MON_yumjaagiin_tsedenbal
+recruit_character = MON_dashiin_damba
+recruit_character = MON_chimeddorjiin_surenjav
+recruit_character = MON_bazaryn_shirendev
+recruit_character = MON_tsendiin_damdinsuren
+recruit_character = MON_tserenjavyn_luvsandonoi 
+recruit_character = MON_jamyangiin_lkhagvasuren
+recruit_character = MON_shagdaryn_gongor
+recruit_character = MON_bat_ochiryn_shagdarjav

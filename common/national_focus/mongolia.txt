@@ -13,13 +13,13 @@ focus_tree = {
 	
 	default = no
 	
-	continuous_focus_position = { x = 900 y = 1500 }
+	continuous_focus_position = { x = 2150 y = 1200}
 	
   # Collectivization Tree
 
 	focus = {
 		id = MON_collectivisation
-		icon = GFX_focus_prc_agrarian_socialism
+		icon = GFX_focus_SOV_third_rome
 		x = -5
 		y = 0
 		cost = 10
@@ -56,7 +56,7 @@ focus_tree = {
 	
 	focus = {
 		id = MON_buddhist_prosecution
-		icon = GFX_focus_mex_triumph_over_the_cristeros
+		icon = GFX_focus_SOV_the_last_purge
 		x = -5
 		y = 1
 		cost = 10
@@ -77,6 +77,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_stability = 0.05
+			custom_effect_tooltip = generic_skip_one_line_tt
 			SOV = {
 				add_opinion_modifier = {
 					target = ROOT
@@ -88,6 +89,10 @@ focus_tree = {
 					value = 20
 				}
 			}
+			hidden_effect = {
+				retire_country_leader = yes
+			}
+			custom_effect_tooltip = exiled_genden_tt
 		}
 	}
 
@@ -173,7 +178,7 @@ focus_tree = {
 		icon = GFX_SOV_goal_great_purge
 		x = 0
 		y = 1
-		cost = 20
+		cost = 10
 		prerequisite = { focus = MON_trial_of_the_llamas }
 		prerequisite = { focus = MON_crush_the_counter_revolutionaries }
 		prerequisite = { focus = MON_sack_the_monastries }
@@ -506,7 +511,7 @@ focus_tree = {
 
 	focus = {
 		id = MON_buddhist_compromise
-		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		icon = GFX_focus_AFG_defender_of_central_asia
 		x = 5
 		y = 1
 		cost = 10
@@ -618,11 +623,184 @@ focus_tree = {
 	}
 
 	focus = {
+		id = MON_soviet_assistance_program
+		icon = GFX_SOV_borrow_spanish_gold
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = { focus = MON_buddhist_compromise focus = MON_buddhist_prosecution }
+
+		available_if_capitulated = yes
+		
+		relative_position_id = MON_collectivisation
+		
+		ai_will_do = {
+			factor = 2
+		}
+
+		complete_tooltip = {
+			
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = MON_soviet_conscripts
+				days = 365
+			}
+		}
+	}
+	
+	focus = {
+		id = MON_traditional_markets
+		icon = GFX_SOV_borrow_spanish_gold
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MON_soviet_assistance_program }
+
+		available_if_capitulated = yes
+		
+		relative_position_id = MON_soviet_assistance_program
+		mutually_exclusive = {
+			focus = MON_industrialization
+		}
+		ai_will_do = {
+			factor = 2
+		}
+        available = {
+			has_completed_focus = MON_traditional_way
+		}
+		complete_tooltip = {
+			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = MON_industrialization
+		icon = GFX_SOV_borrow_spanish_gold
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MON_soviet_assistance_program }
+
+		available_if_capitulated = yes
+		
+		relative_position_id = MON_soviet_assistance_program
+		mutually_exclusive = {
+			focus = MON_traditional_markets
+		}
+		ai_will_do = {
+			factor = 2
+		}
+        available = {
+			has_completed_focus = MON_industrial_development
+		}
+		complete_tooltip = {
+			
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = PER_communist_industrialization_idea
+				days = 730
+			}
+		}
+	}
+	focus = {
+		id = MON_soviet_assistance_program_four
+		icon = GFX_SOV_borrow_spanish_gold
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = { focus = MON_traditional_markets focus = MON_industrialization }
+
+		available_if_capitulated = yes
+		
+		relative_position_id = MON_soviet_assistance_program
+		
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_command_power = 10
+			army_experience = 25
+			MON_gotovyn_damba = {
+				add_trait = { trait = politically_connected }
+			}
+			MON_tomoriin_dashzeveg = {
+				add_trait = { trait = politically_connected }
+			}
+			MON_gonchingiin_sambuu = {
+				add_trait = { trait = politically_connected }
+			}
+			IF = {
+				limit = {
+					has_character = MON_tomoriin_dashzeveg
+					MON_tomoriin_dashzeveg = {
+						is_field_marshal = no
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				MON_tomoriin_dashzeveg = {
+					promote_leader = yes
+				}
+			}
+			IF = {
+				limit = {
+					has_character = MON_gonchingiin_sambuu
+					MON_gonchingiin_sambuu = {
+						is_field_marshal = no
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				MON_gonchingiin_sambuu = {
+					promote_leader = yes
+				}
+			}
+		}
+		
+	}
+	focus = {
 		id = MON_government_reforms
 		icon = GFX_focus_generic_soviet_politics
 		x = 0
 		y = 1
-		cost = 20
+		cost = 10
 		prerequisite = { focus = MON_religious_taxations }
 		prerequisite = { focus = MON_remove_religious_figureheads }
 		prerequisite = { focus = MON_cooperation_with_buddhists }
