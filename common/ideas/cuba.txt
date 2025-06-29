@@ -293,7 +293,7 @@ ideas = {
 		}
 			CUB_anarchism_army = {
 
-			picture = great_depression
+			picture = ARG_no_gods_no_masters
 
 			allowed = {
 				always = yes
@@ -302,8 +302,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				army_attack_factor = 0.1
-				army_speed_factor = 0.1
+				weekly_manpower = 1000
 			}
 		}
 			CUB_investment = {
@@ -766,7 +765,7 @@ ideas = {
 
 				name = "Reformed Airforce"
 
-			picture = SOV_ground_based_training
+			picture = generic_air_fighter
 
 			allowed = {
 				always = yes
@@ -789,7 +788,7 @@ ideas = {
 
 				name = "Reformed Airforce"
 
-			picture = SOV_ground_based_training
+			picture = generic_air_fighter
 
 			allowed = {
 				always = yes
@@ -810,7 +809,7 @@ ideas = {
 
 				name = "Reformed Airforce"
 
-			picture = SOV_ground_based_training
+			picture = generic_air_fighter
 
 			allowed = {
 				always = yes
@@ -821,40 +820,27 @@ ideas = {
 		
 		
 		}
+			CUB_over_extended = {
 
+				name = "Overextended Administration"
 
-		cuba_collectivist_manpower_idea = {
-
-			picture = system_decentralization
-
-			allowed = {
-				always = yes
-			}
-			
-			removal_cost = -1
-	
-			modifier = {
-				political_power_gain = 0.15
-				monthly_population = 0.25
-				weekly_manpower = 2750
-			}
-		}
-
-		cuba_liberty_manpower_idea = {
-
-			picture = democratic_bastion
+			picture = generic_air_fighter
 
 			allowed = {
 				always = yes
 			}
-			
+
 			removal_cost = -1
-	
 			modifier = {
-				political_power_gain = 0.25
-				monthly_population = 0.85
-				weekly_manpower = 750
+				political_power_factor = -0.1
+				consumer_goods_expected_value = 0.05
+				army_org_factor = -0.05
 			}
+		
+		
 		}
+
+
+		
 	}
 }

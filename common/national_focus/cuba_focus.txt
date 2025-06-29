@@ -916,12 +916,13 @@ focus_tree = {
 	focus = {
 		id = CUB_fasist1
 		icon = GFX_focus_ITA_blackshirts
-		x = 12
-		y = 3
+		x = -5
+		y = 1
 		mutually_exclusive = { focus = CUB_komunist1 focus = CUB_the_need_for_state }
 		prerequisite = { focus = CUB_totalwar }
 		cost = 10
 		
+		relative_position_id = CUB_totalwar
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -947,7 +948,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-						custom_effect_tooltip = "R IF YOU DON'T DEAL WITH THE GUERILLAS THEY WILL START A CIVIL WAR W"
+						custom_effect_tooltip = "R If you fall under 40% stability before you do the final strike you will get a civil war W"
 			set_politics = {
 			ruling_party = fascism
 			elections_allowed = no
@@ -1060,10 +1061,11 @@ focus_tree = {
 		
 		}
 	}
+	
 	focus = {
 		id = CUB_chromium_for_factory
 		icon = GFX_focus_generic_chromium
-		x = 2
+		x = 1
 		y = 5
 		prerequisite = { focus = CUB_axis_invesment }
 		relative_position_id = CUB_fasist2
@@ -1115,8 +1117,8 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = CUB_closer_integration
-		icon = GFX_focus_generic_south_america
+		id = CUB_forge_a_nation
+		icon = GFX_focus_RAJ_enrollment_of_dali_children
 		x = -2
 		y = 4
 		prerequisite = { focus = CUB_pan_cubanism }
@@ -1127,7 +1129,28 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_ideas = PB_Racial_Hierarchy
+		}
+		
 			
+		
+		
+	}
+	focus = {
+		id = CUB_closer_integration
+		icon = GFX_goal_generic_territory_or_war
+		x = -1
+		y = 5
+		prerequisite = { focus = CUB_forge_a_nation }
+		relative_position_id = CUB_fasist2
+		
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = CUB_over_extended
+			custom_effect_tooltip = "YIf you are in a faction with a fascist central American country you can demand their subjugation"
 		}
 		
 			
@@ -1138,11 +1161,12 @@ focus_tree = {
 	focus = {
 		id = CUB_komunist1
 		icon = GFX_focus_SWE_refuge_for_revolutionaries
-		x = 20
-		y = 3
+		x = 5
+		y = 1
 		mutually_exclusive = { focus = CUB_fasist1 focus = CUB_the_need_for_state }
 		prerequisite = { focus = CUB_totalwar }
 		cost = 10
+		relative_position_id = CUB_totalwar
 		
 		available_if_capitulated = yes
 
@@ -1198,13 +1222,9 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			315 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
+			add_timed_idea = {
+				idea = FRA_collectivisation
+				days = 365
 			}
 		}
 	}
@@ -1296,11 +1316,12 @@ focus_tree = {
 	focus = {
 		id = CUB_the_need_for_state
 		icon = GFX_focus_ARG_no_gods_no_masters
-		x = 16
-		y = 3
+		x = 0
+		y = 1
 		mutually_exclusive = { focus = CUB_fasist1 focus = CUB_komunist1 }
 		prerequisite = { focus = CUB_totalwar }
 		cost = 10
+		relative_position_id = CUB_totalwar
 		
 		available_if_capitulated = yes
 
@@ -1342,7 +1363,7 @@ focus_tree = {
 		
 		available_if_capitulated = yes
 
-		available = {
+		available = { 
 			neutrality > 0.3
 		}
 
@@ -1351,7 +1372,6 @@ focus_tree = {
 				ruling_party = neutrality
 			}
 			add_ideas = SPR_collectivized_society
-			add_ideas = SPR_anarchist_society_19
 			add_ideas = closed_economy
 			hidden_effect = {
 				add_popularity = {
@@ -1451,27 +1471,83 @@ focus_tree = {
 		
 
 		completion_reward = {
-			add_timed_idea = {
-				idea = CUB_anarchism_army
-				days = 365
-			}
-
-				create_wargoal = {
-					target = USA
-					type = annex_everything
-				}
-				create_wargoal = {
-					target = FRA
-					type = annex_everything
-				}
-				create_wargoal = {
-					target = ENG
-					type = annex_everything
-				}
-			
-			
+		add_ideas = CUB_anarchism_army
 			
 		}
+	}
+	focus = {
+		id = CUB_on_our_own
+		icon = GFX_focus_GER_align_south_america
+		x = -1
+		y = 1
+		prerequisite = { focus = CUB_disolve_imperialism }
+		relative_position_id = CUB_disolve_imperialism
+		mutually_exclusive = {
+			focus = CUB_pact_with_ussr
+		}
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			create_faction = "Anarchist Workers’ Federation"
+		}
+	}
+	focus = {
+		id = CUB_pact_with_ussr
+		icon = GFX_focus_GER_alliance_with_the_ussr
+		x = 1
+		y = 1
+		prerequisite = { focus = CUB_disolve_imperialism }
+		relative_position_id = CUB_disolve_imperialism
+		mutually_exclusive = {
+			focus = CUB_on_our_own
+		}
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			SOV = {
+				country_event = { id = generic.2 }
+			}
+		}
+	}
+	focus = {
+		id = CUB_improve_the_council
+		icon = GFX_focus_GER_liberate_exploited_colonial_workers
+		x = 0
+		y = 2
+		prerequisite = { focus = CUB_on_our_own focus = CUB_pact_with_ussr }
+		relative_position_id = CUB_disolve_imperialism
+		mutually_exclusive = {
+			focus = CUB_on_our_own
+		}
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		     add_country_leader_trait = {
+				trait = anarchist_zeal
+			}
+		}
+	}
+	focus = {
+		id = CUB_total_seperation_from_state
+		icon = GFX_focus_SWE_organize_a_putsch
+		x = 16
+		y = 10
+		prerequisite = { focus = CUB_improve_the_council }
+		cost = 10
+		
+		available_if_capitulated = yes
+
+
+		completion_reward = {
+			add_ideas = SPR_anarchist_society_16
+		}
+
 	}
 
 	
@@ -1741,7 +1817,7 @@ focus_tree = {
 	focus = {
 		id = CUB_ekonomi
 		icon = GFX_focus_ITA_devaluate_the_lire
-		x = 27
+		x = 29
 		y = 1
 		cost = 10
 		
@@ -1766,7 +1842,7 @@ focus_tree = {
 		available = {
 			NOT = { has_idea = CUB_investment }
 		}
-		x = 28
+		x = 30
 		y = 2
 		cost = 10
 		
@@ -1800,7 +1876,7 @@ focus_tree = {
 			NOT = { has_idea = CUB_investment }
 		}
 		
-		x = 30
+		x = 32
 		y = 3
 		cost = 10
 		
@@ -1852,7 +1928,7 @@ focus_tree = {
 		available = {
 			NOT = { has_idea = CUB_investment }
 		}
-		x = 30
+		x = 32
 		y = 4
 		cost = 10
 		
@@ -1904,7 +1980,7 @@ focus_tree = {
 		available = {
 			NOT = { has_idea = CUB_investment }
 		}
-		x = 30
+		x = 32
 		y = 5
 		cost = 10
 		
@@ -1949,7 +2025,7 @@ focus = {
 		icon = GFX_focus_generic_modernize_industry
 		prerequisite = { focus = CUB_more_resource }
 		
-		x = 30
+		x = 32
 		y = 6
 		cost = 10
 		available = {
@@ -2000,7 +2076,7 @@ focus = {
 			owns_state = 319
 		}
 		
-		x = 29
+		x = 31
 		y = 7
 		cost = 12
 		
@@ -2030,7 +2106,7 @@ focus = {
 			focus = CUB_build_tall_focus
 		}
 		prerequisite = { focus = CUB_ekonomi }
-		x = 26
+		x = 28
 		y = 2
 		cost = 10
 		
@@ -2057,7 +2133,7 @@ focus = {
 		icon = GFX_focus_GER_vereinigte_stahlwerke
 		prerequisite = { focus = CUB_build_tall_focus focus = CUB_build_wide_focus }
 		
-		x = 27
+		x = 29
 		y = 3
 		cost = 10
 		
@@ -2160,7 +2236,7 @@ focus = {
 		id = CUB_produksiyon
 		icon = GFX_focus_ETH_freedom_at_gunpoint
 		prerequisite = { focus = CUB_build_wide_focus }
-		x = 24
+		x = 26
 		y = 3
 		cost = 10
 		
@@ -2193,7 +2269,7 @@ focus = {
 		icon = GFX_goal_generic_construction
 		prerequisite = { focus = CUB_produksiyon }
 	
-		x = 23
+		x = 25
 		y = 5
 		cost = 10
 		
@@ -2209,7 +2285,7 @@ focus = {
 		icon = GFX_focus_RAJ_special_economic_zones
 		prerequisite = { focus = CUB_insaat focus = CUB_arastirma focus = CUB_improved_industry }
 		
-		x = 27
+		x = 29
 		y = 7
 		cost = 10
 		

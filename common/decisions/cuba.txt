@@ -143,18 +143,7 @@ fascist_cuba = {
 
 		ai_will_do = {
 			base = 0.8
-			modifier = {
-				factor = 2
-				has_political_power > 160
-			}
-			modifier = { #If ideological rallies happened, then it's better
-				factor = 4
-				FROM = { has_country_flag = FIN_ideological_rallies_promoted_flag }
-			}
-			modifier = { #Do it only once, don't spam
-				factor = 0
-				FROM = { has_country_flag = FIN_government_pressured_flag }
-			}
+			
 		}
 
 		targets = { HAI DOM GUA HON ELS NIC COS PAN }
@@ -163,7 +152,6 @@ fascist_cuba = {
 
 		target_root_trigger = {
 			has_completed_focus = CUB_closer_integration
-			is_subject = no
 		}
 
 		allowed = {
@@ -171,25 +159,19 @@ fascist_cuba = {
 		}
 
 		available = {
-
-                has_completed_focus = CUB_closer_integration
-			
-			
 			is_faction_leader = yes
 			FROM = {
 				has_government = fascism
-				is_ally_with = CUB 
-				
+
 			}
 		}
 
 		visible = {
-
-                has_completed_focus = CUB_closer_integration
 			
 			FROM = {
                 is_ally_with = CUB 
 				has_government = fascism
+				is_subject = NO
 				
 			}
 		}
