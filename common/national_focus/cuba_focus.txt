@@ -18,23 +18,7 @@ focus_tree = {
 		focus = CUB_Reform
 	}
 
-	focus = {
-		id = CUB_Reform
-		icon = GFX_focus_BRA_utilize_security_law
-		x = 10
-		y = 0
-		cost = 10
-		search_filters = {  FOCUS_FILTER_RESEARCH }
-		available = {
-			is_ai = no
-		}
-		
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_political_power = 100
-		}
-	}
+	
 
 	focus = {
 		id = CUB_armed_forces
@@ -45,9 +29,7 @@ focus_tree = {
 		ai_will_do = {
 			base = 1
 		}
-		prerequisite = {
-			focus = CUB_Reform
-		}
+
 
 		completion_reward = {
 			army_experience = 50
@@ -150,8 +132,8 @@ focus_tree = {
 	}			
 
 	focus = {
-		id = CUB_the_hellenic_navy 
-		icon = GFX_goal_generic_build_navy
+		id = CUB_the_cuban_navy
+		icon = GFX_focus_ARG_study_the_battle_of_the_river_plate
 		prerequisite = { focus = CUB_armed_forces }
 		x = 7
 		y = 1
@@ -164,13 +146,7 @@ focus_tree = {
 		completion_reward = {
 			navy_experience = 15
 			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = dockyard
-						size > 1
-						include_locked = yes
-					}
-				}
+			
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
@@ -179,17 +155,11 @@ focus_tree = {
 				}
 			}
 			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = dockyard
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
+		
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
-					level = 1
+					level = 2
 					instant_build = yes
 				}	
 			}	
@@ -199,54 +169,38 @@ focus_tree = {
 	focus = {
 		id = CUB_a_modern_navy
 		icon = GFX_goal_generic_navy_submarine
-		prerequisite = { focus = CUB_the_hellenic_navy }
-		mutually_exclusive = { focus = CUB_abandon_the_greek_turkish_naval_treaty }
+		prerequisite = { focus = CUB_the_cuban_navy}
+		mutually_exclusive = { focus = CUB_the_old_ways }
 		x = 2
 		y = 1
-		relative_position_id = CUB_the_hellenic_navy
+		relative_position_id = CUB_the_cuban_navy
 		cost = 10
 		ai_will_do = {
 			base = 1
 		}
 
 		completion_reward = {
-			add_breakthrough_progress = {
-				specialization = specialization_naval
-				value = 0.25
-			}
-			IF = {
-				limit = {
-					has_dlc = "Man the Guns"
-				}
-				add_ideas = cruiser_submarine_specialization_mtg
-			}
-			ELSE = {
-				add_ideas = cruiser_submarine_specialization
-			}
-
-			add_tech_bonus = {
-				name = CUB_a_modern_navy
-				bonus = 0.75
-				uses = 1
-				category = dd_tech
-			}
-			add_tech_bonus = {
-				name = CUB_a_modern_navy
-				bonus = 0.75
-				uses = 1
+		    add_tech_bonus = {
+				name = "Submarine bonus"
+				bonus = 1.0
+				uses = 2
 				category = ss_tech
+			}
+			swap_ideas = {
+				remove_idea = CUB_obsolete_navy
+				add_idea = CUB_obsolete_navy_3
 			}
 		}
 	}	
 
 	focus = {
-		id = CUB_abandon_the_greek_turkish_naval_treaty
+		id = CUB_the_old_ways
 		icon = GFX_goal_generic_navy_battleship
-		prerequisite = { focus = CUB_the_hellenic_navy }
+		prerequisite = { focus = CUB_the_cuban_navy}
 		mutually_exclusive = { focus = CUB_a_modern_navy }
 		x = -2
 		y = 1
-		relative_position_id = CUB_the_hellenic_navy
+		relative_position_id = CUB_the_cuban_navy
 		cost = 10
 		ai_will_do = {
 			base = 0
@@ -257,23 +211,29 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = CUB_abandon_the_greek_turkish_naval_treaty_tt
-			TUR = {
-				add_opinion_modifier = { 
-					target = GRE 
-					modifier = CUB_aegean_troublemakers
-				}
+			add_tech_bonus = {
+				name = CUB_carrier_bonus
+				bonus = 1.0
+				uses = 2
+				category = bb_tech
 			}
+			swap_ideas = {
+				remove_idea = CUB_obsolete_navy
+				add_idea = CUB_obsolete_navy_1
+			}
+		
+
+		
 		}
 	}	
 
 	focus = {
-		id = CUB_a_fleet_fit_for_the_aegean
-		icon = GFX_focus_generic_aegean_sea_focus
-		prerequisite = { focus = CUB_abandon_the_greek_turkish_naval_treaty }
+		id = CUB_carrier_bonus
+		icon = GFX_focus_generic_air_carrier
+		prerequisite = { focus = CUB_the_old_ways }
 		x = 0
 		y = 1
-		relative_position_id = CUB_abandon_the_greek_turkish_naval_treaty
+		relative_position_id = CUB_the_old_ways
 		cost = 10
 		ai_will_do = {
 			base = 1
@@ -281,18 +241,17 @@ focus_tree = {
 
 		completion_reward = {
 			add_tech_bonus = {
-				name = CUB_a_fleet_fit_for_the_aegean
+				name = "Cuban Carrier bonus"
 				bonus = 1.0
-				uses = 1
-				category = bb_tech
-				category = bc_tech
-			}
-			add_doctrine_cost_reduction = {
-				name = CUB_a_fleet_fit_for_the_aegean
-				cost_reduction = 0.35
 				uses = 2
-				category = naval_doctrine
+				category = cv_tech
 			}
+			swap_ideas = {
+				remove_idea = CUB_obsolete_navy_1
+				add_idea = CUB_obsolete_navy_2
+			}
+			
+			
 		}
 	}	
 
@@ -309,28 +268,27 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = CUB_disrupting_the_great_powers
-				bonus = 0.75
-				uses = 1
-				category = ss_tech
-			}
-			add_doctrine_cost_reduction = {
-				name = CUB_disrupting_the_great_powers
-				cost_reduction = 0.5
+			 add_tech_bonus = {
+				name = "Submarine bonus"
+				bonus = 1.0
+				ahead_reduction = 2
 				uses = 2
-				category = naval_doctrine
+				technology = basic_submarine_snorkel
+			}
+			swap_ideas = {
+				remove_idea = CUB_obsolete_navy_3
+				add_idea = CUB_obsolete_navy_4
 			}
 		}
 	}
 
 	focus = {
 		id = CUB_the_cannon
-		icon = GFX_goal_generic_army_artillery
-		prerequisite = { focus = CUB_a_fleet_fit_for_the_aegean }
+		icon = GFX_focus_SWE_coastal_support
+		prerequisite = { focus = CUB_carrier_bonus }
 		x = -1
 		y = 1
-		relative_position_id = CUB_a_fleet_fit_for_the_aegean
+		relative_position_id = CUB_carrier_bonus
 		cost = 10
 		ai_will_do = {
 			base = 1
@@ -339,22 +297,80 @@ focus_tree = {
 		completion_reward = {
 			if = {
  				limit = { has_dlc = "Man the Guns" }
- 				add_tech_bonus = {
- 					name = CUB_the_cannon
-					bonus = 1.00
-					uses = 1
-					category = bb_tech
-				}
+ 			
 				add_tech_bonus = {
-					name = CUB_the_cannon
+					name = "Naval Gun"
 					bonus = 0.5
-					uses = 3
+					uses = 4
 					category = naval_equipment
 				}
  			}	
 			else = {
 				navy_experience = 15
 			}
+		}
+	}
+	focus = {
+		id = CUB_final_naval_reform
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = CUB_the_cannon focus = CUB_the_torpedo }
+		x = 2
+		y = 3
+		relative_position_id = CUB_carrier_bonus
+		cost = 10
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			if = {
+ 				limit = {
+					has_completed_focus = CUB_carrier_bonus
+				}
+				add_doctrine_cost_reduction = {
+				 name = "Final navy refrom"
+				cost_reduction = 1
+				uses = 2
+				category = naval_doctrine
+			}
+				swap_ideas = {
+					remove_idea = CUB_obsolete_navy_2
+					add_idea = CUB_obsolete_navy_final
+				}
+
+ 			
+				
+ 			}	
+			if = {
+				limit = {
+					has_completed_focus = CUB_disrupting_the_great_powers
+				}
+				add_doctrine_cost_reduction = {
+				name = "Final navy refrom"
+				cost_reduction = 1
+				uses = 2
+				category = naval_doctrine
+			}
+			swap_ideas = {
+					remove_idea = CUB_obsolete_navy_4
+					add_idea = CUB_obsolete_navy_final_2
+				}
+                
+			}
+			else = {
+            swap_ideas = {
+				remove_idea = CUB_obsolete_navy
+				add_idea = CUB_obsolete_navy_show
+			}
+				add_doctrine_cost_reduction = {
+				name = "Final navy refrom"
+				cost_reduction = 1
+				uses = 2
+				category = naval_doctrine
+			
+			}
+			}
+			
 		}
 	}					
 
@@ -373,17 +389,12 @@ focus_tree = {
 		completion_reward = {
 			if = {
  				limit = { has_dlc = "Man the Guns" }
-				add_tech_bonus = {
-					name = CUB_the_torpedo
-					bonus = 0.5
-					uses = 2
-					category = ss_tech
-				}
+				
 				add_tech_bonus = {
 					name = CUB_the_torpedo
 					bonus = 1.00
-					uses = 1
-					category = naval_equipment
+					uses = 2
+					category = cat_torpedoes
 				}
  			}	
 			else = {
@@ -394,20 +405,31 @@ focus_tree = {
 
 	focus = {
 		id = CUB_a_long_and_proud_tradition
-		icon = GFX_focus_CUB_a_long_and_proud_tradition
-		prerequisite = { focus = CUB_disrupting_the_great_powers focus = CUB_a_fleet_fit_for_the_aegean }
+		icon = GFX_focus_SMB_blue_water_fleet
+		prerequisite = { focus = CUB_disrupting_the_great_powers focus = CUB_carrier_bonus }
 		x = 0
 		y = 3
-		relative_position_id = CUB_the_hellenic_navy
-		cost = 10
+		relative_position_id = CUB_the_cuban_navy
+		cost = 5
 		ai_will_do = {
 			base = 1
 		}
 
 		completion_reward = {
-			add_stability = 0.05
-			navy_experience = 20
-			add_ideas = CUB_ancient_talents
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+				}
+			}
 		}
 	}		
 
@@ -900,10 +922,8 @@ focus_tree = {
 	focus = {
 		id = CUB_politika
 		icon = GFX_focus_BRA_repeale_national_security_law
-		x = 0
+		x = 10
 		y = 1
-		prerequisite = { focus = CUB_Reform }
-		relative_position_id = CUB_Reform
 		cost = 10
 		
 		available_if_capitulated = yes
@@ -979,7 +999,7 @@ focus_tree = {
 				ideology = fascism
 				popularity = 0.1
 			}
-				retire_character = CUB_fidel_castro
+				retire_character = CUB_fidel_castro_ruz_general
 				retire_character = CUB_che_guevara_general
 			}
 		}
@@ -1195,6 +1215,10 @@ focus_tree = {
 	       set_politics = {
 			ruling_party = communism
 			elections_allowed = no
+		   }
+		   hidden_effect = {
+			recruit_character = CUB_fidel_castro_ruz_general
+            recruit_character = CUB_che_guevara_general
 		   }
 		}
 	}
@@ -1754,7 +1778,6 @@ focus_tree = {
 	focus = {
 		id = CUB_ekonomi
 		icon = GFX_focus_ITA_devaluate_the_lire
-		prerequisite = { focus = CUB_Reform }
 		x = 27
 		y = 1
 		cost = 10
@@ -2073,7 +2096,7 @@ focus = {
 		
 		x = 27
 		y = 3
-		cost = 12
+		cost = 10
 		
 		available_if_capitulated = yes
 
@@ -2106,9 +2129,12 @@ focus = {
 		icon = GFX_focus_generic_reorient_production
 		prerequisite = { focus = CUB_fabrika1 }
 		relative_position_id = CUB_fabrika1
-		x = 0
+		x = -1
 		y = 1
-		cost = 12
+		cost = 10
+		mutually_exclusive = {
+			focus = CUB_dockyard
+		}
 		
 		available_if_capitulated = yes
 
@@ -2125,6 +2151,40 @@ focus = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+
+		}
+	}
+	focus = {
+		id = CUB_dockyard
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = CUB_fabrika1 }
+		relative_position_id = CUB_fabrika1
+		mutually_exclusive = {
+			focus = CUB_fabrika2
+		}
+		x = 1
+		y = 1
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			315 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+			1017 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
 					level = 3
 					instant_build = yes
 				}

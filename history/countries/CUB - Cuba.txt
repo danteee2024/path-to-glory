@@ -70,7 +70,27 @@ if = {
 	limit = {
 		has_dlc = "Man the Guns"
 	}
+	set_naval_oob = "CUB_1936_naval_mtg"
+	create_equipment_variant = {
+		name = "Najasa"
+		type = ship_hull_cruiser_coastal_defense_ship
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			front_1_custom_slot = ship_anti_air_1
+			mid_1_custom_slot = ship_anti_air_1
+			mid_2_custom_slot = ship_anti_air_1
+			rear_1_custom_slot = ship_medium_battery_1
+		}
+		obsolete = yes
+	}
 	set_technology = {
+		coastal_defense_ships = 1
 		early_ship_hull_light = 1
 		early_ship_hull_cruiser = 1
 		early_ship_hull_heavy = 1
@@ -85,7 +105,7 @@ if = {
 }
 if = {
 	limit = { has_dlc = "By Blood Alone" }
-	    set_air_oob = "CUB_1936_air_bba"
+	   
 		set_technology = {
 			aa_lmg = 1
 			engines_1 = 1
@@ -117,8 +137,6 @@ if = {
 recruit_character = CUB_tolga_general
 recruit_character = CUB_teo_general
 recruit_character = CUB_fulgencio_batista_general
-recruit_character = CUB_fidel_castro_ruz_general
-recruit_character = CUB_che_guevara_general
 recruit_character = CUB_josé_agripino_barnet
 recruit_character = CUB_fidel_castro_ruz
 recruit_character = CUB_ramon_grau
@@ -153,6 +171,7 @@ recruit_character = CUB_carlos_alberto_ucles
 recruit_character = CUB_roberto_michelleti_bain
 recruit_character = CUB_orlando_rodriguez_jimino
 recruit_character = CUB_abraham_williams_calderon
+recruit_character = CUB_mario_ramírez_delgado
 
 
 set_country_flag = monroe_doctrine
@@ -165,11 +184,14 @@ set_convoys = 275
 	oob = "CUB_1936"
 	add_command_power = 100
 	add_ideas = {
+		CUB_obsolete_navy
+		CUB_obsolete_army
+		CUB_obsolete_air_force
 		american_infulence
 		CUB_great_depression
 		free_trade
 	    limited_conscription
-	    low_economic_mobilisation
+	    partial_economic_mobilisation
 		bad_geurilla_problem
 	}
 }

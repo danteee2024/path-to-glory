@@ -111,20 +111,56 @@ characters={
 	}
 
 	CUB_tolga_general = {
-		name="Tolga Turan"
+		name="Pilar García"
 		portraits={
 			army={
-				large="GFX_portrait_CUB_tolga_turan"
+				large="GFX_Portrait_South_America_Generic_land_1"
 			}
+		}
+		corps_commander={
+			traits={ infantry_leader }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	CUB_mario_ramírez_delgado = {
+		name = "Mario Ramírez Delgado"
+		portraits = {
+			navy = {
+				large="GFX_Portrait_South_America_Generic_navy_3"
+			}
+		}
+		navy_leader = {
+			traits = {
+				blockade_runner superior_tactician
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 1
+			maneuvering_skill = 3
+			coordination_skill = 2
 		}
 	}
 
 	CUB_teo_general = {
-		name="Teo"
+		name="José Eleuterio Pedraza"
 		portraits={
 			army={
-				large="GFX_portrait_teo_general"
+				large="GFX_Portrait_South_America_Generic_land_3"
 			}
+		}
+		corps_commander={
+			traits={ brilliant_strategist }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
 		}
 	}
 
@@ -147,7 +183,7 @@ characters={
 				}
 		}
 # TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
-		name="Fidél Castro"
+		name="Salas Cañizares"
 		portraits={
 			army={
 				small="GFX_idea_generic_army_south_america_3"
@@ -264,9 +300,9 @@ characters={
 				traits = {
 					army_infantry_2
 				}
-				cost = 350
+				cost = 100
 		    }
-		    name="Teo"
+		    name="José Eleuterio Pedraza"
 		    portraits={
 			    army={
 				    small="GFX_idea_teo_advisor"
@@ -688,7 +724,7 @@ characters={
 					original_tag = CUB
 				}
 				traits = {
-					army_chief_defensive_2
+					army_chief_offensive_2
 				}
 				cost = 100
 				ai_will_do = {
