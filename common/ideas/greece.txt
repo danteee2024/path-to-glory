@@ -1717,6 +1717,32 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.1		
 			}
 		}
+		    GRE_Modern_Warfare = {
+			
+			picture = generic_infantry_equipment_manufacturer_2
+
+			allowed = {
+				original_tag = GRE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				
+			}
+
+			equipment_bonus = {
+				Infantry_equipment = {
+					build_cost_ic = -0.15
+					instant = yes
+			}
+		}
+	}
 
 		GRE_cooperative_trade_unions = {
 				
@@ -2658,6 +2684,8 @@ ideas = {
 
 		GRE_loyal_monarchists = {
 
+			picture = bra_monarchist_uprising
+
 			allowed = {
 				always = no
 			}
@@ -2675,6 +2703,8 @@ ideas = {
 		}
 
 		GRE_friendly_monarchists = {
+
+			picture = bra_monarchist_uprising
 
 			allowed = {
 				always = no
@@ -2694,6 +2724,8 @@ ideas = {
 
 		GRE_hostile_monarchists = {
 
+			picture = bra_monarchist_uprising
+
 			allowed = {
 				always = no
 			}
@@ -2710,6 +2742,7 @@ ideas = {
 		}
 
 		GRE_loyal_republicans = {
+			picture = AFG_republic_idea
 
 			allowed = {
 				always = no
@@ -2728,6 +2761,7 @@ ideas = {
 		}
 
 		GRE_friendly_republicans = {
+			picture = AFG_republic_idea
 
 			allowed = {
 				always = no
@@ -2746,6 +2780,8 @@ ideas = {
 		}
 
 		GRE_hostile_republicans = {
+			
+			picture = AFG_republic_idea
 
 			allowed = {
 				always = no
@@ -2764,6 +2800,8 @@ ideas = {
 
 		GRE_loyal_communists = {
 
+			picture = generic_communism_drift_bonus
+
 			allowed = {
 				always = no
 			}
@@ -2781,6 +2819,7 @@ ideas = {
 		}
 
 		GRE_friendly_communists = {
+			picture = generic_communism_drift_bonus
 
 			allowed = {
 				always = no
@@ -2799,6 +2838,7 @@ ideas = {
 		}
 
 		GRE_hostile_communists = {
+			picture = generic_communism_drift_bonus
 
 			allowed = {
 				always = no
@@ -2816,6 +2856,7 @@ ideas = {
 		}
 
 		GRE_loyal_fascists = {
+			picture = generic_fascism_drift_2
 
 			allowed = {
 				always = no
@@ -2834,6 +2875,7 @@ ideas = {
 		}
 
 		GRE_friendly_fascists = {
+			picture = generic_fascism_drift_2
 
 			allowed = {
 				always = no
@@ -2852,6 +2894,7 @@ ideas = {
 		}
 
 		GRE_hostile_fascists = {
+			picture = generic_fascism_drift_2
 
 			allowed = {
 				always = no
@@ -2868,32 +2911,4 @@ ideas = {
 			}
 		}
 
-	
-
-    GRE_Modern_Warfare = {
-			
-			picture = generic_infantry_equipment_manufacturer_2
-
-			allowed = {
-				original_tag = GRE
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				
-			}
-
-			equipment_bonus = {
-				Infantry_equipment = {
-					build_cost_ic = -0.15
-					instant = yes
-			}
-		}
-	}
 }
