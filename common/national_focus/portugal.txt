@@ -6278,7 +6278,9 @@ focus = {
 		cost = 10
 		completion_reward = {
 			add_political_power = -150
-			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = POR_more_buildings_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_timed_idea = {
 				idea = JAP_investment
 				days = 365
@@ -6293,7 +6295,11 @@ focus = {
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					type = infrastructure
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = arms_factory
 					level = 1
 				}
 			} 
