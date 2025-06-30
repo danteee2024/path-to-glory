@@ -1093,17 +1093,15 @@ focus = {
 		}
 
 		completion_reward = {
-			SOV = { 
-				country_event = mongolia.1
-				hours = 12
-			}
+			SOV = {	country_event = mongolia.one }
+			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = if_they_accept_MON_tt
 		}
 	}
 	focus = {
 		id = MON_mobilise_the_workers
-		icon =GFX_focus_generic_workers_and_farmers_rise
+		icon = GFX_focus_generic_workers_and_farmers_rise
 		x = 1
 		y = 1
 		cost = 10
@@ -1376,7 +1374,7 @@ focus = {
 	}
 	
 	focus = {
-		id = MON_finalise_moderisation_of_industry
+        id = MON_finalise_modernisation_of_industry
 		icon = GFX_focus_SOV_rebuild_the_savior_cathedral
 		x = 1
 		y = 1
@@ -1820,7 +1818,7 @@ focus = {
 		relative_position_id = MON_self_sufficient
 		prerequisite = {
 			focus = MON_strong_nomadic_warriors_of_the_steppes
-			focus = MON_finalise_moderisation_of_industry
+			focus = MON_finalise_modernisation_of_industry
 			focus = MON_many_men_of_the_steppes
 
 		}
@@ -2637,7 +2635,7 @@ add_timed_idea = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = available_political_advisor
+			custom_effect_tooltip = available_military_high_command_tooltip
 			show_ideas_tooltip = MON_buyannmeh
 		}
 	}
@@ -2936,6 +2934,7 @@ focus = {
 		
 		completion_reward = {
 			add_political_power = 100
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_timed_idea = {
 				idea = MON_rely_on_national_strength_idea
 				days = 849
@@ -2965,8 +2964,9 @@ focus = {
 				ideology = communism
 				popularity = -0.10
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			remove_ideas = MON_soviet_nkvd_agents
-			MON_soviet_high_influence_decrease_effect = yes
+			custom_effect_tooltip = generic_skip_one_line_tt
 			SOV = {
 				add_opinion_modifier = {
 					target = ROOT
@@ -2999,6 +2999,7 @@ focus = {
 
 		completion_reward = {
 			add_stability = 0.05
+			custom_effect_tooltip = generic_skip_one_line_tt
 				OVERLORD = {
 				set_autonomy = {
 					target = MON
@@ -3061,7 +3062,7 @@ kill_country_leader = yes
 	}
 
 	focus = {
-		id = MON_faciliate_cooperation_with_china
+		id = MON_facilitate_cooperation_with_china
 		icon = GFX_focus_GER_ally_chiang_kai_shek
 		x = 1
 		y = 1
@@ -3145,18 +3146,17 @@ kill_country_leader = yes
 		icon = GFX_focus_research2
 		x = 0
 		y = 1
-		relative_position_id = MON_faciliate_cooperation_with_china
+		relative_position_id = MON_facilitate_cooperation_with_china
 		cost = 10
 
-		prerequisite = { focus = MON_faciliate_cooperation_with_china }
+		prerequisite = { focus = MON_facilitate_cooperation_with_china }
 
 		ai_will_do = {
 			factor = 30	
 		}
 
 		available = {
-			has_idea = MON_population_learning_idea
-			num_of_factories > 25
+			num_of_factories > 20
 		}
 
 		completion_reward = {
@@ -3302,7 +3302,15 @@ kill_country_leader = yes
 					create_intelligence_agency = yes
 				}
 			}
-				add_ideas = MON_loyalists_in_mvd
+			if = {
+				limit = {
+					has_idea = MON_soviet_nkvd_agents
+				}
+				swap_ideas = {
+					remove_idea = MON_soviet_nkvd_agents
+					add_idea = MON_mvd_loyalists_idea
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_STABILITY  }
 	}
@@ -3362,9 +3370,10 @@ kill_country_leader = yes
 		}
 
 		completion_reward = {
+			add_political_power = 100
 			set_rule = { can_create_factions = yes }
 			create_faction = "Liberation Front"
-			add_political_power = 100
+			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = MON_invite_all_independent_anti_sovet_tt
 			every_other_country = {
 				limit = {
@@ -3390,7 +3399,7 @@ kill_country_leader = yes
 				}
 				country_event = { id = generic.5 days = 1 }
 			}
-			MON_soviet_high_influence_decrease_effect = yes
+			
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL   }
 	}

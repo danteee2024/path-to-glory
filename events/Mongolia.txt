@@ -27,15 +27,15 @@ add_namespace = mongolia
 
 
 country_event = {
-	id = mongolia.1
-	title = mongolia.1.t
-	desc = mongolia.1.d
+	id = mongolia.one
+	title = mongolia.one.t
+	desc = mongolia.one.d
 	picture = GFX_report_event_soviet_tanks_snow
 	
 	is_triggered_only = yes
 	
 	option = { # Accept demands
-		name = mongolia.1.a
+		name = mongolia.one.a
 		# if = {
 		# 	limit = {
 		# 		country_exists = TAN
@@ -69,7 +69,7 @@ country_event = {
 		# }
 	}
 	option = { # Refuse
-		name = mongolia.1.b
+		name = mongolia.one.b
 		ai_chance = { factor = 10 }
 		
 	}

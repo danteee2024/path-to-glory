@@ -1,6 +1,24 @@
 ideas = {
 
 	country = {
+		MON_soviet_nkvd_agents = {
+
+			picture = nkvd_2
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				operative_slot = 1
+				political_power_factor = -0.15
+			}
+		}
 		MON_buddhist_support = {
 
 			picture = AFG_parliament_building

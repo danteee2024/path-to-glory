@@ -18,6 +18,7 @@ add_ideas = {
 	MON_collectivisation_1
 	MON_nomad_1
 	MON_state_of_the_armed_forces
+	MON_soviet_nkvd_agents
 }
 
 set_variable = { mon_poster_center_icon_frame = 1 }
