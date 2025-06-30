@@ -1,0 +1,380 @@
+spriteTypes = {	
+
+###### Leaders ######
+
+### Peljidiin Genden ###
+	SpriteType = {
+		name = GFX_MON_Peljidiin_Genden
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Peljidiin_Genden.dds
+	}
+	SpriteType = {
+		name = GFX_MON_Peljidiin_Genden_small
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Peljidiin_Genden_small.dds
+	}
+
+### Sambadondogiin Tserendorj ###
+	SpriteType = {
+		name = GFX_MON_Sambadondogiin_Tserendorj
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Sambadondogiin_Tserendorj.dds
+	}
+	SpriteType = {
+		name = GFX_MON_Sambadondogiin_Tserendorj_small
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Sambadondogiin_Tserendorj_small.dds
+	}
+
+### Khorloogiin Choibalsan ###
+# Younger general
+	SpriteType = {
+		name = GFX_MON_Khorloogiin_Choibalsan_1
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Khorloogiin_Choibalsan_1.dds
+	}
+	SpriteType = {
+		name = GFX_MON_Khorloogiin_Choibalsan_1_small
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Khorloogiin_Choibalsan_1_small.dds
+	}
+# Older general
+	SpriteType = {
+		name = GFX_MON_Khorloogiin_Choibalsan_2
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Khorloogiin_Choibalsan_2.dds
+	}
+	SpriteType = {
+		name = GFX_MON_Khorloogiin_Choibalsan_2_small
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Khorloogiin_Choibalsan_2_small.dds
+	}
+# Older civilian
+	SpriteType = {
+		name = GFX_MON_Khorloogiin_Choibalsan_3
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Khorloogiin_Choibalsan_3.dds
+	}
+	SpriteType = {
+		name = GFX_MON_Khorloogiin_Choibalsan_3_small
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Khorloogiin_Choibalsan_3_small.dds
+	}
+
+### Anandyn Amar ###
+	SpriteType = {
+		name = GFX_MON_Anandyn_Amar
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Anandyn_Amar.dds
+	}
+	SpriteType = {
+		name = GFX_MON_Anandyn_Amar_small
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Anandyn_Amar_small.dds
+	}
+
+### Yumjaagiin Tsedenbal ###
+# General
+	SpriteType = {
+		name = GFX_MON_Yumjaagiin_Tsedenbal_1
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Yumjaagiin_Tsedenbal_1.dds
+	}
+	SpriteType = {
+		name = GFX_MON_Yumjaagiin_Tsedenbal_1_small
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Yumjaagiin_Tsedenbal_1_small.dds
+	}
+# Civilian
+	SpriteType = {
+		name = GFX_MON_Yumjaagiin_Tsedenbal_2
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Yumjaagiin_Tsedenbal_2.dds
+	}
+	SpriteType = {
+		name = GFX_MON_Yumjaagiin_Tsedenbal_2_small
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Yumjaagiin_Tsedenbal_2_small.dds
+	}
+
+### Dorjjavyn Luvsansharav ###
+	SpriteType = {
+		name = GFX_MON_Dorjjavyn_Luvsansharav
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Dorjjavyn_Luvsansharav.dds
+	}
+	SpriteType = {
+		name = GFX_MON_Dorjjavyn_Luvsansharav_small
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Dorjjavyn_Luvsansharav_small.dds
+	}
+
+### Sukhbaataryn Yanjmaa ###
+	SpriteType = {
+		name = GFX_MON_Sukhbaataryn_Yanjmaa
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Sukhbaataryn_Yanjmaa.dds
+	}
+	SpriteType = {
+		name = GFX_MON_Sukhbaataryn_Yanjmaa_small
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Sukhbaataryn_Yanjmaa_small.dds
+	}
+
+### Navaanneren ###
+	SpriteType = {
+		name = GFX_MON_Navaanneren
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Navaanneren.dds
+	}
+	SpriteType = {
+		name = GFX_MON_Navaanneren_small
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Navaanneren_small.dds
+	}
+
+### Erenjav ###
+	SpriteType = {
+		name = GFX_MON_Erenjav
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Erenjav.dds
+	}
+	SpriteType = {
+		name = GFX_MON_Erenjav_small
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Erenjav_small.dds
+	}
+
+### Officer Council ###
+	SpriteType = {
+		name = GFX_MON_Officer_Council
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Officer_Council.dds
+	}
+
+###### Generals ######
+
+### Gelegdorjiin Demid ###
+	SpriteType = {
+		name = GFX_MON_Gelegdorjiin_Demid
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Gelegdorjiin_Demid.dds
+	}
+	SpriteType = {
+		name = GFX_MON_Gelegdorjiin_Demid_small
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Gelegdorjiin_Demid_small.dds
+	}
+
+
+### Gonchingiin Sambuu ###
+	SpriteType = {
+		name = GFX_MON_Gonchigiin_Sambuu
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Gonchigiin_Sambuu.dds
+	}
+	SpriteType = {
+		name = GFX_MON_Gonchigiin_Sambuu_small
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Gonchigiin_Sambuu_small.dds
+	}
+
+### Gombojavyn Damba ###
+	SpriteType = {
+		name = GFX_MON_Gombojavyn_Damba
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Gombojavyn_Damba.dds
+	}
+	SpriteType = {
+		name = GFX_MON_Gombojavyn_Damba_small
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Gombojavyn_Damba_small.dds
+	}
+
+### Jigdengiin Malj
+	SpriteType = {
+		name = GFX_MON_Jigdengiin_Malj
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Jigdengiin_Malj.dds
+	}
+	SpriteType = {
+		name = GFX_MON_Jigdengiin_Malj_small
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Jigdengiin_Malj_small.dds
+	}
+
+### Gotovyn Damba ###
+	SpriteType = {
+		name = GFX_MON_Gotovyn_Damba
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Gotovyn_Damba.dds
+	}
+	SpriteType = {
+		name = GFX_MON_Gotovyn_Damba_small
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Gotovyn_Damba_small.dds
+	}
+
+### Tömöriin Dashzeveg
+	SpriteType = {
+		name = GFX_MON_Tomoriin_Dashzeveg
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Tomoriin_Dashzeveg.dds
+	}
+	SpriteType = {
+		name = GFX_MON_Tomoriin_Dashzeveg_small
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Tomoriin_Dashzeveg_small.dds
+	}
+
+### Tserenjavyn Luvsandonoi ###
+	SpriteType = {
+		name = GFX_MON_Tserenjavyn_Luvsandonoi
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Tserenjavyn_Luvsandonoi.dds
+	}
+	SpriteType = {
+		name = GFX_MON_Tserenjavyn_Luvsandonoi_small
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Tserenjavyn_Luvsandonoi_small.dds
+	}
+
+### Jamyangiin Lkhagvasuren ###
+	SpriteType = {
+		name = GFX_MON_Jamyangiin_Lkhagvasuren
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Jamyangiin_Lkhagvasuren.dds
+	}
+	SpriteType = {
+		name = GFX_MON_Jamyangiin_Lkhagvasuren_small
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Jamyangiin_Lkhagvasuren_small.dds
+	}
+
+### Shagdaryn Gongor ###
+	SpriteType = {
+		name = GFX_MON_Shagdaryn_Gongor
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Shagdaryn_Gongor.dds
+	}
+	SpriteType = {
+		name = GFX_MON_Shagdaryn_Gongor_small
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Shagdaryn_Gongor_small.dds
+	}
+
+### Iosif Gusakovsky ###
+	SpriteType = {
+		name = GFX_MON_Iosif_Gusakovsky
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Iosif_Gusakovsky.dds
+	}
+	SpriteType = {
+		name = GFX_MON_Iosif_Gusakovsky_small
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Iosif_Gusakovsky_small.dds
+	}
+
+### Kamil Giżycki ###
+	SpriteType = {
+		name = GFX_MON_Kamil_Gizycki
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Kamil_Gizycki.dds
+	}
+	SpriteType = {
+		name = GFX_MON_Kamil_Gizycki_small
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Kamil_Gizycki_small.dds
+	}
+
+### Mikhail Tornovsky ###
+	SpriteType = {
+		name = GFX_MON_Mikhail_Tornovsky
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Mikhail_Tornovsky.dds
+	}
+	SpriteType = {
+		name = GFX_MON_Mikhail_Tornovsky_small
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Mikhail_Tornovsky_small.dds
+	}
+
+### Pyotr Polovtsov ###
+	SpriteType = {
+		name = GFX_MON_Pyotr_Polovtsov
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Pyotr_Polovtsov.dds
+	}
+	SpriteType = {
+		name = GFX_MON_Pyotr_Polovtsov_small
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Pyotr_Polovtsov_small.dds
+	}
+
+
+
+###### Foreign ######
+
+### Urzhin_Garmaev ###
+	SpriteType = {
+		name = GFX_MAN_Urzhin_Garmaev
+		texturefile = gfx/leaders/MAN/Portrait_Manchukuo_Urzhin_Garmaev.dds
+	}
+	SpriteType = {
+		name = GFX_MAN_Urzhin_Garmaev_small
+		texturefile = gfx/leaders/MAN/Portrait_Manchukuo_Urzhin_Garmaev_small.dds
+	}
+	SpriteType = {
+		name = GFX_MON_Urzhin_Garmaev_operative
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Urzhin_Garmaev_operative.dds
+	}
+
+### Li Shouxin ###
+	SpriteType = {
+		name = GFX_MEN_Li_Shouxin
+		texturefile = gfx/leaders/MEN/Portrait_Mengkukuo_Li_Shouxin.dds
+	}
+	SpriteType = {
+		name = GFX_MEN_Li_Shouxin_small
+		texturefile = gfx/leaders/MON/Portrait_Mengkukuo_Li_Shouxin_small.dds
+	}
+
+### Ulanhu ###
+	SpriteType = {
+		name = GFX_MEN_Ulanhu
+		texturefile = gfx/leaders/MEN/Portrait_Mengkukuo_Ulanhu.dds
+	}
+	SpriteType = {
+		name = GFX_MEN_Ulanhu_small
+		texturefile = gfx/leaders/MON/Portrait_Mengkukuo_Ulanhu_small.dds
+	}
+
+
+
+###### Generic ######
+
+	SpriteType = {
+		name = GFX_MON_generic_land_1
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Generic_land_1.dds
+	}
+	SpriteType = {
+		name = GFX_MON_generic_land_1_small
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Generic_land_1_small.dds
+	}
+
+	SpriteType = {
+		name = GFX_MON_generic_land_2
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Generic_land_2.dds
+	}
+	SpriteType = {
+		name = GFX_MON_generic_land_2_small
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Generic_land_2_small.dds
+	}
+
+	SpriteType = {
+		name = GFX_MON_generic_land_3
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Generic_land_3.dds
+	}
+	SpriteType = {
+		name = GFX_MON_generic_land_3_small
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Generic_land_3_small.dds
+	}
+
+	SpriteType = {
+		name = GFX_MON_generic_land_4
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Generic_land_4.dds
+	}
+	SpriteType = {
+		name = GFX_MON_generic_land_4_small
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Generic_land_4_small.dds
+	}
+
+	SpriteType = {
+		name = GFX_MON_generic_land_5
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Generic_land_5.dds
+	}
+	SpriteType = {
+		name = GFX_MON_generic_land_5_small
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Generic_land_5_small.dds
+	}
+
+	SpriteType = {
+		name = GFX_MON_generic_land_6
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Generic_land_6.dds
+	}
+	SpriteType = {
+		name = GFX_MON_generic_land_6_small
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Generic_land_6_small.dds
+	}
+
+	SpriteType = {
+		name = GFX_MON_generic_land_7
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Generic_land_7.dds
+	}
+	SpriteType = {
+		name = GFX_MON_generic_land_7_small
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Generic_land_7_small.dds
+	}
+
+	SpriteType = {
+		name = GFX_MON_generic_land_8
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Generic_land_8.dds
+	}
+	SpriteType = {
+		name = GFX_MON_generic_land_8_small
+		texturefile = gfx/leaders/MON/Portrait_Mongolia_Generic_land_8_small.dds
+	}
+
+
+
+	
+}

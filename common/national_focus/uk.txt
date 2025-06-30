@@ -1498,7 +1498,7 @@ focus_tree = {
 				cic = 1500
 				equipment_type = infantry_equipment
 				seller_tags = {
-					ENG
+					USA FRA GER SOV HOL BEL ITA CAN SAF AST NZL 
 				}
 			}
 		}

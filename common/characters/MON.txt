@@ -1,0 +1,1314 @@
+characters = {
+
+#######################
+### STARTING LEADERS ###
+#######################
+
+	MON_peljidiin_genden = {
+		name = MON_peljidiin_genden
+		portraits = {
+			civilian = {
+				large = "GFX_MON_Peljidiin_Genden"
+				small = "GFX_MON_Peljidiin_Genden_small" 
+			}
+		}
+		country_leader = {
+			ideology = leninism
+			traits = { staunch_sovereigntist devout_buddhist }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	
+	}
+
+	MON_sambadondogiin_tserendorj = {
+		name = MON_sambadondogiin_tserendorj
+		portraits = {
+			civilian = {
+				large = "GFX_MON_Sambadondogiin_Tserendorj"
+				small = "GFX_MON_Sambadondogiin_Tserendorj_small" 
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			traits = { acting_prime_minister }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MON_sambadondogiin_tserendorj
+			allowed  = {
+				original_tag  = MON
+			}
+			visible = {
+				hidden_trigger = {
+					MON_sambadondogiin_tserendorj = { is_country_leader = no }
+					NOT = { has_government = communism }
+				}
+			}
+			traits  = {
+				popular_figurehead
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+	
+	}
+
+#########################
+### STARTING ADVISERS ###
+#########################
+
+### Anandyn Amar
+	MON_anandyn_amar = {
+		name = MON_anandyn_amar
+		portraits = {
+			civilian = {
+				large = "GFX_MON_Anandyn_Amar"
+				small = "GFX_MON_Anandyn_Amar_small"
+			}
+		}
+		country_leader = {
+			ideology = marxism
+			traits = { popular_figurehead }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MON_anandyn_amar
+			allowed  = {
+				original_tag  = MON
+			}
+			visible = {
+				hidden_trigger = {
+					MON_anandyn_amar = { is_country_leader = no }
+				}
+			}
+			traits  = {
+				popular_figurehead
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+	}
+
+### Dansranbilegiin Dogsom
+	MON_dansranbilegiin_dogsom = {
+		name = MON_dansranbilegiin_dogsom
+		portraits = {
+			civilian = { small = "GFX_MON_Dansranbilegiin_Dogsom_small" }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MON_dansranbilegiin_dogsom
+			allowed  = {
+				original_tag  = MON
+			}
+			available = {
+				has_government = communism
+			}
+			traits  = {
+				financial_expert
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+	}
+
+### Darijavyn Losol
+	MON_darijavyn_losol = {
+		name = MON_darijavyn_losol
+		portraits = {
+			civilian = { small = "GFX_MON_Darijavyn_Losol_small" }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MON_darizavyn_losol
+			allowed  = {
+				original_tag  = MON
+			}
+			available = {
+				has_government = communism
+			}
+			traits  = {
+				silent_workhorse
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+	}
+
+### Gonchigiin Bumtsend
+	MON_gonchigiin_bumtsend = {
+		name = MON_gonchigiin_bumtsend
+		portraits = {
+			civilian = { small = "GFX_MON_Gonchigiin_Bumtsend_small" }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MON_gonchigiin_bumtsend 
+			allowed  = {
+				original_tag  = MON
+			}
+			traits  = {
+				armaments_organizer 
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+	}
+
+### Dorjjavyn Luvsansharav
+	MON_dorjjavyn_luvsansharav = {
+		name = MON_dorjjavyn_luvsansharav
+		portraits = {
+			civilian = {
+				large = "GFX_MON_Dorjjavyn_Luvsansharav"
+				small = "GFX_MON_Dorjjavyn_Luvsansharav_small"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MON_dorjjavyn_luvsansharav
+			allowed  = {
+				original_tag  = MON
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = MON_third_mongolian_revolution
+					has_completed_focus = MON_throw_off_the_yoke
+				}
+			}
+			available = {
+				has_government = communism
+				hidden_trigger = {
+					MON_dorjjavyn_luvsansharav = { is_country_leader = no }
+				}
+			}
+			traits  = {
+				backroom_backstabber
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+		country_leader = {
+			ideology = stalinism
+			traits = { henchman_of_the_purge }
+			expire = "1948.1.1.12"
+			id = -1
+		}
+	}
+
+### Bat-Ochiryn Eldev-Ochir
+	MON_bat_ochiryn_eldev_ochir = {
+		name = MON_bat_ochiryn_eldev_ochir
+		portraits = {
+			civilian = { small = "GFX_MON_Bat_Ochiryn_Eldev_Ochir_small" }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MON_bat_ochiryn_eldev_ochir 
+			allowed  = {
+				original_tag  = MON
+			}
+			traits  = {
+				prince_of_terror
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+	}
+
+### Banzarjavyn Baasanjav
+	MON_banzarjavyn_baasanjav = {
+		name = MON_banzarjavyn_baasanjav
+		portraits = {
+			civilian = { small = "GFX_MON_Banzarjavyn_Baasanjav_small" }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MON_banzarjavyn_baasanjav
+			allowed  = {
+				original_tag  = MON
+			}
+			traits  = {
+				appeaser
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+	}
+
+#########################
+### STARTING GENERALS ###
+#########################
+
+### Khorloogiin Choibalsan
+	MON_khorloogiin_choibalsan = {
+		name = MON_khorloogiin_choibalsan
+		portraits = {
+			civilian = {
+				large = "GFX_MON_Khorloogiin_Choibalsan_1"
+			}
+			army = {
+				large = "GFX_MON_Khorloogiin_Choibalsan_1"
+				small = "GFX_MON_Khorloogiin_Choibalsan_1_small"
+			}
+		}
+		country_leader = {
+			ideology = stalinism
+			traits = { stalin_of_mongolia }
+			expire = "1948.1.1.12"
+			id = -1
+		}
+		advisor = {
+			cost = 100
+			slot = army_chief
+			idea_token = MON_khorloogiin_choibalsan
+			allowed  = {
+				original_tag = MON
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = MON_third_mongolian_revolution
+					has_completed_focus = MON_throw_off_the_yoke
+				}
+			}
+			available  = {
+
+			}
+			traits  = {
+				army_chief_offensive_2
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+		field_marshal = {
+			traits = { politically_connected cavalry_leader trait_MON_stalinist_loyalties }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
+			legacy_id = 0
+			visible = {
+				NOT = {
+					has_completed_focus = MON_third_mongolian_revolution
+					has_completed_focus = MON_throw_off_the_yoke
+				}
+			}
+		}
+	}
+
+### Gelegdorjiin Demid
+	MON_gelegdorjiin_demid = {
+		name = MON_gelegdorjiin_demid
+		portraits = {
+			army = { 
+				large = "GFX_MON_Gelegdorjiin_Demid"
+				small = "GFX_MON_Gelegdorjiin_Demid_small"
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = theorist
+			idea_token = MON_gelegdorjiin_demid
+			ledger = army
+			allowed = {
+				original_tag = MON
+			}
+			available = {
+				not = { has_completed_focus = MON_assassinate_demid }
+			}
+			traits = {
+				military_theorist
+			}
+		}
+		field_marshal = {
+			traits = { brilliant_strategist trait_cautious cavalry_leader }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id = 0
+		}
+	}
+
+### Gonchingiin Sambuu
+	MON_gonchingiin_sambuu = {
+		name = MON_gonchingiin_sambuu
+		portraits = {
+			army = { 
+				large = "GFX_MON_Gonchigiin_Sambuu" 
+				small = "GFX_MON_Gonchigiin_Sambuu_small" 
+			}
+		}
+		corps_commander = {
+			traits = { cavalry_officer organizer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id = 0
+		}
+	}
+
+### Gombojavyn Damba
+	MON_gombojavyn_damba = {
+		name = MON_gombojavyn_damba
+		portraits = {
+			army = { 
+				large = "GFX_MON_Gombojavyn_Damba" 
+				small = "GFX_MON_Gombojavyn_Damba_small" 
+			}
+		}
+		corps_commander = {
+			traits = { cavalry_officer trickster }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			legacy_id = 0
+		}
+	}
+
+### Jigdengiin Malj
+	MON_jigdengiin_malj = {
+		name = MON_jigdengiin_malj
+		portraits = {
+			army = { 
+				large = "GFX_MON_Jigdengiin_Malj" 
+				small = "GFX_MON_Jigdengiin_Malj_small" 
+			}
+		}
+		corps_commander = {
+			traits = { skilled_staffer cavalry_officer }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = 0
+		}
+	}
+
+### Gotovyn Damba
+	MON_gotovyn_damba = {
+		name = MON_gotovyn_damba
+		portraits = {
+			army = { 
+				large = "GFX_MON_Gotovyn_Damba" 
+				small = "GFX_MON_Gotovyn_Damba_small" 
+			}
+		}
+		corps_commander = {
+			traits = { cavalry_officer }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = 0
+		}
+	}
+
+### Tömöriin Dashzeveg
+	MON_tomoriin_dashzeveg = {
+		name = MON_tomoriin_dashzeveg
+		portraits = {
+			army = { 
+				large = "GFX_MON_Tomoriin_Dashzeveg"
+				small = "GFX_MON_Tomoriin_Dashzeveg_small"
+			}
+		}
+		corps_commander = {
+			traits = { trait_reckless war_hero cavalry_leader }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = 0
+		}
+	}
+
+#########################
+### MILITARY ADVISERS ###
+#########################
+
+### Ochiryn Dashchirav
+	MON_ochiryn_dashchirav = {
+		name = MON_ochiryn_dashchirav
+		portraits = {
+			army = {
+				small = "GFX_MON_Ochiryn_Dashchirav_small" 
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = army_chief
+			idea_token = MON_ochiryn_dashchirav 
+			ledger = army
+			allowed = {
+				original_tag = MON
+			}
+			traits = {
+				army_chief_organizational_2 
+			}	
+		}
+	}
+
+### Dorjiin Gonchig
+	MON_dorjiin_gonchig = {
+		name = MON_dorjiin_gonchig
+		portraits = {
+			army = {
+				small = "GFX_MON_Dorjiin_Gonchig_small" 
+			}
+		}
+		advisor = {
+			cost = 50
+			slot = army_chief
+			idea_token = MON_dorjiin_gonchig 
+			ledger = army
+			allowed = {
+				original_tag = MON
+			}
+			traits = {
+				army_chief_drill_1 
+			}	
+		}
+	}
+
+### Hamza Zaisanov
+	MON_hamza_zaisanov = {
+		name = MON_hamza_zaisanov
+		portraits = {
+			army = {
+				small = "GFX_MON_Hamza_Zaisanov_small" 
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = air_chief
+			idea_token = MON_hamza_zaisanov 
+			ledger = air
+			allowed = {
+				original_tag = MON
+			}
+			traits = {
+				air_chief_reform_2 
+			}	
+		}
+	}
+
+### Lkhamkhüügiin Darzav
+	MON_lkhamkhuugiin_darzav = {
+		name = MON_lkhamkhuugiin_darzav
+		portraits = {
+			army = {
+				small = "GFX_MON_Lkhamkhuugiin_Darzav_small" 
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = high_command
+			idea_token = MON_lkhamkhuugiin_darzav
+			ledger = army
+			allowed = {
+				original_tag = MON
+			}
+			traits = {
+				army_regrouping_2
+			}
+		}
+	}
+
+### Ölziibürengiin Puntsag
+	MON_olziiburengiin_puntsag = {
+		name = MON_olziiburengiin_puntsag
+		portraits = {
+			army = {
+				small = "GFX_MON_Olziiburengiin_Puntsag_small" 
+			}
+		}
+		advisor = {
+			cost = 50
+			slot = high_command
+			idea_token = MON_olziiburengiin_puntsag 
+			ledger = army
+			allowed = {
+				original_tag = MON
+			}
+			traits = {
+				army_entrenchment_1 
+			}
+		}
+	}
+
+### G. Jantsankhorloo
+	MON_jantsankhorloo = {
+		name = MON_jantsankhorloo
+		portraits = {
+			army = {
+				small = "GFX_MON_Jantsankhorloo_small" 
+			}
+		}
+		advisor = {
+			cost = 50
+			slot = high_command
+			idea_token = MON_jantsankhorloo 
+			ledger = army
+			allowed = {
+				original_tag = MON
+			}
+			traits = {
+				army_artillery_1 
+			}
+		}
+	}
+
+### Choimbolyn Shagdarsuren
+	MON_choimbolyn_shagdarsuren = {
+		name = MON_choimbolyn_shagdarsuren
+		portraits = {
+			army = {
+				small = "GFX_MON_Choimbolyn_Shagdarsuren_small" 
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = high_command
+			idea_token = MON_choimbolyn_shagdarsuren 
+			ledger = air
+			allowed = {
+				original_tag = MON
+			}
+			traits = {
+				air_close_air_support_2
+			}
+		}
+	}
+
+### Gelenkhüü
+	MON_gelenkhuu = {
+		name = MON_gelenkhuu
+		portraits = {
+			army = {
+				small = "GFX_MON_Gelenkhuu_small" 
+			}
+		}
+		advisor = {
+			cost = 75
+			slot = theorist
+			idea_token = MON_gelenkhuu
+			ledger = air
+			allowed = {
+				original_tag = MON
+			}
+			traits = {
+				air_experimenter
+			}
+		}
+	}
+
+#######################
+### HISTORICAL PATH ###
+#######################
+
+### Yumjaagiin Tsedenbal
+	MON_yumjaagiin_tsedenbal = {
+		name = MON_yumjaagiin_tsedenbal
+		portraits = {
+			civilian = {
+				large = "GFX_MON_Yumjaagiin_Tsedenbal_2"
+				small = "GFX_MON_Yumjaagiin_Tsedenbal_2_small"
+			}
+			army = { 
+				large = "GFX_MON_Yumjaagiin_Tsedenbal_1"
+				small = "GFX_MON_Yumjaagiin_Tsedenbal_1_small"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MON_yumjaagiin_tsedenbal
+			allowed  = {
+				original_tag  = MON
+			}
+			visible = {
+				hidden_trigger = {
+					MON_yumjaagiin_tsedenbal = { is_country_leader = no }
+				}
+			}
+			available = {
+				has_completed_focus = MON_reshuffle_gov_of_mongolia
+			}
+			traits  = {
+				economist
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+		country_leader = {
+			ideology = stalinism
+			traits = { staunch_stalinist }
+			expire = "1991.4.20.12"
+			id = -1
+		}
+	}
+
+	MON_buyannmeh={
+		advisor={
+			
+			
+			slot = high_command
+			idea_token = MON_buyannmeh
+			ledger = air
+				allowed = {
+					original_tag = MON
+				}
+				traits = {
+					air_strategic_bombing_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Buyannmeh"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_asia_3"
+			}
+		}
+	}
+### Dashiin Damba
+	MON_dashiin_damba = {
+		name = MON_dashiin_damba
+		portraits = {
+			civilian = { small = "GFX_MON_Dashiin_Damba_small" }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MON_dashiin_damba
+			allowed  = {
+				original_tag  = MON
+			}
+			visible = {
+			}
+			available = {
+				has_completed_focus = MON_new_constitution
+			}
+			traits  = {
+				quartermaster_general
+			}
+			ai_will_do  = {
+				factor  = 1.000
+			}
+		}
+	}
+
+### Chimeddorjiin Surenjav
+	MON_chimeddorjiin_surenjav = {
+		name = MON_chimeddorjiin_surenjav
+		portraits = {
+			civilian = {
+				small = "GFX_MON_Chimeddorjiin_Surenjav_small" 
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MON_chimeddorjiin_surenjav
+			allowed = {
+					original_tag = MON
+			}
+			visible = {
+			}
+			available = {
+				has_completed_focus = MON_reshuffle_gov_of_mongolia
+			}
+			traits = {
+				propaganda_expert
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+### Bazaryn Shirendev
+	MON_bazaryn_shirendev = {
+		name = MON_bazaryn_shirendev
+		portraits = {
+			civilian = {
+				small = "GFX_MON_Bazaryn_Shirendev_small" 
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MON_bazaryn_shirendev
+			allowed = {
+					original_tag = MON
+			}
+			
+			available = {
+				has_completed_focus = MON_secularization_of_education
+			}
+			traits = {
+				education_reformer
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+### Tsendiin Damdinsüren
+	MON_tsendiin_damdinsuren = {
+		name = MON_tsendiin_damdinsuren
+		portraits = {
+			civilian = {
+				small = "GFX_MON_Tsendiin_Damdinsuren_small" 
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MON_tsendiin_damdinsuren
+			allowed = {
+				original_tag = MON
+			}
+			
+			available = {
+				has_completed_focus = MON_denounce_politizised_army
+			}
+			traits = {
+				editor
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+### Tserenjavyn Luvsandonoi
+	MON_tserenjavyn_luvsandonoi = {
+		name = MON_tserenjavyn_luvsandonoi
+		portraits = {
+			army = {
+				large = "GFX_MON_Tserenjavyn_Luvsandonoi"
+				small = "GFX_MON_Tserenjavyn_Luvsandonoi_small"
+			}
+		}
+		# Corps commander role added in focus MON_order_366
+	}
+
+### Jamyangiin Lkhagvasuren
+	MON_jamyangiin_lkhagvasuren = {
+		name = MON_jamyangiin_lkhagvasuren
+		portraits = {
+			army = {
+				large = "GFX_MON_Jamyangiin_Lkhagvasuren"
+				small = "GFX_MON_Jamyangiin_Lkhagvasuren_small"
+			}
+		}
+		# Corps commander role added in focus MON_order_366
+	}
+
+### Shagdaryn Gongor
+	MON_shagdaryn_gongor = {
+		name = MON_shagdaryn_gongor
+		portraits = {
+			army = {
+				large = "GFX_MON_Shagdaryn_Gongor"
+				small = "GFX_MON_Shagdaryn_Gongor_small"
+			}
+		}
+		# Corps commander role added in focus MON_modernising_the_cavalry
+	}
+
+### Bat-Ochiryn Shagdarjav
+	MON_bat_ochiryn_shagdarjav = {
+		name = MON_bat_ochiryn_shagdarjav
+		portraits = {
+			civilian = {
+				small = "GFX_MON_Bat_Ochiryn_Shagdarjav_small"
+			}
+		}
+		# Advisor role added in focus MON_internal_affairs_committee
+	}
+
+##########################
+### ALT COMMUNIST PATH ###
+##########################
+
+### Ölziitiin Badrakh
+	MON_olziitiin_badrakh = {
+		name = MON_olziitiin_badrakh
+		portraits = {
+			civilian = {
+				small = "GFX_MON_Olziitiin_Badrakh_small" 
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MON_olziitiin_badrakh 
+			allowed = {
+				original_tag = MON
+			}
+			visible = {
+				has_government = communism
+				
+			}
+			available = {
+				has_government = communism
+			}
+			traits = {
+				communist_revolutionary
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+### Zolbingiin Shijee
+	MON_zolbingiin_shijee = {
+		name = MON_zolbingiin_shijee
+		portraits = {
+			civilian = {
+				small = "GFX_MON_Zolbingiin_Shijee_small" 
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MON_zolbingiin_shijee
+			allowed = {
+				original_tag = MON
+			}
+			visible = {
+				has_government = communism
+				
+			}
+			available = {
+				has_government = communism
+			}
+			traits = {
+				ideological_crusader
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+### Owen Lattimore
+	MON_owen_lattimore = {
+		name = MON_owen_lattimore
+		portraits = {
+			civilian = {
+				small = "GFX_MON_Owen_Lattimore_small" 
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MON_owen_lattimore 
+			allowed = {
+				original_tag = MON
+			}
+			visible = {
+				has_completed_focus = MON_third_mongolian_revolution
+			}
+			available = {
+				has_completed_focus = MON_looking_outward
+				NOT = { has_war_with = USA }
+			}
+			traits = {
+				pacific_connection
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+### Antoine Mostaert
+	MON_antoine_mostaert = {
+		name = MON_antoine_mostaert
+		portraits = {
+			civilian = {
+				small = "GFX_MON_Antoine_Mostaert_small" 
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MON_antoine_mostaert 
+			allowed = {
+				original_tag = MON
+			}
+			visible = {
+				has_completed_focus = MON_freedom_of_religion
+			}
+			available = {
+				NOT = { has_war_with = BEL }
+			}
+			traits = {
+				catholic_missionary
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+### Navaandorjiin Jadambaa
+	MON_navaandorjiin_jadambaa = {
+		name = MON_navaandorjiin_jadambaa
+		portraits = {
+			civilian = {
+				small = "GFX_MON_Navaandorjiin_Jadambaa_small" 
+			}
+		}
+		# advisor role created in focus MON_elevated_by_the_many
+	}
+
+### Andrey Simukov
+	MON_andrey_simukov = {
+		name = MON_andrey_simukov
+		portraits = {
+			civilian = {
+				small = "GFX_MON_Andrey_Simukov_small" 
+			}
+		}
+		# advisor role created in focus MON_elevated_by_the_many
+	}
+
+########################
+### NATIONALIST PATH ###
+########################
+
+### Officer Council
+	MON_officer_council = {
+		name = MON_officer_council
+		portraits = {
+			civilian = {
+				large = "GFX_MON_Officer_Council"
+			}
+		}
+		# Country leader role added in focus MON_throw_off_the_yoke
+	}
+
+### Navaanneren
+	MON_navaanneren = {
+		name = MON_navaanneren
+		portraits = {
+			civilian = {
+				large = "GFX_MON_Navaanneren"
+				small = "GFX_MON_Navaanneren_small" 
+			}
+		}
+		# Country leader role added in focus MON_the_setsen_khan
+	}
+
+### Erenjav
+	MON_erenjav = {
+		name = MON_erenjav
+		portraits = {
+			civilian = {
+				large = "GFX_MON_Erenjav"
+				small = "GFX_MON_Erenjav_small" 
+			}
+		}
+		# Country leader role added in focus MON_radical_youth_movement
+	}
+
+### Tsorjiin Luvsanchoinzin
+	MON_tsorjiin_luvsanchoinzin = {
+		name = MON_tsorjiin_luvsanchoinzin
+		portraits = {
+			civilian = {
+				small = "GFX_MON_Tsorjiin_Luvsanchoinzin_small"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MON_tsorjiin_luvsanchoinzin
+			allowed = {
+				original_tag = MON
+			}
+			visible = {
+			}
+			available = {
+				not = { has_government = communism }
+			}
+			traits = {
+				regional_traditionalist_leader 
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+### Chagdarjavyn Lkhamsüren
+	MON_chagdarjavyn_lkhamsuren = {
+		name = MON_chagdarjavyn_lkhamsuren
+		portraits = {
+			civilian = {
+				small = "GFX_MON_Chagdarjavyn_Lkhamsuren_small"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MON_chagdarjavyn_lkhamsuren
+			allowed = {
+				original_tag = MON
+			}
+			visible = {
+			}
+			available = {
+				not = { has_government = communism }
+			}
+			traits = {
+				financial_expert
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+### Namjildendeviin Puntsagtseren
+	MON_namjildendeviin_puntsagtseren = {
+		name = MON_namjildendeviin_puntsagtseren
+		portraits = {
+			civilian = {
+				small = "GFX_MON_Namjildendeviin_Puntsagtseren_small"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MON_namjildendeviin_puntsagtseren
+			allowed = {
+				original_tag = MON
+			}
+			visible = {
+			}
+			available = {
+				not = { has_government = communism }
+			}
+			traits = {
+				SWE_minister_of_justice 
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+### Namsraijavyn Tsogbadrakh
+	MON_namsraijavyn_tsogbadrakh = {
+		name = MON_namsraijavyn_tsogbadrakh
+		portraits = {
+			civilian = {
+				small = "GFX_MON_Namsraijavyn_Tsogbadrakh_small"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MON_namsraijavyn_tsogbadrakh
+			allowed = {
+				original_tag = MON
+			}
+			visible = {
+			}
+			available = {
+				not = { has_government = communism }
+			}
+			traits = {
+				BEL_mobilization_proponent
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+### Genepil
+	MON_genepil = {
+		name = MON_genepil
+		portraits = {
+			civilian = {
+				small = "GFX_MON_Genepil_small" 
+			}
+		}
+		# advisor role added in focus MON_bogd_khans_legacy
+	}
+
+### Tsedengiin Luvsankhaimchig
+	MON_tsedengiin_luvsankhaimchig = {
+		name = MON_tsedengiin_luvsankhaimchig
+		portraits = {
+			civilian = {
+				small = "GFX_MON_Tsedengiin_Luvsankhaimchig_small"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MON_tsedengiin_luvsankhaimchig
+			allowed = {
+				original_tag = MON
+			}
+			visible = {
+			}
+			available = {
+				not = { has_government = communism }
+			}
+			traits = {
+				yonzon_khamba
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+### Ferndynand Ossendowski
+	MON_ferdynand_ossendowski = {
+		name = MON_ferdynand_ossendowski
+		portraits = {
+			civilian = {
+				small = "GFX_MON_Ferdynand_Ossendowski_small" 
+			}
+		}
+		# advisor role added in focus MON_the_mad_baron
+	}
+
+### Kamil Giżycki
+	MON_kamil_gizycki = {
+		name = MON_kamil_gizycki
+		portraits = {
+			army = {
+				large = "GFX_MON_Kamil_Gizycki"
+				small = "GFX_MON_Kamil_Gizycki_small"
+			}
+		}
+		# general & advisor roles added in focus MON_the_mad_baron
+	}
+
+### Mikhail Tornovsky
+	MON_mikhail_tornovsky = {
+		name = MON_mikhail_tornovsky
+		portraits = {
+			army = {
+				large = "GFX_MON_Mikhail_Tornovsky"
+				small = "GFX_MON_Mikhail_Tornovsky_small"
+			}
+		}
+		# general & advisor roles added in focus MON_the_mad_baron
+	}
+
+### Pyotr Polovtsov
+	MON_pyotr_polovtsov = {
+		name = MON_pyotr_polovtsov
+		portraits = {
+			army = {
+				large = "GFX_MON_Pyotr_Polovtsov"
+				small = "GFX_MON_Pyotr_Polovtsov_small"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MON_pyotr_polovtsov 
+			allowed = {
+				original_tag = MON
+			}
+			visible = {
+				has_government = communism
+			}
+			available = {
+				
+			}
+			traits = {
+				russian_freemason
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+### Gustaf John Ramstedt
+	MON_gustaf_john_ramstedt = {
+		name = MON_gustaf_john_ramstedt
+		portraits = {
+			civilian = {
+				small = "GFX_MON_Gustaf_John_Ramstedt_small" 
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MON_gustaf_john_ramstedt
+			allowed = {
+				original_tag = MON
+			}
+			visible = {
+			}
+			available = {
+				NOT = { has_war_with = FIN }
+			}
+			traits = {
+				smooth_talking_charmer
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+### Wilfried Strik-Strikfeldt
+	MON_wilfried_strik_strikfeldt = {
+		name = MON_wilfried_strik_strikfeldt
+		portraits = {
+			civilian = {
+				small = "GFX_MON_Wilfried_Strik_Strikfeldt_small" 
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = MON_wilfried_strik_strikfeldt
+			cost = 100
+			allowed = {
+				original_tag = MON
+			}
+			visible = {
+			}
+			available = {
+				NOT = { has_war_with = GER }
+			}
+			traits = {
+				army_regrouping_2
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+
+}

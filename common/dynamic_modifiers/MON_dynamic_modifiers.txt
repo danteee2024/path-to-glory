@@ -1,0 +1,15 @@
+############################
+#### COUNTRY MODIFIERS #####
+############################
+
+MON_reestablished_army = {
+	enable = { always = yes }
+
+	icon = AFG_afghanistan_bank
+	
+	training_time_army_factor = -0.10
+	recon_factor = MON_reestablished_army_recon_factor
+	cas_damage_reduction = 0.05
+	cavalry_attack_factor = MON_reestablished_army_cavalry_attack_factor
+	cavalry_defence_factor = MON_reestablished_army_cavalry_defence_factor
+}

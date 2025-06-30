@@ -1,0 +1,1137 @@
+ideas = {
+
+	country = {
+		MON_soviet_nkvd_agents = {
+
+			picture = nkvd_2
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				operative_slot = 1
+				political_power_factor = -0.15
+			}
+		}
+		MON_buddhist_support = {
+
+			picture = AFG_parliament_building
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.15
+				political_power_factor = 0.30
+			}
+		}
+		MON_soviet_science_idea = {
+
+			picture = AFG_communist_graduates
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.075
+			}
+		}
+		MON_transfer_territory = {
+
+			picture = ARG_rapid_militarization
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				political_power_factor = 0.10
+			}
+		}
+		MON_soviet_conscripts = {
+
+			picture = saf_soviet_advisers
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				weekly_manpower = 7500
+			}
+		}
+		MON_loyalists_in_mvd = {
+
+			picture = GER_wage_war_on_capitalism
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				operative_slot = 1
+				operation_infiltrate_risk = -0.25
+			}
+		}
+		MON_peace_and_prosperity_idea = {
+
+			picture = YUG_federal_defense_council
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.15
+			}
+		}
+		MON_secular_education_idea = {
+
+			picture = generic_political_support
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				line_change_production_efficiency_factor = 0.1
+				production_factory_start_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.03
+				production_factory_max_efficiency_factor = 0.02
+			}
+		}
+		MON_buddhist_opposition = {
+
+			picture = generic_prisoner
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+			}
+		}
+		MON_neutral_foreign_policy_idea = {
+
+			picture = generic_neglected_military
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = -0.15
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_arms_factory_factor = -0.05
+				political_power_gain = 0.20
+				conscription_factor = -0.05
+			}
+		}
+		MON_repaying_old_debt_idea  = {
+
+			picture = RAJ_debt_relief
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+		MON_country_in_disarray_better_idea = {
+
+			picture = ARG_social_welfare_fund_ns
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = 0.001
+				political_power_factor = -0.05
+			}
+		}
+		MON_tech_coop_idea = {
+
+			picture = ARG_war_division
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+	MON_rely_on_national_strength_idea= {
+
+			picture = AFG_quami
+			
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.05
+				neutrality_drift = 0.10
+				neutrality_acceptance = 80
+			}
+		}
+		MON_khanny_tonnoo= {
+
+			picture = EST_republican_defence_league
+			
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				initiative_factor = 0.04
+				mobilization_laws_cost_factor = -0.10
+				
+			}
+		}
+MON_appoint_generals_accordingly_idea = {
+
+			picture = ARG_military_government
+			
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.15
+				army_speed_factor = 0.10
+				army_core_defence_factor = 0.15
+				max_command_power_mult = 0.10
+				army_advisor_cost_factor = -0.5
+				planning_speed = 0.05
+			}
+		}
+		MON_state_of_the_armed_forces = {
+
+			picture = tur_coordinated_balkan_armed_forces
+			
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.15
+				army_morale_factor = -0.10
+				army_speed_factor = 0.10
+				army_core_defence_factor = 0.15
+			}
+		}
+		MON_army_modernisation_breakthroughs_idea_3 = {
+
+			picture = tur_coordinated_balkan_armed_forces
+			
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				motorized_attack_factor = 0.1
+				motorized_defence_factor = 0.1
+				mechanized_attack_factor = 0.1
+				mechanized_defence_factor = 0.1
+			    army_fuel_consumption_factor = -0.05
+				army_speed_factor = 0.15
+				army_morale_factor = 0.05
+				leader_experience_gain = 0.05
+				army_org_factor = -0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+	MON_army_modernisation_breakthroughs_idea_2 = {
+
+			picture = tur_coordinated_balkan_armed_forces
+			
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_defence_factor = 0.05
+				motorized_attack_factor = 0.1
+				motorized_defence_factor = 0.1
+				mechanized_attack_factor = 0.1
+				mechanized_defence_factor = 0.1
+			    army_fuel_consumption_factor = -0.05
+				army_speed_factor = 0.15
+				army_morale_factor = 0.05
+				army_org_factor = -0.15
+			}
+		}
+		MON_army_modernisation_breakthroughs_idea = {
+
+			picture = tur_coordinated_balkan_armed_forces
+			
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_defence_factor = 0.05
+				motorized_attack_factor = 0.1
+				motorized_defence_factor = 0.05
+				mechanized_attack_factor = 0.1
+				mechanized_defence_factor = 0.05
+			    army_fuel_consumption_factor = -0.05
+				army_org_factor = -0.15
+			}
+		}
+		MON_great_industrial_revolution = {
+
+			picture = ARG_public_works_investment
+			
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor               = -0.01  # Factor of factories reserved for consumer goods
+				 
+conversion_cost_civ_to_mil_factor   = -0.01  # Cost to convert civilian to military factories
+equipment_conversion_speed          = 0.01  # Speed of equipment conversion
+global_building_slots_factor        = 0.01  # Number of extra building slots
+industrial_capacity_factory         = 0.01  # Military factory output factor
+industry_air_damage_factor          = -0.01  # Bomb damage to industry
+local_resources_factor              = 0.01  # Domestic resource yield factor
+min_export                          = -0.01  # Minimum resource export factor
+line_change_production_efficiency_factor = 0.01  # Production efficiency gain from changing production lines
+production_factory_efficiency_gain_factor  = 0.01  # Production efficiency gain
+production_factory_start_efficiency_factor = 0.01  # Starting production efficiency
+production_speed_air_base_factor    = 0.01  # Air Base construction speed
+production_speed_anti_air_building_factor = 0.01  # Anti-Air construction speed
+production_speed_arms_factory_factor= 0.01  # Military Factory construction speed
+production_speed_buildings_factor   = 0.01  # Any building construction speed :contentReference[oaicite:1]{index=1}
+production_speed_bunker_factor      = 0.01  # Land Bunker construction speed
+production_speed_coastal_bunker_factor = 0.01  # Coastal Bunker speed
+production_speed_dockyard_factor    = 0.01  # Dockyard construction speed
+production_speed_industrial_complex_factor = 0.01  # Civilian Factory speed
+production_speed_infrastructure_factor = 0.01  # Infrastructure build speed
+production_speed_naval_base_factor  = 0.01  # Naval Base build speed
+production_speed_nuclear_reactor_factor = 0.01  # Nuclear Reactor build speed
+production_speed_radar_station_factor = 0.01  # Radar Station build speed
+production_speed_rocket_site_factor = 0.01  # Rocket Site build speed
+production_speed_synthetic_refinery_factor = 0.01  # Synthetic Refinery build speed
+research_speed_factor               = 0.01  # Flat research bonus
+ production_speed_resource_expansion_steel_factor = 0.01
+                production_speed_resource_expansion_chromium_factor = 0.01
+                production_speed_resource_expansion_tungsten_factor = 0.01
+                production_speed_resource_expansion_aluminium_factor = 0.01
+
+			}
+
+
+			
+		}
+			MON_many_men_idea = {
+
+			picture = COG_the_invisible_roof
+			
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.02
+				mobilization_speed = 0.25
+				supply_consumption_factor = 0.01
+			    org_loss_when_moving = 0.05
+
+
+			}
+		}
+		MON_strong_nomadic_warriors_of_the_steppes_idea = {
+
+			picture = COG_force_publique
+			
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				special_forces_attack_factor = 0.1
+				special_forces_out_of_supply_factor = -0.10
+				special_forces_cap = 0.20
+			
+
+
+			}
+		}
+        MON_state_investments_idea = {
+
+			picture = SOV_system_decentralization
+
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				political_advisor_cost_factor = -0.15
+			
+
+
+			}
+		}
+		MON_nomadic_war_idea = {
+
+			picture = SWE_ga_pa_tactics
+			
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_Factor = 0.05
+				army_morale_factor = 0.10
+				supply_consumption_factor = -0.10
+				out_of_supply_factor = -0.25
+
+			}
+		}
+
+		MON_buddhist_compromise_idea = {
+			picture = ARG_argentine_metropole
+
+			allowed_civil_war = {
+
+			}
+			modifier = {
+				political_power_gain = -0.15
+				consumer_goods_factor = 0.08
+				
+			}
+		}
+
+		MON_nomadic_priortize_horses_ideas = {
+
+			picture = chi_army_corruption2
+
+			allowed_civil_war = {
+				
+			}
+			
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = 0.33 instant = yes
+				}
+			}
+			modifier = {
+				cavalry_attack_factor = 0.15
+				cavalry_defence_factor = 0.1
+			}
+		}
+
+		MON_self_sufficient_idea = {
+
+			allowed = {
+				original_tag = GER
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_exploit_mines
+
+			modifier = {
+				local_resources_factor = 0.10
+			}
+		}
+		MON_modern_tactics = {
+
+			allowed = {
+				original_tag = GER
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_exploit_mines
+
+			modifier = {
+				army_attack_speed_factor = 0.10
+				cas_damage_reduction = 0.05
+				heat_attrition = -0.05
+				winter_attrition = -0.05
+			}
+		}
+        	MON_reminiscent_of_the_khanate_idea = {
+
+			picture = generic_volunteer_expedition_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			rule = {
+				can_send_volunteers = yes
+			}
+
+			modifier = {
+                terrain_trait_xp_gain_factor = 0.25
+				
+			}
+
+		}
+		MON_volunteers_idea = {
+			
+			picture = generic_volunteer_expedition_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			rule = {
+				can_send_volunteers = yes
+			}
+
+			modifier = {
+				send_volunteer_divisions_required = -1
+				send_volunteers_tension = -0.5
+				send_volunteer_size = 3
+			}
+
+		}
+
+		MON_mobilise_the_workers_idea = {
+
+			picture = FRA_army_of_aggression_focus
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+
+		}
+	
+		MON_spirit_of_genghis_idea = {
+		
+			picture = FRA_army_of_aggression_focus
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				cavalry_attack_factor = 0.1
+				cavalry_defence_factor = 0.1
+                trait_cavalry_expert_xp_gain_factor = 0.15
+			}		
+
+		}
+	
+		MON_sov_advisors = {
+		
+			picture = generic_communist_army
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.1
+				army_leader_start_level = 1
+				military_leader_cost_factor = -0.50
+			}		
+
+		}
+	
+		MON_nomad_mob = {
+		
+			picture = generic_manpower_bonus
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.04
+			}		
+		
+		}
+	
+		MON_sov_investments = {
+		
+			picture = home_of_revolution
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.1
+			}		
+		
+		}
+	
+		MON_purge_1 = {
+		
+			picture = generic_purge
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = 0.01
+				political_advisor_cost_factor = 0.25
+				economy_cost_factor = 0.25
+				trade_laws_cost_factor = 0.25
+			}		
+		
+		}
+	
+		MON_monastries = {
+
+			picture = SPR_seize_the_gold_reserves
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.15
+			}		
+		
+		}
+
+		MON_religious_taxation = {
+
+			picture = SPR_seize_the_gold_reserves
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.15
+			}		
+		
+		}
+	
+		MON_collectivisation_1 = {
+
+			picture = trotskyite_plot_purged
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				MONTHLY_POPULATION = -0.33
+				conscription_factor = -0.33
+				political_power_factor = -0.25
+				consumer_goods_factor = -0.15
+			}
+		}
+		
+		MON_collectivisation_2 = {
+
+			picture = trotskyite_plot
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				MONTHLY_POPULATION = -0.22
+				conscription_factor = -0.22
+				political_power_factor = -0.2
+				consumer_goods_factor = -0.15
+			}
+		}
+		
+		MON_collectivisation_3 = {
+
+			picture = trotskyite_plot_purged
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				MONTHLY_POPULATION = -0.11
+				conscription_factor = -0.11
+				political_power_factor = -0.1
+				consumer_goods_factor = -0.15
+			}
+		}
+		
+		MON_collectivisation_4 = {
+
+			picture = trotskyite_plot_purged
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+		}
+
+		MON_nomad_0 = {
+
+			picture = chi_army_corruption2
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				local_building_slots_factor = -0.50
+				industrial_capacity_factory = -0.25
+				local_resources_factor = -0.25
+				production_speed_buildings_factor = -0.25
+				supply_consumption_factor = -0.20
+				mobilization_speed = -0.75
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.50 instant = yes
+				}
+			}
+		}
+			MON_nomadism_1 = {
+
+			picture = chi_army_corruption2
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				local_building_slots_factor = -0.25
+				industrial_capacity_factory = -0.2
+				local_resources_factor = -0.2
+				production_speed_buildings_factor = -0.2
+				supply_consumption_factor = -0.1
+				mobilization_speed = -0.5
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.25 instant = yes
+				}
+			}
+		}
+			MON_nomadism_2 = {
+
+			picture = chi_army_corruption2
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				local_building_slots_factor = -0.10
+				industrial_capacity_factory = -0.30
+				local_resources_factor = -0.2
+				production_speed_buildings_factor = -0.25
+				supply_consumption_factor = -0.2
+				mobilization_speed = -0.35	
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.35 instant = yes
+				}
+			}
+		}
+		MON_nomad_1 = {
+
+			picture = chi_army_corruption2
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				local_building_slots_factor = -0.25
+				industrial_capacity_factory = -0.25
+				local_resources_factor = -0.2
+				production_speed_buildings_factor = -0.2
+				supply_consumption_factor = -0.15
+				mobilization_speed = -0.5
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.30 instant = yes
+				}
+			}
+		}
+		
+		MON_nomad_2 = {
+
+			picture = chi_army_corruption2
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				local_building_slots_factor = -0.10
+				industrial_capacity_factory = -0.1
+				local_resources_factor = -0.1
+				production_speed_buildings_factor = -0.1
+				supply_consumption_factor = -0.05
+				mobilization_speed = -0.25
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.2 instant = yes
+				}
+			}
+		}	
+
+		MON_nomad_3 = {
+
+			picture = chi_army_corruption2
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				local_building_slots_factor = -0.05
+				industrial_capacity_factory = -0.05
+				production_speed_buildings_factor = -0.05
+				mobilization_speed = -0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+		}
+
+		MON_nomad_4 = {
+
+			picture = chi_army_corruption2
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				mobilization_speed = -0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		
+		MON_mobilize_steppes = {
+			picture = generic_victors_of_ww1
+
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes 
+			}
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.04
+				mobilization_speed = 0.25
+			}
+		}
+
+		MON_brothers_war = {
+			picture = chi_army_corruption
+
+			allowed = {
+				always = yes
+			}
+
+			cancel = {
+				MON = {
+					has_war_with = GER
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes 
+			}
+			removal_cost = -1
+
+			targeted_modifier = {
+				tag = FIN
+				attack_bonus_against = -0.20
+				defense_bonus_against = -0.20
+				breakthrough_bonus_against = -0.20
+			}
+		}
+
+	}
+
+}

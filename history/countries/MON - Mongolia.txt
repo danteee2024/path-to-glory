@@ -1,0 +1,81 @@
+﻿capital = 330
+
+oob = "MON_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	support_weapons = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	basic_train = 1
+}
+
+add_ideas = {
+	limited_conscription
+	MON_collectivisation_1
+	MON_nomad_1
+	MON_state_of_the_armed_forces
+	MON_soviet_nkvd_agents
+}
+
+set_variable = { mon_poster_center_icon_frame = 1 }
+
+set_convoys = 100
+
+set_politics = {
+	ruling_party = communism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	communism = 60
+	neutrality = 40
+}
+
+### Starting leaders
+recruit_character = MON_peljidiin_genden
+recruit_character = MON_sambadondogiin_tserendorj
+
+### Starting advisers
+recruit_character = MON_anandyn_amar
+recruit_character = MON_dansranbilegiin_dogsom
+recruit_character = MON_darijavyn_losol
+recruit_character = MON_gonchigiin_bumtsend 
+recruit_character = MON_dorjjavyn_luvsansharav
+recruit_character = MON_bat_ochiryn_eldev_ochir
+recruit_character = MON_banzarjavyn_baasanjav
+
+### Starting generals
+recruit_character = MON_khorloogiin_choibalsan
+recruit_character = MON_gelegdorjiin_demid
+recruit_character = MON_gonchingiin_sambuu
+recruit_character = MON_gombojavyn_damba
+recruit_character = MON_jigdengiin_malj
+recruit_character = MON_gotovyn_damba
+recruit_character = MON_tomoriin_dashzeveg
+
+### Military advisers
+recruit_character = MON_ochiryn_dashchirav 
+recruit_character = MON_dorjiin_gonchig 
+recruit_character = MON_hamza_zaisanov 
+recruit_character = MON_lkhamkhuugiin_darzav
+recruit_character = MON_olziiburengiin_puntsag
+recruit_character = MON_jantsankhorloo
+recruit_character = MON_choimbolyn_shagdarsuren 
+recruit_character = MON_gelenkhuu
+recruit_character = MON_buyannmeh
+
+### Historical path advisers & generals
+recruit_character = MON_yumjaagiin_tsedenbal
+recruit_character = MON_dashiin_damba
+recruit_character = MON_chimeddorjiin_surenjav
+recruit_character = MON_bazaryn_shirendev
+recruit_character = MON_tsendiin_damdinsuren
+recruit_character = MON_tserenjavyn_luvsandonoi 
+recruit_character = MON_jamyangiin_lkhagvasuren
+recruit_character = MON_shagdaryn_gongor
+recruit_character = MON_bat_ochiryn_shagdarjav

@@ -1,0 +1,161 @@
+﻿###########################
+# Mongolia Events
+###########################
+
+add_namespace = mongolia
+
+# country_event = {
+# 	id = mongolia.start
+# 	title = mongolia.start.t
+# 	desc = mongolia.start.d
+# 	picture = GFX_report_event_german_speech
+	
+# 	is_triggered_only = yes
+	
+	
+# 	fire_only_once = yes
+	
+#  	immediate = {		
+#  	}
+
+# 	option = {
+# 		name = mongolia.start.a
+# 		add_ideas = MON_nomad_1
+# 	}
+# }
+
+
+
+country_event = {
+	id = mongolia.one
+	title = mongolia.one.t
+	desc = mongolia.one.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = mongolia.one.a
+		# if = {
+		# 	limit = {
+		# 		country_exists = TAN
+		# 	}
+		# 	MON = {
+		# 		annex_country = { target = TAN transfer_troops = yes }
+		# 	}
+		# }
+		# else = {
+			MON = {
+				transfer_state = 329
+				transfer_state = 563
+				transfer_state = 564
+				transfer_state = 565
+				transfer_state = 566
+			
+			}
+			SOV = {
+				add_timed_idea = {
+					idea = MON_transfer_territory
+					days = 365
+				}
+			}
+			MON = {
+				563 = { add_core_of = MON }
+				564 = { add_core_of = MON }
+				565 = { add_core_of = MON }
+				566 = { add_core_of = MON }
+				329 = { add_core_of = MON }
+			}
+		# }
+	}
+	option = { # Refuse
+		name = mongolia.one.b
+		ai_chance = { factor = 10 }
+		
+	}
+}
+
+country_event = {
+	id = mongolia.2
+	title = mongolia.2.t
+	desc = mongolia.2.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = mongolia.2.a
+		MON = {
+			annex_country = { target = SIK transfer_troops = yes }
+		}
+	}
+	option = { # Refuse
+		name = mongolia.2.b
+		ai_chance = { factor = 0 }
+		
+	}
+}
+
+country_event = {
+	id = mongolia.3
+	title = mongolia.3.t
+	desc = mongolia.3.d
+	picture = GFX_report_event_soviet_tanks_snow
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = mongolia.2.a
+		MON = {
+			remove_state_core = 761
+			transfer_state = 612
+			transfer_state = 611
+			transfer_state = 621
+			transfer_state = 756
+			set_truce = { target = JAP days = 1460 }
+		}
+		SOV = { 
+			set_truce = { target = JAP days = 1460 } 
+			add_opinion_modifier = { target = JAP modifier = ENG_imperial_trade }
+		}
+	}
+	option = { # Refuse
+		name = mongolia.2.b
+		ai_chance = { factor = 0 }
+		
+		MON = {
+			create_wargoal = {
+				type = annex_everything
+				target = JAP
+			}
+		}
+		SOV = {
+			create_wargoal = {
+				type = annex_everything
+				target = JAP
+			}
+		}
+	}
+}
+
+
+# Hidden event to remove Industrial Support idea when France go to war
+country_event = {
+    id = mongolia.4
+    hidden = yes
+ 
+    fire_only_once = yes
+
+    trigger = {
+        tag = MON
+		has_war = yes
+	}
+
+    immediate = {
+    	remove_ideas = MON_buddhist_support
+    }
+
+    option = {
+        
+    }
+}

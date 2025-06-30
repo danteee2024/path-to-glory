@@ -1,0 +1,252 @@
+spriteTypes = {	
+
+
+# Andrey Simukov
+	SpriteType = {
+		name = GFX_MON_Andrey_Simukov_small
+		texturefile = gfx/leaders/MON_advisers/Portrait_Mongolia_Andrey_Simukov_small.dds
+	}
+
+# Antoine Mostaert
+	SpriteType = {
+		name = GFX_MON_Antoine_Mostaert_small
+		texturefile = gfx/leaders/MON_advisers/Portrait_Mongolia_Antoine_Mostaert_small.dds
+	}
+
+# Banzarjavyn Baasanjav
+	SpriteType = {
+		name = GFX_MON_Banzarjavyn_Baasanjav_small
+		texturefile = gfx/leaders/MON_advisers/Portrait_Mongolia_Banzarjavyn_Baasanjav_small.dds
+	}
+
+# Bat-Ochiryn Eldev-Ochir
+	SpriteType = {
+		name = GFX_MON_Bat_Ochiryn_Eldev_Ochir_small
+		texturefile = gfx/leaders/MON_advisers/Portrait_Mongolia_Bat_Ochiryn_Eldev_Ochir_small.dds
+	}
+
+# Bat-Ochiryn Shagdarjav
+	SpriteType = {
+		name = GFX_MON_Bat_Ochiryn_Shagdarjav_small
+		texturefile = gfx/leaders/MON_advisers/Portrait_Mongolia_Bat_Ochiryn_Shagdarjav_small.dds
+	}
+
+# Bazaryn Shirendev
+	SpriteType = {
+		name = GFX_MON_Bazaryn_Shirendev_small
+		texturefile = gfx/leaders/MON_advisers/Portrait_Mongolia_Bazaryn_Shirendev_small.dds
+	}
+
+# Chimeddorjiin Surenjav
+	SpriteType = {
+		name = GFX_MON_Chimeddorjiin_Surenjav_small
+		texturefile = gfx/leaders/MON_advisers/Portrait_Mongolia_Chimeddorjiin_Surenjav_small.dds
+	}
+
+# Choimbolyn Shagdarsuren
+	SpriteType = {
+		name = GFX_MON_Choimbolyn_Shagdarsuren_small
+		texturefile = gfx/leaders/MON_advisers/Portrait_Mongolia_Choimbolyn_Shagdarsuren_small.dds
+	}
+
+# Dansranbilegiin Dogsom
+	SpriteType = {
+		name = GFX_MON_Dansranbilegiin_Dogsom_small
+		texturefile = gfx/leaders/MON_advisers/Portrait_Mongolia_Dansranbilegiin_Dogsom_small.dds
+	}
+
+# Darijavyn Losol
+	SpriteType = {
+		name = GFX_MON_Darijavyn_Losol_small
+		texturefile = gfx/leaders/MON_advisers/Portrait_Mongolia_Darijavyn_Losol_small.dds
+	}
+
+# Dashiin Damba
+	SpriteType = {
+		name = GFX_MON_Dashiin_Damba_small
+		texturefile = gfx/leaders/MON_advisers/Portrait_Mongolia_Dashiin_Damba_small.dds
+	}
+
+# Dorjiin Gonchig
+	SpriteType = {
+		name = GFX_MON_Dorjiin_Gonchig_small
+		texturefile = gfx/leaders/MON_advisers/Portrait_Mongolia_Dorjiin_Gonchig_small.dds
+	}
+
+# Gonchigiin Bumtsend
+	SpriteType = {
+		name = GFX_MON_Gonchigiin_Bumtsend_small
+		texturefile = gfx/leaders/MON_advisers/Portrait_Mongolia_Gonchigiin_Bumtsend_small.dds
+	}
+
+# Gustaf John Ramstedt
+	SpriteType = {
+		name = GFX_MON_Gustaf_John_Ramstedt_small
+		texturefile = gfx/leaders/MON_advisers/Portrait_Mongolia_Gustaf_John_Ramstedt_small.dds
+	}
+
+# Hamza Zaisanov
+	SpriteType = {
+		name = GFX_MON_Hamza_Zaisanov_small
+		texturefile = gfx/leaders/MON_advisers/Portrait_Mongolia_Hamza_Zaisanov2_small.dds
+	}
+
+# Jamsrangiin Sambuu
+	SpriteType = {
+		name = GFX_MON_Jamsrangiin_Sambuu_small
+		texturefile = gfx/leaders/MON_advisers/Portrait_Mongolia_Jamsrangiin_Sambuu_small.dds
+	}
+
+# G. Jantsankhoroo
+	SpriteType = {
+		name = GFX_MON_Jantsankhorloo_small
+		texturefile = gfx/leaders/MON_advisers/Portrait_Mongolia_Jantsankhorloo_small.dds
+	}
+
+# Lkhamkhuugiin Darzav
+	SpriteType = {
+		name = GFX_MON_Lkhamkhuugiin_Darzav_small
+		texturefile = gfx/leaders/MON_advisers/Portrait_Mongolia_Lkhamkhuugiin_Darzav_small.dds
+	}
+
+# Navaandorjiin Jadambaa
+	SpriteType = {
+		name = GFX_MON_Navaandorjiin_Jadambaa_small
+		texturefile = gfx/leaders/MON_advisers/Portrait_Mongolia_Navaandorjiin_Jadambaa_small.dds
+	}
+
+# Ochiryn Dashchirav
+	SpriteType = {
+		name = GFX_MON_Ochiryn_Dashchirav_small
+		texturefile = gfx/leaders/MON_advisers/Portrait_Mongolia_Ochiryn_Dashchirav_small.dds
+	}
+
+# Olziitiin Badrakh
+	SpriteType = {
+		name = GFX_MON_Olziitiin_Badrakh_small
+		texturefile = gfx/leaders/MON_advisers/Portrait_Mongolia_Olziitiin_Badrakh_small.dds
+	}
+
+# Olziiburengiin Puntsag
+	SpriteType = {
+		name = GFX_MON_Olziiburengiin_Puntsag_small
+		texturefile = gfx/leaders/MON_advisers/Portrait_Mongolia_Olziiburengiin_Puntsag_small.dds
+	}
+
+# Owen Lattimore
+	SpriteType = {
+		name = GFX_MON_Owen_Lattimore_small
+		texturefile = gfx/leaders/MON_advisers/Portrait_Mongolia_Owen_Lattimore_small.dds
+	}
+
+# Chagdarjavyn Lkhamsüren
+	SpriteType = {
+		name = GFX_MON_Chagdarjavyn_Lkhamsuren_small
+		texturefile = gfx/leaders/MON_advisers/Portrait_Mongolia_Chagdarjavyn_Lkhamsuren_small.dds
+	}
+
+# Namjildendeviin Puntsagtseren
+	SpriteType = {
+		name = GFX_MON_Namjildendeviin_Puntsagtseren_small
+		texturefile = gfx/leaders/MON_advisers/Portrait_Mongolia_Namjildendeviin_Puntsagtseren_small.dds
+	}
+
+# Namsraijavyn Tsogbadrakh
+	SpriteType = {
+		name = GFX_MON_Namsraijavyn_Tsogbadrakh_small
+		texturefile = gfx/leaders/MON_advisers/Portrait_Mongolia_Namsraijavyn_Tsogbadrakh_small.dds
+	}
+
+# Tsedengiin Luvsankhaimchig
+	SpriteType = {
+		name = GFX_MON_Tsedengiin_Luvsankhaimchig_small
+		texturefile = gfx/leaders/MON_advisers/Portrait_Mongolia_Tsedengiin_Luvsankhaimchig_small.dds
+	}
+
+# Tsendiin Damdinsuren
+	SpriteType = {
+		name = GFX_MON_Tsendiin_Damdinsuren_small
+		texturefile = gfx/leaders/MON_advisers/Portrait_Mongolia_Tsendiin_Damdinsuren_small.dds
+	}
+
+# Tsorjiin Luvsanchoinzin
+	SpriteType = {
+		name = GFX_MON_Tsorjiin_Luvsanchoinzin_small
+		texturefile = gfx/leaders/MON_advisers/Portrait_Mongolia_Tsorjiin_Luvsanchoinzin_small.dds
+	}
+
+# Ferdinand Ossendowski
+	SpriteType = {
+		name = GFX_MON_Ferdynand_Ossendowski_small
+		texturefile = gfx/leaders/MON_advisers/Portrait_Mongolia_Ferdynand_Ossendowski_small.dds
+	}
+
+# Wilfried Strik-Strikfeldt
+	SpriteType = {
+		name = GFX_MON_Wilfried_Strik_Strikfeldt_small
+		texturefile = gfx/leaders/MON_advisers/Portrait_Mongolia_Wilfried_Strik_Strikfeldt_small.dds
+	}
+
+# Zolbingiin Shijee
+	SpriteType = {
+		name = GFX_MON_Zolbingiin_Shijee_small
+		texturefile = gfx/leaders/MON_advisers/Portrait_Mongolia_Zolbingiin_Shijee_small.dds
+	}
+
+# Genepil
+	SpriteType = {
+		name = GFX_MON_Genepil_small
+		texturefile = gfx/leaders/MON_advisers/Portrait_Mongolia_Genepil_small.dds
+	}
+
+
+###### Military/Theorist ######
+
+# Gelenkhuu
+	SpriteType = {
+		name = GFX_MON_Gelenkhuu_small
+		texturefile = gfx/leaders/MON_advisers/Portrait_Mongolia_Gelenkhuu_small.dds
+	}
+
+###### Foreign ######
+
+# Agvan Dorzhiev
+	SpriteType = {
+		name = GFX_BYA_Agvan_Dorzhiev_small
+		texturefile = gfx/leaders/BYA/Portrait_Buryatia_Agvan_Dorzhiev_small.dds
+	}
+
+# Altanochir
+	SpriteType = {
+		name = GFX_MEN_Altanochir_small
+		texturefile = gfx/leaders/MEN/Portrait_Mengkukuo_Altanochir_small.dds
+	}
+
+# Jin Yongchang
+	SpriteType = {
+		name = GFX_MEN_Jin_Yongchang_small
+		texturefile = gfx/leaders/MEN/Portrait_Mengkukuo_Jin_Yongchang_small.dds
+	}
+
+# Jodbajab
+	SpriteType = {
+		name = GFX_MEN_Jodbajab_small
+		texturefile = gfx/leaders/MEN/Portrait_Mengkukuo_Jodbajab_small.dds
+	}
+
+# Wu Heling
+	SpriteType = {
+		name = GFX_MEN_Wu_Heling_small
+		texturefile = gfx/leaders/MEN/Portrait_Mengkukuo_Wu_Heling_small.dds
+	}
+
+# Yangsanjab
+	SpriteType = {
+		name = GFX_MEN_Yangsanjab_small
+		texturefile = gfx/leaders/MEN/Portrait_Mengkukuo_Yangsanjab_small.dds
+	}
+
+
+
+	
+}
