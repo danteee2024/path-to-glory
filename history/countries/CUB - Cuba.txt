@@ -172,6 +172,7 @@ recruit_character = CUB_roberto_michelleti_bain
 recruit_character = CUB_orlando_rodriguez_jimino
 recruit_character = CUB_abraham_williams_calderon
 recruit_character = CUB_mario_ramírez_delgado
+recruit_character = CUB_sov_advisor
 
 
 set_country_flag = monroe_doctrine

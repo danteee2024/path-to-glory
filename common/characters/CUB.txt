@@ -490,6 +490,24 @@ characters={
 			}
 		}
 	}
+	CUB_sov_advisor = {
+		advisor = {
+			slot = political_advisor
+			traits = { minister_of_peasants }
+			idea_token = CUB_sov_advisor_idea
+			allowed = {
+				has_completed_focus = CUB_soviet_advisors
+				original_tag = CUB
+			}
+			
+		}
+		name="Viktor Chernov"
+		portraits={
+			army={
+				small="GFX_idea_SOV_grigory_sokolnikov"
+			}
+		}
+	}
 	CUB_oswaldo_lopez_arellano={
 		advisor={
 			

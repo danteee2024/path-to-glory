@@ -821,7 +821,7 @@ ideas = {
 
 				name = "Overextended Administration"
 
-			picture = generic_air_fighter
+			picture = generic_constitutional_guarantees
 
 			allowed = {
 				always = yes
@@ -860,6 +860,203 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				stability_weekly = 0.001
+			}
+		
+
+		}
+		CUB_bribe = {
+			name = "Bribed Nobels"
+
+			picture = PER_fund_state_intelligence_idea
+		allowed = {
+			always = yes
+		}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.1
+				stability_weekly = 0.001
+			}
+		
+
+		}
+		CUB_vega1 = {
+			name = "The Vega Code"
+
+			picture = HUN_treaty_of_triannon
+		allowed = {
+			always = yes
+		}
+			removal_cost = -1
+			modifier = {
+				army_org_factor = 0.1
+			}
+		
+
+		}
+			CUB_vega2 = {
+			name = "The Vega Code"
+
+			picture = HUN_treaty_of_triannon
+		allowed = {
+			always = yes
+		}
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+		
+
+		}
+			CUB_vega3 = {
+			name = "The Vega Code"
+
+			picture = HUN_treaty_of_triannon
+		allowed = {
+			always = yes
+		}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.1
+			}
+		}
+		CUB_royal_guards1 = {
+			name = "The Royal Guard"
+
+			picture = AFG_adopt_nufus
+		allowed = {
+			always = yes
+		}
+			removal_cost = -1
+			modifier = {
+				army_artillery_attack_factor = 0.05
+			}
+		
+
+		}
+		CUB_royal_guards2 = {
+			name = "The Royal Guard"
+
+			picture = AFG_adopt_nufus
+		allowed = {
+			always = yes
+		}
+			removal_cost = -1
+			modifier = {
+				army_morale_factor = 0.1
+			}
+		
+
+		}
+		CUB_royal_guards3 = {
+			name = "The Royal Guard"
+
+			picture = AFG_adopt_nufus
+		allowed = {
+			always = yes
+		}
+			removal_cost = -1
+			modifier = {
+				recruitable_population_factor = 0.01
+			}
+		
+
+		}
+			CUB_public_education1 = {
+			name = "Public Education"
+
+			picture = AFG_democratic_graduates
+		allowed = {
+			always = yes
+		}
+			removal_cost = -1
+			modifier = {
+				army_advisor_cost_factor = -0.5
+			}
+		
+
+		}
+			CUB_public_education2 = {
+			name = "Public Education"
+
+			picture = AFG_democratic_graduates
+		allowed = {
+			always = yes
+		}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		
+
+		}
+			CUB_public_education3 = {
+			name = "Public Education"
+
+			picture = AFG_democratic_graduates
+		allowed = {
+			always = yes
+		}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+			}
+		
+
+		}
+			CUB_bourbon_exiles_idea = {
+			name = "Bourbon Exiles"
+
+			picture = generic_manpower_bonus
+		allowed = {
+			always = yes
+		}
+			removal_cost = -1
+			modifier = {
+				weekly_manpower = 1000
+			}
+		
+
+		}
+		CUB_monarchists_on_the_rise = {
+			name = "Monarchism on the rise"
+
+			picture = HUN_hungarian_monarchy
+		allowed = {
+			always = yes
+		}
+			removal_cost = -1
+			modifier = {
+				neutrality_drift = 0.1
+			}
+		
+
+		}
+		CUB_noble = {
+			name = "Noble Investment"
+
+			picture = HUN_revaluing_the_pengo
+		allowed = {
+			always = yes
+		}
+			removal_cost = -1
+			modifier = {
+				industrial_factory_donations = 2
+				industrial_capacity_factory = 0.05
+			}
+		
+
+		}
+		CUB_bourbon_partisans = {
+			name = "Bourbon Partisans"
+
+			picture = ARG_subdue_dissension
+		allowed = {
+			always = yes
+		}
+			removal_cost = -1
+			modifier = {
+				army_org_factor = -0.2
+				army_defence_factor = -0.1
 			}
 		
 

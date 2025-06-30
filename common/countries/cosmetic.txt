@@ -1516,3 +1516,13 @@ european_union_leader = {
 	color = rgb { 0 51 153 }
 	color_ui = rgb { 0 51 153 }
 }
+
+CUB_empire_tag = {
+	color = rgb { 152 130 191 }
+	color_ui = rgb { 198 169 248 }
+}
+
+CUB_kingdom = {
+	color = rgb { 140 65 166 }
+	color_ui = rgb { 140 65 166 }
+}

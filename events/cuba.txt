@@ -337,4 +337,186 @@ country_event = {
 	}
 	
 }
+country_event = {
+	id = cuba.11
+	picture = GFX_report_event_tur_menderes_opposition
+	title = "Choosing a king"
+	desc = "With the Republic dismantled and the monarchy restored in principle, one question remains unanswered who shall wear the crown? Several candidates have emerged, each offering a different vision for Cuba's future. The nation watches with bated breath as the decision approaches. Will we choose tradition, strength, or independence?"
+	
+	 is_triggered_only = yes
+	
+	option = {
+		name = "Let the House of Bourbon rule once more"
+		complete_national_focus = CUB_kral3
+		
+		
+	}
+	option = {
+		name = "Cuba shall have a king of its own people"
+		complete_national_focus = CUB_local_ruler
+
+		
+	}
+	 option = {
+		name = "A queen in name, a servant of the people in practice"
+		complete_national_focus = CUB_democratic_king
+
+		
+	}
+	
+}
+country_event = {
+	id = cuba.12
+	picture = GFX_report_event_canada_treaty
+	title = "The Vega Code"
+	desc = "After months of deliberation, House de la Vega has unveiled The Vega Code, a groundbreaking constitution designed to marry Cuba’s proud monarchical traditions with the demands of modern democracy. King Alejandro addresses the nation, emphasizing unity, justice, and progress under the new framework. The code limits royal powers while empowering elected representatives, aiming to heal divisions and secure Cuba’s future."
+	
+	 is_triggered_only = yes
+	
+	option = {
+		name = "Military Code"
+		add_ideas = CUB_vega1
+		
+		
+	}
+	option = {
+		name = "Economic Code"
+		add_ideas = CUB_vega2
+ 
+
+		
+	}
+	 option = {
+		name = "Political Code"
+		add_ideas = CUB_vega3
+
+	}
+	
+}
+country_event = {
+	id = cuba.13
+	picture = GFX_report_event_PER_shah_inspection
+	title = "The Royal Guard"
+	desc = "With the Royal Guard officially established, King Alejandro and his advisors face a crucial decision: which model should this elite force follow? Each option reflects a different vision for Cuba’s monarchy and its role in society."
+	
+	 is_triggered_only = yes
+	
+	option = {
+		name = "German Model"
+		add_ideas = CUB_royal_guards1
+		
+		
+	}
+	option = {
+		name = "British Model"
+		add_ideas = CUB_royal_guards2
+
+	}
+	 option = {
+		name = "Italian Model"
+		add_ideas = CUB_royal_guards3
+
+	}
+	
+}
+country_event = {
+	id = cuba.14
+	picture = GFX_report_event_generic_sign_treaty1
+	title = "Public Education"
+	desc = " Recognizing that an educated populace is essential for progress and stability, the crown has decided to expand access to public education across Cuba. Schools will emphasize literacy, science, and civic responsibility, aiming to empower citizens and foster loyalty to the nation. Though some traditionalists oppose these changes, many see this as a vital step toward a brighter future."
+	
+	 is_triggered_only = yes
+	
+	option = {
+		name = "Promote militarism" 
+		add_ideas = CUB_public_education1
+		
+		
+	}
+	option = {
+		name = "Promote innovation"
+		add_ideas = CUB_public_education2
+
+	}
+	 option = {
+		name = "Promote national values"
+		add_ideas = CUB_public_education3
+
+	}
+	
+}
+country_event = {
+	id = cuba.15
+	picture = GFX_report_event_BOL_bolivian_socialist_revolution
+	title = "Nobel Revolt"
+	desc = "Discontent simmers among certain factions of the nobility, resentful of the crown’s recent reforms and concessions to democratic ideals. Feeling their traditional privileges threatened, a coalition of powerful noble families has taken up arms, challenging King Alejandro’s authority. The kingdom now faces a dangerous internal crisis—will the monarchy quell this rebellion or risk losing its grip on power?"
+	
+	 is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = "Surrender" 
+		CUB = {
+			country_event = cuba.16
+		}
+		
+		
+	}
+	option = {
+		name = "Fight Back"
+		CUB = {
+			country_event = cuba.17
+		}
+
+	}
+	
+	
+}
+country_event = {
+	id = cuba.16
+	picture = GFX_report_event_DEN_fascist_troops
+	title = "Nobel Victory"
+	desc = " The rebel nobles have emerged victorious, forcing the crown to retreat and reconsider its reforms. Their triumph restores much of the old aristocratic power, rolling back democratic concessions and reinforcing traditional hierarchies. However, this victory comes at a cost — the kingdom is left fractured, and the flames of rebellion may yet ignite again."
+	
+	 is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = "Accept them with grace" 
+		puppet = FROM
+		
+		
+	}
+	
+	
+	
+}
+country_event = {
+	id = cuba.17
+	picture = GFX_report_event_ETH_rif_map
+	title = "Nobel Defeat"
+	desc = " Loyalist forces have crushed the noble rebellion, reaffirming King Alejandro’s authority and the legitimacy of his reforms. Though the nobility’s power is diminished, the crown’s victory strengthens the monarchy’s position and sends a clear message: challenges to progress and unity will not be tolerated."
+	
+	 is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = "War it is" 
+		create_wargoal = {
+			target = FROM
+			type = annex_everything
+		}
+		
+		
+	}
+	
+	
+	
+}
 
