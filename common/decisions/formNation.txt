@@ -152,250 +152,22 @@ formable_nations_mod_category = {
 				state = 818
 				state = 819
 				state = 820
-				state = 322
-				state = 353
-				state = 757
-				state = 758
-				state = 615
 				state = 621
-				state = 746
-				state = 622
-				state = 283
-				state = 604
-				state = 616
 				state = 756
-				state = 755
-				state = 754
-				state = 753
-				state = 287
-				state = 617
-				state = 618
-				state = 619
-				state = 759
 				state = 760
-				state = 325
-				state = 591
-				state = 592
-				state = 593
-				state = 594
-				state = 598
-				state = 599
-				state = 611
-				state = 612
-				state = 328
-				state = 610
-				state = 714
-				state = 715
-				state = 716
-				state = 717
-				state = 745
-				state = 761
-				state = 609
-				state = 602
-				state = 603
-				state = 605
-				state = 601
-				state = 620
-				state = 600
-				state = 595
-				state = 620
-				state = 596
-				state = 606
-				state = 613
-				state = 607
-				state = 597
-				state = 614
-				state = 608
-				state = 752
-				state = 751
-				state = 744
-				state = 748
-				state = 750
-				state = 744
-				state = 749
-				state = 743
-				state = 594
-				state = 599
-				state = 592
-				state = 593
-				state = 326
-				state = 729
-				state = 728
-				state = 591
-				state = 325
-				state = 747
-				state = 442
-				state = 443
-				state = 444
-				state = 445
-				state = 441
-				state = 787
-				state = 267
-				state = 415
-				state = 406
-				state = 407
-				state = 402
-				state = 587
-				state = 823
-				state = 584
-				state = 832
-				state = 831
-				state = 585
-				state = 830
-				state = 404
-				state = 405
-				state = 742
-				state = 732
-				state = 586
-				state = 881
-				state = 589
-				state = 588
-				state = 590
-				state = 882
-				state = 583
-				state = 266
-				state = 410
-				state = 411
-				state = 412
-				state = 413
-				state = 414
-				state = 416
-				state = 417
-				state = 418
-				state = 419
-				state = 420
-				state = 421
-				state = 826
-				state = 231
-				state = 229
-				state = 230
-				state = 291
-				state = 676
-				state = 345
-				state = 346
-				state = 355
-				state = 798
-				state = 344
-				state = 348
-				state = 349
-				state = 352
-				state = 350
-				state = 354
-				state = 800
-				state = 342
-				state = 560
-				state = 657
-				state = 408
-				state = 409
-				state = 564
-				state = 563
-				state = 657
-				state = 569
-				state = 654
-				state = 329
-				state = 568
-				state = 569
-				state = 570
-				state = 571
-				state = 572
-				state = 582
-				state = 651
-				state = 249
-				state = 833
-				state = 252
-				state = 351
-				state = 216
-				state = 566
-				state = 567
-				state = 40
-				state = 569
-				state = 652
-				state = 251
-				state = 250
-				state = 256
-				state = 401
-				state = 829
-				state = 255
-				state = 239
-				state = 236
-				state = 237
-				state = 238
-				state = 234
-				state = 218
-				state = 137
-				state = 233
-				state = 827
-				state = 821
-				state = 828
-				state = 232
-				state = 235
-				state = 217
-				state = 245
-				state = 265
-				state = 220
-				state = 240
-				state = 260
-				state = 254
-				state = 257
-				state = 258
-				state = 247
-				state = 248
-				state = 253
-				state = 244
-				state = 263
-				state = 264
-				state = 246
-				state = 243
-				state = 242
-				state = 210
-				state = 205
-				state = 222
-				state = 224
-				state = 219
-				state = 223
-				state = 204
-				state = 206
-				state = 207
-				state = 194
-				state = 241
-				state = 94
-				state = 95
-				state = 96
-				state = 199
-				state = 201
-				state = 198
-				state = 202
-				state = 203
-				state = 226
-				state = 193
-				state = 259
-				state = 225
-				state = 196
-				state = 200
-				state = 227
-				state = 221
-				state = 228
-				state = 89
-				state = 91
-				state = 93
-				state = 80
-				state = 766
-				state = 192
-				state = 197
-				state = 834
-				state = 81
-				state = 46
-				state = 77
-				state = 766
-				state = 78
-				state = 79
-				state = 80
-				state = 525
-				state = 527
 
-				state = 971
-			}
+				state = 618
+				state = 329
+				state = 566
+				state = 564
+				state = 565
+				state = 563
+				state = 761
+				state = 612
+				
+				
 		}
+	}
 		
 		available = {
 			custom_trigger_tooltip = {
@@ -408,269 +180,18 @@ formable_nations_mod_category = {
 						819 = { is_controlled_by = ROOT }
 						820 = { is_controlled_by = ROOT }
 						
-						322 = { is_controlled_by = ROOT }
-						757 = { is_controlled_by = ROOT }
-						758 = { is_controlled_by = ROOT }
-						
-						615 = { is_controlled_by = ROOT }
 						621 = { is_controlled_by = ROOT }
-						746 = { is_controlled_by = ROOT }
-
-						622 = { is_controlled_by = ROOT }
-
-						283 = { is_controlled_by = ROOT }
-						604 = { is_controlled_by = ROOT }
-						616 = { is_controlled_by = ROOT }
 						756 = { is_controlled_by = ROOT }
-						755 = { is_controlled_by = ROOT }
-						754 = { is_controlled_by = ROOT }
-						753 = { is_controlled_by = ROOT }
-
-						287 = { is_controlled_by = ROOT }
-						617 = { is_controlled_by = ROOT }
-						618 = { is_controlled_by = ROOT }
-						619 = { is_controlled_by = ROOT }
-						759 = { is_controlled_by = ROOT }
 						760 = { is_controlled_by = ROOT }
-
-						325 = { is_controlled_by = ROOT }
-						591 = { is_controlled_by = ROOT }
-						592 = { is_controlled_by = ROOT }
-						593 = { is_controlled_by = ROOT }
-						594 = { is_controlled_by = ROOT }
-						598 = { is_controlled_by = ROOT }
-						599 = { is_controlled_by = ROOT }
-
-						611 = { is_controlled_by = ROOT }
-						612 = { is_controlled_by = ROOT }
-
-						328 = { is_controlled_by = ROOT }
-						610 = { is_controlled_by = ROOT }
-						714 = { is_controlled_by = ROOT }
-						715 = { is_controlled_by = ROOT }
-						716 = { is_controlled_by = ROOT }
-						717 = { is_controlled_by = ROOT }
-						745 = { is_controlled_by = ROOT }
-						761 = { is_controlled_by = ROOT }
-
-						609 = { is_controlled_by = ROOT }
-						602 = { is_controlled_by = ROOT }
-						603 = { is_controlled_by = ROOT }
-						605 = { is_controlled_by = ROOT }
-						601 = { is_controlled_by = ROOT }
-						620 = { is_controlled_by = ROOT }
-						600 = { is_controlled_by = ROOT }
-						595 = { is_controlled_by = ROOT }
-						620 = { is_controlled_by = ROOT }
-						596 = { is_controlled_by = ROOT }
-						606 = { is_controlled_by = ROOT }
-						613 = { is_controlled_by = ROOT }
-						607 = { is_controlled_by = ROOT }
-						597 = { is_controlled_by = ROOT }
-						614 = { is_controlled_by = ROOT }
-						608 = { is_controlled_by = ROOT }
-						752 = { is_controlled_by = ROOT }
-						751 = { is_controlled_by = ROOT }
-						744 = { is_controlled_by = ROOT }
-						748 = { is_controlled_by = ROOT }
-						750 = { is_controlled_by = ROOT }
-						744 = { is_controlled_by = ROOT }
-						749 = { is_controlled_by = ROOT }
-						743 = { is_controlled_by = ROOT }
-
-						594 = { is_controlled_by = ROOT }
-						599 = { is_controlled_by = ROOT }
-						592 = { is_controlled_by = ROOT }
-						593 = { is_controlled_by = ROOT }
-						326 = { is_controlled_by = ROOT }
-						729 = { is_controlled_by = ROOT }
-						728 = { is_controlled_by = ROOT }
-						591 = { is_controlled_by = ROOT }
-
-						325 = { is_controlled_by = ROOT }
-						747 = { is_controlled_by = ROOT }
-						
-						442 = { is_controlled_by = ROOT }
-						443 = { is_controlled_by = ROOT }
-						444 = { is_controlled_by = ROOT }
-						445 = { is_controlled_by = ROOT }
-						
-						441 = { is_controlled_by = ROOT }
-						787 = { is_controlled_by = ROOT }
-						
-						267 = { is_controlled_by = ROOT }
-						415 = { is_controlled_by = ROOT }
-						406 = { is_controlled_by = ROOT }
-						407 = { is_controlled_by = ROOT }
-						402 = { is_controlled_by = ROOT }
-						587 = { is_controlled_by = ROOT }
-						823 = { is_controlled_by = ROOT }
-						584 = { is_controlled_by = ROOT }
-						832 = { is_controlled_by = ROOT }
-						831 = { is_controlled_by = ROOT }
-						585 = { is_controlled_by = ROOT }
-						830 = { is_controlled_by = ROOT }
-						404 = { is_controlled_by = ROOT }
-						405 = { is_controlled_by = ROOT }
-						742 = { is_controlled_by = ROOT }
-						732 = { is_controlled_by = ROOT }
-						586 = { is_controlled_by = ROOT }
-						881 = { is_controlled_by = ROOT }
-						589 = { is_controlled_by = ROOT }
-						588 = { is_controlled_by = ROOT }
-						590 = { is_controlled_by = ROOT }
-						882 = { is_controlled_by = ROOT }
-						583 = { is_controlled_by = ROOT }
-						
-						266 = { is_controlled_by = ROOT }
-						410 = { is_controlled_by = ROOT }
-						411 = { is_controlled_by = ROOT }
-						412 = { is_controlled_by = ROOT }
-						413 = { is_controlled_by = ROOT }
-						414 = { is_controlled_by = ROOT }
-						416 = { is_controlled_by = ROOT }
-						417 = { is_controlled_by = ROOT }
-						418 = { is_controlled_by = ROOT }
-						419 = { is_controlled_by = ROOT }
-						420 = { is_controlled_by = ROOT }
-						421 = { is_controlled_by = ROOT }
-						
-						826 = { is_controlled_by = ROOT }
-						231 = { is_controlled_by = ROOT }
-						229 = { is_controlled_by = ROOT }
-						230 = { is_controlled_by = ROOT }
-						
-						291 = { is_controlled_by = ROOT }
-						676 = { is_controlled_by = ROOT }
-						345 = { is_controlled_by = ROOT }
-						346 = { is_controlled_by = ROOT }
-						355 = { is_controlled_by = ROOT }
-						798 = { is_controlled_by = ROOT }
-						344 = { is_controlled_by = ROOT }
-						348 = { is_controlled_by = ROOT }
-						349 = { is_controlled_by = ROOT }
-						352 = { is_controlled_by = ROOT }
-						350 = { is_controlled_by = ROOT }
-						354 = { is_controlled_by = ROOT }
-						800 = { is_controlled_by = ROOT }
-						342 = { is_controlled_by = ROOT }
-						353 = { is_controlled_by = ROOT }
-						
-						560 = { is_controlled_by = ROOT }
-						657 = { is_controlled_by = ROOT }
-						408 = { is_controlled_by = ROOT }
-						409 = { is_controlled_by = ROOT }
-						564 = { is_controlled_by = ROOT }
-						563 = { is_controlled_by = ROOT }
-						657 = { is_controlled_by = ROOT }
-						569 = { is_controlled_by = ROOT }
-						654 = { is_controlled_by = ROOT }
+						618 = { is_controlled_by = ROOT }
 						329 = { is_controlled_by = ROOT }
-						568 = { is_controlled_by = ROOT }
-						569 = { is_controlled_by = ROOT }
-						570 = { is_controlled_by = ROOT }
-						571 = { is_controlled_by = ROOT }
-						572 = { is_controlled_by = ROOT }
-						582 = { is_controlled_by = ROOT }
-						651 = { is_controlled_by = ROOT }
-						249 = { is_controlled_by = ROOT }
-						833 = { is_controlled_by = ROOT }
-						252 = { is_controlled_by = ROOT }
-						351 = { is_controlled_by = ROOT }
-						216 = { is_controlled_by = ROOT }
 						566 = { is_controlled_by = ROOT }
-						567 = { is_controlled_by = ROOT }
-						40 = { is_controlled_by = ROOT }
-						569 = { is_controlled_by = ROOT }
-						652 = { is_controlled_by = ROOT }
-						251 = { is_controlled_by = ROOT }
-						250 = { is_controlled_by = ROOT }
-						256 = { is_controlled_by = ROOT }
-						401 = { is_controlled_by = ROOT }
-						829 = { is_controlled_by = ROOT }
-						255 = { is_controlled_by = ROOT }
-						239 = { is_controlled_by = ROOT }
-						236 = { is_controlled_by = ROOT }
-						237 = { is_controlled_by = ROOT }
-						238 = { is_controlled_by = ROOT }
-						234 = { is_controlled_by = ROOT }
-						218 = { is_controlled_by = ROOT }
-						137 = { is_controlled_by = ROOT }
-						233 = { is_controlled_by = ROOT }
-						827 = { is_controlled_by = ROOT }
-						821 = { is_controlled_by = ROOT }
-						828 = { is_controlled_by = ROOT }
-						232 = { is_controlled_by = ROOT }
-						235 = { is_controlled_by = ROOT }
-						217 = { is_controlled_by = ROOT }
-						245 = { is_controlled_by = ROOT }
-						265 = { is_controlled_by = ROOT }
-						220 = { is_controlled_by = ROOT }
-						240 = { is_controlled_by = ROOT }
-						260 = { is_controlled_by = ROOT }
-						254 = { is_controlled_by = ROOT }
-						257 = { is_controlled_by = ROOT }
-						258 = { is_controlled_by = ROOT }
-						247 = { is_controlled_by = ROOT }
-						248 = { is_controlled_by = ROOT }
-						253 = { is_controlled_by = ROOT }
-						244 = { is_controlled_by = ROOT }
-						263 = { is_controlled_by = ROOT }
-						264 = { is_controlled_by = ROOT }
-						246 = { is_controlled_by = ROOT }
-						243 = { is_controlled_by = ROOT }
-						242 = { is_controlled_by = ROOT }
-						210 = { is_controlled_by = ROOT }
-						205 = { is_controlled_by = ROOT }
-						222 = { is_controlled_by = ROOT }
-						224 = { is_controlled_by = ROOT }
-						219 = { is_controlled_by = ROOT }
-						223 = { is_controlled_by = ROOT }
+						564 = { is_controlled_by = ROOT }
+						565 = { is_controlled_by = ROOT }
+						563 = { is_controlled_by = ROOT }
+						761 = { is_controlled_by = ROOT }
+						612 = { is_controlled_by = ROOT }
 						
-						204 = { is_controlled_by = ROOT }
-						206 = { is_controlled_by = ROOT }
-						207 = { is_controlled_by = ROOT }
-						194 = { is_controlled_by = ROOT }
-						241 = { is_controlled_by = ROOT }
-						94 = { is_controlled_by = ROOT }
-						95 = { is_controlled_by = ROOT }
-						96 = { is_controlled_by = ROOT }
-						
-						199 = { is_controlled_by = ROOT }
-						201 = { is_controlled_by = ROOT }
-						198 = { is_controlled_by = ROOT }
-						202 = { is_controlled_by = ROOT }
-						203 = { is_controlled_by = ROOT }
-						226 = { is_controlled_by = ROOT }
-						193 = { is_controlled_by = ROOT }
-						259 = { is_controlled_by = ROOT }
-						225 = { is_controlled_by = ROOT }
-						196 = { is_controlled_by = ROOT }
-						200 = { is_controlled_by = ROOT }
-						227 = { is_controlled_by = ROOT }
-						221 = { is_controlled_by = ROOT }
-						228 = { is_controlled_by = ROOT }
-						89 = { is_controlled_by = ROOT }
-						91 = { is_controlled_by = ROOT }
-						93 = { is_controlled_by = ROOT }
-						80 = { is_controlled_by = ROOT }
-						766 = { is_controlled_by = ROOT }
-						192 = { is_controlled_by = ROOT }
-						197 = { is_controlled_by = ROOT }
-						834 = { is_controlled_by = ROOT }
-						
-						81 = { is_controlled_by = ROOT }
-						46 = { is_controlled_by = ROOT }
-						77 = { is_controlled_by = ROOT }
-						766 = { is_controlled_by = ROOT }
-						78 = { is_controlled_by = ROOT }
-						79 = { is_controlled_by = ROOT }
-						80 = { is_controlled_by = ROOT }
-						
-						525 = { is_controlled_by = ROOT }
-						527 = { is_controlled_by = ROOT }
-
-						971 = { is_controlled_by = ROOT }
 					}
 					AND = {
 						is_ai = no
@@ -693,249 +214,264 @@ formable_nations_mod_category = {
 				818 = { add_core_of = ROOT }
 				819 = { add_core_of = ROOT }
 				820 = { add_core_of = ROOT }
-				322 = { add_core_of = ROOT }
-				757 = { add_core_of = ROOT }
-				758 = { add_core_of = ROOT }
-				615 = { add_core_of = ROOT }
 				621 = { add_core_of = ROOT }
-				746 = { add_core_of = ROOT }
-				622 = { add_core_of = ROOT }
-				283 = { add_core_of = ROOT }
-				604 = { add_core_of = ROOT }
-				616 = { add_core_of = ROOT }
 				756 = { add_core_of = ROOT }
-				755 = { add_core_of = ROOT }
-				754 = { add_core_of = ROOT }
-				753 = { add_core_of = ROOT }
-				287 = { add_core_of = ROOT }
-				617 = { add_core_of = ROOT }
-				618 = { add_core_of = ROOT }
-				619 = { add_core_of = ROOT }
-				759 = { add_core_of = ROOT }
 				760 = { add_core_of = ROOT }
-				325 = { add_core_of = ROOT }
-				591 = { add_core_of = ROOT }
-				592 = { add_core_of = ROOT }
-				593 = { add_core_of = ROOT }
-				594 = { add_core_of = ROOT }
-				598 = { add_core_of = ROOT }
-				599 = { add_core_of = ROOT }
-				611 = { add_core_of = ROOT }
-				612 = { add_core_of = ROOT }
-				353 = { add_core_of = ROOT }
-				328 = { add_core_of = ROOT }
-				610 = { add_core_of = ROOT }
-				714 = { add_core_of = ROOT }
-				715 = { add_core_of = ROOT }
-				716 = { add_core_of = ROOT }
-				717 = { add_core_of = ROOT }
-				745 = { add_core_of = ROOT }
-				761 = { add_core_of = ROOT }
-				609 = { add_core_of = ROOT }
-				657 = { add_core_of = ROOT }
-				560 = { add_core_of = ROOT }
-				561 = { add_core_of = ROOT }
-				655 = { add_core_of = ROOT }
-				89 = { add_core_of = ROOT }
-				91 = { add_core_of = ROOT }
-				93 = { add_core_of = ROOT }
-				408 = { add_core_of = ROOT }
-				409 = { add_core_of = ROOT }
-				602 = { add_core_of = ROOT }
-				603 = { add_core_of = ROOT }
-				605 = { add_core_of = ROOT }
-				601 = { add_core_of = ROOT }
-				620 = { add_core_of = ROOT }
-				600 = { add_core_of = ROOT }
-				595 = { add_core_of = ROOT }
-				620 = { add_core_of = ROOT }
-				596 = { add_core_of = ROOT }
-				606 = { add_core_of = ROOT }
-				613 = { add_core_of = ROOT }
-				607 = { add_core_of = ROOT }
-				597 = { add_core_of = ROOT }
-				614 = { add_core_of = ROOT }
-				608 = { add_core_of = ROOT }
-				752 = { add_core_of = ROOT }
-				751 = { add_core_of = ROOT }
-				744 = { add_core_of = ROOT }
-				748 = { add_core_of = ROOT }
-				750 = { add_core_of = ROOT }
-				744 = { add_core_of = ROOT }
-				749 = { add_core_of = ROOT }
-				743 = { add_core_of = ROOT }
-				594 = { add_core_of = ROOT }
-				599 = { add_core_of = ROOT }
-				592 = { add_core_of = ROOT }
-				593 = { add_core_of = ROOT }
-				326 = { add_core_of = ROOT }
-				729 = { add_core_of = ROOT }
-				728 = { add_core_of = ROOT }
-				591 = { add_core_of = ROOT }
-				325 = { add_core_of = ROOT }
-				747 = { add_core_of = ROOT }
-				442 = { add_core_of = ROOT }
-				443 = { add_core_of = ROOT }
-				444 = { add_core_of = ROOT }
-				445 = { add_core_of = ROOT }
-				441 = { add_core_of = ROOT }
-				787 = { add_core_of = ROOT }
-				267 = { add_core_of = ROOT }
-				415 = { add_core_of = ROOT }
-				406 = { add_core_of = ROOT }
-				407 = { add_core_of = ROOT }
-				402 = { add_core_of = ROOT }
-				587 = { add_core_of = ROOT }
-				823 = { add_core_of = ROOT }
-				584 = { add_core_of = ROOT }
-				832 = { add_core_of = ROOT }
-				831 = { add_core_of = ROOT }
-				585 = { add_core_of = ROOT }
-				830 = { add_core_of = ROOT }
-				404 = { add_core_of = ROOT }
-				405 = { add_core_of = ROOT }
-				742 = { add_core_of = ROOT }
-				732 = { add_core_of = ROOT }
-				586 = { add_core_of = ROOT }
-				881 = { add_core_of = ROOT }
-				589 = { add_core_of = ROOT }
-				588 = { add_core_of = ROOT }
-				590 = { add_core_of = ROOT }
-				882 = { add_core_of = ROOT }
-				583 = { add_core_of = ROOT }
-				266 = { add_core_of = ROOT }
-				410 = { add_core_of = ROOT }
-				411 = { add_core_of = ROOT }
-				412 = { add_core_of = ROOT }
-				413 = { add_core_of = ROOT }
-				414 = { add_core_of = ROOT }
-				416 = { add_core_of = ROOT }
-				417 = { add_core_of = ROOT }
-				418 = { add_core_of = ROOT }
-				419 = { add_core_of = ROOT }
-				420 = { add_core_of = ROOT }
-				421 = { add_core_of = ROOT }
-				826 = { add_core_of = ROOT }
-				231 = { add_core_of = ROOT }
-				229 = { add_core_of = ROOT }
-				230 = { add_core_of = ROOT }
-				291 = { add_core_of = ROOT }
-				676 = { add_core_of = ROOT }
-				345 = { add_core_of = ROOT }
-				346 = { add_core_of = ROOT }
-				355 = { add_core_of = ROOT }
-				798 = { add_core_of = ROOT }
-				344 = { add_core_of = ROOT }
-				348 = { add_core_of = ROOT }
-				349 = { add_core_of = ROOT }
-				352 = { add_core_of = ROOT }
-				350 = { add_core_of = ROOT }
-				354 = { add_core_of = ROOT }
-				800 = { add_core_of = ROOT }
-				342 = { add_core_of = ROOT }
-				560 = { add_core_of = ROOT }
-				561 = { add_core_of = ROOT }
-				657 = { add_core_of = ROOT }
-				408 = { add_core_of = ROOT }
-				409 = { add_core_of = ROOT }
-				564 = { add_core_of = ROOT }
-				563 = { add_core_of = ROOT }
-				657 = { add_core_of = ROOT }
-				569 = { add_core_of = ROOT }
-				654 = { add_core_of = ROOT }
+				618 = { add_core_of = ROOT }
 				329 = { add_core_of = ROOT }
-				568 = { add_core_of = ROOT }
-				569 = { add_core_of = ROOT }
-				570 = { add_core_of = ROOT }
-				571 = { add_core_of = ROOT }
-				572 = { add_core_of = ROOT }
-				582 = { add_core_of = ROOT }
-				651 = { add_core_of = ROOT }
-				249 = { add_core_of = ROOT }
-				833 = { add_core_of = ROOT }
-				252 = { add_core_of = ROOT }
-				351 = { add_core_of = ROOT }
-				216 = { add_core_of = ROOT }
 				566 = { add_core_of = ROOT }
-				567 = { add_core_of = ROOT }
-				40 = { add_core_of = ROOT }
-				569 = { add_core_of = ROOT }
-				652 = { add_core_of = ROOT }
-				251 = { add_core_of = ROOT }
-				250 = { add_core_of = ROOT }
-				256 = { add_core_of = ROOT }
-				401 = { add_core_of = ROOT }
-				829 = { add_core_of = ROOT }
-				255 = { add_core_of = ROOT }
-				239 = { add_core_of = ROOT }
-				236 = { add_core_of = ROOT }
-				237 = { add_core_of = ROOT }
-				238 = { add_core_of = ROOT }
-				234 = { add_core_of = ROOT }
-				218 = { add_core_of = ROOT }
-				137 = { add_core_of = ROOT }
-				233 = { add_core_of = ROOT }
-				827 = { add_core_of = ROOT }
-				821 = { add_core_of = ROOT }
-				828 = { add_core_of = ROOT }
-				232 = { add_core_of = ROOT }
-				235 = { add_core_of = ROOT }
-				217 = { add_core_of = ROOT }
-				245 = { add_core_of = ROOT }
-				265 = { add_core_of = ROOT }
-				220 = { add_core_of = ROOT }
-				240 = { add_core_of = ROOT }
-				260 = { add_core_of = ROOT }
-				254 = { add_core_of = ROOT }
-				257 = { add_core_of = ROOT }
-				258 = { add_core_of = ROOT }
-				247 = { add_core_of = ROOT }
-				248 = { add_core_of = ROOT }
-				253 = { add_core_of = ROOT }
-				244 = { add_core_of = ROOT }
-				263 = { add_core_of = ROOT }
-				264 = { add_core_of = ROOT }
-				246 = { add_core_of = ROOT }
-				243 = { add_core_of = ROOT }
-				242 = { add_core_of = ROOT }
-				210 = { add_core_of = ROOT }
-				205 = { add_core_of = ROOT }
-				222 = { add_core_of = ROOT }
-				224 = { add_core_of = ROOT }
-				219 = { add_core_of = ROOT }
-				223 = { add_core_of = ROOT }
-				204 = { add_core_of = ROOT }
-				206 = { add_core_of = ROOT }
-				207 = { add_core_of = ROOT }
-				194 = { add_core_of = ROOT }
-				241 = { add_core_of = ROOT }
-				94 = { add_core_of = ROOT }
-				95 = { add_core_of = ROOT }
-				96 = { add_core_of = ROOT }
-				199 = { add_core_of = ROOT }
-				201 = { add_core_of = ROOT }
-				198 = { add_core_of = ROOT }
-				202 = { add_core_of = ROOT }
-				203 = { add_core_of = ROOT }
-				226 = { add_core_of = ROOT }
-				193 = { add_core_of = ROOT }
-				259 = { add_core_of = ROOT }
-				225 = { add_core_of = ROOT }
-				196 = { add_core_of = ROOT }
-				200 = { add_core_of = ROOT }
-				227 = { add_core_of = ROOT }
-				221 = { add_core_of = ROOT }
-				228 = { add_core_of = ROOT }
-				81 = { add_core_of = ROOT }
-				46 = { add_core_of = ROOT }
-				77 = { add_core_of = ROOT }
-				766 = { add_core_of = ROOT }
-				78 = { add_core_of = ROOT }
-				79 = { add_core_of = ROOT }
-				80 = { add_core_of = ROOT }
-				525 = { add_core_of = ROOT }
-				527 = { add_core_of = ROOT }
-				971 = { add_core_of = ROOT }
+				564 = { add_core_of = ROOT }
+				565 = { add_core_of = ROOT }
+				563 = { add_core_of = ROOT }
+				761 = { add_core_of = ROOT }
+				612 = { add_core_of = ROOT }
+				330 = { set_province_name = { id = 6559 name = "Karakorum" } }
+
+
+
+				322 = { add_claim_by = ROOT }
+				757 = { add_claim_by = ROOT }
+				758 = { add_claim_by = ROOT }
+				615 = { add_claim_by = ROOT }
+				621 = { add_claim_by = ROOT }
+				746 = { add_claim_by = ROOT }
+				622 = { add_claim_by = ROOT }
+				283 = { add_claim_by = ROOT }
+				604 = { add_claim_by = ROOT }
+				616 = { add_claim_by = ROOT }
+				756 = { add_claim_by = ROOT }
+				755 = { add_claim_by = ROOT }
+				754 = { add_claim_by = ROOT }
+				753 = { add_claim_by = ROOT }
+				287 = { add_claim_by = ROOT }
+				617 = { add_claim_by = ROOT }
+				618 = { add_claim_by = ROOT }
+				619 = { add_claim_by = ROOT }
+				759 = { add_claim_by = ROOT }
+				760 = { add_claim_by = ROOT }
+				325 = { add_claim_by = ROOT }
+				591 = { add_claim_by = ROOT }
+				592 = { add_claim_by = ROOT }
+				593 = { add_claim_by = ROOT }
+				594 = { add_claim_by = ROOT }
+				598 = { add_claim_by = ROOT }
+				599 = { add_claim_by = ROOT }
+				611 = { add_claim_by = ROOT }
+				612 = { add_claim_by = ROOT }
+				353 = { add_claim_by = ROOT }
+				328 = { add_claim_by = ROOT }
+				610 = { add_claim_by = ROOT }
+				714 = { add_claim_by = ROOT }
+				715 = { add_claim_by = ROOT }
+				716 = { add_claim_by = ROOT }
+				717 = { add_claim_by = ROOT }
+				745 = { add_claim_by = ROOT }
+				761 = { add_claim_by = ROOT }
+				609 = { add_claim_by = ROOT }
+				657 = { add_claim_by = ROOT }
+				560 = { add_claim_by = ROOT }
+				561 = { add_claim_by = ROOT }
+				655 = { add_claim_by = ROOT }
+				89 = { add_claim_by = ROOT }
+				91 = { add_claim_by = ROOT }
+				93 = { add_claim_by = ROOT }
+				408 = { add_claim_by = ROOT }
+				409 = { add_claim_by = ROOT }
+				602 = { add_claim_by = ROOT }
+				603 = { add_claim_by = ROOT }
+				605 = { add_claim_by = ROOT }
+				601 = { add_claim_by = ROOT }
+				620 = { add_claim_by = ROOT }
+				600 = { add_claim_by = ROOT }
+				595 = { add_claim_by = ROOT }
+				620 = { add_claim_by = ROOT }
+				596 = { add_claim_by = ROOT }
+				606 = { add_claim_by = ROOT }
+				613 = { add_claim_by = ROOT }
+				607 = { add_claim_by = ROOT }
+				597 = { add_claim_by = ROOT }
+				614 = { add_claim_by = ROOT }
+				608 = { add_claim_by = ROOT }
+				752 = { add_claim_by = ROOT }
+				751 = { add_claim_by = ROOT }
+				744 = { add_claim_by = ROOT }
+				748 = { add_claim_by = ROOT }
+				750 = { add_claim_by = ROOT }
+				744 = { add_claim_by = ROOT }
+				749 = { add_claim_by = ROOT }
+				743 = { add_claim_by = ROOT }
+				594 = { add_claim_by = ROOT }
+				599 = { add_claim_by = ROOT }
+				592 = { add_claim_by = ROOT }
+				593 = { add_claim_by = ROOT }
+				326 = { add_claim_by = ROOT }
+				729 = { add_claim_by = ROOT }
+				728 = { add_claim_by = ROOT }
+				591 = { add_claim_by = ROOT }
+				325 = { add_claim_by = ROOT }
+				747 = { add_claim_by = ROOT }
+				442 = { add_claim_by = ROOT }
+				443 = { add_claim_by = ROOT }
+				444 = { add_claim_by = ROOT }
+				445 = { add_claim_by = ROOT }
+				441 = { add_claim_by = ROOT }
+				787 = { add_claim_by = ROOT }
+				267 = { add_claim_by = ROOT }
+				415 = { add_claim_by = ROOT }
+				406 = { add_claim_by = ROOT }
+				407 = { add_claim_by = ROOT }
+				402 = { add_claim_by = ROOT }
+				587 = { add_claim_by = ROOT }
+				823 = { add_claim_by = ROOT }
+				584 = { add_claim_by = ROOT }
+				832 = { add_claim_by = ROOT }
+				831 = { add_claim_by = ROOT }
+				585 = { add_claim_by = ROOT }
+				830 = { add_claim_by = ROOT }
+				404 = { add_claim_by = ROOT }
+				405 = { add_claim_by = ROOT }
+				742 = { add_claim_by = ROOT }
+				732 = { add_claim_by = ROOT }
+				586 = { add_claim_by = ROOT }
+				881 = { add_claim_by = ROOT }
+				589 = { add_claim_by = ROOT }
+				588 = { add_claim_by = ROOT }
+				590 = { add_claim_by = ROOT }
+				882 = { add_claim_by = ROOT }
+				583 = { add_claim_by = ROOT }
+				266 = { add_claim_by = ROOT }
+				410 = { add_claim_by = ROOT }
+				411 = { add_claim_by = ROOT }
+				412 = { add_claim_by = ROOT }
+				413 = { add_claim_by = ROOT }
+				414 = { add_claim_by = ROOT }
+				416 = { add_claim_by = ROOT }
+				417 = { add_claim_by = ROOT }
+				418 = { add_claim_by = ROOT }
+				419 = { add_claim_by = ROOT }
+				420 = { add_claim_by = ROOT }
+				421 = { add_claim_by = ROOT }
+				826 = { add_claim_by = ROOT }
+				231 = { add_claim_by = ROOT }
+				229 = { add_claim_by = ROOT }
+				230 = { add_claim_by = ROOT }
+				291 = { add_claim_by = ROOT }
+				676 = { add_claim_by = ROOT }
+				345 = { add_claim_by = ROOT }
+				346 = { add_claim_by = ROOT }
+				355 = { add_claim_by = ROOT }
+				798 = { add_claim_by = ROOT }
+				344 = { add_claim_by = ROOT }
+				348 = { add_claim_by = ROOT }
+				349 = { add_claim_by = ROOT }
+				352 = { add_claim_by = ROOT }
+				350 = { add_claim_by = ROOT }
+				354 = { add_claim_by = ROOT }
+				800 = { add_claim_by = ROOT }
+				342 = { add_claim_by = ROOT }
+				560 = { add_claim_by = ROOT }
+				561 = { add_claim_by = ROOT }
+				657 = { add_claim_by = ROOT }
+				408 = { add_claim_by = ROOT }
+				409 = { add_claim_by = ROOT }
+				564 = { add_claim_by = ROOT }
+				563 = { add_claim_by = ROOT }
+				657 = { add_claim_by = ROOT }
+				569 = { add_claim_by = ROOT }
+				654 = { add_claim_by = ROOT }
+				329 = { add_claim_by = ROOT }
+				568 = { add_claim_by = ROOT }
+				569 = { add_claim_by = ROOT }
+				570 = { add_claim_by = ROOT }
+				571 = { add_claim_by = ROOT }
+				572 = { add_claim_by = ROOT }
+				582 = { add_claim_by = ROOT }
+				651 = { add_claim_by = ROOT }
+				249 = { add_claim_by = ROOT }
+				833 = { add_claim_by = ROOT }
+				252 = { add_claim_by = ROOT }
+				351 = { add_claim_by = ROOT }
+				216 = { add_claim_by = ROOT }
+				566 = { add_claim_by = ROOT }
+				567 = { add_claim_by = ROOT }
+				40 = { add_claim_by = ROOT }
+				569 = { add_claim_by = ROOT }
+				652 = { add_claim_by = ROOT }
+				251 = { add_claim_by = ROOT }
+				250 = { add_claim_by = ROOT }
+				256 = { add_claim_by = ROOT }
+				401 = { add_claim_by = ROOT }
+				829 = { add_claim_by = ROOT }
+				255 = { add_claim_by = ROOT }
+				239 = { add_claim_by = ROOT }
+				236 = { add_claim_by = ROOT }
+				237 = { add_claim_by = ROOT }
+				238 = { add_claim_by = ROOT }
+				234 = { add_claim_by = ROOT }
+				218 = { add_claim_by = ROOT }
+				137 = { add_claim_by = ROOT }
+				233 = { add_claim_by = ROOT }
+				827 = { add_claim_by = ROOT }
+				821 = { add_claim_by = ROOT }
+				828 = { add_claim_by = ROOT }
+				232 = { add_claim_by = ROOT }
+				235 = { add_claim_by = ROOT }
+				217 = { add_claim_by = ROOT }
+				245 = { add_claim_by = ROOT }
+				265 = { add_claim_by = ROOT }
+				220 = { add_claim_by = ROOT }
+				240 = { add_claim_by = ROOT }
+				260 = { add_claim_by = ROOT }
+				254 = { add_claim_by = ROOT }
+				257 = { add_claim_by = ROOT }
+				258 = { add_claim_by = ROOT }
+				247 = { add_claim_by = ROOT }
+				248 = { add_claim_by = ROOT }
+				253 = { add_claim_by = ROOT }
+				244 = { add_claim_by = ROOT }
+				263 = { add_claim_by = ROOT }
+				264 = { add_claim_by = ROOT }
+				246 = { add_claim_by = ROOT }
+				243 = { add_claim_by = ROOT }
+				242 = { add_claim_by = ROOT }
+				210 = { add_claim_by = ROOT }
+				205 = { add_claim_by = ROOT }
+				222 = { add_claim_by = ROOT }
+				224 = { add_claim_by = ROOT }
+				219 = { add_claim_by = ROOT }
+				223 = { add_claim_by = ROOT }
+				204 = { add_claim_by = ROOT }
+				206 = { add_claim_by = ROOT }
+				207 = { add_claim_by = ROOT }
+				194 = { add_claim_by = ROOT }
+				241 = { add_claim_by = ROOT }
+				94 = { add_claim_by = ROOT }
+				95 = { add_claim_by = ROOT }
+				96 = { add_claim_by = ROOT }
+				199 = { add_claim_by = ROOT }
+				201 = { add_claim_by = ROOT }
+				198 = { add_claim_by = ROOT }
+				202 = { add_claim_by = ROOT }
+				203 = { add_claim_by = ROOT }
+				226 = { add_claim_by = ROOT }
+				193 = { add_claim_by = ROOT }
+				259 = { add_claim_by = ROOT }
+				225 = { add_claim_by = ROOT }
+				196 = { add_claim_by = ROOT }
+				200 = { add_claim_by = ROOT }
+				227 = { add_claim_by = ROOT }
+				221 = { add_claim_by = ROOT }
+				228 = { add_claim_by = ROOT }
+				81 = { add_claim_by = ROOT }
+				46 = { add_claim_by = ROOT }
+				77 = { add_claim_by = ROOT }
+				766 = { add_claim_by = ROOT }
+				78 = { add_claim_by = ROOT }
+				79 = { add_claim_by = ROOT }
+				80 = { add_claim_by = ROOT }
+				525 = { add_claim_by = ROOT }
+				527 = { add_claim_by = ROOT }
+				971 = { add_claim_by = ROOT }
 			}
 		}
 	}
