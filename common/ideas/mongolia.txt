@@ -3,7 +3,7 @@ ideas = {
 	country = {
 		MON_buddhist_support = {
 
-			picture = tur_coordinated_balkan_armed_forces
+			picture = AFG_parliament_building
 			
 			allowed = {
 			}
@@ -21,7 +21,7 @@ ideas = {
 		}
 		MON_soviet_science_idea = {
 
-			picture = tur_coordinated_balkan_armed_forces
+			picture = AFG_communist_graduates
 			
 			allowed = {
 			}
@@ -38,7 +38,7 @@ ideas = {
 		}
 		MON_transfer_territory = {
 
-			picture = tur_coordinated_balkan_armed_forces
+			picture = ARG_rapid_militarization
 			
 			allowed = {
 			}
@@ -56,7 +56,7 @@ ideas = {
 		}
 		MON_soviet_conscripts = {
 
-			picture = tur_coordinated_balkan_armed_forces
+			picture = saf_soviet_advisers
 			
 			allowed = {
 			}
@@ -73,7 +73,7 @@ ideas = {
 		}
 		MON_loyalists_in_mvd = {
 
-			picture = tur_coordinated_balkan_armed_forces
+			picture = GER_wage_war_on_capitalism
 			
 			allowed = {
 			}
@@ -91,7 +91,7 @@ ideas = {
 		}
 		MON_peace_and_prosperity_idea = {
 
-			picture = tur_coordinated_balkan_armed_forces
+			picture = YUG_federal_defense_council
 			
 			allowed = {
 			}
@@ -108,7 +108,7 @@ ideas = {
 		}
 		MON_secular_education_idea = {
 
-			picture = tur_coordinated_balkan_armed_forces
+			picture = generic_political_support
 			
 			allowed = {
 			}
@@ -128,7 +128,7 @@ ideas = {
 		}
 		MON_buddhist_opposition = {
 
-			picture = tur_coordinated_balkan_armed_forces
+			picture = generic_prisoner
 			
 			allowed = {
 			}
@@ -145,7 +145,7 @@ ideas = {
 		}
 		MON_neutral_foreign_policy_idea = {
 
-			picture = tur_coordinated_balkan_armed_forces
+			picture = generic_neglected_military
 			
 			allowed = {
 			}
@@ -166,7 +166,7 @@ ideas = {
 		}
 		MON_repaying_old_debt_idea  = {
 
-			picture = tur_coordinated_balkan_armed_forces
+			picture = RAJ_debt_relief
 			
 			allowed = {
 			}
@@ -183,7 +183,7 @@ ideas = {
 		}
 		MON_country_in_disarray_better_idea = {
 
-			picture = tur_coordinated_balkan_armed_forces
+			picture = ARG_social_welfare_fund_ns
 			
 			allowed = {
 			}
@@ -201,7 +201,7 @@ ideas = {
 		}
 		MON_tech_coop_idea = {
 
-			picture = tur_coordinated_balkan_armed_forces
+			picture = ARG_war_division
 			
 			allowed = {
 			}
@@ -218,7 +218,7 @@ ideas = {
 		}
 	MON_rely_on_national_strength_idea= {
 
-			picture = tur_coordinated_balkan_armed_forces
+			picture = AFG_quami
 			
 			allowed = {
 				original_tag = MON
@@ -238,7 +238,7 @@ ideas = {
 		}
 		MON_khanny_tonnoo= {
 
-			picture = tur_coordinated_balkan_armed_forces
+			picture = EST_republican_defence_league
 			
 			allowed = {
 				original_tag = MON
@@ -252,13 +252,13 @@ ideas = {
 			
 			modifier = {
 				initiative_factor = 0.04
-				recon_factor = 0.2
 				mobilization_laws_cost_factor = -0.10
+				
 			}
 		}
 MON_appoint_generals_accordingly_idea = {
 
-			picture = tur_coordinated_balkan_armed_forces
+			picture = ARG_military_government
 			
 			allowed = {
 				original_tag = MON
@@ -274,10 +274,9 @@ MON_appoint_generals_accordingly_idea = {
 				army_org_factor = -0.15
 				army_speed_factor = 0.10
 				army_core_defence_factor = 0.15
-				max_planning = 0.10
 				max_command_power_mult = 0.10
 				army_advisor_cost_factor = -0.5
-				conscription_factor = 0.05
+				planning_speed = 0.05
 			}
 		}
 		MON_state_of_the_armed_forces = {
@@ -303,7 +302,7 @@ MON_appoint_generals_accordingly_idea = {
 		}
 		MON_army_modernisation_breakthroughs_idea_3 = {
 
-			picture = generic_manpower_bonus
+			picture = tur_coordinated_balkan_armed_forces
 			
 			allowed = {
 				original_tag = MON
@@ -318,6 +317,8 @@ MON_appoint_generals_accordingly_idea = {
 			modifier = {
 				motorized_attack_factor = 0.1
 				motorized_defence_factor = 0.1
+				mechanized_attack_factor = 0.1
+				mechanized_defence_factor = 0.1
 			    army_fuel_consumption_factor = -0.05
 				army_speed_factor = 0.15
 				army_morale_factor = 0.05
@@ -328,7 +329,7 @@ MON_appoint_generals_accordingly_idea = {
 		}
 	MON_army_modernisation_breakthroughs_idea_2 = {
 
-			picture = generic_manpower_bonus
+			picture = tur_coordinated_balkan_armed_forces
 			
 			allowed = {
 				original_tag = MON
@@ -344,6 +345,8 @@ MON_appoint_generals_accordingly_idea = {
 				army_core_defence_factor = 0.05
 				motorized_attack_factor = 0.1
 				motorized_defence_factor = 0.1
+				mechanized_attack_factor = 0.1
+				mechanized_defence_factor = 0.1
 			    army_fuel_consumption_factor = -0.05
 				army_speed_factor = 0.15
 				army_morale_factor = 0.05
@@ -352,7 +355,7 @@ MON_appoint_generals_accordingly_idea = {
 		}
 		MON_army_modernisation_breakthroughs_idea = {
 
-			picture = generic_manpower_bonus
+			picture = tur_coordinated_balkan_armed_forces
 			
 			allowed = {
 				original_tag = MON
@@ -367,14 +370,16 @@ MON_appoint_generals_accordingly_idea = {
 			modifier = {
 				army_core_defence_factor = 0.05
 				motorized_attack_factor = 0.1
-				motorized_defence_factor = 0.1
+				motorized_defence_factor = 0.05
+				mechanized_attack_factor = 0.1
+				mechanized_defence_factor = 0.05
 			    army_fuel_consumption_factor = -0.05
 				army_org_factor = -0.15
 			}
 		}
 		MON_great_industrial_revolution = {
 
-			picture = generic_manpower_bonus
+			picture = ARG_public_works_investment
 			
 			allowed = {
 				original_tag = MON
@@ -426,7 +431,7 @@ research_speed_factor               = 0.01  # Flat research bonus
 		}
 			MON_many_men_idea = {
 
-			picture = generic_manpower_bonus
+			picture = COG_the_invisible_roof
 			
 			allowed = {
 				original_tag = MON
@@ -449,7 +454,7 @@ research_speed_factor               = 0.01  # Flat research bonus
 		}
 		MON_strong_nomadic_warriors_of_the_steppes_idea = {
 
-			picture = generic_manpower_bonus
+			picture = COG_force_publique
 			
 			allowed = {
 				original_tag = MON
@@ -472,8 +477,8 @@ research_speed_factor               = 0.01  # Flat research bonus
 		}
         MON_state_investments_idea = {
 
-			picture = generic_manpower_bonus
-			
+			picture = SOV_system_decentralization
+
 			allowed = {
 				original_tag = MON
 			}
@@ -495,7 +500,7 @@ research_speed_factor               = 0.01  # Flat research bonus
 		}
 		MON_nomadic_war_idea = {
 
-			picture = generic_manpower_bonus
+			picture = SWE_ga_pa_tactics
 			
 			allowed = {
 				original_tag = MON
@@ -517,13 +522,13 @@ research_speed_factor               = 0.01  # Flat research bonus
 		}
 
 		MON_buddhist_compromise_idea = {
-			picture = MON_buddhist_compromise
+			picture = ARG_argentine_metropole
 
 			allowed_civil_war = {
 
 			}
 			modifier = {
-				political_power_gain = -0.25
+				political_power_gain = -0.15
 				consumer_goods_factor = 0.08
 				
 			}
@@ -608,10 +613,8 @@ research_speed_factor               = 0.01  # Flat research bonus
 			}
 
 			modifier = {
-				planning_speed = 0.15
-                army_leader_start_attack_level = 2
-				army_leader_start_planning_level = 2
-				army_leader_start_logistics_level = 2
+                terrain_trait_xp_gain_factor = 0.25
+				
 			}
 
 		}
@@ -1081,6 +1084,7 @@ research_speed_factor               = 0.01  # Flat research bonus
 
 			modifier = {
 				conscription = 0.04
+				mobilization_speed = 0.25
 			}
 		}
 

@@ -109,8 +109,7 @@ characters = {
 				original_tag  = MON
 			}
 			available = {
-				#has_government = communism
-				NOT = { has_completed_focus = MON_end_the_purges }
+				has_government = communism
 			}
 			traits  = {
 				financial_expert
@@ -134,8 +133,7 @@ characters = {
 				original_tag  = MON
 			}
 			available = {
-				#has_government = communism
-				NOT = { has_completed_focus = MON_end_the_purges }
+				has_government = communism
 			}
 			traits  = {
 				silent_workhorse
@@ -189,8 +187,7 @@ characters = {
 				}
 			}
 			available = {
-				#has_government = communism
-				NOT = { has_completed_focus = MON_end_the_purges }
+				has_government = communism
 				hidden_trigger = {
 					MON_dorjjavyn_luvsansharav = { is_country_leader = no }
 				}
@@ -653,15 +650,12 @@ characters = {
 				original_tag  = MON
 			}
 			visible = {
-				NOT = { has_completed_focus = MON_third_mongolian_revolution }
-				NOT = { has_completed_focus = MON_throw_off_the_yoke }
 				hidden_trigger = {
 					MON_yumjaagiin_tsedenbal = { is_country_leader = no }
 				}
 			}
 			available = {
-				has_completed_focus = MON_tenth_party_congress
-				NOT = { MON_yumjaagiin_tsedenbal = { is_country_leader = yes } }
+				has_completed_focus = MON_reshuffle_gov_of_mongolia
 			}
 			traits  = {
 				economist
@@ -678,6 +672,32 @@ characters = {
 		}
 	}
 
+	MON_buyannmeh={
+		advisor={
+			
+			
+			slot = high_command
+			idea_token = MON_buyannmeh
+			ledger = air
+				allowed = {
+					original_tag = MON
+				}
+				traits = {
+					air_strategic_bombing_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Buyannmeh"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_asia_3"
+			}
+		}
+	}
 ### Dashiin Damba
 	MON_dashiin_damba = {
 		name = MON_dashiin_damba
@@ -691,11 +711,9 @@ characters = {
 				original_tag  = MON
 			}
 			visible = {
-				NOT = { has_completed_focus = MON_third_mongolian_revolution }
-				NOT = { has_completed_focus = MON_throw_off_the_yoke }
 			}
 			available = {
-				has_completed_focus = MON_support_the_global_struggle
+				has_completed_focus = MON_new_constitution
 			}
 			traits  = {
 				quartermaster_general
@@ -721,11 +739,9 @@ characters = {
 					original_tag = MON
 			}
 			visible = {
-				NOT = { has_completed_focus = MON_third_mongolian_revolution }
-				NOT = { has_completed_focus = MON_throw_off_the_yoke }
 			}
 			available = {
-				has_completed_focus = MON_tenth_party_congress
+				has_completed_focus = MON_reshuffle_gov_of_mongolia
 			}
 			traits = {
 				propaganda_expert
@@ -750,12 +766,9 @@ characters = {
 			allowed = {
 					original_tag = MON
 			}
-			visible = {
-				NOT = { has_completed_focus = MON_third_mongolian_revolution }
-				NOT = { has_completed_focus = MON_throw_off_the_yoke }
-			}
+			
 			available = {
-				has_completed_focus = MON_rural_education
+				has_completed_focus = MON_secularization_of_education
 			}
 			traits = {
 				education_reformer
@@ -780,12 +793,9 @@ characters = {
 			allowed = {
 				original_tag = MON
 			}
-			visible = {
-				NOT = { has_completed_focus = MON_third_mongolian_revolution }
-				NOT = { has_completed_focus = MON_throw_off_the_yoke }
-			}
+			
 			available = {
-				has_completed_focus = MON_adopt_cyrillic
+				has_completed_focus = MON_denounce_politizised_army
 			}
 			traits = {
 				editor
@@ -862,15 +872,11 @@ characters = {
 				original_tag = MON
 			}
 			visible = {
-				#has_government = communism
-				OR = {
-					MON_has_not_chosen_path_trigger = yes
-					has_completed_focus = MON_rehabilitate_lkhumbe
-				}
+				has_government = communism
+				
 			}
 			available = {
-				has_completed_focus = MON_rehabilitate_lkhumbe
-				#has_government = communism
+				has_government = communism
 			}
 			traits = {
 				communist_revolutionary
@@ -896,15 +902,11 @@ characters = {
 				original_tag = MON
 			}
 			visible = {
-				#has_government = communism
-				OR = {
-					MON_has_not_chosen_path_trigger = yes
-					has_completed_focus = MON_rehabilitate_lkhumbe
-				}
+				has_government = communism
+				
 			}
 			available = {
-				has_completed_focus = MON_rehabilitate_lkhumbe
-				#has_government = communism
+				has_government = communism
 			}
 			traits = {
 				ideological_crusader
@@ -1050,7 +1052,6 @@ characters = {
 				original_tag = MON
 			}
 			visible = {
-				has_completed_focus = MON_throw_off_the_yoke
 			}
 			available = {
 				not = { has_government = communism }
@@ -1079,7 +1080,6 @@ characters = {
 				original_tag = MON
 			}
 			visible = {
-				has_completed_focus = MON_throw_off_the_yoke
 			}
 			available = {
 				not = { has_government = communism }
@@ -1108,7 +1108,6 @@ characters = {
 				original_tag = MON
 			}
 			visible = {
-				has_completed_focus = MON_throw_off_the_yoke
 			}
 			available = {
 				not = { has_government = communism }
@@ -1137,7 +1136,6 @@ characters = {
 				original_tag = MON
 			}
 			visible = {
-				has_completed_focus = MON_throw_off_the_yoke
 			}
 			available = {
 				not = { has_government = communism }
@@ -1177,7 +1175,6 @@ characters = {
 				original_tag = MON
 			}
 			visible = {
-				has_completed_focus = MON_tibetan_lamas
 			}
 			available = {
 				not = { has_government = communism }
@@ -1242,7 +1239,7 @@ characters = {
 				original_tag = MON
 			}
 			visible = {
-				has_completed_focus = MON_invite_foreign_advisers
+				has_government = communism
 			}
 			available = {
 				
@@ -1271,7 +1268,6 @@ characters = {
 				original_tag = MON
 			}
 			visible = {
-				has_completed_focus = MON_invite_foreign_advisers
 			}
 			available = {
 				NOT = { has_war_with = FIN }
@@ -1301,7 +1297,6 @@ characters = {
 				original_tag = MON
 			}
 			visible = {
-				has_completed_focus = MON_invite_foreign_advisers
 			}
 			available = {
 				NOT = { has_war_with = GER }

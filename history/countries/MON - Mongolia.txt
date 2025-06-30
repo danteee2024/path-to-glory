@@ -66,6 +66,7 @@ recruit_character = MON_olziiburengiin_puntsag
 recruit_character = MON_jantsankhorloo
 recruit_character = MON_choimbolyn_shagdarsuren 
 recruit_character = MON_gelenkhuu
+recruit_character = MON_buyannmeh
 
 ### Historical path advisers & generals
 recruit_character = MON_yumjaagiin_tsedenbal
