@@ -1345,6 +1345,36 @@ HUN_AUS_danubian_state = {
 	color_ui = rgb { 224  228  255 }
 }
 
+CZE_neutrality = {
+	color = rgb { 205 118 25 }
+	color_ui = rgb { 205 118 25 }
+}
+
+CZE_fascism = {
+	color = rgb { 40 40 155 }
+	color_ui = rgb { 40 40 155 }
+}
+
+CZE_Comintern = {
+	color = rgb { 134 54 70 }
+	color_ui = rgb { 134 54 70 }
+}
+
+CZE_Pan_Slavic_Empire = {
+	color = rgb { 0 135 0 }
+	color_ui = rgb { 0 135 0 }
+}
+
+CZE_Union = {
+	color = rgb { 190 0 0 }
+	color_ui = rgb { 190 0 0 }
+}
+
+CZE_Union_of_Middle_Europe = {
+	color = rgb { 190 0 0 }
+	color_ui = rgb { 190 0 0 }
+}
+
 CZE_AUS_danubian_state = {
 	color = rgb { 224  228  255 }
 	color_ui = rgb { 224  228  255 }

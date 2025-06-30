@@ -1,0 +1,1588 @@
+ideas = {
+
+	country = {
+
+		CZE_democratic_bastion = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			picture = generic_democratic_drift_bonus
+
+			removal_cost = -1
+
+			modifier = {
+				democratic_drift = 0.05
+				drift_defence_factor = 0.3
+				war_support_factor = 0.05
+			}
+		}
+
+		CZE_czech_fascism = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = generic_fascism_drift_bonus
+
+			removal_cost = -1
+
+			modifier = {
+				fascism_drift = 0.06
+
+			}
+		}
+		CZE_army_of_aggression_focus = {
+			picture = FRA_army_of_aggression_focus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			modifier = {
+				army_org = 5
+				justify_war_goal_time = -0.25
+			}
+		}
+
+		CZE_Bohemian_Empire = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = generic_fascism_drift_bonus
+
+			removal_cost = -1
+
+			modifier = {
+				fascism_drift = 0.05
+				war_support_weekly = 0.005
+				political_power_factor = 0.05
+
+			}
+		}
+
+		CZE_Germanys_Production = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = generic_production_bonus
+
+			removal_cost = -1
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+		}
+
+		CZE_Strong_Force = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = ETH_peacekeeping_forces
+
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.1
+			}
+		}
+
+		CZE_Plan_of_Ressources = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = ARG_resource_extration_focus
+
+			removal_cost = -1
+
+			modifier = {
+				local_resources = 0.15
+			}
+		}
+
+		CZE_Plan_of_Logistic = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = generic_supply_line
+
+			removal_cost = -1
+
+			modifier = {
+				supply_consumption_factor = -0.15
+			}
+		}
+		
+		CZE_The_Great_Bohemian_Empire = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = generic_fascism_drift_bonus
+
+			removal_cost = -1
+
+			modifier = {
+				fascism_drift = 0.05
+				war_support_weekly = 0.005
+				stability_weekly_factor = 0.005
+				resistance_growth = -0.05
+				resistance_damage_to_garrison = -0.1
+				conscription_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+
+
+			CZE_Call_of_the_Kingdom = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			picture = HUN_apostolic_kingdom_idea
+
+			removal_cost = -1
+
+			modifier = {
+				neutrality_drift = 0.5
+				political_power_factor = -0.1
+
+			}
+		}
+		CZE_The_Revival_of_the_Kingdom = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			picture = HUN_apostolic_kingdom_idea
+
+			removal_cost = -1
+
+			modifier = {
+				neutrality_drift = 0.5
+			}
+		}
+		CZE_Bohemia_Economy =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_economic_reactivation
+
+			removal_cost = -2	
+			modifier = {
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+		CZE_Bohemia_Economy_2 =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_economic_reactivation
+
+			removal_cost = -2	
+			modifier = {
+				consumer_goods_factor = 0.15
+			}
+		}
+		CZE_Bohemia_Army =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FIN_finnish_army
+
+			removal_cost = -2	
+			modifier = {
+				army_org_factor = 0.05
+				training_time_army_factor = -0.1
+			}
+		}
+		CZE_Holy_Bohemia_Army =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FIN_finnish_army
+
+			removal_cost = -2	
+			modifier = {
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				training_time_army_factor = -0.1
+				land_reinforce_rate = 0.05
+			}
+		}
+		CZE_Pan-Slavic_Empire =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FIN_finnish_army
+
+			removal_cost = -2	
+			modifier = {
+				fascism_drift = 0.05
+				war_support_weekly = 0.005
+				political_power_factor = 0.05
+				army_attack_factor = 0.05
+				stability_weekly_factor = 0.05
+
+			}
+		}
+			CZE_Red_Czechs_Army =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = GFX_focus_SOV_builder_of_the_red_army
+
+			removal_cost = -2	
+			modifier = {
+				planning_speed = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+
+		CZE_Communist_Politics =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_communism_drift_bonus
+
+			removal_cost = -2	
+			modifier = {
+				political_power_factor = -0.05
+				war_stability_factor = 0.10
+				stability_weekly_factor = 0.01
+			}
+		}
+			CZE_Red_Czechs_Army =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_communist_army
+
+			removal_cost = -2	
+			modifier = {
+				planning_speed = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+		CZE_Joint_Czech_Slovakia_Plan =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_second_five_year_plan
+
+			removal_cost = -2	
+			modifier = {
+				consumer_goods_factor = -0.10
+				production_speed_industrial_complex_factor = 0.10
+			}
+		}
+		CZE_Joint_Czech_Slovakia_Plan_2 =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_third_five_year_plan
+
+			removal_cost = -2	
+			modifier = {
+				consumer_goods_factor = -0.20
+				production_speed_industrial_complex_factor = -0.10
+				production_speed_arms_factory_factor = 0.10
+			}
+		}
+		CZE_The_Union_Worker =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FIN_finnish_federation_of_trade_unions_light
+
+			removal_cost = -2	
+			modifier = {
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+			}
+		}
+
+		CZE_The_Union_Worker_2 =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FIN_finnish_federation_of_trade_unions_light
+
+			removal_cost = -2	
+			modifier = {
+			 consumer_goods_factor = 0.15
+			}
+		}
+		CZE_Strength_Through_Unity =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = YUG_all_yugoslavian_regiments
+
+			removal_cost = -2	
+			modifier = {
+			conscription = 0.1
+			war_support_factor = 0.05
+			}
+		}
+
+		CZE_Mobilize_the_Masses =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_manpower_bonus
+
+			removal_cost = -2	
+			modifier = {
+				conscription = 0.05
+			}
+		}
+		CZE_go_left =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_manpower_bonus
+
+			removal_cost = -2	
+			modifier = {
+				communism_drift = 0.5
+			}
+		}
+		CZE_The_Great_Army =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = NORDIC_army_communist
+			
+			removal_cost = -2	
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+		CZE_Research_of_Praha =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_economic_reactivation
+
+			removal_cost = -2	
+			modifier = {
+				research_speed_factor = 0.10
+			}
+		}
+
+		CZE_Union_Academy =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_economic_reactivation
+
+			removal_cost = -2	
+			modifier = {
+			research_speed_factor = 0.1
+			}
+		}
+		CZE_Industrial_Republic =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_civilian_economy_boost
+
+			removal_cost = -2	
+			modifier = {
+			consumer_goods_factor = -0.10
+			production_speed_industrial_complex_factor = 0.1
+			production_speed_arms_factory_factor = -0.1
+			}
+		}
+		CZE_Invest_into_our_Army =  {
+
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_army_corruption3
+
+			removal_cost = -1
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+			}
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.10 instant = yes
+				}
+			}
+		}
+
+		CZE_Invest_into_our_Trade =  {
+
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = can_wartime_prices_and_trade_board
+
+			removal_cost = -1
+
+			modifier = {
+				resource_trade_cost_bonus_per_factory = 1
+			}
+		}
+		CZE_Blitz_War =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_war_division
+
+			removal_cost = -2	
+			modifier = {
+				army_speed_factor = 0.1
+				planning_speed = 0.1
+			}
+		}
+
+		CZE_Bohemias_War_Industry =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_fourth_five_year_plan
+
+			removal_cost = -2	
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = -0.1
+			}
+		}
+
+		CZE_Bohemias_Researcher =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SOV_fourth_five_year_plan
+
+			removal_cost = -2	
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+
+
+		CZE_beacon_of_liberty = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			picture = generic_democratic_drift_bonus
+
+			removal_cost = -1
+
+			modifier = {
+				democratic_drift = 0.1
+				drift_defence_factor = 0.3
+				war_support_factor = 0.1
+				army_core_defence_factor = 0.1
+				research_speed_factor = 0.07
+			}
+		}
+
+		CZE_Greater_Republic = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			picture = generic_democratic_drift_bonus
+
+			removal_cost = -1
+
+			modifier = {
+				democratic_drift = 0.1
+				drift_defence_factor = 0.3
+				war_support_factor = 0.15
+				army_core_defence_factor = 0.1
+				research_speed_factor = 0.15
+			}
+		}
+
+		CZE_Democracy_Shall_Prevail = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			picture = generic_democratic_drift_bonus
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.1
+				army_core_defence_factor = 0.05
+				army_core_attack_factor = 0.05
+			}
+		}
+
+		CZE_investment_into_the_Front = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			picture = generic_supply_lines
+
+			removal_cost = -1
+
+			modifier = {
+			supply_consumption_factor = -0.1
+			supply_combat_penalties_on_core_factor = -0.1
+			}
+		}
+
+		CZE_czech_socialism = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+
+			modifier = {
+				foreign_subversive_activites = -0.75
+			}
+		}
+
+		CZE_communism_with_a_human_face = {
+
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				OR = {
+					has_government = communism
+					has_government = fascism
+				}
+			}
+
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+
+			modifier = {
+				conscription = 0.03
+			}
+		}
+
+		CZE_german_millitary_cooperation_focus = {
+
+			picture = german_advisors
+
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				OR = {
+					AND = {
+						has_government = fascism
+						GER = {
+							has_government = fascism
+						}
+					}
+					AND = {
+						has_government = communism
+						GER = {
+							has_government = communism
+						}
+					}
+					AND = {
+						has_government = democratic
+						GER = {
+							has_government = democratic
+						}
+					}
+				}
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				land_doctrine_cost_factor = -0.05
+				air_doctrine_cost_factor = -0.05
+				research_speed_factor = 0.05
+			}
+
+		}
+
+		CZE_war_college_idea = {
+
+			picture = generic_disjointed_gov
+
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			picture = generic_infantry_bonus
+
+			removal_cost = -1
+
+			modifier = {
+				planning_speed = 0.1
+				military_leader_cost_factor = -0.3
+				army_leader_start_attack_level = 1
+				army_leader_start_planning_level = 1
+				army_leader_start_defense_level = 1
+				field_officer_promotion_penalty = -1.0
+			}
+		}
+		CZE_Czechs_Armor_Power =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_acquire_tanks
+
+			removal_cost = -2	
+			modifier = {
+				army_armor_attack_factor = 0.1
+				army_armor_speed_factor = 0.1
+					}
+			}
+
+		CZE_Czechs_Fire_Power =  {
+			
+			allowed = {
+				original_tag = CZE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_acquire_tanks
+
+			removal_cost = -2	
+			modifier = {
+				army_infantry_attack_factor = 0.1
+				army_infantry_defence_factor = 0.1
+					}
+			}
+		
+
+		CZE_air_focus = {
+
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = air_support_focus
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.2 instant = yes
+				}
+			}
+		}
+
+		CZE_naval_focus = {
+
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_navy_bonus
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				ship_hull_light = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+
+		CZE_export_focus1 = {
+
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = free_trade
+
+			removal_cost = -1
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		CZE_export_focus2 = {
+
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = free_trade
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.10
+				production_factory_efficiency_gain_factor = 0.05
+			}
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+		}
+		CZE_export_focus3 = {
+
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = free_trade
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.10
+				production_factory_efficiency_gain_factor = 0.15
+			}
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				light_tank_chassis = {
+					build_cost_ic = -0.15 instant = yes
+				}
+				medium_tank_chassis = {
+					build_cost_ic = -0.10 instant = yes
+				}
+			}
+		}
+
+		CZE_fortification_focus = {
+
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_fortification_focus
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_bunker_factor = 0.3
+				conscription = 0.003
+				bunker_max_level_terrain_limit = 1
+				coastal_bunker_max_level_terrain_limit = 1
+			}
+		}
+
+		CZE_fortification_focus2 = {
+
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_fortification_focus
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_bunker_factor = 0.3
+				conscription = 0.006
+				bunker_max_level_terrain_limit = 2
+				coastal_bunker_max_level_terrain_limit = 1
+			}
+		}
+
+		CZE_fortification_focus3 = {
+
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_fortification_focus
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_bunker_factor = 0.3
+				conscription = 0.009
+				bunker_max_level_terrain_limit = 2
+				coastal_bunker_max_level_terrain_limit = 1
+			}
+		}
+
+		CZE_fortification_focus4 = {
+
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_fortification_focus
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_bunker_factor = 0.3
+				conscription = 0.012
+				bunker_max_level_terrain_limit = 3
+				coastal_bunker_max_level_terrain_limit = 1
+			}
+		}
+		CZE_fortification_focus5 = {
+
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = FRA_fortification_focus
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_bunker_factor = 0.4
+				conscription = 0.015
+				bunker_max_level_terrain_limit = 4
+				coastal_bunker_max_level_terrain_limit = 1
+			}
+		}
+
+		CZE_skoda_works = {
+
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_speed_facility_factor = 0.05
+			}
+		}
+
+		CZE_divided_nation = {
+
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.2
+				conscription = -0.005
+			}
+		}
+
+
+		CZE_czech_fascism_idea = {
+
+			picture = generic_fascism_drift_bonus
+
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_Factor = 0.05
+				conscription = -0.005
+			}
+		}
+
+		CZE_national_fascism_idea = {
+
+			picture = generic_fascism_drift_bonus
+
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				land_reinforce_rate = 0.02
+				army_morale_factor = 0.10
+			}
+		}
+
+		CZE_industrial_legacy_idea = {
+
+			allowed = {
+				original_tag = CZE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_production_bonus
+
+			removal_cost = -1
+
+			modifier = {
+				conversion_cost_civ_to_mil_factor= -0.1
+				production_speed_industrial_complex_factor = 0.05
+			}
+		}
+
+		CZE_planning_bonus = {
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				max_planning = 0.15
+			}
+		}
+	}
+	
+
+	# TECHNOLOGY
+	tank_manufacturer = {
+
+		designer = yes
+
+		CZE_ckd = {
+
+			picture = generic_tank_manufacturer_1
+
+			allowed = {
+				original_tag = CZE
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+
+			traits = { fast_tank_manufacturer }
+
+			equipment_bonus = {
+				# made light/medium tanks panzerkampfwagen 38
+			}
+		}
+
+		CZE_tatra = {
+
+			picture = generic_tank_manufacturer_2
+
+
+			allowed = {
+				original_tag = CZE
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+
+			traits = { medium_tank_manufacturer }
+
+			equipment_bonus = {
+			}
+		}
+
+		CZE_skoda_armor = {
+
+			picture = generic_tank_manufacturer_3
+
+
+			allowed = {
+				original_tag = CZE
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+
+			traits = { heavy_tank_manufacturer }
+
+			equipment_bonus = {
+			}
+		}
+	}
+
+	naval_manufacturer = {
+
+		designer = yes
+
+		CZE_skoda_shipyards = {
+
+			picture = generic_naval_manufacturer_3
+
+			allowed = {
+				original_tag = CZE
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+
+			equipment_bonus = {
+
+			}
+
+			traits = { coastal_defence_naval_manufacturer }
+
+		}
+	}
+
+	aircraft_manufacturer = {
+
+		designer = yes
+
+		CZE_ckd_praga = {
+
+			picture = generic_air_manufacturer_1
+
+
+			allowed = {
+				original_tag = CZE
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+
+			traits = { naval_aircraft_manufacturer }
+
+			# fighter aircraft B-534, versitile and high performing in manuverability and speed
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		CZE_avia = {
+
+			picture = generic_air_manufacturer_1
+
+
+			allowed = {
+				original_tag = CZE
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+
+			traits = { light_aircraft_manufacturer }
+
+			# fighter aircraft B-534, versitile and high performing in manuverability and speed
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+
+		CZE_aero = {
+
+			picture = generic_air_manufacturer_2
+
+
+			allowed = {
+				original_tag = CZE
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+
+			traits = { medium_aircraft_manufacturer }
+
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+
+		CZE_letov = {
+
+			picture = generic_air_manufacturer_3
+
+
+			allowed = {
+				original_tag = CZE
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+
+			traits = { heavy_aircraft_manufacturer }
+
+			equipment_bonus = {
+				# produced almost 300 junker 290 heavy hombers during ww2, as well as own fighters prior to the war
+			}
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	materiel_manufacturer = {
+
+		designer = yes
+
+		CZE_zbrojovka_brno = {
+
+			picture = generic_infantry_equipment_manufacturer_2
+
+
+			allowed = {
+				original_tag = CZE
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+
+			traits = { infantry_equipment_manufacturer }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		CZE_skoda_artillery = {
+
+			picture = generic_artillery_manufacturer_2
+
+
+			allowed = {
+				original_tag = CZE
+			}
+
+			research_bonus = {
+				artillery = 0.15
+			}
+
+			traits = { artillery_manufacturer }
+
+			equipment_bonus = {
+
+			}
+		}
+
+		CZE_praga = {
+
+			picture = generic_motorized_equipment_manufacturer_2
+
+			allowed = {
+				original_tag = CZE
+			}
+
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+
+			traits = { motorized_equipment_manufacturer }
+		}
+	}
+
+	industrial_concern = {
+
+		CZE_elektra = {
+
+			picture = generic_industrial_concern_1
+
+			allowed = {
+				original_tag = CZE
+			}
+
+			research_bonus = {
+				electronics = 0.15
+			}
+
+			traits = { electronics_concern }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		CZE_skoda_works_2 = {
+
+			picture = generic_electronics_concern_1
+
+			allowed = {
+				original_tag = CZE
+			}
+
+			research_bonus = {
+				industry = 0.15
+
+			}
+
+			traits = { industrial_concern }
+		}
+
+		CZE_csd = { 
+
+			picture = CZE_csd
+
+			allowed = {
+				OR = {
+					original_tag = CZE
+					original_tag = SLO
+				}
+			}
+
+			available = {
+				has_completed_focus = CZE_industrial_legacy
+			}
+
+			visible = {
+			}
+
+			research_bonus = {
+			}
+		
+			traits = { railway_company } 
+
+			modifier = {
+			}
+		}
+	}
+}
+
