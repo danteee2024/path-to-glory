@@ -36,15 +36,7 @@ country_event = {
 	
 	option = { # Accept demands
 		name = mongolia.one.a
-		# if = {
-		# 	limit = {
-		# 		country_exists = TAN
-		# 	}
-		# 	MON = {
-		# 		annex_country = { target = TAN transfer_troops = yes }
-		# 	}
-		# }
-		# else = {
+		
 			MON = {
 				transfer_state = 329
 				transfer_state = 563
@@ -53,12 +45,6 @@ country_event = {
 				transfer_state = 566
 			
 			}
-			SOV = {
-				add_timed_idea = {
-					idea = MON_transfer_territory
-					days = 365
-				}
-			}
 			MON = {
 				563 = { add_core_of = MON }
 				564 = { add_core_of = MON }
@@ -66,11 +52,18 @@ country_event = {
 				566 = { add_core_of = MON }
 				329 = { add_core_of = MON }
 			}
-		# }
+			SOV = {
+				add_timed_idea = {
+					idea = MON_transfer_territory
+					days = 365
+				}
+			}
+			
+			ai_chance = { factor = 100 }
 	}
 	option = { # Refuse
 		name = mongolia.one.b
-		ai_chance = { factor = 10 }
+		ai_chance = { factor = 0 }
 		
 	}
 }
@@ -157,5 +150,22 @@ country_event = {
 
     option = {
         
+    }
+}
+
+
+country_event = {
+    id = mongolia.5
+	title = mongolia.5.t
+	desc = mongolia.5.d
+	picture = GFX_report_event_SOV_cossack_cavalry
+ 
+    fire_only_once = yes
+
+   is_triggered_only = yes
+
+    option = {
+        name = mongolia.5.a
+		add_ideas = MON_soviet_nkvd_agents
     }
 }

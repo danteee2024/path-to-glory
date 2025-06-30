@@ -1,6 +1,57 @@
 ideas = {
+mobilization_laws = {
+		law = yes
 
+		MON_mongol_collectivized_unity = {
+            level = 10
+			picture = socialist_science_focus
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.1
+				industrial_capacity_factory = -0.03
+				production_speed_buildings_factor = -0.03
+				training_time_factor = 0.05
+				communism_drift = 0.05
+				army_morale_factor = 0.05
+				drift_defence_factor = 0.2
+			}
+
+			cancel_if_invalid = no
+
+			allowed_to_remove = {
+				OR = {
+					has_completed_focus = MON_soviet_assistance_program
+					has_completed_focus = MON_rely_on_national_strength
+				}
+			}
+		}
+
+	}
 	country = {
+		MON_mvd_loyalists_idea = {
+
+			picture = generic_spy_coup
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				operative_slot = 1
+				operation_infiltrate_risk = -0.25
+			}
+		}
 		MON_soviet_nkvd_agents = {
 
 			picture = nkvd_2
@@ -17,6 +68,27 @@ ideas = {
 			modifier = {
 				operative_slot = 1
 				political_power_factor = -0.15
+			}
+		}
+		MON_riders_of_the_storm_idea = {
+
+			picture = RAJ_federal_court_of_india
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				
+			army_speed_factor = 0.25
+			conscription_factor = 0.05
+			stability_factor = 0.15
+			war_support_factor = 0.15
 			}
 		}
 		MON_buddhist_support = {
@@ -508,9 +580,8 @@ research_speed_factor               = 0.01  # Flat research bonus
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_factor = 0.05
+				consumer_goods_factor = 0.02
 				production_speed_buildings_factor = 0.05
-				political_advisor_cost_factor = -0.15
 			
 
 
@@ -828,7 +899,7 @@ research_speed_factor               = 0.01  # Flat research bonus
 				MONTHLY_POPULATION = -0.33
 				conscription_factor = -0.33
 				political_power_factor = -0.25
-				consumer_goods_factor = -0.15
+				consumer_goods_factor = -0.1
 			}
 		}
 		
@@ -872,7 +943,7 @@ research_speed_factor               = 0.01  # Flat research bonus
 				MONTHLY_POPULATION = -0.11
 				conscription_factor = -0.11
 				political_power_factor = -0.1
-				consumer_goods_factor = -0.15
+				consumer_goods_factor = -0.2
 			}
 		}
 		
@@ -891,10 +962,89 @@ research_speed_factor               = 0.01  # Flat research bonus
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_factor = -0.15
+				consumer_goods_factor = -0.25
 			}
 		}
 
+		
+			MON_nomadism_1 = {
+
+			picture = chi_army_corruption2
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				local_building_slots_factor = -0.35
+				industrial_capacity_factory = -0.25
+				local_resources_factor = -0.25
+				production_speed_buildings_factor = -0.25
+				supply_consumption_factor = -0.25
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.35 instant = yes
+				}
+			}
+		}
+			MON_nomadism_2 = {
+
+			picture = chi_army_corruption2
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				local_building_slots_factor = -0.2
+				industrial_capacity_factory = -0.15
+				local_resources_factor = -0.15
+				production_speed_buildings_factor = -0.25
+				supply_consumption_factor = -0.3
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.35 instant = yes
+				}
+			}
+		}
+		MON_modernised_industry = {
+
+			picture = ETH_dire_dawa_industries
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				local_resources_factor = 0.05
+				supply_consumption_factor = -0.05
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+		}
 		MON_nomad_0 = {
 
 			picture = chi_army_corruption2
@@ -914,68 +1064,11 @@ research_speed_factor               = 0.01  # Flat research bonus
 				industrial_capacity_factory = -0.25
 				local_resources_factor = -0.25
 				production_speed_buildings_factor = -0.25
-				supply_consumption_factor = -0.20
-				mobilization_speed = -0.75
-			}
-			equipment_bonus = {
-				infantry_equipment = {
-					build_cost_ic = -0.50 instant = yes
-				}
-			}
-		}
-			MON_nomadism_1 = {
-
-			picture = chi_army_corruption2
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				local_building_slots_factor = -0.25
-				industrial_capacity_factory = -0.2
-				local_resources_factor = -0.2
-				production_speed_buildings_factor = -0.2
-				supply_consumption_factor = -0.1
-				mobilization_speed = -0.5
-			}
-			equipment_bonus = {
-				infantry_equipment = {
-					build_cost_ic = -0.25 instant = yes
-				}
-			}
-		}
-			MON_nomadism_2 = {
-
-			picture = chi_army_corruption2
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				local_building_slots_factor = -0.10
-				industrial_capacity_factory = -0.30
-				local_resources_factor = -0.2
-				production_speed_buildings_factor = -0.25
 				supply_consumption_factor = -0.2
-				mobilization_speed = -0.35	
 			}
 			equipment_bonus = {
 				infantry_equipment = {
-					build_cost_ic = -0.35 instant = yes
+					build_cost_ic = -0.30 instant = yes
 				}
 			}
 		}
@@ -995,15 +1088,14 @@ research_speed_factor               = 0.01  # Flat research bonus
 			
 			modifier = {
 				local_building_slots_factor = -0.25
-				industrial_capacity_factory = -0.25
-				local_resources_factor = -0.2
-				production_speed_buildings_factor = -0.2
-				supply_consumption_factor = -0.15
-				mobilization_speed = -0.5
+				industrial_capacity_factory = -0.15
+				local_resources_factor = -0.10
+				production_speed_buildings_factor = -0.15
+				supply_consumption_factor = -0.10
 			}
 			equipment_bonus = {
 				infantry_equipment = {
-					build_cost_ic = -0.30 instant = yes
+					build_cost_ic = -0.25 instant = yes
 				}
 			}
 		}
@@ -1023,12 +1115,9 @@ research_speed_factor               = 0.01  # Flat research bonus
 			removal_cost = -1
 			
 			modifier = {
-				local_building_slots_factor = -0.10
-				industrial_capacity_factory = -0.1
-				local_resources_factor = -0.1
-				production_speed_buildings_factor = -0.1
-				supply_consumption_factor = -0.05
-				mobilization_speed = -0.25
+				industrial_capacity_factory = -0.05
+				local_resources_factor = 0.05
+				production_speed_buildings_factor = -0.05
 			}
 			equipment_bonus = {
 				infantry_equipment = {
@@ -1037,57 +1126,7 @@ research_speed_factor               = 0.01  # Flat research bonus
 			}
 		}	
 
-		MON_nomad_3 = {
 
-			picture = chi_army_corruption2
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				local_building_slots_factor = -0.05
-				industrial_capacity_factory = -0.05
-				production_speed_buildings_factor = -0.05
-				mobilization_speed = -0.1
-			}
-			equipment_bonus = {
-				infantry_equipment = {
-					build_cost_ic = -0.15 instant = yes
-				}
-			}
-		}
-
-		MON_nomad_4 = {
-
-			picture = chi_army_corruption2
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				mobilization_speed = -0.1
-			}
-			equipment_bonus = {
-				infantry_equipment = {
-					build_cost_ic = -0.1 instant = yes
-				}
-			}
-		}
-		
 		MON_mobilize_steppes = {
 			picture = generic_victors_of_ww1
 

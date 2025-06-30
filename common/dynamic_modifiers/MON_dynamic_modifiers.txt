@@ -5,7 +5,7 @@
 MON_reestablished_army = {
 	enable = { always = yes }
 
-	icon = AFG_afghanistan_bank
+	icon = GFX_idea_AFG_afghanistan_bank
 	
 	training_time_army_factor = -0.10
 	recon_factor = MON_reestablished_army_recon_factor
