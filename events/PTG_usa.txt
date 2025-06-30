@@ -56,6 +56,7 @@ country_event = {
 					level = 1
 					instant_build = yes
 				}
+				set_state_flag = USA_midwest_invested
 		}
 		hidden_effect = {
 			if = {
