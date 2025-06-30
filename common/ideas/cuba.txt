@@ -594,7 +594,6 @@ ideas = {
 				army_attack_factor = -0.1
 				army_defence_factor = -0.1
 				army_org_factor = -0.33
-				army_infantry_attack_factor = 0.1
 
 		}
 			equipment_bonus = {
@@ -619,7 +618,6 @@ ideas = {
 				army_attack_factor = -0.1
 				army_defence_factor = -0.1
 				army_org_factor = -0.33
-				army_infantry_attack_factor = 0.1
 
 		}
 			equipment_bonus = {
@@ -644,8 +642,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				army_armor_attack_factor = 0.15
-				army_armor_defence_factor = 0.15
+				army_armor_attack_factor = 0.1
+				army_armor_defence_factor = 0.1
 
 		}
 			equipment_bonus = {
@@ -670,7 +668,6 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				army_infantry_attack_factor = 0.1
 				special_forces_attack_factor = 0.05
 
 		}
@@ -838,6 +835,34 @@ ideas = {
 			}
 		
 		
+		}
+		CUB_permanent_revolution = {
+			name = "Permanent Revolution"
+
+			picture = SOV_soviet_hegemony
+		allowed = {
+			always = yes
+		}
+			removal_cost = -1
+			modifier = {
+				justify_war_goal_time = -0.5
+			}
+		
+
+		}
+			CUB_exile_flame = {
+			name = "Exiled Flame"
+
+			picture = NOR_sivog
+		allowed = {
+			always = yes
+		}
+			removal_cost = -1
+			modifier = {
+				stability_weekly = 0.001
+			}
+		
+
 		}
 
 

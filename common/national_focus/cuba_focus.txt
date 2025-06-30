@@ -1203,10 +1203,7 @@ focus_tree = {
 			ruling_party = communism
 			elections_allowed = no
 		   }
-		   hidden_effect = {
-			recruit_character = CUB_fidel_castro_ruz_general
-            recruit_character = CUB_che_guevara_general
-		   }
+		   
 		}
 	}
 
@@ -1240,7 +1237,13 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			custom_effect_tooltip = "YUnlocks Castro and Guevera as generalsW"
 			add_ideas = good_geurilla_staff
+			hidden_effect = {
+			recruit_character = CUB_fidel_castro_ruz_general
+            recruit_character = CUB_che_guevara_general
+		   }
+		   
 		}
 	}
 
@@ -1249,10 +1252,13 @@ focus_tree = {
 	focus = {
 		id = CUB_join_comintern
 		icon = GFX_focus_chi_mission_to_the_soviet_union
-		x = -1
+		x = -2
 		y = 1
 		prerequisite = { focus = CUB_komunist3 focus = CUB_integrate_guerrila_leadership }
 		relative_position_id = CUB_komunist3
+		mutually_exclusive = {
+			focus = CUB_permament_rev
+		}
 		cost = 10
 		
 		available_if_capitulated = yes
@@ -1264,9 +1270,103 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = CUB_permament_rev
+		icon =  GFX_goal_support_fourth_int
+		x = 0
+		y = 1
+		prerequisite = { focus = CUB_komunist3 focus = CUB_integrate_guerrila_leadership }
+		relative_position_id = CUB_komunist3
+		mutually_exclusive = {
+			focus = CUB_join_comintern
+		}
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			create_faction = "Fourth International"
+			SOV = {
+				add_opinion_modifier = {
+				target = CUB
+				modifier = communism_leanings_bad
+			}
+			}
+			
+		}
+	}
+		focus = {
+		id = CUB_per_rev
+		icon = GFX_focus_SOV_international_union_of_soviet_republics
+		x = 1
+		y = 2
+		prerequisite = { focus = CUB_permament_rev }
+		relative_position_id = CUB_komunist3
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = CUB_permanent_revolution
+			
+		}
+	}
+	focus = {
+		id = CUB_ex_flame
+		icon = GFX_focus_fra_loyalty_trotzky
+		x = 2
+		y = 3
+		prerequisite = { focus = CUB_per_rev }
+		relative_position_id = CUB_komunist3
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = CUB_exile_flame
+			
+		}
+	}
+	focus = {
+		id = CUB_hate_stalin
+		icon = GFX_focus_SOV_the_last_purge
+		x = 0
+		y = 3
+		prerequisite = { focus = CUB_per_rev }
+		relative_position_id = CUB_komunist3
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_stability = 0.1
+			
+		}
+	}
+	
+		focus = {
+		id = CUB_reject_bureaucratic_socialism
+		icon = GFX_focus_GER_legacy_of_the_spartacus_league
+		x = 1
+		y = 4
+		prerequisite = { focus = CUB_hate_stalin  }
+		prerequisite = {
+			focus = CUB_ex_flame
+		}
+		relative_position_id = CUB_komunist3
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_stability = 0.1
+			
+		}
+	}
+
+	focus = {
 		id = CUB_import_clean_energy
 		icon = GFX_focus_generic_nuclear_development
-		x = 1
+		x = -3
 		y = 2
 		prerequisite = { focus = CUB_join_comintern }
 		relative_position_id = CUB_komunist3
@@ -1302,8 +1402,8 @@ focus_tree = {
 		id = CUB_break_the_chains
 		icon = GFX_focus_RAJ_give_me_blood_and_i_will_grant_you_freedom
 		x = -1
-		y = 2
-		prerequisite = { focus = CUB_join_comintern  }
+		y = 7
+		prerequisite = {   }
 		relative_position_id = CUB_komunist3
 		cost = 10
 		
