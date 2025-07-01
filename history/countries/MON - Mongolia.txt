@@ -16,7 +16,7 @@ set_technology = {
 add_ideas = {
 	limited_conscription
 	MON_collectivisation_1
-	MON_nomad_1
+	MON_nomad_0
 	MON_state_of_the_armed_forces
 	MON_mongol_collectivized_unity
 }
