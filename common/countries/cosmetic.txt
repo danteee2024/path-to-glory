@@ -2064,7 +2064,7 @@ CHI_warlord_PRC = {
 	color_ui = rgb { 178 34 60 }
 }
 
-CHI_power_struggle_defeated = {
+CUB_empire_tag = {
 	color = rgb { 152 130 191 }
 	color_ui = rgb { 198 169 248 }
 }
@@ -3082,4 +3082,8 @@ LGF_UNIFIED = {
 JAP_shogunate_tag = {
 	color = rgb { 0 73 75 }
 	color_ui = rgb { 0 73 75 }
+}
+CUB_kingdom = {
+	color = rgb { 140 65 166 }
+	color_ui = rgb { 140 65 166 }
 }

@@ -1,0 +1,598 @@
+﻿
+
+add_namespace = cuba
+
+country_event = {
+	id = cuba.1
+	picture = GFX_report_event_DEN_celebration
+	title = "Revolutionary demands"
+	desc = "Across the country, workers, peasants, and disillusioned soldiers are rising with one voice. They no longer plead for change—they demand it. Banners are raised in the streets, slogans echo from factories, and the halls of power tremble. Land for the landless, bread for the hungry, and freedom from tyranny—these are the cries of a people who will not return to silence."
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = "Accept Their Demands"
+		CUB = {
+			annex_country = {
+				target = root
+			}
+		}
+		
+	}
+	option = {
+		
+		name = "Reject Demands"
+		CUB = {
+			create_wargoal = {
+				target = root
+				type = annex_everything
+			}
+		}
+	}
+}
+country_event = {
+	id = cuba.2
+	picture = GFX_report_event_DEN_celebration
+	title = "Revolutionary demands"
+	desc = "Across the country, workers, peasants, and disillusioned soldiers are rising with one voice. They no longer plead for change—they demand it. Banners are raised in the streets, slogans echo from factories, and the halls of power tremble. Land for the landless, bread for the hungry, and freedom from tyranny—these are the cries of a people who will not return to silence."
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = "Accept Their Demands"
+		ENG = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 3
+			}
+		}
+		CUB = {
+			transfer_state = 690
+			transfer_state = 689
+			transfer_state = 693
+			transfer_state = 308
+			transfer_state = 692
+			transfer_state = 691
+		}
+		
+	}
+	option = {
+		
+		name = "Reject Demands"
+		CUB = {
+			create_wargoal = {
+				target = root
+				type = annex_everything
+			}
+		}
+	}
+}
+country_event = {
+	id = cuba.3
+	picture = GFX_report_event_DEN_celebration
+	title = "Revolutionary demands"
+	desc = "Across the country, workers, peasants, and disillusioned soldiers are rising with one voice. They no longer plead for change—they demand it. Banners are raised in the streets, slogans echo from factories, and the halls of power tremble. Land for the landless, bread for the hungry, and freedom from tyranny—these are the cries of a people who will not return to silence."
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = "Accept Their Demands"
+		FRA = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+		CUB = {
+			transfer_state = 694
+		}
+		
+	}
+	option = {
+		
+		name = "Reject Demands"
+		CUB = {
+			create_wargoal = {
+				target = root
+				type = annex_everything
+			}
+		}
+	}
+}
+country_event = {
+	id = cuba.4
+	picture = GFX_report_event_DEN_celebration
+	title = "Revolutionary demands"
+	desc = "Across the country, workers, peasants, and disillusioned soldiers are rising with one voice. They no longer plead for change—they demand it. Banners are raised in the streets, slogans echo from factories, and the halls of power tremble. Land for the landless, bread for the hungry, and freedom from tyranny—these are the cries of a people who will not return to silence."
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = "Accept Their Demands"
+		USA = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+		CUB = {
+			transfer_state = 686
+		}
+		
+	}
+	option = {
+		
+		name = "Reject Demands"
+		CUB = {
+			create_wargoal = {
+				target = root
+				type = annex_everything
+			}
+		}
+	}
+}
+country_event = {
+	id = cuba.5
+	picture = GFX_report_event_DEN_celebration
+	title = "Revolutionary demands"
+	desc = "Across the country, workers, peasants, and disillusioned soldiers are rising with one voice. They no longer plead for change—they demand it. Banners are raised in the streets, slogans echo from factories, and the halls of power tremble. Land for the landless, bread for the hungry, and freedom from tyranny—these are the cries of a people who will not return to silence."
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = "Accept Their Demands"
+		HOL = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+		CUB = {
+			transfer_state = 695
+		}
+		
+	}
+	option = {
+		
+		name = "Reject Demands"
+		CUB = {
+			create_wargoal = {
+				target = root
+				type = annex_everything
+			}
+		}
+	}
+}
+country_event = {
+	id = cuba.6
+	picture = GFX_report_event_AUS_military_march
+	title = "Communist Revolution"
+	desc = "Across the country, workers, peasants, and disillusioned soldiers are rising with one voice. They no longer plead for change—they demand it. Banners are raised in the streets, slogans echo from factories, and the halls of power tremble. Land for the landless, bread for the hungry, and freedom from tyranny—these are the cries of a people who will not return to silence."
+	
+	trigger = {
+		tag = CUB
+		has_government = fascism
+		has_stability > 40
+		has_idea = cub_angry_commi
+	}
+	
+	option = {
+		
+		name = "Put it down"
+		
+		start_civil_war = {
+			ideology = communism
+			army_ratio = 1
+		}
+		
+	}
+	
+}
+country_event = {
+	id = cuba.7
+	picture = GFX_report_event_AUS_military_march
+	title = "Spread of fascism"
+	desc = "Cuba is demanding our goverment to change"
+	
+    is_triggered_only = yes
+	
+	option = {
+
+		ai_chance = {
+			base = 100
+		}
+		
+		name = "Accept their demands"
+		
+			set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		   }
+			add_popularity = { 
+				ideology = fascism
+				popularity = 0.40
+			}
+		
+	}
+	option = {
+		
+		name = "Decline"
+		
+		
+		
+	}
+	
+}
+country_event = {
+	id = cuba.8
+	picture = GFX_report_event_AUS_military_march
+	title = "Invite to Cuban faction"
+	desc = "Cuba has invited us to their faction"
+	
+	 is_triggered_only = yes
+	
+	option = {
+			ai_chance = {
+			base = 100
+			}
+		name = "Accept"
+		CUB = {
+            add_to_faction = ROOT
+		}
+		
+		
+		
+	}
+	option = {
+		
+		name = "Decline"
+		
+		
+		
+	}
+	
+}
+country_event = {
+	id = cuba.9
+	picture = GFX_report_event_AUS_military_march
+	title = "Chromium for support"
+	desc = "In a surprising gesture of cooperation, the Cuban government has extended an offer to supply the Reich with shipments of chromium—an essential resource for our war industry. While their contribution may be small in scale, the strategic value of securing friendly resources from across the Atlantic should not be underestimated."
+	
+	 is_triggered_only = yes
+	
+	option = {
+			ai_chance = {
+			base = 100
+			}
+		name = "Every ton helps"
+		CUB = {
+            give_resource_rights = {
+					receiver = GER
+					state = 315
+				}	
+			add_offsite_building = {
+				type = industrial_complex
+				level = 3
+			}
+		}
+		
+		
+		
+	}
+	option = {
+		
+		name = "We have no need for weak allies."
+		CUB = {
+            add_opinion_modifier = {
+			target = GER
+			modifier = embargoed_us
+		}
+		}
+		
+		
+	}
+	
+}
+country_event = {
+	id = cuba.10
+	picture = GFX_report_event_AUS_military_march
+	title = "Closer integration"
+	desc = "Cuba asks for closer integration"
+	
+	 is_triggered_only = yes
+	
+	option = {
+			ai_chance = {
+			base = 100
+			}
+		name = "Accept"
+		CUB = {
+			puppet = ROOT
+		}
+		
+		
+		
+	}
+	option = {
+		
+		name = "Decline"
+		
+		
+		
+	}
+	
+}
+country_event = {
+	id = cuba.11
+	picture = GFX_report_event_tur_menderes_opposition
+	title = "Choosing a king"
+	desc = "With the Republic dismantled and the monarchy restored in principle, one question remains unanswered who shall wear the crown? Several candidates have emerged, each offering a different vision for Cuba's future. The nation watches with bated breath as the decision approaches. Will we choose tradition, strength, or independence?"
+	
+	 is_triggered_only = yes
+	
+	option = {
+		name = "Let the House of Bourbon rule once more"
+		complete_national_focus = CUB_kral3
+		
+		
+	}
+	option = {
+		name = "Cuba shall have a king of its own people"
+		complete_national_focus = CUB_local_ruler
+
+		
+	}
+	 option = {
+		name = "A queen in name, a servant of the people in practice"
+		complete_national_focus = CUB_democratic_king
+
+		
+	}
+	
+}
+country_event = {
+	id = cuba.12
+	picture = GFX_report_event_canada_treaty
+	title = "The Vega Code"
+	desc = "After months of deliberation, House de la Vega has unveiled The Vega Code, a groundbreaking constitution designed to marry Cuba’s proud monarchical traditions with the demands of modern democracy. King Alejandro addresses the nation, emphasizing unity, justice, and progress under the new framework. The code limits royal powers while empowering elected representatives, aiming to heal divisions and secure Cuba’s future."
+	
+	 is_triggered_only = yes
+	
+	option = {
+		name = "Military Code"
+		add_ideas = CUB_vega1
+		
+		
+	}
+	option = {
+		name = "Economic Code"
+		add_ideas = CUB_vega2
+ 
+
+		
+	}
+	 option = {
+		name = "Political Code"
+		add_ideas = CUB_vega3
+
+	}
+	
+}
+country_event = {
+	id = cuba.13
+	picture = GFX_report_event_PER_shah_inspection
+	title = "The Royal Guard"
+	desc = "With the Royal Guard officially established, King Alejandro and his advisors face a crucial decision: which model should this elite force follow? Each option reflects a different vision for Cuba’s monarchy and its role in society."
+	
+	 is_triggered_only = yes
+	
+	option = {
+		name = "German Model"
+		add_ideas = CUB_royal_guards1
+		
+		
+	}
+	option = {
+		name = "British Model"
+		add_ideas = CUB_royal_guards2
+
+	}
+	 option = {
+		name = "Italian Model"
+		add_ideas = CUB_royal_guards3
+
+	}
+	
+}
+country_event = {
+	id = cuba.14
+	picture = GFX_report_event_generic_sign_treaty1
+	title = "Public Education"
+	desc = " Recognizing that an educated populace is essential for progress and stability, the crown has decided to expand access to public education across Cuba. Schools will emphasize literacy, science, and civic responsibility, aiming to empower citizens and foster loyalty to the nation. Though some traditionalists oppose these changes, many see this as a vital step toward a brighter future."
+	
+	 is_triggered_only = yes
+	
+	option = {
+		name = "Promote militarism" 
+		add_ideas = CUB_public_education1
+		
+		
+	}
+	option = {
+		name = "Promote innovation"
+		add_ideas = CUB_public_education2
+
+	}
+	 option = {
+		name = "Promote national values"
+		add_ideas = CUB_public_education3
+
+	}
+	
+}
+country_event = {
+	id = cuba.15
+	picture = GFX_report_event_BOL_bolivian_socialist_revolution
+	title = "Nobel Revolt"
+	desc = "Discontent simmers among certain factions of the nobility, resentful of the crown’s recent reforms and concessions to democratic ideals. Feeling their traditional privileges threatened, a coalition of powerful noble families has taken up arms, challenging King Alejandro’s authority. The kingdom now faces a dangerous internal crisis—will the monarchy quell this rebellion or risk losing its grip on power?"
+	
+	 is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = "Surrender" 
+		CUB = {
+			country_event = cuba.16
+		}
+		
+		
+	}
+	option = {
+		name = "Fight Back"
+		CUB = {
+			country_event = cuba.17
+		}
+
+	}
+	
+	
+}
+country_event = {
+	id = cuba.16
+	picture = GFX_report_event_DEN_fascist_troops
+	title = "Nobel Victory"
+	desc = " The rebel nobles have emerged victorious, forcing the crown to retreat and reconsider its reforms. Their triumph restores much of the old aristocratic power, rolling back democratic concessions and reinforcing traditional hierarchies. However, this victory comes at a cost — the kingdom is left fractured, and the flames of rebellion may yet ignite again."
+	
+	 is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = "Accept them with grace" 
+		puppet = FROM
+		
+		
+	}
+	
+	
+	
+}
+country_event = {
+	id = cuba.17
+	picture = GFX_report_event_ETH_rif_map
+	title = "Nobel Defeat"
+	desc = " Loyalist forces have crushed the noble rebellion, reaffirming King Alejandro’s authority and the legitimacy of his reforms. Though the nobility’s power is diminished, the crown’s victory strengthens the monarchy’s position and sends a clear message: challenges to progress and unity will not be tolerated."
+	
+	 is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = "War it is" 
+		create_wargoal = {
+			target = FROM
+			type = annex_everything
+		}
+		
+		
+	}
+	
+	
+	
+}
+country_event = {
+	id = cuba.18
+	picture = GFX_report_event_BOL_bolivian_socialist_revolution
+	title = "Cuba Requests Puerto Rico"
+	desc = "With ambitions to expand our influence and unify the Caribbean under a Cuban-led federation, the government has formally requested sovereignty over Puerto Rico from the United States. While this bold move aims to strengthen our strategic position, it risks provoking tension with our powerful neighbor."
+	
+	 is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = "Accept" 
+		CUB = {
+			country_event = cuba.19
+		}
+		
+		
+	}
+	option = {
+		name = "Decline"
+		CUB = {
+			country_event = cuba.20
+		}
+
+	}
+	
+	
+}
+country_event = {
+	id = cuba.19
+	picture = GFX_report_event_DEN_fascist_troops
+	title = "America Accepts"
+	desc = " In a surprising turn of diplomacy, the United States has agreed to transfer sovereignty of Puerto Rico to Cuba. This historic gesture strengthens our regional influence and opens new economic and strategic opportunities, marking a new chapter in Caribbean unity."
+	
+	 is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = "Integrate The Puerto Ricans" 
+		CUB = {
+			transfer_state = 686
+
+		}
+		686 = {
+         add_core_of = CUB
+		}
+		
+		
+		
+		
+	}
+	
+	
+	
+}
+country_event = {
+	id = cuba.20
+	picture = GFX_report_event_ETH_rif_map
+	title = "America Declines"
+	desc = " The United States has firmly rejected Cuba’s request for Puerto Rico, prioritizing its own strategic interests. This denial strains bilateral relations and serves as a stark reminder of the limits of Cuban influence in the region."
+	
+	 is_triggered_only = yes
+	
+	option = {
+		
+		name = "Unfortuante" 
+		
+		
+	}
+	
+	
+	
+}
+
