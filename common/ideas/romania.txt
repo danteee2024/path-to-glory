@@ -26,7 +26,7 @@ ideas = {
 			modifier = {
 			}
 			research_bonus = {
-				industry = -0.20
+				industry = -0.10
 			}
 		}
 		ROM_agrarian_reform_start = {
@@ -43,10 +43,10 @@ ideas = {
 			}
 			
 			modifier = {
-				stability_factor = -0.05
+				stability_factor = -0.02
 			}
 			research_bonus = {
-				industry = -0.50
+				industry = -0.30
 			}
 		}
 
@@ -203,7 +203,7 @@ ideas = {
 					
 			modifier = {
 				stability_factor = -0.45
-				consumer_goods_factor = 0.45
+				consumer_goods_factor = 0.4
 				local_resources = -0.5	
 				production_speed_industrial_complex_factor = 0.1
 
@@ -230,7 +230,7 @@ ideas = {
 			
 			modifier = {
 				stability_factor = -0.5
-				consumer_goods_factor = 0.6
+				consumer_goods_factor = 0.5
 				local_resources = -0.55	
 				production_speed_industrial_complex_factor = 0.2
 
@@ -252,6 +252,7 @@ ideas = {
 			}
 
 			modifier = {
+				consumer_goods_factor = -0.25
 				industrial_capacity_factory = 0.10
 				production_factory_max_efficiency_factor = 0.05
 				production_speed_buildings_factor = 0.30
@@ -260,6 +261,25 @@ ideas = {
 				economy_cost_factor = -0.25
 			}
 		}
+		ROM_Local_Resource_investment = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = ARG_resource_extration_focus
+
+			removal_cost = -1
+
+			modifier = {
+				local_resources = 0.20
+			}
+		}
+
 		ROM_revenge_against_soviet = {
 
 			picture = anti_soviet_pact

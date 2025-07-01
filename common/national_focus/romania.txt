@@ -90,7 +90,7 @@ focus_tree = {
 		prerequisite = { focus = ROM_national_recovery }
 		mutually_exclusive = { focus = ROM_the_stabilization_plan }
 		icon = GFX_focus_generic_resource_extraction
-		x = -2
+		x = -3
 		y = 1
 		relative_position_id = ROM_national_recovery
 		cost = 8
@@ -127,219 +127,9 @@ focus_tree = {
 
 		}
 	}
-	focus = {
-		id = ROM_civil_works
-		available = {
-		}
-		bypass = {
-		}
-		prerequisite = { focus = ROM_national_recovery }
-		
-		icon = GFX_goal_generic_construction
-		x = -6
-		y = 1
-		relative_position_id = ROM_national_recovery
-		cost = 8
 
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
-				name = ROM_encourage_trade_with_germany
-				bonus = 1.0
-				uses = 1
-				category = industry
-			}
-		}
-	}
-
-	focus = {
-		id = ROM_carpathian_network
-		available = {
-		}
-		bypass = {
-		}
-		prerequisite = { focus = ROM_civil_works }
-		
-		icon = GFX_focus_generic_low_cost_housing
-		x = 0
-		y = 1
-		relative_position_id = ROM_civil_works
-		cost = 8
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			76 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes 
-				}
-			}
-			84 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes 
-				}
-			}
-			83 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes 
-				}
-			}
-			82 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes 
-				}
-			}
-		}
-	}
 	
-	focus = {
-		id = ROM_transylvania_lost
-		available = {
-		}
-
-		bypass = {
-		}
-
-		prerequisite = { focus = ROM_carpathian_network }
-		
-		icon = GFX_focus_CZE_german_puppet
-		x = 1
-		y = 1
-		relative_position_id = ROM_carpathian_network
-		cost = 8
-		available = {
-			NOT= {
-				has_full_control_of_state = 76
-			}
-		}
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			ROM = {
-				remove_state_core = 76
-			}
-			
-			add_offsite_building = {
-				type = industrial_complex
-				level = 2
-			}
-			add_offsite_building = {
-				type = arms_factory
-				level = 1
-			}
-			add_manpower = 40000
-		}
-	}
-	focus = {
-		id = ROM_bessarabia_lost
-		available = {
-		}
-
-		bypass = {
-		}
-
-		prerequisite = { focus = ROM_carpathian_network }
-		
-		icon = GFX_focus_CZE_german_puppet
-		x = -1
-		y = 1
-		relative_position_id = ROM_carpathian_network
-		cost = 8
-		available = {
-			
-			NOT= {
-				AND = {
-					has_full_control_of_state = 78
-					has_full_control_of_state = 766
-					has_full_control_of_state = 80
-				}
-			}
-		}
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			ROM = {
-				remove_state_core = 78
-				remove_state_core = 766
-				remove_state_core = 80
-			}
-			add_offsite_building = {
-				type = industrial_complex
-				level = 1
-			}
-			add_offsite_building = {
-				type = arms_factory
-				level = 2
-			}
-			add_manpower = 40000
-		}
-	}
-
-	focus = {
-		id = ROM_danubian_transport_network
-		available = {
-		}
-
-		bypass = {
-		}
-
-		prerequisite = { focus = ROM_carpathian_network }
-		prerequisite = { focus = ROM_oil_refining_infrastructure }
-		
-		icon = GFX_goal_generic_construct_infrastructure
-		x = 0
-		y = 3
-		relative_position_id = ROM_civil_works
-		cost = 8
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			if = {
-				limit = {
-					has_idea = ROM_the_resource_curse_1
-				}
-				swap_ideas = {
-					remove_idea = ROM_the_resource_curse_1
-					add_idea = ROM_the_resource_curse_2
-				}
-			}
-			if = {
-				limit = {
-					has_idea = ROM_the_resource_curse_2
-				}
-				swap_ideas = {
-					remove_idea = ROM_the_resource_curse_2
-					add_idea = ROM_the_resource_curse_3	
-				}
-			}
-			
-			every_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-
-		}
-	}
+	
 	focus = {
 		id = ROM_oil_refining_infrastructure
 		icon = GFX_goal_generic_oil_refinery
@@ -445,10 +235,10 @@ focus_tree = {
 		id = ROM_expand_the_axis_oil_trade
 		bypass = {
 		}
-		prerequisite = { focus = ROM_danubian_transport_network focus = ROM_agrarian_reform }	
+		prerequisite = {focus = ROM_oil_refining_infrastructure }	
 		icon = GFX_focus_usa_reestablish_the_gold_standard
 		x = -2
-		y = 3
+		y = 1
 		relative_position_id = ROM_oil_refining_infrastructure
 		cost = 5
 
@@ -484,12 +274,12 @@ focus_tree = {
 				is_major = yes
 			}
 		}
-		prerequisite = { focus = ROM_expand_the_axis_oil_trade }
+		prerequisite = { focus = ROM_agrarian_reform }
 		
 		icon = GFX_focus_generic_military_industry
 		x = 0
 		y = 1
-		relative_position_id = ROM_expand_the_axis_oil_trade
+		relative_position_id = ROM_agrarian_reform
 		cost = 8
 
 		available_if_capitulated = yes
@@ -518,12 +308,12 @@ focus_tree = {
 		id = ROM_expand_fuel_stockpiles
 		bypass = {
 		}
-		prerequisite = { focus = ROM_support_the_war_industry }
+		prerequisite = { focus = ROM_expand_the_axis_oil_trade }
 		
 		icon = GFX_focus_generic_stockpile_fuel
-		x = -1
+		x = 0
 		y = 1
-		relative_position_id = ROM_support_the_war_industry
+		relative_position_id = ROM_expand_the_axis_oil_trade
 		cost = 5
 
 		available_if_capitulated = yes
@@ -585,12 +375,12 @@ focus_tree = {
 		}
 		bypass = {
 		}
-		prerequisite = { focus = ROM_support_the_war_industry }
+		prerequisite = { focus = ROM_expand_fuel_stockpiles }
 		
 		icon = GFX_goal_generic_construct_military
 		x = 0
-		y = 2
-		relative_position_id = ROM_support_the_war_industry
+		y = 1
+		relative_position_id = ROM_expand_fuel_stockpiles
 		cost = 8
 
 		available_if_capitulated = yes
@@ -617,12 +407,12 @@ focus_tree = {
 		id = ROM_national_defense_industry
 		bypass = {
 		}
-		prerequisite = { focus = ROM_support_the_war_industry  }
+		prerequisite = { focus = ROM_ensure_agricultural_self_sufficiency  }
 		
 		icon = GFX_goal_generic_construct_mil_factory
-		x = 1
+		x = -1
 		y = 1
-		relative_position_id = ROM_support_the_war_industry
+		relative_position_id = ROM_ensure_agricultural_self_sufficiency
 		cost = 5
 
 		available_if_capitulated = yes
@@ -676,19 +466,193 @@ focus_tree = {
 		}
 	}
 
+focus = {
+		id = ROM_Roads
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = ROM_ensure_agricultural_self_sufficiency  }
+		x = 1
+		y = 1
+		relative_position_id = ROM_ensure_agricultural_self_sufficiency
+
+		cost = 20
+
+		ai_will_do = {
+			factor = 80
+			modifier = {
+				factor = 0.1
+				HABSBURG_joint_trigger = yes
+			}
+		}
+
+		available = {
+			ROM = { controls_state = 76 }
+			ROM = { controls_state = 83 }
+			ROM = { controls_state = 84 }
+			ROM = { controls_state = 82 }
+			ROM = { controls_state = 81 }
+			ROM = { controls_state = 46 }
+			ROM = { controls_state = 77 }
+			ROM = { controls_state = 971 }
+			ROM = { controls_state = 766 }
+			ROM = { controls_state = 78 }
+			ROM = { controls_state = 79 }
+			ROM = { controls_state = 80 }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			80 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			76 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			766 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			83 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			84 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			81 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			82 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			78 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			79 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			77 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			971 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			46 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ROM_Local_Resource_investment 
+		icon = GFX_focus_generic_resource_extraction
+		prerequisite = { focus = ROM_Roads  }
+		prerequisite = {
+			focus = ROM_national_defense_industry
+		}
+		x = -1
+		y = 1
+		relative_position_id = ROM_Roads
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = ROM_Local_Resource_investment 
+		}
+	}
+
 	focus = {
 		id = ROM_ensure_agricultural_self_sufficiency
 		available = {
 		}
 		bypass = {
 		}
-		prerequisite = { focus = ROM_agrarian_reform }
+		prerequisite = { focus = ROM_the_stabilization_plan focus = ROM_expand_ploiesti_oil_production }
 		
 		icon = GFX_focus_generic_modernize_industry
-		x = 0
+		x = 3
 		y = 1
-		relative_position_id = ROM_agrarian_reform
-		cost = 8
+		relative_position_id = ROM_expand_ploiesti_oil_production
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -743,17 +707,17 @@ focus_tree = {
 		prerequisite = { focus = ROM_national_recovery }
 		
 		icon = GFX_goal_generic_neutrality_focus
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = ROM_national_recovery
-		cost = 8
+		cost = 10
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			add_ideas = ROM_industrialization_1
 			add_ideas = closed_economy
-			add_ideas = isolation
+			add_ideas = civilian_economy
 			add_ideas = ROM_nicolae_malaxa
 		}
 	}
@@ -772,7 +736,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ROM_the_stabilization_plan
-		cost = 8
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -792,7 +756,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = ROM_the_stabilization_plan
 
-		cost = 8
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -840,7 +804,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ROM_hunedoara_steel_works
-		cost = 8
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -867,7 +831,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ROM_hunedoara_steel_works
 
-		cost = 8
+		cost = 5
 
 		ai_will_do = {
 			factor = 9
@@ -970,7 +934,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			add_ideas = civilian_economy
+			add_ideas = low_economic_mobilisation
 			remove_ideas = ROM_the_resource_curse_1
 			remove_ideas = ROM_agrarian_reform_start
 			swap_ideas = {
