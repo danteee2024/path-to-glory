@@ -621,11 +621,10 @@ characters = {
 				original_tag = MON
 			}
 			traits = {
-				air_experimenter
+				air_warfare_theorist
 			}
 		}
 	}
-
 #######################
 ### HISTORICAL PATH ###
 #######################
@@ -681,6 +680,7 @@ characters = {
 			ledger = air
 				allowed = {
 					original_tag = MON
+					has_completed_focus = MON_spirit_of_genghis
 				}
 				traits = {
 					air_strategic_bombing_2

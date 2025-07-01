@@ -1037,7 +1037,11 @@ research_speed_factor               = 0.01  # Flat research bonus
 			
 			modifier = {
 				local_resources_factor = 0.05
-				supply_consumption_factor = -0.05
+				supply_consumption_factor = 0.10
+				global_building_slots_factor = 0.25
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+				local_resources_factor = 0.20
 			}
 			equipment_bonus = {
 				infantry_equipment = {

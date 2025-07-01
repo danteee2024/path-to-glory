@@ -37,7 +37,6 @@ guiTypes = {
 			position = { x=-380 y=0 }	
 			size = { width = 380 height = 350 }
 			Orientation = CENTER
-			show_sound = world_news_effect
 			hide_sound = menu_close_window
 			
 			# Added main background for the entire dev updates window

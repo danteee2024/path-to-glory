@@ -1521,10 +1521,15 @@ focus = {
 		ai_will_do = {
 			factor = 2
 		}
-
+        
 		available = {
-			NOT = {
-				has_idea = MON_sov_investments
+		    OR ={
+				820 = { 
+					is_owned_and_controlled_by = ROOT
+				}
+				330 = { 
+					is_owned_and_controlled_by = ROOT
+				}
 			}
 		}
 
@@ -1532,6 +1537,23 @@ focus = {
 			swap_ideas = {
 				remove_idea = MON_nomad_1
 				add_idea = MON_nomad_2
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					820 = { 
+						is_owned_and_controlled_by = ROOT
+					}
+				}
+				820 = { set_state_category = town }
+			}
+			if = {
+				limit = {
+					330 = { 
+						is_owned_and_controlled_by = ROOT
+					}
+				}
+				330 = { set_state_category = city }
 			}
 		}
 	}
@@ -2288,7 +2310,7 @@ add_timed_idea = {
 	focus = {
 		id = MON_great_industrial_revolution_of_mongolia
 		icon = GFX_focus_generic_reorient_production
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = MON_investment_complete
 			focus = MON_investment_complete_military
@@ -4227,7 +4249,7 @@ focus = {
 		}
 
 		available = {
-         has_army_manpower = { size > 99999 }
+         has_army_manpower = { size > 49999}
 		}
 
 		bypass = {
