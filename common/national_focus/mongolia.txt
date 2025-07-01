@@ -1004,7 +1004,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		icon = GFX_focus_chi_mission_to_the_soviet_union
 		x = -5
 		y = 1
-		cost = 10
+		cost = 5
 		prerequisite = { focus = MON_new_constitution }
 
 		available_if_capitulated = yes
@@ -1187,7 +1187,9 @@ focus = {
 			focus = MON_mobilise_the_workers
 		}
 		available_if_capitulated = yes
-		
+		available = {
+			has_war = no
+		}
 		ai_will_do = {
 			factor = 2
 		}

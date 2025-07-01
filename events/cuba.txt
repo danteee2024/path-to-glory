@@ -596,3 +596,25 @@ country_event = {
 	
 }
 
+
+
+country_event = {
+    id = cuba.21
+    hidden = yes
+ 
+    fire_only_once = yes
+
+    trigger = {
+        tag = CUB
+		has_war = yes
+		has_idea = FRA_industrial_support1
+	}
+
+    immediate = {
+    	remove_ideas = FRA_industrial_support1
+    }
+
+    option = {
+        
+    }
+}
