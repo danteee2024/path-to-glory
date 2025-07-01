@@ -1238,7 +1238,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			custom_effect_tooltip = "YUnlocks Castro and Guevera as generalsW"
+			custom_effect_tooltip = "YUnlocks Juan and Calderío as generalsW"
 			add_ideas = good_geurilla_staff
 			hidden_effect = {
 			recruit_character = CUB_fidel_castro_ruz_general
