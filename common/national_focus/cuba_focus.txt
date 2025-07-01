@@ -314,10 +314,7 @@ focus_tree = {
 					
 				}
 			}
-			 swap_ideas = {
-				remove_idea = CUB_obsolete_navy
-				add_idea = CUB_obsolete_navy_show
-			}
+		show_ideas_tooltip = CUB_obsolete_navy_show
 				add_doctrine_cost_reduction = {
 				name = "Final navy refrom"
 				cost_reduction = 1
@@ -624,16 +621,12 @@ focus_tree = {
 		 if = {
 			limit = {
 				NOT = {
-				
-                          has_idea = CUB_obsolete_army_2 has_idea = CUB_obsolete_army_4
+                   has_idea = CUB_obsolete_army_2 has_idea = CUB_obsolete_army_4
 					
 					
 				}
 			}
-			 swap_ideas = {
-				remove_idea = CUB_obsolete_army
-				add_idea = CUB_obsolete_army_final_show
-			}
+			 show_ideas_tooltip = CUB_obsolete_army_final_show
 				add_doctrine_cost_reduction = {
 				name = "Final army refrom"
 				cost_reduction = 1
@@ -870,10 +863,8 @@ focus_tree = {
              has_idea = CUB_obsolete_air_force_2 has_idea = CUB_obsolete_air_force_1	
 				}
 			}
-			 swap_ideas = {
-				remove_idea = CUB_obsolete_air_force
-				add_idea = CUB_obsolete_air_force_final_show
-			}
+
+			show_ideas_tooltip = CUB_obsolete_air_force_final_show
 				add_doctrine_cost_reduction = {
 				name = "Final air reform"
 				cost_reduction = 1
