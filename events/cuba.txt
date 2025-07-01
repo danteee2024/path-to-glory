@@ -519,4 +519,80 @@ country_event = {
 	
 	
 }
+country_event = {
+	id = cuba.18
+	picture = GFX_report_event_BOL_bolivian_socialist_revolution
+	title = "Cuba Requests Puerto Rico"
+	desc = "With ambitions to expand our influence and unify the Caribbean under a Cuban-led federation, the government has formally requested sovereignty over Puerto Rico from the United States. While this bold move aims to strengthen our strategic position, it risks provoking tension with our powerful neighbor."
+	
+	 is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = "Accept" 
+		CUB = {
+			country_event = cuba.19
+		}
+		
+		
+	}
+	option = {
+		name = "Decline"
+		CUB = {
+			country_event = cuba.20
+		}
+
+	}
+	
+	
+}
+country_event = {
+	id = cuba.19
+	picture = GFX_report_event_DEN_fascist_troops
+	title = "America Accepts"
+	desc = " In a surprising turn of diplomacy, the United States has agreed to transfer sovereignty of Puerto Rico to Cuba. This historic gesture strengthens our regional influence and opens new economic and strategic opportunities, marking a new chapter in Caribbean unity."
+	
+	 is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = "Integrate The Puerto Ricans" 
+		CUB = {
+			transfer_state = 686
+
+		}
+		686 = {
+         add_core_of = CUB
+		}
+		
+		
+		
+		
+	}
+	
+	
+	
+}
+country_event = {
+	id = cuba.20
+	picture = GFX_report_event_ETH_rif_map
+	title = "America Declines"
+	desc = " The United States has firmly rejected Cuba’s request for Puerto Rico, prioritizing its own strategic interests. This denial strains bilateral relations and serves as a stark reminder of the limits of Cuban influence in the region."
+	
+	 is_triggered_only = yes
+	
+	option = {
+		
+		name = "Unfortuante" 
+		
+		
+	}
+	
+	
+	
+}
 

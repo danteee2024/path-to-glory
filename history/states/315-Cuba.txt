@@ -7,14 +7,14 @@ state= {
 		chromium=90 # was: 160
 	}
 	
-	state_category = megalopolis
+	state_category = metropolis
 
 	history= {
 		owner = CUB
 		buildings = {
 			infrastructure = 3
 			arms_factory = 2
-			industrial_complex = 5
+			industrial_complex = 4
 			air_base = 1
 			7622 = {
 				naval_base = 3

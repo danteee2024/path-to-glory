@@ -508,6 +508,24 @@ characters={
 			}
 		}
 	}
+		CUB_usa_advisor = {
+		advisor = {
+			slot = political_advisor
+			traits = { ecomonist_publicist }
+			idea_token = CUB_usa_advisor_ideas
+			allowed = {
+				has_completed_focus = CUB_advisor
+				original_tag = CUB
+			}
+			
+		}
+		name="Victor Perlo"
+		portraits={
+			army={
+				small="GFX_idea_SOV_grigory_sokolnikov"
+			}
+		}
+	}
 	CUB_oswaldo_lopez_arellano={
 		advisor={
 			

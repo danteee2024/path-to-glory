@@ -192,7 +192,7 @@ set_convoys = 275
 		CUB_great_depression
 		free_trade
 	    limited_conscription
-	    partial_economic_mobilisation
+	    civilian_economy
 		bad_geurilla_problem
 	}
 }

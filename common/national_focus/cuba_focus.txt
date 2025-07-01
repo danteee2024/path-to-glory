@@ -10,12 +10,12 @@ focus_tree = {
 		}
 	}
 
-	continuous_focus_position = { x = 50 y = 1500 }
+	continuous_focus_position = { x = 825 y = 1250 }
 	
 	default = no
 
 	initial_show_position = {
-		focus = CUB_Reform
+		focus = CUB_politika
 	}
 
 	
@@ -23,11 +23,14 @@ focus_tree = {
 	focus = {
 		id = CUB_armed_forces
 		icon = GFX_focus_generic_manpower
-		x = -50
+		x = -46
 		y = 1
 		cost = 10
 		ai_will_do = {
 			base = 1
+		}
+		available = {
+			is_ai = NO
 		}
 
 
@@ -888,11 +891,13 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
-		
+		available = {
+			is_ai = NO
+		}
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_stability = 0.1
+			add_political_power = 100
 		}
 	}
 
@@ -2489,8 +2494,8 @@ focus_tree = {
 
 		completion_reward = {
 			set_party_name = {
-				ideology = neutrality
-				long_name = "House Bourbon"
+				ideology = democratic
+				long_name = "Casa de la Torre"
 				name = "MLC"
 			}
 			create_country_leader = {
@@ -2498,17 +2503,44 @@ focus_tree = {
 				desc = ""
 				picture = "GFX_portrait_UBD_sophie_buxhoeveden"
 				expire = "1965.1.1"
-				ideology = centrism
+				ideology = liberalism
 				traits = {
 					modernist_and_reformer
 				}
 			}
+			swap_ideas = {
+				remove_idea = CUB_monarchists_on_the_rise
+				add_idea = CUB_monarchists_on_the_rise2
+			}
 			hidden_effect = {
 				set_politics = {
-				ruling_party = neutrality
+				ruling_party = democratic
 				elections_allowed = no
 			}
 			set_cosmetic_tag = CUB_kingdom
+			add_popularity = {
+				ideology = democratic
+				popularity = 10
+			}
+			}
+		}
+	}
+	focus = {
+		id = CUB_constitutional_monarchy
+		icon = GFX_goal_support_democracy
+		x = 0
+		y = 1
+		prerequisite = {  focus = CUB_democratic_king }
+		
+		relative_position_id = CUB_democratic_king
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = FRA_constitutional_revision
+				days = 90
 			}
 		}
 	}
@@ -2517,8 +2549,8 @@ focus_tree = {
 
 	focus = {
 		id = CUB_demokrat1
-		icon = GFX_focus_generic_population_growth
-		x = -2
+		icon = GFX_focus_BRA_end_the_state_of_emergency
+		x = -8
 		y = 1
 		mutually_exclusive = { focus = CUB_kral1 }
 		prerequisite = { focus = CUB_totalpeace }
@@ -2528,18 +2560,15 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_popularity = { 
-				ideology = democratic
-				popularity = 0.15
-			}
+			add_political_power = 50
 		}
 	}
-
 	focus = {
-		id = CUB_demokrat2
-		icon = GFX_focus_generic_improve_the_administration
-		x = 0
+		id = CUB_free
+		icon = GFX_focus_generic_military_dictatorship
+		x = 4
 		y = 1
+		mutually_exclusive = { focus = CUB_usa }
 		prerequisite = { focus = CUB_demokrat1 }
 		relative_position_id = CUB_demokrat1
 		cost = 10
@@ -2547,55 +2576,394 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_popularity = { 
-				ideology = democratic
-				popularity = 0.15
-			}
+			army_experience = 50
+		}
+	}
+		focus = {
+		id = CUB_controlled_tolerance 
+		icon = GFX_focus_GER_proletarian_dictatorship
+		x = 4
+		y = 3
+		prerequisite = {  focus = CUB_legalize_friendly_parties }
+		prerequisite = {
+			focus = CUB_control_the_press
+		}
+		relative_position_id = CUB_demokrat1
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
 			remove_ideas = bad_geurilla_problem
 		}
 	}
-
-	focus = {
-		id = CUB_demokrat3
-		icon = GFX_focus_generic_horse_studs
-		x = 0
-		y = 1
-		prerequisite = { focus = CUB_demokrat2 }
-		relative_position_id = CUB_demokrat2
-		cost = 10
+		focus = {
+		id = CUB_legalize_friendly_parties
+		icon = GFX_goal_generic_improve_relations
+		x = 5
+		y = 2
+		prerequisite = { focus = CUB_free }
+		relative_position_id = CUB_demokrat1
+		cost = 5
 		
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_popularity = { 
-				ideology = democratic
-				popularity = 0.35
-			}
-			set_politics = {
-				ruling_party = democratic
-				elections_allowed = no
-			}
-			remove_ideas = bad_geurilla_staff
+			add_stability = 0.05
 		}
 	}
+		focus = {
+		id = CUB_control_the_press
+		icon = GFX_focus_generic_printing_press
+		x = 3
+		y = 2
+		mutually_exclusive = { focus = CUB_usa }
+		prerequisite = { focus = CUB_free }
+		relative_position_id = CUB_demokrat1
+		cost = 5
+		
+		available_if_capitulated = yes
 
+		completion_reward = {
+			add_ideas = PB_Limited_Censorship
+		}
+	}
 	focus = {
-		id = CUB_join_allies
-		icon = GFX_focus_eng_imperial_federation
-		x = 0
-		y = 1
-		prerequisite = { focus = CUB_demokrat3 }
-		relative_position_id = CUB_demokrat3
+		id = CUB_neutrality_guarantees
+		icon = GFX_focus_BEL_v_for_victory
+		x = 7
+		y = 4
+		prerequisite = { focus = CUB_controlled_tolerance focus = CUB_constitutional_monarchy }
+		relative_position_id = CUB_demokrat1
 		cost = 10
 		
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_ideas = neutrality_idea
+		}
+	}
+	focus = {
+		id = CUB_neutrality_guarantees
+		icon = GFX_focus_BEL_v_for_victory
+		x = 7
+		y = 4
+		prerequisite = { focus = CUB_controlled_tolerance focus = CUB_constitutional_monarchy }
+		relative_position_id = CUB_demokrat1
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = neutrality_idea
+		}
+	}
+	focus = {
+		id = CUB_centeral_bank
+		icon = GFX_focus_PER_national_bank
+		x = 7
+		y = 6
+		prerequisite = { focus = CUB_more_men  }
+		prerequisite = { focus = CUB_armed_neutrality  }
+		relative_position_id = CUB_demokrat1
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = CUB_bank
+		}
+	}
+		focus = {
+		id = CUB_british_companies 
+		icon = GFX_focus_chi_british_cooperation
+		x = 5
+		y = 7
+		prerequisite = { focus = CUB_centeral_bank }
+		relative_position_id = CUB_demokrat1
+		cost = 10
+		mutually_exclusive = {
+			focus = CUB_french_companies focus = CUB_american_companies
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = british_arms_discount
+		}
+	}
+		focus = {
+		id = CUB_french_companies 
+		icon = GFX_focus_chi_reach_out_to_france
+		x = 7
+		y = 7
+		prerequisite = { focus = CUB_centeral_bank  }
+		relative_position_id = CUB_demokrat1
+		cost = 10
+		mutually_exclusive = {
+			focus = CUB_american_companies focus = CUB_british_companies
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = FRA_defense_national_funds_tooltip
+			add_ideas = FRA_industrial_support1
+		}
+	}
+		focus = {
+		id = CUB_american_companies 
+		icon = GFX_focus_generic_befriend_usa
+		x = 9
+		y = 7
+		prerequisite = { focus = CUB_centeral_bank  }
+		relative_position_id = CUB_demokrat1
+		mutually_exclusive = {
+			focus = CUB_french_companies focus = CUB_british_companies
+		}
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = bureau_of_ships_focus
+		}
+	}
+		focus = {
+		id = CUB_help_the_allies
+		icon = GFX_focus_generic_democratic_europe
+		x = 7
+		y = 8
+		prerequisite = { focus = CUB_british_companies focus = CUB_french_companies focus = CUB_american_companies  }
+		relative_position_id = CUB_demokrat1
+	
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			remove_ideas = neutrality_idea
 			ENG = {
-				country_event = { id = generic.2 }
+				country_event = generic.2
 			}
 		}
 	}
+	focus = {
+		id = CUB_armed_neutrality
+		icon = GFX_focus_PER_wether_the_storm
+		x = 8
+		y = 5
+		prerequisite = {  focus = CUB_neutrality_guarantees }
+		relative_position_id = CUB_demokrat1
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = deterrence
+		}
+	}
+	focus = {
+		id = CUB_more_men
+		icon = GFX_focus_SOV_penal_battalions
+		x = 6
+		y = 5
+		prerequisite = {  focus = CUB_neutrality_guarantees }
+		relative_position_id = CUB_demokrat1
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = SPA_expand_conscription
+		}
+	}
+	focus = {
+		id = CUB_usa
+		icon = GFX_focus_generic_american_investments
+		x = -4
+		y = 1
+		available = {
+			USA = {
+				has_completed_focus = USA_continue_the_new_deal
+			}
+		}
+		mutually_exclusive = { focus = CUB_free }
+		prerequisite = { focus = CUB_demokrat1 }
+		relative_position_id = CUB_demokrat1
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_stability = -0.1
+		}
+	}
+	focus = {
+		id = CUB_neg
+		icon = GFX_focus_ARG_strengthening_the_concordancia
+		x = -6
+		y = 2
+		prerequisite = { focus = CUB_usa  }
+		relative_position_id = CUB_demokrat1
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = american_infulence
+				add_idea = american_infulence2
+			}
+		}
+	}
+	focus = {
+		id = CUB_capital
+		icon = GFX_focus_GER_customs_union
+		x = -2
+		y = 2
+		prerequisite = { focus = CUB_usa  }
+		relative_position_id = CUB_demokrat1
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = nationalization_FA_america_capital
+		}
+	}
+	focus = {
+		id = CUB_advisor
+		icon = GFX_focus_generic_improve_the_administration
+		x = -4
+		y = 2
+		prerequisite = { focus = CUB_usa  }
+		relative_position_id = CUB_demokrat1
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = CUB_usa_ad
+		}
+	}
+	focus = {
+		id = CUB_join_usa
+		icon = GFX_focus_BRA_north_and_south_america
+		x = -4
+		y = 3
+		prerequisite = { focus = CUB_neg }
+		prerequisite = { focus = CUB_advisor }
+		prerequisite = { focus = CUB_capital }
+		relative_position_id = CUB_demokrat1
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			USA = {
+				set_autonomy = {
+					target = CUB
+					autonomy_state = autonomy_dominion
+				}
+				
+			}
+		}
+	}
+	focus = {
+		id = CUB_cigar_pact
+		icon = GFX_focus_BEL_poudreries_reunies_de_belgique
+		x = -5
+		y = 4
+		prerequisite = { focus = CUB_join_usa }
+		relative_position_id = CUB_demokrat1
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = CUB_cigar_pact_idea
+			USA = {
+				add_ideas = CUB_cigar_pact_idea
+			}
+		}
+	}
+		focus = {
+		id = CUB_request_rico
+		icon = GFX_focus_generic_self_management
+		x = -3
+		y = 4
+		prerequisite = { focus = CUB_join_usa }
+		relative_position_id = CUB_demokrat1
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			USA = {
+				country_event = cuba.18
+			}
+		}
+	}
+	focus = {
+		id = CUB_promote_tourism
+		icon = GFX_focus_SWE_privately_managed_vacation
+		x = -4
+		y = 5
+		prerequisite = { focus = CUB_cigar_pact  }
+		prerequisite = { focus = CUB_request_rico  }
+		relative_position_id = CUB_demokrat1
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = "RWe will lose our tourism when we go to warW"
+			add_ideas = GRE_booming_tourism
+			
+			
+		}
+	}
+		focus = {
+		id = CUB_better_beach
+		icon = GFX_focus_generic_welfare
+		x = -5
+		y = 6
+		prerequisite = { focus = CUB_promote_tourism  }
+		relative_position_id = CUB_demokrat1
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = CUB_better_beaches
+			
+			
+		}
+	}
+		focus = {
+		id = CUB_more_hotels
+		icon = GFX_focus_SWE_hygienic_housing
+		x = -3
+		y = 6
+		prerequisite = { focus = CUB_promote_tourism  }
+		relative_position_id = CUB_demokrat1
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+			add_ideas = CUB_more_hotels_idea
+			
+			
+		}
+	}
+	
+
+
+
+	
 
 	
 
@@ -2606,7 +2974,9 @@ focus_tree = {
 		y = 1
 		cost = 10
 		
-		
+		available = {
+			is_ai = NO
+		}
 		available_if_capitulated = yes
 
 		completion_reward = {

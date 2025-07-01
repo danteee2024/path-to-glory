@@ -20,6 +20,95 @@ ideas = {
 				democratic_drift = 0.01
 			}
 		}
+		american_infulence2 = {
+			
+			picture = ARG_american_allyship
+
+			allowed = {
+				always = yes
+			}
+			targeted_modifier = {
+				tag = USA
+				trade_cost_for_target_factor = -0.5
+			}
+
+			modifier = {
+				trade_laws_cost_factor = 3
+				democratic_drift = 0.01
+			 production_speed_industrial_complex_factor = 0.1
+			}
+		}
+			CUB_cigar_pact_idea = {
+			
+			picture = can_wartime_prices_and_trade_board
+
+			name = "Cigar Pact"
+
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+		}
+			CUB_cigar_pact_idea = {
+			
+			picture = can_wartime_prices_and_trade_board
+
+			name = "Cigar Pact"
+
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+		}
+			CUB_better_beaches = {
+			
+			picture = tur_tuz_golu_training_facility
+
+			name = "Better Beaches"
+
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				acclimatization_hot_climate_gain_factor = 0.5
+			}
+		}
+			CUB_more_hotels_idea = {
+			
+			picture = HUN_revaluing_the_pengo
+
+			name = "More Hotels"
+
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		
+		CUB_usa_ad = {
+			 
+			name = "American Advisor"
+			
+			picture = generic_democratic_drift_bonus
+
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				political_advisor_cost_factor = -0.25
+			}
+		}
 		cub_more_taxes = {
 			
 			picture = HUN_revaluing_the_pengo
@@ -1031,6 +1120,20 @@ ideas = {
 		
 
 		}
+		CUB_monarchists_on_the_rise2 = {
+			name = "Monarchism on the rise"
+
+			picture = HUN_hungarian_monarchy
+		allowed = {
+			always = yes
+		}
+			removal_cost = -1
+			modifier = {
+				democratic_drift = 0.1
+			}
+		
+
+		}
 		CUB_noble = {
 			name = "Noble Investment"
 
@@ -1057,6 +1160,20 @@ ideas = {
 			modifier = {
 				army_org_factor = -0.2
 				army_defence_factor = -0.1
+			}
+		
+
+		}
+		CUB_bank = {
+			name = "Banco Central de Cuba"
+
+			picture = tur_balkan_central_bank_wealthy_greece
+		allowed = {
+			always = yes
+		}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = -0.005
 			}
 		
 
