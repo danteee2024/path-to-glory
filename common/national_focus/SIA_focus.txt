@@ -790,7 +790,6 @@ focus_tree = {
 		icon = GFX_focus_generic_anti_fascist_diplomacy
 		
 		prerequisite = { focus = SIA_Empower_Rama_VII}
-		
 		relative_position_id = SIA_Empower_Rama_VII
 
 		x = 2
@@ -1109,10 +1108,10 @@ focus_tree = {
 		icon = GFX_goal_support_democracy
 		##prerequisite = { focus = AFK_one }
 		mutually_exclusive = { focus = SIA_Military_Factionalism focus = SIA_Repeal_Anti_Communist_Act }
-		relative_position_id = SIA_Empower_Rama_VII
+		relative_position_id = SIA_Military_Factionalism
 
-		x = 7
-		y = -1
+		x = 10
+		y = 0
 		
 		cost = 5
 
@@ -1169,7 +1168,6 @@ focus_tree = {
 	focus = {
 		id = SIA_Reconcile_with_Military
 		icon = GFX_goal_generic_military_deal
-		
 		prerequisite = { focus = SIA_Re_Empower_Civilian_Wing }
 		relative_position_id = SIA_Re_Empower_Civilian_Wing
 
@@ -1627,10 +1625,11 @@ focus_tree = {
 	focus = {
 		id = SIA_Agitate_the_Masses
 		icon = GFX_focus_spr_masters_of_our_own_fate
-		prerequisite = { focus = SIA_Re_Empower_Civilian_Wing focus = SIA_Repeal_Anti_Communist_Act }
-		relative_position_id = SIA_Repeal_Anti_Communist_Act
+		prerequisite = { focus = SIA_Re_Empower_Civilian_Wing
+		focus = SIA_Repeal_Anti_Communist_Act }
+		relative_position_id = SIA_Re_Empower_Civilian_Wing
 
-		x = -5
+		x = 4
 		y = 1
 		
 		cost = 5
@@ -1707,7 +1706,7 @@ focus_tree = {
 
 		relative_position_id = SIA_Re_Empower_Civilian_Wing
 
-		x = 10
+		x = 8
 		y = 0
 		
 		cost = 5
@@ -1844,11 +1843,12 @@ focus_tree = {
 	focus = {
 		id = SIA_Unite_the_Thai
 		icon = GFX_goal_generic_territory_or_war
-		prerequisite = { focus = SIA_Empower_the_Peoples_Assembly focus = SIA_Unite_Under_the_Peoples_Leader}
+		prerequisite = {
+			focus = SIA_Redistribute_Land
+		}
+		relative_position_id = SIA_Redistribute_Land
 
-		relative_position_id = SIA_Unite_Under_the_Peoples_Leader
-
-		x = 6
+		x = 1
 		y = 1
 		
 		cost = 5
@@ -1887,11 +1887,12 @@ focus_tree = {
 	focus = {
 		id = SIA_Remember_the_Past
 		icon = GFX_goal_generic_territory_or_war
-		prerequisite = { focus = SIA_Empower_the_Peoples_Assembly focus = SIA_Unite_Under_the_Peoples_Leader}
+		prerequisite = {
+			focus = SIA_Redistribute_Land
+		}
+		relative_position_id = SIA_Redistribute_Land
 
-		relative_position_id = SIA_Unite_Under_the_Peoples_Leader
-
-		x = 2
+		x = -1
 		y = 1
 		
 		cost = 5
@@ -1930,37 +1931,7 @@ focus_tree = {
 		x = 4
 		y = 1
 		
-		offset = {
-			x = -8
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = SHOW
-				}
-				has_completed_focus = SIA_Empower_the_Peoples_Assembly
-			}
-		}
-		
 		cost = 5
-
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					OR = {
-						has_completed_focus = SIA_Unite_Under_the_Peoples_Leader
-						has_completed_focus = SIA_Military_Factionalism
-						has_completed_focus = SIA_Re_Empower_Civilian_Wing
-					}
-				}
-			}
-		}
 		
 		completion_reward = {
 			country_event = SIA.30
@@ -2033,7 +2004,7 @@ focus_tree = {
 		relative_position_id = SIA_The_Permanent_Revolution
 
 		x = 0
-		y = 1
+		y = 2
 		
 		cost = 5
 
@@ -2065,57 +2036,22 @@ focus_tree = {
 	focus = {
 		id = SIA_spies
 		icon = GFX_focus_generic_secret_service_agency
-		prerequisite = { focus = SIA_The_Permanent_Revolution }
-
-		relative_position_id = SIA_The_Permanent_Revolution
-
-		x = 2
+		prerequisite = { focus = SIA_Empower_the_Peoples_Assembly }
+		relative_position_id = SIA_Empower_the_Peoples_Assembly
+		x = -2
 		y = 1
-		
-		offset = {
-			x = -4
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = SIA_Empower_the_Peoples_Assembly
-			}
-		}
-		
-		cost = 4
+		cost = 5
 
-		allow_branch = {
-			has_dlc = "La Resistance"
-			
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					OR = {
-						has_completed_focus = SIA_Unite_Under_the_Peoples_Leader
-						has_completed_focus = SIA_Military_Factionalism
-						has_completed_focus = SIA_Re_Empower_Civilian_Wing
-					}
-				}
-			}
-		}
+		allow_branch = { has_dlc = "La Resistance" }
 		
 		completion_reward = {
 			
 			create_intelligence_agency = {
 				name = "National Intelligence Agency"
 				icon = GFX_intelligence_agency_logo_SIA_nia
-			}
-						
+			}		
 			add_ideas = SIA_spies
 		}
-		
 		ai_will_do = {
 			factor = 0
 		}
@@ -2133,24 +2069,6 @@ focus_tree = {
 		y = 1
 		
 		cost = 5
-
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = SHOW
-					}
-				}
-				NOT = {
-					OR = {
-						has_completed_focus = SIA_Empower_the_Peoples_Assembly
-						has_completed_focus = SIA_Military_Factionalism
-						has_completed_focus = SIA_Re_Empower_Civilian_Wing
-					}
-				}
-			}
-		}
 		
 		completion_reward = {
 						
@@ -2225,7 +2143,7 @@ focus_tree = {
 		relative_position_id = SIA_Request_Soviet_Aid
 
 		x = 0
-		y = 1
+		y = 2
 		
 		cost = 5
 
@@ -2245,11 +2163,11 @@ focus_tree = {
 	focus = {
 		id = SIA_Peoples_Dictatorship
 		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = SIA_Request_Soviet_Aid }
+		prerequisite = { focus = SIA_Unite_Under_the_Peoples_Leader }
 
-		relative_position_id = SIA_Request_Soviet_Aid
+		relative_position_id = SIA_Unite_Under_the_Peoples_Leader
 
-		x = -2
+		x = 2
 		y = 1
 		
 		cost = 5
@@ -2273,11 +2191,12 @@ focus_tree = {
 	focus = {
 		id = SIA_Expand_Yellow_Dossier
 		icon = GFX_focus_generic_soviet_politics
-		prerequisite = { focus = SIA_Empower_the_Peoples_Assembly focus = SIA_Unite_Under_the_Peoples_Leader}
+		prerequisite = { focus = SIA_Empower_the_Peoples_Assembly 
+		focus = SIA_Unite_Under_the_Peoples_Leader }
 
-		relative_position_id = SIA_Unite_Under_the_Peoples_Leader
+		relative_position_id = SIA_Empower_the_Peoples_Assembly
 
-		x = 4
+		x = -4
 		y = 1
 		
 		cost = 5
@@ -2380,16 +2299,15 @@ focus_tree = {
 		id = SIA_Join_Comintern
 		icon = GFX_focus_generic_join_comintern
 		prerequisite = { focus = SIA_Embrace_Stalinism }
-		mutually_exclusive = { focus = SIA_South_East_Asian_Bloc} 
-		relative_position_id = SIA_Expand_Yellow_Dossier
+		mutually_exclusive = { focus = SIA_South_East_Asian_Bloc } 
+		relative_position_id = SIA_Embrace_Stalinism
 
-		x = -4
-		y = 2
+		x = 0
+		y = 1
 		
 		cost = 5
 
 		available = {
-			
 		}
 		
 		completion_reward = {
@@ -2434,12 +2352,12 @@ focus_tree = {
 	focus = {
 		id = SIA_South_East_Asian_Bloc
 		icon = GFX_goal_generic_alliance
-		prerequisite = { focus = SIA_Asian_Revolution focus = SIA_Embrace_Stalinism}
+		prerequisite = { focus = SIA_Asian_Revolution focus = SIA_Embrace_Stalinism }
 		mutually_exclusive = { focus = SIA_Join_Comintern } 
-		relative_position_id = SIA_Expand_Yellow_Dossier
+		relative_position_id = SIA_Asian_Revolution
 
-		x = 0
-		y = 2
+		x = -4
+		y = 1
 		
 		cost = 5
 
@@ -2692,7 +2610,7 @@ focus_tree = {
 		
 		offset = {
 			x = -8
-			y = 0
+			y = -11
 			trigger = {
 				has_game_rule = {
 					rule = obsolete_focus_branches_visibility
@@ -2924,7 +2842,7 @@ focus_tree = {
 		id = SIA_Industrial_Expansion
 		icon = GFX_goal_generic_construct_civilian
 		
-		x = 30
+		x = 27
 		y = 0
 		
 		offset = {
@@ -3545,7 +3463,7 @@ focus_tree = {
 		id = SIA_New_Thai_Military_Academies
 		icon = GFX_focus_generic_military_academy
 
-		x = 54
+		x = 40
 		y = 0
 		
 		offset = {
@@ -3868,7 +3786,7 @@ focus_tree = {
 		
 		relative_position_id = SIA_New_Thai_Military_Academies
 
-		x = -10
+		x = -6
 		y = 1
 		
 		cost = 5
