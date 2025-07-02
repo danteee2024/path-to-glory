@@ -54,7 +54,7 @@ ideas = {
 
 			cancel_if_invalid = no
 		}
-
+        
 		isolation = {
 level = 6
 			allowed = {
@@ -99,7 +99,7 @@ level = 6
 
 			cancel_if_invalid = no
 		}
-
+        
 		civilian_economy = {
 
 level = 5

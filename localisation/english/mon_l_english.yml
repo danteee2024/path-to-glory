@@ -297,8 +297,8 @@
  MON_strong_nomadic_warriors_of_the_steppes_desc:0 "The Mongolian people have a long history of nomadic pastoralism, which has shaped their culture and way of life. The government is committed to preserving this heritage while also promoting economic development and modernisation."
  MON_many_men_of_the_steppes:0 "Many Men of the Steppes"
  MON_many_men_of_the_steppes_desc:0 "The vast steppes of Mongolia have produced countless warriors, skilled in the art of horseback combat and adept at surviving in harsh conditions. These men are the backbone of the Mongolian military, providing both strength and resilience."
- MON_state_investments:0 "State Investments via the Mongol Bank"
- MON_state_investments_desc:0 "The Mongolian government is committed to investing in the country's infrastructure and economy, with a focus on sustainable development and job creation. These investments will help to modernise the country and improve the quality of life for all Mongolians."
+ MON_state_investments:0 "Realign the Mongol State Bank"
+ MON_state_investments_desc:0 "The Mongolian government has realigned the Mongol State Bank to focus on investments in key sectors of the economy, including infrastructure, energy, and agriculture. This will help to promote economic growth and development, while also creating jobs and improving the quality of life for many Mongolians."
  MON_develop_gobi:0 "Develop the Gobi"
  MON_develop_gobi_desc:0 "The Gobi Desert is a vast and inhospitable region, but it is also rich in natural resources and has great potential for economic development. The Mongolian government is committed to developing the Gobi, with a focus on sustainable resource management and environmental protection."
  MON_develop_khovsgol:0 "Develop Khovsgol"
@@ -412,3 +412,7 @@
  MON_finalise_modernisation_of_industry_desc:0 "The Mongolian government has implemented a series of reforms to modernise the country's industry, including the establishment of new factories and the introduction of new technologies. These reforms have helped to boost the economy and create jobs, but they have also faced criticism from some quarters for their impact on traditional industries and communities."
  MON_great_industrial_revolution:0 "Great Industrial Revolution of Mongolia"
  MON_great_industrial_revolution_desc:0 "The Great Industrial Revolution of Mongolia is a period of rapid industrialisation and economic growth, marked by the establishment of new industries, the expansion of infrastructure, and the rise of a modern workforce. This revolution aims to transform Mongolia into a leading industrial power in the region, leveraging its natural resources and strategic location to drive economic development and improve the living standards of its people."
+
+ pastoral_economy:0 "Pastoral Economy"
+ pastoral_economy_desc:0 "The Mongolian economy is primarily based on pastoralism, with a focus on livestock herding and nomadic traditions. This economic model emphasizes the importance of animal husbandry and the sustainable use of natural resources, reflecting the country's cultural heritage and environmental conditions."
+ MON_remove_pastoral_economy_tt:0 "§RWe will be able to remove§! §YPastoral Economy§!"

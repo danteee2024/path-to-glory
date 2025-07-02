@@ -199,7 +199,6 @@ formable_nations_mod_category = {
 					}
 				}
 			}
-			custom_trigger_tooltip = { tooltip = not_already_existing_tt NOT = { any_country = { has_cosmetic_tag = FORM_MOE } } }
 			
 		}
 

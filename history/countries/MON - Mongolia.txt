@@ -19,6 +19,7 @@ add_ideas = {
 	MON_nomad_0
 	MON_state_of_the_armed_forces
 	MON_mongol_collectivized_unity
+	pastoral_economy
 }
 
 set_variable = { mon_poster_center_icon_frame = 1 }
