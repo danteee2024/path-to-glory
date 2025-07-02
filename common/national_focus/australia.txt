@@ -520,12 +520,7 @@
 
 		completion_reward = {
 			army_experience = 50
-			add_doctrine_cost_reduction = {
-				name = AST_introduce_unconventional_warfare
-				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
-			}
+		    add_potential_special_forces_tree = yes
 		}
 	}
 
