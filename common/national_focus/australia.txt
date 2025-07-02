@@ -519,7 +519,6 @@
 		search_filters = { FOCUS_FILTER_RESEARCH  }
 
 		completion_reward = {
-			army_experience = 50
 		    add_potential_special_forces_tree = yes
 		}
 	}
