@@ -2431,6 +2431,67 @@ focus = {
 		}		
 	}
 	focus = {
+		id = ROM_Organize_the_Royal_Army
+		icon = GFX_focus_NORDIC_mon_army
+		prerequisite = { focus = ROM_the_empire }
+		x = -2
+		y = 1
+		relative_position_id = ROM_the_empire
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_ideas = ROM_Organize_the_Royal_Army
+		}		
+	}
+
+	focus = {
+		id = ROM_Royal_Army_Reform
+		icon = GFX_focus_NORDIC_mon_selector_army
+		prerequisite = { focus = ROM_Organize_the_Royal_Army }
+		x = -2
+		y = 2
+		relative_position_id = ROM_the_empire
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_ideas = ROM_Royal_Army_Reform
+		}		
+	}
+
+
+	focus = {
 		id = ROM_Carols_Industrial_Plan
 		icon = GFX_focus_generic_license_production
 		prerequisite = { focus = ROM_the_empire }
