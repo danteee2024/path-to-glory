@@ -2312,6 +2312,8 @@ focus = {
 		y = 1
 		relative_position_id = ROM_Change_of_Goverment
 
+		cost = 5
+
 		ai_will_do = {
 			factor = 9
 		}
@@ -2360,6 +2362,8 @@ focus = {
 		y = 1
 		relative_position_id = ROM_Change_of_Goverment
 
+		cost = 10
+
 		ai_will_do = {
 			factor = 9
 		}
@@ -2404,6 +2408,8 @@ focus = {
 		y = 1
 		relative_position_id = ROM_institute_royal_dictatorship1
 
+		cost = 5
+
 		ai_will_do = {
 			factor = 9
 		}
@@ -2423,6 +2429,97 @@ focus = {
 			add_ideas = ROM_The_Empire
 			set_cosmetic_tag = ROM_The_Empire
 		}		
+	}
+	focus = {
+		id = ROM_Carols_Industrial_Plan
+		icon = GFX_focus_generic_license_production
+		prerequisite = { focus = ROM_the_empire }
+		x = 2
+		y = 1
+		relative_position_id = ROM_the_empire
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_ideas = ROM_Carols_Industrial_Plan
+		}		
+	}
+
+		focus = {
+		id = ROM_The_Empire_is_arming_itself
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = ROM_Carols_Industrial_Plan }
+		x = 0
+		y = 1
+		relative_position_id = ROM_Carols_Industrial_Plan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+						random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+					}
+					is_core_of = ROOT
+				}
+				set_state_flag = ROM_expand_the_war_industry_2mil
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+					}
+					is_core_of = ROOT
+					NOT = { has_state_flag = ROM_expand_the_war_industry_2mil }
+				}
+				set_state_flag = ROM_expand_the_war_industry_2mil
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
 	}
 	focus = {
 		id = ROM_king_michaels_coup
@@ -2596,13 +2693,10 @@ focus = {
 	focus = {
 		id = ROM_his_majestys_loyal_government
 		icon = GFX_goal_generic_propaganda
-		prerequisite = { focus = ROM_fortify_the_borders }
-		prerequisite = { focus = ROM_align_hungary }
-		prerequisite = { focus = ROM_revise_the_constitution }
-		mutually_exclusive = { focus = ROM_flexible_foreign_policy }
-		x = -1
+		prerequisite = { focus = ROM_the_empire }
+		x = 0
 		y = 1
-		relative_position_id = ROM_fortify_the_borders
+		relative_position_id = ROM_the_empire
 
 		cost = 10
 
@@ -2611,26 +2705,6 @@ focus = {
 		}
 
 		available = {
-			OR = {
-				has_country_flag = ROM_HUN_aligned
-				HUN = { is_subject_of = ROM }
-				AND = {
-					HUN = { exists = no }
-					ROM = {
-						owns_state = 155
-						owns_state = 154
-						owns_state = 43
-						owns_state = 973
-						owns_state = 974
-					}
-				}
-			}
-			is_subject = no
-			has_government = neutrality
-			custom_trigger_tooltip = {
-				tooltip = ROM_carol_current_leader_trigger
-				has_country_leader = { id = 550 }
-			}
 		}
 
 		bypass = {
@@ -2643,6 +2717,7 @@ focus = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_political_power = 120
+			add_stability = 0.1
 		}
 	}
 

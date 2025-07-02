@@ -318,6 +318,34 @@ ideas = {
 			}
 		}
 
+		ROM_Carols_Industrial_Plan = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = ARG_resource_extration_focus
+
+			removal_cost = -1
+
+			modifier = {
+				}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.10 instant = yes
+				}
+				support_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+			
+		}
+
+
 		ROM_revenge_against_soviet = {
 
 			picture = anti_soviet_pact
