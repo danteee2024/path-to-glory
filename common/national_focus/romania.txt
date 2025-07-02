@@ -2239,11 +2239,283 @@ focus = {
 	#############################
 
 	focus = {
+		id = ROM_institute_Royal
+		icon = GFX_SOV_romanov_reconstruction_ccp_2d_sov_compatibility
+		x = 40
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		available = {
+			is_subject = no
+			communism < 0.5
+			fascism < 0.5
+			neutrality < 0.5
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_ideas = ROM_Institue_Royal
+		}		
+	}
+
+	focus = {
+		id = ROM_Change_of_Goverment
+		icon = GFX_focus_AUS_lawmaking_leniency
+		prerequisite = { focus = ROM_institute_Royal }
+		x = 0
+		y = 1
+		relative_position_id = ROM_institute_Royal
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+		}		
+	}
+
+	focus = {
+		id = ROM_institute_royal_dictatorship1
+		icon = GFX_focus_rom_royal_dictatorship
+		prerequisite = { focus = ROM_Change_of_Goverment }
+		x = 2
+		y = 1
+		relative_position_id = ROM_Change_of_Goverment
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		available = {
+			neutrality > 0.4
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			create_country_leader = {
+				name = "Carol II"
+				desc = "POLITICS_CAROL_II_DESC"
+				picture = GFX_Portrait_romania_Carol_II				
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					hedonist
+				}
+				id = 550
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			set_political_party = {
+				ideology = neutrality
+				popularity = 65
+			}
+			remove_ideas = neutrality_idea
+		}		
+	}
+
+	focus = {
+		id = ROM_institute_royal_dictatorship1
+		icon = GFX_focus_rom_royal_dictatorship
+		prerequisite = { focus = ROM_Change_of_Goverment }
+		x = 2
+		y = 1
+		relative_position_id = ROM_Change_of_Goverment
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		available = {
+			neutrality > 0.4
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			create_country_leader = {
+				name = "Carol II"
+				desc = "POLITICS_CAROL_II_DESC"
+				picture = GFX_Portrait_romania_Carol_II				
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					hedonist
+				}
+				id = 550
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			remove_ideas = neutrality_idea
+		}		
+	}
+
+	focus = {
+		id = ROM_the_empire
+		icon = GFX_focus_ETH_the-italo_ethiopian_empire
+		prerequisite = { focus = ROM_institute_royal_dictatorship1 }
+		x = 0
+		y = 1
+		relative_position_id = ROM_institute_royal_dictatorship1
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_ideas = ROM_The_Empire
+			set_cosmetic_tag = ROM_The_Empire
+		}		
+	}
+	focus = {
+		id = ROM_king_michaels_coup
+		icon = GFX_focus_rom_coup
+		prerequisite = { focus = ROM_Change_of_Goverment }
+		x = -2
+		y = 1
+		relative_position_id = ROM_Change_of_Goverment
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_completed_focus = ROM_iron_guard
+			}
+		}
+
+		available = {
+			is_subject = no
+			OR = {
+				has_war = yes
+				threat > 0.25
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			unlock_decision_category_tooltip = ROM_change_sides
+			if = {
+				limit = {
+					POL = {
+						has_country_leader = {
+							character = ROM_king_michael
+							ruling_only = yes
+						}
+					}
+				}
+				set_cosmetic_tag = ROM_polish_loyalists
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+				}
+				set_political_party = {
+					ideology = neutrality
+					popularity = 50
+				}
+				POL = {
+					set_autonomy = {
+						target = ROM
+						autonomy_state = autonomy_personal_union
+					}
+				}
+			}
+			else = {
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = yes
+				}
+				set_political_party = {
+					ideology = democratic
+					popularity = 50
+				}
+				promote_character = { character = ROM_king_michael ideology = neutrality }
+			}
+			if = {
+				limit = {
+					has_idea = ROM_king_carol_ii_hedonist
+				}
+				remove_ideas = ROM_king_carol_ii_hedonist
+			}
+			hidden_effect = {
+				news_event = { id = news.322 days = 1 }
+				set_country_flag = can_change_sides_dem
+				set_country_flag = can_change_sides_com
+				set_country_flag = can_change_sides_fas				
+			}
+		}
+	}
+
+	focus = {
 		id = ROM_institute_royal_dictatorship
 		icon = GFX_focus_rom_royal_dictatorship
 		x = 30
 		y = 0
-
 		cost = 10
 
 		ai_will_do = {
@@ -3488,7 +3760,7 @@ focus = {
 	focus = {
 		id = ROM_expand_the_air_force
 		icon = GFX_goal_generic_build_airforce
-		x = 41
+		x = 52
 		y = 0
 
 		cost = 10
@@ -4149,7 +4421,7 @@ focus = {
 	focus = {
 		id = ROM_army_maneuvers
 		icon = GFX_goal_generic_army_doctrines
-		x = 49
+		x = 60
 		y = 0
 
 		cost = 10
@@ -4845,7 +5117,7 @@ focus = {
 	focus = {
 		id = ROM_expand_the_galati_shipyards
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 56
+		x = 67
 		y = 0
 
 		cost = 10

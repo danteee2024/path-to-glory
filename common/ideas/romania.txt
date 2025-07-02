@@ -279,6 +279,44 @@ ideas = {
 				local_resources = 0.20
 			}
 		}
+		ROM_The_Empire = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = ARG_resource_extration_focus
+
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = 0.005
+				war_support_weekly = 0.005
+				political_power_factor = 0.1
+			}
+		}
+		ROM_Institue_Royal = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = ARG_resource_extration_focus
+
+			removal_cost = -1
+
+			modifier = {
+			neutrality_drift = 0.5
+			}
+		}
 
 		ROM_revenge_against_soviet = {
 
