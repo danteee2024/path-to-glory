@@ -6362,7 +6362,6 @@ formable_nations_mod_category = {
 				state = 928
 				state = 929
 				state = 722
-				state = 195
 				state = 216
 				state = 215
 				state = 213
@@ -6388,7 +6387,6 @@ formable_nations_mod_category = {
 						929 = { is_controlled_by = ROOT }
 						722 = { is_controlled_by = ROOT }
 						
-						195 = { is_controlled_by = ROOT }
 						216 = { is_controlled_by = ROOT }
 						215 = { is_controlled_by = ROOT }
 						213 = { is_controlled_by = ROOT }
