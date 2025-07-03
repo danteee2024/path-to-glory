@@ -2033,7 +2033,23 @@ focus = {
 				value = 0.5
 				specialization = specialization_air
 			}
-			
+			random_owned_controlled_state = {
+					limit = {
+						is_core_of = ROOT
+						air_facility < 1
+						land_facility < 1
+						naval_facility < 1
+						nuclear_facility < 1
+					}
+					prioritize = { 795 }
+				has_full_control_of_state = 795
+				add_building_construction = {
+				state = 795
+				type = air_facility
+				level = 1
+				province = 924
+			    }
+			}
 			complete_special_project = sp:sp_air_radar
 			add_tech_bonus = {
 				name = POR_radar_research
