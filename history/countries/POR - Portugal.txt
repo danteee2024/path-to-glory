@@ -18,6 +18,7 @@ set_convoys = 50
 set_research_slots = 3 #can get 4th relatively easily
 	add_ideas = POR_unreliable_army
 	add_ideas = POR_unstable_republic
+	add_ideas = POR_salazars_economic_struggle
 set_technology = {
 
 	# Extended Technologies
