@@ -273,7 +273,10 @@ focus_tree = {
 		completion_reward = {
 			if = {
  				limit = {
-					has_idea = CUB_obsolete_navy_2
+					OR = {
+					has_completed_focus = CUB_the_old_ways
+				   has_completed_focus = CUB_carrier_bonus
+					}
 				}
 				add_doctrine_cost_reduction = {
 				 name = "Final navy refrom"
@@ -291,7 +294,10 @@ focus_tree = {
  			}	
 			if = {
 				limit = {
-					has_idea = CUB_obsolete_navy_4
+					OR = {
+					has_completed_focus = CUB_disrupting_the_great_powers
+				   has_completed_focus = CUB_a_modern_navy
+					}
 				}
 				add_doctrine_cost_reduction = {
 				name = "Final navy refrom"
@@ -308,13 +314,16 @@ focus_tree = {
 		 if = {
 			limit = {
 				NOT = {
-				
-                          has_idea = CUB_obsolete_navy_2 has_idea = CUB_obsolete_navy_4
+                   has_completed_focus = CUB_the_old_ways
+				   has_completed_focus = CUB_a_modern_navy
 					
 					
 				}
 			}
-		show_ideas_tooltip = CUB_obsolete_navy_show
+			swap_ideas = {
+				remove_idea = CUB_obsolete_navy
+				add_idea = CUB_obsolete_navy_show
+			} 
 				add_doctrine_cost_reduction = {
 				name = "Final navy refrom"
 				cost_reduction = 1
@@ -365,7 +374,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = CUB_the_cuban_navy
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			base = 1
 		}
@@ -443,7 +452,7 @@ focus_tree = {
 				name = "Gun bonus"
 				bonus = 0.5
 				uses = 2
-				category = infantry_tech
+				category = infantry_weapons
 			}
 			swap_ideas = {
 				remove_idea = CUB_obsolete_army
@@ -586,7 +595,10 @@ focus_tree = {
 		completion_reward = {
 			if = {
  				limit = {
-					has_idea = CUB_obsolete_army_2
+					OR = {
+						has_completed_focus = CUB_the_backbone_of_our_army
+						has_completed_focus = CUB_embracing_modern_warfare
+					}
 				}
 				add_doctrine_cost_reduction = {
 				 name = "Final army refrom"
@@ -604,7 +616,10 @@ focus_tree = {
  			}	
 			if = {
 				limit = {
-					has_idea = CUB_obsolete_army_4
+					OR = {
+						has_completed_focus = CUB_a_legacy_of_war
+						has_completed_focus = CUB_new_weapons_old_tricks
+					}
 				}
 				add_doctrine_cost_reduction = {
 				name = "Final army refrom"
@@ -621,11 +636,17 @@ focus_tree = {
 		 if = {
 			limit = {
 				NOT = {
-                   has_idea = CUB_obsolete_army_2 has_idea = CUB_obsolete_army_4
+                   has_completed_focus = CUB_a_legacy_of_war
+				   has_completed_focus = CUB_the_backbone_of_our_army
 					
 					
 				}
 			}
+			swap_ideas = {
+				remove_idea = CUB_obsolete_army
+				add_idea = CUB_obsolete_army_final_show
+			} 
+
 			 show_ideas_tooltip = CUB_obsolete_army_final_show
 				add_doctrine_cost_reduction = {
 				name = "Final army refrom"
@@ -825,7 +846,10 @@ focus_tree = {
 		completion_reward = {
 				if = {
  				limit = {
-					has_idea = CUB_obsolete_air_force_1
+					OR = {
+						has_completed_focus = CUB_destroying_our_foes
+				        has_completed_focus = CUB_escorts_for_our_bombers
+					}
 				}
 				add_doctrine_cost_reduction = {
 				name = "Final air reform"
@@ -843,7 +867,10 @@ focus_tree = {
  			}	
 			if = {
 				limit = {
-					has_idea = CUB_obsolete_air_force_2
+					OR = {
+						has_completed_focus = CUB_defending_our_seas
+				        has_completed_focus = CUB_protecting_our_skies
+					}
 				}
 				add_doctrine_cost_reduction = {
 				name = "Final air reform"
@@ -860,11 +887,15 @@ focus_tree = {
 		 if = {
 			limit = {
 				NOT = {
-             has_idea = CUB_obsolete_air_force_2 has_idea = CUB_obsolete_air_force_1	
+                  has_completed_focus = CUB_destroying_our_foes
+				   has_completed_focus = CUB_protecting_our_skies
 				}
 			}
 
-			show_ideas_tooltip = CUB_obsolete_air_force_final_show
+			swap_ideas = {
+					remove_idea = CUB_obsolete_air_force
+					add_idea = CUB_obsolete_air_force_final_show
+				}
 				add_doctrine_cost_reduction = {
 				name = "Final air reform"
 				cost_reduction = 1

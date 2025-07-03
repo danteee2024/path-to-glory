@@ -7861,11 +7861,11 @@ focus = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure 
-					level = 2
+					level = 1
 				}
 			} 
 		}
-		search_filters = {  FOCUS_FILTER_MANPOWER }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -7888,7 +7888,7 @@ focus = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_timed_idea = {
 				idea = JAP_investment
-				months = 3
+				months = 6
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			every_controlled_state = {
@@ -7905,7 +7905,7 @@ focus = {
 				}
 			}	
 		}
-		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
