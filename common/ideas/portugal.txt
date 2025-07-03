@@ -525,10 +525,6 @@ ideas = {
 			
 			modifier = {
 				extra_marine_supply_grace = 48
-				modifier_army_sub_unit_marines_attack_factor = 0.05
-				modifier_army_sub_unit_marines_defence_factor = 0.05
-				modifier_army_sub_unit_marines_max_org_factor = 0.05
-				modifier_army_sub_unit_marines_speed_factor = 0.05
 			}
 		}
 
@@ -548,9 +544,6 @@ ideas = {
 				marines_special_forces_contribution_factor = -0.10
 				amphibious_invasion = 0.10
 				amphibious_invasion_defence = 0.10
-				modifier_army_sub_unit_marines_attack_factor = 0.05
-				modifier_army_sub_unit_marines_defence_factor = 0.05
-				modifier_army_sub_unit_marines_max_org_factor = 0.05
 				modifier_army_sub_unit_marines_speed_factor = 0.10
 			}
 		}
@@ -567,7 +560,6 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-			
 				modifier_army_sub_unit_mountaineers_attack_factor = 0.05
 				modifier_army_sub_unit_mountaineers_defence_factor = 0.05
 			}

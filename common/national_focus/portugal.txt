@@ -2768,15 +2768,8 @@ focus = {
 				remove_idea = POR_iberian_mountaineers
 				add_idea = POR_iberian_mountaineers2
 			}
-			add_unit_bonus = {
-				mountaineers = {
-					hills = {
-						attack = 0.05
-						defence = 0.05
-					}
-					
-				}
-			}
+
+			
 		}
 	}
 
