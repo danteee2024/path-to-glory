@@ -2,7 +2,63 @@ ideas = {
 	country = {
 
 		# PATH TO GLORY #############################################
+		 POR_salazars_economic_struggle_3 = {
+			picture = prc_low_popular_support
 
+			allowed = {
+				original_tag = POR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				local_resources_factor = -0.05
+				industrial_capacity_dockyard = -0.05
+				industrial_capacity_factory = -0.05
+				stability_factor = -0.05
+			}
+		}
+		 POR_salazars_economic_struggle_2 = {
+			picture = prc_low_popular_support2
+
+			allowed = {
+				original_tag = POR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.15
+				local_resources_factor = -0.125
+				industrial_capacity_dockyard = -0.1
+				industrial_capacity_factory = -0.1
+				stability_factor = -0.1
+			}
+		}
+        POR_salazars_economic_struggle = {
+			picture = prc_low_popular_support3
+
+			allowed = {
+				original_tag = POR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.25
+				local_resources_factor = -0.20
+				industrial_capacity_dockyard = -0.15
+				industrial_capacity_factory = -0.15
+				stability_factor = -0.15
+			}
+		}
 		POR_defence_of_freedom = {
 			picture = FIN_social_democratic_womens_union
 
@@ -435,9 +491,6 @@ ideas = {
 			
 			modifier = {
 				extra_marine_supply_grace = 24
-				unit_marine_design_cost_factor = -1
-				modifier_army_sub_unit_marine_attack_factor = 0.05
-				modifier_army_sub_unit_marine_defence_factor = 0.05
 			}
 		}
 
@@ -454,11 +507,6 @@ ideas = {
 			
 			modifier = {
 				extra_marine_supply_grace = 48
-				unit_marine_design_cost_factor = -1
-				modifier_army_sub_unit_marine_attack_factor = 0.05
-				modifier_army_sub_unit_marine_defence_factor = 0.05
-				modifier_army_sub_unit_marine_max_org_factor = 0.05
-				modifier_army_sub_unit_marine_speed_factor = 0.05
 			}
 		}
 
@@ -475,11 +523,6 @@ ideas = {
 			
 			modifier = {
 				extra_marine_supply_grace = 72
-				unit_marine_design_cost_factor = -1
-				modifier_army_sub_unit_marine_attack_factor = 0.05
-				modifier_army_sub_unit_marine_defence_factor = 0.05
-				modifier_army_sub_unit_marine_max_org_factor = 0.05
-				modifier_army_sub_unit_marine_speed_factor = 0.10
 				marines_special_forces_contribution_factor = -0.10
 				amphibious_invasion = 0.10
 				amphibious_invasion_defence = 0.10
@@ -498,7 +541,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				unit_mountaineers_design_cost_factor = -1
+			
 				modifier_army_sub_unit_mountaineers_attack_factor = 0.05
 				modifier_army_sub_unit_mountaineers_defence_factor = 0.05
 			}
@@ -516,7 +559,6 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				unit_mountaineers_design_cost_factor = -1
 				modifier_army_sub_unit_mountaineers_attack_factor = 0.05
 				modifier_army_sub_unit_mountaineers_defence_factor = 0.05
 				modifier_army_sub_unit_mountaineers_max_org_factor = 0.05
@@ -536,7 +578,6 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				unit_mountaineers_design_cost_factor = -1
 				modifier_army_sub_unit_mountaineers_attack_factor = 0.05
 				modifier_army_sub_unit_mountaineers_defence_factor = 0.05
 				modifier_army_sub_unit_mountaineers_max_org_factor = 0.05
@@ -559,7 +600,6 @@ ideas = {
 			
 			modifier = {
 				extra_paratrooper_supply_grace = 24
-				unit_paratrooper_design_cost_factor = -1
 				modifier_army_sub_unit_paratrooper_attack_factor = 0.05
 				modifier_army_sub_unit_paratrooper_defence_factor = 0.05
 			}
@@ -578,7 +618,6 @@ ideas = {
 			
 			modifier = {
 				extra_paratrooper_supply_grace = 48
-				unit_paratrooper_design_cost_factor = -1
 				modifier_army_sub_unit_paratrooper_attack_factor = 0.05
 				modifier_army_sub_unit_paratrooper_defence_factor = 0.05
 				modifier_army_sub_unit_paratrooper_max_org_factor = 0.05
@@ -600,7 +639,6 @@ ideas = {
 			
 			modifier = {
 				extra_paratrooper_supply_grace = 72
-				unit_paratrooper_design_cost_factor = -1
 				modifier_army_sub_unit_paratrooper_attack_factor = 0.05
 				modifier_army_sub_unit_paratrooper_defence_factor = 0.05
 				modifier_army_sub_unit_paratrooper_max_org_factor = 0.05
@@ -623,10 +661,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				research_speed_factor = 0.10
-				special_project_speed_factor = 0.10
-				scientist_breakthrough_bonus_factor = 0.20
-				scientist_research_bonus_factor = 0.10
+				research_speed_factor = 0.075
+				special_project_speed_factor = 0.15
 			}
 		}
 
@@ -643,12 +679,12 @@ ideas = {
 			
 			modifier = {
 				political_power_gain = 0.10
-				consumer_goods_factor = -0.10
+				consumer_goods_factor = -0.05
 				trade_opinion_factor = 0.25
 			}
 		}
 
-		POR_mainland_economy_revived_idea = {
+		POR_addressing_the_unemployment_idea = {
 			picture = HABSBURG_economy
 			allowed = {
 				original_tag = POR
@@ -660,11 +696,11 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				political_power_factor = 0.10
-				consumer_goods_factor = -0.10
-				local_building_slots_factor = 0.10
-				production_speed_buildings_factor = 0.10
-				local_resources_factor = 0.10
+				political_power_factor = 0.15
+				global_building_slots_factor = 0.05
+				industrial_capacity_dockyard = 0.10
+				industrial_capacity_factory = 0.075
+
 			}
 		}
 
@@ -1257,7 +1293,7 @@ ideas = {
 			}
 		}
 
-		POR_a_new_industry = {
+		POR_law_on_labour_idea = {
 			picture = man_five_year_plan_industry 
 			allowed = {
 				original_tag = POR
@@ -1269,10 +1305,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				production_speed_buildings_factor = 0.10
-				local_building_slots_factor = 0.10
-				industry_repair_factor = 0.25
-				industry_free_repair_factor = 0.25
+				global_building_slots_factor = 0.15
 			}
 		}
 
