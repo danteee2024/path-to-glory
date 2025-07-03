@@ -2403,7 +2403,6 @@ formable_nations_mod_category = {
 			OR = { 
 				has_global_flag = no_limit
 				original_tag = SPR
-				original_tag = POR
 				original_tag = GLC
 				original_tag = NAV
 				original_tag = CAT
