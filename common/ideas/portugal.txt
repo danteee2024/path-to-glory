@@ -59,6 +59,21 @@ ideas = {
 				stability_factor = -0.15
 			}
 		}
+		POR_law_on_labour_idea = {
+			picture = man_five_year_plan_industry 
+			allowed = {
+				original_tag = POR
+			}
+
+			allowed_civil_war = {
+				tag = POR
+			}
+			removal_cost = -1
+			
+			modifier = {
+				global_building_slots_factor = 0.15
+			}
+		}
 		POR_defence_of_freedom = {
 			picture = FIN_social_democratic_womens_union
 
@@ -451,9 +466,10 @@ ideas = {
 
 			modifier = {
 				research_speed_factor = 0.05
-				special_project_speed_factor = 0.05
+				special_project_speed_factor = 0.10
 				scientist_breakthrough_bonus_factor = 0.10
 				scientist_research_bonus_factor = 0.05
+				scientist_xp_gain_factor = 0.1
 			}
 		}
 
@@ -526,6 +542,7 @@ ideas = {
 				marines_special_forces_contribution_factor = -0.10
 				amphibious_invasion = 0.10
 				amphibious_invasion_defence = 0.10
+				modifier_army_sub_unit_marines_speed_factor = 0.10
 			}
 		}
 
@@ -541,7 +558,6 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-			
 				modifier_army_sub_unit_mountaineers_attack_factor = 0.05
 				modifier_army_sub_unit_mountaineers_defence_factor = 0.05
 			}
@@ -622,7 +638,7 @@ ideas = {
 				modifier_army_sub_unit_paratrooper_defence_factor = 0.05
 				modifier_army_sub_unit_paratrooper_max_org_factor = 0.05
 				modifier_army_sub_unit_paratrooper_speed_factor = 0.05
-				paradrop_organization_factor = 0.10
+				paradrop_organization_factor = 1
 			}
 		}
 
@@ -645,7 +661,7 @@ ideas = {
 				modifier_army_sub_unit_paratrooper_speed_factor = 0.10
 				paratroopers_special_forces_contribution_factor = -0.10
 				acclimatization_hot_climate_gain_factor = 0.10
-				paradrop_organization_factor = 0.10
+				paradrop_organization_factor = 1
 			}
 		}
 
@@ -663,6 +679,8 @@ ideas = {
 			modifier = {
 				research_speed_factor = 0.075
 				special_project_speed_factor = 0.15
+				scientist_breakthrough_bonus_factor = 0.1
+				scientist_xp_gain_factor = 0.1
 			}
 		}
 
@@ -699,7 +717,7 @@ ideas = {
 				political_power_factor = 0.15
 				global_building_slots_factor = 0.05
 				industrial_capacity_dockyard = 0.10
-				industrial_capacity_factory = 0.075
+				industrial_capacity_factory = 0.05
 
 			}
 		}
@@ -808,9 +826,10 @@ ideas = {
 			
 			modifier = {
 				research_speed_factor = 0.075
-				special_project_speed_factor = 0.075
+				special_project_speed_factor = 0.15
 				scientist_breakthrough_bonus_factor = 0.15
-				scientist_research_bonus_factor = 0.075
+				scientist_research_bonus_factor = 0.0075
+				scientist_xp_gain_factor = 0.1
 				democratic_drift = 0.05
 			}
 		}
@@ -1293,19 +1312,27 @@ ideas = {
 			}
 		}
 
-		POR_law_on_labour_idea = {
+		POR_a_new_industry = {
 			picture = man_five_year_plan_industry 
+
 			allowed = {
-				original_tag = POR
+				original_tag = POR 
 			}
 
 			allowed_civil_war = {
 				tag = POR
-			}
+			}	
+
 			removal_cost = -1
 			
 			modifier = {
-				global_building_slots_factor = 0.15
+				production_speed_buildings_factor = 0.10
+				industry_repair_factor = 0.25
+				industry_free_repair_factor = 0.25
+				political_power_factor = 0.15
+				global_building_slots_factor = 0.10
+				industrial_capacity_dockyard = 0.10
+				industrial_capacity_factory = 0.05
 			}
 		}
 
