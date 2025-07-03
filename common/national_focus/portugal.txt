@@ -1765,10 +1765,8 @@ focus = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_research_slot = 1
-				
-
 			add_breakthrough_progress = {
-				value = 0.25
+				value = 0.5
 				specialization = specialization_air
 			}
 
@@ -2031,6 +2029,27 @@ focus = {
 			date > 1938.1.1
 		}
 		completion_reward = {
+			add_breakthrough_progress = {
+				value = 0.5
+				specialization = specialization_air
+			}
+			random_owned_controlled_state = {
+					limit = {
+						is_core_of = ROOT
+						air_facility < 1
+						land_facility < 1
+						naval_facility < 1
+						nuclear_facility < 1
+					}
+					prioritize = { 795 }
+				has_full_control_of_state = 795
+				add_building_construction = {
+				state = 795
+				type = air_facility
+				level = 1
+				province = 924
+			    }
+			}
 			complete_special_project = sp:sp_air_radar
 			add_tech_bonus = {
 				name = POR_radar_research
@@ -2087,7 +2106,7 @@ focus = {
 	focus = {
 		id = POR_law_on_labour
 		prerequisite = { focus = POR_corporations_act }
-		icon = GFX_focus_BRA_amazon_colonization
+		icon = GFX_focus_GER_optimize_reich_labour_service
 		x = 0
 		y = 1
 
@@ -2326,9 +2345,39 @@ focus = {
 		y = 1
 		relative_position_id = POR_establish_portuguese_science_and_technology_affairs
 		cost = 10
-		search_filters = {FOCUS_FILTER_MANPOWER}
+		search_filters = {FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			add_ideas = POR_addressing_the_unemployment_idea
+		}
+	}
+
+	focus = {
+		id = POR_a_new_industry
+		available = {
+			has_country_flag = {
+				flag = USA_new_legislation_drafed_flag
+				days > 120
+			}
+			custom_trigger_tooltip = {
+				tooltip = USA_legislation_drafted_days_tt
+				has_country_flag = {
+					flag = USA_new_legislation_drafed_flag
+					days > 120
+				}
+			}
+		}
+		prerequisite = { focus = POR_addressing_the_unemployment }
+		icon = GFX_goal_continuous_repairments
+		x = 0
+		y = 1
+		relative_position_id = POR_addressing_the_unemployment
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = POR_addressing_the_unemployment_idea
+				add_idea = POR_a_new_industry
+			}
 		}
 	}
 
@@ -2719,6 +2768,15 @@ focus = {
 				remove_idea = POR_iberian_mountaineers
 				add_idea = POR_iberian_mountaineers2
 			}
+			add_unit_bonus = {
+				mountaineers = {
+					hills = {
+						attack = 0.05
+						defence = 0.05
+					}
+					
+				}
+			}
 		}
 	}
 
@@ -2750,8 +2808,13 @@ focus = {
 						attack = 0.05
 						defence = 0.05
 					}
-					
 				}
+			}
+			add_tech_bonus = {
+				name = POR_institute_mountaineer_corps
+			    bonus = 1
+			    uses = 1
+			    category = mountaineers_tech
 			}
 		}
 	}
@@ -3296,14 +3359,12 @@ focus = {
 		cost = 5
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			
 			add_tech_bonus = {
 				name = POR_fuzileiros
 			    bonus = 1
 			    uses = 1
 			    category = marine_tech
 			}
-			
 		}
 	}
 
@@ -3406,7 +3467,12 @@ focus = {
 				remove_idea = POR_portuguese_marines2
 				add_idea = POR_portuguese_marines3
 			}
-			
+			add_tech_bonus = {
+				name = POR_fuzileiros
+			    bonus = 1
+			    uses = 1
+			    category = marine_tech
+			}
 		}
 	}
 
@@ -4058,6 +4124,12 @@ focus = {
 					}
 				}
 			}
+			add_tech_bonus = {
+				name = POR_tropas_paraquedistas
+				bonus = 1
+				uses = 1
+				category = para_tech
+			}
 		}
 	}
 
@@ -4099,15 +4171,12 @@ focus = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = POR_regimento_de_comandos
-				bonus = 0.75
+				bonus = 1
 				uses = 1
-				technology = paratroopers
 				technology = paratroopers2
 				technology = paratroopers3
-				technology = marines
 				technology = marines2
 				technology = marines3
-				technology = tech_mountaineers
 				technology = tech_mountaineers2
 				technology = tech_mountaineers3
 			}
