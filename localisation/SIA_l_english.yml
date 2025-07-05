@@ -18,8 +18,6 @@
  the_great_craftsman:0 "The Great Craftsman"
  the_great_craftsman_desc:0 "Prince Naris is known as the Great Craftsman of Siam for his excellence and talent in many art fields including architecture."
  
-    # Update 2.0
- 
  conservative_democrat:0 "Conservative Democrat"
  little_goebbels:0 "Little Goebbels"
  minister_of_science:0 "Minister of Science"
@@ -47,7 +45,11 @@
  
 ################################### OPINION MODIFIERS           \n      §H§!
  
- 
+################################### TOOLTIPS                 \n      §H§!
+
+ Siam_guarantees_freedom_tt:0 "Will Guarantee Any §YDemocratic§! or §YNon-Aligned§! minor country in §YAsia§!"
+
+ Siam_defend_the_coastline_tt:0 "Will build a coastal fort on every port owned in continental south east asia."
  
  
 ################################### FOCUSES                     \n      §H§!
@@ -60,8 +62,6 @@
  
  SIA_Contract_Japanese_Aircraft:0 "Contract Japanese Aircraft"
  SIA_Contract_Japanese_Aircraft_desc:0 ""
- 
- # Update 2.0
  
  SIA_Unite_SEA:0 "Unite South East Asia"
  SIA_Unite_SEA_desc:0 "The Worker's of South East Asia have all broken their chains. It is now time for us to all form a united government to stand against the Western and Asian Imperialists."
@@ -651,7 +651,7 @@
  SIA.11.a:0 "We should avoid bloodshed"
  SIA.11.b:0 "We will not bend to the Japanese"
   
-# Rama to Power
+ # Rama to Power
   
  SIA.12.t:0 "Rama VII returns to Power"
  SIA.12.desc:0 "Following the cooperation with the military and Phahon, Rama VII has returned to power."
@@ -851,8 +851,6 @@
  
  #
  
- 
- 
  SIA_fascism_party:0 "Khana Ratsadon (Military Wing)"
  SIA_fascism_party_long:0 "Khana Ratsadon (Military Wing)"
  SIA_democratic_party:0 "Khana Ratsadon (Civilian Wing)"
@@ -904,17 +902,17 @@
     
   ##
  
-SIA_AYU:0 "Empire of Ayutthaya"
-SIA_AYU_ADJ:0 "Thai"
-SIA_AYU_DEF:0 "The Empire of Ayutthaya"
+ SIA_AYU:0 "Empire of Ayutthaya"
+ SIA_AYU_ADJ:0 "Thai"
+ SIA_AYU_DEF:0 "The Empire of Ayutthaya"
 
-SIA_THAI:0 "Great Kingdom of Thailand"
-SIA_THAI_ADJ:0 "Thai"
-SIA_THAI_DEF:0 "The Great Kingdom of Thailand"
+ SIA_THAI:0 "Great Kingdom of Thailand"
+ SIA_THAI_ADJ:0 "Thai"
+ SIA_THAI_DEF:0 "The Great Kingdom of Thailand"
 
-SIA_SEA:0 "United South East Asia"
-SIA_SEA_ADJ:0 "South East Asian"
-SIA_SEA_DEF:0 "United South East Asian Republic"
+ SIA_SEA:0 "United South East Asia"
+ SIA_SEA_ADJ:0 "South East Asian"
+ SIA_SEA_DEF:0 "United South East Asian Republic"
  
  
  
