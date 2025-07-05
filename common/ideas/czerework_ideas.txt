@@ -1,0 +1,7038 @@
+ideas = { 
+	country = { 
+		CZE_mission_to_spain = {
+			picture = received_attache
+			
+			allowed = { always = no }
+			cancel = { SPR_scw_in_progress = no }
+			allowed_civil_war = { always = no }
+			on_add = {  }
+			
+			modifier = {
+				send_volunteer_divisions_required = -1
+				send_volunteers_tension = -1
+				send_volunteer_size = 2
+			}
+		}
+		CRP_the_batkivshchyna_awaits = {
+			picture = MEX_politicised_army_2
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			modifier = {
+				army_attack_factor = 0.1
+				conscription = 0.03
+			}
+		}
+		CZE_the_mitsubishi_industrial_concern = {
+			picture = mitsubishi
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			equipment_bonus = {
+				armor = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+			}
+		}
+		CZE_lessons_of_american_mass_production = {
+			picture = generic_usa_conflict
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			modifier = {
+				industrial_capacity_factory = 0.1
+			}
+		}
+		CZE_kharkiv_design_bureau_experts = {
+			picture = morozov_design_bureau
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			research_bonus = {
+				mio_cat_tech_medium_armor_and_modules = 0.1
+			}
+			equipment_bonus = {
+				medium_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+		}
+		CZE_tatra_fiat_cooperation = {
+			picture = fiat
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			equipment_bonus = {
+				motorized = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+		}
+		CZE_avia_hawker_cooperation = {
+			picture = hawker
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			equipment_bonus = {
+				small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+		}
+		CZE_skoda_schneider_cooperation = {
+			picture = schneider
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			equipment_bonus = {
+				artillery = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+		}
+		CZE_skoda_krupp_cooperation = {
+			picture = krupp
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			equipment_bonus = {
+				artillery = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				armor = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+			}
+		}
+		CZE_military_technical_institute = {
+			picture = generic_research_bonus
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+		CZE_a_modern_army = {
+			picture = ARG_war_division
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			modifier = {
+				experience_gain_army_factor = 0.15
+				special_project_speed_factor = 0.05
+			}
+			research_bonus = {
+				infantry_weapons = 0.1
+				artillery = 0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					reliability = 0.05
+					defense = 0.05
+					soft_attack = 0.05
+					breakthrough = 0.05
+				}
+				artillery = {
+					instant = yes
+					soft_attack = 0.05
+					build_cost_ic = -0.05
+				}
+				anti_tank = {
+					instant = yes
+					ap_attack = 0.1
+				}
+				anti_air = {
+					instant = yes
+					air_attack = 0.1
+				}
+				motorized = {
+					instant = yes
+					build_cost_ic = -0.1
+					maximum_speed = 0.05
+				}
+				mechanized = {
+					instant = yes
+					armor_value = 0.05
+					maximum_speed = 0.05
+					breakthrough = 0.1
+				}
+			}
+		}
+		CZE_motorization_of_the_army_2 = {
+			name = CZE_motorization_of_the_army
+			picture = ITA_bandits_war
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			equipment_bonus = {
+				motorized = {
+					instant = yes
+					build_cost_ic = -0.1
+					maximum_speed = 0.05
+				}
+				mechanized = {
+					instant = yes
+					armor_value = 0.05
+					maximum_speed = 0.05
+					breakthrough = 0.1
+				}
+			}
+		}
+		CZE_motorization_of_the_army = {
+			picture = ITA_bandits_war
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			equipment_bonus = {
+				motorized = {
+					instant = yes
+					build_cost_ic = -0.1
+					maximum_speed = 0.05
+				}
+			}
+		}
+		CZE_military_innovations_a_g_m = {
+			name = CZE_military_innovations
+			picture = ARG_war_division
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			research_bonus = {
+				infantry_weapons = 0.1
+				artillery = 0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					reliability = 0.05
+					defense = 0.05
+					soft_attack = 0.05
+					breakthrough = 0.05
+				}
+				artillery = {
+					instant = yes
+					soft_attack = 0.05
+					build_cost_ic = -0.05
+				}
+				anti_tank = {
+					instant = yes
+					ap_attack = 0.1
+				}
+				anti_air = {
+					instant = yes
+					air_attack = 0.1
+				}
+			}
+		}
+		CZE_military_innovations_a_m = {
+			name = CZE_military_innovations
+			picture = ARG_war_division
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			research_bonus = {
+				infantry_weapons = 0.1
+				artillery = 0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					reliability = 0.05
+					defense = 0.05
+					soft_attack = 0.05
+					breakthrough = 0.05
+				}
+				artillery = {
+					instant = yes
+					soft_attack = 0.05
+					build_cost_ic = -0.05
+				}
+			}
+		}
+		CZE_military_innovations_a_g = {
+			name = CZE_military_innovations
+			picture = ARG_war_division
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			research_bonus = {
+				infantry_weapons = 0.1
+				artillery = 0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					reliability = 0.05
+					defense = 0.05
+				}
+				artillery = {
+					instant = yes
+					soft_attack = 0.05
+					build_cost_ic = -0.05
+				}
+				anti_tank = {
+					instant = yes
+					ap_attack = 0.1
+				}
+				anti_air = {
+					instant = yes
+					air_attack = 0.1
+				}
+			}
+		}
+		CZE_military_innovations_a = {
+			name = CZE_military_innovations
+			picture = ARG_war_division
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			research_bonus = {
+				infantry_weapons = 0.1
+				artillery = 0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					reliability = 0.05
+					defense = 0.05
+				}
+				artillery = {
+					instant = yes
+					soft_attack = 0.05
+					build_cost_ic = -0.05
+				}
+			}
+		}
+		CZE_military_innovations_m = {
+			name = CZE_military_innovations
+			picture = ARG_war_division
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			research_bonus = {
+				infantry_weapons = 0.1
+				artillery = 0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					reliability = 0.05
+					defense = 0.05
+					soft_attack = 0.05
+					breakthrough = 0.05
+				}
+			}
+		}
+		CZE_military_innovations_2 = {
+			name = CZE_military_innovations
+			picture = ARG_war_division
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			research_bonus = {
+				infantry_weapons = 0.1
+				artillery = 0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					reliability = 0.05
+					defense = 0.05
+				}
+			}
+		}
+		CZE_armored_car_standardization = {
+			picture = FRA_motorized_focus
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			modifier = {
+				resistance_damage_to_garrison = -0.15
+			}
+			equipment_bonus = {
+				armored_car = {
+					instant = yes
+					build_cost_ic = -0.1
+					armor_value = 0.1
+					soft_attack = 0.1
+				}
+			}
+		}
+		CZE_modernization_of_armored_forces_final = {
+			name = CZE_modernization_of_armored_forces
+			picture = generic_acquire_tanks
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			research_bonus = {
+				armor = 0.1
+			}
+			modifier = {
+				unit_light_armor_design_cost_factor = -0.4
+				unit_medium_armor_design_cost_factor = -0.4
+				unit_heavy_armor_design_cost_factor = -0.4
+			}
+			equipment_bonus = {
+				light_tank_chassis = {
+					instant = yes
+					armor_value = 0.05
+					maximum_speed = 0.05
+					reliability = 0.05
+				}
+				light_tank_aa_chassis = {
+					instant = yes
+					air_attack = 0.1
+					build_cost_ic = -0.1
+				}
+				light_tank_artillery_chassis = {
+					instant = yes
+					soft_attack = 0.1
+					build_cost_ic = -0.1
+				}
+				light_tank_destroyer_chassis = {
+					instant = yes
+					ap_attack = 0.1
+					build_cost_ic = -0.1
+				}
+				medium_tank_chassis = {
+					instant = yes
+					armor_value = 0.05
+					soft_attack = 0.05
+					build_cost_ic = -0.05
+				}
+				heavy_tank_chassis = {
+					instant = yes
+					armor_value = 0.05
+					ap_attack = 0.05
+					reliability = 0.05
+				}
+				modern_tank_chassis = {
+					instant = yes
+					armor_value = 0.1
+					build_cost_ic = -0.1
+					soft_attack = 0.05
+					ap_attack = 0.05
+				}
+			}
+		}
+		CZE_modernization_of_armored_forces_m_h_l_s = {
+			name = CZE_modernization_of_armored_forces
+			picture = generic_acquire_tanks
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			research_bonus = {
+				armor = 0.1
+			}
+			modifier = {
+				unit_light_armor_design_cost_factor = -0.4
+				unit_medium_armor_design_cost_factor = -0.4
+				unit_heavy_armor_design_cost_factor = -0.4
+			}
+			equipment_bonus = {
+				light_tank_chassis = {
+					instant = yes
+					armor_value = 0.05
+					maximum_speed = 0.05
+					reliability = 0.05
+				}
+				light_tank_aa_chassis = {
+					instant = yes
+					air_attack = 0.1
+					build_cost_ic = -0.1
+				}
+				light_tank_artillery_chassis = {
+					instant = yes
+					soft_attack = 0.1
+					build_cost_ic = -0.1
+				}
+				light_tank_destroyer_chassis = {
+					instant = yes
+					ap_attack = 0.1
+					build_cost_ic = -0.1
+				}
+				medium_tank_chassis = {
+					instant = yes
+					armor_value = 0.05
+					soft_attack = 0.05
+					build_cost_ic = -0.05
+				}
+				heavy_tank_chassis = {
+					instant = yes
+					armor_value = 0.05
+					ap_attack = 0.05
+					reliability = 0.05
+				}
+			}
+		}
+		CZE_modernization_of_armored_forces_m_l_s = {
+			name = CZE_modernization_of_armored_forces
+			picture = generic_acquire_tanks
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			research_bonus = {
+				armor = 0.1
+			}
+			modifier = {
+				unit_light_armor_design_cost_factor = -0.4
+				unit_medium_armor_design_cost_factor = -0.4
+				unit_heavy_armor_design_cost_factor = -0.4
+			}
+			equipment_bonus = {
+				light_tank_chassis = {
+					instant = yes
+					armor_value = 0.05
+					maximum_speed = 0.05
+					reliability = 0.05
+				}
+				light_tank_aa_chassis = {
+					instant = yes
+					air_attack = 0.1
+					build_cost_ic = -0.1
+				}
+				light_tank_artillery_chassis = {
+					instant = yes
+					soft_attack = 0.1
+					build_cost_ic = -0.1
+				}
+				light_tank_destroyer_chassis = {
+					instant = yes
+					ap_attack = 0.1
+					build_cost_ic = -0.1
+				}
+				medium_tank_chassis = {
+					instant = yes
+					armor_value = 0.05
+					soft_attack = 0.05
+					build_cost_ic = -0.05
+				}
+			}
+		}
+		CZE_modernization_of_armored_forces_m_l = {
+			name = CZE_modernization_of_armored_forces
+			picture = generic_acquire_tanks
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			research_bonus = {
+				armor = 0.1
+			}
+			modifier = {
+				unit_light_armor_design_cost_factor = -0.4
+				unit_medium_armor_design_cost_factor = -0.4
+				unit_heavy_armor_design_cost_factor = -0.4
+			}
+			equipment_bonus = {
+				light_tank_chassis = {
+					instant = yes
+					armor_value = 0.05
+					maximum_speed = 0.05
+					reliability = 0.05
+				}
+				medium_tank_chassis = {
+					instant = yes
+					armor_value = 0.05
+					soft_attack = 0.05
+					build_cost_ic = -0.05
+				}
+			}
+		}
+		CZE_modernization_of_armored_forces_m_h_l = {
+			name = CZE_modernization_of_armored_forces
+			picture = generic_acquire_tanks
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			research_bonus = {
+				armor = 0.1
+			}
+			modifier = {
+				unit_light_armor_design_cost_factor = -0.4
+				unit_medium_armor_design_cost_factor = -0.4
+				unit_heavy_armor_design_cost_factor = -0.4
+			}
+			equipment_bonus = {
+				light_tank_chassis = {
+					instant = yes
+					armor_value = 0.05
+					maximum_speed = 0.05
+					reliability = 0.05
+				}
+				medium_tank_chassis = {
+					instant = yes
+					armor_value = 0.05
+					soft_attack = 0.05
+					build_cost_ic = -0.05
+				}
+				heavy_tank_chassis = {
+					instant = yes
+					armor_value = 0.05
+					ap_attack = 0.05
+					reliability = 0.05
+				}
+			}
+		}
+		CZE_modernization_of_armored_forces_m_h = {
+			name = CZE_modernization_of_armored_forces
+			picture = generic_acquire_tanks
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			research_bonus = {
+				armor = 0.1
+			}
+			modifier = {
+				unit_light_armor_design_cost_factor = -0.4
+				unit_medium_armor_design_cost_factor = -0.4
+				unit_heavy_armor_design_cost_factor = -0.4
+			}
+			equipment_bonus = {
+				medium_tank_chassis = {
+					instant = yes
+					armor_value = 0.05
+					soft_attack = 0.05
+					build_cost_ic = -0.05
+				}
+				heavy_tank_chassis = {
+					instant = yes
+					armor_value = 0.05
+					ap_attack = 0.05
+					reliability = 0.05
+				}
+			}
+		}
+		CZE_modernization_of_armored_forces_m = {
+			name = CZE_modernization_of_armored_forces
+			picture = generic_acquire_tanks
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			research_bonus = {
+				armor = 0.1
+			}
+			modifier = {
+				unit_light_armor_design_cost_factor = -0.4
+				unit_medium_armor_design_cost_factor = -0.4
+				unit_heavy_armor_design_cost_factor = -0.4
+			}
+			equipment_bonus = {
+				medium_tank_chassis = {
+					instant = yes
+					armor_value = 0.05
+					soft_attack = 0.05
+					build_cost_ic = -0.05
+				}
+			}
+		}
+		CZE_modernization_of_armored_forces_l_s = {
+			name = CZE_modernization_of_armored_forces
+			picture = generic_acquire_tanks
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			research_bonus = {
+				armor = 0.1
+			}
+			modifier = {
+				unit_light_armor_design_cost_factor = -0.4
+				unit_medium_armor_design_cost_factor = -0.4
+				unit_heavy_armor_design_cost_factor = -0.4
+			}
+			equipment_bonus = {
+				light_tank_chassis = {
+					instant = yes
+					armor_value = 0.05
+					maximum_speed = 0.05
+					reliability = 0.05
+				}
+				light_tank_aa_chassis = {
+					instant = yes
+					air_attack = 0.1
+					build_cost_ic = -0.1
+				}
+				light_tank_artillery_chassis = {
+					instant = yes
+					soft_attack = 0.1
+					build_cost_ic = -0.1
+				}
+				light_tank_destroyer_chassis = {
+					instant = yes
+					ap_attack = 0.1
+					build_cost_ic = -0.1
+				}
+			}
+		}
+		CZE_modernization_of_armored_forces_l = {
+			name = CZE_modernization_of_armored_forces
+			picture = generic_acquire_tanks
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			research_bonus = {
+				armor = 0.1
+			}
+			modifier = {
+				unit_light_armor_design_cost_factor = -0.4
+				unit_medium_armor_design_cost_factor = -0.4
+				unit_heavy_armor_design_cost_factor = -0.4
+			}
+			equipment_bonus = {
+				light_tank_chassis = {
+					instant = yes
+					armor_value = 0.05
+					maximum_speed = 0.05
+					reliability = 0.05
+				}
+			}
+		}
+		CZE_modernization_of_armored_forces = {
+			picture = generic_acquire_tanks
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			research_bonus = {
+				armor = 0.1
+			}
+			modifier = {
+				unit_light_armor_design_cost_factor = -0.4
+				unit_medium_armor_design_cost_factor = -0.4
+				unit_heavy_armor_design_cost_factor = -0.4
+			}
+		}
+		CZE_export_production = {
+			picture = can_wartime_prices_and_trade_board
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			modifier = {
+				research_speed_factor = 0.05
+				consumer_goods_factor = -0.15
+				industrial_capacity_factory = -0.05
+			}
+		}
+		CZE_military_innovations = {
+			picture = ARG_war_division
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			research_bonus = {
+				infantry_weapons = 0.1
+				artillery = 0.1
+			}
+		}
+		CRP_oun_led_high_command = {
+			picture = ARG_military_government
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			modifier = {
+				experience_gain_army = 0.05
+				high_command_cost_factor = -0.3
+			}
+		}
+		CRP_memories_of_the_upr_2 = {
+			name = CRP_memories_of_the_upr
+			picture = generic_morale_bonus
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			modifier = {
+				army_core_defence_factor = 0.05
+				political_power_gain = 0.15
+				party_popularity_stability_factor = 0.15
+			}
+		}
+		CRP_memories_of_the_upr = {
+			picture = generic_morale_bonus
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			modifier = {
+				army_core_defence_factor = 0.05
+				political_power_gain = 0.1
+			}
+		}
+		CRP_forging_a_ukrainian_national_identity_3 = {
+			name = CRP_forging_a_ukrainian_national_identity
+			picture = CRP_forging_a_ukrainian_national_identity
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			modifier = {
+				political_power_factor = 0.05
+				stability_factor = 0.05
+				research_speed_factor = 0.05
+				industrial_factory_donations = 1
+				military_factory_donations = 1
+				weekly_manpower = 300
+			}
+		}
+		CRP_forging_a_ukrainian_national_identity_2 = {
+			name = CRP_forging_a_ukrainian_national_identity
+			picture = CRP_forging_a_ukrainian_national_identity
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			modifier = {
+				political_power_factor = 0.05
+				stability_factor = 0.05
+				research_speed_factor = 0.05
+			}
+		}
+		CRP_ukrainian_scouts = {
+			picture = CRP_ukrainian_scouts
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			modifier = {
+				conscription = 0.01
+				recon_factor = 0.1
+				war_support_factor = 0.05
+			}
+		}
+		CRP_forging_a_ukrainian_national_identity = {
+			picture = CRP_forging_a_ukrainian_national_identity
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			modifier = {
+				political_power_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+		CRP_divided_identity_3 = {
+			name = CRP_divided_identity
+			picture = CRP_divided_national_identity
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			modifier = {
+				political_power_factor = -0.1
+			}
+		}
+		CRP_divided_identity_2 = {
+			name = CRP_divided_identity
+			picture = CRP_divided_national_identity
+			
+			allowed = { always = no }
+			cancel = {  }
+			allowed_civil_war = { always = yes }
+			on_add = {  }
+			
+			modifier = {
+				political_power_factor = -0.2
+			}
+		}
+		CRP_divided_identity = {
+			picture = CRP_divided_national_identity
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.25
+			}
+		}
+		CZE_uranium_mining_at_jachymov = {
+			picture = ast_all_in
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_nuclear_reactor_factor = 0.1
+				nuclear_production_factor = 0.1
+			}
+			research_bonus = {
+				nuclear = 0.05
+			}
+		}
+		CZE_loyal_academia = {
+			picture = generic_research_bonus
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.03
+				political_power_gain = 0.1
+			}
+		}
+		CZE_military_technical_and_aviation_institute = {
+			picture = generic_air_research
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+		}
+		SLO_total_war = {
+			picture = chi_war_of_resistance3
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.15
+				production_lack_of_resource_penalty_factor = -0.1
+				industrial_capacity_factory = 0.15
+				war_support_factor = 0.15
+				conscription = 0.04
+			}
+		}
+		SLO_war_in_the_east = {
+			picture = generic_attack_soviet_union
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.15
+			}
+			
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.1
+				breakthrough_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+		}
+		SLO_slovak_invasion_of_poland = {
+			picture = generic_acquire_tanks
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = POL
+				attack_bonus_against = 0.1
+				breakthrough_bonus_against = 0.1
+			}
+		}
+		SLO_visegrad_union_3 = {
+			name = SLO_visegrad_union
+			picture = generic_deal_with_the_devil2
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.2
+				consumer_goods_factor = -0.2
+				production_speed_buildings_factor = 0.1
+				conscription = 0.03
+				army_defence_factor = 0.1
+			}
+		}
+		SLO_visegrad_union_2 = {
+			name = SLO_visegrad_union
+			picture = generic_deal_with_the_devil2
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.15
+				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		SLO_visegrad_union = {
+			picture = generic_deal_with_the_devil2
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.15
+			}
+		}
+		SLO_foreign_support_for_democratic_opposition = {
+			picture = EST_democratic_opposition
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				democratic_drift = 0.1
+				drift_defence_factor = -0.25
+			}
+		}
+		SLO_in_defense_of_liberty = {
+			picture = hol_liberation
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.01
+				army_defence_factor = 0.1
+				army_attack_factor = 0.1
+			}
+		}
+		SLO_defend_against_the_communist_menace = {
+			picture = ARG_anti_soviet
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				communism_drift = -0.1
+			}
+			
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+		SLO_combat_the_fascist_threat = {
+			picture = SPR_anti_fascist_crusade
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				fascism_drift = -0.1
+			}
+			
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+		SLO_switzerland_of_the_east_3 = {
+			name = SLO_switzerland_of_the_east
+			picture = SWI_swiss_neutrality
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = 0.001
+				join_faction_tension = 0.5
+				generate_wargoal_tension = 0.5
+				enemy_justify_war_goal_time = 0.25
+				army_core_defence_factor = 0.15
+				army_core_attack_factor = 0.15
+				conscription = 0.02
+				production_speed_arms_factory_factor = 0.15
+				industrial_capacity_factory = 0.15
+			}
+		}
+		SLO_refuge_from_war = {
+			picture = prc_low_popular_support3
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.15
+				monthly_population = 0.1
+				stability_factor = -0.03
+			}
+		}
+		SLO_switzerland_of_the_east_2 = {
+			name = SLO_switzerland_of_the_east
+			picture = SWI_swiss_neutrality
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = 0.001
+				join_faction_tension = 0.5
+				generate_wargoal_tension = 0.5
+				enemy_justify_war_goal_time = 0.25
+				army_core_defence_factor = 0.15
+				army_core_attack_factor = 0.15
+				conscription = 0.02
+			}
+		}
+		SLO_switzerland_of_the_east = {
+			picture = SWI_swiss_neutrality
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = 0.001
+				join_faction_tension = 0.5
+				generate_wargoal_tension = 0.5
+				enemy_justify_war_goal_time = 0.25
+				army_core_defence_factor = 0.1
+			}
+		}
+		SLO_slovak_conservatism = {
+			picture = slo_slovak_nationalism
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = 0.35
+				stability_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+		SLO_cooperation_with_the_ussr_3 = {
+			name = SLO_cooperation_with_the_ussr
+			picture = saf_soviet_advisers
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_army_factor = 0.15
+				army_org_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				army_speed_factor = 0.1
+				acclimatization_cold_climate_gain_factor = 0.2
+			}
+			
+			research_bonus = {
+				industry = 0.15
+			}
+		}
+		SLO_cooperation_with_the_ussr_2 = {
+			name = SLO_cooperation_with_the_ussr
+			picture = saf_soviet_advisers
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_army_factor = 0.15
+				army_org_factor = 0.05
+				production_speed_buildings_factor = 0.1
+			}
+			
+			research_bonus = {
+				industry = 0.15
+			}
+		}
+		SLO_cooperation_with_the_ussr = {
+			picture = saf_soviet_advisers
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+			
+			research_bonus = {
+				industry = 0.15
+			}
+		}
+		SLO_the_nkvd_connection = { 
+			picture = nkvd_2
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				decryption = 1
+				civilian_intel_to_others = -0.1
+				army_intel_to_others = -0.1
+			}
+		}
+		SLO_the_nkvd_connection_lar = { 
+			name = SLO_the_nkvd_connection
+			picture = nkvd_2
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				intelligence_agency_defense = 0.15
+				intel_network_gain_factor = 0.15
+				operative_slot = 1
+			}
+		}
+		SLO_towards_true_secularism = { 
+			picture = ARG_state_atheism
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.07
+				political_power_gain = 0.05
+			}
+		}
+		SLO_for_a_free_and_independent_slovakia_2 = { 
+			name = SLO_for_a_free_and_independent_slovakia
+			picture = slo_for_a_free_and_independent_slovakia
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.1
+				war_support_factor = 0.1
+				army_org_factor = 0.05
+				conscription = 0.02
+			}
+		}
+		SLO_for_a_free_and_independent_slovakia = { 
+			picture = slo_for_a_free_and_independent_slovakia
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.1
+				war_support_factor = 0.05
+			}
+		}
+		SLO_collectivization_and_nationalization = { 
+			picture = eng_spirit_of_the_industrial_revolution
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_factory_max_efficiency_factor = 0.05
+				local_resources_factor = 0.1
+			}
+		}
+		SLO_a_new_hungarian_revolution_3 = { 
+			name = SLO_a_new_hungarian_revolution
+			picture = MEX_revolutionary_army
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.05
+				conscription = 0.015
+				war_support_factor = 0.1
+				weekly_manpower = 500
+				political_power_gain = 0.1
+				communism_drift = 0.1
+				justify_war_goal_time = -0.5
+			}
+		}
+		SLO_a_new_hungarian_revolution_2 = { 
+			name = SLO_a_new_hungarian_revolution
+			picture = MEX_revolutionary_army
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.05
+				conscription = 0.015
+				war_support_factor = 0.05
+				weekly_manpower = 300
+				political_power_gain = 0.1
+				communism_drift = 0.03
+			}
+		}
+		SLO_a_new_hungarian_revolution = { 
+			picture = MEX_revolutionary_army
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.05
+				conscription = 0.015
+				war_support_factor = 0.05
+			}
+		}
+		SLO_lessons_of_the_intervention = { 
+			picture = CZE_planning_bonus
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+		SLO_avenge_the_white_terror = { 
+			picture = cze_anti_hungarian_strategy
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = HUN
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+		}
+		SLO_a_free_republic = { 
+			picture = generic_democratic_drift_bonus
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.1
+				political_advisor_cost_factor = -0.15
+			}
+		}
+		SLO_revolutionary_government = { 
+			picture = ARG_growing_nationalism_modifier
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.1
+				high_command_cost_factor = -0.15
+			}
+		}
+		SLO_opposition_to_the_hsls_4 = { 
+			name = SLO_opposition_to_the_hsls
+			picture = EST_democratic_opposition
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				democratic_drift = 0.1
+				communism_drift = 0.1
+				stability_factor = -0.1
+				political_power_factor = 0.15
+				high_command_cost_factor = -0.25
+			}
+		}
+		SLO_opposition_to_the_hsls_3 = { 
+			name = SLO_opposition_to_the_hsls
+			picture = EST_democratic_opposition
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				democratic_drift = 0.07
+				communism_drift = 0.07
+				stability_factor = -0.1
+				political_power_factor = 0.15
+			}
+		}
+		SLO_opposition_to_the_hsls_2 = { 
+			name = SLO_opposition_to_the_hsls
+			picture = EST_democratic_opposition
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				democratic_drift = 0.07
+				communism_drift = 0.07
+				stability_factor = -0.1
+				high_command_cost_factor = -0.25
+			}
+		}
+		SLO_opposition_to_the_hsls = { 
+			picture = EST_democratic_opposition
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				democratic_drift = 0.05
+				communism_drift = 0.05
+				stability_factor = -0.1
+			}
+		}
+		RBM_reichsproktektorat = { 
+			picture = hol_caved_to_the_germans
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				autonomy_gain_global_factor = -0.5
+			}
+			
+			targeted_modifier = {
+				tag = GER
+				extra_trade_to_target_factor = 1
+				trade_cost_for_target_factor = -0.5
+				cic_to_target_factor = 0.25
+				mic_to_target_factor = 0.5
+				stability_factor = -0.15
+				
+			}
+		}
+		SLO_the_fight_against_bolshevism = { 
+			name = CZE_the_fight_against_bolshevism
+			picture = generic_attack_soviet_union
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+		SLO_the_fight_against_nazism = { 
+			picture = FIN_german_threat
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+		SLO_deutsche_luftwaffenmission = { 
+			picture = generic_air_bonus
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+				NOT = { is_subject_of = GER }
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_air = 0.1
+				air_doctrine_cost_factor = -0.15
+			}
+		}
+		SLO_deutsche_heeresmission = { 
+			picture = german_advisors
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+				NOT = { is_subject_of = GER }
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_army = 0.07
+				land_doctrine_cost_factor = -0.15
+				army_org_factor = 0.05
+			}
+		}
+		SLO_deutsche_militaermission = { 
+			picture = german_advisors
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+				NOT = { is_subject_of = GER }
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_army = 0.07
+				land_doctrine_cost_factor = -0.1
+			}
+		}
+		SLO_protection_treaty = { 
+			picture = HUN_treaty_of_triannon
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+				NOT = { is_subject_of = GER }
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.1
+			}
+			
+			targeted_modifier = {
+				tag = GER
+				extra_trade_to_target_factor = 0.25
+				mic_to_target_factor = 0.15
+			}
+		}
+		SLO_the_fight_for_independence = { 
+			picture = FRA_scw_intervention_republicans_focus
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+				NOT = { has_war_with = CZE }
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.15
+			}
+			
+			targeted_modifier = {
+				tag = CZE
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.15
+			}
+		}
+		CZE_regional_conflict = {
+		
+			picture = generic_infantry_bonus
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+				has_war = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			rule = {
+				can_join_factions = no 
+			}
+			
+		}
+		SLO_focus_on_dive_bombers = { 
+			picture = air_war_plans_division_focus
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				air_cas_efficiency = 0.1
+				air_close_air_support_org_damage_factor = 0.1
+			}
+		}
+		SLO_pohotovostna_letka = { 
+			picture = generic_air_payment
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				air_home_defence_factor = 0.15
+			}
+		}
+		SLO_aviation_school = { 
+			picture = generic_aircraft_support
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_air = 0.05
+				ace_effectiveness_factor = 0.1
+				air_ace_generation_chance_factor = 0.25
+			}
+		}
+		SLO_labor_corps = { 
+			picture = generic_intel_bonus
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				experience_loss_factor = 0.05
+				conscription = 0.005
+			}
+		}
+		SLO_tatra_warriors = { 
+			picture = hol_expand_the_colonial_army
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				special_forces_cap = 0.25
+				special_forces_attack_factor = 0.1
+				special_forces_defence_factor = 0.1
+				terrain_penalty_reduction = 0.1
+			}
+		}
+		SLO_military_high_school_2 = { 
+			name = SLO_military_high_school
+			picture = generic_army_war_college
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				command_power_gain = 0.15
+				army_leader_start_level = 1
+				army_leader_cost_factor = -0.35
+				army_leader_start_planning_level = 1
+				experience_gain_army_factor = 0.15
+				command_abilities_cost_factor = -0.5
+			}
+		}
+		SLO_military_high_school = { 
+			picture = generic_army_war_college
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				command_power_gain = 0.05
+				army_leader_start_level = 1
+				army_leader_cost_factor = -0.35
+				army_leader_start_planning_level = 1
+			}
+		}
+		SLO_defenders_of_christianity = { 
+			picture = FRA_scw_intervention_nationalists_focus
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_defence_factor = 0.1
+				war_support_factor = 0.1
+				army_morale_factor = 0.05
+			}
+		}
+		SLO_industrialization_efforts_ns = { 
+			name = SLO_industrialization_efforts_modifier
+			picture = generic_agrarian_society
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_industrial_complex_factor = -0.05
+				production_speed_arms_factory_factor = -0.05
+				industrial_capacity_factory = -0.1
+			}
+		}
+		SLO_agrarian_revitalization_ns = { 
+			name = SLO_agrarian_revitalization_modifier
+			picture = generic_agrarian_society
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_industrial_complex_factor = -0.05
+				production_speed_arms_factory_factor = -0.1
+				industrial_capacity_factory = -0.2
+				consumer_goods_factor = -0.15
+			}
+		}
+		SLO_agrarian_economy = { 
+			picture = generic_agrarian_society
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_industrial_complex_factor = -0.15
+				production_speed_arms_factory_factor = -0.15
+				industrial_capacity_factory = -0.2
+			}
+		}
+		SLO_hungarian_dissent = { 
+			picture = chi_war_of_resistance
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+				NOT = { owns_state = 664 }
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.1
+			}
+		}
+		SLO_mandatory_hlinka_guard_service = {
+			picture = chi_army_corruption2
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.05
+				conscription = 0.03
+				power_balance_weekly = 0.005
+			}
+		}
+		SLO_hlinka_guard_4 = {
+			name = SLO_hlinka_guard
+			picture = slo_hlinka_guard
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				resistance_target = -0.05
+				army_core_defence_factor = 0.05
+				conscription_factor = 0.15
+				training_time_army_factor = -0.15
+				army_attack_factor = 0.05
+				army_org_factor = 0.05
+			}
+		}
+		SLO_hlinka_guard_3 = {
+			name = SLO_hlinka_guard
+			picture = slo_hlinka_guard
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				resistance_target = -0.05
+				army_core_defence_factor = 0.05
+				army_attack_factor = 0.05
+				army_org_factor = 0.05
+			}
+		}
+		SLO_hlinka_guard_2 = {
+			name = SLO_hlinka_guard
+			picture = slo_hlinka_guard
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				resistance_target = -0.05
+				army_core_defence_factor = 0.05
+				conscription_factor = 0.15
+				training_time_army_factor = -0.15
+			}
+		}
+		SLO_hlinka_guard = {
+			picture = slo_hlinka_guard
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				resistance_target = -0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+		SLO_na_straz = {
+			picture = MEX_politicised_army_2
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+				NOT = {
+					has_country_leader = {
+						character = SLO_karol_sidor
+						ruling_only = yes
+					}
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		SLO_the_party_state_2 = {
+			picture = slo_the_party_state
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				party_popularity_stability_factor = 0.15
+				fascism_drift = 0.03
+				war_support_factor = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		SLO_slovak_nationalism_2 = {
+			name = SLO_slovak_nationalism
+			picture = slo_slovak_nationalism
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+				NOT = {
+					has_country_leader = {
+						character = SLO_jozef_tiso
+						ruling_only = yes
+					}
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				war_support_factor = 0.2
+				drift_defence_factor = 0.15
+				weekly_manpower = 250
+				justify_war_goal_time = -0.15
+			}
+		}
+		SLO_aggressive_foreign_policy = {
+			picture = FRA_army_of_aggression_focus
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.05
+				justify_war_goal_time = -0.5
+			}
+		}
+		SLO_rodobrana = {
+			picture = slo_rodobrana
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.01
+				army_org_factor = 0.05
+			}
+		}
+		SLO_the_party_state = {
+			picture = slo_the_party_state
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				party_popularity_stability_factor = 0.15
+				fascism_drift = 0.03
+			}
+		}
+		SLO_state_antisemitism = {
+			picture = generic_oppression
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				monthly_population = -0.1
+				war_support_factor = 0.05
+				fascism_drift = 0.05
+			}
+		}
+		SLO_slovak_nationalism = {
+			picture = slo_slovak_nationalism
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+				NOT = {
+					has_country_leader = {
+						character = SLO_jozef_tiso
+						ruling_only = yes
+					}
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.1
+				drift_defence_factor = 0.15
+				weekly_manpower = 250
+				justify_war_goal_time = -0.15
+			}
+		}
+		SLO_catholic_nationalism = {
+			picture = MEX_church_power_5
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+				NOT = {
+					OR = {
+						has_country_leader = {
+							character = SLO_jozef_tiso
+							ruling_only = yes
+						}
+						has_country_leader = {
+							character = SLO_karol_sidor
+							ruling_only = yes
+						}
+					}
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				compliance_growth = 0.15
+				army_morale_factor = 0.05
+			}
+		}
+		SLO_legacy_of_andrej_hlinka = {
+			picture = slo_legacy_of_andrej_hlinka
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+				NOT = {
+					OR = {
+						has_country_leader = {
+							character = SLO_jozef_tiso
+							ruling_only = yes
+						}
+						has_country_leader = {
+							character = SLO_karol_sidor
+							ruling_only = yes
+						}
+					}
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.05
+				party_popularity_stability_factor = 0.1
+				conscription_factor = 0.1
+			}
+		}
+		SLO_repressions_against_communists = {
+			picture = ger_bulwark_against_bolshevism
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				communism_drift = -0.1
+				political_power_gain = 0.1
+				war_stability_factor = 0.15
+			}
+		}
+		SLO_pragmatic_foreign_policy = {
+			picture = generic_flexible_foreign_policy2
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+				NOT = {
+					has_country_leader = {
+						character = SLO_karol_sidor
+						ruling_only = yes
+					}
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				generate_wargoal_tension = -0.3
+				guarantee_tension = -0.3
+				join_faction_tension = -0.5
+				improve_relations_maintain_cost_factor = -0.5
+			}
+		}
+		CZE_czechoslovak_military_mission = {
+			picture = received_attache
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+				OR = {
+					has_war = no
+					has_war_with = CZE
+				}	
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.05
+				planning_speed = 0.15
+				max_planning_factor = 0.05
+				supply_consumption_factor = -0.1
+			}
+		}
+		CZE_the_polish_campaign = {
+			picture = CZE_planning_bonus
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = POL
+				attack_bonus_against = 0.1
+				breakthrough_bonus_against = 0.05
+			}
+		}
+		CZE_growing_german_influence_2 = {
+			name = CZE_growing_german_influence
+			picture = hol_caved_to_the_germans
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				neutrality_drift = 0.05
+				war_support_factor = -0.05
+			}
+		}
+		CZE_growing_german_influence = {
+			picture = hol_caved_to_the_germans
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				fascism_drift = 0.03
+				war_support_factor = -0.15
+			}
+		}
+		CZE_humiliated_nation = {
+			picture = generic_neutrality_drift_bonus
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.15
+				political_power_gain = -0.3
+			}
+		}
+		CZE_air_force_modifier_ns = {
+			name = CZE_air_force_modifier
+			picture = generic_navy_bonus
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_air_factor = 0.1
+			}
+		}
+		CZE_a_newly_born_navy_8 = {
+			name = CZE_a_newly_born_navy
+			picture = generic_navy_bonus
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_dockyard = 0.1
+				navy_org_factor = 0.05
+				naval_damage_factor = 0.05
+				naval_defense_factor = 0.05
+				naval_detection = 0.1
+				strike_force_movement_org_loss = -0.1
+				positioning = 0.05
+			}
+		}
+		CZE_a_newly_born_navy_7 = {
+			name = CZE_a_newly_born_navy
+			picture = generic_navy_bonus
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_dockyard = 0.1
+				naval_speed_factor = 0.05
+				navy_screen_defence_factor = 0.1
+				navy_submarine_attack_factor = 0.1
+				naval_detection = 0.1
+				strike_force_movement_org_loss = -0.1
+				positioning = 0.05
+			}
+		}
+		CZE_a_newly_born_navy_6 = {
+			name = CZE_a_newly_born_navy
+			picture = generic_navy_bonus
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_dockyard = 0.1
+				navy_org_factor = 0.05
+				naval_damage_factor = 0.05
+				naval_defense_factor = 0.05
+			}
+		}
+		CZE_a_newly_born_navy_5 = {
+			name = CZE_a_newly_born_navy
+			picture = generic_navy_bonus
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_dockyard = 0.1
+				naval_speed_factor = 0.05
+				navy_screen_defence_factor = 0.1
+				navy_submarine_attack_factor = 0.1
+			}
+		}
+		CZE_a_newly_born_navy_4 = {
+			name = CZE_a_newly_born_navy
+			picture = generic_navy_bonus
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_dockyard = 0.1
+			}
+		}
+		CZE_japanese_naval_mission = {
+			picture = jap_militarism_shogun
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+				has_war_with = JAP
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_navy = 0.05
+			}
+			
+			research_bonus = {
+				mio_cat_tech_all_carrier_and_modules = 0.1
+				bb_tech = 0.1
+			}
+		}
+		CZE_american_naval_mission = {
+			picture = ARG_american_allyship
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+				has_war_with = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_navy = 0.05
+			}
+			
+			research_bonus = {
+				mio_cat_tech_all_carrier_and_modules = 0.2
+			}
+		}
+		CZE_soviet_naval_mission = {
+			picture = SOV_soviet_hegemony
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+				has_war_with = SOV
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_navy = 0.05
+				industrial_capacity_dockyard = 0.1
+			}
+			
+			research_bonus = {
+				mio_cat_tech_all_destroyer_and_modules = 0.05
+				mio_cat_tech_all_submarine_and_modules = 0.05
+			}
+		}
+		CZE_italian_naval_mission = {
+			picture = ITA_regia_marina_2
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+				has_war_with = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_navy = 0.05
+			}
+			
+			research_bonus = {
+				mio_cat_tech_all_cruiser_and_modules = 0.2
+			}
+		}
+		CZE_german_naval_mission = {
+			picture = NORDIC_navy_democratic
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+				has_war_with = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_navy = 0.05
+			}
+			
+			research_bonus = {
+				mio_cat_tech_all_submarine_and_modules = 0.2
+			}
+		}
+		CZE_french_naval_mission = {
+			picture = FRA_undividable
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+				has_war_with = FRA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_navy = 0.05
+			}
+			
+			research_bonus = {
+				mio_cat_tech_all_cruiser_and_modules = 0.1
+				dd_tech = 0.1
+			}
+		}
+		CZE_british_naval_mission = {
+			picture = eng_the_sun_never_sets
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+				has_war_with = ENG
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_navy = 0.05
+			}
+			
+			research_bonus = {
+				mio_cat_tech_all_cruiser_and_modules = 0.1
+				bb_tech = 0.1
+			}
+		}
+		CZE_a_newly_born_navy_3 = {
+			name = CZE_a_newly_born_navy
+			picture = generic_navy_bonus
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_navy_factor = -0.05
+			}
+		}
+		CZE_a_newly_born_navy_2 = {
+			name = CZE_a_newly_born_navy
+			picture = generic_navy_bonus
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_navy_factor = -0.1
+				critical_receive_chance = 0.1
+				naval_damage_factor = -0.05
+				naval_defense_factor = -0.05
+			}
+		}
+		CZE_a_newly_born_navy = {
+			picture = generic_navy_bonus
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_navy_factor = -0.15
+				critical_receive_chance = 0.2
+				naval_damage_factor = -0.1
+				naval_defense_factor = -0.1
+			}
+		}
+		CZE_infantry_tanks = {
+			picture = generic_armor
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			equipment_bonus = {
+				armor = {
+					instant = yes
+					soft_attack = 0.05
+					hard_attack = 0.05
+					armor_value = 0.05
+					build_cost_ic = 0.07
+				}
+			}
+		}
+		CZE_mobile_tanks = {
+			picture = generic_armor
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			equipment_bonus = {
+				armor = {
+					instant = yes
+					build_cost_ic = -0.05
+					maximum_speed = 0.05
+					armor_value = -0.05
+				}
+			}
+		}
+		CZE_army_ns = {
+			name = CZE_czechoslovak_army_modifier
+			picture = generic_economic_crisis
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				resistance_damage_to_garrison = -0.1
+				conscription_factor = 0.1
+			}
+		}
+		CZE_echoes_of_the_great_depression_4 = {
+			name = CZE_echoes_of_the_great_depression
+			picture = generic_economic_crisis
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = -0.05
+				production_speed_buildings_factor = -0.05
+			}
+		}
+		CZE_echoes_of_the_great_depression_3 = {
+			name = CZE_echoes_of_the_great_depression
+			picture = generic_economic_crisis
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.2
+				industrial_capacity_factory = -0.05
+				production_speed_buildings_factor = -0.05
+			}
+		}
+		CZE_echoes_of_the_great_depression_2 = {
+			name = CZE_echoes_of_the_great_depression
+			picture = generic_economic_crisis
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = -0.1
+				production_speed_buildings_factor = -0.1
+			}
+		}
+		CZE_czechoslovak_german_cooperation = {
+			picture = generic_deal_with_the_devil2
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+				has_war_with = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.1
+				enemy_justify_war_goal_time = 0.15
+				opinion_gain_monthly_factor = 0.2
+			}
+		}
+		CZE_post_war_reconstruction = {
+			picture = generic_production_bonus
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industry_free_repair_factor = 0.5
+				industry_repair_factor = 0.25
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		CZE_counteroffensive = {
+			picture = chi_war_of_resistance
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+				NOT = { has_war_with = GER }
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.15
+			}
+		}
+		CZE_war_of_attrition = {
+			picture = chi_war_of_resistance
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+				NOT = { has_war_with = GER }
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_defence_factor = 0.1
+				supply_combat_penalties_on_core_factor = -0.25
+			}
+		}
+		CZE_national_pride = {
+			picture = ARG_growing_nationalism_modifier
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				weekly_casualties_war_support = 0.004
+				war_stability_factor = 0.25
+			}
+		}
+		CZE_patriotic_fervor = {
+			picture = generic_morale_bonus
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				weekly_casualties_war_support = 0.005
+				weekly_bombing_war_support = 0.005
+				army_morale_factor = 0.05
+			}
+		}
+		CZE_mobilization_of_the_economy = {
+			picture = SOV_third_five_year_plan_military
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.15
+			}
+		}
+		CZE_mobilization_of_the_army = {
+			picture = FRA_national_mobilization_focus
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				mobilization_speed = 0.35
+				weekly_manpower = 250
+			}
+		}
+		CZE_our_last_stand = {
+			picture = ast_volunteer_defence_corps
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		CZE_antisemitic_nationalism = {
+			picture = generic_oppression
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.1
+				monthly_population = -0.15
+				political_power_gain = 0.1
+			}
+		}
+		CZE_political_centralization = {
+			picture = generic_pp_unity_bonus
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.1
+				communism_drift = 0.05
+				political_advisor_cost_factor = -0.15
+			}
+		}
+		CZE_revolutionary_fervor = {
+			picture = MEX_revolutionary_army
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.1
+				justify_war_goal_time = -0.5
+			}
+		}
+		CZE_strikes = {
+			picture = ICE_general_strike
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = -0.1
+				production_speed_buildings_factor = -0.1
+			}
+		}
+		CZE_communist_agitation = {
+			picture = generic_communism_drift_bonus
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				communism_drift = 0.1
+			}
+		}
+		CZE_socialism_with_a_human_face_2 = {
+			name = CZE_socialism_with_a_human_face
+			picture = FIN_socialist_welfare
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.12
+				consumer_goods_factor = -0.05
+				research_speed_factor = 0.07
+			}
+		}
+		CZE_socialism_with_a_human_face = {
+			picture = FIN_socialist_welfare
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.12
+				consumer_goods_factor = -0.05
+			}
+		}
+		CZE_federalism = {
+			picture = CZE_federalism
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.1
+			}
+		}
+		CZE_industrial_imports = {
+			picture = can_wartime_prices_and_trade_board
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+		CZE_agricultural_imports = {
+			picture = can_wartime_prices_and_trade_board
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+		}
+		CZE_internationalism = {
+			picture = FRA_liberte_egalite_solidarite
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				send_volunteer_divisions_required = -1
+				send_volunteer_size = 3
+				opinion_gain_monthly_same_ideology_factor = 0.3
+			}
+		}
+		CZE_forefront_of_european_liberation = {
+			picture = NORDIC_army_communist
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+				army_org_factor = 0.05
+			}
+			
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.05
+			}
+		}
+		CZE_technical_auxillary_batallions = {
+			picture = generic_intel_bonus
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				local_resources_factor = 0.1
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		CZE_first_five_year_plan = {
+			picture = SOV_fourth_five_year_plan
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+		CZE_peoples_militias = {
+			picture = generic_communist_army
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.01
+				army_morale_factor = 0.05
+			}
+		}
+		CZE_stb = {
+			picture = generic_spy_coup
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				decryption = 1
+				encryption = 1
+				resistance_growth = -0.05
+				drift_defence_factor = 0.2
+			}
+		}
+		CZE_stb_lar = {
+			name = CZE_stb
+			picture = generic_spy_coup
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				operative_slot = 1
+				intel_network_gain = 0.1
+				resistance_growth = -0.05
+				intelligence_agency_defense = 0.15
+			}
+		}
+		CZE_collectivization = {
+			picture = LIT_invested_in_farms
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				global_building_slots_factor = 0.25
+			}
+		}
+		CZE_forced_collectivization = {
+			picture = LIT_invested_in_farms
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_factor = -0.2
+				global_building_slots_factor = 0.35
+			}
+		}
+		CZE_nationalized_industry = {
+			picture = NORDIC_industry_communist
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.15
+			}
+		}
+		CZE_anti_capitalist_policy_2 = {
+			name = CZE_anti_capitalist_policy
+			picture = eng_tackle_capitalism
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				democratic_drift = -0.1
+				neutrality_drift = -0.03
+				political_power_factor = 0.1
+				stability_factor = -0.05
+				war_support_factor = 0.1
+				justify_war_goal_time = -0.15
+			}
+		}
+		CZE_anti_fascist_policy_2 = {
+			name = CZE_anti_fascist_policy
+			picture = SPR_anti_fascist_crusade
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				fascism_drift = -0.1
+				improve_relations_maintain_cost_factor = -0.25
+				army_defence_factor = 0.05
+				political_power_gain = 0.1
+				communism_drift = 0.05
+				party_popularity_stability_factor = 0.1
+			}
+		}
+		CZE_anti_capitalist_policy = {
+			picture = eng_tackle_capitalism
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				democratic_drift = -0.1
+				neutrality_drift = -0.03
+				political_power_factor = 0.1
+			}
+		}
+		CZE_anti_fascist_policy = {
+			picture = SPR_anti_fascist_crusade
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				fascism_drift = -0.1
+				improve_relations_maintain_cost_factor = -0.25
+				army_defence_factor = 0.05
+			}
+		}
+		CZE_soviet_scientists = {
+			picture = SOV_scientist_defect
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.05
+				research_sharing_per_country_bonus_factor = 0.25
+			}
+		}
+		CZE_soviet_secret_services = {
+			picture = generic_secret_police
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				resistance_growth = -0.1
+				resistance_damage_to_garrison = -0.15
+				stability_factor = 0.05
+			}
+		}
+		CZE_soviet_planning_experts = {
+			picture = eng_spirit_of_the_industrial_revolution
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+			
+			research_bonus = {
+				industry = 0.05
+			}
+		}
+		CZE_soviet_military_advisors = {
+			picture = saf_soviet_advisers
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				land_doctrine_cost_factor = -0.1
+				experience_gain_army_factor = 0.15
+			}
+		}
+		CZE_comintern_sponsored_propaganda = {
+			picture = CHL_communist_party_in_power
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+				has_government = communism
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				communism_drift = 0.1
+				stability_factor = -0.05
+			}
+		}
+		CZE_mezduslavjanski_jezik = {
+			picture = HUN_treaty_of_triannon
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+				stability_factor = 0.1
+				political_power_factor = 0.15
+			}
+		}
+		CZE_the_fight_against_bolshevism = {
+			picture = NOR_anti_communist_sentiment
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+				SOV = {
+					OR = {
+						NOT = { has_government = communism }
+						exists = no
+					}
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				communism_drift = -0.05
+			}
+			
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+		}
+		CZE_west_slavic_nationalism_2 = {
+			name = CZE_west_slavic_nationalism
+			picture = generic_volunteer_expedition_bonus
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = 0.002
+				army_morale_factor = 0.05
+				puppet_cost_factor = -0.07
+			}
+		}
+		CZE_west_slavic_nationalism = {
+			picture = generic_volunteer_expedition_bonus
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = 0.002
+				army_morale_factor = 0.05
+			}
+		}
+		CZE_vlajka_4 = {
+			name = CZE_vlajka
+			picture = cze_vlajka
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				fascism_drift = 0.1
+				consumer_goods_factor = -0.05
+				monthly_population = -0.1
+				political_power_factor = 0.05
+				conscription = 0.01
+			}
+		}
+		CZE_vlajka_3 = {
+			name = CZE_vlajka
+			picture = cze_vlajka
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				fascism_drift = 0.03
+				consumer_goods_factor = -0.05
+				conscription = 0.01
+			}
+		}
+		CZE_vlajka_2 = {
+			name = CZE_vlajka
+			picture = cze_vlajka
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				fascism_drift = 0.1
+				consumer_goods_factor = -0.05
+				monthly_population = -0.1
+				political_power_factor = 0.05
+			}
+		}
+		CZE_vlajka = {
+			picture = cze_vlajka
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				fascism_drift = 0.03
+				consumer_goods_factor = -0.05
+			}
+		}
+		CZE_cestapo_lar = {
+			name = CZE_cestapo
+			picture = generic_secret_police
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				required_garrison_factor = -0.1
+				resistance_growth = -0.1
+				root_out_resistance_effectiveness_factor = 0.15
+			}
+		}
+		CZE_cestapo = {
+			picture = generic_secret_police
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				required_garrison_factor = -0.1
+				resistance_growth = -0.1
+				decryption = 1
+			}
+		}
+		CZE_new_czechoslovakism = {
+			picture = cze_czechoslovakism
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.1
+				conscription = 0.01
+			}
+		}
+		CZE_militaristic_nationalism_2 = {
+			name = CZE_militaristic_nationalism
+			picture = MEX_politicised_army_2
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.15
+				army_org_factor = 0.05
+				war_support_factor = 0.05
+				army_core_defence_factor = 0.1
+				army_core_attack_factor = 0.1
+			}
+		}
+		CZE_militaristic_nationalism = {
+			picture = MEX_politicised_army_2
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.15
+				army_org_factor = 0.05
+			}
+		}
+		CZE_corporatism = {
+			picture = generic_fascist_workers
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_factory = 0.1
+			}
+		}
+		CZE_gajdas_power_consolidated = {
+			picture = generic_intel_bonus
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_army_factor = 0.15
+				industrial_capacity_factory = 0.15
+				justify_war_goal_time = -0.2
+				mobilization_speed = 0.3
+				fascism_drift = 0.1
+			}
+		}
+		CZE_stribrnys_power_consolidated = {
+			picture = generic_intel_bonus
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.2
+				consumer_goods_factor = -0.15
+				economy_cost_factor = -0.25
+				trade_laws_cost_factor = -0.25
+				fascism_drift = 0.1
+			}
+		}
+		CZE_gajda_new_regime_4 = {
+			name = CZE_a_new_regime
+			picture = CZE_a_new_regime
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				fascism_drift = 0.03
+				war_support_factor = 0.15
+				army_attack_factor = 0.05
+				annex_cost_factor = -0.15
+			}
+		}
+		CZE_gajda_new_regime_3 = {
+			name = CZE_a_new_regime
+			picture = CZE_a_new_regime
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				fascism_drift = 0.03
+				war_support_factor = 0.1
+				army_attack_factor = 0.05
+			}
+		}
+		CZE_gajda_new_regime_2 = {
+			name = CZE_a_new_regime
+			picture = CZE_a_new_regime
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.05
+			}
+		}
+		CZE_gajda_new_regime = {
+			name = CZE_a_new_regime
+			picture = CZE_a_new_regime
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				fascism_drift = 0.03
+				war_support_factor = 0.1
+			}
+		}
+		CZE_stribrny_new_regime_4 = {
+			name = CZE_a_new_regime
+			picture = CZE_a_new_regime
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_advisor_cost_factor = -0.33
+				political_power_gain = 0.15
+				conscription = 0.015
+				party_popularity_stability_factor = 0.1
+			}
+		}
+		CZE_stribrny_new_regime_3 = {
+			name = CZE_a_new_regime
+			picture = CZE_a_new_regime
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_advisor_cost_factor = -0.33
+				political_power_gain = 0.05
+				conscription = 0.015
+			}
+		}
+		CZE_stribrny_new_regime_2 = {
+			name = CZE_a_new_regime
+			picture = CZE_a_new_regime
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.015
+			}
+		}
+		CZE_stribrny_new_regime = {
+			name = CZE_a_new_regime
+			picture = CZE_a_new_regime
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_advisor_cost_factor = -0.33
+				political_power_gain = 0.05
+			}
+		}
+		CZE_democratic_opposition_3 = {
+			name = CZE_democratic_opposition
+			picture = EST_democratic_opposition
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.05
+			}
+		}
+		CZE_democratic_opposition_2 = {
+			name = CZE_democratic_opposition
+			picture = EST_democratic_opposition
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.1
+			}
+		}
+		CZE_democratic_opposition = {
+			picture = EST_democratic_opposition
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.2
+			}
+		}
+		CZE_increasing_far_right_activity = {
+			picture = generic_fascism_drift_bonus
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+				NOT = { has_government = fascism }
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				fascism_drift = 0.1
+				stability_factor = -0.05
+			}
+		}
+		CZE_central_european_union_idea = {
+			name = CZE_central_european_union
+			picture = generic_deal_with_the_devil2
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.05
+			}
+		}
+		CZE_czechoslovak_polish_integration_4 = {
+			name = CZE_czechoslovak_polish_integration
+			picture = generic_deal_with_the_devil2
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.1
+				army_org_factor = 0.1
+				training_time_army_factor = -0.15
+				consumer_goods_factor = -0.15
+			}
+			
+			research_bonus = {
+				industry = 0.1
+				electronics = 0.05
+			}
+		}
+		CZE_czechoslovak_polish_integration_3 = {
+			name = CZE_czechoslovak_polish_integration
+			picture = generic_deal_with_the_devil2
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.1
+				army_org_factor = 0.1
+				training_time_army_factor = -0.15
+			}
+		}
+		CZE_czechoslovak_polish_integration_2 = {
+			name = CZE_czechoslovak_polish_integration
+			picture = generic_deal_with_the_devil2
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.1
+				consumer_goods_factor = -0.15
+			}
+			
+			research_bonus = {
+				industry = 0.1
+				electronics = 0.05
+			}
+		}
+		CZE_czechoslovak_polish_integration = {
+			picture = generic_deal_with_the_devil2
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.1
+			}
+		}
+		CZE_anti_hungarian_strategy = {
+			picture = cze_anti_hungarian_strategy
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+				HUN = {
+					is_ally_with = CZE
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = HUN
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+		CZE_coordinated_planning = {
+			picture = CZE_planning_bonus
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				max_planning_factor = 0.1
+				planning_speed = 0.15
+			}
+		}
+		CZE_military_exercises = {
+			picture = tur_coordinated_balkan_armed_forces
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_army = 0.1
+				experience_gain_air = 0.05
+			}
+		}
+		CZE_consctruction_of_fortifications = {
+			picture = FRA_fortification_focus
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+				NOT = {
+					owns_state = 69
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.075
+			}
+		}
+		CZE_masarykian_democracy_2 = {
+			name = CZE_masarykian_democracy
+			picture = cze_legacy_of_masaryk
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.3
+				political_power_gain = 0.1
+				drift_defence_factor = 0.4
+				army_defence_factor = 0.05
+				army_attack_factor = 0.05
+			}
+		}
+		CSDSD_rule_4 = {
+			name = CSDSD_rule
+			picture = ARG_social_welfare_fund_ns
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				industrial_capacity_factory = 0.15
+				conscription_factor = 0.15
+				production_speed_buildings_factor = 0.1
+				drift_defence_factor = 0.4
+				army_defence_factor = 0.05
+				army_attack_factor = 0.05
+			}
+		}
+		CZE_beyond_radical_ideology_2 = {
+			name = CZE_national_unity
+			picture = cze_national_unity
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.1
+				army_morale_factor = 0.1
+				democratic_drift = 0.1
+				political_power_gain = 0.15
+				trade_opinion_factor = 0.35
+				consumer_goods_factor = -0.15
+				drift_defence_factor = 0.4
+				army_defence_factor = 0.05
+				army_attack_factor = 0.05
+			}
+		}
+		CZE_empowered_national_assembly_2 = {
+			name = CZE_empowered_national_assembly
+			picture = cze_national_assembly
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.1
+				monthly_population = 0.3
+				consumer_goods_factor = -0.15
+				drift_defence_factor = 0.4
+				army_defence_factor = 0.05
+				army_attack_factor = 0.05
+			}
+		}
+		CZE_empowered_national_assembly = {
+			picture = cze_national_assembly
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.1
+				monthly_population = 0.3
+			}
+		}
+		CZE_beyond_radical_ideology = {
+			name = CZE_national_unity
+			picture = cze_national_unity
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.1
+				army_morale_factor = 0.1
+				democratic_drift = 0.1
+				political_power_gain = 0.15
+				trade_opinion_factor = 0.35
+			}
+		}
+		CZE_national_unity = {
+			picture = cze_national_unity
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.1
+				army_morale_factor = 0.1
+			}
+		}
+		CSDSD_rule_3 = {
+			name = CSDSD_rule
+			picture = ARG_social_welfare_fund_ns
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = 0.15
+				conscription_factor = 0.15
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		CSDSD_rule_2 = {
+			name = CSDSD_rule
+			picture = ARG_social_welfare_fund_ns
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = 0.15
+				conscription_factor = 0.15
+			}
+		}
+		CSDSD_rule = {
+			picture = ARG_social_welfare_fund_ns
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = 0.1
+			}
+		}
+		CZE_masarykian_democracy = {
+			picture = cze_legacy_of_masaryk
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.15
+				political_power_gain = 0.1
+			}
+		}
+		CZE_czechoslovakism_3 = {
+			name = CZE_czechoslovakism
+			picture = cze_czechoslovakism
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.1
+				army_core_defence_factor = 0.1
+				political_power_factor = 0.15
+				party_popularity_stability_factor = 0.15
+				political_advisor_cost_factor = -0.25
+			}
+		}
+		CZE_defense_of_the_nation = {
+			picture = YUG_federal_defense_council
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.01
+			}
+			targeted_modifier = {
+				tag = GER
+				hidden_modifier = {
+					defense_bonus_against = 0.1
+				}
+				custom_modifier_tooltip = CZE_defense_of_the_nation_tt
+			}
+		}
+		CZE_czechoslovakism_2 = {
+			name = CZE_czechoslovakism
+			picture = cze_czechoslovakism
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.1
+				army_core_defence_factor = 0.1
+				political_power_factor = 0.15
+			}
+		}
+		CZE_czechoslovakism = {
+			picture = cze_czechoslovakism
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		CZE_legacy_of_masaryk = {
+			picture = cze_legacy_of_masaryk
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+				has_government = democratic
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				democratic_drift = 0.02
+				stability_factor = 0.05
+			}
+		}
+		CZE_echoes_of_the_great_depression = {
+			picture = generic_economic_crisis
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.2
+				industrial_capacity_factory = -0.1
+				production_speed_buildings_factor = -0.1
+			}
+		}
+		CZE_multi_ethnic_nation = {
+			picture = cze_multi_ethnic_nation
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				
+			}
+		}
+	}
+	
+	hidden_ideas = {
+	
+		CZE_defense_of_the_nation_hun = {
+			name = CZE_defense_of_the_nation
+			picture = YUG_federal_defense_council
+				
+			allowed = {
+				always = no
+			}
+				
+			available = {
+			}
+				
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			on_add = {
+			}
+
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = HUN
+				defense_bonus_against = 0.1
+			}
+		}
+	
+	}
+	
+	naval_manufacturer = { 
+		
+		
+		
+	}
+	
+	tank_manufacturer = {
+		
+		
+		
+	}
+	
+	materiel_manufacturer = {
+		
+		
+		
+	}
+	
+	industrial_concern = {
+		
+		CZE_JIKOV = {
+
+			picture = cze_JIKOV
+
+			allowed = {
+				original_tag = CZE
+			}
+
+			research_bonus = {
+				electronics = 0.07
+			}
+			
+			equipment_bonus = {
+				small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				cv_small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				small_plane_cas_airframe = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				cv_small_plane_cas_airframe = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				small_plane_naval_bomber_airframe = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				cv_small_plane_naval_bomber_airframe = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				medium_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				medium_plane_fighter_airframe = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				medium_plane_scout_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				large_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				large_plane_maritime_patrol_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				transport_plane_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+
+			traits = { aircraft_parts_manufacturer }
+		}
+		
+		CZE_banska_a_hutni_spolecnost = {
+
+			picture = cze_banska_a_hutni_spolecnost
+
+			allowed = {
+				original_tag = CZE
+			}
+
+			research_bonus = {
+				industry = 0.05
+				excavation_tech = 0.15
+			}
+
+			traits = { metallurgical_company }
+		}
+		
+		CZE_czechoslovak_state_railways = {
+		
+			cost = 100
+
+			picture = cze_czechoslovak_state_railways
+
+			allowed = {
+				original_tag = CZE
+			}
+			
+			available = {
+				has_completed_focus = CZE_modernize_the_railway_system
+			}
+
+			research_bonus = {
+				industry = 0.05
+				train_tech = 0.15
+			}
+
+			traits = { railway_company }
+		}
+		
+		CZE_zivnostenska_banka = {
+		
+			cost = 200
+
+			picture = cze_zivnostenska_banka
+
+			allowed = {
+				original_tag = CZE
+			}
+			
+			available = {
+				has_completed_focus = CZE_continue_the_policy_of_nostrification
+			}
+
+			research_bonus = {
+				industry = 0.05
+			}
+
+			traits = { major_banking_insitution }
+		}
+		
+		CZE_spolchemie = {
+
+			picture = cze_spolchemie
+
+			allowed = {
+				original_tag = CZE
+			}
+			
+			available = {
+			}
+
+			research_bonus = {
+				industry = 0.1
+				synth_resources = 0.1
+			}
+
+			traits = { chemical_company }
+		}
+		
+		SLO_slovenske_elektrarne = {
+
+			picture = slo_slovenske_elektrarne
+
+			allowed = {
+				original_tag = SLO
+			}
+
+			research_bonus = {
+				electronics = 0.15
+			}
+
+			traits = { electronics_concern }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		SLO_apollo = {
+
+			picture = slo_apollo
+
+			allowed = {
+				original_tag = SLO
+			}
+
+			research_bonus = {
+				industry = 0.05
+				synth_resources = 0.15
+			}
+
+			traits = { refinery_concern }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		SLO_slovenske_zeleznice = {
+
+			picture = slo_slovenske_zeleznice
+
+			allowed = {
+				original_tag = SLO
+			}
+
+			research_bonus = {
+				industry = 0.05
+				train_tech = 0.15
+			}
+
+			traits = { railway_company }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		SLO_slovenska_sporitelna = {
+
+			picture = slo_slovenska_sporitelna
+
+			allowed = {
+				original_tag = SLO
+			}
+
+			research_bonus = {
+				industry = 0.1
+			}
+			
+			cost = 175
+
+			traits = { major_banking_insitution }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		SLO_state_geological_institute = {
+
+			picture = slo_state_geological_institute
+
+			allowed = {
+				original_tag = SLO
+			}
+			
+			available = {
+				has_completed_focus = SLO_establish_the_state_geological_institute
+			}
+
+			research_bonus = {
+				industry = 0.1
+				excavation_tech = 0.15
+			}
+
+			traits = { state_geological_institute }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+	} 
+}
