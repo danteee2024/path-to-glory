@@ -1,0 +1,83 @@
+SAF_bop_absurdly_high_increase_effect = {
+	add_power_balance_value = {
+		id = SAF_communism_struggle
+		value = 1
+	}
+}
+
+SAF_bop_very_high_increase_effect = {
+	add_power_balance_value = {
+		id = SAF_communism_struggle
+		value = 0.25
+	}
+}
+
+SAF_bop_high_increase_effect = {
+	add_power_balance_value = {
+		id = SAF_communism_struggle
+		value = 0.2
+	}
+}
+
+SAF_bop_medium_increase_effect = {
+	add_power_balance_value = {
+		id = SAF_communism_struggle
+		value = 0.15
+	}
+}
+
+SAF_bop_low_increase_effect = {
+	add_power_balance_value = {
+		id = SAF_communism_struggle
+		value = 0.1
+	}
+}
+
+SAF_bop_very_low_increase_effect = {
+	add_power_balance_value = {
+		id = SAF_communism_struggle
+		value = 0.05
+	}
+}
+
+SAF_bop_absurdly_high_decrease_effect = {
+	add_power_balance_value = {
+		id = SAF_communism_struggle
+		value = -1
+	}
+}
+
+SAF_bop_very_high_decrease_effect = {
+	add_power_balance_value = {
+		id = SAF_communism_struggle
+		value = -0.25
+	}
+}
+
+SAF_bop_high_decrease_effect = {
+	add_power_balance_value = {
+		id = SAF_communism_struggle
+		value = -0.2
+	}
+}
+
+SAF_bop_medium_decrease_effect = {
+	add_power_balance_value = {
+		id = SAF_communism_struggle
+		value = -0.15
+	}
+}
+
+SAF_bop_low_decrease_effect = {
+	add_power_balance_value = {
+		id = SAF_communism_struggle
+		value = -0.1
+	}
+}
+
+SAF_bop_very_low_decrease_effect = {
+	add_power_balance_value = {
+		id = SAF_communism_struggle
+		value = -0.05
+	}
+}
