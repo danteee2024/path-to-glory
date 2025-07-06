@@ -3790,7 +3790,7 @@ kill_country_leader = yes
 			factor = 30	
 		}
  mutually_exclusive = {
-			focus = MON_form_the_rightist_cabinet
+			focus = MON_reach_out_to_moscow
 		}
 		completion_reward = {
 			add_political_power = 200
