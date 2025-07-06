@@ -2300,41 +2300,7 @@ focus_tree = {
 			add_country_leader_trait = leftist_intellectual
 		}
 	}
-	 focus = {
-		id = SAF_align_with_Com
-		icon = GFX_focus_GER_the_peoples_victory
-		x = 5
-		y = 8
 
-
-		relative_position_id = SAF_fan_the_flames
-
-		cost = 5
-
-		prerequisite = {
-			focus = SAF_side_with_moscow
-		}
-		
-		ai_will_do = {
-			factor = 15
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			
-		}
-	}
 	 focus = {
 		id = SAF_soviet_eco
 		icon = GFX_focus_generic_advanced_military_studies
