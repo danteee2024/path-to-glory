@@ -4498,7 +4498,7 @@ focus = {
 		id = CZE_Lithuania
 		icon = GFX_SOV_the_last_break_southward_ccp_2d_sov_compatibility
 		prerequisite = { focus = CZE_The_Great_Pan-Slavic_Empire }
-		x = -3
+		x = -2
 		y = 1
 		relative_position_id = CZE_The_Great_Pan-Slavic_Empire
 		
@@ -4739,7 +4739,7 @@ focus = {
 		id = CZE_Bohemias_War_Industry
 		icon = GFX_SOV_war_economy_ccp_2d_sov_compatibility
 		prerequisite = { focus = CZE_The_Great_Bohemian_Empire }
-		x = 3
+		x = 2
 		y = 1
 		relative_position_id = CZE_The_Great_Bohemian_Empire
 
