@@ -300,7 +300,6 @@ technologies = {
 
 		motorized = {
 			max_organisation = 15
-			
 		}
 		mechanized = {
 			max_organisation = 15
@@ -308,11 +307,9 @@ technologies = {
 		amphibious_mechanized = {
 			max_organisation = 15
 		}
-		
 		armored_car = {
 			max_organisation = 3	
 		}
-
 		category_tanks = {
 			max_organisation = 3
 		}
@@ -2873,10 +2870,27 @@ technologies = {
 	
 	deep_operations = {
 		category_tanks = {
-			max_organisation = 2
+			max_organisation = 3
 		}
+
+		light_armor = {
+			combat_width = -0.4
+		}
+		light_tank_destroyer_brigade = {
+			combat_width = -0.2
+		}
+		light_sp_anti_air_brigade = {
+			combat_width = -0.4
+		}
+		light_sp_artillery_brigade = {
+			combat_width = -0.4
+		}
+
 		armored_car = {
-			max_organisation = 2
+			max_organisation = 5
+			soft_attack = 0.1
+			hard_attack = 0.1
+			combat_width = -0.4
 		}
 
 		xp_research_type = army
@@ -2930,6 +2944,7 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 		max_planning = 0.10
+		planning_speed = 0.10
 		land_reinforce_rate = 0.05
 
 		enable_tactic = tactic_elastic_defense
@@ -2980,11 +2995,10 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 		supply_consumption_factor = -0.10
-		
-		light_armor = {
+
+		infantry = {
 			combat_width = -0.2
 		}
-
 		
 		enable_tactic = tactic_overwhelming_fire
 		
@@ -3034,7 +3048,7 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 		category_tanks = {
-			max_organisation = 1
+			max_organisation = 3
 			breakthrough = 0.10
 		}
 		category_all_infantry = {
@@ -3042,8 +3056,8 @@ technologies = {
 			breakthrough = 0.10
 		}
 		armored_car = {
-			max_organisation = 1
-			breakthrough = 0.10
+			max_organisation = 3
+			breakthrough = 0.25
 		}
 		
 		enable_tactic = tactic_breakthrough
@@ -3098,12 +3112,14 @@ technologies = {
 		xp_unlock_cost = 100
 		category_all_armor = {
 			default_morale = 0.1
+			max_organisation = 2
 		}
 		armored_car = {
-			max_organisation = 3
+			max_organisation = 5
 			default_morale = 0.1
+			soft_attack = 0.1
+			hard_attack = 0.1
 		}	
-
 		mechanized = {
 			max_organisation = 10
 			default_morale = 0.1
@@ -3115,10 +3131,7 @@ technologies = {
 		amphibious_mechanized = {
 			max_organisation = 10
 			default_morale = 0.1
-		}	
-		light_armor = {
-			max_organisation = 0.5
-		}	
+		}		
 		
 		armored_car_recon = {
 			battalion_mult = {
