@@ -728,6 +728,7 @@ technologies = {
 	modern_blitzkrieg = {
 		xp_research_type = army
 		xp_unlock_cost = 100
+		enable_tactic = tactic_masterful_blitz
 		category_tanks = {
 			max_organisation = 3
 			breakthrough = 0.20
@@ -741,7 +742,6 @@ technologies = {
 			default_morale = 0.2
 			breakthrough = 0.20
 		}
-		
 		doctrine = yes	
 		research_cost = 4.5
 		
