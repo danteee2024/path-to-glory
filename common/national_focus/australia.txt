@@ -4761,10 +4761,7 @@
 		}
 
 		available = {
-			has_equipment = {
-				infantry_equipment > 499
-			}
-			NOT = { has_country_flag = britain_enforced_our_loyalty }
+		
 		}
 
 		bypass = {
@@ -4789,7 +4786,7 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_timed_idea = { idea = AST_arms_for_the_revolution days = 365 }
+			add_ideas =  AST_arms_for_the_revolution
 		}
 	}
 
