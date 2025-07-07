@@ -65,7 +65,6 @@ mobilization_laws = {
 				industrial_capacity_factory = -0.03
 				production_speed_buildings_factor = -0.03
 				training_time_factor = 0.05
-				communism_drift = 0.05
 				army_morale_factor = 0.05
 				drift_defence_factor = 0.2
 			}
@@ -297,7 +296,7 @@ mobilization_laws = {
 			modifier = {
 				war_support_factor = -0.15
 				production_speed_industrial_complex_factor = 0.15
-				production_speed_arms_factory_factor = -0.05
+				production_speed_arms_factory_factor = 0.15
 				political_power_gain = 0.20
 				conscription_factor = -0.05
 			}
@@ -631,9 +630,7 @@ research_speed_factor               = 0.01  # Flat research bonus
 			modifier = {
 				consumer_goods_factor = 0.02
 				production_speed_buildings_factor = 0.05
-			
-
-
+				compliance_gain = 0.05
 			}
 		}
 		MON_nomadic_war_idea = {

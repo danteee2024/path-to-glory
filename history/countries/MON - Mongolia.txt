@@ -21,7 +21,8 @@ add_ideas = {
 	MON_mongol_collectivized_unity
 	pastoral_economy
 }
-
+set_stability = 0.60
+set_war_support = 0.65
 set_variable = { mon_poster_center_icon_frame = 1 }
 
 set_convoys = 100
