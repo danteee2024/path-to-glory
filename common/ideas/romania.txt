@@ -343,6 +343,68 @@ ideas = {
 			}
 		}
 
+		ROM_The_Democrats = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = ARG_resource_extration_focus
+
+			removal_cost = -1
+
+			modifier = {
+				democratic_drift = 0.5
+			}
+		}
+
+			ROM_Support_Local_Industry = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = ARG_resource_extration_focus
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+
+
+		ROM_Democratic_King = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = ARG_resource_extration_focus
+
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = 0.005
+				war_support_weekly = 0.005
+				political_power_factor = 0.1
+				democratic_drift = 0.5
+			}
+		}
+
 		ROM_Carols_Industrial_Plan = {
 
 			allowed = {
