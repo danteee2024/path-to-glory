@@ -14300,7 +14300,9 @@ focus_tree = {
 		id = ITA_iberian_protection
 		icon = GFX_focus_generic_free_iberia
 		prerequisite = { focus = ITA_mare_nostrum_bba focus = ITA_deus_vult }
-
+		available = {
+			date > 1940.1.1
+		}
 		x = 4
 		y = 2
 		relative_position_id = ITA_mare_nostrum_bba
@@ -15323,6 +15325,9 @@ focus_tree = {
 
 		bypass = {
 			has_guaranteed = AUS
+			NOT = {
+				country_exists = AUS
+			}
 		}		 
 
 		search_filters = {} 
