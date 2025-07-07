@@ -3035,7 +3035,7 @@
 		x = 30
 		y = 0
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -3095,7 +3095,7 @@
 		x = -1
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -3158,7 +3158,7 @@
 		y = 1
 		relative_position_id = AST_support_the_policy_of_appeasement
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 0.2
@@ -3535,7 +3535,7 @@
 		x = 37
 		y = 0
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 0.5 
@@ -3598,7 +3598,7 @@
 		y = 1
 		relative_position_id = AST_never_another_gallipoli
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -3677,7 +3677,7 @@
 		y = 1
 		relative_position_id = AST_protect_the_homeland
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -3731,7 +3731,7 @@
 		y = 1
 		relative_position_id = AST_protect_the_homeland
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -3783,7 +3783,7 @@
 		y = 2
 		relative_position_id = AST_protect_the_homeland
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -3844,7 +3844,7 @@
 		y = 2
 		relative_position_id = AST_protect_the_homeland
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -3884,7 +3884,7 @@
 		y = 3
 		relative_position_id = AST_protect_the_homeland
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -3945,7 +3945,7 @@
 		y = 4
 		relative_position_id = AST_protect_the_homeland
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 4
@@ -3989,7 +3989,7 @@
 		y = 5
 		relative_position_id = AST_protect_the_homeland
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4032,7 +4032,7 @@
 		y = 1
 		relative_position_id = AST_never_another_gallipoli
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 0.5
@@ -4091,7 +4091,7 @@
 		y = 1
 		relative_position_id = AST_abandon_the_westminster_system
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 0.5
@@ -4254,7 +4254,7 @@
 		y = 1
 		relative_position_id = AST_support_the_centre_party
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1.5
@@ -4610,7 +4610,7 @@
 		y = 1
 		relative_position_id = AST_empower_the_workers
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
