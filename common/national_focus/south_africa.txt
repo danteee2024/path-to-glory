@@ -651,8 +651,8 @@ focus_tree = {
 	
 	focus = {
 		id = SAF_status_of_the_union_act
-		icon = GFX_focus_SWE_form_rfsu
-		x = -11
+		icon = GFX_focus_TBE_flag_south_africa
+		x = -17
 		y = 0
 
 		cost = 5
@@ -1510,7 +1510,7 @@ focus_tree = {
 		focus = {
 		id = SAF_fan_the_flames
 		icon = GFX_focus_GER_the_peoples_victory
-		x = -26
+		x = -30
 		y = 0
 
 		cost = 5
@@ -2445,7 +2445,7 @@ focus_tree = {
 	focus = {
 		id = SAF_rise_of_nat
 		icon = GFX_focus_FIN_national_fanatism
-		x = 0
+		x = -8
 		y = 0
 
 		cost = 5
@@ -3111,7 +3111,7 @@ focus_tree = {
 	focus = {
 		id = SAF_union_defense_force
 		icon = GFX_goal_generic_army_doctrines
-		x = 20
+		x = 8
 		y = 0
 
 		cost = 5
