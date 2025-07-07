@@ -7,7 +7,7 @@ policies:0 "Government Policies"
 
 taxation_policies:0 "Taxation Policies"
 is_state_security:0 "State Security"
-police_only:0 "Police"
+police_only:0 "Standard Policing"
 police_only_desc:0 "Law is enforced by typical police organisations."
 counter_terrorism_operatives:0 "Counter Terrorism Operatives"
 counter_terrorism_operatives_desc:0 "Special units are formed to combat terror."

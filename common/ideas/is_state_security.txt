@@ -1,17 +1,17 @@
 ideas = {
     is_state_security = {
         law = yes
-        use_list_view = no
+        use_list_view = yes
 
         # Heavy policing, strong counter‐subversion measures
         police_only = {
             available = { }
             modifier = {
-                foreign_subversive_activites = -0.10    # less sabotage
+                political_power_factor = -0.10
+                compliance_growth = 0.01
                 stability_factor = 0.05                  # more stability
-                intelligence_agency_defense = 0.20       # stronger intel defense
                 encryption_factor = 0.05 
-                agency_upgrade_time = -0.20                # better code security
+                operation_risk = 0.10              # bit riskier operations
             }
             ai_will_do = { base = 30 }
             cancel_if_invalid = no
@@ -21,12 +21,11 @@ ideas = {
         counter_terrorism_operatives = {
             available = { }
             modifier = {
+                enemy_operative_detection_chance_factor = 0.10
                 resistance_activity = 0.05
-                initiative_factor = 0.02
+                stability_factor = -0.05 
                 foreign_subversive_activites = -0.15 
-                army_advisor_cost_factor = -0.10 
-                war_support = 0.02               
-                decryption_factor = 0.05                 # better codebreaking
+                intelligence_agency_defense = 0.5
             }
             ai_will_do = { base = 20 }
             cancel_if_invalid = no
@@ -36,11 +35,11 @@ ideas = {
         gendarmerie = {
             available = { }
             modifier = {
-                operation_risk = -0.10
-                drift_defence_factor = -0.15             # less drift
-                resistance_growth = -0.15              # slow resistance
+                political_power_factor = -0.1
+                required_garrison_factor = -0.15
+                surrender_limit = 0.05
+                resistance_activity = 0.05
                 civilian_intel_to_others = -25
-                intelligence_agency_defense = 0.05         # slight intel leak
             }
             ai_will_do = { base = 40 }
             cancel_if_invalid = no
@@ -48,14 +47,12 @@ ideas = {
 
         # Secret police, covert control
         sassy_secret_police = {
-            available = { NOT = { has_government = democratic } }
             modifier = {
                 political_power_factor = -0.05
-                foreign_subversive_activites = -0.15   
+                foreign_subversive_activites = -0.05
                 stability_factor = -0.05            
-                intelligence_agency_defense = 0.30
-                coordination_bonus = 0.25
-                recon_factor = 0.25  
+                coordination_bonus = 0.05
+                recon_factor = 0.05
             }
             ai_will_do = { base = 25 }
             cancel_if_invalid = yes
@@ -65,12 +62,16 @@ ideas = {
         military_policing = {
             available = { NOT = { has_government = democratic } }
             modifier = {
-                political_power_factor = 0.15
-                stability_factor = -0.05                # unrest from militarization
-                resistance_activity = -0.10              # strong resistance suppression
-                drift_defence_factor = 0.10              # some drift hardening
-                army_intel_to_others = -25              # intel sharing reduced
+                resistance_activity = 0.05
+                initiative_factor = 0.02
+                drift_defence_factor = 0.10
+                war_support = 0.02    
             }
+            equipment_bonus = {
+				infantry_equipment = {
+                    soft_attack = 0.05
+                }
+			}
             ai_will_do = { base = 15 }
             cancel_if_invalid = yes
         }

@@ -1,7 +1,7 @@
 ideas = {
 	minority_rights = {
 		law = yes
-		use_list_view = no
+		use_list_view = yes
 
 		PB_Affirmitive_Action = {
 			available = {

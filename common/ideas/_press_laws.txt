@@ -1,7 +1,7 @@
 ideas = {
 	press_laws = {
 		law = yes
-		use_list_view = no
+		use_list_view = yes
 
 		PB_State_Press = {
 			available = {

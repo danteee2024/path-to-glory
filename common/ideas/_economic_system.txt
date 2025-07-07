@@ -1,7 +1,7 @@
 ideas = {
     economic_system = {
         law = yes
-        use_list_view = no
+        use_list_view = yes
 
         PB_Govidea_Free_Market_Capitalism = {
             visible = {

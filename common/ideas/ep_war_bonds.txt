@@ -2,7 +2,7 @@ ideas = {
 
     ep_war_bonds = {
         law = yes
-        use_list_view = no
+        use_list_view = yes
 
         force_bonds_buying =  {
 

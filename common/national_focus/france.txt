@@ -4882,8 +4882,9 @@ add_timed_idea = {
 		cost = 10
 		prerequisite = {
 			focus = FRA_brumaire_movement
+			focus = FRA_side_with_the_orleanists
 		}
-		x = -2
+		x = -3
 		y = 1
 		relative_position_id = FRA_brumaire_movement
 		ai_will_do = {
