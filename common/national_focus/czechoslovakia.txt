@@ -4758,7 +4758,6 @@ focus = {
 		}
 
 		available = {
-			threat = 0.7
 		}
 
 		bypass = {
