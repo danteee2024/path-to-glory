@@ -2351,25 +2351,6 @@ focus = {
 		}
 	}
 
-	focus = {
-		id = POR_a_new_industry
-		available = {
-		
-		}
-		prerequisite = { focus = POR_addressing_the_unemployment }
-		icon = GFX_goal_continuous_repairments
-		x = 0
-		y = 1
-		relative_position_id = POR_addressing_the_unemployment
-		cost = 10
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = POR_addressing_the_unemployment_idea
-				add_idea = POR_a_new_industry
-			}
-		}
-	}
 
 	focus = {
 		id = POR_second_navy_reequipment
@@ -2793,12 +2774,7 @@ focus = {
 					}
 				}
 			}
-			add_tech_bonus = {
-				name = POR_institute_mountaineer_corps
-			    bonus = 1
-			    uses = 1
-			    category = mountaineers_tech
-			}
+			
 		}
 	}
 
@@ -3450,12 +3426,7 @@ focus = {
 				remove_idea = POR_portuguese_marines2
 				add_idea = POR_portuguese_marines3
 			}
-			add_tech_bonus = {
-				name = POR_fuzileiros
-			    bonus = 1
-			    uses = 1
-			    category = marine_tech
-			}
+			
 		}
 	}
 
@@ -4107,12 +4078,7 @@ focus = {
 					}
 				}
 			}
-			add_tech_bonus = {
-				name = POR_tropas_paraquedistas
-				bonus = 1
-				uses = 1
-				category = para_tech
-			}
+			
 		}
 	}
 
