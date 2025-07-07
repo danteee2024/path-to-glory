@@ -14880,7 +14880,7 @@ focus_tree = {
 			}
 		}
 		relative_position_id = ITA_triumph_in_africa_bba
-		cost = 10
+		cost = 5
 		available = {
 			NOT = {
 				has_completed_focus = ITA_unite_the_opposition
