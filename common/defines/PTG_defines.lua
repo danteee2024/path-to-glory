@@ -31,7 +31,7 @@ NDefines.NDeployment.BASE_DEPLOYMENT_TRAINING = 2       -- Base training time fo
 ---- Military additions
 
 NDefines.NMilitary.UNIT_EXPERIENCE_PER_COMBAT_HOUR = 0.00033 
-NDefines.NMilitary.UNIT_EXPERIENCE_SCALE = 1.25
+NDefines.NMilitary.UNIT_EXPERIENCE_SCALE = 1
 NDefines.NMilitary.UNIT_EXPERIENCE_PER_TRAINING_DAY = 0.00270
 NDefines.NMilitary.TRAINING_MAX_LEVEL = 4 
 NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2 
