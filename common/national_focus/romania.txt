@@ -3003,7 +3003,7 @@ focus = {
 
 	focus = {
 		id = ROM_The_Great_Democratic_Kingdom
-		icon = GFX_focus_generic_modernize_industry
+		icon = GFX_focus_AFG_parliamentary_democracy
 		prerequisite = { focus = ROM_Expand_the_Support_Industry
 			focus = ROM_Change_of_the_Support_Industry_for_War
 		}
@@ -3034,6 +3034,147 @@ focus = {
 				remove_idea = ROM_Democratic_King
 				add_idea = ROM_The_Great_Democratic_Kingdom
 			}
+		}
+	}
+
+	focus = {
+		id = ROM_bringing_down_the_giants
+		icon = GFX_focus_generic_total_war
+		prerequisite = { focus = ROM_The_Great_Democratic_Kingdom }
+		x = 0
+		y = 1
+		relative_position_id = ROM_The_Great_Democratic_Kingdom
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		select_effect = {
+			every_country = {
+				limit = {
+					NOT = {
+						has_government = democratic
+					}
+					NOT = { is_in_faction_with = ROOT }
+					is_major = yes
+					capital_scope = {
+						is_on_continent = europe
+					}
+				}
+				ROOT = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = PREV
+						value = 100
+					}
+				}
+			}
+		}
+
+		available = {
+			is_subject = no
+			has_government = democratic
+			has_war_support > 0.70
+			any_other_country = {
+				NOT = {
+					has_government = democratic
+				}
+				NOT = {
+					OR = {
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+					}
+				}
+				is_major = yes
+				capital_scope = {
+					is_on_continent = europe
+				}
+			}
+			custom_trigger_tooltip = {
+				AND = {
+					155 = {
+						is_fully_controlled_by = ROOT
+					}
+					974 = {
+						is_fully_controlled_by = ROOT
+					}
+					973 = {
+						is_fully_controlled_by = ROOT
+					}
+					43 = {
+						is_fully_controlled_by = ROOT
+					}
+					154 = {
+						is_fully_controlled_by = ROOT
+					}
+				}
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		completion_reward = {
+
+			custom_effect_tooltip = HUN_bringing_down_the_giants_tt
+			every_country = {
+				limit = {
+					NOT = {
+						has_government = democratic
+					}
+					NOT = {
+						OR = {
+							is_in_faction_with = ROOT
+							is_subject_of = ROOT
+						}
+					}
+					is_major = yes
+					capital_scope = {
+						is_on_continent = europe
+					}
+				}
+			}
+
+			hidden_effect = {
+				every_country = {
+					limit = {
+						NOT = {
+							has_government = democratic
+						}
+						NOT = {
+							OR = {
+								is_in_faction_with = ROOT
+								is_subject_of = ROOT
+							}
+						}
+						is_major = yes
+						capital_scope = {
+							is_on_continent = europe
+						}
+					}
+					ROOT = {
+						add_ai_strategy = {
+							type = declare_war
+							id = PREV
+							value = 100
+						}
+						create_wargoal = {
+							type = topple_government
+							target = PREV
+						}
+					}
+				}
+			}
+
 		}
 	}
 
