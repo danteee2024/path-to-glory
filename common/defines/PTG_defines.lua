@@ -30,14 +30,15 @@ NDefines.NDeployment.BASE_DEPLOYMENT_TRAINING = 2       -- Base training time fo
 
 ---- Military additions
 
+NDefines.NMilitary.DIVISION_SIZE_FOR_XP = 6                    -- how many battalions should a division have to count as a full divisions when calculating XP stuff
 NDefines.NMilitary.UNIT_EXPERIENCE_PER_COMBAT_HOUR = 0.00033 
 NDefines.NMilitary.UNIT_EXPERIENCE_SCALE = 1
 NDefines.NMilitary.UNIT_EXPERIENCE_PER_TRAINING_DAY = 0.00270
 NDefines.NMilitary.TRAINING_MAX_LEVEL = 4 
 NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2 
-NDefines.NMilitary.ARMY_EXP_BASE_LEVEL = 2
-NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.05
-NDefines.NMilitary.UNIT_EXP_LEVELS = {  0.05,  0.1,  0.2,  0.3,  0.4,  0.5,  0.65,  0.8,  0.999 } 		-- Experience needed to progress to the next level
+NDefines.NMilitary.ARMY_EXP_BASE_LEVEL = 3
+NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.10 
+NDefines.NMilitary.UNIT_EXP_LEVELS = {  0.137,  0.225,  0.374,  0.452,  0.573,  0.681,  0.765,  0.879,  0.999 } 		-- Experience needed to progress to the next level
 
 
 
