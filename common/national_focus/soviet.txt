@@ -2075,6 +2075,7 @@ focus_tree = {
 
 		completion_reward = {
 			air_experience = 50
+			add_ideas = SOV_transpolar_flights
 		}
 	}
 
@@ -7387,13 +7388,13 @@ focus_tree = {
 		available = {
 			has_country_flag = {
 				flag = SOV_first_moscow_trial_flag
-				days > 175
+				days > 150
 			}
 			custom_trigger_tooltip = {
 				tooltip = SOV_last_purge_focus_days_tt
 				has_country_flag = {
 					flag = SOV_first_moscow_trial_flag
-					days > 175
+					days > 150
 				}
 			}
 		}
@@ -7635,18 +7636,18 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_the_anti_soviet_trotskyist_center
-		cost = 10
+		cost = 5
 
 		available = {
 			has_country_flag = {
 				flag = SOV_second_moscow_trial_flag
-				days > 175
+				days > 150
 			}
 			custom_trigger_tooltip = {
 				tooltip = SOV_last_purge_focus_days_military_tt
 				has_country_flag = {
 					flag = SOV_second_moscow_trial_flag
-					days > 175
+					days > 150
 				}
 			}
 		}
@@ -7738,13 +7739,13 @@ focus_tree = {
 		available = {
 			has_country_flag = {
 				flag = SOV_trial_of_the_generals_flag
-				days > 175
+				days > 150
 			}
 			custom_trigger_tooltip = {
 				tooltip = SOV_last_purge_focus_days_rights_tt
 				has_country_flag = {
 					flag = SOV_trial_of_the_generals_flag
-					days > 175
+					days > 150
 				}
 			}
 		}
@@ -7880,13 +7881,13 @@ focus_tree = {
 		available = {
 			has_country_flag = {
 				flag = SOV_third_moscow_trial_flag
-				days > 175
+				days > 150
 			}
 			custom_trigger_tooltip = {
 				tooltip = SOV_last_purge_focus_days_cult_tt
 				has_country_flag = {
 					flag = SOV_third_moscow_trial_flag
-					days > 175
+					days > 150
 				}
 			}
 			has_completed_focus = SOV_expand_the_agitprop
