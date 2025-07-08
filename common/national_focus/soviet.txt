@@ -2026,7 +2026,7 @@ focus_tree = {
 		x = 2
 		y = 0
 		relative_position_id = SOV_no_time_for_peace
-		cost = 5
+		cost = 10
 
 		allow_branch = {
 			NOT = { has_government = communism }
