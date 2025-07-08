@@ -1,0 +1,535 @@
+spriteTypes = {
+
+	### infantry TECH ###
+
+	SpriteType = {
+		name = "GFX_infantry_at3_medium"
+		texturefile = "gfx/interface/technologies/infantry_at3.png"
+	}
+
+	SpriteType = {
+		name = "GFX_tech_mountaineers4_medium"
+		texturefile = "gfx/interface/technologies/tech_mountaineers4.png"
+	}
+
+	SpriteType = {
+		name = "GFX_marines4_medium"
+		texturefile = "gfx/interface/technologies/marines4.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_paratroopers4_medium"
+		texturefile = "gfx/interface/technologies/paratroopers4.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_advanced_infantry_weapons3_medium"
+		texturefile = "gfx/interface/technologies/infantry_weapons4.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_advanced_infantry_weapons4_medium"
+		texturefile = "gfx/interface/technologies/infantry_weapons5.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_advanced_infantry_weapons5_medium"
+		texturefile = "gfx/interface/technologies/infantry_weapons6.png"
+	}
+	
+#	SpriteType = {
+#		name = "GFX_armored_train_medium"
+#		texturefile = "gfx/interface/technologies/armored_train1.png"
+#	}
+	
+	SpriteType = {
+		name = "GFX_armored_train2_medium"
+		texturefile = "gfx/interface/technologies/armored_train2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_armored_train3_medium"
+		texturefile = "gfx/interface/technologies/armored_train3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_armored_train4_medium"
+		texturefile = "gfx/interface/technologies/armored_train4.png"
+	}
+	
+#	SpriteType = {
+#		name = "GFX_GER_armored_train_medium"
+#		texturefile = "gfx/interface/technologies/GER_armored_train1.png"
+#	}
+	
+	SpriteType = {
+		name = "GFX_GER_armored_train2_medium"
+		texturefile = "gfx/interface/technologies/GER_armored_train2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_GER_armored_train3_medium"
+		texturefile = "gfx/interface/technologies/GER_armored_train3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_GER_armored_train4_medium"
+		texturefile = "gfx/interface/technologies/GER_armored_train4.png"
+	}
+	
+#	SpriteType = {
+#		name = "GFX_SOV_armored_train_medium"
+#		texturefile = "gfx/interface/technologies/SOV_armored_train1.png"
+#	}
+	
+	SpriteType = {
+		name = "GFX_SOV_armored_train2_medium"
+		texturefile = "gfx/interface/technologies/SOV_armored_train2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_SOV_armored_train3_medium"
+		texturefile = "gfx/interface/technologies/SOV_armored_train3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_SOV_armored_train4_medium"
+		texturefile = "gfx/interface/technologies/SOV_armored_train4.png"
+	}
+	
+#	SpriteType = {
+#		name = "GFX_wartime_train_medium"
+#		texturefile = "gfx/interface/technologies/wartime_train1.png"
+#	}
+	
+	SpriteType = {
+		name = "GFX_wartime_train2_medium"
+		texturefile = "gfx/interface/technologies/wartime_train2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_wartime_train3_medium"
+		texturefile = "gfx/interface/technologies/wartime_train3.png"
+	}
+	
+#	SpriteType = {
+#		name = "GFX_railway_gun_medium"
+#		texturefile = "gfx/interface/technologies/generic_railway_gun.png"
+#	}
+	
+	SpriteType = {
+		name = "GFX_railway_gun_2_medium"
+		texturefile = "gfx/interface/technologies/generic_railway_gun2.png"
+	}
+
+	SpriteType = {
+		name = "GFX_railway_gun_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/generic_railway_gun2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_railway_gun_3_medium"
+		texturefile = "gfx/interface/technologies/generic_railway_gun3.png"
+	}
+
+	SpriteType = {
+		name = "GFX_railway_gun_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/generic_railway_gun3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_elite_forces_medium"
+		texturefile = "gfx/interface/technologies/elite_forces.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_elite_forces_2_medium"
+		texturefile = "gfx/interface/technologies/elite_forces2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_amphibious_mechanized_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/generic_amphibious_mech_3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_amphibious_mechanized_infantry_3_medium"
+		texturefile = "gfx/interface/technologies/generic_amphibious_mech_3.png"
+	}
+
+	SpriteType = {
+		name = "GFX_USA_amphibious_mechanized_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/USA_amphibious_mech_3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_USA_amphibious_mechanized_infantry_3_medium"
+		texturefile = "gfx/interface/technologies/USA_amphibious_mech_3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_train_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/armored_train2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_train_equipment_5_medium"
+		texturefile = "gfx/interface/technologies/armored_train3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_train_equipment_6_medium"
+		texturefile = "gfx/interface/technologies/armored_train4.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_GER_train_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/GER_armored_train2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_GER_train_equipment_5_medium"
+		texturefile = "gfx/interface/technologies/GER_armored_train3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_GER_train_equipment_6_medium"
+		texturefile = "gfx/interface/technologies/GER_armored_train4.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_SOV_train_equipment_4_medium"
+		texturefile = "gfx/interface/technologies/SOV_armored_train2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_SOV_train_equipment_5_medium"
+		texturefile = "gfx/interface/technologies/SOV_armored_train3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_SOV_train_equipment_6_medium"
+		texturefile = "gfx/interface/technologies/SOV_armored_train4.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_train_equipment_7_medium"
+		texturefile = "gfx/interface/technologies/wartime_train2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_train_equipment_8_medium"
+		texturefile = "gfx/interface/technologies/wartime_train3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_GER_railway_gun_2_medium"
+		texturefile = "gfx/interface/technologies/GER_railway_gun2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_GER_railway_gun_3_medium"
+		texturefile = "gfx/interface/technologies/GER_railway_gun3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_ENG_railway_gun_2_medium"
+		texturefile = "gfx/interface/technologies/ENG_railway_gun2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_ENG_railway_gun_3_medium"
+		texturefile = "gfx/interface/technologies/ENG_railway_gun3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRA_railway_gun_2_medium"
+		texturefile = "gfx/interface/technologies/FRA_railway_gun2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRA_railway_gun_3_medium"
+		texturefile = "gfx/interface/technologies/FRA_railway_gun3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_JAP_railway_gun_2_medium"
+		texturefile = "gfx/interface/technologies/JAP_railway_gun2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_JAP_railway_gun_3_medium"
+		texturefile = "gfx/interface/technologies/JAP_railway_gun3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_SOV_railway_gun_2_medium"
+		texturefile = "gfx/interface/technologies/SOV_railway_gun2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_SOV_railway_gun_3_medium"
+		texturefile = "gfx/interface/technologies/SOV_railway_gun3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_USA_railway_gun_2_medium"
+		texturefile = "gfx/interface/technologies/USA_railway_gun2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_USA_railway_gun_3_medium"
+		texturefile = "gfx/interface/technologies/USA_railway_gun3.png"
+	}
+
+	SpriteType = {
+		name = "GFX_GER_railway_gun_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/GER_railway_gun2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_GER_railway_gun_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/GER_railway_gun3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_ENG_railway_gun_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/ENG_railway_gun2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_ENG_railway_gun_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/ENG_railway_gun3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRA_railway_gun_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/FRA_railway_gun2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRA_railway_gun_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/FRA_railway_gun3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_JAP_railway_gun_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/JAP_railway_gun2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_JAP_railway_gun_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/JAP_railway_gun3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_SOV_railway_gun_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/SOV_railway_gun2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_SOV_railway_gun_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/SOV_railway_gun3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_USA_railway_gun_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/USA_railway_gun2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_USA_railway_gun_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/USA_railway_gun3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_armored_car4_medium"
+		texturefile = "gfx/interface/technologies/generic_armored_car_4.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_armored_car_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/generic_armored_car_4.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_ENG_wartime_train2_medium"
+		texturefile = "gfx/interface/technologies/ENG_wartime_train2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_ENG_wartime_train3_medium"
+		texturefile = "gfx/interface/technologies/ENG_wartime_train3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRA_wartime_train2_medium"
+		texturefile = "gfx/interface/technologies/FRA_wartime_train2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRA_wartime_train3_medium"
+		texturefile = "gfx/interface/technologies/FRA_wartime_train3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_GER_wartime_train2_medium"
+		texturefile = "gfx/interface/technologies/GER_wartime_train2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_GER_wartime_train3_medium"
+		texturefile = "gfx/interface/technologies/GER_wartime_train3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_JAP_wartime_train2_medium"
+		texturefile = "gfx/interface/technologies/JAP_wartime_train2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_JAP_wartime_train3_medium"
+		texturefile = "gfx/interface/technologies/JAP_wartime_train3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_SOV_wartime_train2_medium"
+		texturefile = "gfx/interface/technologies/SOV_wartime_train2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_SOV_wartime_train3_medium"
+		texturefile = "gfx/interface/technologies/SOV_wartime_train3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_USA_wartime_train2_medium"
+		texturefile = "gfx/interface/technologies/USA_wartime_train2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_USA_wartime_train3_medium"
+		texturefile = "gfx/interface/technologies/USA_wartime_train3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_ENG_train_equipment_7_medium"
+		texturefile = "gfx/interface/technologies/ENG_wartime_train2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_ENG_train_equipment_8_medium"
+		texturefile = "gfx/interface/technologies/ENG_wartime_train3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRA_train_equipment_7_medium"
+		texturefile = "gfx/interface/technologies/FRA_wartime_train2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRA_train_equipment_8_medium"
+		texturefile = "gfx/interface/technologies/FRA_wartime_train3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_GER_train_equipment_7_medium"
+		texturefile = "gfx/interface/technologies/GER_wartime_train2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_GER_train_equipment_8_medium"
+		texturefile = "gfx/interface/technologies/GER_wartime_train3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_JAP_train_equipment_7_medium"
+		texturefile = "gfx/interface/technologies/JAP_wartime_train2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_JAP_train_equipment_8_medium"
+		texturefile = "gfx/interface/technologies/JAP_wartime_train3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_SOV_train_equipment_7_medium"
+		texturefile = "gfx/interface/technologies/SOV_wartime_train2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_SOV_train_equipment_8_medium"
+		texturefile = "gfx/interface/technologies/SOV_wartime_train3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_USA_train_equipment_7_medium"
+		texturefile = "gfx/interface/technologies/USA_wartime_train2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_USA_train_equipment_8_medium"
+		texturefile = "gfx/interface/technologies/USA_wartime_train3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_SOV_armored_car4_medium"
+		texturefile = "gfx/interface/technologies/SOV_armored_car_4.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_SOV_armored_car_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/SOV_armored_car_4.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_ITA_armored_car4_medium"
+		texturefile = "gfx/interface/technologies/ITA_armored_car_4.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_ITA_armored_car_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/ITA_armored_car_4.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_GER_armored_car4_medium"
+		texturefile = "gfx/interface/technologies/GER_armored_car_4.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_GER_armored_car_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/GER_armored_car_4.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_ENG_armored_car4_medium"
+		texturefile = "gfx/interface/technologies/ENG_armored_car_4.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_ENG_armored_car_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/ENG_armored_car_4.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_JAP_armored_car4_medium"
+		texturefile = "gfx/interface/technologies/JAP_armored_car_4.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_JAP_armored_car_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/JAP_armored_car_4.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRA_armored_car4_medium"
+		texturefile = "gfx/interface/technologies/FRA_armored_car_4.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_FRA_armored_car_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/FRA_armored_car_4.png"
+	}
+
+}
