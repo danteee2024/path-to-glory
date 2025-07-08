@@ -12,7 +12,15 @@
  dam_plural: "Dams"
  dam_desc: "Dams provide additional power to a state, improving industry and resource output."
  dam_mountain: "$dam$"
+ 
+ 
+
+ 
+
  dam_mountain_plural: "$dam_plural$"
+ 
+ add_extra_state_shared_building_slots:0 "£under_construction_texticon Building Slot"
+ add_extra_state_shared_building_slots_plural:0 "£under_construction_texticon Building Slots"
  dam_mountain_desc: "$dam_desc$"
  canal_kiel: "Kiel Canal Locks"
  canal_kiel_plural: "$canal_kiel$"
@@ -167,3 +175,13 @@
  GUN_EMPLACEMENT_BUILDING: "§YMulti-Charge Large Caliber Gun Emplacement§!"
  BUILDING_STATE_MODIFIER_FORMATTER_HEADING: "$BUILDING|H$ state modifiers:"
  SPECIAL_FACILITY_BUILDING: "$NAME|Y$"
+
+ 
+ 
+ #effects
+
+ EFFECT_CREATE_WARGOAL:0 "Gains £war_goal_texticon $WARGOAL|Y$ war goal against $TARGET|Y$."
+ EFFECT_CREATE_OPERATIVE_LEADER:0 "$NAME|H$ §Lbecomes§! an £operatives_recruit_texticon operative.\n"
+ EFFECT_ADD_EXTRA_STATE_SHARED_BUILDING_SLOTS:0 "Add $COUNT|G$ £under_construction_texticon Building Slots."
+ EFFECT_REMOVE_EXTRA_STATE_SHARED_BUILDING_SLOTS:0 "Remove $COUNT|R$ £under_construction_texticon Building Slots."
+
