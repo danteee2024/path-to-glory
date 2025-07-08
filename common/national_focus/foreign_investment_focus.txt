@@ -4,7 +4,7 @@ shared_focus = {
 		
 		relative_position_id = Repeal_Anti_Communist_Act
 
-		x = 37
+		x = 44
 		y = 6
 		
 		cost = 2.5
@@ -122,9 +122,46 @@ shared_focus = {
 			USA = { has_opinion = { target = ROOT value > 24  } }
 		}
 		
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}			
+		}
+
 		completion_reward = {
-			# Fighters and Subsidies
-			add_offsite_building = { type = arms_factory level = 1 }
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 			
 			add_tech_bonus = {
 				bonus = 1.0
@@ -161,9 +198,46 @@ shared_focus = {
 			USA = { has_opinion = { target = ROOT value > 24  } }
 		}
 		
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}			
+		}
+
 		completion_reward = {
-			# Bomber and Subsidies
-			add_offsite_building = { type = arms_factory level = 1 }
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 			
 			add_tech_bonus = {
 				bonus = 1.0
@@ -200,10 +274,46 @@ shared_focus = {
 			USA = { has_opinion = { target = ROOT value > 24  } }
 		}
 		
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}			
+		}
+
 		completion_reward = {
-			# Heavy Ships bonuses
-			# some dockyards
-			add_offsite_building = { type = dockyard level = 2 }
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
 			
 			add_tech_bonus = {
 				bonus = 1.0
@@ -235,10 +345,46 @@ shared_focus = {
 			USA = { has_opinion = { target = ROOT value > 24  } }
 		}
 		
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}			
+		}
+
 		completion_reward = {
-			# Carriers and Fighters
-			# Dockyards
-			add_offsite_building = { type = dockyard level = 2 }
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
 			
 			add_tech_bonus = {
 				bonus = 1.0
@@ -368,10 +514,46 @@ shared_focus = {
 			GER = { has_opinion = { target = ROOT value > 24 } }
 		}
 		
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}			
+		}
+
 		completion_reward = {
-			## subsidies
-			## armor research
-			add_offsite_building = { type = arms_factory level = 2 }
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 			
 			add_tech_bonus = {
 				bonus = 1.0
@@ -407,10 +589,46 @@ shared_focus = {
 			GER = { has_opinion = { target = ROOT value > 24 } }
 		}
 		
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
+			}			
+		}
+
 		completion_reward = {
-			## subsidies
-			## armor research
-			add_offsite_building = { type = dockyard level = 2 }
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
 			
 			add_tech_bonus = {
 				bonus = 1.0
@@ -516,8 +734,46 @@ shared_focus = {
 			SOV = { has_opinion = { target = ROOT value > 24 } }
 		}
 		
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}			
+		}
+
 		completion_reward = {
-			add_offsite_building = { type = arms_factory level = 1 }
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 			
 			add_tech_bonus = {
 				bonus = 1.0
@@ -553,8 +809,46 @@ shared_focus = {
 			SOV = { has_opinion = { target = ROOT value > 24 } }
 		}
 		
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}			
+		}
+
 		completion_reward = {
-			add_offsite_building = { type = arms_factory level = 1 }
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 			
 			add_tech_bonus = {
 				bonus = 1.0
@@ -638,7 +932,7 @@ shared_focus = {
 			
 			add_equipment_to_stockpile = {
 				type = medium_tank_chassis
-				amount = 100
+				amount = 200
 				producer = SOV
 			}
 		}
@@ -695,10 +989,46 @@ shared_focus = {
 			ENG = { has_opinion = { target = ROOT value > 24 } }
 		}
 		
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}			
+		}
+
 		completion_reward = {
-			# artillery bonuses
-			# subsidies
-			add_offsite_building = { type = arms_factory level = 1 }
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 			
 			add_tech_bonus = {
 				bonus = 1.0
@@ -733,10 +1063,46 @@ shared_focus = {
 			ENG = { has_opinion = { target = ROOT value > 24 } }
 		}
 		
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}			
+		}
+
 		completion_reward = {
-			# truck and motorized bonuses
-			# subsidies
-			add_offsite_building = { type = arms_factory level = 1 }
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 			
 			add_tech_bonus = {
 				bonus = 1.0
@@ -771,10 +1137,46 @@ shared_focus = {
 			ENG = { has_opinion = { target = ROOT value > 24 } }
 		}
 		
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}			
+		}
+
 		completion_reward = {
-			# subsidies
-			# light cruiser and destroyer bonuses
-			add_offsite_building = { type = dockyard level = 2 }
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
 			
 			add_tech_bonus = {
 				bonus = 1.0
@@ -806,11 +1208,46 @@ shared_focus = {
 			ENG = { has_opinion = { target = ROOT value > 24 } }
 		}
 		
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}			
+		}
+
 		completion_reward = {
-			# Landing Craft boosts
-			# marine bonuses
-			add_offsite_building = { type = dockyard level = 1 }
-			add_offsite_building = { type = arms_factory level = 1 }
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
 			
 			add_tech_bonus = {
 				bonus = 1.0

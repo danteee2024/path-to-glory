@@ -36,23 +36,23 @@ focus_tree = {
 		mutually_exclusive = { focus = SIA_Re_Empower_Civilian_Wing focus = SIA_Repeal_Anti_Communist_Act }
 		x = 0
 		y = 0
-		cost = 2.5
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					OR = {
-						has_completed_focus = SIA_Re_Empower_Civilian_Wing
-						has_completed_focus = SIA_Repeal_Anti_Communist_Act
-					}
-				}
-			}
-		}
+		cost = 5
+	#	allow_branch = {
+	#		if = {
+	#			limit = {
+	#				has_game_rule = {
+	#					rule = obsolete_focus_branches_visibility
+	#					option = HIDE
+	#				}
+	#			}
+	#			NOT = {
+	#				OR = {
+	#					has_completed_focus = SIA_Re_Empower_Civilian_Wing
+	#					has_completed_focus = SIA_Repeal_Anti_Communist_Act
+	#				}
+	#			}
+	#		}
+	#	}
 
 		available = {
 			
@@ -92,35 +92,35 @@ focus_tree = {
 		
 		cost = 5
 		
-		offset = {
-			x = 3
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = SIA_Military_as_Protectors
-			}
-		}
-		
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					OR = {
-						has_completed_focus = SIA_Empower_Rama_VII
-						has_completed_focus = SIA_Re_Empower_Civilian_Wing
-						has_completed_focus = SIA_Repeal_Anti_Communist_Act
-					}
-				}
-			}
-		}
+	#	offset = {
+	#		x = 3
+	#		y = 0
+	#		trigger = {
+	#			has_game_rule = {
+	#				rule = obsolete_focus_branches_visibility
+	#				option = HIDE
+	#			}
+	#			has_completed_focus = SIA_Military_as_Protectors
+	#		}
+	#	}
+	#	
+	#	allow_branch = {
+	#		if = {
+	#			limit = {
+	#				has_game_rule = {
+	#					rule = obsolete_focus_branches_visibility
+	#					option = HIDE
+	#				}
+	#			}
+	#			NOT = {
+	#				OR = {
+	#					has_completed_focus = SIA_Empower_Rama_VII
+	#					has_completed_focus = SIA_Re_Empower_Civilian_Wing
+	#					has_completed_focus = SIA_Repeal_Anti_Communist_Act
+	#				}
+	#			}
+	#		}
+	#	}
 
 		available = {
 			has_country_flag = SIA_Phibon_Gaining_Power
@@ -715,38 +715,38 @@ focus_tree = {
 
 		x = 6
 		y = 0
-		
-		offset = {
-			x = -3
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = SIA_Empower_Rama_VII
-			}
-		}
-		
-		cost = 5
 
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					OR = {
-						has_completed_focus = SIA_Military_as_Protectors
-						has_completed_focus = SIA_Re_Empower_Civilian_Wing
-						has_completed_focus = SIA_Repeal_Anti_Communist_Act
-					}
-				}
-			}
-		}
+		cost = 5
+		
+	#	offset = {
+	#		x = 0
+	#		y = 0
+	#		trigger = {
+	#			has_game_rule = {
+	#				rule = obsolete_focus_branches_visibility
+	#				option = HIDE
+	#			}
+	#			has_completed_focus = SIA_Empower_Rama_VII
+	#		}
+	#	}
+
+	#	allow_branch = {
+	#		if = {
+	#			limit = {
+	#				has_game_rule = {
+	#					rule = obsolete_focus_branches_visibility
+	#					option = HIDE
+	#				}
+	#			}
+	#			NOT = {
+	#				OR = {
+	#					has_completed_focus = SIA_Military_as_Protectors
+	#					has_completed_focus = SIA_Re_Empower_Civilian_Wing
+	#					has_completed_focus = SIA_Repeal_Anti_Communist_Act
+	#				}
+	#			}
+	#		}
+	#	}
 
 		available = {
 			has_country_flag = SIA_Phahon_Scandal_Resolved_With_Monarchy_Support
@@ -1115,22 +1115,22 @@ focus_tree = {
 		
 		cost = 5
 
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					OR = {
-						has_completed_focus = SIA_Military_Factionalism
-						has_completed_focus = SIA_Repeal_Anti_Communist_Act
-					}
-				}
-			}
-		}
+	#	allow_branch = {
+	#		if = {
+	#			limit = {
+	#				has_game_rule = {
+	#					rule = obsolete_focus_branches_visibility
+	#					option = HIDE
+	#				}
+	#			}
+	#			NOT = {
+	#				OR = {
+	#					has_completed_focus = SIA_Military_Factionalism
+	#					has_completed_focus = SIA_Repeal_Anti_Communist_Act
+	#				}
+	#			}
+	#		}
+	#	}
 		
 		completion_reward = {
 		
@@ -1144,17 +1144,17 @@ focus_tree = {
 			add_ideas = SIA_Military_Opposition
 			remove_ideas = SIA_Civilian_Wing_Opposition
 			
-			hidden_effect = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					mark_focus_tree_layout_dirty = yes
-				}
-			}
+		#	hidden_effect = {
+		#		if = {
+		#			limit = {
+		#				has_game_rule = {
+		#					rule = obsolete_focus_branches_visibility
+		#					option = HIDE
+		#				}
+		#			}
+		#			mark_focus_tree_layout_dirty = yes
+		#		}
+		#	}
 			
 			set_country_flag = SIA_Khana_Ratsodon_Empowered
 			
@@ -1174,7 +1174,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		
-		cost = 5
+		cost = 10
 
 		available = {
 			
@@ -1281,7 +1281,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		
-		cost = 5
+		cost = 10
 
 		available = {
 
@@ -1291,7 +1291,7 @@ focus_tree = {
 			add_research_slot = 1
 			add_ideas = SIA_Thammasat_University
 			custom_effect_tooltip = available_industrial_concern
-			show_ideas_tooltip = sia_thammasat_university
+			show_ideas_tooltip = sia_thammasat_university_laboratories
 		}
 		
 		ai_will_do = {
@@ -1670,7 +1670,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		
-		cost = 10
+		cost = 7.5
 
 		available = {
 			
@@ -1712,22 +1712,22 @@ focus_tree = {
 		
 		cost = 5
 
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					OR = {
-						has_completed_focus = SIA_Re_Empower_Civilian_Wing
-						has_completed_focus = SIA_Military_Factionalism
-					}
-				}
-			}
-		}
+	#	allow_branch = {
+	#		if = {
+	#			limit = {
+	#				has_game_rule = {
+	#					rule = obsolete_focus_branches_visibility
+	#					option = HIDE
+	#				}
+	#			}
+	#			NOT = {
+	#				OR = {
+	#					has_completed_focus = SIA_Re_Empower_Civilian_Wing
+	#					has_completed_focus = SIA_Military_Factionalism
+	#				}
+	#			}
+	#		}
+	#	}
 		
 		completion_reward = {
 						
@@ -1738,17 +1738,17 @@ focus_tree = {
 				days = 365
 			}
 			
-			hidden_effect = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					mark_focus_tree_layout_dirty = yes
-				}
-			}
+	#		hidden_effect = {
+	#			if = {
+	#				limit = {
+	#					has_game_rule = {
+	#						rule = obsolete_focus_branches_visibility
+	#						option = HIDE
+	#					}
+	#				}
+	#				mark_focus_tree_layout_dirty = yes
+	#			}
+	#		}
 			
 			set_country_flag = SIA_Khana_Ratsodon_Empowered
 			
@@ -1769,7 +1769,7 @@ focus_tree = {
 		x = -0
 		y = 1
 		
-		cost = 5
+		cost = 10
 
 		available = {
 			
@@ -2606,32 +2606,32 @@ focus_tree = {
 		id = SIA_Six_Principles_of_Khana_Ratsadon
 		icon = GFX_focus_six
 
-		x = 8
-		y = 11
-		
-		offset = {
-			x = -8
-			y = -11
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = SIA_Military_Factionalism
-			}
-		}
-		
-		allow_branch = {
-			if = {
-				NOT = {
-					OR = {
-						has_completed_focus = SIA_Empower_Rama_VII
-					}
-				}
-			}
-		}
-		
+		x = 29
+		y = 7
+
 		cost = 5
+		
+	#	offset = {
+	#		x = 1
+	#		y = -11
+	#		trigger = {
+	#			has_game_rule = {
+	#				rule = obsolete_focus_branches_visibility
+	#				option = HIDE
+	#			}
+	#			has_completed_focus = SIA_Military_Factionalism
+	#		}
+	#	}
+	#	
+	#	allow_branch = {
+	#		if = {
+	#			NOT = {
+	#				OR = {
+	#					has_completed_focus = SIA_Empower_Rama_VII
+	#				}
+	#			}
+	#		}
+	#	}
 
 		available = {
 			has_country_flag = SIA_Khana_Ratsodon_Empowered
@@ -3302,7 +3302,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		
-		cost = 10
+		cost = 5
 
 		available = {
 			has_full_control_of_state = 289
@@ -3545,7 +3545,7 @@ focus_tree = {
 		id = SIA_New_Thai_Military_Academies
 		icon = GFX_focus_generic_military_academy
 
-		x = 46
+		x = 45
 		y = 0
 		
 		offset = {
@@ -3653,6 +3653,11 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = air_equipment
+			}
 		}
 		
 		ai_will_do = {
@@ -3679,7 +3684,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				bonus = 0.5
-				uses = 4
+				uses = 3
 				category = air_equipment
 			}
 		}
@@ -4057,7 +4062,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SIA_Royal_Thai_Marines_amphibious_training
+		id = SIA_Royal_Thai_Marines_Amphibious_Training
 		prerequisite = { focus = SIA_Royal_Thai_Marines_Special_Training }
 		
 		icon = GFX_focus_generic_naval_invasion
@@ -4163,6 +4168,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
+			navy_experience = 50
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.75
 				uses = 2
@@ -4454,6 +4460,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
+			army_experience = 50
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.75
 				uses = 2

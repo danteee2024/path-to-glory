@@ -584,6 +584,9 @@ ideas = {
 
 			modifier = {				
 				research_speed_factor = 0.05
+				special_project_speed_factor = 0.10
+				scientist_breakthrough_bonus_factor = 0.15
+				scientist_research_bonus_factor = 0.05
 			}
 		}
 		
@@ -1300,7 +1303,7 @@ ideas = {
 			}
 		}
 		
-		sia_thammasat_university = {
+		sia_thammasat_university_laboratories = {
 			
 			picture = siamcompany_thammasat
 

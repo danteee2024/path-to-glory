@@ -47,7 +47,7 @@
  
 ################################### TOOLTIPS                 \n      §H§!
 
- Siam_guarantees_freedom_tt:0 "Will Guarantee Any §YDemocratic§! or §YNon-Aligned§! minor country in §YAsia§!"
+ Siam_guarantees_freedom_tt:0 "Will guarantee the indipendence of any §YDemocratic§! or §YNon-Aligned§! minor country in §YAsia§!"
 
  Siam_defend_the_coastline_tt:0 "Will build a coastal fort on every port owned in continental south east asia."
  
@@ -215,7 +215,19 @@
  SIA_Acquire_Bangkok_Dock_Company_desc:0 ""
  
  SIA_Royal_Thai_Marine_Corps:0 "Royal Thai Marine Corps"
- SIA_Royal_Thai_Marine_Corps_desc:0 ""
+ SIA_Royal_Thai_Marine_Corps_desc:0 "The Royal Thai Marine Corps will be a highly trained and specialized force, capable of conducting amphibious operations and rapid deployments. They will serve as a key component of our military strategy, ensuring that we can respond effectively to threats across the globe."
+
+ SIA_Royal_Thai_Marines_Special_Training:0 "Royal Thai Marine Corps"
+ SIA_Royal_Thai_Marines_Special_Training_desc:0 "The Royal Thai Marine Corps will be a highly trained and specialized force, capable of conducting amphibious operations and rapid deployments. They will serve as a key component of our military strategy, ensuring that we can respond effectively to threats across the globe."
+
+ SIA_Royal_Thai_Marines_Amphibious_Training:0 "Royal Thai Marine Corps"
+ SIA_Royal_Thai_Marines_Amphibious_Training_desc:0 "The Royal Thai Marine Corps will be a highly trained and specialized force, capable of conducting amphibious operations and rapid deployments. They will serve as a key component of our military strategy, ensuring that we can respond effectively to threats across the globe."
+
+ SIA_Royal_Thai_Marine_Corps2:0 "Royal Thai Marine Corps"
+ SIA_Royal_Thai_Marine_Corps2_desc:0 "The Royal Thai Marine Corps will be a highly trained and specialized force, capable of conducting amphibious operations and rapid deployments. They will serve as a key component of our military strategy, ensuring that we can respond effectively to threats across the globe."
+
+ SIA_Royal_Thai_Marine_Corps3:0 "Royal Thai Marine Corps"
+ SIA_Royal_Thai_Marine_Corps3_desc:0 "The Royal Thai Marine Corps will be a highly trained and specialized force, capable of conducting amphibious operations and rapid deployments. They will serve as a key component of our military strategy, ensuring that we can respond effectively to threats across the globe."
  
  SIA_Escort_Focus:0 "Escort Focus"
  SIA_Escort_Focus_desc:0 ""
@@ -344,6 +356,9 @@
  
  SIA_South_East_Asia_United:0 "South East Asia United"
  SIA_South_East_Asia_United_desc:0 "We have United a significant portion of South East Asia and have become the beacon of Democracy in Asia."
+
+ SIA_securing_the_free_world:0 "Securing The Free World"
+ SIA_securing_the_free_world_desc:0 "If we are to become a major power, it will be good to start acting as such. We will protect smaller nations that share our ideals and interests against any potential foreign threath."
  
  # Communist
  
@@ -914,6 +929,24 @@
  SIA_SEA_ADJ:0 "South East Asian"
  SIA_SEA_DEF:0 "United South East Asian Republic"
  
+############################### COMPANIES
+
+l_english:
+ sia_chaiseri:0 "Chaiseri"
+ sia_klangnawa:0 "Klangnawa"
+ sia_siam_aviation_industries:0 "Siam Aviation Industries"
+ sia_royal_siam_air_force_workshop:0 "Royal Siam Air Force Workshop"
+ sia_siam_cement_group:0 "Siam Cement Group"
+ sia_royal_state_railway:0 "Royal State Railway"
+ sia_thammasat_university_laboratories:0 "Thammasat University Laboratories"
+ sia_chulalongkorn_university:0 "Chulalongkorn University"
+ sia_b_grimm:0 "B.Grimm"
+ sia_siam_fuel_department:0 "Siam Fuel Department"
+ sia_ordnance_materiel_depot_division:0 "Ordnance Materiel Depot Divisions"
+ sia_sustain_firepoer_and_mobilty:0 "Sustain Firepower and Mobilty"
+ sia_ford_siam_manufacturing:0 "Ford Siam Manufacturing"
  
+ dispersed_industry_category_research:0 "Dispersed Industry Research Speed"
+ fighter_research:0 "Fighter Research Speed"
  
  
