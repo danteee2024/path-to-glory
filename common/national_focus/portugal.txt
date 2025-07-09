@@ -1782,7 +1782,7 @@ focus = {
 			    uses = 1
 			    category = air_equipment
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = POR_naval_research_institute
 			    bonus = 0.75
 			    uses = 1
@@ -2828,7 +2828,7 @@ focus = {
 			    uses = 1
 			    category = naval_artillery
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = POR_naval_research_institute
 			    bonus = 0.75
 			    uses = 1
@@ -3730,7 +3730,7 @@ focus = {
 			    uses = 1
 			    category = armor
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = POR_army_research_institute
 			    bonus = 0.75
 			    uses = 1
