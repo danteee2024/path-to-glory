@@ -1,0 +1,115 @@
+ideas = {
+	country = {
+
+		classified_rank_S = {
+					
+			allowed = {
+				always = yes 
+			}
+
+			modifier = {
+				custom_modifier_tooltip = classified_rank_S_tt
+
+				political_power_gain = 0.15
+				war_support_factor = 0.1
+				drift_defence_factor = 0.5
+			}
+
+			on_add = {
+				set_rule = { units_deployed_to_overlord = no }
+			}
+
+		}
+
+		classified_rank_A = {
+					
+			allowed = {
+				always = yes 
+			}
+
+			modifier = {
+				custom_modifier_tooltip = classified_rank_A_tt
+
+				political_power_gain = 0.1
+				war_support_factor = 0.05
+				drift_defence_factor = 0.25
+			}
+
+			on_add = {
+				set_rule = { units_deployed_to_overlord = no }
+			}
+
+		}
+
+		classified_rank_B = {
+					
+			allowed = {
+				always = yes 
+			}
+
+			modifier = {
+				custom_modifier_tooltip = classified_rank_B_tt
+
+				political_power_gain = 0.075
+			}
+
+			on_add = {
+				set_rule = { units_deployed_to_overlord = no }
+			}
+
+		}
+
+		classified_rank_C = {
+					
+			allowed = {
+				always = yes 
+			}
+
+			modifier = {
+				custom_modifier_tooltip = classified_rank_C_tt
+
+				political_power_gain = 0.05
+			}
+
+			on_add = {
+				set_rule = { units_deployed_to_overlord = no }
+			}
+
+		}
+
+		classified_rank_D = {
+					
+			allowed = {
+				always = yes 
+			}
+
+			modifier = {
+				custom_modifier_tooltip = classified_rank_D_tt
+
+				political_power_gain = 0.025
+			}
+
+			on_add = {
+				set_rule = { units_deployed_to_overlord = no }
+			}
+
+		}
+
+		classified_rank_NO = {
+					
+			allowed = {
+				always = yes 
+			}
+
+			modifier = {
+				custom_modifier_tooltip = classified_rank_NO_tt
+			}
+
+			on_add = {
+				set_rule = { units_deployed_to_overlord = no }
+			}
+
+		}
+	}
+
+}

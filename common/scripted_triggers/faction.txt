@@ -1,0 +1,54 @@
+
+DIPLOMACY_JOIN_FACTION_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			has_global_flag = wia_faction_limiter_enabled_gflag
+		}
+
+		if = {
+			limit = {
+				has_country_flag = rank_game_started
+			}
+
+			custom_trigger_tooltip = { tooltip = wia_faction_not_allowed_ai_tt   date > 3000.01.01 }
+		}
+
+		else = {
+			custom_trigger_tooltip = {
+				tooltip = wia_faction_not_allowed_size_tt
+				check_variable = { 
+					var = ROOT.dr_country_score_var
+					value = FROM.dr_faction_space_avail_var
+					compare = less_than_or_equals
+				}
+			}
+		}
+	}
+}
+
+DIPLOMACY_OFFER_JOIN_FACTION_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			has_global_flag = wia_faction_limiter_enabled_gflag
+		}
+
+		if = {
+			limit = {
+				has_country_flag = rank_game_started
+			}
+
+			custom_trigger_tooltip = { tooltip = wia_faction_not_allowed_ai_tt   date > 3000.01.01 }
+
+			else = {
+				custom_trigger_tooltip = {
+		    		tooltip = wia_faction_not_allowed_size_tt2
+		    		check_variable = { 
+						var = FROM.dr_country_score_var
+						value = ROOT.dr_faction_space_avail_var
+						compare = less_than_or_equals
+					}
+		    	}
+		    }
+		}
+	}
+}

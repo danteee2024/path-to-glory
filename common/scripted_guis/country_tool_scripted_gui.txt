@@ -1,0 +1,1028 @@
+scripted_gui = {
+
+	country_tool_button_scripted_gui = {
+		context_type = player_context
+		window_name = "country_tool_open_window"
+
+		visible = {
+			is_ai = no
+		}
+
+		effects = {
+			ct_open_button_click = {
+				ROOT = {set_country_flag = ct_window_opened}
+			}
+		}
+	}
+
+	country_tool_scripted_gui = {
+		context_type = player_context
+		window_name = "country_tool_window"
+
+		visible = {
+			ROOT = {has_country_flag = ct_window_opened}
+		}
+
+		effects = {
+			ct_main_close_button_click = {
+				ROOT = {clr_country_flag = ct_window_opened}
+			}
+
+			ct_main_gear_button_click = {
+				ROOT = {set_country_flag = ct_gear_flag}
+				ROOT = {clr_country_flag = ct_rank_flag}
+				ROOT = {clr_country_flag = ct_main_flag}
+			}
+
+			ct_main_rank_button_click = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = rank_game_started
+						}
+						has_country_flag = rank_game_started2
+					}
+
+					clr_country_flag = rank_game_started2
+				}
+
+				set_country_flag = ct_rank_flag
+				clr_country_flag = ct_gear_flag
+				clr_country_flag = ct_main_flag
+
+				clear_array = global.rank_S
+				clear_array = global.rank_A
+				clear_array = global.rank_B
+				clear_array = global.rank_C
+				clear_array = global.rank_D
+				clear_array = global.charters_factions
+
+				if = {
+					limit = {
+						OR = {
+							is_ai = no
+							is_faction_leader = yes
+							is_major = yes
+						}
+					}
+	
+					every_country = {
+						if = {
+							limit = { check_variable = { rank = 4 } }
+							add_to_array = { array = global.rank_S value = THIS.id }
+						}
+						else_if = {
+							limit = { check_variable = { rank = 3 } }
+							add_to_array = { array = global.rank_A value = THIS.id }
+
+							else_if = {
+								limit = { check_variable = { rank = 2 } }
+							    add_to_array = { array = global.rank_B value = THIS.id }
+
+								else_if = {
+									limit = { check_variable = { rank = 1 } }
+									add_to_array = { array = global.rank_C value = THIS.id }
+
+									else_if = {
+										limit = { check_variable = { rank = 0 } }
+										add_to_array = { array = global.rank_D value = THIS.id }
+
+										
+									}
+								}
+							}
+						}
+						if = {
+					    	limit = { check_variable = { THIS.faction_leader = THIS.id } }
+					    	add_to_array = { array = global.charters_factions value = THIS.id }
+					    	set_variable = { fac_score = 0 }
+					    	set_variable = { dr_faction_space_avail_var = dr_faction_limit_var }
+					    	for_each_loop = {
+					    		array = THIS.faction_members
+					    		value = v
+								add_to_variable = { fac_score = v:dr_country_score_var }
+					    	}
+					    	subtract_from_variable = { dr_faction_space_avail_var = fac_score }
+					    }
+					}
+
+				    every_country = {
+				    	limit = {
+				    		is_in_faction = yes
+				    		is_faction_leader = no
+				    	}
+				    	faction_leader = { set_variable = { PREV.dr_faction_space_avail_var = THIS.dr_faction_space_avail_var } }
+				    }
+				}
+			}
+
+			ct_main_home_button_click = {
+				ROOT = {set_country_flag = ct_main_flag}
+				ROOT = {clr_country_flag = ct_rank_flag}
+				ROOT = {clr_country_flag = ct_gear_flag}
+			}
+		}
+
+		triggers = {
+			ct_main_bg2_visible = {
+				has_country_flag = ct_main_flag
+				NOT = {
+					has_country_flag = ct_rank_flag
+					has_country_flag = ct_gear_flag
+				}
+			}
+			ct_rank_bg_visible = {
+				has_country_flag = ct_rank_flag
+				NOT = {
+					has_country_flag = ct_main_flag
+					has_country_flag = ct_gear_flag
+				}
+			}
+			ct_gear_bg_visible = {
+				has_country_flag = ct_gear_flag
+				NOT = {
+					has_country_flag = ct_main_flag
+					has_country_flag = ct_rank_flag
+				}
+			}
+		}
+
+		properties = {
+			rank_country_flag = { image = [THIS.GetFlag] }
+		}
+	}
+
+	country_tool_gear_scripted_gui = {
+		context_type = player_context
+		window_name = "country_tool_gear_window"
+		parent_window_name = country_tool_window
+
+		visible = {
+			AND = {
+			    ROOT = {has_country_flag = ct_gear_flag}
+			    NOT = {ROOT = {has_country_flag = ct_rank_flag}}
+				NOT = {ROOT = {has_country_flag = ct_main_flag}}
+			}
+		}
+
+		triggers = {
+			ct_gear1_button_click_enabled = {
+				ROOT = {has_political_power > 124}
+				NOT = {has_country_flag = ct_gear1_done}
+			}
+
+			ct_gear2_button_click_enabled = {
+				ROOT = {has_political_power > 124}
+				has_country_flag = ct_gear1_done
+				NOT = {has_country_flag = ct_gear2_done}
+			}
+
+			ct_gear3_button_click_enabled = {
+				ROOT = {has_political_power > 149}
+				has_country_flag = ct_gear2_done
+				NOT = {has_country_flag = ct_gear3_done}
+			}
+
+			ct_gear4a_button_click_enabled = {
+				ROOT = {has_political_power > 174}
+				has_country_flag = ct_gear3_done
+				NOT = {has_country_flag = ct_gear4a_done}
+				NOT = {has_country_flag = ct_gear4b_done}
+			}
+
+			ct_gear4b_button_click_enabled = {
+				ROOT = {has_political_power > 174}
+				has_country_flag = ct_gear3_done
+				NOT = {has_country_flag = ct_gear4a_done}
+				NOT = {has_country_flag = ct_gear4b_done}
+			}
+
+			ct_gear5_button_click_enabled = {
+				ROOT = {has_political_power > 199}
+				OR = {
+					has_country_flag = ct_gear4a_done
+					has_country_flag = ct_gear4b_done
+				}
+				NOT = {has_country_flag = ct_gear5_done}
+			}
+
+			ct_gear6_button_click_enabled = {
+				ROOT = {has_political_power > 124}
+				NOT = {has_country_flag = ct_gear6_done}
+			}
+
+			ct_gear7a_button_click_enabled = {
+				ROOT = {has_political_power > 124}
+				has_country_flag = ct_gear6_done
+				NOT = {has_country_flag = ct_gear7a_done}
+				NOT = {has_country_flag = ct_gear7b_done}
+			}
+
+			ct_gear7b_button_click_enabled = {
+				ROOT = {has_political_power > 124}
+				has_country_flag = ct_gear6_done
+				NOT = {has_country_flag = ct_gear7a_done}
+				NOT = {has_country_flag = ct_gear7b_done}
+			}
+
+			ct_gear8_button_click_enabled = {
+				ROOT = {has_political_power > 149}
+				OR = {
+					has_country_flag = ct_gear7a_done
+					has_country_flag = ct_gear7b_done
+				}
+				NOT = {has_country_flag = ct_gear8_done}
+			}
+
+			ct_gear9_button_click_enabled = {
+				ROOT = {has_political_power > 174}
+				has_country_flag = ct_gear8_done
+				NOT = {has_country_flag = ct_gear9_done}
+			}
+
+			ct_gear10_button_click_enabled = {
+				ROOT = {has_political_power > 199}
+				has_country_flag = ct_gear9_done
+				NOT = {has_country_flag = ct_gear10_done}
+			}
+
+			ct_gear11_button_click_enabled = {
+				ROOT = {has_political_power > 74}
+				NOT = {has_country_flag = ct_gear11_done}
+			}
+
+			ct_gear12_button_click_enabled = {
+				ROOT = {has_political_power > 124}
+				has_country_flag = ct_gear11_done
+				NOT = {has_country_flag = ct_gear12_done}
+			}
+
+			ct_gear13a_button_click_enabled = {
+				ROOT = {has_political_power > 149}
+				has_country_flag = ct_gear12_done
+				NOT = {has_country_flag = ct_gear13a_done}
+				NOT = {has_country_flag = ct_gear13b_done}
+			}
+
+			ct_gear13b_button_click_enabled = {
+				ROOT = {has_political_power > 149}
+				has_country_flag = ct_gear12_done
+				NOT = {has_country_flag = ct_gear13a_done}
+				NOT = {has_country_flag = ct_gear13b_done}
+			}
+
+			ct_gear14_button_click_enabled = {
+				ROOT = {has_political_power > 174}
+				OR = {
+					has_country_flag = ct_gear13a_done
+					has_country_flag = ct_gear13b_done
+				}
+				NOT = {has_country_flag = ct_gear14_done}
+			}
+
+			ct_gear15_button_click_enabled = {
+				ROOT = {has_political_power > 199}
+				has_country_flag = ct_gear14_done
+				NOT = {has_country_flag = ct_gear15_done}
+			}
+
+			ct_gear16_button_click_enabled = {
+				ROOT = {has_political_power > 74}
+				NOT = {has_country_flag = ct_gear16_done}
+			}
+
+			ct_gear17_button_click_enabled = {
+				ROOT = {has_political_power > 124}
+				has_country_flag = ct_gear16_done
+				NOT = {has_country_flag = ct_gear17_done}
+			}
+
+			ct_gear18_button_click_enabled = {
+				ROOT = {has_political_power > 149}
+				has_country_flag = ct_gear17_done
+				NOT = {has_country_flag = ct_gear18_done}
+			}
+
+			ct_gear19a_button_click_enabled = {
+				ROOT = {has_political_power > 174}
+				has_country_flag = ct_gear18_done
+				NOT = {has_country_flag = ct_gear19a_done}
+				NOT = {has_country_flag = ct_gear19b_done}
+			}
+
+			ct_gear19b_button_click_enabled = {
+				ROOT = {has_political_power > 174}
+				has_country_flag = ct_gear18_done
+				NOT = {has_country_flag = ct_gear19a_done}
+				NOT = {has_country_flag = ct_gear19b_done}
+				any_state = {
+					is_owned_and_controlled_by = ROOT
+					is_coastal = yes
+				}
+			}
+
+			ct_gear20_button_click_enabled = {
+				ROOT = {has_political_power > 199}
+				OR = {
+					has_country_flag = ct_gear19a_done
+					has_country_flag = ct_gear19b_done
+				}
+				NOT = {has_country_flag = ct_gear20_done}
+			}
+
+			ct_gear21_button_click_enabled = {
+				ROOT = {has_political_power > 74}
+				NOT = {has_country_flag = ct_gear21_done}
+			}
+
+			ct_gear22_button_click_enabled = {
+				ROOT = {has_political_power > 124}
+				has_country_flag = ct_gear21_done
+				NOT = {has_country_flag = ct_gear22_done}
+			}
+
+			ct_gear23_button_click_enabled = {
+				ROOT = {has_political_power > 149}
+				has_country_flag = ct_gear22_done
+				NOT = {has_country_flag = ct_gear23_done}
+			}
+
+			ct_gear24a_button_click_enabled = {
+				ROOT = {has_political_power > 174}
+				has_country_flag = ct_gear23_done
+				NOT = {has_country_flag = ct_gear24a_done}
+				NOT = {has_country_flag = ct_gear24b_done}
+			}
+
+			ct_gear24b_button_click_enabled = {
+				ROOT = {has_political_power > 174}
+				has_country_flag = ct_gear23_done
+				NOT = {has_country_flag = ct_gear24a_done}
+				NOT = {has_country_flag = ct_gear24b_done}
+			}
+
+			ct_gear25_button_click_enabled = {
+				ROOT = {has_political_power > 199}
+				OR = {
+					has_country_flag = ct_gear24a_done
+					has_country_flag = ct_gear24b_done
+				}
+				NOT = {has_country_flag = ct_gear25_done}
+			}
+
+			ct_gear1_cross_visible = {
+				has_country_flag = ct_gear1_done
+			}
+			ct_gear2_cross_visible = {
+				has_country_flag = ct_gear2_done
+			}
+			ct_gear3_cross_visible = {
+				has_country_flag = ct_gear3_done
+			}
+			ct_gear4a_cross_visible = {
+				has_country_flag = ct_gear4a_done
+			}
+			ct_gear4b_cross_visible = {
+				has_country_flag = ct_gear4b_done
+			}
+			ct_gear5_cross_visible = {
+				has_country_flag = ct_gear5_done
+			}
+			ct_gear6_cross_visible = {
+				has_country_flag = ct_gear6_done
+			}
+			ct_gear7a_cross_visible = {
+				has_country_flag = ct_gear7a_done
+			}
+			ct_gear7b_cross_visible = {
+				has_country_flag = ct_gear7b_done
+			}
+			ct_gear8_cross_visible = {
+				has_country_flag = ct_gear8_done
+			}
+			ct_gear9_cross_visible = {
+				has_country_flag = ct_gear9_done
+			}
+			ct_gear10_cross_visible = {
+				has_country_flag = ct_gear10_done
+			}
+			ct_gear11_cross_visible = {
+				has_country_flag = ct_gear11_done
+			}
+			ct_gear12_cross_visible = {
+				has_country_flag = ct_gear12_done
+			}
+			ct_gear13a_cross_visible = {
+				has_country_flag = ct_gear13a_done
+			}
+			ct_gear13b_cross_visible = {
+				has_country_flag = ct_gear13b_done
+			}
+			ct_gear14_cross_visible = {
+				has_country_flag = ct_gear14_done
+			}
+			ct_gear15_cross_visible = {
+				has_country_flag = ct_gear15_done
+			}
+			ct_gear16_cross_visible = {
+				has_country_flag = ct_gear16_done
+			}
+			ct_gear17_cross_visible = {
+				has_country_flag = ct_gear17_done
+			}
+			ct_gear18_cross_visible = {
+				has_country_flag = ct_gear18_done
+			}
+			ct_gear19a_cross_visible = {
+				has_country_flag = ct_gear19a_done
+			}
+			ct_gear19b_cross_visible = {
+				has_country_flag = ct_gear19b_done
+			}
+			ct_gear20_cross_visible = {
+				has_country_flag = ct_gear20_done
+			}
+			ct_gear21_cross_visible = {
+				has_country_flag = ct_gear21_done
+			}
+			ct_gear22_cross_visible = {
+				has_country_flag = ct_gear22_done
+			}
+			ct_gear23_cross_visible = {
+				has_country_flag = ct_gear23_done
+			}
+			ct_gear24a_cross_visible = {
+				has_country_flag = ct_gear24a_done
+			}
+			ct_gear24b_cross_visible = {
+				has_country_flag = ct_gear24b_done
+			}
+			ct_gear25_cross_visible = {
+				has_country_flag = ct_gear25_done
+			}
+		}
+
+		effects = {
+			ct_gear1_button_click = {
+				ROOT = {
+					add_ideas = ct_gear1_idea
+					add_political_power = -125
+					set_country_flag = ct_gear1_done
+				}
+			}
+
+			ct_gear2_button_click = {
+				ROOT = {
+					swap_ideas = {
+						remove_idea = ct_gear1_idea
+						add_idea = ct_gear2_idea
+					}
+					add_political_power = -125
+					set_country_flag = ct_gear2_done
+				}
+			}
+
+			ct_gear3_button_click = {
+				ROOT = {
+					swap_ideas = {
+						remove_idea = ct_gear2_idea
+						add_idea = ct_gear3_idea
+					}
+					add_political_power = -150
+					set_country_flag = ct_gear3_done
+				}
+			}
+
+			ct_gear4a_button_click = {
+				ROOT = {
+					add_ideas = ct_gear4a_idea
+					add_political_power = -175
+					set_country_flag = ct_gear4a_done
+				}
+			}
+
+			ct_gear4b_button_click = {
+				ROOT = {
+					add_ideas = ct_gear4b_idea
+					add_political_power = -175
+					set_country_flag = ct_gear4b_done
+				}
+			}
+
+			ct_gear5_button_click = {
+				ROOT = {
+					swap_ideas = {
+						remove_idea = ct_gear3_idea
+						add_idea = ct_gear5_idea
+					}
+					add_political_power = -200
+					set_country_flag = ct_gear5_done
+				}
+			}
+
+			ct_gear6_button_click = {
+				ROOT = {
+					add_ideas = ct_gear6_idea
+					add_political_power = -125
+					set_country_flag = ct_gear6_done
+				}
+			}
+
+			ct_gear7a_button_click = {
+				ROOT = {
+					add_ideas = ct_gear7a_idea
+					add_political_power = -125
+					set_country_flag = ct_gear7a_done
+				}
+			}
+
+			ct_gear7b_button_click = {
+				ROOT = {
+					add_ideas = ct_gear7b_idea
+					add_political_power = -125
+					set_country_flag = ct_gear7b_done
+				}
+			}
+
+			ct_gear8_button_click = {
+				ROOT = {
+					add_ideas = ct_gear8_idea
+					add_political_power = -150
+					set_country_flag = ct_gear8_done
+				}
+			}
+
+			ct_gear9_button_click = {
+				ROOT = {
+					add_ideas = ct_gear9_idea
+					add_political_power = -175
+					set_country_flag = ct_gear9_done
+				}
+			}
+
+			ct_gear10_button_click = {
+				ROOT = {
+					add_ideas = ct_gear10_idea
+					add_political_power = -200
+					set_country_flag = ct_gear10_done
+				}
+			}
+
+			ct_gear11_button_click = {
+				ROOT = {
+					add_ideas = ct_gear11_idea
+					add_political_power = -75
+					set_country_flag = ct_gear11_done
+				}
+			}
+
+			ct_gear12_button_click = {
+				ROOT = {
+					add_ideas = ct_gear12_idea
+					add_political_power = -125
+					set_country_flag = ct_gear12_done
+				}
+			}
+
+			ct_gear13a_button_click = {
+				ROOT = {
+					add_ideas = ct_gear13a_idea
+					add_political_power = -150
+					set_country_flag = ct_gear13a_done
+				}
+			}
+
+			ct_gear13b_button_click = {
+				ROOT = {
+					add_ideas = ct_gear13b_idea
+					add_political_power = -150
+					set_country_flag = ct_gear13b_done
+				}
+			}
+
+			ct_gear14_button_click = {
+				ROOT = {
+					add_ideas = ct_gear14_idea
+					add_political_power = -175
+					set_country_flag = ct_gear14_done
+				}
+			}
+
+			ct_gear15_button_click = {
+				ROOT = {
+					add_ideas = ct_gear15_idea
+					add_political_power = -200
+					set_country_flag = ct_gear15_done
+
+					add_tech_bonus = {
+						bonus = 0.5
+						uses = 1
+						category = nuclear
+					}
+				}
+			}
+
+			ct_gear16_button_click = {
+				ROOT = {
+					add_ideas = ct_gear16_idea
+					add_political_power = -75
+					set_country_flag = ct_gear16_done
+				}
+			}
+
+			ct_gear17_button_click = {
+				ROOT = {
+					add_ideas = ct_gear17_idea
+					add_political_power = -125
+					set_country_flag = ct_gear17_done
+				}
+			}
+
+			ct_gear18_button_click = {
+				ROOT = {
+					add_ideas = ct_gear18_idea
+					add_political_power = -150
+					set_country_flag = ct_gear18_done
+				}
+			}
+
+			ct_gear19a_button_click = {
+				ROOT = {
+					add_ideas = ct_gear19a_idea
+					add_political_power = -175
+					set_country_flag = ct_gear19a_done
+				}
+			}
+
+			ct_gear19b_button_click = {
+				ROOT = {
+					add_ideas = ct_gear19b_idea
+					add_political_power = -175
+					set_country_flag = ct_gear19b_done
+				}
+			}
+
+			ct_gear20_button_click = {
+				ROOT = {
+					add_ideas = ct_gear20_idea
+					add_political_power = -200
+					set_country_flag = ct_gear20_done
+				}
+			}
+
+			ct_gear21_button_click = {
+				ROOT = {
+					add_ideas = ct_gear21_idea
+					add_political_power = -75
+					set_country_flag = ct_gear21_done
+				}
+			}
+
+			ct_gear22_button_click = {
+				ROOT = {
+					add_ideas = ct_gear22_idea
+					add_political_power = -125
+					set_country_flag = ct_gear22_done
+				}
+			}
+
+			ct_gear23_button_click = {
+				ROOT = {
+					add_ideas = ct_gear23_idea
+					add_political_power = -150
+					set_country_flag = ct_gear23_done
+				}
+			}
+			
+			ct_gear24a_button_click = {
+				ROOT = {
+					add_ideas = ct_gear24a_idea
+					add_political_power = -175
+					set_country_flag = ct_gear24a_done
+				}
+			}
+
+			ct_gear24b_button_click = {
+				ROOT = {
+					add_ideas = ct_gear24b_idea
+					add_political_power = -175
+					set_country_flag = ct_gear24b_done
+				}
+			}
+
+			ct_gear25_button_click = {
+				ROOT = {
+					add_ideas = ct_gear25_idea
+					add_political_power = -200
+					set_country_flag = ct_gear25_done
+				}
+			}
+		}
+	}
+
+	country_tool_rank_scripted_gui = {
+		context_type = player_context
+		window_name = "country_tool_rank_window"
+		parent_window_name = country_tool_window
+
+		visible = {
+			AND = {
+			    ROOT = {has_country_flag = ct_rank_flag}
+			    NOT = {ROOT = {has_country_flag = ct_gear_flag}}
+				NOT = {ROOT = {has_country_flag = ct_main_flag}}
+			}
+		}
+
+		triggers = {
+			rank_s_gridbox_visible = {
+				NOT = {
+					has_country_flag = rank_game_started
+					has_country_flag = rank_game_started2
+				}
+			}
+			rank_a_gridbox_visible = {
+				NOT = {
+					has_country_flag = rank_game_started
+					has_country_flag = rank_game_started2
+				}
+			}
+			rank_b_gridbox_visible = {
+				NOT = {
+					has_country_flag = rank_game_started
+					has_country_flag = rank_game_started2
+				}
+			}
+			rank_c_gridbox_visible = {
+				NOT = {
+					has_country_flag = rank_game_started
+					has_country_flag = rank_game_started2
+				}
+			}
+			rank_d_gridbox_visible = {
+				NOT = {
+					has_country_flag = rank_game_started
+					has_country_flag = rank_game_started2
+				}
+			}
+			rank_no_gridbox_visible = {
+				NOT = {
+					has_country_flag = rank_game_started
+					has_country_flag = rank_game_started2
+				}
+			}
+			charters_gridbox_factions_visible = {
+				NOT = {
+					has_country_flag = rank_game_started
+					has_country_flag = rank_game_started2
+				}
+			}
+
+			rank_S_txt_visible = {
+				NOT = {
+					has_country_flag = rank_game_started
+					has_country_flag = rank_game_started2
+				}
+			}
+			rank_A_txt_visible = {
+				NOT = {
+					has_country_flag = rank_game_started
+					has_country_flag = rank_game_started2
+				}
+			}
+			rank_B_txt_visible = {
+				NOT = {
+					has_country_flag = rank_game_started
+					has_country_flag = rank_game_started2
+				}
+			}
+			rank_C_txt_visible = {
+				NOT = {
+					has_country_flag = rank_game_started
+					has_country_flag = rank_game_started2
+				}
+			}
+			rank_D_txt_visible = {
+				NOT = {
+					has_country_flag = rank_game_started
+					has_country_flag = rank_game_started2
+				}
+			}
+			rank_NO_txt_visible = {
+				NOT = {
+					has_country_flag = rank_game_started
+					has_country_flag = rank_game_started2
+				}
+			}
+
+			rank_initializing_bg_visible = {
+				OR = {
+					has_country_flag = rank_game_started
+				    has_country_flag = rank_game_started2
+				}
+			}
+			rank_initializing_txt_visible = {
+				OR = {
+					has_country_flag = rank_game_started
+				    has_country_flag = rank_game_started2
+				}
+			}
+			rank_initializing_header_txt_visible = {
+				OR = {
+					has_country_flag = rank_game_started
+				    has_country_flag = rank_game_started2
+				}
+			}
+		}
+
+		dynamic_lists = {
+			rank_s_gridbox = {
+				array = global.rank_S
+				entry_container = rank_list_entry_window
+				change_scope = yes
+			}
+
+			rank_a_gridbox = {
+				array = global.rank_A
+				entry_container = rank_list_entry_window
+				change_scope = yes
+			}
+
+			rank_b_gridbox = {
+				array = global.rank_B
+				entry_container = rank_list_entry_window
+				change_scope = yes
+			}
+
+			rank_c_gridbox = {
+				array = global.rank_C
+				entry_container = rank_list_entry_window
+				change_scope = yes
+			}
+
+			rank_d_gridbox = {
+				array = global.rank_D
+				entry_container = rank_list_entry_window
+				change_scope = yes
+			}
+
+			charters_gridbox_factions = {
+				array = global.charters_factions
+				entry_container = faction_list_entry_window
+				change_scope = yes
+			}
+		}
+
+		properties = {
+			rank_country_flag = { image = [THIS.GetFlag] }
+		}
+	}
+
+	country_tool_main_scripted_gui = {
+		context_type = player_context
+		window_name = "country_tool_main_window"
+		parent_window_name = country_tool_window
+
+		properties = {
+			ct_main_flag = {
+				image = [ROOT.GetFlag]
+			}
+		}
+
+		visible = {
+			AND = {
+			    ROOT = {has_country_flag = ct_main_flag}
+			    NOT = {ROOT = {has_country_flag = ct_gear_flag}}
+				NOT = {ROOT = {has_country_flag = ct_rank_flag}}
+			}
+		}
+
+		effects = {
+			ct_main_sub3_sc1_on_button_click = {
+				ROOT = {
+					set_country_flag = st_activated
+				}
+			}
+			ct_main_sub3_sc1_off_button_click = {
+				ROOT = {
+					clr_country_flag = st_activated
+				}
+			}
+
+			ct_main_sub3_sc2_on_button_click = {
+				ROOT = {
+					set_country_flag = money_open
+				}
+			}
+			ct_main_sub3_sc2_off_button_click = {
+				ROOT = {
+					clr_country_flag = money_open
+				}
+			}
+
+			ct_main_sub3_sc3_on_button_click = {
+				ROOT = {
+					set_global_flag = toolpack_enabled
+				}
+			}
+			ct_main_sub3_sc3_off_button_click = {
+				ROOT = {
+					clr_global_flag = toolpack_enabled
+				}
+			}
+		}
+
+		triggers = {
+			ct_main_sub3_sc1_on_button_visible = {
+				NOT = {
+					has_country_flag = st_activated
+				}
+			}
+			ct_main_sub3_sc1_off_button_visible = {
+				has_country_flag = st_activated
+			}
+
+			ct_main_sub3_sc2_on_button_visible = {
+				NOT = {
+					has_country_flag = money_open
+				}
+			}
+			ct_main_sub3_sc2_off_button_visible = {
+				has_country_flag = money_open
+			}
+
+			ct_main_sub3_sc3_on_button_visible = {
+				NOT = {
+					has_global_flag = toolpack_enabled
+				}
+			}
+			ct_main_sub3_sc3_off_button_visible = {
+				has_global_flag = toolpack_enabled
+			}
+
+			ct_main_sub3_sc1_on_loc_visible = {
+				has_global_flag = wia_money_gflag
+				NOT = {
+					has_country_flag = st_activated
+				}
+			}
+			ct_main_sub3_sc1_off_loc_visible = {
+				has_global_flag = wia_money_gflag
+				has_country_flag = st_activated
+			}
+			ct_main_sub3_sc1alt_on_loc_visible = {
+				NOT = {
+					has_country_flag = st_activated
+				}
+				NOT = {
+					has_global_flag = wia_money_gflag
+				}
+			}
+			ct_main_sub3_sc1alt_off_loc_visible = {
+				has_country_flag = st_activated
+				NOT = {
+					has_global_flag = wia_money_gflag
+				}
+			}
+
+			ct_main_sub3_sc2_on_loc_visible = {
+				NOT = {
+					has_country_flag = money_open
+				}
+			}
+			ct_main_sub3_sc2_off_loc_visible = {
+				has_country_flag = money_open
+			}
+
+			ct_main_sub3_sc3_on_loc_visible = {
+				NOT = {
+					has_global_flag = toolpack_enabled
+				}
+			}
+			ct_main_sub3_sc3_off_loc_visible = {
+				has_global_flag = toolpack_enabled
+			}
+
+			ct_main_sub3_sc3_on_button_click_enabled = {
+				has_country_flag = wia_host
+			}
+			ct_main_sub3_sc3_off_button_click_enabled = {
+				has_country_flag = wia_host
+			}
+		}
+	}
+
+	country_tool_info_scripted_gui = {
+		context_type = player_context
+		window_name = "country_tool_info_window"
+		parent_window_name = country_tool_window
+
+		visible = {
+			AND = {
+			    ROOT = {has_country_flag = ct_main_flag}
+			    NOT = {ROOT = {has_country_flag = ct_gear_flag}}
+				NOT = {ROOT = {has_country_flag = ct_rank_flag}}
+			}
+		}
+	}
+	
+}

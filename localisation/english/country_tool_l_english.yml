@@ -1,0 +1,57 @@
+﻿l_english:
+#MAIN TT'S
+ct_main_gear_button_tt:0 "Gear Tree"
+ct_main_rank_button_tt:0 "Country Ranks"
+ct_main_topbar_info_loc: "[ROOT.GetName] [GetDateText]"
+ 
+
+wia_rank_tt: "£experience_neutral_texticon §YCountry Score§!: [?PREV.wia_rank_var]"
+wia_rank_no: "Macro Power"
+wia_rank_d: "Minor Power"
+wia_rank_c: "Regional Power"
+wia_rank_b: "Great Power"
+wia_rank_a: "Major Power"
+wia_rank_s: "Super-Major Power"
+
+
+ 
+
+#RANK TT'S
+rank_S_txt: "Super-Major Power\n(10 Points)"
+rank_A_txt: "Major Power\n(8 Points)"
+rank_B_txt: "Great Power\n(6 Points)"
+rank_C_txt: "Regional Power\n(4 Points)"
+rank_D_txt: "Minor Power\n(2 Points)"
+rank_game_initializing_loc: "Game is initializing, please wait several days to calculate ranks."
+rank_game_initialized_loc: "Game has initialized, please click 'Country Ranks' button to see ranks."
+rank_game_initialize_loc: "[RankInitializingLoc]"
+rank_game_initializing_header_loc: "GAME IS INITIALIZING, PLEASE WAIT..."
+faction_score: "[?fac_score]/[?dr_faction_limit_var]"
+rank_country_flag_tt2: "[THIS.GetName]: §L[THIS.GetFactionName]§!"
+
+wia_faction_not_allowed_ai_tt: "The game has not initialized, please wait several days to let game calculate the ranks."
+wia_faction_not_allowed_size_tt: "§RFaction limit exceeded, you can't join to this faction until faction limit increases or faction leader kicks someone.§!"
+wia_faction_not_allowed_size_tt2: "§RFaction limit exceeded, you can't invite any country until faction limit increases or you kick someone.§!"
+
+war_limit_oversized_faction: "§RYour factions limit is oversized, please kick someone before declaring war.§!"
+
+war_limit_s: "§RYou can't declare war to any country until 1939, check the description of your rank idea.§!"
+war_limit_b: "§RYou can't declare war to any country until 1939, check the description of your rank idea.§!"
+war_limit_c: "§RYou can't declare war to any country until 1938, check the description of your rank idea.§!"
+war_limit_d: "§RYou can't declare war to any country until 1937, check the description of your rank idea.§!"
+
+#HOME TT'S
+ct_main_name_loc: "[ROOT.GetName]"
+ct_main_info_loc: "£political_power_texticon §4Ideology§!: [?country_leader.GetIdeology]  £experience_neutral_texticon §YRank§!: [RankScriptedLoc]"
+ct_main_sub_rule_loc: "Preffered Rules"
+ct_main_sub_host_loc: "Host Guide"
+ct_main_sub3_sc1_on_txt: "Open State Tool"
+ct_main_sub3_sc1alt_on_txt: "Open Factory Tool"
+ct_main_sub3_sc1_off_txt: "Close State Tool"
+ct_main_sub3_sc1alt_off_txt: "Close Factory Tool"
+ct_main_sub3_sc2_on_txt: "Open Money Menu"
+ct_main_sub3_sc2_off_txt: "Close Money Menu"
+ct_main_sub3_sc3_on_txt: "Open Host Tool"
+ct_main_sub3_sc3_off_txt: "Close Host Tool"
+ct_main_sub3_header_txt: "Shortcuts"
+

@@ -1,0 +1,323 @@
+on_actions = {
+
+	on_startup = {
+		effect = {
+			set_variable = { dr_faction_limit_var = 20 }
+			set_variable = { dr_calculate_ranks_timer_var = 3 }
+			set_variable = { dr_calculate_fac_timer_var = 12 }
+		}
+	}
+
+	on_daily = {
+		effect = {
+			if = {
+				limit = {
+					date < 1936.01.03
+				}
+
+				set_variable = { dr_faction_limit_var = 12 }
+				set_variable = { dr_calculate_ranks_timer_var = 3 }
+				set_variable = { dr_calculate_fac_timer_var = 12 }
+			}
+		}
+	}			
+
+	on_monthly = {
+		effect = {
+			add_to_variable = { dr_calculate_fac_timer_var = -1 }
+			if = {
+				limit = { check_variable = { dr_calculate_fac_timer_var = 0 } }
+				add_to_variable = { dr_faction_limit_var = 2 }
+				set_variable = { dr_calculate_fac_timer_var = 12 }
+			}
+		}
+	}
+
+	on_daily = {
+		effect = {
+			if = {
+				limit = {
+				}
+
+				###RESOURCES##
+				set_temp_variable = { temp_total_oil_resource = 0 }
+				set_temp_variable = { temp_total_aluminium_resource = 0 }
+				set_temp_variable = { temp_total_rubber_resource = 0 }
+				set_temp_variable = { temp_total_tungsten_resource = 0 }
+				set_temp_variable = { temp_total_steel_resource = 0 }
+				set_temp_variable = { temp_total_chromium_resource = 0 }
+				every_country = {
+					add_to_temp_variable = { temp_total_oil_resource = resource_produced@oil }
+					add_to_temp_variable = { temp_total_aluminium_resource = resource_produced@aluminium }
+					add_to_temp_variable = { temp_total_rubber_resource = resource_produced@rubber }
+					add_to_temp_variable = { temp_total_tungsten_resource = resource_produced@tungsten }
+					add_to_temp_variable = { temp_total_steel_resource = resource_produced@steel }
+					add_to_temp_variable = { temp_total_chromium_resource = resource_produced@chromium }
+				}
+				set_temp_variable = { temp_share_oil_resource = resource_produced@oil }
+				set_temp_variable = { temp_share_aluminium_resource = resource_produced@aluminium }
+				set_temp_variable = { temp_share_rubber_resource = resource_produced@rubber }
+				set_temp_variable = { temp_share_tungsten_resource = resource_produced@tungsten }
+				set_temp_variable = { temp_share_steel_resource = resource_produced@steel }
+				set_temp_variable = { temp_share_chromium_resource = resource_produced@chromium }
+				divide_temp_variable = { temp_share_oil_resource = temp_total_oil_resource }
+				divide_temp_variable = { temp_share_aluminium_resource = temp_total_aluminium_resource }
+				divide_temp_variable = { temp_share_rubber_resource = temp_total_rubber_resource }
+				divide_temp_variable = { temp_share_tungsten_resource = temp_total_steel_resource }
+				divide_temp_variable = { temp_share_steel_resource = temp_total_steel_resource }
+				divide_temp_variable = { temp_share_chromium_resource = temp_total_chromium_resource }
+				multiply_temp_variable = { temp_share_oil_resource = 17.5 }
+				multiply_temp_variable = { temp_share_aluminium_resource = 12.5 }
+				multiply_temp_variable = { temp_share_rubber_resource = 20 }
+				multiply_temp_variable = { temp_share_tungsten_resource = 12.5 }
+				multiply_temp_variable = { temp_share_steel_resource = 7.5 }
+				multiply_temp_variable = { temp_share_chromium_resource = 5 }
+				set_temp_variable = { temp_share_resources = temp_share_oil_resource }
+				add_to_temp_variable = { temp_share_resources = temp_share_aluminium_resource }
+				add_to_temp_variable = { temp_share_resources = temp_share_rubber_resource }
+				add_to_temp_variable = { temp_share_resources = temp_share_tungsten_resource }
+				add_to_temp_variable = { temp_share_resources = temp_share_steel_resource }
+				add_to_temp_variable = { temp_share_resources = temp_share_chromium_resource }
+				multiply_temp_variable = { temp_share_resources = 1.5 } #weighting
+				###RESOURCE###
+
+				###ARMY###
+				set_temp_variable = { temp_avail_manpower_k = max_available_manpower_k }
+				set_temp_variable = { temp_recruit_manpower_k = amount_manpower_in_deployment_queue }
+				divide_temp_variable = { temp_recruit_manpower_k = 1000 } #so it's in thousands
+				set_temp_variable = { temp_total_avail_manpower_k = temp_avail_manpower_k }
+				add_to_temp_variable = { temp_total_avail_manpower_k = temp_recruit_manpower_k }
+				divide_temp_variable = { temp_total_avail_manpower_k = 200 } # / (10*20)    <- 10 = so its in ten thousands (roughly equal to one 20width army; / ~10 battalions); each 10000 manpower is weighted as 5% (1/20) of a 20width army (i.e. 95% equipment)
+				divide_temp_variable = { temp_total_avail_manpower_k = 4 } # manpower 4x less contribution to strength
+				set_temp_variable = { temp_num_of_battalions = num_battalions }
+				set_temp_variable = { temp_num_of_armies = num_armies } #used to find % equipped
+				set_temp_variable = { temp_num_of_ships = num_ships }
+				divide_temp_variable = { temp_num_of_battalions = 10 } # weighted as one 20width army (10 battalions)
+				divide_temp_variable = { temp_num_of_armies = temp_num_of_battalions }
+				clamp_temp_variable = { var = temp_num_of_armies min = 0 max = 1 }
+				divide_temp_variable = { temp_num_of_ships = 50 } #weighted fifth the value of one 20width army (10 battalions)
+				set_temp_variable = { temp_strength = temp_num_of_battalions }
+				multiply_temp_variable = { temp_strength = temp_num_of_armies }
+				set_temp_variable = { temp_total_battalions = 0 }
+				every_country = {
+					add_to_temp_variable = { temp_total_battalions = num_battalions }
+				}
+				divide_temp_variable = { temp_total_battalions = 10 } # weighted as one 20width army (10 battalions)
+				set_temp_variable = { temp_share_battalions = temp_num_of_battalions }
+				divide_temp_variable = { temp_share_battalions = temp_total_battalions }
+				multiply_temp_variable = { temp_strength = temp_share_battalions }
+				multiply_temp_variable = { temp_strength = 2 } #BALANCE
+				add_to_temp_variable = { temp_strength = temp_total_avail_manpower_k }
+				add_to_temp_variable = { temp_strength = temp_num_of_ships }
+				multiply_temp_variable = { temp_strength = 0.5 } #BALANCE
+				###ARMY###
+
+				###ECONOMY###
+				#FACTORY#
+				set_temp_variable = { temp_total_civ_count = 0 }
+				set_temp_variable = { temp_total_mil_count = 0 }
+				set_temp_variable = { temp_total_dock_count = 0 }
+				every_country = {
+					add_to_temp_variable = { temp_total_civ_count = num_of_civilian_factories }
+					add_to_temp_variable = { temp_total_mil_count = num_of_military_factories }
+					add_to_temp_variable = { temp_total_dock_count = num_of_naval_factories }
+				}
+				#FACTORY#
+
+				#RESOURCE IMPORTED#
+				set_temp_variable = { temp_import_oil_resource = resource_imported@oil }
+				set_temp_variable = { temp_import_aluminium_resource = resource_imported@aluminium }
+				set_temp_variable = { temp_import_rubber_resource = resource_imported@rubber }
+				set_temp_variable = { temp_import_tungsten_resource = resource_imported@tungsten }
+				set_temp_variable = { temp_import_steel_resource = resource_imported@steel }
+				set_temp_variable = { temp_import_chromium_resource = resource_imported@chromium }
+				divide_temp_variable = { temp_import_oil_resource = 8 }
+				divide_temp_variable = { temp_import_aluminium_resource = 8 }
+				divide_temp_variable = { temp_import_rubber_resource = 8 }
+				divide_temp_variable = { temp_import_tungsten_resource = 8 }
+				divide_temp_variable = { temp_import_steel_resource = 8 }
+				divide_temp_variable = { temp_import_chromium_resource = 8 }
+				set_temp_variable = { temp_import_resources = temp_import_oil_resource }
+				add_to_temp_variable = { temp_import_resources = temp_import_aluminium_resource }
+				add_to_temp_variable = { temp_import_resources = temp_import_rubber_resource }
+				add_to_temp_variable = { temp_import_resources = temp_import_tungsten_resource }
+				add_to_temp_variable = { temp_import_resources = temp_import_steel_resource }
+				add_to_temp_variable = { temp_import_resources = temp_import_chromium_resource }
+				multiply_temp_variable = { temp_import_resources = 0.80 } #weighting
+				#RESOURCE IMPORTED#
+
+				#CALCULATOR#
+				set_temp_variable = { temp_share_civ_count = num_of_civilian_factories }
+				add_to_temp_variable = { temp_share_civ_count = temp_import_resources }
+				set_temp_variable = { temp_share_mil_count = num_of_military_factories }
+				set_temp_variable = { temp_share_dock_count = num_of_naval_factories }
+				divide_temp_variable = { temp_share_civ_count = temp_total_civ_count }
+				divide_temp_variable = { temp_share_mil_count = temp_total_mil_count }
+				divide_temp_variable = { temp_share_dock_count = temp_total_dock_count }
+				multiply_temp_variable = { temp_share_civ_count = 25 }
+				multiply_temp_variable = { temp_share_mil_count = 30 }
+				multiply_temp_variable = { temp_share_dock_count = 25 }
+				set_temp_variable = { temp_economy = temp_civ_count }
+				set_temp_variable = { temp_consumer_goods_factor = modifier@consumer_goods_factor }
+				multiply_temp_variable = { temp_consumer_goods_factor = -1 }
+				add_to_temp_variable = { temp_consumer_goods_factor = 1 }
+				multiply_temp_variable = { temp_economy = temp_consumer_goods_factor }
+				add_to_temp_variable = { temp_economy = temp_share_mil_count }
+				add_to_temp_variable = { temp_economy = temp_share_dock_count }
+				multiply_temp_variable = { temp_economy = 4 } #weighting
+				#CALCULATOR
+				###ECONOMY###
+
+				###OTHER###
+				set_temp_variable = { temp_nuke_count = num_of_nukes }
+				if = {
+					limit = { check_variable = { temp_nuke_count > 0 } }
+					set_temp_variable = { temp_nuke = 50 }
+				}
+
+				set_temp_variable = { temp_total = temp_share_resources }
+				add_to_temp_variable = { temp_total = temp_strength }
+				add_to_temp_variable = { temp_total = temp_economy }
+				add_to_temp_variable = { temp_total = temp_research }
+				add_to_temp_variable = { temp_total = temp_nuke }
+
+				if = {
+					limit =  {date > 1937.1.1}
+				}
+				###OTHER###
+
+
+				###CALCULUS###
+				set_temp_variable = { calculus = temp_total }
+
+				if = {
+					limit ={
+						check_variable = {calculus < 4}
+						OR = {
+							is_ai = no
+							is_major = yes
+						}
+					}
+					if = {
+						limit = {
+							is_subject = yes
+						}
+						set_variable = { dr_country_score_var = 0 }
+						else = {
+							set_variable = { dr_country_score_var = 2 }
+						}
+					}
+					set_variable = { rank = 1 }
+					remove_ideas = { classified_rank_S classified_rank_S  classified_rank_S  classified_rank_S classified_rank_S classified_rank_S }
+					add_ideas = classified_rank_S
+				}
+
+				else_if = {
+					limit = {
+						check_variable = {calculus < 16}
+						OR = {
+							is_ai = no
+							is_major = yes
+						}
+					}
+					if = {
+						limit = {
+							is_subject = yes
+						}
+						set_variable = { dr_country_score_var = 0 }
+						else = {
+							set_variable = { dr_country_score_var = 4 }
+						}
+					}
+					set_variable = { rank = 2 }
+					remove_ideas = { classified_rank_S classified_rank_S  classified_rank_S  classified_rank_S classified_rank_S classified_rank_S }
+					add_ideas = classified_rank_S
+
+					else_if = {
+						limit = {
+							check_variable = {calculus < 32}
+							OR = {
+								is_major = yes
+								is_ai = no
+							}
+						}
+						if = {
+							limit = {
+								is_subject = yes
+							}
+							set_variable = { dr_country_score_var = 0 }
+							else = {
+								set_variable = { dr_country_score_var = 6 }
+							}
+						}
+					    set_variable = { rank = 3 }
+					    remove_ideas = { classified_rank_S classified_rank_S  classified_rank_S  classified_rank_S classified_rank_S classified_rank_S }
+						add_ideas = classified_rank_S
+
+						else_if = {
+							limit = {
+								check_variable = {calculus < 64}
+								OR = {
+									is_major = yes
+									is_ai = no
+								}
+							}
+							if = {
+								limit = {
+									is_subject = yes
+								}
+								set_variable = { dr_country_score_var = 0 }
+								else = {
+									set_variable = { dr_country_score_var = 8 }
+								}
+							}
+					        set_variable = { rank = 4 }
+					        remove_ideas = { classified_rank_S classified_rank_S  classified_rank_S  classified_rank_S classified_rank_S classified_rank_S }
+							add_ideas = classified_rank_S
+
+							else_if = {
+								limit = {
+									check_variable = {calculus < 128}
+									OR = {
+										is_major = yes
+										is_ai = no
+									}
+								}	
+								if = {
+									limit = {
+										is_subject = yes
+									}
+									set_variable = { dr_country_score_var = 0 }
+
+									else = {
+										set_variable = { dr_country_score_var = 10 }
+									}
+								}
+					            set_variable = { rank = 5 }
+								remove_ideas = { classified_rank_S classified_rank_S  classified_rank_S  classified_rank_S classified_rank_S classified_rank_S }
+								add_ideas = classified_rank_S
+								
+								else_if = {
+									limit = {
+										is_ai = yes
+									}
+									set_variable = { dr_country_score_var = 0 }
+									set_variable = { rank = 0 }
+									remove_ideas = { classified_rank_S classified_rank_S  classified_rank_S  classified_rank_S classified_rank_S classified_rank_S }
+					                add_ideas = classified_rank_S
+								}
+							}
+						}
+					}
+				}
+				###CALCULUS###
+
+				set_variable  = {
+                   var = wia_rank_var
+                   value = calculus
+               }
+			   round_variable = wia_rank_var
+			}
+		}
+	}
+}

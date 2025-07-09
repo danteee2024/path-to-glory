@@ -1,0 +1,1175 @@
+guiTypes = {
+	containerWindowType = {
+		name = "country_tool_open_window"
+		position = { x=0  y=0	}
+		size = { width=400 height=400 }
+		Orientation = upper_left
+		
+		buttonType ={
+			name = "ct_open_button"
+			spriteType = "GFX_ct_open_button"
+			position = { x = 682 y = 40 }
+			shortcut = "1"
+		}
+	}
+
+	containerWindowType = {
+		name = "country_tool_window"
+		position = { x=-410  y=-200	}
+		size = { width=800 height=600 }
+		Orientation = center
+		moveable = yes
+		
+		background = {
+			name = "ct_main_bg"
+			quadTextureSprite = "GFX_tiled_window_w_close"
+		}
+
+		iconType ={
+			name = "ct_main_bg2"
+			spriteType = "GFX_ct_main_bg"
+			position = { x = 13 y = 13 }
+			alwaystransparent = yes
+		}
+		iconType ={
+			name = "ct_gear_bg"
+			spriteType = "GFX_ct_gear_bg"
+			position = { x = 13 y = 13 }
+			alwaystransparent = yes
+		}
+		iconType ={
+			name = "ct_rank_bg"
+			spriteType = "GFX_ct_rank_bg"
+			position = { x = 13 y = 13 }
+			alwaystransparent = yes
+		}
+
+		buttonType ={
+			name = "ct_main_close_button"
+			spriteType = "GFX_closebutton"
+			position = { x = 755 y = 13 }
+			shortcut = "1"
+		}
+
+		iconType ={
+			name ="ct_main_topbar"
+			spriteType = "GFX_land_battle_unit_bg"
+			position = { x = 11 y = 11 }
+			scale = 1.09
+		}
+
+		buttonType ={
+			name = "ct_main_gear_button"
+			spriteType = "GFX_reinstate_button"
+			position = { x = 18 y = 11 }
+			scale = 1.09
+		}
+
+		buttonType ={
+			name = "ct_main_rank_button"
+			spriteType = "GFX_reinstate_button"
+			position = { x = 127 y = 11 }
+			scale = 1.09
+		}
+
+		buttonType ={
+			name ="ct_main_home_button"
+			spriteType = "homepage"
+			position = { x = 115 y = 11 }
+			scale = 1.09
+		}
+
+		instantTextboxType = {
+			name = "ct_main_gear_txt"
+			position = { x = -26 y = 23 }
+			font = "hoi_26mbs"
+			text = ct_main_gear_button_tt
+			maxWidth = 200
+			maxHeight = 23
+			format = center
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "ct_main_rank_txt"
+			position = { x = 107 y = 23 }
+			font = "hoi_26mbs"
+			text = ct_main_rank_button_tt
+			maxWidth = 200
+			maxHeight = 23
+			format = center
+			alwaystransparent = yes
+		}
+
+		iconType ={
+			name = "ct_main_topbar2"
+			spriteType = "GFX_decision_progress_bg"
+			position = { x = 275 y = 13 }
+			scale = 0.95
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "ct_main_topbar_info_txt"
+			position = { x = 334 y = 23 }
+			font = "hoi_26mbs"
+			text = ct_main_topbar_info_loc
+			maxWidth = 500
+			maxHeight = 23
+			format = left
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "rank_country_flag"
+			quadTextureSprite = "GFX_flag_small2"
+			position = { x = 284 y = 18 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "unsc_member_flag_border"
+			quadTextureSprite = "GFX_diplo_countrylist_flag_frame"
+			position = { x = 280 y = 14 }
+			alwaystransparent = yes
+		}
+	}
+
+	containerWindowType = {
+		name = "country_tool_gear_window"
+		position = { x=0  y=0 }
+
+		#ECONOMIC
+		buttonType ={
+			name = "ct_gear1_button"
+			spriteType = "GFX_ct_gear_economic"
+			position = { x = 13 y = 85 }
+			pdx_tooltip = "ct_gear1_button_tt"
+		}
+
+		iconType ={
+			name ="ct_gear1_cross"
+			spriteType = "GFX_ct_cross"
+			position = { x = 60 y = 85 }
+		}
+
+		buttonType ={
+			name = "ct_gear2_button"
+			spriteType = "GFX_ct_gear_economic"
+			position = { x = 168 y = 85 }
+			pdx_tooltip = "ct_gear2_button_tt"
+		}
+
+		iconType ={
+			name ="ct_gear2_cross"
+			spriteType = "GFX_ct_cross"
+			position = { x = 215 y = 85 }
+		}
+
+		buttonType ={
+			name = "ct_gear3_button"
+			spriteType = "GFX_ct_gear_economic"
+			position = { x = 323 y = 85 }
+			pdx_tooltip = "ct_gear3_button_tt"
+		}
+
+		iconType ={
+			name ="ct_gear3_cross"
+			spriteType = "GFX_ct_cross"
+			position = { x = 370 y = 85 }
+		}
+
+		buttonType ={
+			name = "ct_gear4a_button"
+			spriteType = "GFX_ct_gear_economic"
+			position = { x = 478 y = 55 }
+			pdx_tooltip = "ct_gear4a_button_tt"
+		}
+
+		iconType ={
+			name ="ct_gear4a_cross"
+			spriteType = "GFX_ct_cross"
+			position = { x = 525 y = 55 }
+		}
+
+		buttonType ={
+			name = "ct_gear4b_button"
+			spriteType = "GFX_ct_gear_economic"
+			position = { x = 478 y = 105 }
+			pdx_tooltip = "ct_gear4b_button_tt"
+		}
+
+		iconType ={
+			name ="ct_gear4b_cross"
+			spriteType = "GFX_ct_cross"
+			position = { x = 525 y = 105 }
+		}
+
+		buttonType ={
+			name = "ct_gear5_button"
+			spriteType = "GFX_ct_gear_economic"
+			position = { x = 633 y = 85 }
+			pdx_tooltip = "ct_gear5_button_tt"
+		}
+
+		iconType ={
+			name ="ct_gear5_cross"
+			spriteType = "GFX_ct_cross"
+			position = { x = 680 y = 85 }
+		}
+
+		#DIPLOMATIC
+		buttonType ={
+			name = "ct_gear6_button"
+			spriteType = "GFX_ct_gear_diplomatic"
+			position = { x = 13 y = 185 }
+			pdx_tooltip = "ct_gear6_button_tt"
+		}
+
+		iconType ={
+			name ="ct_gear6_cross"
+			spriteType = "GFX_ct_cross"
+			position = { x = 60 y = 185 }
+		}
+
+		buttonType ={
+			name = "ct_gear7a_button"
+			spriteType = "GFX_ct_gear_diplomatic"
+			position = { x = 168 y = 155 }
+			pdx_tooltip = "ct_gear7a_button_tt"
+		}
+
+		iconType ={
+			name ="ct_gear7a_cross"
+			spriteType = "GFX_ct_cross"
+			position = { x = 215 y = 155 }
+		}
+
+		buttonType ={
+			name = "ct_gear7b_button"
+			spriteType = "GFX_ct_gear_diplomatic"
+			position = { x = 168 y = 205 }
+			pdx_tooltip = "ct_gear7b_button_tt"
+		}
+
+		iconType ={
+			name ="ct_gear7b_cross"
+			spriteType = "GFX_ct_cross"
+			position = { x = 215 y = 205 }
+		}
+
+		buttonType ={
+			name = "ct_gear8_button"
+			spriteType = "GFX_ct_gear_diplomatic"
+			position = { x = 323 y = 185 }
+			pdx_tooltip = "ct_gear8_button_tt"
+		}
+
+		iconType ={
+			name ="ct_gear8_cross"
+			spriteType = "GFX_ct_cross"
+			position = { x = 370 y = 185 }
+		}
+
+		buttonType ={
+			name = "ct_gear9_button"
+			spriteType = "GFX_ct_gear_diplomatic"
+			position = { x = 478 y = 185 }
+			pdx_tooltip = "ct_gear9_button_tt"
+		}
+
+		iconType ={
+			name ="ct_gear9_cross"
+			spriteType = "GFX_ct_cross"
+			position = { x = 525 y = 185 }
+		}
+
+		buttonType ={
+			name = "ct_gear10_button"
+			spriteType = "GFX_ct_gear_diplomatic"
+			position = { x = 633 y = 185 }
+			pdx_tooltip = "ct_gear10_button_tt"
+		}
+
+		iconType ={
+			name ="ct_gear10_cross"
+			spriteType = "GFX_ct_cross"
+			position = { x = 680 y = 185 }
+		}
+
+		#INNOVATION
+		buttonType ={
+			name = "ct_gear11_button"
+			spriteType = "GFX_ct_gear_innovation"
+			position = { x = 13 y = 285 }
+			pdx_tooltip = "ct_gear11_button_tt"
+		}
+
+		iconType ={
+			name ="ct_gear11_cross"
+			spriteType = "GFX_ct_cross"
+			position = { x = 60 y = 285 }
+		}
+
+		buttonType ={
+			name = "ct_gear12_button"
+			spriteType = "GFX_ct_gear_innovation"
+			position = { x = 168 y = 285 }
+			pdx_tooltip = "ct_gear12_button_tt"
+		}
+
+		iconType ={
+			name ="ct_gear12_cross"
+			spriteType = "GFX_ct_cross"
+			position = { x = 215 y = 285 }
+		}
+
+		buttonType ={
+			name = "ct_gear13a_button"
+			spriteType = "GFX_ct_gear_innovation"
+			position = { x = 323 y = 255 }
+			pdx_tooltip = "ct_gear13a_button_tt"
+		}
+
+		iconType ={
+			name ="ct_gear13a_cross"
+			spriteType = "GFX_ct_cross"
+			position = { x = 370 y = 255 }
+		}
+
+		buttonType ={
+			name = "ct_gear13b_button"
+			spriteType = "GFX_ct_gear_innovation"
+			position = { x = 323 y = 305 }
+			pdx_tooltip = "ct_gear13b_button_tt"
+		}
+
+		iconType ={
+			name ="ct_gear13b_cross"
+			spriteType = "GFX_ct_cross"
+			position = { x = 370 y = 305 }
+		}
+
+		buttonType ={
+			name = "ct_gear14_button"
+			spriteType = "GFX_ct_gear_innovation"
+			position = { x = 478 y = 285 }
+			pdx_tooltip = "ct_gear14_button_tt"
+		}
+
+		iconType ={
+			name ="ct_gear14_cross"
+			spriteType = "GFX_ct_cross"
+			position = { x = 525 y = 285 }
+		}
+
+		buttonType ={
+			name = "ct_gear15_button"
+			spriteType = "GFX_ct_gear_innovation"
+			position = { x = 633 y = 285 }
+			pdx_tooltip = "ct_gear15_button_tt"
+		}
+
+		iconType ={
+			name ="ct_gear15_cross"
+			spriteType = "GFX_ct_cross"
+			position = { x = 680 y = 285 }
+		}
+
+		#QUALITY
+		buttonType ={
+			name = "ct_gear16_button"
+			spriteType = "GFX_ct_gear_quality"
+			position = { x = 13 y = 385 }
+			pdx_tooltip = "ct_gear16_button_tt"
+		}
+
+		iconType ={
+			name ="ct_gear16_cross"
+			spriteType = "GFX_ct_cross"
+			position = { x = 60 y = 385 }
+		}
+
+		buttonType ={
+			name = "ct_gear17_button"
+			spriteType = "GFX_ct_gear_quality"
+			position = { x = 168 y = 385 }
+			pdx_tooltip = "ct_gear17_button_tt"
+		}
+
+		iconType ={
+			name ="ct_gear17_cross"
+			spriteType = "GFX_ct_cross"
+			position = { x = 215 y = 385 }
+		}
+
+		buttonType ={
+			name = "ct_gear18_button"
+			spriteType = "GFX_ct_gear_quality"
+			position = { x = 323 y = 385 }
+			pdx_tooltip = "ct_gear18_button_tt"
+		}
+
+		iconType ={
+			name ="ct_gear18_cross"
+			spriteType = "GFX_ct_cross"
+			position = { x = 370 y = 385 }
+		}
+
+		buttonType ={
+			name = "ct_gear19a_button"
+			spriteType = "GFX_ct_gear_quality"
+			position = { x = 478 y = 355 }
+			pdx_tooltip = "ct_gear19a_button_tt"
+		}
+
+		iconType ={
+			name ="ct_gear19a_cross"
+			spriteType = "GFX_ct_cross"
+			position = { x = 525 y = 355 }
+		}
+
+		buttonType ={
+			name = "ct_gear19b_button"
+			spriteType = "GFX_ct_gear_quality"
+			position = { x = 478 y = 405 }
+			pdx_tooltip = "ct_gear19b_button_tt"
+		}
+
+		iconType ={
+			name ="ct_gear19b_cross"
+			spriteType = "GFX_ct_cross"
+			position = { x = 525 y = 405 }
+		}
+
+		buttonType ={
+			name = "ct_gear20_button"
+			spriteType = "GFX_ct_gear_quality"
+			position = { x = 633 y = 385 }
+			pdx_tooltip = "ct_gear20_button_tt"
+		}
+
+		iconType ={
+			name ="ct_gear20_cross"
+			spriteType = "GFX_ct_cross"
+			position = { x = 680 y = 385 }
+		}
+
+		#QUANTITY
+		buttonType ={
+			name = "ct_gear21_button"
+			spriteType = "GFX_ct_gear_quantity"
+			position = { x = 13 y = 485 }
+			pdx_tooltip = "ct_gear21_button_tt"
+		}
+
+		iconType ={
+			name ="ct_gear21_cross"
+			spriteType = "GFX_ct_cross"
+			position = { x = 60 y = 485 }
+		}
+
+		buttonType ={
+			name = "ct_gear22_button"
+			spriteType = "GFX_ct_gear_quantity"
+			position = { x = 168 y = 485 }
+			pdx_tooltip = "ct_gear22_button_tt"
+		}
+
+		iconType ={
+			name ="ct_gear22_cross"
+			spriteType = "GFX_ct_cross"
+			position = { x = 215 y = 485 }
+		}
+
+		buttonType ={
+			name = "ct_gear23_button"
+			spriteType = "GFX_ct_gear_quantity"
+			position = { x = 323 y = 485 }
+			pdx_tooltip = "ct_gear23_button_tt"
+		}
+
+		iconType ={
+			name ="ct_gear23_cross"
+			spriteType = "GFX_ct_cross"
+			position = { x = 370 y = 485 }
+		}
+
+		buttonType ={
+			name = "ct_gear24a_button"
+			spriteType = "GFX_ct_gear_quantity"
+			position = { x = 478 y = 455 }
+			pdx_tooltip = "ct_gear24a_button_tt"
+		}
+
+		iconType ={
+			name ="ct_gear24a_cross"
+			spriteType = "GFX_ct_cross"
+			position = { x = 525 y = 455 }
+		}
+
+		buttonType ={
+			name = "ct_gear24b_button"
+			spriteType = "GFX_ct_gear_quantity"
+			position = { x = 478 y = 505 }
+			pdx_tooltip = "ct_gear24b_button_tt"
+		}
+
+		iconType ={
+			name ="ct_gear24b_cross"
+			spriteType = "GFX_ct_cross"
+			position = { x = 525 y = 505 }
+		}
+
+		buttonType ={
+			name = "ct_gear25_button"
+			spriteType = "GFX_ct_gear_quantity"
+			position = { x = 633 y = 485 }
+			pdx_tooltip = "ct_gear25_button_tt"
+		}
+
+		iconType ={
+			name ="ct_gear25_cross"
+			spriteType = "GFX_ct_cross"
+			position = { x = 680 y = 485 }
+		}
+
+		#TEXT
+		instantTextboxType = {
+			name = "gear_economic_txt"
+			position = { x = 610 y = 60 }
+			font = "hoi_30header"
+			text = "Economic"
+			maxWidth = 200
+			maxHeight = 23
+			format = center
+		}
+
+		instantTextboxType = {
+			name = "gear_diplomatic_txt"
+			position = { x = 610 y = 160 }
+			font = "hoi_30header"
+			text = "Diplomatic"
+			maxWidth = 200
+			maxHeight = 23
+			format = center
+		}
+
+		instantTextboxType = {
+			name = "gear_innovation_txt"
+			position = { x = 610 y = 260 }
+			font = "hoi_30header"
+			text = "Innovation"
+			maxWidth = 200
+			maxHeight = 23
+			format = center
+		}
+
+		instantTextboxType = {
+			name = "gear_quality_txt"
+			position = { x = 610 y = 360 }
+			font = "hoi_30header"
+			text = "Quality"
+			maxWidth = 200
+			maxHeight = 23
+			format = center
+		}
+
+		instantTextboxType = {
+			name = "gear_quantity_txt"
+			position = { x = 610 y = 460 }
+			font = "hoi_30header"
+			text = "Quantity"
+			maxWidth = 200
+			maxHeight = 23
+			format = center
+		}
+	}
+
+	containerWindowType = {
+		name = "country_tool_rank_window"
+		position = { x=0  y=0 }
+
+		gridboxtype = {
+			name = "rank_s_gridbox"
+			position = { x = 49 y = 100 }
+			size = { width = 0 height = 0 }
+			slotsize = { width = 46 height = 32 }
+			max_slots_horizontal = 3
+			add_horizontal = yes
+		}
+
+		gridboxtype = {
+			name = "rank_a_gridbox"
+			position = { x = 198 y = 100 }
+			size = { width = 0 height = 0 }
+			slotsize = { width = 46 height = 32 }
+			max_slots_horizontal = 3
+			add_horizontal = yes
+		}
+
+		gridboxtype = {
+			name = "rank_b_gridbox"
+			position = { x = 348 y = 100 }
+			size = { width = 0 height = 0 }
+			slotsize = { width = 46 height = 32 }
+			max_slots_horizontal = 3
+			add_horizontal = yes
+		}
+
+		gridboxtype = {
+			name = "rank_c_gridbox"
+			position = { x = 500 y = 100 }
+			size = { width = 0 height = 0 }
+			slotsize = { width = 46 height = 32 }
+			max_slots_horizontal = 3
+			add_horizontal = yes
+		}
+
+		gridboxtype = {
+			name = "rank_d_gridbox"
+			position = { x = 645 y = 100 }
+			size = { width = 0 height = 0 }
+			slotsize = { width = 46 height = 32 }
+			max_slots_horizontal = 3
+			add_horizontal = yes
+		}
+
+		iconType = {
+			name = "rank_limit_bg"
+			quadTextureSprite = "GFX_current_wars_entry"
+			position = { x = 12 y = 530 }
+			scale = 1.462
+			alwaystransparent = yes
+		}
+
+		gridboxtype = {
+			name = "charters_gridbox_factions"
+			position = { x = 100 y = 0 }
+			size = { width = 0 height = 0 }
+			slotsize = { width = 46 height = 32 }
+			max_slots_vertical = 1
+			add_horizontal = no
+		}
+
+		#gridboxtype = {
+		#	name = "rank_no_gridbox"
+		#	position = { x = 650 y = 100 }
+		#	size = { width = 0 height = 0 }
+		#	slotsize = { width = 46 height = 32 }
+		#	max_slots_horizontal = 3
+		#	add_horizontal = yes
+		#}
+
+		instantTextboxType = {
+			name = "rank_S_txt"
+			position = { x = -5 y = 70 }
+			font = "hoi_16mbs"
+			text = "rank_S_txt"
+			maxWidth = 200
+			maxHeight = 23
+			format = center
+		}
+
+		instantTextboxType = {
+			name = "rank_A_txt"
+			position = { x = 145 y = 70 }
+			font = "hoi_16mbs"
+			text = "rank_A_txt"
+			maxWidth = 200
+			maxHeight = 23
+			format = center
+		}
+
+		instantTextboxType = {
+			name = "rank_B_txt"
+			position = { x = 295 y = 70 }
+			font = "hoi_16mbs"
+			text = "rank_B_txt"
+			maxWidth = 200
+			maxHeight = 23
+			format = center
+		}
+
+		instantTextboxType = {
+			name = "rank_C_txt"
+			position = { x = 445 y = 70 }
+			font = "hoi_16mbs"
+			text = "rank_C_txt"
+			maxWidth = 200
+			maxHeight = 23
+			format = center
+		}
+
+		instantTextboxType = {
+			name = "rank_D_txt"
+			position = { x = 595 y = 70 }
+			font = "hoi_16mbs"
+			text = "rank_D_txt"
+			maxWidth = 200
+			maxHeight = 23
+			format = center
+		}
+
+		iconType = {
+			name = "rank_initializing_bg"
+			quadTextureSprite = "GFX_lobby_lower_right_sidepanel_bg"
+			position = { x = 12 y = 100 }
+			scale = 1.3
+		}
+
+		instantTextboxType = {
+			name = "rank_initializing_txt"
+			position = { x = 200 y = 300 }
+			font = "hoi_24header"
+			text = rank_game_initialize_loc
+			maxWidth = 400
+			maxHeight = 23
+			format = center
+		}
+
+		instantTextboxType = {
+			name = "rank_initializing_header_txt"
+			position = { x = 100 y = 150 }
+			font = "hoi_36header"
+			text = rank_game_initializing_header_loc
+			maxWidth = 600
+			maxHeight = 23
+			format = center
+		}
+	}
+
+	containerWindowType = {
+		name = "rank_list_entry_window"
+		position = { x = 0 y = 0 }
+		size = { width = 0 height = 0 }
+		
+		iconType = {
+			name = "rank_country_flag"
+			quadTextureSprite = "GFX_flag_small2"
+			position = { x = 5 y = 7 }
+			pdx_tooltip = wia_rank_tt
+		}
+
+		iconType ={
+			name ="rank_country_flag_frame"
+			spriteType = "GFX_small_flag_frame_thin2"
+			position = { x = 0 y = 3 }
+			alwaystransparent = yes
+		}
+	}
+
+	containerWindowType = {
+		name = "faction_list_entry_window"
+		position = { x = -58 y = 532 }
+		size = { width = 0 height = 0 }
+		
+		iconType = {
+			name = "rank_country_flag"
+			quadTextureSprite = "GFX_flag_small2"
+			position = { x = 0 y = 3 }
+			pdx_tooltip = rank_country_flag_tt2
+		}
+		iconType = {
+			name = "unsc_member_flag_border"
+			quadTextureSprite = "GFX_diplo_countrylist_flag_frame"
+			position = { x = -4 y = 0 }
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "faction_score"
+			position = { x = 5 y = 32 }
+			font = "hoi_18mbs"
+			borderSize = {x = 0 y = 0}
+			text = "faction_score"
+			maxWidth = 140
+			maxHeight = 20
+			fixedsize = yes
+		}
+		
+	}
+
+	containerWindowType = {
+		name = "country_tool_main_window"
+		position = { x=-4  y=0	}
+
+		iconType ={
+			name = "ct_main_flag"
+			spriteType = "GFX_shield_medium"
+			position = { x = 364 y = 212 }
+		}
+		iconType ={
+			name = "ct_main_frame"
+			spriteType = "GFX_diplo_flag_frame"
+			position = { x = 338 y = 201 }
+		}
+
+		instantTextboxType = {
+			name = "ct_main_name"
+			position = { x = 153 y = 276 }
+			font = "hoi_24header"
+			text = ct_main_name_loc
+			maxWidth = 500
+			maxHeight = 23
+			format = center
+		}
+
+		instantTextboxType = {
+			name = "ct_main_info"
+			position = { x = 155 y = 302 }
+			font = "hoi_18mbs"
+			text = ct_main_info_loc
+			maxWidth = 500
+			maxHeight = 23
+			format = center
+		}
+
+		iconType ={
+			name = "ct_main_sub_bg"
+			spriteType = "GFX_idea_entry_bg"
+			position = { x = 237 y = 340 }
+			alwaystransparent = yes
+		}
+
+		buttonType ={
+			name = "ct_main_sub_rule_button"
+			spriteType = "GFX_reinstate_button"
+			position = { x = 339 y = 340 }
+			web_link = "https://docs.google.com/document/d/1_0rwEubsLKL-EsZAvGjjhTmk4iJhLHJHwqMXHOCVKzc/edit?tab=t.0#heading=h.g59yvc6emu98"
+		}
+		buttonType ={
+			name = "ct_main_sub_host_button"
+			spriteType = "GFX_reinstate_button"
+			position = { x = 339 y = 370 }
+			web_link = "https://docs.google.com/document/d/1SHVo2esoBOm_OrewQlSZW6bHZXHGjqBoC8dfBUjn0VM/edit?tab=t.0"
+		}
+
+		instantTextboxType = {
+			name = "ct_main_sub_rule_txt"
+			position = { x = 342 y = 351 }
+			font = "hoi_18mbs"
+			text = ct_main_sub_rule_loc
+			maxWidth = 125
+			maxHeight = 23
+			format = center
+		}
+		instantTextboxType = {
+			name = "ct_main_sub_host_txt"
+			position = { x = 342 y = 381 }
+			font = "hoi_18mbs"
+			text = ct_main_sub_host_loc
+			maxWidth = 125
+			maxHeight = 23
+			format = center
+		}
+
+		instantTextboxType = {
+			name = "ct_main_version_txt"
+			position = { x = 254 y = 570 }
+			font = "hoi_16mbs"
+			text = version_loc
+			maxWidth = 300
+			maxHeight = 23
+			format = center
+		}
+
+		iconType ={
+			name = "ct_main_sub2_bg"
+			spriteType = "GFX_tactics_list_view_bg"
+			position = { x = 38 y = 150 }
+			alwaystransparent = yes
+			scale = 0.5
+		}
+
+		iconType ={
+			name = "ct_main_sub3_bg"
+			spriteType = "GFX_tactics_list_view_bg"
+			position = { x = 594 y = 150 }
+			alwaystransparent = yes
+			scale = 0.5
+		}
+
+		buttonType ={
+			name = "ct_main_sub3_sc1_on_button"
+			spriteType = "GFX_generic_text_bg_154"
+			position = { x = 48 y = 245 }
+		}
+		instantTextboxType = {
+			name = "ct_main_sub3_sc1_on_loc"
+			position = { x = -26 y = 248 }
+			font = "hoi_18mbs"
+			text = ct_main_sub3_sc1_on_txt
+			maxWidth = 300
+			maxHeight = 23
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "ct_main_sub3_sc1alt_on_loc" #alt for alternative
+			position = { x = -26 y = 248 }
+			font = "hoi_18mbs"
+			text = ct_main_sub3_sc1alt_on_txt
+			maxWidth = 300
+			maxHeight = 23
+			format = center
+			alwaystransparent = yes
+		}
+		buttonType ={
+			name = "ct_main_sub3_sc1_off_button"
+			spriteType = "GFX_generic_text_bg_154"
+			position = { x = 48 y = 245 }
+		}
+		instantTextboxType = {
+			name = "ct_main_sub3_sc1_off_loc"
+			position = { x = -26 y = 248 }
+			font = "hoi_18mbs"
+			text = ct_main_sub3_sc1_off_txt
+			maxWidth = 300
+			maxHeight = 23
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "ct_main_sub3_sc1alt_off_loc"
+			position = { x = -26 y = 248 }
+			font = "hoi_18mbs"
+			text = ct_main_sub3_sc1alt_off_txt
+			maxWidth = 300
+			maxHeight = 23
+			format = center
+			alwaystransparent = yes
+		}
+
+		buttonType ={
+			name = "ct_main_sub3_sc2_on_button"
+			spriteType = "GFX_generic_text_bg_154"
+			position = { x = 48 y = 280 }
+		}
+		instantTextboxType = {
+			name = "ct_main_sub3_sc2_on_loc"
+			position = { x = -26 y = 283 }
+			font = "hoi_18mbs"
+			text = ct_main_sub3_sc2_on_txt
+			maxWidth = 300
+			maxHeight = 23
+			format = center
+			alwaystransparent = yes
+		}
+		buttonType ={
+			name = "ct_main_sub3_sc2_off_button"
+			spriteType = "GFX_generic_text_bg_154"
+			position = { x = 48 y = 280 }
+		}
+		instantTextboxType = {
+			name = "ct_main_sub3_sc2_off_loc"
+			position = { x = -26 y = 283 }
+			font = "hoi_18mbs"
+			text = ct_main_sub3_sc2_off_txt
+			maxWidth = 300
+			maxHeight = 23
+			format = center
+			alwaystransparent = yes
+		}
+
+		buttonType ={
+			name = "ct_main_sub3_sc3_on_button"
+			spriteType = "GFX_generic_text_bg_154"
+			position = { x = 48 y = 315 }
+		}
+		instantTextboxType = {
+			name = "ct_main_sub3_sc3_on_loc"
+			position = { x = -26 y = 318 }
+			font = "hoi_18mbs"
+			text = ct_main_sub3_sc3_on_txt
+			maxWidth = 300
+			maxHeight = 23
+			format = center
+			alwaystransparent = yes
+		}
+		buttonType ={
+			name = "ct_main_sub3_sc3_off_button"
+			spriteType = "GFX_generic_text_bg_154"
+			position = { x = 48 y = 315 }
+		}
+		instantTextboxType = {
+			name = "ct_main_sub3_sc3_off_loc"
+			position = { x = -26 y = 318 }
+			font = "hoi_18mbs"
+			text = ct_main_sub3_sc3_off_txt
+			maxWidth = 300
+			maxHeight = 23
+			format = center
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "ct_main_sub3_header_loc"
+			position = { x = -26 y = 190 }
+			font = "hoi_30header"
+			text = ct_main_sub3_header_txt
+			maxWidth = 300
+			maxHeight = 23
+			format = center
+			alwaystransparent = yes
+		}
+	}
+
+	containerWindowType = {
+		name = "country_tool_info_window"
+		position = { x=621  y=160	}
+
+		iconType = {
+			name = "ip_civ_icon"
+			position = { x = 10 y = 50 }
+			quadTextureSprite = "GFX_non_available_factory_icon"
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "ip_civ_bg"
+			position = { x = 39 y = 48 }
+			quadTextureSprite = "GFX_generic_text_bg_60"
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name ="ip_civ_txt"
+			position = { x= 45 y = 52 }
+			font = "hoi_18mbs"
+			text = "ip_civ_tt"
+			format = center
+			maxWidth = 46
+			maxHeight = 24
+			fixedsize = yes
+		}
+
+		iconType = {
+			name = "ip_mil_icon"
+			position = { x = 10 y = 80 }
+			quadTextureSprite = "GFX_military_factory_icon"
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "ip_mil_bg"
+			position = { x = 39 y = 77 }
+			quadTextureSprite = "GFX_generic_text_bg_60"
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name ="ip_mil_txt"
+			position = { x= 45 y = 81 }
+			font = "hoi_18mbs"
+			text = "ip_mil_tt"
+			format = center
+			maxWidth = 46
+			maxHeight = 24
+			fixedsize = yes
+		}
+
+		iconType = {
+			name = "ip_doc_icon"
+			position = { x = 10 y = 111 }
+			quadTextureSprite = "GFX_dockyard_icon"
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "ip_doc_bg"
+			position = { x = 39 y = 106 }
+			quadTextureSprite = "GFX_generic_text_bg_60"
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name ="ip_doc_txt"
+			position = { x= 45 y = 110 }
+			font = "hoi_18mbs"
+			text = "ip_doc_tt"
+			format = center
+			maxWidth = 46
+			maxHeight = 24
+			fixedsize = yes
+		}
+
+		iconType = {
+			name = "ip_sol_icon"
+			position = { x = 12 y = 133 }
+			quadTextureSprite = "GFX_trait_infantry_officer"
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "ip_sol_bg"
+			position = { x = 39 y = 135 }
+			quadTextureSprite = "GFX_generic_text_bg_60"
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name ="ip_sol_txt"
+			position = { x= 45 y = 139 }
+			font = "hoi_18mbs"
+			text = "ip_sol_tt"
+			format = center
+			maxWidth = 46
+			maxHeight = 24
+			fixedsize = yes
+		}
+
+		iconType = {
+			name = "ip_pla_icon"
+			position = { x = 7 y = 162 }
+			quadTextureSprite = "GFX_ability_glider_planes"
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "ip_pla_bg"
+			position = { x = 39 y = 164 }
+			quadTextureSprite = "GFX_generic_text_bg_60"
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name ="ip_pla_txt"
+			position = { x= 45 y = 168 }
+			font = "hoi_18mbs"
+			text = "ip_pla_tt"
+			format = center
+			maxWidth = 46
+			maxHeight = 24
+			fixedsize = yes
+		}
+
+		iconType = {
+			name = "ip_nav_icon"
+			position = { x = 14 y = 195 }
+			quadTextureSprite = "GFX_navy_anchor"
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "ip_nav_bg"
+			position = { x = 39 y = 193 }
+			quadTextureSprite = "GFX_generic_text_bg_60"
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name ="ip_nav_txt"
+			position = { x= 45 y = 197 }
+			font = "hoi_18mbs"
+			text = "ip_nav_tt"
+			format = center
+			maxWidth = 46
+			maxHeight = 24
+			fixedsize = yes
+		}
+	}
+}
+
+default_clicksound = "click_default"
+#default_oversound = "ui_menu_over"
+default_downsound = "ui_menu_click"
+default_upsound = "ui_menu_leave"

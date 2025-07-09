@@ -1,0 +1,51 @@
+spriteTypes = {
+
+	#BUTTONS
+	spriteType = {
+		name = "GFX_ct_open_button"
+		texturefile = "gfx/interface/ct/button/ct_open_button.dds"
+	}
+
+	#GEAR
+	spriteType = {
+		name = "GFX_ct_gear_economic"
+		texturefile = "gfx/interface/ct/button/ct_gear_economic.dds"
+	}
+	spriteType = {
+		name = "GFX_ct_gear_diplomatic"
+		texturefile = "gfx/interface/ct/button/ct_gear_diplomatic.dds"
+	}
+	spriteType = {
+		name = "GFX_ct_gear_innovation"
+		texturefile = "gfx/interface/ct/button/ct_gear_innovation.dds"
+	}
+	spriteType = {
+		name = "GFX_ct_gear_quality"
+		texturefile = "gfx/interface/ct/button/ct_gear_quality.dds"
+	} 
+	spriteType = {
+		name = "GFX_ct_gear_quantity"
+		texturefile = "gfx/interface/ct/button/ct_gear_quantity.dds"
+	} 
+	
+	spriteType = {
+		name = "GFX_ct_cross"
+		texturefile = "gfx/interface/ct/button/ct_cross.dds"
+	} 
+
+
+	#BG'S
+	spriteType = {
+		name = "GFX_ct_gear_bg"
+		texturefile = "gfx/interface/ct/bg/ct_gear_bg.dds"
+	} 
+	spriteType = {
+		name = "GFX_ct_main_bg"
+		texturefile = "gfx/interface/ct/bg/ct_main_bg.dds"
+	} 
+	spriteType = {
+		name = "GFX_ct_rank_bg"
+		texturefile = "gfx/interface/ct/bg/ct_rank_bg.dds"
+	} 
+
+}
