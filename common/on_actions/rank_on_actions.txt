@@ -6,6 +6,7 @@ on_actions = {
 			set_variable = { dr_calculate_ranks_timer_var = 3 }
 			set_variable = { dr_calculate_fac_timer_var = 12 }
 		}
+		
 	}
 
 	on_daily = {
@@ -208,8 +209,8 @@ on_actions = {
 						}
 					}
 					set_variable = { rank = 1 }
-					remove_ideas = { classified_rank_S classified_rank_S  classified_rank_S  classified_rank_S classified_rank_S classified_rank_S }
-					add_ideas = classified_rank_S
+					remove_ideas = { classified_rank_S classified_rank_A  classified_rank_B  classified_rank_C classified_rank_D classified_rank_NO }
+					add_ideas = classified_rank_D
 				}
 
 				else_if = {
@@ -230,8 +231,8 @@ on_actions = {
 						}
 					}
 					set_variable = { rank = 2 }
-					remove_ideas = { classified_rank_S classified_rank_S  classified_rank_S  classified_rank_S classified_rank_S classified_rank_S }
-					add_ideas = classified_rank_S
+					remove_ideas = { classified_rank_S classified_rank_A  classified_rank_B  classified_rank_C classified_rank_D classified_rank_NO }
+					add_ideas = classified_rank_C
 
 					else_if = {
 						limit = {
@@ -251,8 +252,8 @@ on_actions = {
 							}
 						}
 					    set_variable = { rank = 3 }
-					    remove_ideas = { classified_rank_S classified_rank_S  classified_rank_S  classified_rank_S classified_rank_S classified_rank_S }
-						add_ideas = classified_rank_S
+					    remove_ideas = { classified_rank_S classified_rank_A  classified_rank_B  classified_rank_C classified_rank_D classified_rank_NO }
+						add_ideas = classified_rank_B
 
 						else_if = {
 							limit = {
@@ -272,8 +273,8 @@ on_actions = {
 								}
 							}
 					        set_variable = { rank = 4 }
-					        remove_ideas = { classified_rank_S classified_rank_S  classified_rank_S  classified_rank_S classified_rank_S classified_rank_S }
-							add_ideas = classified_rank_S
+					        remove_ideas = { classified_rank_S classified_rank_A  classified_rank_B  classified_rank_C classified_rank_D classified_rank_NO }
+							add_ideas = classified_rank_A
 
 							else_if = {
 								limit = {
@@ -294,7 +295,7 @@ on_actions = {
 									}
 								}
 					            set_variable = { rank = 5 }
-								remove_ideas = { classified_rank_S classified_rank_S  classified_rank_S  classified_rank_S classified_rank_S classified_rank_S }
+								remove_ideas = { classified_rank_S classified_rank_A  classified_rank_B  classified_rank_C classified_rank_D classified_rank_NO }
 								add_ideas = classified_rank_S
 								
 								else_if = {
@@ -303,8 +304,8 @@ on_actions = {
 									}
 									set_variable = { dr_country_score_var = 0 }
 									set_variable = { rank = 0 }
-									remove_ideas = { classified_rank_S classified_rank_S  classified_rank_S  classified_rank_S classified_rank_S classified_rank_S }
-					                add_ideas = classified_rank_S
+									remove_ideas = { classified_rank_S classified_rank_A  classified_rank_B  classified_rank_C classified_rank_D classified_rank_NO }
+					                add_ideas = classified_rank_NO
 								}
 							}
 						}

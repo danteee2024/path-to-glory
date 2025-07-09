@@ -55,6 +55,7 @@ scripted_gui = {
 				clear_array = global.rank_B
 				clear_array = global.rank_C
 				clear_array = global.rank_D
+				clear_array = global.rank_NO
 				clear_array = global.charters_factions
 
 				if = {
@@ -68,26 +69,29 @@ scripted_gui = {
 	
 					every_country = {
 						if = {
-							limit = { check_variable = { rank = 4 } }
+							limit = { check_variable = { rank = 5 } }
 							add_to_array = { array = global.rank_S value = THIS.id }
 						}
 						else_if = {
-							limit = { check_variable = { rank = 3 } }
+							limit = { check_variable = { rank = 4 } }
 							add_to_array = { array = global.rank_A value = THIS.id }
 
 							else_if = {
-								limit = { check_variable = { rank = 2 } }
+								limit = { check_variable = { rank = 3 } }
 							    add_to_array = { array = global.rank_B value = THIS.id }
 
 								else_if = {
-									limit = { check_variable = { rank = 1 } }
+									limit = { check_variable = { rank = 2 } }
 									add_to_array = { array = global.rank_C value = THIS.id }
 
 									else_if = {
-										limit = { check_variable = { rank = 0 } }
+										limit = { check_variable = { rank = 1 } }
 										add_to_array = { array = global.rank_D value = THIS.id }
 
-										
+										else = {
+											limit = { check_variable = { rank = 0 } }
+								            add_to_array = { array = global.rank_NO value = THIS.id }
+										}
 									}
 								}
 							}
@@ -861,6 +865,12 @@ scripted_gui = {
 
 			rank_d_gridbox = {
 				array = global.rank_D
+				entry_container = rank_list_entry_window
+				change_scope = yes
+			}
+
+			rank_no_gridbox = {
+				array = global.rank_NO
 				entry_container = rank_list_entry_window
 				change_scope = yes
 			}
