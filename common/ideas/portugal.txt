@@ -94,6 +94,27 @@ ideas = {
 			}
 		}
 
+		POR_german_research_influence = {
+			picture = eng_the_sun_never_sets
+			allowed = {
+				original_tag = POR
+			}
+
+			allowed_civil_war = {
+				tag = POR
+			}
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.075
+				special_project_speed_factor = 0.075
+				scientist_breakthrough_bonus_factor = 0.075
+				scientist_research_bonus_factor = 0.075
+				scientist_xp_gain_factor = 0.075
+				fascism_drift = 0.05
+			}
+		}
+
 		POR_defence_of_the_atlantic = {
 			picture = generic_navy_cruiser_warfare
 			allowed = {
@@ -178,8 +199,7 @@ ideas = {
 				fascism_drift = 0.10
 				political_power_gain = 0.10
 				fascism_drift = 0.10
-				stability_weekly = 0.001
-				war_support_weekly = 0.002
+				stability_weekly = 0.002
 				army_morale_factor = 0.05
 				production_factory_max_efficiency_factor = 0.05
 				industrial_capacity_factory = 0.1
@@ -466,10 +486,11 @@ ideas = {
 
 			modifier = {
 				research_speed_factor = 0.05
-				special_project_speed_factor = 0.10
-				scientist_breakthrough_bonus_factor = 0.10
+				special_project_speed_factor = 0.05
+				scientist_breakthrough_bonus_factor = 0.05
 				scientist_research_bonus_factor = 0.05
-				scientist_xp_gain_factor = 0.1
+				scientist_xp_gain_factor = 0.05
+				communism_drift = 0.05
 			}
 		}
 
@@ -677,10 +698,11 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				research_speed_factor = 0.075
-				special_project_speed_factor = 0.15
-				scientist_breakthrough_bonus_factor = 0.1
-				scientist_xp_gain_factor = 0.1
+				research_speed_factor = 0.10
+				special_project_speed_factor = 0.10
+				scientist_breakthrough_bonus_factor = 0.10
+				scientist_research_bonus_factor = 0.10
+				scientist_xp_gain_factor = 0.10
 			}
 		}
 
@@ -826,10 +848,10 @@ ideas = {
 			
 			modifier = {
 				research_speed_factor = 0.075
-				special_project_speed_factor = 0.15
-				scientist_breakthrough_bonus_factor = 0.15
-				scientist_research_bonus_factor = 0.0075
-				scientist_xp_gain_factor = 0.1
+				special_project_speed_factor = 0.075
+				scientist_breakthrough_bonus_factor = 0.075
+				scientist_research_bonus_factor = 0.075
+				scientist_xp_gain_factor = 0.075
 				democratic_drift = 0.05
 			}
 		}
@@ -992,7 +1014,6 @@ ideas = {
 				fascism_drift = 0.20
 				political_power_gain = 0.20
 				local_resources_factor = 0.20
-				war_support_weekly = 0.005
 				stability_weekly = 0.002
 				no_supply_grace = 72
 				attrition = -0.10
@@ -1300,7 +1321,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_weekly = 0.010
+				stability_weekly = 0.005
 				consumer_goods_factor = -0.15
 				production_speed_industrial_complex_factor = 0.15
 				production_speed_arms_factory_factor = 0.10

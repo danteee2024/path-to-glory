@@ -888,7 +888,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = POR_develop_inner_mozambique
-		cost = 5
+		cost = 10
 		search_filters = {FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 			swap_ideas = {
@@ -1361,7 +1361,7 @@ focus = {
 		y = 1
 
 		relative_position_id = POR_instituto_superior_tecnico
-		cost = 5
+		cost = 10
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			if = {
@@ -1772,20 +1772,20 @@ focus = {
 
 			add_tech_bonus = {
 				name = POR_naval_research_institute
-			    bonus = 0.5
-			    uses = 2
+			    bonus = 0.75
+			    uses = 1
 			    category = support_tech
 			}
 			add_tech_bonus = {
 				name = POR_naval_research_institute
-			    bonus = 0.5
-			    uses = 2
+			    bonus = 0.75
+			    uses = 1
 			    category = air_equipment
 			}
 			add_tech_bonus = {
 				name = POR_naval_research_institute
-			    bonus = 0.5
-			    uses = 2
+			    bonus = 0.75
+			    uses = 1
 			    category = air_doctrine
 			}
 			air_experience = 50
@@ -2824,20 +2824,20 @@ focus = {
 			}
 			add_tech_bonus = {
 				name = POR_naval_research_institute
-			    bonus = 0.5
-			    uses = 2
+			    bonus = 0.75
+			    uses = 1
 			    category = naval_artillery
 			}
 			add_tech_bonus = {
 				name = POR_naval_research_institute
-			    bonus = 0.5
-			    uses = 2
+			    bonus = 0.75
+			    uses = 1
 			    category = naval_doctrine
 			}
 			add_tech_bonus = {
 				name = POR_naval_research_institute
-			    bonus = 0.5
-			    uses = 2
+			    bonus = 0.75
+			    uses = 1
 			    category = naval_equipment
 			}
 			navy_experience = 50
@@ -3003,8 +3003,8 @@ focus = {
 			}
 			add_doctrine_cost_reduction = {
 				name = POR_battleship_effort
-			    cost_reduction = 1
-			    uses = 1
+			    cost_reduction = 0.5
+			    uses = 2
 			    category = naval_doctrine
 			}
 		}
@@ -3072,8 +3072,8 @@ focus = {
 
 			add_doctrine_cost_reduction = {
 				name = POR_carrier_effort
-			    cost_reduction = 1
-			    uses = 3
+			    cost_reduction = 0.5
+			    uses = 2
 			    category = naval_doctrine
 			}
 		}
@@ -3619,7 +3619,7 @@ focus = {
 		}
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = POR_colonial_army
+				remove_idea = POR_colonial_army_2
 				add_idea = POR_colonial_army_primacy_idea
 			}
 			# AI will build the required mils for the next focus
@@ -3633,8 +3633,9 @@ focus = {
 
 	focus = {
 		id = POR_colonial_army_dominance
-		icon = GFX_focus_GER_afrikakorps
-		prerequisite = { focus = POR_colonial_army_primacy }
+		icon = GFX_focus_IRQ_royal_iraqi_army_alt
+		prerequisite = {
+		focus = POR_colonial_army_primacy }
 		x = 1
 		y = 1
 		relative_position_id = POR_colonial_army_primacy
@@ -3713,26 +3714,26 @@ focus = {
 			}
 			add_tech_bonus = {
 				name = POR_army_research_institute
-			    bonus = 0.5
-			    uses = 2
+			    bonus = 0.75
+			    uses = 1
 			    category = infantry_weapons
 			}
 			add_tech_bonus = {
 				name = POR_army_research_institute
-			    bonus = 0.5
-			    uses = 2
+			    bonus = 0.75
+			    uses = 1
 			    category = artillery
 			}
 			add_tech_bonus = {
 				name = POR_army_research_institute
-			    bonus = 0.5
-			    uses = 2
+			    bonus = 0.75
+			    uses = 1
 			    category = armor
 			}
 			add_tech_bonus = {
 				name = POR_army_research_institute
-			    bonus = 0.5
-			    uses = 2
+			    bonus = 0.75
+			    uses = 1
 			    category = land_doctrine
 			}
 			army_experience = 50
@@ -4171,7 +4172,6 @@ focus = {
 		completion_reward = { 
 			army_experience = 25
 			add_political_power = 50
-			add_ideas = JAP_army_expansion_idea
 			add_doctrine_cost_reduction = {
 				name = POR_staff_wargames
 			    cost_reduction = 1
@@ -4225,8 +4225,7 @@ focus = {
 
 		completion_reward = { 
 			add_war_support = 0.05
-			army_experience = 25
-			add_manpower = 25000
+			add_manpower = 50000
 			add_doctrine_cost_reduction = {
 				name = POR_field_maneuvers
 			    cost_reduction = 1
@@ -4244,7 +4243,7 @@ focus = {
 		y = 3
 
 		relative_position_id = POR_fortification_focus
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 2
@@ -4253,7 +4252,12 @@ focus = {
 		completion_reward = {
 			add_stability = 0.05
 			army_experience = 25
-			add_ideas = CHI_military_affairs_commission
+			add_doctrine_cost_reduction = {
+				name = POR_staff_wargames
+			    cost_reduction = 1
+			    uses = 2
+			    category = land_doctrine
+			}
 		}
 	}
 
@@ -4270,14 +4274,6 @@ focus = {
 
 		completion_reward = { 
 			add_war_support = 0.05
-			army_experience = 25
-			add_manpower = 25000
-			add_doctrine_cost_reduction = {
-				name = POR_field_maneuvers
-			    cost_reduction = 1
-			    uses = 2
-			    category = land_doctrine
-			}
 			add_ideas = general_staff
 		}
 	}
@@ -5759,7 +5755,7 @@ focus = {
 			}
 		}
 		offset = {
-			x = 5
+			x = -3
 			y = 0
 			trigger = {
 				AND = {
@@ -5842,10 +5838,10 @@ focus = {
 		prerequisite = { focus = POR_allow_free_elections }
 
 		icon = GFX_focus_generic_treaty
-		x = 2
+		x = -1
 		y = 1
 		offset = {
-			x = 5
+			x = 0
 			y = 0
 			trigger = {
 				AND = {
@@ -5854,7 +5850,7 @@ focus = {
 				}
 			}
 		}
-		relative_position_id = POR_they_need_our_help
+		relative_position_id = POR_allow_free_elections
 		cost = 5
 		completion_reward = {
 			add_ideas = POR_nation_in_arms
@@ -5920,8 +5916,8 @@ focus = {
 			}
 		}
 		offset = {
-			x = -2
-			y = 0
+			x = 3
+			y = 1
 			trigger = {
 				AND = {
 					has_completed_focus = POR_strict_neutrality_in_the_spanish_civil_war
@@ -5930,7 +5926,7 @@ focus = {
 			}
 		}
 		offset = {
-			x = 5
+			x = -3
 			y = 0
 			trigger = {
 				AND = {
@@ -6589,7 +6585,7 @@ focus = {
 			}
 		}
 		offset = {
-			x = 5
+			x = 2
 			y = 0
 			trigger = {
 				AND = {
@@ -7023,7 +7019,7 @@ focus = {
 		y = 1
 
 		relative_position_id = POR_strengthen_the_regime
-		cost = 5
+		cost = 10
 		completion_reward = {
 			create_intelligence_agency = 1
 			add_ideas = POR_the_capital_of_espionage
@@ -7108,7 +7104,7 @@ focus = {
 		y = 1
 
 		relative_position_id = POR_concordat_with_the_holy_see
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_ideas = POR_defence_of_freedom
 			remove_ideas = POR_unstable_republic
@@ -7471,9 +7467,7 @@ focus = {
 					country_event = generic.2
 				}
 			}
-			remove_ideas = POR_unstable_republic
-			add_stability = 0.10
-			add_political_power = 100			
+			remove_ideas = POR_unstable_republic			
 		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -7495,7 +7489,7 @@ focus = {
 		completion_reward = {
 			GER = { add_to_tech_sharing_group = axis_research }
 			add_to_tech_sharing_group = axis_research
-			add_ideas = JAP_german_rocketry
+			add_ideas = POR_german_research_influence
 		}
 	}
 
@@ -7522,8 +7516,6 @@ focus = {
 			}
 			remove_ideas = POR_unstable_republic
 			add_ideas = closed_economy
-			add_stability = 0.20
-			add_political_power = 200
 			every_other_country = {
 				limit = {
 					NOT = { is_puppet_of = ROOT }

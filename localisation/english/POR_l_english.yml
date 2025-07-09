@@ -215,6 +215,7 @@
 
  POR_addressing_the_unemployment_idea:0 "Addressing the Unemployment Crisis"
  POR_addressing_the_unemployment_idea_desc:0 "In response to the growing unemployment crisis, we must implement targeted policies to stimulate job creation and support those affected by the economic downturn."
+
 l_english:
 ##################### TOOLTIPS ######################
 
@@ -271,7 +272,6 @@ l_english:
  POR_cork_exports_idea:0 "Cork Export Subsidies"
  POR_cork_exports_idea_desc:0 ""Cork Exporter" is a prestigious title. People would not be able to drink wine without us producing the cork for the bottles."
 
-
  POR_science_and_technology_affairs:0 "Science and Technology Affairs Committee"
  POR_science_and_technology_affairs_desc:0 "Establishing a Science and Technology Affairs Committee will help focusing our research were it matters, making better decisions and improving the overall efficiency of our research centers."
 
@@ -316,6 +316,9 @@ l_english:
 
  POR_tropas_paraquedistas_idea3:0 "Tropas Paraquedistas Special Training"
  POR_tropas_paraquedistas_idea3_desc:0 "Tropas Paraquedistas will cunduct a series of specialised training, improving their efficiency in conducting airborn assaults in the most hostile environments."
+
+ POR_german_research_influence:0 "German Research Sharing"
+ POR_german_research_influence_desc:0 "German Research Sharing will improve our own research institudes to perform better."
 
 
 l_english:
