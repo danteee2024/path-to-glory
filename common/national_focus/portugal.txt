@@ -1306,7 +1306,7 @@ focus = {
 			}
 			add_tech_bonus = {
 				name = POR_metropolitan_army
-			    bonus = 0.75
+			    bonus = 0.5
 			    uses = 2
 			    category = support_tech
 			}
@@ -1672,143 +1672,6 @@ focus = {
 			if = {
 				limit = { has_full_control_of_state = 179 }
 				179 = {
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = arms_factory
-						level = 2
-						instant_build = yes
-					}
-				}
-			}
-			else = {
-				random_owned_state = {
-					limit = {
-						is_controlled_by = ROOT
-						is_core_of = ROOT
-						free_building_slots = {
-							building = arms_factory
-							size > 2
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = arms_factory
-						level = 2
-						instant_build = yes
-					}
-				}
-			}
-			IF = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				custom_effect_tooltip = available_mio_tt
-				show_mio_tooltip = HOL_daf_organization
-				mio:HOL_daf_organization = {
-					add_mio_funds = 500
-				}
-			}
-			ELSE = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = fma
-			}
-			add_tech_bonus = {
-				name = POR_portuguese_artillery
-			    bonus = 0.75
-			    uses = 2
-			    category = artillery
-			}
-		}
-	}
-
-	focus = {
-		id = POR_advanced_artillery
-		prerequisite = { focus = POR_portuguese_artillery}
-		prerequisite = { focus = POR_military_research_facilities}
-		icon = GFX_goal_generic_army_artillery2
-		x = 0
-		y = 2
-
-		relative_position_id = POR_portuguese_artillery
-		cost = 10
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		completion_reward = {
-			add_tech_bonus = {
-				name = POR_advanced_artillery
-			    bonus = 1.0
-			    uses = 3
-			    category = artillery
-			}
-
-			add_doctrine_cost_reduction = {
-				name = POR_advanced_artillery
-			    cost_reduction = 1
-			    uses = 3
-			    category = land_doctrine
-			    category = naval_doctrine
-			    category = air_doctrine
-			}
-		}
-	}
-
-	focus = {
-		id = POR_military_research_facilities
-		prerequisite = { focus = POR_military_vehicles focus = POR_portuguese_artillery 
-		focus = POR_light_aircraft_focus focus = POR_portuguese_companies }
-		icon = GFX_focus_generic_military_industry
-		x = 1
-		y = 1
-
-		relative_position_id = POR_military_vehicles
-		cost = 10
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		completion_reward = {
-			add_research_slot = 1
-			add_breakthrough_progress = {
-				value = 0.5
-				specialization = specialization_air
-			}
-
-			add_tech_bonus = {
-				name = POR_naval_research_institute
-			    bonus = 0.75
-			    uses = 1
-			    category = support_tech
-			}
-			add_tech_bonus = {
-				name = POR_naval_research_institute
-			    bonus = 0.75
-			    uses = 1
-			    category = air_equipment
-			}
-			add_doctrine_cost_reduction = {
-				name = POR_naval_research_institute
-			    bonus = 0.75
-			    uses = 1
-			    category = air_doctrine
-			}
-			air_experience = 50
-			add_political_power = 50
-			add_stability = 0.05
-		}
-	}
-
-	focus = {
-		id = POR_armor_focus
-		prerequisite = { focus = POR_military_research_facilities }
-		prerequisite = { focus = POR_military_vehicles }
-		icon = GFX_goal_generic_army_tanks
-		x = -1
-		y = 1
-
-		relative_position_id = POR_military_research_facilities
-		cost = 10
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
-		completion_reward = {
-			if = {
-				limit = { has_full_control_of_state = 112 }
-				112 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = arms_factory
@@ -1836,10 +1699,142 @@ focus = {
 					}
 				}
 			}
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = HOL_daf_organization
+				mio:HOL_daf_organization = {
+					add_mio_funds = 500
+				}
+			}
+			ELSE = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = fma
+			}
+			add_tech_bonus = {
+				name = POR_portuguese_artillery
+			    bonus = 0.5
+			    uses = 2
+			    category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = POR_advanced_artillery
+		prerequisite = { focus = POR_portuguese_artillery}
+		prerequisite = { focus = POR_military_research_facilities}
+		icon = GFX_goal_generic_army_artillery2
+		x = 0
+		y = 2
+
+		relative_position_id = POR_portuguese_artillery
+		cost = 10
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			add_tech_bonus = {
+				name = POR_advanced_artillery
+			    bonus = 0.5
+			    uses = 2
+			    category = artillery
+			}
+
+			add_doctrine_cost_reduction = {
+				name = POR_advanced_artillery
+			    cost_reduction = 0.5
+			    uses = 2
+			    category = land_doctrine
+			    category = naval_doctrine
+			    category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = POR_military_research_facilities
+		prerequisite = { focus = POR_military_vehicles focus = POR_portuguese_artillery 
+		focus = POR_light_aircraft_focus focus = POR_portuguese_companies }
+		icon = GFX_focus_generic_military_industry
+		x = 1
+		y = 1
+
+		relative_position_id = POR_military_vehicles
+		cost = 10
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+		
+			add_breakthrough_progress = {
+				value = 0.25
+				specialization = specialization_air
+			}
+
+			add_tech_bonus = {
+				name = POR_naval_research_institute
+			    bonus = 0.25
+			    uses = 1
+			    category = support_tech
+			}
+			add_tech_bonus = {
+				name = POR_naval_research_institute
+			    bonus = 0.25
+			    uses = 1
+			    category = air_equipment
+			}
+			
+			air_experience = 50
+			add_political_power = 50
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = POR_armor_focus
+		prerequisite = { focus = POR_military_research_facilities }
+		prerequisite = { focus = POR_military_vehicles }
+		icon = GFX_goal_generic_army_tanks
+		x = -1
+		y = 1
+
+		relative_position_id = POR_military_research_facilities
+		cost = 10
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			if = {
+				limit = { has_full_control_of_state = 112 }
+				112 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				random_owned_state = {
+					limit = {
+						is_controlled_by = ROOT
+						is_core_of = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
 			add_tech_bonus = {
 				name = POR_armor_focus
-			    bonus = 1.0
-			    uses = 2
+			    bonus = 0.5
+			    uses = 1
 			    category = armor
 			}
 			add_ideas = POR_armor_focus_idea
@@ -1887,7 +1882,7 @@ focus = {
 			add_tech_bonus = {
 				name = POR_further_armor_developements
 			    bonus = 1.0
-			    uses = 2
+			    uses = 1
 			    category = armor
 			}
 			add_breakthrough_progress = {
@@ -1980,7 +1975,7 @@ focus = {
 			add_tech_bonus = {
 				name = POR_advanced_light_aircraft
 			    bonus = 1.0
-			    uses = 2
+			    uses = 1
 			    category = air_equipment
 			}
 			add_ideas = POR_advanced_light_aircraft
@@ -3452,14 +3447,14 @@ focus = {
 		y = 1
 
 		relative_position_id = POR_army_reorganization
-		cost = 10
+		cost = 5
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = { 	
 			army_experience	= 25
 			add_tech_bonus = {
 				name = POR_metropolitan_army
-			    bonus = 1.0
-			    uses = 2
+			    bonus = 0.5
+			    uses = 1
 			    category = infantry_weapons
 				category = armor
 				category = artillery
@@ -3714,28 +3709,23 @@ focus = {
 			}
 			add_tech_bonus = {
 				name = POR_army_research_institute
-			    bonus = 0.75
+			    bonus = 0.5
 			    uses = 1
 			    category = infantry_weapons
 			}
 			add_tech_bonus = {
 				name = POR_army_research_institute
-			    bonus = 0.75
+			    bonus = 0.5
 			    uses = 1
 			    category = artillery
 			}
 			add_tech_bonus = {
 				name = POR_army_research_institute
-			    bonus = 0.75
+			    bonus = 0.5
 			    uses = 1
 			    category = armor
 			}
-			add_doctrine_cost_reduction = {
-				name = POR_army_research_institute
-			    bonus = 0.75
-			    uses = 1
-			    category = land_doctrine
-			}
+			
 			army_experience = 50
 			add_political_power = 50
 			add_stability = 0.05
@@ -4174,7 +4164,7 @@ focus = {
 			add_political_power = 50
 			add_doctrine_cost_reduction = {
 				name = POR_staff_wargames
-			    cost_reduction = 1
+			    cost_reduction = 0.5
 			    uses = 2
 			    category = land_doctrine
 			}
@@ -4202,7 +4192,7 @@ focus = {
 			add_ideas = POR_fortification_focus_idea
 			add_doctrine_cost_reduction = {
 				name = POR_field_maneuvers
-			    cost_reduction = 1
+			    cost_reduction = 0.5
 			    uses = 2
 			    category = land_doctrine
 			}
@@ -4228,7 +4218,7 @@ focus = {
 			add_manpower = 50000
 			add_doctrine_cost_reduction = {
 				name = POR_field_maneuvers
-			    cost_reduction = 1
+			    cost_reduction = 0.5
 			    uses = 2
 			    category = land_doctrine
 			}
@@ -4254,7 +4244,7 @@ focus = {
 			army_experience = 25
 			add_doctrine_cost_reduction = {
 				name = POR_staff_wargames
-			    cost_reduction = 1
+			    cost_reduction = 0.5
 			    uses = 2
 			    category = land_doctrine
 			}
