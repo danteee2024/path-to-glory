@@ -6701,7 +6701,6 @@ formable_nations_mod_category = {
 				state = 289
 				state = 868
 				state = 869
-				state = 336
 				
 			}
 		}
@@ -6723,7 +6722,6 @@ formable_nations_mod_category = {
 						868 = { is_controlled_by = ROOT }
 						869 = { is_controlled_by = ROOT }
 						
-						336 = { is_controlled_by = ROOT }
 					}
 					AND = {
 						has_global_flag = debug_mode
@@ -6749,10 +6747,19 @@ formable_nations_mod_category = {
 				670 = { add_core_of = ROOT }
 				286 = { add_core_of = ROOT }
 				671 = { add_core_of = ROOT }
-				336 = { add_core_of = ROOT }
-			}
-			288 = { add_core_of = ROOT }
+				288 = { add_core_of = ROOT }
 			640 = { add_core_of = ROOT }
+			993 = { add_core_of = ROOT }
+			994 = { add_core_of = ROOT }
+			995 = { add_core_of = ROOT }
+			996 = { add_core_of = ROOT }
+			997 = { add_core_of = ROOT }
+			998 = { add_core_of = ROOT }
+			999 = { add_core_of = ROOT }
+			}
+			
+			336 = { add_core_of = ROOT }
+			custom_effect_tooltip = siam_indochina_form_tt
 		}
 	}
 
