@@ -509,96 +509,16 @@ focus = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			80 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
 				}
-			}
-			76 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			766 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			83 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			84 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			81 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			82 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			78 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			79 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			77 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			971 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			46 = {
-				add_extra_state_shared_building_slots = 1
+				random_select_amount = 12
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -2413,6 +2333,8 @@ focus = {
 		completion_reward = {
 			add_ideas = ROM_The_Empire_0
 			set_cosmetic_tag = ROM_The_Empire
+			add_stability = 0.1
+			add_war_support = 0.1
 		}		
 	}
 	focus = {
@@ -2442,6 +2364,36 @@ focus = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_ideas = ROM_Organize_the_Royal_Army
+		}		
+	}
+
+	focus = {
+		id = ROM_Royal_Army_Reform
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = ROM_Organize_the_Royal_Army }
+		x = -2
+		y = 2
+		relative_position_id = ROM_the_empire
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_ideas = ROM_Royal_Army_Reform
 		}		
 	}
 
@@ -2666,7 +2618,7 @@ focus = {
 		}
 
 		available = {
-			democratic = 0.35
+			democratic > 0.3
 		}
 
 		bypass = {
@@ -2687,6 +2639,8 @@ focus = {
 				remove_idea = ROM_The_Democrats
 				add_idea = ROM_Democratic_King
 			}	
+			add_stability = 0.1
+			add_war_support = 0.1
 		}
 	}
 
@@ -3034,6 +2988,8 @@ focus = {
 				remove_idea = ROM_Democratic_King
 				add_idea = ROM_The_Great_Democratic_Kingdom
 			}
+			add_stability = 0.1
+			add_war_support = 0.1
 		}
 	}
 
@@ -3531,6 +3487,8 @@ focus = {
 				remove_idea = ROM_The_Empire_0
 				add_idea = ROM_The_Great_Empire
 			}
+			add_stability = 0.1
+			add_war_support = 0.1
 		}		
 	}
 
