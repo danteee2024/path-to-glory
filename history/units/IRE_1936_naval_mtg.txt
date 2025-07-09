@@ -1,0 +1,15 @@
+﻿units = {
+
+	##### NAVAL UNITS #####
+	### ROYAL NAVY ###
+	fleet = {
+		name = "Marine and Coastwatching Service"			
+		naval_base = 11293  # Dublin
+		task_force = {				
+			name = "Marine and Coastwatching Service"			
+			location = 11293  # Dublin
+			ship = { name = "Muirchú" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = IRE version_name = "Armed Steam Trawler" } } }				
+			ship = { name = "Fort Rannoch" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = IRE version_name = "Patrol Ship" } } }		
+		}								
+	}
+}

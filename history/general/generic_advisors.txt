@@ -7,6 +7,7 @@ every_possible_country = {
 		NOT = { 
 			OR = { 
 				#Europe
+				tag = IRE
 				tag = GER 
 				tag = ENG 
 				tag = SOV 
