@@ -1849,10 +1849,15 @@ focus = {
 		completion_reward = {
 			add_ideas =  MON_state_investments_idea
 			custom_effect_tooltip = generic_skip_one_line_tt
-			swap_ideas = {
+			if = {
+				limit = { has_idea = pastoral_economy }
+				
+				swap_ideas = {
 				remove_idea =pastoral_economy
 				add_idea = civilian_economy
 			}
+		}
+		
             custom_effect_tooltip = generic_skip_one_line_tt
 			
 		}
