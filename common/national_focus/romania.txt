@@ -2340,12 +2340,12 @@ focus = {
 	focus = {
 		id = ROM_Organize_the_Royal_Army
 		icon = GFX_SOV_military_reorganization_ccp_2d_sov_compatibility
-		prerequisite = { focus = ROM_Democratic_King focus = ROM_the_empire }
+		prerequisite = { focus = ROM_revise_the_constitution1 focus = ROM_the_empire }
 		mutually_exclusive = {
 			focus = ROM_Joint_Operations_Planning
 		}
 		x = -2
-		y = 2
+		y = 1
 		relative_position_id = ROM_the_empire
 
 		cost = 10
@@ -2435,7 +2435,7 @@ focus = {
 		focus = {
 		id = ROM_The_Empire_is_arming_itself
 		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = ROM_Carols_Industrial_Plan }
+		prerequisite = { focus = ROM_all_parties_must_end }
 		x = -1
 		y = 4
 		relative_position_id = ROM_Carols_Industrial_Plan
@@ -2702,7 +2702,7 @@ focus = {
 	focus = {
 		id = ROM_fortify_the_borders
 		icon = GFX_goal_generic_construct_military
-		prerequisite = { focus = ROM_Researcher_Investment focus = ROM_Royal_Army_Reform  }
+		prerequisite = { focus = ROM_Royal_Army_Reform  }
 		mutually_exclusive = {
 			focus = ROM_Fortify_the_Eastern_Marches
 		}
@@ -2799,7 +2799,7 @@ focus = {
 	focus = {
 		id = ROM_Joint_Operations_Planning
 		icon = GFX_focus_SOV_mobilization_plan
-		prerequisite = { focus = ROM_Democratic_King focus = ROM_the_empire }
+		prerequisite = { focus = ROM_revise_the_constitution1 focus = ROM_the_empire }
 		mutually_exclusive = {
 			focus = ROM_Organize_the_Royal_Army
 		}
@@ -2945,11 +2945,9 @@ focus = {
 		prerequisite = { focus = ROM_Expand_the_Support_Industry
 			focus = ROM_Change_of_the_Support_Industry_for_War
 		}
-		prerequisite = {
-			focus = ROM_join_allies_1 focus = ROM_join_the_Crowned_Brotherhood
-		}
-		x = 2
-		y = 2
+		
+		x = 1
+		y = 1
 		relative_position_id = ROM_Expand_the_Support_Industry
 
 		cost = 5
@@ -2984,7 +2982,10 @@ focus = {
 		id = ROM_bringing_down_the_giants
 		icon = GFX_focus_generic_total_war
 		prerequisite = { focus = ROM_The_Great_Democratic_Kingdom }
-		x = 0
+		prerequisite = {
+			focus = ROM_join_allies_1 focus = ROM_join_the_Crowned_Brotherhood
+		}
+		x = 1
 		y = 1
 		relative_position_id = ROM_The_Great_Democratic_Kingdom
 
@@ -3155,9 +3156,9 @@ focus = {
 	focus = {
 		id = ROM_militarize_the_sentinels
 		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = ROM_his_majestys_loyal_government }
+		prerequisite = { focus = ROM_his_majestys_loyal_government focus = ROM_Carols_Industrial_Plan }
 	
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = ROM_his_majestys_loyal_government
 
@@ -3190,7 +3191,7 @@ focus = {
 		icon = GFX_focus_rom_parties_end
 		prerequisite = { focus = ROM_militarize_the_sentinels }
 	
-		x = 0
+		x = 1
 		y = 2
 		relative_position_id = ROM_his_majestys_loyal_government
 
@@ -3264,7 +3265,7 @@ focus = {
 		id = ROM_the_royal_foundation
 		icon = GFX_focus_research
 		prerequisite = { focus = ROM_all_parties_must_end }
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = ROM_all_parties_must_end
 
@@ -3294,7 +3295,7 @@ focus = {
 	focus = {
 		id = ROM_Fortify_the_Eastern_Marches
 		icon = GFX_focus_SWE_hedgehog_defense
-		prerequisite = { focus = ROM_the_royal_foundation focus = ROM_Royal_Army_Reform }
+		prerequisite = { focus = ROM_Royal_Army_Reform }
 		mutually_exclusive = {
 			focus = ROM_fortify_the_borders
 		}
@@ -3341,7 +3342,7 @@ focus = {
 	focus = {
 		id = ROM_join_the_Crowned_Brotherhood
 		icon = GFX_focus_generic_monarchy_1 
-		prerequisite = { focus = ROM_Fortify_the_Eastern_Marches }
+		prerequisite = {  focus = ROM_fortify_the_borders focus = ROM_Fortify_the_Eastern_Marches  }
 		mutually_exclusive = {
 		focus = ROM_join_axis_0
 		}
@@ -3395,7 +3396,7 @@ focus = {
 	focus = {
 		id = ROM_join_axis_0
 		icon = GFX_goal_support_fascism
-		prerequisite = { focus = ROM_Fortify_the_Eastern_Marches }
+		prerequisite = { focus = ROM_fortify_the_borders focus = ROM_Fortify_the_Eastern_Marches }
 		prerequisite = {
 			focus = ROM_the_royal_foundation
 		}
