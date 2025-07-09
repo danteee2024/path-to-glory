@@ -239,7 +239,7 @@ ideas = {
 		
 		NZL_war_council = {
 
-			name = NZL_war_council
+			name = AFG_adopt_nufus
 
 			allowed = {
 				always = no 
@@ -344,7 +344,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = BEL_union_agreements
+			picture = generic_devalue_currency
 
 			modifier = {
 				industry_repair_factor = 0.1
@@ -1202,7 +1202,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = NZL_islands
+			picture = SWE_hedgehog_defense
 
 			modifier = {
 				production_speed_bunker_factor = 0.3
