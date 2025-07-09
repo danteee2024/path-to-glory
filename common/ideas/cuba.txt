@@ -337,7 +337,7 @@ ideas = {
 
 		cuba_production_idea = {
 
-			picture = r56production
+			picture = ARG_civilian_economy_boost
 
 			allowed = {
 				always = yes
@@ -353,7 +353,7 @@ ideas = {
 
 		cuba_research_idea = {
 
-			picture = ElizarIncrease
+			picture = CHL_ligas_patrioticas
 
 			allowed = {
 				always = yes
