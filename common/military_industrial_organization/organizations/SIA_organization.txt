@@ -1,0 +1,39 @@
+SIA_Bangkok_Dock_Company = {
+	include = generic_raider_ship_organization
+	icon = GFX_idea_bangkok
+	allowed = {	 
+		tag = SIA
+		has_dlc = "Arms Against Tyranny"
+	}
+	
+	available = {
+		owner = { has_completed_focus = SIA_Acquire_Bangkok_Dock_Company }
+	}
+}
+
+SIA_osaka_army_arsenal_artillery_organization = {
+	include = generic_artillery_organization
+	icon = GFX_idea_osaka_army_arsenal
+	allowed = {	
+		tag = SIA
+		has_dlc = "Arms Against Tyranny"
+	}
+	
+	available = {
+		owner = { has_completed_focus = SIA_Contract_Japanese_Artillery }
+	}
+}
+
+SIA_mitsubishi_organization = {
+	include = generic_high_agility_fighter_aircraft_organization
+	icon = GFX_idea_mitsubishi
+	
+	allowed = {	 
+		tag = SIA
+		has_dlc = "Arms Against Tyranny"
+	}
+	
+	available = {
+		owner = { has_completed_focus = SIA_Contract_Japanese_Aircraft }
+	}
+}
