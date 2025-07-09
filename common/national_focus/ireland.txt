@@ -1005,7 +1005,7 @@ focus_tree = {
 	focus = {
 		id = IRE_British_Constitutional_Crisis
 		text = "The British Constitutional Crisis"
-		icon = GFX_focus_ARG_develop_the_electricity_sector						
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties					
 			
 		x = 0
 		y = 1
