@@ -1057,10 +1057,11 @@ focus_tree = {
 					}
 				}
 			}
-			set_technology = {
-				armor_tech_1 = 1
-				engine_tech_1 = 1
-				basic_heavy_tank_chassis = 1
+			add_tech_bonus = {
+				name = POR_armor_focus
+			    bonus = 1
+			    uses = 1
+			    category = armor
 			}
 			IF = {
 				limit = {
@@ -1178,8 +1179,11 @@ focus_tree = {
 					}
 				}
 			}
-			set_technology = {
-				iw_large_airframe = 1
+			add_tech_bonus = {
+				name = POR_light_aircraft_focus
+			    bonus = 1.0
+			    uses = 1
+			    category = light_air
 			}
 			IF = {
 				limit = {
@@ -1306,7 +1310,7 @@ focus = {
 			}
 			add_tech_bonus = {
 				name = POR_metropolitan_army
-			    bonus = 0.5
+			    bonus = 0.25
 			    uses = 2
 			    category = support_tech
 			}
@@ -1328,15 +1332,15 @@ focus = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = POR_advanced_companies
-			    bonus = 1.0
-			    uses = 3
+			    bonus = 0.5
+			    uses = 2
 			    category = support_tech
 			}
 
 			add_doctrine_cost_reduction = {
 				name = POR_advanced_companies
-			    cost_reduction = 1
-			    uses = 3
+			    cost_reduction = 0.5
+			    uses = 2
 			    category = land_doctrine
 			    category = naval_doctrine
 			    category = air_doctrine
@@ -1403,7 +1407,7 @@ focus = {
 			if = {
 				limit = { has_full_control_of_state = 180 }
 				180 = {
-					add_extra_state_shared_building_slots = 3
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = infrastructure
 						level = 1
@@ -1411,7 +1415,7 @@ focus = {
 					}
 					add_building_construction = {
 						type = naval_base
-						level = 2
+						level = 1
 						province = 9817
 						instant_build = yes
 					}
@@ -1645,9 +1649,7 @@ focus = {
 					}
 				}
 			}
-			set_technology = {
-				motorised_infantry = 1
-			}
+			
 			add_tech_bonus = {
 				name = motorized_bonus
 				ahead_reduction = 1
@@ -1833,7 +1835,7 @@ focus = {
 			}
 			add_tech_bonus = {
 				name = POR_armor_focus
-			    bonus = 0.5
+			    bonus = 1
 			    uses = 1
 			    category = armor
 			}
@@ -1933,16 +1935,12 @@ focus = {
 					}
 				}
 			}
-			set_technology = {
-				basic_small_airframe = 1
-				engines_2 = 1
-				aircraft_construction = 1
-			}
+			
 
 			add_tech_bonus = {
 				name = POR_light_aircraft_focus
-			    bonus = 1.0
-			    uses = 1
+			    bonus = 0.25
+			    uses = 3
 			    category = light_air
 			}
 			air_experience = 25
@@ -2751,11 +2749,7 @@ focus = {
 		completion_reward = {
 			if = {
 				limit = { has_dlc = "Arms Against Tyranny" }
-				add_doctrine_cost_reduction = {
-					cost_reduction = 0.5
-					uses = 1
-					category = special_forces_doctrine
-				}
+				
 			}
 		    swap_ideas = {
 				remove_idea = POR_iberian_mountaineers2
@@ -2951,9 +2945,7 @@ focus = {
 		cost = 10
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			set_technology = {
-				basic_cruiser_armor_scheme = 1
-			}
+			
 			add_tech_bonus = {
 				name = POR_national_cruiser_production
 			    bonus = 1.0
@@ -2987,9 +2979,7 @@ focus = {
 		cost = 10
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			set_technology = {
-				basic_ship_hull_heavy = 1
-			}
+			
 			add_tech_bonus = {
 				name = POR_battleship_effort
 			    bonus = 1.0
@@ -3055,9 +3045,7 @@ focus = {
 		cost = 10
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			set_technology = {
-			early_carrier = 1
-			}
+			
 			add_tech_bonus = {
 				name = POR_carrier_effort
 			    bonus = 1
@@ -3411,11 +3399,7 @@ focus = {
 		completion_reward = {
 			if = {
 				limit = { has_dlc = "Arms Against Tyranny" }
-				add_doctrine_cost_reduction = {
-					cost_reduction = 0.5
-					uses = 1
-					category = special_forces_doctrine
-				}
+				
 			}
 			swap_ideas = {
 				remove_idea = POR_portuguese_marines2
@@ -4051,11 +4035,7 @@ focus = {
 		completion_reward = { 
 			if = {
 				limit = { has_dlc = "Arms Against Tyranny" }
-				add_doctrine_cost_reduction = {
-					cost_reduction = 0.5
-					uses = 1
-					category = special_forces_doctrine
-				}
+				
 			}
 			swap_ideas = {
 				remove_idea = POR_tropas_paraquedistas_idea2
@@ -4545,7 +4525,7 @@ focus = {
 			add_tech_bonus = {
 				name = mp_tech_bonus_name
 				bonus = 1
-				uses = 4
+				uses = 2
 				category = military_police_tech
 			}
 			
@@ -6766,7 +6746,7 @@ focus = {
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				name = POR_visit_the_front
-			    cost_reduction = 1
+			    cost_reduction = 0.5
 			    uses = 1
 			    category = land_doctrine
 			}
@@ -7298,7 +7278,7 @@ focus = {
 	focus = {
 		id = POR_ditadura_militar
 		available = {
-			fascism > 0.4
+			fascism > 0.5
 			has_war = no
 		}
 
