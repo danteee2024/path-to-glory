@@ -555,7 +555,7 @@ characters = {
 				original_tag = MON
 			}
 			traits = {
-				army_entrenchment_1 
+				army_cavalry_3
 			}
 		}
 	}
