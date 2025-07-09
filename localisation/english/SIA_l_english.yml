@@ -8,7 +8,7 @@
  
  peoples_dictator:0 "People's Dictator"
  
- peoples_assembly:0 "People's Assembly"
+ peoples_assembly:0 "Assembly of the Thai People"
  
  disillusioned_with_democracy:0 "Disillusioned with Democracy"
  disillusioned_with_democracy_desc:0 "No longer believing in democracy, this individual is looking to protect their people's rights through other means."
@@ -54,7 +54,7 @@
  
 ################################### FOCUSES                     \n      §H§!
  
- SIA_Fund_Education:0 "Fund Education"
+ SIA_Fund_Education:0 "Fund Education Programs in Isan"
  SIA_Fund_Education_desc:0 ""
  
  SIA_Contract_Japanese_Artillery:0 "Contract Japanese Artillery"
@@ -65,11 +65,10 @@
  
  SIA_Unite_SEA:0 "Unite South East Asia"
  SIA_Unite_SEA_desc:0 "The Worker's of South East Asia have all broken their chains. It is now time for us to all form a united government to stand against the Western and Asian Imperialists."
- SIA_Unite_SEA_Tooltip:0 "Transfer ownership of §YSouth East Asian§! provinces."
  
- SIA_Expand_Royal_Railway:0 "Expand Royal Railway"
+ SIA_Expand_Royal_Railway:0 "Expansion of the East Royal Railway"
  SIA_Expand_Royal_Railway_desc:0 ""
- SIA_Expand_Royal_Railway_II:0 "Expand Royal Railway II"
+ SIA_Expand_Royal_Railway_II:0 "Expand Southern Thai Railway Connections"
  SIA_Expand_Royal_Railway_II_desc:0 ""
  
     # Tool Tips for 6 Principles
@@ -150,36 +149,36 @@
  
  # Industry
  
- SIA_Industrial_Expansion:0 "Industrial Expansion"
+ SIA_Industrial_Expansion:0 "Re-assess Thai Industrial Operations"
  SIA_Industrial_Expansion_desc:0 ""
  
- SIA_Increase_Rubber_Production:0 "Increase Rubber Production"
- SIA_Increase_Rubber_Production_desc:0 "Our primary export is rubber. We need to expand upon this."
+ SIA_Increase_Rubber_Production:0 "Assess Rubber Outputs"
+ SIA_Increase_Rubber_Production_desc:0 "Our primary export is rubber. We need to assess our current outputs and find ways to improve them."
+
+ SIA_Increase_Rubber_Production_II:0 "Increase Thai Rubber Production"
+ SIA_Increase_Rubber_Production_II_desc:0 "Our primary export is rubber. We need to expand upon this. We will increase our rubber production to ensure we can export more rubber to the world market and increase our income."
  
- SIA_Increase_Rubber_Production_II:0 "Increase Rubber Production II"
- SIA_Increase_Rubber_Production_II_desc:0 "Our primary export is rubber. We need to expand upon this."
+ SIA_Expand_Interior_Infrastructure:0 "Assessment of Northern Infrastructure"
+ SIA_Expand_Interior_Infrastructure_desc:0 "We need to assess the current state of our infrastructure in Northern Siam to ensure it can support our industrial and military ambitions."
  
- SIA_Expand_Interior_Infrastructure:0 "Interior Infrastructure"
- SIA_Expand_Interior_Infrastructure_desc:0 ""
+ SIA_Expand_Interior_Industry:0 "Armament Programs in Northern Siam"
+ SIA_Expand_Interior_Industry_desc:0 "We will establish armament programs in Northern Siam to bolster our military capabilities and support our industrial base."
  
- SIA_Expand_Interior_Industry:0 "Interior Industry"
- SIA_Expand_Interior_Industry_desc:0 ""
+ SIA_Expand_Coastal_Infrastructure:0 "Buildups of Thai Coastal Infrastructure"
+ SIA_Expand_Coastal_Infrastructure_desc:0 "We need to assess the current state of our infrastructure in Southern Siam to ensure it can support our industrial and military ambitions."
  
- SIA_Expand_Coastal_Infrastructure:0 "Coastal Infrastructure"
- SIA_Expand_Coastal_Infrastructure_desc:0 ""
- 
- SIA_Expand_Coastal_Industry:0 "Coastal Industry"
- SIA_Expand_Coastal_Industry_desc:0 ""
- 
+ SIA_Expand_Coastal_Industry:0 "Prosperity of Thai Coastal Industry"
+ SIA_Expand_Coastal_Industry_desc:0 "We will focus on developing our coastal industries to boost economic growth and create jobs."
+
  SIA_Defend_the_Coast:0 "Defend the Coast"
- SIA_Defend_the_Coast_desc:0 ""
- 
+ SIA_Defend_the_Coast_desc:0 "We must ensure the security of our coastal regions against potential threats and invasions."
+
  SIA_Lanna_Resource_Extraction:0 "Lanna Resource Extraction"
- SIA_Lanna_Resource_Extraction_desc:0 ""
- 
+ SIA_Lanna_Resource_Extraction_desc:0 "We will focus on extracting valuable resources from the Lanna region to support our industrial growth."
+
  SIA_Malay_Resource_Extraction:0 "Malay Resource Extraction"
- SIA_Malay_Resource_Extraction_desc:0 ""
- 
+ SIA_Malay_Resource_Extraction_desc:0 "We will focus on extracting valuable resources from the Malay region to support our industrial growth."
+
  SIA_Invite_Paribatra_to_Return:0 "Invite Paribatra to Return"
  SIA_Invite_Paribatra_to_Return_desc:0 "As a consequence of the 1932 coup, Paribatra was exiled from the kingdom to Bandung, Dutch East Indies, which was under the Dutch administration. Paribatra has a Prussian education which we can make use of. We should invite him back to serve the state."
  
@@ -336,8 +335,8 @@
  SIA_Join_Allies:0 "Join Allies"
  SIA_Join_Allies_desc:0 "The Allies are the protectors of democracy. We should join them in order to protect ourselves and protect democracy around the world."
  
- SIA_Renegotiate_Unequal_Treaties:0 "Renegotiate Unequal Treaties"
- SIA_Renegotiate_Unequal_Treaties_desc:0 "We should discuss renegotiating the equal treaties with France and Britain. With our democratic system, maybe they will respect our sovereignty and give us back our land."
+ SIA_Renegotiate_Unequal_Treaties:0 "Renegotiate Unequal Treaties With France"
+ SIA_Renegotiate_Unequal_Treaties_desc:0 "We should discuss renegotiating the equal treaties with France. With our democratic system, maybe they will respect our sovereignty and give us back our land."
  
  SIA_Offer_To_Take_Over_Indonesia:0 "Offer to Take Over Indonesia"
  SIA_Offer_To_Take_Over_Indonesia_desc:0 "Indonesia is vulnerable without the full support of the Allies. We are in a good position to protect the area from the enemies of democracy."
@@ -481,12 +480,12 @@
  SIA_Great_Kingdom_of_Thailand:0 "Great Kingdom of Thailand"
  SIA_Great_Kingdom_of_Thailand_desc:0 "Great Kingdom of Thailand which is the integration of the Shan, the Lao and other Tai peoples, such as Vietnam, Burma and South China."
  
- SIA_Cultural_Mandate_1:0 "Cultural Mandate 1"
- SIA_Cultural_Mandate_2_3:0 "Cultural Mandate 2"
- SIA_Cultural_Mandate_4:0 "Cultural Mandate 3"
- SIA_Cultural_Mandate_5:0 "Cultural Mandate 4"
- SIA_Cultural_Mandate_7:0 "Cultural Mandate 5"
- SIA_Cultural_Mandate_11:0 "Cultural Mandate 6"
+ SIA_Cultural_Mandate_1:0 "Cultural Mandate"
+ SIA_Cultural_Mandate_2_3:0 "Cultural Mandate"
+ SIA_Cultural_Mandate_4:0 "Cultural Mandate"
+ SIA_Cultural_Mandate_5:0 "Cultural Mandate"
+ SIA_Cultural_Mandate_7:0 "Cultural Mandate"
+ SIA_Cultural_Mandate_11:0 "Cultural Mandate"
  
  #Monarchist
  
@@ -567,14 +566,18 @@
  
  SIA_Demand_Burma_dec:0 "Demand Burma"
  SIA_Demand_Burma_dec_desc:0 "While the UK is busy with others in Europe, we should attempt to regain our land in Burma."
- 
- SIA_Cultural_Mandate_1_dec:0 "Cultural Mandate 1"
- SIA_Cultural_Mandate_2_dec:0 "Cultural Mandate 2"
- SIA_Cultural_Mandate_3_dec:0 "Cultural Mandate 3"
- SIA_Cultural_Mandate_4_dec:0 "Cultural Mandate 4"
- SIA_Cultural_Mandate_5_dec:0 "Cultural Mandate 5"
- SIA_Cultural_Mandate_6_dec:0 "Cultural Mandate 6"
- 
+
+ SIA_Cultural_Mandate_1_dec:0 "Publish First Cultural Mandate"
+ SIA_Cultural_Mandate_2_dec:0 "Publish Second Cultural Mandate"
+ SIA_Cultural_Mandate_3_dec:0 "Publish Third Cultural Mandate"
+ SIA_Cultural_Mandate_4_dec:0 "Publish Fourth Cultural Mandate"
+ SIA_Cultural_Mandate_5_dec:0 "Publish Fifth Cultural Mandate"
+ SIA_Cultural_Mandate_6_dec:0 "Publish Sixth Cultural Mandate"
+ SIA_Cultural_Mandate_1_Done:0 "Published First Cultural Mandate"
+ SIA_Cultural_Mandate_2_Done:0 "Published Second Cultural Mandate"
+ SIA_Cultural_Mandate_3_Done:0 "Published Third Cultural Mandate"
+ SIA_Cultural_Mandate_4_Done:0 "Published Fourth Cultural Mandate"
+ SIA_Cultural_Mandate_5_Done:0 "Published Fifth Cultural Mandate"
  SIA_Propaganda_Output_dec:0 "Output for Thailand!"
  SIA_Propaganda_Asceticism_dec:0 "Practice Asceticism!"
  SIA_Propaganda_Supply_dec:0 "Supply for the Thai!"
@@ -693,26 +696,26 @@
  
   # Ask for Burma
  
- SIA.17.t:0 "Siam Requests Renegotiation of Unequal Treaties"
- SIA.17.desc:0 "The Siamese government has sent us correspondence asking for the return of Burma from us. How should we respond?"
- SIA.17.a:0 "Decline demands"
- SIA.17.b:0 "Accept demands"
+ SIA.17.t:0 "Siam Requests Occuputation of Burma"
+ SIA.17.desc:0 "The Siamese government has sent us correspondence asking for the alignment of Burma. Should we fall to them or should we stand our ground?"
+ SIA.17.a:0 "Burma is must never leave the Empire!"
+ SIA.17.b:0 "We have no choice"
  
  # They Said Yes
  
- SIA.18.t:0 "UK accepts"
- SIA.18.desc:0 "The UK has accepted our requests for Burma. We have regained our rightful territory."
- SIA.18.a:0 "Fortunate"
+ SIA.18.t:0 "Burma accepts demands"
+ SIA.18.desc:0 "Burma has accepted our requests for alignment. We have regained our rightful territory."
+ SIA.18.a:0 "Fortunate for them"
  
  # They Said No
   
- SIA.19.t:0 "UK declines"
- SIA.19.desc:0 "UK has declined our requests for Burma. This is unfortunate"
+ SIA.19.t:0 "Burma declines our offer!"
+ SIA.19.desc:0 "Burma has declined our requests for alignment. This is unfortunate and we will have to take it by force. This is a part of the unequal treaties that we signed with the UK in the 19th century."
  SIA.19.a:0 "Unfortunate"
  
  # Ask for Indochina
  
- SIA.20.t:0 "Siam Requests Renegotiation of Unequal Treaties"
+ SIA.20.t:0 "Siam Requests Occuputation of Laos and Cambodia"
  SIA.20.desc:0 "The Siamese government has sent us correspondence asking for the return of Laos and Cambodia from us. How should we respond?"
  SIA.20.a:0 "Decline demands"
  SIA.20.b:0 "Accept demands"
@@ -938,7 +941,7 @@ l_english:
  sia_royal_siam_air_force_workshop:0 "Royal Siam Air Force Workshop"
  sia_siam_cement_group:0 "Siam Cement Group"
  sia_royal_state_railway:0 "Royal State Railway"
- sia_thammasat_university_laboratories:0 "Thammasat University Laboratories"
+ sia_thammasat_university_laboratories:0 "Thammasat"
  sia_chulalongkorn_university:0 "Chulalongkorn University"
  sia_b_grimm:0 "B.Grimm"
  sia_siam_fuel_department:0 "Siam Fuel Department"
@@ -949,4 +952,16 @@ l_english:
  dispersed_industry_category_research:0 "Dispersed Industry Research Speed"
  fighter_research:0 "Fighter Research Speed"
  
- 
+ SIA_invite_RAJ:0 "Invite India"
+  SIA_invite_RAJ_desc:0 "The Indian Raj is a large nation with many resources. We should invite them to join our South East Asian Bloc."
+ SIA_request_occupation_of_burma:0 "Request Occupation of Burma"
+ SIA_request_occupation_of_burma_desc:0 "The Burmese people have been a part of the Thai people's various nations. Let us bring them back into the fold."
+ siam_indochina_form_tt:0 "All of §YBurma§! will now be a core of §YIndochina§!"
+
+ SIA_propaganda_campaigns:0 "Propaganda Campaigns"
+
+ SIA_SEA_economic_plan_tooltip:0 "§RIf you lose any of the prequisite states, that is required for this focus, you will lose the SEA Economic Plan!§!"
+
+ SIA_SEA_economic_plan_idea:0 "South East Asian Economic Plan"
+  SIA_SEA_economic_plan_desc:0 "The South East Asian Economic Plan is a plan to integrate the economies of South East Asia into one large economy. This will allow us to better compete with the rest of the world."
+  SIA_SEA_economic_plan:0 "SEA Economic Plan"

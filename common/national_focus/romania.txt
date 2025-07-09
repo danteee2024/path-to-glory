@@ -1525,6 +1525,7 @@ focus_tree = {
 
 
 		completion_reward = {
+			
 			create_wargoal = {
 				type = take_state_focus
 				target = SOV

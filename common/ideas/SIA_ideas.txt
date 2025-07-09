@@ -1,53 +1,31 @@
 # This only tells the game that you have NATIONAL SPIRITs stored here
 ideas = {
 	country = {
-	
-		### EXPLANATORY IDEA
-		AFK_explanatoryidea_I = {
-			picture = GFX_thisgfxiswrong
+
+	SIA_SEA_economic_plan_idea = {
+			picture = ARG_towards_a_greater_argentina
 			
-			# If CONDITIONS in "available" are not satisfied, this IDEA will be REMOVED
 			available = {
-				# CONDITIONS listed here
-			
+				tag = SIA
+			has_full_control_of_state = 336
+			has_full_control_of_state = 333
+			has_full_control_of_state = 671
+			has_full_control_of_state = 286
+			has_full_control_of_state = 741
+			has_full_control_of_state = 670
 			}
 			
-			# This stays always the same
 			removal_cost = -1
 
-			# MODIFIERS that this IDEA gives
 			modifier = {
-				# MODIFIERS listed here
-				
-			}
-			
-			
-			
-			### OTHER POSSIBLE THINGS (not often used, but will list it here - if you want to use them, just copy them to the EXEMPLARY IDEA bellow)
-			# TARGETED MODIFIERS that this IDEA provides
-			targeted_modifier = {
-				tag = AFK 
-				
-				# TARGETED MODIFIERS listed here
-				
-			}
-			
-			# What happens when you GET this IDEA
-			on_add = {
-				# EFFECTS listed here
-				
-			}
-			# What happens when you LOOSE/REMOVE this IDEA
-			on_remove = {
-				# EFFECTS listed here
-				
-			}
-			
-			# Rules you must follow when you have this IDEA (for example can't declare war, can't join factions, etc)
-			rule = {
-				# RULES listed here
+				global_building_slots_factor = 0.25
+				consumer_goods_factor = -0.15
+				local_resources_factor = 0.25
+				min_export = 0.05
+
 			}
 		}
+		
 		
 		SIA_Pad_Thai = {
 			picture = pad_thai
@@ -88,7 +66,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = 0.1
+				consumer_goods_factor = 0.05
 				production_speed_buildings_factor = 0.1
 				communism_drift = 0.05
 			}
@@ -104,7 +82,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = 0.20
+				consumer_goods_factor = 0.1
 				production_speed_buildings_factor = 0.2
 				communism_drift = 0.1
 			}
@@ -204,7 +182,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = 0.025
+				
 				conscription = 0.02
 				drift_defence_factor = 0.5
 			}
@@ -220,7 +198,6 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = 0.025
 				global_building_slots_factor = 0.15
 			}
 		}
@@ -235,7 +212,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = 0.025
+				
 				industrial_capacity_factory = 0.05
 				political_power_factor = -0.05
 			}
@@ -584,9 +561,7 @@ ideas = {
 
 			modifier = {				
 				research_speed_factor = 0.05
-				special_project_speed_factor = 0.10
-				scientist_breakthrough_bonus_factor = 0.15
-				scientist_research_bonus_factor = 0.05
+				
 			}
 		}
 		
@@ -649,9 +624,9 @@ ideas = {
 			removal_cost = -1
 
 			targeted_modifier = {
-				tag = RAJ
-				attack_bonus_against = 0.10
-				defense_bonus_against = 0.10
+				tag = BRM
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.25
 			}
 		}
 		
@@ -914,6 +889,7 @@ ideas = {
 				army_leader_start_level = 2
 				experience_gain_factor = 0.1
 				command_power_gain_mult = 0.4
+				max_planning = 0.1
 			}
 		}
 		
@@ -927,11 +903,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				unit_marine_design_cost_factor = -1
-				special_forces_training_time_factor = -0.25
-				marines_special_forces_contribution_factor = -0.25
 				extra_marine_supply_grace = 48
-				special_forces_cap_flat = 48
 			}
 		}
 
@@ -947,15 +919,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				unit_marine_design_cost_factor = -1
-				special_forces_training_time_factor = -0.25
-				marines_special_forces_contribution_factor = -0.25
-				special_forces_cap_flat = 72
 				extra_marine_supply_grace = 72
-				modifier_army_sub_unit_marine_attack_factor = 0.05
-				modifier_army_sub_unit_marine_defence_factor = 0.05
-				modifier_army_sub_unit_marine_max_org_factor = 0.05
-				modifier_army_sub_unit_marine_speed_factor = 0.05
 			}
 		}
 
@@ -971,16 +935,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				unit_marine_design_cost_factor = -1
-				special_forces_training_time_factor = -0.25
-				marines_special_forces_contribution_factor = -0.25
-				special_forces_cap_flat = 96
 				extra_marine_supply_grace = 96
-				modifier_army_sub_unit_marine_attack_factor = 0.05
-				modifier_army_sub_unit_marine_defence_factor = 0.05
-				modifier_army_sub_unit_marine_max_org_factor = 0.05
-				modifier_army_sub_unit_marine_speed_factor = 0.10
-				amphibious_invasion = 0.10
 				amphibious_invasion_defence = 0.10
 			}
 		}
@@ -996,7 +951,7 @@ ideas = {
 
 			equipment_bonus = {
 				submarine = {
-					build_cost_ic = -0.2 instant = yes
+					build_cost_ic = -0.1 instant = yes
 				}
 			}
 		}
@@ -1288,7 +1243,7 @@ ideas = {
 			}
 			
 			cost = 75
-			removal_cost = 10
+			removal_cost = 0
 			
 			research_bonus = {
 				train_tech = 0.15
@@ -1315,11 +1270,11 @@ ideas = {
 			}
 			
 			cost = 150
-			removal_cost = 10
+			removal_cost = 0
 			
 			research_bonus = { 
-				dispersed_industry_category = 0.15
-				industry = 0.15
+				industry = 0.25
+				
 			}
 			
 			traits = { 
@@ -1336,7 +1291,7 @@ ideas = {
 			}
 			
 			cost = 150
-			removal_cost = 10
+			removal_cost = 0
 			
 			research_bonus = { 
 				radar_tech = 0.15
@@ -1357,16 +1312,13 @@ ideas = {
 			}
 			
 			cost = 150
-			removal_cost = 10
+			removal_cost = 0
 			
-			research_bonus = {
-				encryption_tech = 0.15
-				decryption_tech = 0.15
-				electronics = 0.15
+			modifier = {
+				production_speed_radar_station_factor = 0.10
 			}
 			
 			traits = { 
-				construction_company
 				telephone_company
 			}
 
@@ -1384,12 +1336,15 @@ ideas = {
 			}
 			
 			cost = 150
-			removal_cost = 10
+			removal_cost = 0
 			
 			research_bonus = {
 				synth_resources = 0.15
+
 			}
-			
+			modifier = {
+				local_resources_factor = 0.10
+			}
 			traits = {
 				oil_extraction_company_trait
 			}
@@ -1415,7 +1370,7 @@ ideas = {
 			}
 			
 			cost = 150
-			removal_cost = 10
+			removal_cost = 0
 			
 			research_bonus = {
 			}
@@ -1443,7 +1398,7 @@ ideas = {
 			}
 			
 			cost = 150
-			removal_cost = 10
+			removal_cost = 0
 			
 			research_bonus = {
 				tp_tech = 0.20
@@ -1472,7 +1427,7 @@ ideas = {
 			}
 			
 			cost = 150
-			removal_cost = 10
+			removal_cost = 0
 			
 			research_bonus = {
 				light_air = 0.15
@@ -1497,7 +1452,7 @@ ideas = {
 			}
 			
 			cost = 150
-			removal_cost = 10
+			removal_cost = 0
 			
 			research_bonus = {
 				fighter = 0.25
@@ -1527,7 +1482,7 @@ ideas = {
 			}
 			
 			cost = 150
-			removal_cost = 10
+			removal_cost = 0
 			
 			research_bonus = { 
 				infantry_weapons = 0.15
@@ -1549,7 +1504,7 @@ ideas = {
 			}
 			
 			cost = 150
-			removal_cost = 10
+			removal_cost = 0
 			
 			research_bonus = {
 				artillery = 0.15
@@ -1569,7 +1524,7 @@ ideas = {
 			}
 			
 			cost = 150
-			removal_cost = 10
+			removal_cost = 0
 			
 			research_bonus = { 
 				motorized_equipment = 0.35
