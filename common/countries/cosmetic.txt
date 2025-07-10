@@ -3108,3 +3108,9 @@ SIA_SEA = {
     color = rgb { 0 36 124 }
     color_ui = rgb { 255 73 121 }
 }
+
+
+FORM_CELTIC = {
+	color = rgb { 1 50 33 }
+	color_ui = rgb { 1 50 33 }
+}

@@ -8632,7 +8632,6 @@ formable_nations_mod_category = {
 				state = 133
 				state = 136
 				state = 122
-				state = 14
 				
 			}
 		}
@@ -8653,7 +8652,6 @@ formable_nations_mod_category = {
 						136 = { is_controlled_by = ROOT }
 						
 						122 = { is_controlled_by = ROOT }
-						14 = { is_controlled_by = ROOT }
 					}
 					AND = {
 						has_global_flag = debug_mode
@@ -8682,6 +8680,7 @@ formable_nations_mod_category = {
 				14 = { add_core_of = ROOT }
 			}
 			123 = { add_core_of = ROOT }
+			171 = { add_core_of = ROOT }
 		}
 	}
 
@@ -9702,8 +9701,6 @@ formable_nations_mod_category = {
 				original_tag = ENG
 				original_tag = SCO
 				original_tag = WLS
-				original_tag = IRE
-				original_tag = NIR
 			}
 		}
 

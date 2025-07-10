@@ -113,7 +113,7 @@ focus_tree = {
 			}
 		}
 	
-		search_filters = { FOCUS_FILTER_SCARS }
+		search_filters = {  }
 	
 		completion_reward = {
 			add_ideas = { IRE_emergency_powers_act_idea }
@@ -614,7 +614,7 @@ focus_tree = {
 		available = {
 		}
 	
-		search_filters = { FOCUS_FILTER_SCARS }
+		search_filters = {  }
 	
 		completion_reward = {
 			random_core_state = {
@@ -986,7 +986,7 @@ focus_tree = {
 			}
 		}
 	
-		search_filters = { FOCUS_FILTER_SCARS }
+		search_filters = {  }
 	
 		completion_reward = {
 			add_political_power = 100
@@ -1103,7 +1103,7 @@ focus_tree = {
 		available = {
 		}
 	
-		search_filters = { FOCUS_FILTER_SCARS }
+		search_filters = {  }
 	
 		completion_reward = {
 			unlock_decision_category_tooltip = IRE_Northern_Ireland_category
@@ -1263,7 +1263,7 @@ focus_tree = {
 		available = {
 		}
 	
-		search_filters = { FOCUS_FILTER_SCARS }
+		search_filters = {  }
 	
 		completion_reward = {
 			add_political_power = 100
@@ -1374,7 +1374,7 @@ focus_tree = {
 			}
 		}
 	
-		search_filters = { FOCUS_FILTER_SCARS }
+		search_filters = {  }
 	
 		completion_reward = {
 			add_political_power = 100
@@ -1884,7 +1884,7 @@ focus_tree = {
 		available = {
 		}
 	
-		search_filters = { FOCUS_FILTER_SCARS }
+		search_filters = {  }
 	
 		completion_reward = {
 
@@ -2169,7 +2169,7 @@ focus_tree = {
 			}
 		}
 	
-		search_filters = { FOCUS_FILTER_SCARS }
+		search_filters = {  }
 	
 		completion_reward = {
 
@@ -2344,7 +2344,7 @@ focus_tree = {
 			}
 		}
 	
-		search_filters = { FOCUS_FILTER_SCARS }
+		search_filters = {  }
 	
 		completion_reward = { 
 			every_army_leader = {
@@ -2534,7 +2534,7 @@ focus_tree = {
 		available = {
 		}
 	
-		search_filters = { FOCUS_FILTER_SCARS }
+		search_filters = {  }
 	
 		completion_reward = {
 			add_political_power = 100
@@ -2992,7 +2992,7 @@ focus_tree = {
 		available = {
 		}
 	
-		search_filters = { FOCUS_FILTER_SCARS }
+		search_filters = {  }
 	
 		completion_reward = {
 			add_timed_idea = { idea = IRE_Irish_Diaspora days = 720 }
@@ -5480,7 +5480,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = IRE_Rebuild_1916_Towns }
 		relative_position_id = IRE_Rebuild_1916_Towns
-		search_filters = { FOCUS_FILTER_SCARS }
+		search_filters = {  }
 	
 		completion_reward = {
 			custom_effect_tooltip = IRE_Healed_Scars_tt
@@ -5748,7 +5748,7 @@ focus_tree = {
 		available = {
 		}
 	
-		search_filters = { FOCUS_FILTER_SCARS }
+		search_filters = {  }
 	
 		completion_reward = {
 			custom_effect_tooltip = IRE_scars_of_The_Potato_Famine
@@ -5778,7 +5778,7 @@ focus_tree = {
 		available = {
 		}
 	
-		search_filters = { FOCUS_FILTER_SCARS }
+		search_filters = {  }
 	
 		completion_reward = {
 			custom_effect_tooltip = IRE_scars_of_The_Potato_Famine
@@ -6197,7 +6197,7 @@ focus_tree = {
 		available = {
 		}
 	
-		search_filters = { FOCUS_FILTER_SCARS }
+		search_filters = {  }
 	
 		completion_reward = {
 			unlock_decision_category_tooltip = IRE_Celtic_Nationalism_category
@@ -6634,7 +6634,7 @@ focus_tree = {
 		available = {
 		}
 	
-		search_filters = { FOCUS_FILTER_SCARS }
+		search_filters = {  }
 	
 		completion_reward = {
 			add_timed_idea = { idea = IRE_Irish_Lost_Celtic_Lands days = 720 }
