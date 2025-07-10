@@ -25,6 +25,36 @@ ideas = {
 
 			}
 		}
+
+		SIA_Neutral_Khana_Ratsodon = {
+			picture = hol_aloof_neutrality
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				trade_opinion_factor = 0.25
+			}
+		}
+
+		SIA_Empowered_Khana_Ratsodon = {
+			picture = ARG_growing_nationalism_modifier
+			
+			available = {
+				tag = SIA
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				trade_opinion_factor = 0.25
+				political_power_gain = 0.10
+				improve_relations_maintain_cost_factor = -0.50
+			}
+		}
 		
 		
 		SIA_Pad_Thai = {
@@ -228,7 +258,8 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				stability_factor = 0.1
+				stability_factor = 0.2
+				stability_weekly = 0.02
 			}
 		}
 		
@@ -466,9 +497,9 @@ ideas = {
 				neutrality_drift = 0.1
 				
 				political_advisor_cost_factor = -0.25
-				#trade_laws_cost_factor = -0.25
+				trade_laws_cost_factor = -0.25
 				mobilization_laws_cost_factor = -0.25
-				#economy_cost_factor = -0.25
+				economy_cost_factor = -0.25
 				high_command_cost_factor = -0.25
 				air_chief_cost_factor = -0.25
 				army_chief_cost_factor = -0.25
@@ -490,8 +521,8 @@ ideas = {
 				send_volunteers_tension = -1
 				send_volunteer_size = 12
 				
-				army_core_attack_factor = 0.1
-				army_core_defence_factor = 0.15
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
 			}
 		}
 		
@@ -507,10 +538,8 @@ ideas = {
 			modifier = {				
 				political_advisor_cost_factor = -0.25
 				trade_laws_cost_factor = -0.25
-				#mobilization_laws_cost_factor = -0.25
+				mobilization_laws_cost_factor = -0.25
 				economy_cost_factor = -0.25
-				
-				consumer_goods_factor = -0.15
 			}
 		}
 		
@@ -524,7 +553,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {				
-				#political_advisor_cost_factor = -0.25
+				political_advisor_cost_factor = -0.25
 				trade_laws_cost_factor = -0.25
 				mobilization_laws_cost_factor = -0.25
 				economy_cost_factor = -0.25
@@ -545,8 +574,8 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {				
-				political_power_factor = 0.10
-				stability_weekly = 0.005
+				political_power_factor = 0.15
+				stability_weekly = 0.003
 			}
 		}
 		
@@ -706,7 +735,7 @@ ideas = {
 				conscription_factor = 0.25
 			
 				drift_defence_factor = 0.5
-				stability_weekly = 0.01
+				stability_weekly = 0.005
 			}
 		}
 		
@@ -724,10 +753,10 @@ ideas = {
 				conscription_factor = 0.50
 			
 				drift_defence_factor = 0.5
-				stability_weekly = 0.01
+				stability_weekly = 0.005
 				
 				weekly_manpower = 500
-				war_support_weekly = 0.01
+				war_support_weekly = 0.005
 			}
 		}
 		
@@ -744,10 +773,10 @@ ideas = {
 				conscription_factor = 0.50
 			
 				drift_defence_factor = 0.5
-				stability_weekly = 0.01
+				stability_weekly = 0.005
 				
 				weekly_manpower = 500
-				war_support_weekly = 0.01
+				war_support_weekly = 0.005
 			
 				consumer_goods_factor = -0.1
 			}
@@ -767,7 +796,7 @@ ideas = {
 				conscription_factor = 0.50
 			
 				drift_defence_factor = 0.5
-				stability_weekly = 0.01
+				stability_weekly = 0.005
 				
 				weekly_manpower = 500
 				war_support_weekly = 0.01
@@ -791,7 +820,7 @@ ideas = {
 				conscription_factor = 0.50
 			
 				drift_defence_factor = 0.5
-				stability_weekly = 0.02
+				stability_weekly = 0.005
 				
 				weekly_manpower = 500
 				war_support_weekly = 0.01
@@ -799,6 +828,7 @@ ideas = {
 				consumer_goods_factor = -0.1
 			
 				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
 			}
 		}
 		
@@ -843,7 +873,13 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_factor = -0.1
+				political_advisor_cost_factor = -0.25
+				trade_laws_cost_factor = -0.25
+				mobilization_laws_cost_factor = -0.25
+				economy_cost_factor = -0.25
+				consumer_goods_factor = -0.15
+				global_building_slots_factor = 0.10
+				production_speed_buildings_factor = 0.10
 			}
 		}
 		
@@ -857,7 +893,9 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				conscription_factor = 0.15
+				compliance_growth = 0.05
+				political_power_factor = 0.10
+				recruitable_population_factor = 0.10
 			}
 		}
 				
@@ -872,6 +910,7 @@ ideas = {
 
 			modifier = {
 				compliance_growth = 0.05
+				political_power_factor = 0.10
 			}
 		}
 		
@@ -894,7 +933,7 @@ ideas = {
 		}
 		
 		SIA_Royal_Thai_Marine_Corps = {
-			picture = marines
+			picture = BRA_arsenal_de_marinha
 			
 			available = {
 				tag = SIA

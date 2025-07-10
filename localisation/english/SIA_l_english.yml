@@ -533,6 +533,12 @@
  SIA_Stalinism_desc:0 "Stalinism has clearly showed that it is the true interpretation of Marx and the only way to successfully launch a worker's revolution."
  
  SIA_Empowered_Civilian_Wing:0 "Empowered Civilian Wing"
+
+ SIA_Neutral_Khana_Ratsodon:0 "Neutral Khana Ratsodon"
+ SIA_Neutral_Khana_Ratsodon_desc:0 "Khana Ratsadon is a military and civilian group that organized and carried out the coup d'état known as the Siamese Revolution of 1932, forcing King Prajadhipok to grant constitutional monarchy. It became the first political party formed in Siam, and was briefly the sole party in the local parliament."
+ 
+ SIA_Empowered_Khana_Ratsodon:0 "Empowered Khana Ratsodon"
+ SIA_Empowered_Khana_Ratsodon_desc:0 "Khana Ratsadon is a military and civilian group that organized and carried out the coup d'état known as the Siamese Revolution of 1932, forcing King Prajadhipok to grant constitutional monarchy. It became the first political party formed in Siam, and was briefly the sole party in the local parliament."
  
 ################################### DECISIONS                   \n      §H§! 
  
