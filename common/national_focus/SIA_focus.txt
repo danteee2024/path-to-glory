@@ -1275,7 +1275,6 @@ focus_tree = {
 		relative_position_id = SIA_Demand_Referendum
 		cost = 5
 		completion_reward = {
-			add_ideas = POR_defence_of_freedom
 			hidden_effect = {
 				every_other_country = {
 					limit = {
