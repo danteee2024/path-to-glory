@@ -12,7 +12,7 @@ characters = {
 		}
 		
 		field_marshal={
-			traits={ politically_connected offensive_doctrine infantry_leader}
+			traits= { politically_connected offensive_doctrine infantry_leader }
 			skill=4
 			attack_skill=3
 			defense_skill=3
@@ -100,10 +100,16 @@ characters = {
 	SIA_pridi_bhanomyong={
 		name = SIA_pridi_bhanomyong
 		portraits={
-			civilian={
+			civilian= {
 				large = GFX_idea_pridi
 			}
 		}
+		country_leader = {
+						ideology = communist
+						traits = { disillusioned_with_democracy }
+						expire = "1965.1.1"
+						id = -1
+					}
 	}
 		
 	SIA_Peoples_Assembly = {

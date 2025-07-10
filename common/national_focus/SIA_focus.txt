@@ -1793,11 +1793,14 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			communism > 0.3
+			communism > 0.4
 		}
 		
 		completion_reward = {
 			country_event = SIA.29
+			set_politics = {
+				ruling_party = communism
+			}
 		}
 		
 		ai_will_do = {
