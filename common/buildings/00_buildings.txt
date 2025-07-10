@@ -69,8 +69,8 @@ industrial_expansion = {
 	}
 	arms_factory = {
 		show_on_map = 6
-		base_cost = 7500
-		base_cost_conversion = 4200
+		base_cost = 7200
+		base_cost_conversion = 4000
 		military_production = 1
 		disabled_in_dmz = yes
 		icon_frame = 2
@@ -84,8 +84,8 @@ industrial_expansion = {
 
 	industrial_complex = {
 		show_on_map = 6
-		base_cost = 11000
-		base_cost_conversion = 9250
+		base_cost = 10500
+		base_cost_conversion = 9000
 		general_production = 1
 		icon_frame = 1
 		value = 5
@@ -278,7 +278,7 @@ industrial_expansion = {
 
 		level_cap = {
 			shares_slots = yes
-			state_max = 20
+			state_max = 35
 			group_by = extractors
 		}
 	}
@@ -295,7 +295,7 @@ industrial_expansion = {
 
 		level_cap = {
 			shares_slots = yes
-			state_max = 20
+			state_max = 35
 			group_by = extractors
 		}
 	}
@@ -312,7 +312,7 @@ industrial_expansion = {
 
 		level_cap = {
 			shares_slots = yes
-			state_max = 20
+			state_max = 35
 			group_by = extractors
 		}
 	}
@@ -329,7 +329,7 @@ industrial_expansion = {
 
 		level_cap = {
 			shares_slots = yes
-			state_max = 20
+			state_max = 35
 			group_by = extractors
 		}
 	}
