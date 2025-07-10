@@ -1936,7 +1936,7 @@ focus = {
 	}
 
 	focus = {
-		id = ROM_institute_royal_dictatorship1
+		id = ROM_institute_royal_dictatorship
 		icon = GFX_focus_rom_royal_dictatorship
 		prerequisite = { focus = ROM_Change_of_Goverment }
 		x = 3
@@ -1989,10 +1989,10 @@ focus = {
 	focus = {
 		id = ROM_the_empire
 		icon = GFX_focus_hun_elect_a_king
-		prerequisite = { focus = ROM_institute_royal_dictatorship1 }
+		prerequisite = { focus = ROM_institute_royal_dictatorship }
 		x = 0
 		y = 1
-		relative_position_id = ROM_institute_royal_dictatorship1
+		relative_position_id = ROM_institute_royal_dictatorship
 
 		cost = 5
 
@@ -2021,7 +2021,7 @@ focus = {
 	focus = {
 		id = ROM_Organize_the_Royal_Army
 		icon = GFX_SOV_military_reorganization_ccp_2d_sov_compatibility
-		prerequisite = { focus = ROM_revise_the_constitution1 focus = ROM_the_empire }
+		prerequisite = { focus = ROM_revise_the_constitution focus = ROM_the_empire }
 		mutually_exclusive = {
 			focus = ROM_Joint_Operations_Planning
 		}
@@ -2179,7 +2179,7 @@ focus = {
 		icon = GFX_focus_rom_coup
 		prerequisite = { focus = ROM_Change_of_Goverment }
 		mutually_exclusive = {
-			focus = ROM_institute_royal_dictatorship1
+			focus = ROM_institute_royal_dictatorship
 		}
 		x = -3
 		y = 1
@@ -2227,7 +2227,7 @@ focus = {
 	}
 
 	focus = {
-		id = ROM_revise_the_constitution1
+		id = ROM_revise_the_constitution
 		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = ROM_king_michaels_coup }
 		x = 0
@@ -2261,10 +2261,10 @@ focus = {
 	focus = {
 		id = ROM_Democratic_King
 		icon = GFX_goal_generic_neutrality_focus
-		prerequisite = { focus = ROM_revise_the_constitution1 }
+		prerequisite = { focus = ROM_revise_the_constitution }
 		x = 0
 		y = 1
-		relative_position_id = ROM_revise_the_constitution1
+		relative_position_id = ROM_revise_the_constitution
 
 		cost = 10
 
@@ -2330,7 +2330,7 @@ focus = {
 	}
 
 	focus = {
-		id = ROM_institute_royal_dictatorship
+		id = ROM_institute_royal_dictatorship1
 		icon = GFX_focus_rom_royal_dictatorship
 		x = 16
 		y = 0
@@ -2480,7 +2480,7 @@ focus = {
 	focus = {
 		id = ROM_Joint_Operations_Planning
 		icon = GFX_focus_SOV_mobilization_plan
-		prerequisite = { focus = ROM_revise_the_constitution1 focus = ROM_the_empire }
+		prerequisite = { focus = ROM_revise_the_constitution focus = ROM_the_empire }
 		mutually_exclusive = {
 			focus = ROM_Organize_the_Royal_Army
 		}
@@ -2640,7 +2640,7 @@ focus = {
 		available = {
 
 		}
-
+ROM_join_allies
 		bypass = {
 
 		}
@@ -2908,12 +2908,12 @@ focus = {
 	}
 
 	focus = {
-		id = ROM_revise_the_constitution
+		id = ROM_revise_the_constitution1
 		icon = GFX_goal_generic_forceful_treaty
-		prerequisite = { focus = ROM_institute_royal_dictatorship }
+		prerequisite = { focus = ROM_institute_royal_dictatorship1 }
 		x = 1
 		y = 1
-		relative_position_id = ROM_institute_royal_dictatorship
+		relative_position_id = ROM_institute_royal_dictatorship1
 
 		cost = 10
 
@@ -3179,10 +3179,10 @@ focus = {
 	focus = {
 		id = ROM_crack_down_on_extremism
 		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = ROM_institute_royal_dictatorship }
+		prerequisite = { focus = ROM_institute_royal_dictatorship1 }
 		x = 3
 		y = 1
-		relative_position_id = ROM_institute_royal_dictatorship
+		relative_position_id = ROM_institute_royal_dictatorship1
 
 		cost = 5
 
@@ -3235,11 +3235,11 @@ focus = {
 	focus = {
 		id = ROM_flexible_foreign_policy
 		icon = GFX_goal_generic_improve_relations
-		prerequisite = { focus = ROM_revise_the_constitution }
+		prerequisite = { focus = ROM_revise_the_constitution1 }
 		mutually_exclusive = { focus = ROM_his_majestys_loyal_government }
 		x = 1
 		y = 2
-		relative_position_id = ROM_institute_royal_dictatorship
+		relative_position_id = ROM_institute_royal_dictatorship1
 
 		cost = 5
 
