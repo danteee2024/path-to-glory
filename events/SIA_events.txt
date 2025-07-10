@@ -891,7 +891,7 @@
 			add_country_leader_role = {
 				character = SIA_pridi_bhanomyong
 					country_leader = {
-						ideology = social_democracy
+						ideology = marxism
 						traits = { disillusioned_with_democracy }
 						expire = "1965.1.1"
 						id = -1
