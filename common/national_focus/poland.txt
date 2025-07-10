@@ -4579,16 +4579,7 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = POL_complete_plan_east_tt
-			add_idea = {
-				attack_bonus_against = {
-                target = SOV
-                factor = 0.10     # +10% attack
-            }
-             defence_bonus_against = {
-               target = SOV
-             factor = 0.10     # +10% defense
-            }
-		}
+		
 		}
 	}
 
