@@ -3465,7 +3465,7 @@ focus_tree = {
 		x = -14
 		y = 1
 		relative_position_id = POL_complete_april_constitution
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -4031,10 +4031,11 @@ focus_tree = {
 		id = POL_plan_east
 		icon = GFX_focus_POL_plan_east
 		prerequisite = { focus = POL_prepare_for_the_next_war }
+		mutually_exclusive = { focus = POL_plan_west }
 		x = -16
 		y = 1
 		relative_position_id = POL_complete_april_constitution
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -4063,7 +4064,7 @@ focus_tree = {
 				}
 				add_dynamic_modifier = {
 					modifier = POL_plan_modifier
-					days = 547
+					days = 900
 					scope = POL
 				}
 			}
@@ -4077,7 +4078,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = POL_plan_east
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -4090,9 +4091,12 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_MANPOWER } 
 		completion_reward = {
+
+			recruitable_population_factor = 0.10 
 			add_timed_idea = {
 				idea = POL_eastern_conscription_idea
-				days = 365
+				days = 730
+			
 			}
 		}
 	}
@@ -4104,7 +4108,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = POL_eastern_conscripts
-		cost = 10
+		cost = 2.5
 
 		ai_will_do = {
 			factor = 10
@@ -4152,7 +4156,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = POL_eastern_conscripts
-		cost = 10
+		cost = 2.5
 
 		ai_will_do = {
 			factor = 10
@@ -4200,7 +4204,7 @@ focus_tree = {
 		x = -4
 		y = 1
 		relative_position_id = POL_plan_east
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -4275,7 +4279,7 @@ focus_tree = {
 				94 = {
 					add_building_construction = {
 						type = bunker
-						level = 1
+						level = 4
 						instant_build = yes
 						province = {
 							all_provinces = yes
@@ -4299,7 +4303,7 @@ focus_tree = {
 				95 = {
 					add_building_construction = {
 						type = bunker
-						level = 1
+						level = 4
 						instant_build = yes
 						province = {
 							all_provinces = yes
@@ -4323,7 +4327,7 @@ focus_tree = {
 				96 = {
 					add_building_construction = {
 						type = bunker
-						level = 1
+						level = 4
 						instant_build = yes
 						province = {
 							all_provinces = yes
@@ -4342,7 +4346,7 @@ focus_tree = {
 		x = -6
 		y = 1
 		relative_position_id = POL_plan_east
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -4403,7 +4407,7 @@ focus_tree = {
 				91 = {
 					add_building_construction = {
 						type = bunker
-						level = 1
+						level = 4
 						instant_build = yes
 						province = {
 							all_provinces = yes
@@ -4427,7 +4431,7 @@ focus_tree = {
 				93 = {
 					add_building_construction = {
 						type = bunker
-						level = 1
+						level = 4
 						instant_build = yes
 						province = {
 							all_provinces = yes
@@ -4446,7 +4450,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = POL_fortification_of_belarus
-		cost = 10
+		cost = 2.5
 
 		ai_will_do = {
 			factor = 10
@@ -4514,7 +4518,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = POL_plan_east
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -4539,11 +4543,11 @@ focus_tree = {
 
 	focus = {
 		id = POL_complete_plan_east
-		icon = GFX_focus_generic_treaty
+		icon = GFX_focus_attack_soviet
 		x = -3
 		y = 3
 		relative_position_id = POL_plan_east
-		cost = 0
+		cost = 5
 		prerequisite = {
 			focus = POL_fortification_of_belarus
 			focus = POL_fortification_of_ukraine
@@ -4577,7 +4581,16 @@ focus_tree = {
 					scope = POL
 				}
 			}
-			custom_effect_tooltip = POL_complete_plan_east_tt
+			add_idea = {
+				attack_bonus_against = {
+                target = SOV
+                factor = 0.10     # +10% attack
+            }
+             defence_bonus_against = {
+               target = SOV
+             factor = 0.10     # +10% defense
+            }
+		}
 		}
 	}
 
