@@ -128,6 +128,13 @@ focus_tree = {
 		completion_reward = {
 		
 			custom_effect_tooltip = SIA_Will_Empower
+
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = SIA_Neutral_Khana_Ratsodon
+					add_idea = SIA_Empowered_Khana_Ratsodon
+				}
+			}
 		
 			add_ideas = SIA_Military_in_Power
 			
@@ -274,7 +281,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		
-		cost = 10
+		cost = 5
 
 		available = {
 			
@@ -330,7 +337,7 @@ focus_tree = {
 		y = 5
 		
 	
-		cost = 5
+		cost = 10
 
 		available = {
 			
@@ -436,7 +443,7 @@ focus_tree = {
 		mutually_exclusive = { focus = SIA_Seek_Closer_Relations_To_Japan focus = SIA_South_East_Asian_Pact }
 		relative_position_id = SIA_Proclaim_Great_Kingdom_of_Thailand
 
-		x = 0
+		x = -2
 		y = 1
 		
 		cost = 5
@@ -502,23 +509,17 @@ focus_tree = {
 		id = SIA_Request_Mediation_of_Japan_for_Indochina
 		icon = GFX_goal_generic_forceful_treaty
 		
-		prerequisite = { focus = SIA_Seek_Closer_Relations_To_Japan}
+		prerequisite = { focus = SIA_Seek_Closer_Relations_To_Japan }
 		
 		relative_position_id = SIA_Seek_Closer_Relations_To_Japan
 
-		x = -3
+		x = -2
 		y = 1
 		
 		cost = 5
 
-		bypass = {
-			670 = { is_owned_by = ROOT }
-			741 = { is_owned_by = ROOT }
-		}
-
 		available = {
 			AND = {
-				is_in_faction_with = JAP
 				670 = { is_controlled_by = ROOT }
 				741 = { is_controlled_by = ROOT }
 			}
@@ -541,7 +542,7 @@ focus_tree = {
 		
 		relative_position_id = SIA_Seek_Closer_Relations_To_Japan
 
-		x = -1
+		x = 0
 		y = 1
 		
 		cost = 10
@@ -586,7 +587,7 @@ focus_tree = {
 		
 		relative_position_id = SIA_Seek_Closer_Relations_To_Japan
 
-		x = 1
+		x = 2
 		y = 1
 		
 		cost = 10
@@ -702,6 +703,10 @@ focus_tree = {
 		completion_reward = {
 		
 			custom_effect_tooltip = SIA_Will_Remove
+
+			hidden_effect = {
+				remove_idea = SIA_Neutral_Khana_Ratsodon
+			}
 		
 			add_ideas = SIA_Empowered_Rama_VII
 			add_ideas = SIA_Military_Opposition
@@ -1085,6 +1090,13 @@ focus_tree = {
 		completion_reward = {
 		
 			custom_effect_tooltip = SIA_Will_Empower
+
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = SIA_Neutral_Khana_Ratsodon
+					add_idea = SIA_Empowered_Khana_Ratsodon
+				}
+			}
 						
 			add_timed_idea = {
 				idea = SIA_Empowered_Civilian_Wing
@@ -1198,11 +1210,11 @@ focus_tree = {
 		id = SIA_National_Economic_Council
 		icon = GFX_goal_generic_construct_civilian
 		
-		prerequisite = { focus = SIA_Demand_Referendum}
+		prerequisite = { focus = SIA_Demand_Referendum }
 
 		relative_position_id = SIA_Demand_Referendum
 
-		x = 1
+		x = 2
 		y = 1
 		
 		cost = 5
@@ -1257,7 +1269,7 @@ focus_tree = {
 		prerequisite = { focus = SIA_Demand_Referendum }
 
 		icon = GFX_focus_generic_treaty
-		x = -1
+		x = -2
 		y = 1
 	
 		relative_position_id = SIA_Demand_Referendum
@@ -1297,12 +1309,16 @@ focus_tree = {
 		id = SIA_Look_Outward
 		icon = GFX_focus_PER_white_revolution
 		
-		prerequisite = { focus = SIA_Demand_Referendum }
+		prerequisite = { focus = SIA_Equality_of_Thai_People }
+		prerequisite = {
+			focus = SIA_Protect_Asia
+			focus = SIA_Economic_Welfare
+		}
 
-		relative_position_id = SIA_Demand_Referendum
+		relative_position_id = SIA_Equality_of_Thai_People
 
 		x = 0
-		y = 4
+		y = 1
 		
 		cost = 5
 
@@ -1488,7 +1504,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		
-		cost = 10
+		cost = 5
 
 		available = {
 			country_exists = BRM
@@ -1535,10 +1551,10 @@ focus_tree = {
 		icon = GFX_focus_protect_asia
 		prerequisite = { focus = SIA_securing_the_free_world }
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = SIA_securing_the_free_world
 		
-		cost = 5
+		cost = 10
 
 		available = {
 			
@@ -1556,8 +1572,8 @@ focus_tree = {
 	focus = {
 		id = SIA_South_East_Asia_United
 		icon = GFX_focus_usa_focus_on_asia
-		prerequisite = { focus = SIA_National_Economic_Council }
-		relative_position_id = SIA_National_Economic_Council
+		prerequisite = { focus = SIA_United_East_Asia }
+		relative_position_id = SIA_United_East_Asia
 		x = 0
 		y = 1
 		
@@ -1634,7 +1650,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		
-		cost = 7.5
+		cost = 10
 
 		available = {
 			
@@ -1696,6 +1712,13 @@ focus_tree = {
 		completion_reward = {
 						
 			custom_effect_tooltip = SIA_Will_Empower
+
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = SIA_Neutral_Khana_Ratsodon
+					add_idea = SIA_Empowered_Khana_Ratsodon
+				}
+			}
 						
 			add_timed_idea = {
 				idea = SIA_Repealed_Anti_Communist_Act
@@ -1733,7 +1756,7 @@ focus_tree = {
 		x = -0
 		y = 1
 		
-		cost = 10
+		cost = 5
 
 		available = {
 			
@@ -1763,7 +1786,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		
-		cost = 10
+		cost = 5
 
 		available = {
 			
@@ -1790,7 +1813,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		
-		cost = 10
+		cost = 5
 
 		available = {
 			communism > 0.4
@@ -4005,6 +4028,251 @@ focus_tree = {
 		
 		ai_will_do = {
 			factor = 5
+		}
+	}
+	# Six Principles
+
+#	focus = {
+#		id = SIA_Six_Principles_of_Khana_Ratsadon
+#		icon = GFX_focus_six
+#
+#		x = 4
+#		y = 0
+#		relative_position_id = SIA_Repeal_Anti_Communist_Act
+#
+#		cost = 5
+#		
+	#	offset = {
+	#		x = 1
+	#		y = -11
+	#		trigger = {
+	#			has_game_rule = {
+	#				rule = obsolete_focus_branches_visibility
+	#				option = HIDE
+	#			}
+	#			has_completed_focus = SIA_Military_Factionalism
+	#		}
+	#	}
+	#	
+	#	allow_branch = {
+	#		if = {
+	#			NOT = {
+	#				OR = {
+	#					has_completed_focus = SIA_Empower_Rama_VII
+	#				}
+	#			}
+	#		}
+	#	}
+
+#		available = {
+#			has_country_flag = SIA_Khana_Ratsodon_Empowered
+#		}
+#		
+#		completion_reward = {
+#		
+#			add_dynamic_modifier = {
+#				modifier = SIA_Principles
+#			}		
+#
+#			add_political_power = 150
+#		}S
+#		
+#		ai_will_do = {
+#			factor = 50
+#		}
+#	}	
+	
+	focus = {
+		id = SIA_Supreme_Power_of_Thai_People
+		icon = GFX_focus_supreme_thai
+		prerequisite = { focus = SIA_Demand_Referendum }
+		
+		relative_position_id = SIA_Demand_Referendum
+
+		x = 0
+		y = 1
+		
+		cost = 5
+
+		available = {
+			
+		}
+		
+		completion_reward = {
+			
+			add_ideas = SIA_Supreme_Power_of_Thai_People
+			
+		#	custom_effect_tooltip = SIA_Principles_Supreme_Tooltip
+		#	
+		#	add_to_variable = { SIA_Principles_Political_Power = 0.1 }
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	
+	focus = {
+		id = SIA_National_Security
+		icon = GFX_focus_security
+		
+		prerequisite = { focus = SIA_Cultural_Mandates }
+		
+		relative_position_id = SIA_Cultural_Mandates
+
+		x = 1
+		y = 1
+		
+		cost = 10
+
+		available = {
+			
+		}
+		
+		completion_reward = {
+			
+			add_ideas = SIA_National_Security
+			
+		#	custom_effect_tooltip = SIA_Principles_Security_Tooltip
+		#	
+		#	add_to_variable = { SIA_Principles_Attack = 0.1 }
+		#	add_to_variable = { SIA_Principles_Defense = 0.1 }
+			
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	
+	focus = {
+		id = SIA_Economic_Welfare
+		icon = GFX_focus_economic
+		prerequisite = { focus = SIA_National_Economic_Council }
+		
+		relative_position_id = SIA_National_Economic_Council
+
+		x = 0
+		y = 2
+		
+		cost = 10
+
+		available = {
+			
+		}
+		
+		completion_reward = {
+			
+			swap_ideas = {
+				remove_idea = SIA_National_Economic_Council
+				add_idea = SIA_Economic_Welfare
+			} 
+			
+		#	custom_effect_tooltip = SIA_Principles_Economic_Tooltip
+		#	
+		#	add_to_variable = { SIA_Principles_Consumer_Goods = -0.1 }
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	
+	focus = {
+		id = SIA_Equality_of_Thai_People
+		icon = GFX_focus_equality
+		prerequisite = { focus = SIA_Rights_and_Liberties }
+		
+		relative_position_id = SIA_Rights_and_Liberties
+
+		x = 0
+		y = 1
+		
+		cost = 5
+
+		available = {
+			
+		}
+		
+		completion_reward = {
+			
+			swap_ideas = {
+				remove_idea = SIA_Rights_and_Liberties
+				add_idea = SIA_Equality_of_Thai_People
+			}
+		
+		#	custom_effect_tooltip = SIA_Principles_Equality_Tooltip
+		#
+		#	add_to_variable = { SIA_Principles_Recruitable = 0.15 }
+		
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	
+	focus = {
+		id = SIA_Rights_and_Liberties
+		icon = GFX_focus_rights_liberties
+		prerequisite = { focus = SIA_Supreme_Power_of_Thai_People }
+		
+		relative_position_id = SIA_Supreme_Power_of_Thai_People
+
+		x = 0
+		y = 1
+		
+		cost = 5
+
+		available = {
+			
+		}
+		
+		completion_reward = {
+
+			swap_ideas = {
+				remove_idea = SIA_Supreme_Power_of_Thai_People
+				add_idea = SIA_Rights_and_Liberties 
+			}
+			
+		#	custom_effect_tooltip = SIA_Principles_Rights_Tooltip
+		#	
+		#	add_to_variable = { SIA_Principles_Compliance = 0.05 }
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	
+	focus = {
+		id = SIA_Public_Education
+		icon = GFX_focus_education
+		prerequisite = { focus = SIA_Cultural_Mandates }
+		
+		relative_position_id = SIA_Cultural_Mandates
+
+		x = -1
+		y = 1
+		
+		cost = 10
+
+		available = {
+		}
+		
+		completion_reward = {
+			add_research_slot = 1
+			add_ideas = SIA_Public_Education
+			
+		#	custom_effect_tooltip = SIA_Principles_Education_Tooltip
+		#	
+		#	add_to_variable = { SIA_Principles_Research = 0.05 }
+		}
+		
+		ai_will_do = {
+			factor = 50
 		}
 	}
 }
