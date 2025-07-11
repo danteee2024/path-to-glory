@@ -528,7 +528,7 @@ focus = {
 		}
 	}
 	focus = {
-		id = ROM_Local_Resource_investment 
+		id = ROM_Local_Ressource_investment 
 		icon = GFX_focus_generic_resource_extraction
 		prerequisite = { focus = ROM_Roads  }
 		prerequisite = {
