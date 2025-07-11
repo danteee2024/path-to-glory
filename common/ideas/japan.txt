@@ -722,10 +722,10 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				industrial_capacity_factory = 0.10
-				industrial_capacity_dockyard = -0.30
+				industrial_capacity_dockyard = -0.10
 				political_power_gain = -0.10
 				production_factory_efficiency_gain_factor = 0.10
-				production_speed_arms_factory_factor = 0.05
+				production_speed_arms_factory_factor = 0.10
 				production_speed_supply_node_factor = 0.10
 				production_speed_rail_way_factor = 0.10
 			}
@@ -746,7 +746,7 @@ ideas = {
 			modifier = {
 				political_power_gain = -0.10
 				industrial_capacity_factory = 0.05
-				industrial_capacity_dockyard = -0.15
+				industrial_capacity_dockyard = -0.05
 				production_factory_efficiency_gain_factor = 0.10
 				production_speed_arms_factory_factor = 0.05
 				production_speed_supply_node_factor = 0.05
@@ -3025,7 +3025,11 @@ ideas = {
 			picture = generic_research_bonus
 			
 			modifier = {
-				research_speed_factor = 0.07
+				research_speed_factor = 0.10
+				special_project_speed_factor = 0.10
+				scientist_breakthrough_bonus_factor = 0.10
+				scientist_xp_gain_factor = 0.05
+				scientist_research_bonus_factor = 0.05
 			}
 		}
 

@@ -1,47 +1,5 @@
 ﻿l_english:
-JAP_investment:0 "Investment"
-JAP_emperors_economy:0 "Emperor's Economy"
-JAP_emperors_economy_desc:0 "With The Emperor's Economy focus, we pledge ourselves to economic reform and prosperity under imperial guidance. This rejuvenation of our financial systems fuels industrial growth, enhances production capabilities, and boosts domestic prosperity, positioning Japan as a rising economic titan."
-JAP_invade_china:0 "Nanshin Ron"
-JAP_invade_china_desc:0 "We set our sights on expanding our influence in Asia. Preparing for this substantial undertaking, we marshal our forces and strategize our approach, understanding that success would bring significant territorial and resource gains to fortify Japan's standing on the world stage."
-JAP_break_up_the_big_four:0 "Dismantle The Big Four"
-JAP_break_up_the_big_four_desc:0 "We are embarking on a bold journey to dismantle the overwhelming dominance of Mitsubishi, Mitsui, Yasuda, and Sumitomo. This decentralization of industrial power aims to usher in a new era of economic balance, competition, and innovation across all sectors in Japan."
-JAP_break_up_Sumitomo:0 "Dismantle Sumitomo"
-JAP_break_up_Sumitomo_desc:0 "As we target the towering industrial power of Sumitomo, we aim to redistribute its dominance, stirring fresh currents of competition and innovation. This strategic move promises to breathe new life into the economy, creating a balanced and dynamic marketplace within Japan."
-JAP_break_up_Mitsui:0 "Dismantle Mitsui"
-JAP_break_up_Mitsui_desc:0 "By confronting the colossal entity that is Mitsui, we seek to fragment its industrial stronghold. This strategic decision encourages diversification and competitiveness in our economic landscape, sparking dynamic growth and fostering a more resilient Japanese economy."
-JAP_break_up_Mitsubishi:0 "Dismantle Mitsubishi"
-JAP_break_up_Mitsubishi_desc:0 "Challenging the towering entity of Mitsubishi, we aim to dismantle its vast industrial supremacy. This strategic stride encourages a more diversified and competitive economic landscape, promoting dynamic growth and fortifying the robustness of Japan's economy."
-JAP_break_up_Yasuda:0 "Dismantle Yasuda"
-JAP_break_up_Yasuda_desc:0 "Targeting Yasuda's influential sway, we intend to scatter its vast industrial control. This calculated maneuver incites a wave of economic decentralization, fostering competition and driving new growth, thereby invigorating the resilience of the Japanese economy."
-JAP_emperors_army:0 "Emperor's Army"
-JAP_emperors_army_desc:0 "As we dedicate ourselves to 'The Emperor's Army,' we enact sweeping reforms across our military. Through modernization and enhanced training, we forge an invincible force ready to protect the Land of the Rising Sun and assert Japan's might on the global battlefield."
-JAP_strike_north_doctrine:0 "Strike North Doctrine"
-JAP_strike_north_doctrine_desc:0 "Under the 'Strike North Doctrine,' we set our sights on territorial expansion to the north. This strategic pivot strengthens our military position and resource control, reinforcing Japan's capacity to hold its own against the forces shaping the future of the Asian continent."
-
-JAP_cultural_dominance_idea:0 "Cultural Purges"
-JAP_cultural_dominance:0 "Cultural Dominance"
-JAP_cultural_dominance_desc:0 "Cultural Dominance is by order of Hirohito and we must not cooperate with aliens besides that of Japanese blood."
-JAP_Hokushin-ron:0 "Hokushin Ron"
-JAP_Hokushin-ron_desc:0 "Adopting the 'Hokushin-ron' or 'Northward Advance' strategy, we gear towards a decisive northern expansion. The shift in our strategic focus bolsters our military presence and resource access, securing Japan's standing in the evolving landscape of Asia."
-JAP_claim_siberia:0 "Claim Siberia"
-JAP_claim_siberia_desc:0 "By asserting our claim over Siberia, we aim to extend Japan's sphere of influence across this vast, resource-rich region. This bold move promises to unlock significant economic and strategic benefits, bolstering our position on the global stage."
-JAP_prepare_to_strike_north:0 "Prepare To Strike North"
-JAP_prepare_to_strike_north_desc:0 "As we 'Prepare to Strike North,' we concentrate on mobilizing our resources and refining our military strategies. This calculated preparation allows us to effectively expand our northern frontiers, securing a strategic advantage and resource-rich territories for Japan."
-JAP_emperors_unitversity:0 "Emperor's University"
-JAP_emperors_unitversity_desc:0 "The Emperor's University embodies our dedication to intellectual and cultural growth. As we foster world-class education and research under the Emperor's auspices, Japan experiences a surge in innovation, technology, and strategic understanding, positioning us at the forefront of an evolving world."
-JAP_expand_emperors_unitversity:0 "Expand The Emperor's University"
-JAP_expand_emperors_unitversity_desc:0 "With the expansion of The Emperor's University, we deepen our commitment to intellectual growth. This advancement paves the way for a new wave of research and innovation, cementing Japan's role as a hub of knowledge and technology in an evolving world."
-JAP_expand_emperors_spy:0 "Open Up A Spy Branch"
-JAP_expand_emperors_spy_desc:0 "With the establishment of a new spy branch, a chilling shadow stretches across our enemies. Silent whispers of secrets unfold and unseen eyes pry, sowing fear and dread. This haunting veil of espionage strengthens our grip on the world, with every clandestine operation echoing our silent, formidable power."
-JAP_prepare_to_strike_north_2:0 "Northern Advance"
-JAP_prepare_to_strike_north_1:0 "Expand The Railways"
-JAP_gov_support_invasion:0 "Goverment Approved Invasion"
-JAP_break_Mitsui:0 "Mitsui Dismantled"
-JAP_break_Yasuda:0 "Yasuda Dismantled"
-JAP_break_Mitsubishi:0 "Mitsubishi Dismantled"
-JAP_break_Sumitomo:0 "Sumitomo Dismantled"
-JAP_emperors_untiversity:0 "University Expanded"
+ JAP_emperors_untiversity:0 "University Expanded"
  JAP_caught_off_gruad:0 "Caught off Guard"
  JAP_caught_off_gruad_desc:0 "We knew they were coming, we just didn't think it would be so soon."
  JAP_caught_off_gruad:0 "Caught off Guard"
@@ -627,7 +585,7 @@ JAP_emperors_untiversity:0 "University Expanded"
  JAP_we_sent_our_technicians_infantry:0 "Japanese Learning From Us"
  JAP_we_sent_our_technicians_planes:0 "Japanese Learning From Us"
  JAP_efficent_economy:0 "Japanese Export Focused Economy"
-JAP_island_investment:0 "Island Investment"
+ JAP_island_investment:0 "Island Investment"
  JAP_island_investment_desc:0 "Now that we have done away expansionism, we can divert our resources to other regions, namely our colonial possessions."
  JAP_ally_korea:0 "An Asian Democratic Pact"
  JAP_ally_korea_desc:0 "Let us set aside our differences, give the olive branch, and help each other out. We need to bring Asia to the worldstage on our own regards avoid of western influences "
@@ -741,12 +699,12 @@ JAP_island_investment:0 "Island Investment"
  JAP_develop_korea_desc:0 "Develop Korea"
 
 #lungemine
-JAP_lungemines:0 "Lunge Mines"
+ JAP_lungemines:0 "Lunge Mines"
 
-JAP_strengthen_the_divine_wind:0 "Strengthen the Divine Wind"
-JAP_strengthen_the_divine_wind_effect:0 "Enables production of §HYokosuka MXY7 Ohka§!"
-JAP_strengthen_the_divine_wind_effect_bba:0 "Enables the §HFixed Explosive Charge§! module"
-JAP_strengthen_the_divine_wind_desc:0 "Kamikaze, the tactics of the Special Attack Unit, have changed suicide attacks
+ JAP_strengthen_the_divine_wind:0 "Strengthen the Divine Wind"
+ JAP_strengthen_the_divine_wind_effect:0 "Enables production of §HYokosuka MXY7 Ohka§!"
+ JAP_strengthen_the_divine_wind_effect_bba:0 "Enables the §HFixed Explosive Charge§! module"
+ JAP_strengthen_the_divine_wind_desc:0 "Kamikaze, the tactics of the Special Attack Unit, have changed suicide attacks
  warning_to_japan_player:0 "Do §RNOT§! Touch §YState Transfer Tool§! until your civil war is over. §RYou will mess up your states§! and will be unable to do §CClose the Island§!."
 
 #ptg
@@ -757,6 +715,24 @@ JAP_strengthen_the_divine_wind_desc:0 "Kamikaze, the tactics of the Special Atta
  japan.26.c:0 "Aircraft factories could benefit from foreign expertise."
  japan.26.e:0 "We have no interest of sharing secrets."
 
+# GIAMPIERX3
+
+ JAP_backed_tosehia_tt:0 "The Tosehia faction prefers to expand south."
+ JAP_backed_kodoha_tt:0 "The Kodoha faction prefers to expand north."
+
+ JAP_imperial_showa_restoration:0 "Imperial Showa Restoration"
+ JAP_imperial_showa_restoration_desc:0 "Despide the fascist takeover in the government, the emperor shall not step down to any possible figurehead."
+
+ JAP_glory_to_hideki_tojo:0 "Glory to Hideki Tojo"
+ JAP_glory_to_hideki_tojo_desc:0 "Our great leader Hideki Tojo made Japan great again!"
+
+ JAP_alternative_to_the_kodoha_faction:0 "An Alternative to the Kodoha Faction"
+ JAP_alternative_to_the_kodoha_faction_desc:0 "The Kadoha faction situation is unrecoverable we need to search for alternatives."
+
+ JAP_fate_of_the_kodoha_faction:0 "Fate of the Kodoha Faction"
+ JAP_fate_of_the_kodoha_faction_desc:0 "The Kadoha faction needs to be dealt with."
+
 ###THUNDERDOME 
+
  JAP_shogun_party:0 "Tokugawa Shogunate"
  JAP_shogun_party_long:0 "The Tokugawa Shogunate"
