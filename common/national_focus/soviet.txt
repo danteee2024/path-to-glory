@@ -1897,7 +1897,7 @@ focus_tree = {
 		x = 2
 		y = 0
 		relative_position_id = SOV_no_time_for_peace
-		cost = 12
+		cost = 10
 
 		allow_branch = {
 			has_government = communism
@@ -2061,7 +2061,7 @@ focus_tree = {
 		x = 10
 		y = 0
 		relative_position_id = SOV_infrastructure_effort_nsb
-		cost = 5
+		cost = 2.5
 
 		ai_will_do = {
 			factor = 1
@@ -2075,13 +2075,6 @@ focus_tree = {
 
 		completion_reward = {
 			air_experience = 50
-			add_political_power = 50
-			add_tech_bonus = {
-				name = SOV_transpolar_flights
-				category = air_equipment
-				uses = 1
-				bonus = 0.5
-			}
 		}
 	}
 
@@ -9452,26 +9445,12 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 150 
 			every_owned_state = {
-						state = 202 # Kiev
-						state = 229 # Azerbaijan
-						state = 230 # Armenia
-						state = 231 # Georgia
-						state = 405 # tashkent
-						state = 408 # Vladivostok
-						state = 584 # Askabad
-						state = 586 # Alma Ata
-						state = 654 # Oyrot
-						state = 732 # Pamir
-						state = 743 # Dushanbe
-						state = 206 # minsk
-					}
-					free_building_slots = {
-					    building = industrial_complex 
-						size > 1
-						include_locked = yes
-					}
+				
+						
+					
+					
 				add_extra_state_shared_building_slots = 2
-			
+				}
 		}
 	}
 
