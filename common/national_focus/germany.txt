@@ -4743,7 +4743,7 @@ focus_tree = {
 		x = 12
 		y = 0
 		relative_position_id = GER_develop_modern_maneuver_warfare
-		cost = 5
+		cost = 10
 		available = {
 		}
 
@@ -4950,11 +4950,10 @@ focus_tree = {
 		alternate_icon = GFX_focus_GER_sturzkampfbomber_historical
 
 		prerequisite = { focus = GER_aeronautical_research_institute }
-		mutually_exclusive = { focus = GER_tactical_bombers focus = GER_uralbomber_program }
 		x = -2
 		y = 1
 		relative_position_id = GER_aeronautical_research_institute
-		cost = 5
+		cost = 10
 		available = {
 		}
 
@@ -5081,11 +5080,10 @@ focus_tree = {
 		id = GER_tactical_bombers
 		icon = GFX_goal_generic_air_bomber
 		prerequisite = { focus = GER_aeronautical_research_institute }
-		mutually_exclusive = { focus = GER_dive_bombers focus = GER_uralbomber_program }
 		x = 0
 		y = 1
 		relative_position_id = GER_aeronautical_research_institute
-		cost = 5
+		cost = 10
 		available = {
 		}
 
@@ -5211,11 +5209,10 @@ focus_tree = {
 		id = GER_uralbomber_program
 		icon = GFX_focus_generic_long_range_aircraft
 		prerequisite = { focus = GER_aeronautical_research_institute }
-		mutually_exclusive = { focus = GER_dive_bombers focus = GER_tactical_bombers }
 		x = 2
 		y = 1
 		relative_position_id = GER_aeronautical_research_institute
-		cost = 5
+		cost = 10
 		available = {
 		}
 
@@ -5869,11 +5866,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			add_timed_idea = {
-				idea = GER_the_kammhuber_line
-				days = 365
-			}
-
+			add_ideas = GER_the_kammhuber_line
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			custom_effect_tooltip = GER_controls_atlantic_coast_brittany_finnmark_effects_tt
@@ -5937,11 +5930,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			add_timed_idea = {
-				idea = GER_nachtjagdgeschwader
-				days = 365
-			}
-
+			add_ideas = GER_nachtjagdgeschwader
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			add_ace = {
