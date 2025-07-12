@@ -571,3 +571,11 @@ GBR_british_mobilisation_support:0 "British Mobilisation Support"
 
  ENG_communism_independent_party_long:0 "General Council of the Trades Union Congress"
  ENG_communism_independent_party:0 "TUC"
+
+ ENG_fighter_command:0 "Fighter Command"
+ ENG_fighter_command_desc:0 "Fighter Command is the command responsible for the defence of British airspace."
+ ENG_bomber_command:0 "Bomber Command"
+ ENG_bomber_command_desc:0 "Bomber Command is the command responsible for the strategic bombing of enemy targets."
+ ENG_coastal_command:0 "Coastal Command"
+ ENG_coastal_command_desc:0 "Coastal Command is the command responsible for the defence of British coastal waters and the protection of shipping lanes."
+

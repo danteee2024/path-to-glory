@@ -1,7 +1,66 @@
 ideas = {
 
 	country = {
-	
+		ENG_bomber_command = {
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = strategic_bombing_focus
+			
+			modifier = {
+				air_strategic_bomber_bombing_factor = 0.05
+				air_strategic_bomber_defence_factor = 0.15
+				air_strategic_bomber_night_penalty = -0.05
+			}
+		}
+		ENG_coastal_command = {
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_naval_manufacturer_3
+			
+			modifier = {
+				air_nav_efficiency = 0.05
+				air_range_factor = 0.10
+				coordination_bonus = 0.05
+			}
+		}
+	ENG_fighter_command = {
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_air_fighter
+			
+			modifier = {
+				ace_effectiveness_factor = 0.1
+				air_intercept_efficiency = 0.05
+				air_agility_factor = 0.05
+			}
+		}
 		ENG_blackouts_idea = {
 			
 			allowed = {
