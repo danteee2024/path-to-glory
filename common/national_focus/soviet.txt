@@ -2633,7 +2633,7 @@ focus_tree = {
 		x = 6
 		y = 0
 		relative_position_id = SOV_transpolar_flights
-		cost = 5
+		cost = 1.7
 
 		ai_will_do = {
 			factor = 1
@@ -2680,7 +2680,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = SOV_expand_the_red_fleet
-		cost = 5
+		cost = 1.7
 
 		available = {
 			195 = { #LENINGRAD
@@ -2826,7 +2826,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_expand_the_red_fleet
-		cost = 5
+		cost = 1.7
 
 		available = {
 			OR = {
@@ -2916,7 +2916,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_expand_the_red_fleet
-		cost = 5
+		cost = 1.7
 
 		available = {
 			OR = {
@@ -3046,7 +3046,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = SOV_expand_the_red_fleet
-		cost = 5
+		cost = 1.7
 
 		available = {
 			OR = {
@@ -3134,7 +3134,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_reinforce_northern_naval_bases
-		cost = 5
+		cost = 1.7
 
 		available = {
 
@@ -3191,7 +3191,7 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = SOV_expand_shipbuilding_plants
-		cost = 5
+		cost = 1.7
 
 		available = {
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
@@ -3270,7 +3270,7 @@ focus_tree = {
 		x = 4
 		y = 2
 		relative_position_id = SOV_expand_the_red_fleet
-		cost = 5
+		cost = 1.7
 
 		available = {
 
@@ -3323,7 +3323,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = SOV_pc_of_the_ussr_navy
-		cost = 5
+		cost = 1.7
 
 		mutually_exclusive = { focus = SOV_submarine_warfare }
 
@@ -3372,7 +3372,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SOV_pc_of_the_ussr_navy
-		cost = 5
+		cost = 1.7
 
 		mutually_exclusive = { focus = SOV_surface_warfare }
 
@@ -3422,7 +3422,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_surface_warfare
-		cost = 5
+		cost = 1.7
 
 		available = {
 			if = {
@@ -3539,7 +3539,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_surface_warfare
-		cost = 5
+		cost = 1.7
 
 		available = {
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
@@ -3670,7 +3670,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_submarine_warfare
-		cost = 5
+		cost = 1.7
 
 		available = {
 
@@ -3723,7 +3723,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_submarine_warfare
-		cost = 5
+		cost = 1.7
 
 		available = {
 
@@ -3784,7 +3784,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = SOV_expand_shipbuilding_plants
-		cost = 5
+		cost = 1.7
 
 		available = {
 		}
@@ -3811,7 +3811,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = SOV_advanced_maneuvers
-		cost = 5
+		cost = 1.7
 
 		available = {
 
@@ -4101,7 +4101,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_advanced_maneuvers
-		cost = 5
+		cost = 1.7
 
 		available = {
 
