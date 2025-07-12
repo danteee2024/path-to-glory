@@ -2075,7 +2075,13 @@ focus_tree = {
 
 		completion_reward = {
 			air_experience = 50
-			add_ideas = SOV_transpolar_flights
+			add_political_power = 50
+			add_tech_bonus = {
+				name = SOV_transpolar_flights
+				category = air_equipment
+				uses = 1
+				bonus = 0.5
+			}
 		}
 	}
 
