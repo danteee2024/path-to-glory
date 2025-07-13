@@ -3467,17 +3467,7 @@ focus_tree = {
 		}
 		
 		available = {
-			OR = {
-				NOT = {
-					is_subject_of = GER
-					is_in_faction_with = GER
-				}
-				has_completed_focus = POL_reach_out_to_underground_state
-			}
-			OR = {
-				NOT = { has_completed_focus = POL_plan_east }
-				has_completed_focus = POL_complete_plan_east
-			}
+		
 		}
 
 		
@@ -3608,7 +3598,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = POL_the_prusya_line
-		cost = 2.5
+		cost = 5
 		
 		available = {
 			NOT = { has_completed_focus = POL_complete_plan_west }
@@ -3621,37 +3611,8 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_MANPOWER }
 		completion_reward = {
-			division_template = {
-				name = "Pruska Straż Graniczna"
-				priority = 1
-				division_names_group = POL_INF_01
-				regiments = {
-					infantry = { x = 0 y = 0 }
-					infantry = { x = 0 y = 1 }
-					infantry = { x = 0 y = 2 }
-		
-					infantry = { x = 1 y = 0 }
-					infantry = { x = 1 y = 1 }
-					infantry = { x = 1 y = 2 }
-				}
-				support = {
-					engineer = { x = 0 y = 0 }
-				}
+			add_ideas = POL_prussian_guard
 			}
-			random_owned_controlled_state = {
-				prioritize = { 807 }
-				limit = { PREV = { has_full_control_of_state = PREV } }
-				create_unit = {
-					division = "name = \"Pruska Straż Graniczna\" division_template = \"Pruska Straż Graniczna\" start_experience_factor = 0.9" 
-					owner = PREV
-				}
-				create_unit = {
-					division = "name = \"Pruska Straż Graniczna\" division_template = \"Pruska Straż Graniczna\" start_experience_factor = 0.9" 
-					owner = PREV
-				}
-				
-			}
-		}
 	}
 
 	focus = {
@@ -3846,41 +3807,28 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_MANPOWER } 
 		completion_reward = {
-			division_template = {
-				name = "Dywizja Karpacka"
-				priority = 1
-				division_names_group = POL_MNT_01
-				regiments = {
-					mountaineers = { x = 0 y = 0 }
-					mountaineers = { x = 0 y = 1 }
-					mountaineers = { x = 0 y = 2 }
-		
-					mountaineers = { x = 1 y = 0 }
-					mountaineers = { x = 1 y = 1 }
-					mountaineers = { x = 1 y = 2 }
-
-					mountaineers = { x = 2 y = 0 }
-					mountaineers = { x = 2 y = 1 }
-					mountaineers = { x = 2 y = 2 }
+				88 = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
 				}
-				support = {
-					engineer = { x = 0 y = 0 }
+				89 = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
 				}
-			}
-			random_owned_controlled_state = {
-				prioritize = { 88 }
-				limit = { PREV = { has_full_control_of_state = PREV } }
-				create_unit = {
-					division = "name = \"Dywizja Karpaty\" division_template = \"Dywizja Karpacka\" start_experience_factor = 1.0" 
-					owner = PREV
-				}
-				create_unit = {
-					division = "name = \"Dywizja Karpaty\" division_template = \"Dywizja Karpacka\" start_experience_factor = 1.0" 
-					owner = PREV
-				}
-				
-				
-			}
 		}
 	}
 
@@ -3971,7 +3919,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = POL_the_prusya_army
-		cost = 0
+		cost = 5
 		prerequisite = {
 			focus = POL_the_prusya_army
 			focus = POL_silesia_fortified_area
@@ -3984,7 +3932,7 @@ focus_tree = {
 		}
 		
 		available = {
-			has_completed_focus = POL_plan_west
+		
 		}
 
 		ai_will_do = {
@@ -3994,29 +3942,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY } 
 		completion_reward = {
-			every_owned_state = {
-				limit = {
-					has_dynamic_modifier = {
-						modifier = POL_plan_modifier
-						scope = POL
-					}
-				}
-				remove_dynamic_modifier = {
-					modifier = POL_plan_modifier
-					scope = POL
-				}
-			}
-
-			add_idea = {
-				attack_bonus_against = {
-                target = GER
-                factor = 0.10     # +10% attack
-            }
-             defence_bonus_against = {
-               target = GER
-             factor = 0.10     # +10% defense
-            }
-		}
+		add_ideas = POL_anit_ger
 			
 		}
 	}
@@ -4029,7 +3955,7 @@ focus_tree = {
 		icon = GFX_focus_POL_plan_east
 		prerequisite = { focus = POL_prepare_for_the_next_war }
 		mutually_exclusive = { focus = POL_plan_west }
-		x = -16
+		x = -17
 		y = 1
 		relative_position_id = POL_complete_april_constitution
 		cost = 5
@@ -4039,10 +3965,7 @@ focus_tree = {
 		}
 		
 		available = {
-			OR = {
-				NOT = { has_completed_focus = POL_plan_west }
-				has_completed_focus = POL_complete_plan_west
-			}
+			
 		}
 
 		
@@ -4089,7 +4012,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_MANPOWER } 
 		completion_reward = {
 
-			recruitable_population_factor = 0.10 
 			add_timed_idea = {
 				idea = POL_eastern_conscription_idea
 				days = 730
@@ -4105,7 +4027,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = POL_eastern_conscripts
-		cost = 2.5
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -4122,18 +4044,60 @@ focus_tree = {
 				name = "Białoruska Dywizja Milicji"
 				priority = 1
 				division_names_group = POL_INF_01
-				regiments = {
+					regiments = {
 					infantry = { x = 0 y = 0 }
 					infantry = { x = 0 y = 1 }
 					infantry = { x = 0 y = 2 }
 					infantry = { x = 0 y = 3 }
+					infantry = { x = 0 y = 4 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 1 y = 3 }
+					infantry = { x = 1 y = 4 }
 				}
 				support = {
+				   anti_air = {
+					x = 0
+					y = 0
+				   }
 				}
 			}
 			random_owned_controlled_state = {
 				prioritize = { 95 }
 				limit = { PREV = { has_full_control_of_state = PREV } }
+				create_unit = {
+					division = "name = \"Białoruska Dywizja Milicji\" division_template = \"Białoruska Dywizja Milicji\" start_experience_factor = 0.5" 
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"Białoruska Dywizja Milicji\" division_template = \"Białoruska Dywizja Milicji\" start_experience_factor = 0.5" 
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"Białoruska Dywizja Milicji\" division_template = \"Białoruska Dywizja Milicji\" start_experience_factor = 0.5" 
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"Białoruska Dywizja Milicji\" division_template = \"Białoruska Dywizja Milicji\" start_experience_factor = 0.5" 
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"Białoruska Dywizja Milicji\" division_template = \"Białoruska Dywizja Milicji\" start_experience_factor = 0.5" 
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"Białoruska Dywizja Milicji\" division_template = \"Białoruska Dywizja Milicji\" start_experience_factor = 0.5" 
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"Białoruska Dywizja Milicji\" division_template = \"Białoruska Dywizja Milicji\" start_experience_factor = 0.5" 
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"Białoruska Dywizja Milicji\" division_template = \"Białoruska Dywizja Milicji\" start_experience_factor = 0.5" 
+					owner = PREV
+				}
 				create_unit = {
 					division = "name = \"Białoruska Dywizja Milicji\" division_template = \"Białoruska Dywizja Milicji\" start_experience_factor = 0.5" 
 					owner = PREV
@@ -4153,7 +4117,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = POL_eastern_conscripts
-		cost = 2.5
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -4175,13 +4139,55 @@ focus_tree = {
 					infantry = { x = 0 y = 1 }
 					infantry = { x = 0 y = 2 }
 					infantry = { x = 0 y = 3 }
+					infantry = { x = 0 y = 4 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 1 y = 3 }
+					infantry = { x = 1 y = 4 }
 				}
 				support = {
+				   anti_air = {
+					x = 0
+					y = 0
+				   }
 				}
 			}
 			random_owned_controlled_state = {
 				prioritize = { 91 }
 				limit = { PREV = { has_full_control_of_state = PREV } }
+				create_unit = {
+					division = "name = \"Ukraińska Dywizja Milicji\" division_template = \"Ukraińska Dywizja Milicji\" start_experience_factor = 0.5" 
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"Ukraińska Dywizja Milicji\" division_template = \"Ukraińska Dywizja Milicji\" start_experience_factor = 0.5" 
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"Ukraińska Dywizja Milicji\" division_template = \"Ukraińska Dywizja Milicji\" start_experience_factor = 0.5" 
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"Ukraińska Dywizja Milicji\" division_template = \"Ukraińska Dywizja Milicji\" start_experience_factor = 0.5" 
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"Ukraińska Dywizja Milicji\" division_template = \"Ukraińska Dywizja Milicji\" start_experience_factor = 0.5" 
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"Ukraińska Dywizja Milicji\" division_template = \"Ukraińska Dywizja Milicji\" start_experience_factor = 0.5" 
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"Ukraińska Dywizja Milicji\" division_template = \"Ukraińska Dywizja Milicji\" start_experience_factor = 0.5" 
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"Ukraińska Dywizja Milicji\" division_template = \"Ukraińska Dywizja Milicji\" start_experience_factor = 0.5" 
+					owner = PREV
+				}
 				create_unit = {
 					division = "name = \"Ukraińska Dywizja Milicji\" division_template = \"Ukraińska Dywizja Milicji\" start_experience_factor = 0.5" 
 					owner = PREV
@@ -4560,49 +4566,19 @@ focus_tree = {
 		}
 
 		available = {
-			has_completed_focus = POL_plan_east
+			
 		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY } 
 		completion_reward = {
-			every_owned_state = {
-				limit = {
-					has_dynamic_modifier = {
-						modifier = POL_plan_modifier
-						scope = POL
-					}
-				}
-				remove_dynamic_modifier = {
-					modifier = POL_plan_modifier
-					scope = POL
-				}
-			}
-			custom_effect_tooltip = POL_complete_plan_east_tt
+		add_ideas = POL_anti_sov
+			
 		
 		}
 	}
 
-	focus = {
-		id = POL_sabotage_polish_industry
-		icon = GFX_goal_generic_major_war
-		prerequisite = { focus = POL_plan_east focus = POL_plan_west }
-		x = 1
-		y = 2
-		relative_position_id = POL_plan_east
-		cost = 10
 
-		ai_will_do = {
-			factor = 10
-		}
-
-		
-		search_filters = {  } 
-		completion_reward = {
-			custom_effect_tooltip = sabotaged_industry_tt
-			#will trigger an event each time a Polish state is occupied by the enemy that sabotages industry
-		}
-	}
 
 	###############
 	###DIPLOMACY###
