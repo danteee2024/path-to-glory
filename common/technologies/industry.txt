@@ -2132,9 +2132,8 @@ technologies = {
 		ai_will_do = {
 			factor = 1			
 		}
-		
-		research_cost = 1.5
 		start_year = 1936
+		research_cost = 1.5
 	}
 	
 	industrial_expansion_tech_2 = {
@@ -2299,7 +2298,7 @@ technologies = {
 			factor = 1			
 		}
 		
-		research_cost = 1
+		research_cost = 2.5
 		start_year = 1936
 	}
 	
@@ -2349,7 +2348,7 @@ technologies = {
 			factor = 1			
 		}
 		
-		research_cost = 1
+		research_cost = 2.5
 		start_year = 1937
 		
 		show_effect_as_desc = yes
@@ -2401,7 +2400,7 @@ technologies = {
 			factor = 1			
 		}
 		
-		research_cost = 1
+		research_cost = 2.5
 		start_year = 1939
 		
 		show_effect_as_desc = yes
@@ -2452,7 +2451,7 @@ technologies = {
 			factor = 1			
 		}
 		
-		research_cost = 1
+		research_cost = 2.5
 		start_year = 1941
 		
 		show_effect_as_desc = yes
@@ -2499,7 +2498,7 @@ technologies = {
 			factor = 1			
 		}
 		
-		research_cost = 1
+		research_cost = 2.5
 		start_year = 1943
 		
 		show_effect_as_desc = yes

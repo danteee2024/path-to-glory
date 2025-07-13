@@ -1,84 +1,104 @@
-FRA_historical_plan = {
-	name = "France historical plan"
-	desc = "Historical behavior for France"
+#####-----> French Historical AI Strategy Plan <><> <><> <><> <><> <><>
 
-	allowed = {
+FRA_historical_plan = {
+	name = "FRA: French Historical AI Plan"
+	desc = "Historical democratic behavior for France."
+
+	enable = {
 		original_tag = FRA
 	}
-	enable = {
-		is_historical_focus_on = yes
-	}
+
+	#Makes the AI completely cancel the set behavior.
 	abort = {
 		OR = {
-			GER = { has_completed_focus = GER_oppose_hitler }
-			GER = { has_completed_focus = GER_oppose_hitler_ww }
-			AND = {
-				ENG = { has_completed_focus = ENG_a_change_in_course }
-				NOT = { 
-					GER = { has_completed_focus = GER_oppose_hitler }
-					GER = { has_completed_focus = GER_oppose_hitler_ww }
+			ENG = {
+				OR = {
+					has_completed_focus = ENG_a_change_in_course
+					has_completed_focus = ENG_visit_germany
+				}
+			}
+			GER = {
+				OR = {
+					has_completed_focus = GER_kill_hitler
+					has_completed_focus = GER_oppose_hitler
+					has_completed_focus = GER_a_new_reich
+					has_completed_focus = GER_core_south_tyrol
 				}
 			}
 		}
-		has_game_rule = {
-			rule = FRA_ai_behavior
-			option = DEFAULT
-		}
 	}
 
-	ai_national_focuses = {
-		FRA_rearmament
-		FRA_status_quo	
-		FRA_social_reforms
-		FRA_the_blum_viollette_proposal
-		FRA_support_blum
+	ai_national_focuses = { #note to self 5x70 = 350
+		#1936
+		FRA_tools_modernisation #35
+		FRA_CHEDN #35
+		FRA_status_quo #70
+		FRA_social_reforms #35
+		FRA_colonial_investments #35
+		FRA_lay_down_the_jean_bart #70
+		FRA_the_le_hardi_class_destroyer #70
+
 		#1937
-		FRA_tools_modernisation
-		FRA_vienot_agreement
-		FRA_sncf
-		FRA_monetary_tripartite_agreement
-		FRA_further_the_reforms
+		FRA_form_the_first_strategic_bombing_unit #70
+		FRA_support_the_ecole_de_lair #70
+		FRA_continue_mandat #70
+		FRA_sncf #70
+		FRA_capital_ship_focus #70
+
 		#1938
-		FRA_colonial_investments
-		FRA_develop_algeria
-		FRA_develop_burgundy
-		FRA_develop_centre
-		FRA_autonomy_indochina
+		FRA_modernisation_program #70
+		FRA_support_daladier #70
+		FRA_rearmament #70
+		FRA_rearmament_policy #35
+		FRA_reynaud_economic_reforms #35
+		FRA_go_with_britain #70
+
 		#1939
-		FRA_consolidate_african_federations
-		FRA_rewrite_protectorate_treaties
-		FRA_investment_civ
-		FRA_develop_indochine
-		FRA_infantry_focus
+		FRA_enact_plan_v #70
+		FRA_naval_construction_program #70
+		FRA_barrage_david #70
+		FRA_giraud_plan #70
+		FRA_fortification_focus #35
+		FRA_the_mas38 #70
+
 		#1940
-		FRA_artillery_focus 
-		FRA_heavy_armor_focus 
-		FRA_division_cuirassee
-		FRA_arms_purchases_in_the_us
-		FRA_gueye_lamine_law
-		
-		
-		
+		FRA_war_material_licence #70
+		FRA_commit_automobile_manufacturer #70
+		FRA_cnrs #70
+		FRA_economic_cooperation_agreement #70
+		FRA_defense_national_funds #70
+
+		#1941
+		FRA_mediterranean_special_measures #70
+		FRA_partial_mobilization #70
+		FRA_wartime_organisation_act #70
+		FRA_military_complex_nationalisation #70
+		FRA_aircraft_manufacturer_nationalisation #70
+		FRA_commission_fortified_regions #70
+		FRA_army_reform #70 days
+		FRA_further_armament_program #70 days
+
+		#FRA_popular_front_united #They didn't reform irl
 	}
+
 	focus_factors = {
-		FRA_right_wing_rhetoric = 0
-		FRA_leftist_rhetoric = 0
-	}
-	research = {
-
-	}
-
-	ideas = {
-
+		FRA_vienot_agreement = 0
+		FRA_radicalize_front = 0
+		FRA_support_blum = 0
+		FRA_little_entente = 0
+		FRA_far_right_leagues = 0
+		FRA_action_francaise = 0
+		FRA_de_gaulle_strategy = 0
 	}
 
-	# Keep small, as it is used as a factor for some things (such as research needs)
-	# Recommended around 1.0. Useful for relation between plans
+	#Keep small, as it is used as a factor for some things, such as research needs.
+	#Recommended around 1.0. Useful for relation between plans.
 	weight = {
 		factor = 1.0
 		modifier = {
 			factor = 1.0
 		}
 	}
-
 }
+
+#####-----> End of File <><> <><> <><> <><> <><>
