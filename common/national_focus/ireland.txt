@@ -6200,7 +6200,6 @@ focus_tree = {
 		search_filters = {  }
 	
 		completion_reward = {
-			unlock_decision_category_tooltip = IRE_Celtic_Nationalism_category
 			add_political_power = 100
 			custom_effect_tooltip = IRE_scars_of_The_Potato_Famine
 			add_to_variable = { 
