@@ -1540,7 +1540,6 @@ focus = {
 				remove_idea = MON_nomad_1
 				add_idea = MON_nomad_2
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
 				limit = {
 					820 = { 
