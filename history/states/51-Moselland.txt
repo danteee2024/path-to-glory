@@ -3,7 +3,7 @@ state = {
 	name = "STATE_51"
 	manpower = 6144743
 	resources = {
-		steel = 35  #was 18 #was 30 was: 54
+		steel = 21  #was 18 #was 30 was: 54
 	}
 
 	state_category = megalopolis #was metropolis, 2 slots diff
