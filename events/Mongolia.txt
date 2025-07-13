@@ -142,6 +142,7 @@ country_event = {
     trigger = {
         tag = MON
 		has_war = yes
+		has_idea = MON_buddhist_support
 	}
 
     immediate = {
