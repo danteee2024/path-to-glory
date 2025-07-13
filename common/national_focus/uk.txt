@@ -8,7 +8,26 @@
 
 focus_tree = {
 	id = british_focus
-	
+	shortcut = {
+		name = ENG_political_path_historical_shortcut
+		target = ENG_steady_as_she_goes
+		scroll_wheel_factor = 1.0
+	}
+	shortcut = {
+		name = ENG_political_path_opposition_shortcut
+		target = ENG_a_change_in_course
+		scroll_wheel_factor = 1.0
+	}
+	shortcut = {
+		name = ENG_commonwealth_shortcut
+		target = ENG_imperial_conference
+		scroll_wheel_factor = 1.0
+	}
+	shortcut = {
+		name = ENG_economic_recovery_shortcut
+		target = ENG_let_that_lion_roar_start
+		scroll_wheel_factor = 1.0
+	}
 	country = {
 		factor = 0
 		

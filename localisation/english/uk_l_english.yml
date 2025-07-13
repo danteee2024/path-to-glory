@@ -579,3 +579,8 @@ GBR_british_mobilisation_support:0 "British Mobilisation Support"
  ENG_coastal_command:0 "Coastal Command"
  ENG_coastal_command_desc:0 "Coastal Command is the command responsible for the defence of British coastal waters and the protection of shipping lanes."
 
+ENG_political_path_historical_shortcut:0 "Politics: Historical"
+ENG_political_path_opposition_shortcut:0 "Politics: Opposition"
+ENG_commonwealth_shortcut:0 "Commonwealth"
+
+ENG_economic_recovery_shortcut:0 "Economy & Rearmament"
