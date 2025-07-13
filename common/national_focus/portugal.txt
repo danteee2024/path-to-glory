@@ -1473,51 +1473,6 @@ focus = {
 					amount = 8
 				}
 			}
-			if = {
-				limit = {
-					has_full_control_of_state = 496
-					NOT = {
-						has_global_flag = brazil_steel_first_flag
-					}
-				}
-				add_resource = {
-					type = steel
-					amount = 4
-					state = 496
-				}
-			}
-			if = {
-				limit = {
-					has_full_control_of_state = 496
-					NOT = {
-						has_global_flag = brazil_steel_second_flag
-					}
-				}
-				add_resource = {
-					type = steel
-					amount = 2
-					state = 496
-				}
-			}
-			if = {
-				limit = {
-					has_full_control_of_state = 496
-					NOT = {
-						has_global_flag = brazil_steel_third_flag
-					}
-				}
-				add_resource = { type = tungsten amount = 3 state = 498 }
-				add_resource = { type = tungsten amount = 2 state = 502 }
-				add_resource = { type = chromium amount = 4 state = 499 }
-				add_resource = { type = chromium amount = 2 state = 496 }
-				add_resource = { type = aluminium amount = 1 state = 500 }
-				add_resource = { type = aluminium amount = 3 state = 496 }
-				add_resource = { type = aluminium amount = 1 state = 501 }
-				add_timed_idea = {
-					idea = bra_industrial_elite
-					days = 100
-				}
-			}
 		
 		}
 	}
