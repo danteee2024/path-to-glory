@@ -2714,7 +2714,7 @@ add_timed_idea = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_unit_bonus = {
 				cavalry = {
-					combat_width = -0.2
+					combat_width = -0.4
 				}
 			}
 		}
