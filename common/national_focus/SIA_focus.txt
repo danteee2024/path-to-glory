@@ -1,0 +1,2228 @@
+
+##### FOCUS TREE
+# In this first part you only need to change "id" (to your unique ID of your FOCUS TREE) and "tag = " in the "modifier" part.
+focus_tree = {
+	# ID of the whole FOCUS TREE
+	id = SIA_focus
+	
+	# If Generic nations (those without focus tree) will try to use this FOCUS TREE
+	default = no
+	
+	# How likely is country to use this FOCUS TREE
+	country = {
+		factor = 0
+		
+		# Adding TAG of the country you want (for example GER for Germany) will make that country to use this FOCUS TREE
+		modifier = {
+			add = 50
+			tag = SIA
+		}
+	}
+	
+	# CONTINUOUS FOCUS position (X = left / right, Y = up / down)
+	continuous_focus_position = { x = 25 y = 2000 }	
+	
+
+	
+
+focus = {
+		id = SIA_legacy_of_bloodless_coup
+		icon = GFX_focus_JAP_break_military_influence
+		x = 10
+		y = 0
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_political_power = 100
+			}
+		}
+
+		focus = {
+			id = SIA_follow_khana_ratsadon
+			icon = GFX_focus_JAP_break_military_influence
+			x = -5
+			y = 1
+			prerequisite = { focus = SIA_legacy_of_bloodless_coup }
+			mutually_exclusive = { focus = SIA_reassert_divine_rule }
+			cost = 7.2
+
+			ai_will_do = {
+				factor = 10
+			}
+
+			available = {
+
+			}
+
+			bypass = {
+
+			}
+
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = no
+			relative_position_id = SIA_legacy_of_bloodless_coup
+
+
+			completion_reward = {
+				add_political_power = 100
+				}
+			}
+
+			focus = {
+				id = SIA_strengthen_civilian_wing_influence
+				icon = GFX_focus_JAP_break_military_influence
+				x = -3
+				y = 1
+				prerequisite = { focus = SIA_follow_khana_ratsadon }
+				mutually_exclusive = { focus = SIA_the_military_prevails }
+				cost = 7.2
+
+				ai_will_do = {
+					factor = 10
+				}
+
+				available = {
+
+				}
+
+				bypass = {
+
+				}
+
+				cancel_if_invalid = yes
+				continue_if_invalid = no
+				available_if_capitulated = no
+				relative_position_id = SIA_follow_khana_ratsadon
+
+
+				completion_reward = {
+					add_political_power = 100
+					}
+				}
+
+				focus = {
+					id = SIA_political_awareness
+					icon = GFX_focus_JAP_break_military_influence
+					x = -1
+					y = 1
+					prerequisite = { focus = SIA_strengthen_civilian_wing_influence }
+					cost = 7.2
+
+					ai_will_do = {
+						factor = 10
+					}
+
+					available = {
+
+					}
+
+					bypass = {
+
+					}
+
+					cancel_if_invalid = yes
+					continue_if_invalid = no
+					available_if_capitulated = no
+					relative_position_id = SIA_strengthen_civilian_wing_influence
+
+
+					completion_reward = {
+						add_political_power = 100
+						}
+					}
+
+					focus = {
+						id = SIA_attack_corrupt_politicians
+						icon = GFX_focus_JAP_break_military_influence
+						x = 1
+						y = 1
+						prerequisite = { focus = SIA_strengthen_civilian_wing_influence }
+						cost = 7.2
+
+						ai_will_do = {
+							factor = 10
+						}
+
+						available = {
+
+						}
+
+						bypass = {
+
+						}
+
+						cancel_if_invalid = yes
+						continue_if_invalid = no
+						available_if_capitulated = no
+						relative_position_id = SIA_strengthen_civilian_wing_influence
+
+
+						completion_reward = {
+							add_political_power = 100
+							}
+						}
+
+						focus = {
+							id = SIA_stigmatize_the_military
+							icon = GFX_focus_JAP_break_military_influence
+							x = 0
+							y = 2
+							prerequisite = { focus = SIA_attack_corrupt_politicians }
+							prerequisite = { focus = SIA_political_awareness }
+							cost = 7.2
+
+							ai_will_do = {
+								factor = 10
+							}
+
+							available = {
+
+							}
+
+							bypass = {
+
+							}
+
+							cancel_if_invalid = yes
+							continue_if_invalid = no
+							available_if_capitulated = no
+							relative_position_id = SIA_strengthen_civilian_wing_influence
+
+
+							completion_reward = {
+								add_political_power = 100
+								}
+							}
+
+							focus = {
+								id = SIA_advocate_for_reform_and_democracy
+								icon = GFX_focus_JAP_break_military_influence
+								x = 1
+								y = 3
+								prerequisite = { focus = SIA_stigmatize_the_military }
+								cost = 7.2
+
+								ai_will_do = {
+									factor = 10
+								}
+
+								available = {
+
+								}
+
+								bypass = {
+
+								}
+
+								cancel_if_invalid = yes
+								continue_if_invalid = no
+								available_if_capitulated = no
+								relative_position_id = SIA_strengthen_civilian_wing_influence
+
+
+								completion_reward = {
+									add_political_power = 100
+									}
+								}
+
+								focus = {
+									id = SIA_promises_of_freedom
+									icon = GFX_focus_JAP_break_military_influence
+									x = -1
+									y = 3
+									prerequisite = { focus = SIA_stigmatize_the_military }
+									cost = 7.2
+
+									ai_will_do = {
+										factor = 10
+									}
+
+									available = {
+
+									}
+
+									bypass = {
+
+									}
+
+									cancel_if_invalid = yes
+									continue_if_invalid = no
+									available_if_capitulated = no
+									relative_position_id = SIA_strengthen_civilian_wing_influence
+
+
+									completion_reward = {
+										add_political_power = 100
+										}
+									}
+
+									focus = {
+										id = SIA_challenge_the_military
+										icon = GFX_focus_JAP_break_military_influence
+										x = -1
+										y = 4
+										prerequisite = { focus = SIA_promises_of_freedom }
+										prerequisite = { focus = SIA_advocate_for_reform_and_democracy }
+										cost = 7.2
+
+										ai_will_do = {
+											factor = 10
+										}
+
+										available = {
+
+										}
+
+										bypass = {
+
+										}
+
+										cancel_if_invalid = yes
+										continue_if_invalid = no
+										available_if_capitulated = no
+										relative_position_id = SIA_strengthen_civilian_wing_influence
+
+
+										completion_reward = {
+											add_political_power = 100
+											}
+										}
+
+										focus = {
+											id = SIA_alliance_with_sonsuradet
+											icon = GFX_focus_JAP_break_military_influence
+											x = 2
+											y = 4
+											prerequisite = { focus = SIA_advocate_for_reform_and_democracy }
+											prerequisite = { focus = SIA_resignation_of_Prince_Aditya_Dibabha }
+											cost = 7.2
+
+											ai_will_do = {
+												factor = 10
+											}
+
+											available = {
+
+											}
+
+											bypass = {
+
+											}
+
+											cancel_if_invalid = yes
+											continue_if_invalid = no
+											available_if_capitulated = no
+											relative_position_id = SIA_strengthen_civilian_wing_influence
+
+
+											completion_reward = {
+												add_political_power = 100
+												}
+											}
+
+											focus = {
+												id = SIA_democracy_prevails
+												icon = GFX_focus_JAP_break_military_influence
+												x = 0
+												y = 5
+												prerequisite = { focus = SIA_challenge_the_military }
+												mutually_exclusive = { focus = SIA_implement_socialist_values }
+												cost = 7.2
+
+												ai_will_do = {
+													factor = 10
+												}
+
+												available = {
+
+												}
+
+												bypass = {
+
+												}
+
+												cancel_if_invalid = yes
+												continue_if_invalid = no
+												available_if_capitulated = no
+												relative_position_id = SIA_strengthen_civilian_wing_influence
+
+
+												completion_reward = {
+													add_political_power = 100
+													}
+												}
+
+												focus = {
+													id = SIA_implement_socialist_values
+													icon = GFX_focus_JAP_break_military_influence
+													x = -2
+													y = 5
+													prerequisite = { focus = SIA_challenge_the_military }
+													mutually_exclusive = { focus = SIA_democracy_prevails }
+													cost = 7.2
+
+													ai_will_do = {
+														factor = 10
+													}
+
+													available = {
+
+													}
+
+													bypass = {
+
+													}
+
+													cancel_if_invalid = yes
+													continue_if_invalid = no
+													available_if_capitulated = no
+													relative_position_id = SIA_strengthen_civilian_wing_influence
+
+
+													completion_reward = {
+														add_political_power = 100
+														}
+													}
+													
+	focus = {
+		id = SIA_begin_collectivization
+		icon = GFX_focus_generic_land_reclamation
+		x = 0
+		y = 1
+		prerequisite = { focus = SIA_implement_socialist_values }
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		relative_position_id = SIA_implement_socialist_values
+
+
+		completion_reward = {
+			289 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			every_owned_state = {
+				limit = { is_core_of = ROOT NOT = { state = 289 } }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+		
+	focus = {
+		id = SIA_import_machinery
+		icon = GFX_focus_generic_modernize_industry
+		x = 0
+		y = 1
+		prerequisite = { focus = SIA_democracy_prevails }
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		relative_position_id = SIA_democracy_prevails
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	
+	focus = {
+		id = SIA_family_economy
+		icon = GFX_focus_generic_workers_and_farmers_rise
+		x = -1
+		y = 1
+		prerequisite = { focus = SIA_begin_collectivization }
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		relative_position_id = SIA_begin_collectivization
+
+
+		completion_reward = {
+			add_ideas = SIA_family_economy 
+		}
+	}
+	
+	focus = {
+		id = SIA_state_enterprises
+		icon = GFX_focus_DEN_limited_regulations
+		x = 1
+		y = 1
+		prerequisite = { focus = SIA_begin_collectivization focus = SIA_import_machinery }
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		relative_position_id = SIA_begin_collectivization
+
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SIA_american_support
+		icon = GFX_focus_generic_befriend_usa
+		x = 1
+		y = 1
+		prerequisite = { focus = SIA_import_machinery }
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		relative_position_id = SIA_import_machinery
+
+
+		completion_reward = {
+			add_ideas = SIA_american_support
+		}
+	}
+		
+	focus = {
+		id = SIA_infrastructure_investment
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 0
+		y = 2
+		prerequisite = { focus = SIA_american_support }
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		relative_position_id = SIA_american_support
+
+
+		completion_reward = {
+			289 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			every_owned_state = {
+				limit = { is_core_of = ROOT NOT = { state = 289 } }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SIA_tourist_industry
+		icon = GFX_focus_SMB_purchase_aircraft
+		x = 1
+		y = 1
+		prerequisite = { focus = SIA_american_support }
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		relative_position_id = SIA_american_support
+
+
+		completion_reward = {
+			add_ideas = SIA_tourist_industry
+		}
+	}
+	
+	focus = {
+		id = SIA_five_year_plan
+		icon = GFX_focus_generic_communist_industry
+		x = 0
+		y = 2
+		prerequisite = { focus = SIA_begin_collectivization }
+		prerequisite = { focus = SIA_state_enterprises }
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		relative_position_id = SIA_begin_collectivization
+
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = SIA_five_year_plan
+		}
+	}
+	
+	focus = {
+		id = SIA_state_rail_commission
+		icon = GFX_focus_generic_railroad
+		x = 1
+		y = 1
+		prerequisite = { focus = SIA_five_year_plan }
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		relative_position_id = SIA_five_year_plan
+
+
+		completion_reward = {
+			build_railway = {
+				level = 1
+				build_only_on_allied = yes
+				path = { 7408 10250 10221 12173 10411 7572 7353 7492 1488 }
+			}
+			build_railway = {
+				level = 1
+				build_only_on_allied = yes
+				path = { 7408 1427 12122 12220 4388 1308 1281 12201 4312 1337 4371 7236 }
+			}
+			build_railway = {
+				level = 1
+				build_only_on_allied = yes
+				path = { 7408 10250 12195 10438 12431 12402 1548 }
+			}
+			1046 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					instant_build = yes
+					province = 1548
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SIA_defensive_measures
+		icon = GFX_focus_generic_tank_air_support
+		x = -1
+		y = 1
+		prerequisite = { focus = SIA_five_year_plan }
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		relative_position_id = SIA_five_year_plan
+
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SIA_five_year_plan
+				add_idea = SIA_five_year_plan_defensive
+			}
+		}
+	}
+	
+	focus = {
+		id = SIA_economic_nationalism
+		icon = GFX_focus_SOV_merge_plants
+		x = 0
+		y = 2
+		prerequisite = { focus = SIA_import_machinery }
+		prerequisite = { focus = SIA_state_enterprises }
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		relative_position_id = SIA_import_machinery
+
+
+		completion_reward = {
+			add_ideas = SIA_economic_nationalism
+		}
+	}
+
+				focus = {
+					id = SIA_the_military_prevails
+					icon = GFX_focus_JAP_break_military_influence
+					x = 3
+					y = 1
+					prerequisite = { focus = SIA_follow_khana_ratsadon }
+					mutually_exclusive = { focus = SIA_strengthen_civilian_wing_influence }
+					cost = 7.2
+
+					ai_will_do = {
+						factor = 10
+					}
+
+					available = {
+
+					}
+
+					bypass = {
+
+					}
+
+					cancel_if_invalid = yes
+					continue_if_invalid = no
+					available_if_capitulated = no
+					relative_position_id = SIA_follow_khana_ratsadon
+
+
+					completion_reward = {
+						add_political_power = 100
+						}
+					}
+
+						focus = {
+							id = SIA_reduce_government_spending_on_monarchy
+							icon = GFX_focus_JAP_break_military_influence
+							x = 4
+							y = 2
+							prerequisite = { focus = SIA_the_military_prevails }
+							cost = 7.2
+
+							ai_will_do = {
+								factor = 10
+							}
+
+							available = {
+
+							}
+
+							bypass = {
+
+							}
+
+							cancel_if_invalid = yes
+							continue_if_invalid = no
+							available_if_capitulated = no
+							relative_position_id = SIA_follow_khana_ratsadon
+
+
+							completion_reward = {
+								add_political_power = 100
+								}
+							}
+
+							focus = {
+								id = SIA_lower_status_of_royal_ministry
+								icon = GFX_focus_JAP_break_military_influence
+								x = 2
+								y = 2
+								prerequisite = { focus = SIA_the_military_prevails }
+								cost = 7.2
+
+								ai_will_do = {
+									factor = 10
+								}
+
+								available = {
+
+								}
+
+								bypass = {
+
+								}
+
+								cancel_if_invalid = yes
+								continue_if_invalid = no
+								available_if_capitulated = no
+								relative_position_id = SIA_follow_khana_ratsadon
+
+
+								completion_reward = {
+									add_political_power = 100
+									}
+								}
+
+								focus = {
+									id = SIA_bribes_and_favoritism
+									icon = GFX_focus_JAP_break_military_influence
+									x = 3
+									y = 3
+									prerequisite = { focus = SIA_lower_status_of_royal_ministry }
+									prerequisite = { focus = SIA_reduce_government_spending_on_monarchy }
+									cost = 7.2
+
+									ai_will_do = {
+										factor = 10
+									}
+
+									available = {
+
+									}
+
+									bypass = {
+
+									}
+
+									cancel_if_invalid = yes
+									continue_if_invalid = no
+									available_if_capitulated = no
+									relative_position_id = SIA_follow_khana_ratsadon
+
+
+									completion_reward = {
+										add_political_power = 100
+										}
+									}
+
+									focus = {
+										id = SIA_the_issue_of_political_parties
+										icon = GFX_focus_JAP_break_military_influence
+										x = 0
+										y = 2
+										prerequisite = { focus = SIA_strengthen_civilian_wing_influence focus = SIA_the_military_prevails }
+										cost = 7.2
+
+										ai_will_do = {
+											factor = 10
+										}
+
+										available = {
+
+										}
+
+										bypass = {
+
+										}
+
+										cancel_if_invalid = yes
+										continue_if_invalid = no
+										available_if_capitulated = no
+										relative_position_id = SIA_follow_khana_ratsadon
+
+
+										completion_reward = {
+											add_political_power = 100
+											}
+										}
+
+											focus = {
+												id = SIA_resignation_of_Prince_Aditya_Dibabha
+												icon = GFX_focus_JAP_break_military_influence
+												x = 0
+												y = 3
+												prerequisite = { focus = SIA_the_issue_of_political_parties }
+												cost = 7.2
+
+												ai_will_do = {
+													factor = 10
+												}
+
+												available = {
+
+												}
+
+												bypass = {
+
+												}
+
+												cancel_if_invalid = yes
+												continue_if_invalid = no
+												available_if_capitulated = no
+												relative_position_id = SIA_follow_khana_ratsadon
+
+
+												completion_reward = {
+													add_political_power = 100
+													}
+												}
+
+												focus = {
+													id = SIA_ascension_of_phibun
+													icon = GFX_focus_JAP_break_military_influence
+													x = 2
+													y = 4
+													prerequisite = { focus = SIA_resignation_of_Prince_Aditya_Dibabha }
+													prerequisite = { focus = SIA_bribes_and_favoritism }
+													cost = 7.2
+
+													ai_will_do = {
+														factor = 10
+													}
+
+													available = {
+
+													}
+
+													bypass = {
+
+													}
+
+													cancel_if_invalid = yes
+													continue_if_invalid = no
+													available_if_capitulated = no
+													relative_position_id = SIA_follow_khana_ratsadon
+
+
+													completion_reward = {
+														add_political_power = 100
+														}
+													}
+
+
+													focus = {
+														id = SIA_begin_the_cultural_revolution
+														icon = GFX_focus_JAP_break_military_influence
+														x = 3
+														y = 5
+														prerequisite = { focus = SIA_ascension_of_phibun }
+														cost = 7.2
+
+														ai_will_do = {
+															factor = 10
+														}
+
+														available = {
+
+														}
+
+														bypass = {
+
+														}
+
+														cancel_if_invalid = yes
+														continue_if_invalid = no
+														available_if_capitulated = no
+														relative_position_id = SIA_follow_khana_ratsadon
+
+
+														completion_reward = {
+															add_political_power = 100
+															}
+														}
+
+														focus = {
+															id = SIA_import_italian_propaganda_movies
+															icon = GFX_focus_JAP_break_military_influence
+															x = 4
+															y = 6
+															prerequisite = { focus = SIA_begin_the_cultural_revolution }
+															cost = 7.2
+
+															ai_will_do = {
+																factor = 10
+															}
+
+															available = {
+
+															}
+
+															bypass = {
+
+															}
+
+															cancel_if_invalid = yes
+															continue_if_invalid = no
+															available_if_capitulated = no
+															relative_position_id = SIA_follow_khana_ratsadon
+
+
+															completion_reward = {
+																add_political_power = 100
+																}
+															}
+
+															focus = {
+																id = SIA_implement_the_cultural_mandates
+																icon = GFX_focus_JAP_break_military_influence
+																x = 3
+																y = 7
+																prerequisite = { focus = SIA_implement_thai_nationalism focus = SIA_import_italian_propaganda_movies }
+																cost = 7.2
+
+																ai_will_do = {
+																	factor = 10
+																}
+
+																available = {
+
+																}
+
+																bypass = {
+
+																}
+
+																cancel_if_invalid = yes
+																continue_if_invalid = no
+																available_if_capitulated = no
+																relative_position_id = SIA_follow_khana_ratsadon
+
+
+																completion_reward = {
+																	add_political_power = 100
+																	}
+																}
+
+																focus = {
+																	id = SIA_establish_cult_of_personality
+																	icon = GFX_focus_JAP_break_military_influence
+																	x = 3
+																	y = 8
+																	prerequisite = { focus = SIA_implement_the_cultural_mandates }
+																	cost = 7.2
+
+																	ai_will_do = {
+																		factor = 10
+																	}
+
+																	available = {
+
+																	}
+
+																	bypass = {
+
+																	}
+
+																	cancel_if_invalid = yes
+																	continue_if_invalid = no
+																	available_if_capitulated = no
+																	relative_position_id = SIA_follow_khana_ratsadon
+
+
+																	completion_reward = {
+																		add_political_power = 100
+																		}
+																	}
+
+
+																		focus = {
+																			id = SIA_Rebellion_of_18_corpses
+																			icon = GFX_focus_JAP_break_military_influence
+																			x = 0
+																			y = 6
+																			prerequisite = { focus = SIA_existance_through_sheer_will }
+																			cost = 7.2
+
+																			ai_will_do = {
+																				factor = 10
+																			}
+
+																			available = {
+
+																			}
+
+																			bypass = {
+
+																			}
+
+																			cancel_if_invalid = yes
+																			continue_if_invalid = no
+																			available_if_capitulated = no
+																			relative_position_id = SIA_follow_khana_ratsadon
+
+
+																			completion_reward = {
+																				add_political_power = 100
+																				}
+																			}
+
+														focus = {
+															id = SIA_existance_through_sheer_will
+															icon = GFX_focus_JAP_break_military_influence
+															x = 1
+															y = 5
+															prerequisite = { focus = SIA_ascension_of_phibun }
+															cost = 7.2
+
+															ai_will_do = {
+																factor = 10
+															}
+
+															available = {
+
+															}
+
+															bypass = {
+
+															}
+
+															cancel_if_invalid = yes
+															continue_if_invalid = no
+															available_if_capitulated = no
+															relative_position_id = SIA_follow_khana_ratsadon
+
+
+															completion_reward = {
+																add_political_power = 100
+																}
+															}
+
+															focus = {
+																id = SIA_against_the_policy_of_national_humiliation
+																icon = GFX_focus_JAP_break_military_influence
+																x = 1
+																y = 7
+																prerequisite = { focus = SIA_existance_through_sheer_will }
+																cost = 7.2
+
+																ai_will_do = {
+																	factor = 10
+																}
+
+																available = {
+
+																}
+
+																bypass = {
+
+																}
+
+																cancel_if_invalid = yes
+																continue_if_invalid = no
+																available_if_capitulated = no
+																relative_position_id = SIA_follow_khana_ratsadon
+
+
+																completion_reward = {
+																	add_political_power = 100
+																	}
+																}
+
+																focus = {
+																	id = SIA_prepare_for_the_inevitable
+																	icon = GFX_focus_JAP_break_military_influence
+																	x = 1
+																	y = 8
+																	prerequisite = { focus = SIA_against_the_policy_of_national_humiliation }
+																	cost = 7.2
+
+																	ai_will_do = {
+																		factor = 10
+																	}
+
+																	available = {
+
+																	}
+
+																	bypass = {
+
+																	}
+
+																	cancel_if_invalid = yes
+																	continue_if_invalid = no
+																	available_if_capitulated = no
+																	relative_position_id = SIA_follow_khana_ratsadon
+
+
+																	completion_reward = {
+																		add_political_power = 100
+																		}
+																	}
+
+																focus = {
+																	id = SIA_reclaim_what_deemed_lost
+																	icon = GFX_focus_JAP_break_military_influence
+																	x = 2
+																	y = 9
+																	prerequisite = { focus = SIA_establish_cult_of_personality }
+																	prerequisite = { focus = SIA_prepare_for_the_inevitable }
+																	cost = 7.2
+
+																	ai_will_do = {
+																		factor = 10
+																	}
+
+																	available = {
+
+																	}
+
+																	bypass = {
+
+																	}
+
+																	cancel_if_invalid = yes
+																	continue_if_invalid = no
+																	available_if_capitulated = no
+																	relative_position_id = SIA_follow_khana_ratsadon
+
+
+																	completion_reward = {
+																		add_political_power = 100
+																		}
+																	}
+
+															focus = {
+																id = SIA_implement_thai_nationalism
+																icon = GFX_focus_JAP_break_military_influence
+																x = 2
+																y = 6
+																prerequisite = { focus = SIA_begin_the_cultural_revolution }
+																cost = 7.2
+
+																ai_will_do = {
+																	factor = 10
+																}
+
+																available = {
+
+																}
+
+																bypass = {
+
+																}
+
+																cancel_if_invalid = yes
+																continue_if_invalid = no
+																available_if_capitulated = no
+																relative_position_id = SIA_follow_khana_ratsadon
+
+
+																completion_reward = {
+																	add_political_power = 100
+																	}
+																}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			focus = {
+				id = SIA_reassert_divine_rule
+				icon = GFX_focus_JAP_break_military_influence
+				x = 5
+				y = 1
+				prerequisite = { focus = SIA_legacy_of_bloodless_coup }
+				mutually_exclusive = { focus = SIA_follow_khana_ratsadon }
+				cost = 7.2
+
+				ai_will_do = {
+					factor = 10
+				}
+
+				available = {
+
+				}
+
+				bypass = {
+
+				}
+
+				cancel_if_invalid = yes
+				continue_if_invalid = no
+				available_if_capitulated = no
+				relative_position_id = SIA_legacy_of_bloodless_coup
+
+
+				completion_reward = {
+					add_political_power = 100
+					}
+				}
+
+#Phahon kicks the bucket and political vacuum is established
+
+				focus = {
+					id = SIA_a_meeting_with_death
+					icon = GFX_focus_JAP_break_military_influence
+					x = 0
+					y = 1
+					prerequisite = { focus = SIA_reassert_divine_rule }
+					cost = 7.2
+
+					ai_will_do = {
+						factor = 10
+					}
+
+					available = {
+
+					}
+
+					bypass = {
+
+					}
+
+					cancel_if_invalid = yes
+					continue_if_invalid = no
+					available_if_capitulated = no
+					relative_position_id = SIA_reassert_divine_rule
+
+
+					completion_reward = {
+						add_political_power = 100
+						}
+					}
+
+
+	#about purging and reversing the siamese revolution, purge events should include options to keep some alive for potential prime minister appointments
+
+					focus = {
+						id = SIA_every_dream
+						icon = GFX_focus_JAP_break_military_influence
+						x = -1
+						y = 1
+						prerequisite = { focus = SIA_a_meeting_with_death }
+						cost = 7.2
+
+						ai_will_do = {
+							factor = 10
+						}
+
+						available = {
+
+						}
+
+						bypass = {
+
+						}
+
+						cancel_if_invalid = yes
+						continue_if_invalid = no
+						available_if_capitulated = no
+						relative_position_id = SIA_a_meeting_with_death
+
+
+						completion_reward = {
+							add_political_power = 100
+							}
+						}
+
+						focus = {
+							id = SIA_must_come_to_an_end
+							icon = GFX_focus_JAP_break_military_influence
+							x = -1
+							y = 2
+							prerequisite = { focus = SIA_every_dream }
+							cost = 7.2
+
+							ai_will_do = {
+								factor = 10
+							}
+
+							available = {
+
+							}
+
+							bypass = {
+
+							}
+
+							cancel_if_invalid = yes
+							continue_if_invalid = no
+							available_if_capitulated = no
+							relative_position_id = SIA_a_meeting_with_death
+
+
+							completion_reward = {
+								add_political_power = 100
+								}
+							}
+
+							focus = {
+								id = SIA_chaos_in_bangkok
+								icon = GFX_focus_JAP_break_military_influence
+								x = 1
+								y = 1
+								prerequisite = { focus = SIA_a_meeting_with_death }
+								cost = 7.2
+
+								ai_will_do = {
+									factor = 10
+								}
+
+								available = {
+
+								}
+
+								bypass = {
+
+								}
+
+								cancel_if_invalid = yes
+								continue_if_invalid = no
+								available_if_capitulated = no
+								relative_position_id = SIA_a_meeting_with_death
+
+
+								completion_reward = {
+									add_political_power = 100
+									}
+								}
+
+								focus = {
+									id = SIA_turmoil_in_the_military
+									icon = GFX_focus_JAP_break_military_influence
+									x = 1
+									y = 2
+									prerequisite = { focus = SIA_chaos_in_bangkok }
+									cost = 7.2
+
+									ai_will_do = {
+										factor = 10
+									}
+
+									available = {
+
+									}
+
+									bypass = {
+
+									}
+
+									cancel_if_invalid = yes
+									continue_if_invalid = no
+									available_if_capitulated = no
+									relative_position_id = SIA_a_meeting_with_death
+
+
+									completion_reward = {
+										add_political_power = 100
+										}
+									}
+
+									focus = {
+										id = SIA_issue_emergency_powers
+										icon = GFX_focus_JAP_break_military_influence
+										x = 0
+										y = 3
+										prerequisite = { focus = SIA_turmoil_in_the_military }
+										prerequisite = { focus = SIA_must_come_to_an_end }
+										cost = 7.2
+
+										ai_will_do = {
+											factor = 10
+										}
+
+										available = {
+
+										}
+
+										bypass = {
+
+										}
+
+										cancel_if_invalid = yes
+										continue_if_invalid = no
+										available_if_capitulated = no
+										relative_position_id = SIA_a_meeting_with_death
+
+
+										completion_reward = {
+											add_political_power = 100
+											}
+										}
+
+										focus = {
+											id = SIA_the_regency_rules
+											icon = GFX_focus_JAP_break_military_influence
+											x = 2
+											y = 1
+											prerequisite = { focus = SIA_issue_emergency_powers }
+											mutually_exclusive = { focus = SIA_the_old_king_returns }
+											cost = 7.2
+
+											ai_will_do = {
+												factor = 10
+											}
+
+											available = {
+
+											}
+
+											bypass = {
+
+											}
+
+											cancel_if_invalid = yes
+											continue_if_invalid = no
+											available_if_capitulated = no
+											relative_position_id = SIA_issue_emergency_powers
+
+
+											completion_reward = {
+												add_political_power = 100
+												}
+											}
+
+											focus = {
+												id = SIA_the_old_king_returns
+												icon = GFX_focus_JAP_break_military_influence
+												x = -2
+												y = 1
+												prerequisite = { focus = SIA_issue_emergency_powers }
+												mutually_exclusive = { focus = SIA_the_regency_rules }
+												cost = 7.2
+
+												ai_will_do = {
+													factor = 10
+												}
+
+												available = {
+
+												}
+
+												bypass = {
+
+												}
+
+												cancel_if_invalid = yes
+												continue_if_invalid = no
+												available_if_capitulated = no
+												relative_position_id = SIA_issue_emergency_powers
+
+
+												completion_reward = {
+													add_political_power = 100
+													}
+												}
+
+
+												focus = {
+													id = SIA_adress_political_dissent
+													icon = GFX_focus_JAP_break_military_influence
+													x = -1
+													y = 1
+													prerequisite = { focus = SIA_the_regency_rules }
+													cost = 7.2
+
+													ai_will_do = {
+														factor = 10
+													}
+
+													available = {
+
+													}
+
+													bypass = {
+
+													}
+
+													cancel_if_invalid = yes
+													continue_if_invalid = no
+													available_if_capitulated = no
+													relative_position_id = SIA_the_regency_rules
+
+
+													completion_reward = {
+														add_political_power = 100
+														}
+													}
+
+													focus = {
+														id = SIA_political_overtures
+														icon = GFX_focus_JAP_break_military_influence
+														x = -1
+														y = 2
+														prerequisite = { focus = SIA_adress_political_dissent }
+														cost = 7.2
+
+														ai_will_do = {
+															factor = 10
+														}
+
+														available = {
+
+														}
+
+														bypass = {
+
+														}
+
+														cancel_if_invalid = yes
+														continue_if_invalid = no
+														available_if_capitulated = no
+														relative_position_id = SIA_the_regency_rules
+
+
+														completion_reward = {
+															add_political_power = 100
+															}
+														}
+
+														focus = {
+															id = SIA_autocratic_measures
+															icon = GFX_focus_JAP_break_military_influence
+															x = 1
+															y = 1
+															prerequisite = { focus = SIA_the_regency_rules }
+															cost = 7.2
+
+															ai_will_do = {
+																factor = 10
+															}
+
+															available = {
+
+															}
+
+															bypass = {
+
+															}
+
+															cancel_if_invalid = yes
+															continue_if_invalid = no
+															available_if_capitulated = no
+															relative_position_id = SIA_the_regency_rules
+
+
+															completion_reward = {
+																add_political_power = 100
+																}
+															}
+
+															focus = {
+																id = SIA_concessions_to_the_political_elite
+																icon = GFX_focus_JAP_break_military_influence
+																x = 1
+																y = 2
+																prerequisite = { focus = SIA_autocratic_measures }
+																cost = 7.2
+
+																ai_will_do = {
+																	factor = 10
+																}
+
+																available = {
+
+																}
+
+																bypass = {
+
+																}
+
+																cancel_if_invalid = yes
+																continue_if_invalid = no
+																available_if_capitulated = no
+																relative_position_id = SIA_the_regency_rules
+
+
+																completion_reward = {
+																	add_political_power = 100
+																	}
+																}
+
+
+																focus = {
+																	id = SIA_rule_from_the_shadows
+																	icon = GFX_focus_JAP_break_military_influence
+																	x = -2
+																	y = 3
+																	prerequisite = { focus = SIA_political_overtures }
+																	prerequisite = { focus = SIA_concessions_to_the_political_elite }
+																	mutually_exclusive = { focus = SIA_suspend_the_regency }
+																	cost = 7.2
+
+																	ai_will_do = {
+																		factor = 10
+																	}
+
+																	available = {
+
+																	}
+
+																	bypass = {
+
+																	}
+
+																	cancel_if_invalid = yes
+																	continue_if_invalid = no
+																	available_if_capitulated = no
+																	relative_position_id = SIA_the_regency_rules
+
+
+																	completion_reward = {
+																		add_political_power = 100
+																		}
+																	}
+
+																	focus = {
+																		id = SIA_suspend_the_regency
+																		icon = GFX_focus_JAP_break_military_influence
+																		x = 2
+																		y = 3
+																		prerequisite = { focus = SIA_political_overtures }
+																		prerequisite = { focus = SIA_concessions_to_the_political_elite }
+																		mutually_exclusive = { focus = SIA_rule_from_the_shadows }
+																		cost = 7.2
+
+																		ai_will_do = {
+																			factor = 10
+																		}
+
+																		available = {
+
+																		}
+
+																		bypass = {
+
+																		}
+
+																		cancel_if_invalid = yes
+																		continue_if_invalid = no
+																		available_if_capitulated = no
+																		relative_position_id = SIA_the_regency_rules
+
+
+																		completion_reward = {
+																			add_political_power = 100
+																			}
+																		}
+
+
+																		focus = {
+																			id = SIA_promote_secular_thought
+																			icon = GFX_focus_JAP_break_military_influence
+																			x = 1
+																			y = 1
+																			prerequisite = { focus = SIA_the_old_king_returns }
+																			mutually_exclusive = { focus = SIA_alliance_with_the_divine }
+																			cost = 7.2
+
+																			ai_will_do = {
+																				factor = 10
+																			}
+
+																			available = {
+
+																			}
+
+																			bypass = {
+
+																			}
+
+																			cancel_if_invalid = yes
+																			continue_if_invalid = no
+																			available_if_capitulated = no
+																			relative_position_id = SIA_the_old_king_returns
+
+
+																			completion_reward = {
+																				add_political_power = 100
+																				}
+																			}
+
+																			focus = {
+																				id = SIA_allow_political_parties
+																				icon = GFX_focus_JAP_break_military_influence
+																				x = 1
+																				y = 2
+																				prerequisite = { focus = SIA_promote_secular_thought }
+																				cost = 7.2
+
+																				ai_will_do = {
+																					factor = 10
+																				}
+
+																				available = {
+
+																				}
+
+																				bypass = {
+
+																				}
+
+																				cancel_if_invalid = yes
+																				continue_if_invalid = no
+																				available_if_capitulated = no
+																				relative_position_id = SIA_the_old_king_returns
+
+
+																				completion_reward = {
+																					add_political_power = 100
+																					}
+																				}
+
+																				focus = {
+																					id = SIA_alliance_with_the_divine
+																					icon = GFX_focus_JAP_break_military_influence
+																					x = -1
+																					y = 1
+																					prerequisite = { focus = SIA_the_old_king_returns }
+																					mutually_exclusive = { focus = SIA_promote_secular_thought }
+																					cost = 7.2
+
+																					ai_will_do = {
+																						factor = 10
+																					}
+
+																					available = {
+
+																					}
+
+																					bypass = {
+
+																					}
+
+																					cancel_if_invalid = yes
+																					continue_if_invalid = no
+																					available_if_capitulated = no
+																					relative_position_id = SIA_the_old_king_returns
+
+
+																					completion_reward = {
+																						add_political_power = 100
+																						}
+																					}
+
+																					focus = {
+																						id = SIA_benevolent_monarchy
+																						icon = GFX_focus_JAP_break_military_influence
+																						x = -1
+																						y = 2
+																						prerequisite = { focus = SIA_alliance_with_the_divine }
+																						cost = 7.2
+
+																						ai_will_do = {
+																							factor = 10
+																						}
+
+																						available = {
+
+																						}
+
+																						bypass = {
+
+																						}
+
+																						cancel_if_invalid = yes
+																						continue_if_invalid = no
+																						available_if_capitulated = no
+																						relative_position_id = SIA_the_old_king_returns
+
+
+																						completion_reward = {
+																							add_political_power = 100
+																							}
+																						}
+
+																						focus = {
+																							id = SIA_royal_powers_act
+																							icon = GFX_focus_JAP_break_military_influence
+																							x = 0
+																							y = 3
+																							prerequisite = { focus = SIA_benevolent_monarchy focus = SIA_allow_political_parties }
+																							cost = 7.2
+
+																							ai_will_do = {
+																								factor = 10
+																							}
+
+																							available = {
+
+																							}
+
+																							bypass = {
+
+																							}
+
+																							cancel_if_invalid = yes
+																							continue_if_invalid = no
+																							available_if_capitulated = no
+																							relative_position_id = SIA_the_old_king_returns
+
+
+																							completion_reward = {
+																								add_political_power = 100
+																								}
+																							}
+
+																							focus = {
+																								id = SIA_cultural_rebirth
+																								icon = GFX_focus_JAP_break_military_influence
+																								x = 0
+																								y = 4
+																								prerequisite = { focus = SIA_royal_powers_act }
+																								cost = 7.2
+
+																								ai_will_do = {
+																									factor = 10
+																								}
+
+																								available = {
+
+																								}
+
+																								bypass = {
+
+																								}
+
+																								cancel_if_invalid = yes
+																								continue_if_invalid = no
+																								available_if_capitulated = no
+																								relative_position_id = SIA_the_old_king_returns
+
+
+																								completion_reward = {
+																									add_political_power = 100
+																									}
+																								}
+
+
+																								focus = {
+																									id = SIA_sangha_act
+																									icon = GFX_focus_JAP_break_military_influence
+																									x = -3
+																									y = 2
+																									prerequisite = { focus = SIA_alliance_with_the_divine }
+																									cost = 7.2
+
+																									ai_will_do = {
+																										factor = 10
+																									}
+
+																									available = {
+
+																									}
+
+																									bypass = {
+
+																									}
+
+																									cancel_if_invalid = yes
+																									continue_if_invalid = no
+																									available_if_capitulated = no
+																									relative_position_id = SIA_the_old_king_returns
+
+
+																									completion_reward = {
+																										add_political_power = 100
+																										}
+																									}
+
+																									focus = {
+																										id = SIA_fund_temple_expenses
+																										icon = GFX_focus_JAP_break_military_influence
+																										x = -3
+																										y = 3
+																										prerequisite = { focus = SIA_sangha_act }
+																										cost = 7.2
+
+																										ai_will_do = {
+																											factor = 10
+																										}
+
+																										available = {
+
+																										}
+
+																										bypass = {
+
+																										}
+
+																										cancel_if_invalid = yes
+																										continue_if_invalid = no
+																										available_if_capitulated = no
+																										relative_position_id = SIA_the_old_king_returns
+
+
+																										completion_reward = {
+																											add_political_power = 100
+																											}
+																										}
+
+																										focus = {
+																											id = SIA_develop_state_buddhism
+																											icon = GFX_focus_JAP_break_military_influence
+																											x = -3
+																											y = 4
+																											prerequisite = { focus = SIA_fund_temple_expenses }
+																											cost = 7.2
+
+																											ai_will_do = {
+																												factor = 10
+																											}
+
+																											available = {
+
+																											}
+
+																											bypass = {
+
+																											}
+
+																											cancel_if_invalid = yes
+																											continue_if_invalid = no
+																											available_if_capitulated = no
+																											relative_position_id = SIA_the_old_king_returns
+
+
+																											completion_reward = {
+																												add_political_power = 100
+																												}
+																											}
+
+
+																											focus = {
+																												id = SIA_side_with_the_Thammayut
+																												icon = GFX_focus_JAP_break_military_influence
+																												x = 2
+																												y = 1
+																												prerequisite = { focus = SIA_develop_state_buddhism }
+																												mutually_exclusive = { focus = SIA_side_with_the_Mahānikai }
+																												cost = 7.2
+
+																												ai_will_do = {
+																													factor = 10
+																												}
+
+																												available = {
+
+																												}
+
+																												bypass = {
+
+																												}
+
+																												cancel_if_invalid = yes
+																												continue_if_invalid = no
+																												available_if_capitulated = no
+																												relative_position_id = SIA_develop_state_buddhism
+
+
+																												completion_reward = {
+																													add_political_power = 100
+																													}
+																												}
+
+
+																												focus = {
+																													id = SIA_side_with_the_Mahanikai
+																													icon = GFX_focus_JAP_break_military_influence
+																													x = -2
+																													y = 1
+																													prerequisite = { focus = SIA_develop_state_buddhism }
+																													mutually_exclusive = { focus = SIA_side_with_the_Thammayut }
+																													cost = 7.2
+
+																													ai_will_do = {
+																														factor = 10
+																													}
+
+																													available = {
+
+																													}
+
+																													bypass = {
+
+																													}
+
+																													cancel_if_invalid = yes
+																													continue_if_invalid = no
+																													available_if_capitulated = no
+																													relative_position_id = SIA_develop_state_buddhism
+
+
+																													completion_reward = {
+																														add_political_power = 100
+																														}
+																													}
+
+}
