@@ -320,7 +320,7 @@ ideas = {
 			}
 		}
 
-		ROM_Institue_Royal = {
+		ROM_Institute_Royal = {
 
 			allowed = {
 				always = no
@@ -440,6 +440,172 @@ ideas = {
 				max_planning = 0.05
 			}
 		}
+
+		ROM_The_Great_Army = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = ARG_resource_extration_focus
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = 0.05
+				org_loss_when_moving = -0.05
+			}
+		}
+
+		ROM_The_Left = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = ARG_resource_extration_focus
+
+			removal_cost = -1
+
+			modifier = {
+				communism_drift = 0.3
+			}
+		}
+
+		ROM_The_Right = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = ARG_resource_extration_focus
+
+			removal_cost = -1
+
+			modifier = {
+				fascism_drift = 0.3
+			}
+		}
+
+		ROM_The_Right_Leader = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = ARG_resource_extration_focus
+
+			removal_cost = -1
+
+			modifier = {
+				fascism_drift = 0.5
+				stability_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+
+		ROM_The_Left_Leader = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = ARG_resource_extration_focus
+
+			removal_cost = -1
+
+			modifier = {
+				communism_drift = 0.5
+				stability_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+
+		ROM_Defense_Plan = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = ARG_resource_extration_focus
+
+			removal_cost = -1
+
+			modifier = {
+				supply_consumption_factor = -0.1
+				army_defence_against_major_factor = 0.05
+			}
+		}
+
+		ROM_Attack_Plan = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = ARG_resource_extration_focus
+
+			removal_cost = -1
+
+			modifier = {
+				army_speed_factor = 0.05
+				army_attack_against_major_factor = 0.05
+			}
+		}
+
+
+		
+		ROM_The_Great_Industry = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = ARG_resource_extration_focus
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+
+
+
 
 			ROM_King_Micheals_Coup_Cost = {
 
@@ -1042,8 +1208,30 @@ ideas = {
 
 			
 			modifier = {
-				guarantee_tension = -1.0
-				guarantee_cost = -0.5
+				democratic_drift = -0.2
+				neutrality_drift = -0.2
+			}
+		}
+
+		ROM_Greater_Romania = {
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+				has_government = democratic 
+			}				
+
+			
+			modifier = {
+				democratic_drift = -0.2
+				neutrality_drift = -0.2
+				political_power_factor = 0.1
+				stability_factor = 0.1
+				war_support_factor = 0.1
 			}
 		}
 
