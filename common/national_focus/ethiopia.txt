@@ -3131,14 +3131,9 @@ focus_tree = {
 				tooltip = ETH_has_host_nation_tt
 				has_variable = ETH.host_nation
 			}
-			hidden_trigger = {
-				IF = {
-					limit = {
-						is_ai = yes 	
-					}
-					is_tutorial = no
-				}
-			}
+			is_ai = no
+			
+		
 
 		}
 		ai_will_do = {
