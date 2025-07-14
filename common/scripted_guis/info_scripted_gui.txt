@@ -1,0 +1,141 @@
+scripted_gui = {
+
+	info_open_scripted_gui = {
+		context_type = player_context
+		window_name = "info_gui_open_window"
+
+		visible = {
+			always = yes
+		}
+
+		triggers = {
+			info_open_button_visible = {
+				NOT = {
+					ROOT = {has_country_flag = info_open_flag}
+				}
+			}
+
+			info_close_button_visible = {
+				has_country_flag = info_open_flag
+			}
+		}
+
+		effects = {
+			info_open_button_click = {
+				set_country_flag = info_open_flag
+			}
+
+			info_close_button_click = {
+				clr_country_flag = info_open_flag
+			}
+		}
+	}
+
+	info_main_scripted_gui = {
+		context_type = player_context
+		window_name = "info_gui_main_window"
+
+		visible = {
+			has_country_flag = info_open_flag
+		}
+
+		triggers = {
+		}
+
+		effects = {
+			info_main_close_button_click = {
+				clr_country_flag = info_open_flag
+			}
+			info_main_page1_button_click = {
+				set_country_flag = info_page1_flag
+				clr_country_flag = info_page2_flag
+				clr_country_flag = info_page3_flag
+			}
+			info_main_page2_button_click = {
+				set_country_flag = info_page2_flag
+				clr_country_flag = info_page1_flag
+				clr_country_flag = info_page3_flag
+			}
+			info_main_page3_button_click = {
+				set_country_flag = info_page3_flag
+				clr_country_flag = info_page1_flag
+				clr_country_flag = info_page2_flag
+			}
+		}
+	}
+
+	info_page1_scripted_gui = {
+		context_type = player_context
+		window_name = "info_gui_page1_window"
+		parent_window_name = info_gui_main_window
+
+		visible = {
+			has_country_flag = info_page1_flag
+		}
+
+		triggers = {
+		}
+
+		effects = {
+			kadikoy_button_click = {
+				set_country_flag = info_page1_shit
+			}
+		}
+
+		properties = {
+			info_page1_flag = {
+				image = [ROOT.GetFlag]
+			}
+		}
+	}	
+
+	info_page2_scripted_gui = {
+		context_type = player_context
+		window_name = "info_gui_page2_window"
+		parent_window_name = info_gui_main_window
+
+		visible = {
+			has_country_flag = info_page2_flag
+		}
+
+		triggers = {
+		}
+
+		effects = {
+		}
+	}	
+
+	info_page3_scripted_gui = {
+		context_type = player_context
+		window_name = "info_gui_page3_window"
+		parent_window_name = info_gui_main_window
+
+		visible = {
+			has_country_flag = info_page3_flag
+		}
+
+		triggers = {
+		}
+
+		effects = {
+			info_page3_subpage1_button_click = {
+				set_country_flag = info_page3_subpage1_flag
+				clr_country_flag = info_page3_subpage2_flag
+				clr_country_flag = info_page3_subpage3_flag
+			}
+			info_page3_subpage2_button_click = {
+				set_country_flag = info_page3_subpage2_flag
+				clr_country_flag = info_page3_subpage1_flag
+				clr_country_flag = info_page3_subpage3_flag
+			}
+			info_page3_subpage3_button_click = {
+				set_country_flag = info_page3_subpage3_flag
+				clr_country_flag = info_page3_subpage2_flag
+				clr_country_flag = info_page3_subpage1_flag
+			}
+		}
+	}	
+
+	
+	
+}

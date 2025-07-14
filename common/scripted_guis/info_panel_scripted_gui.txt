@@ -1,0 +1,27 @@
+scripted_gui = {
+	
+
+	info_panel_scripted_gui = {
+		context_type = player_context
+		
+		window_name = "info_panel_main_window"
+
+		visible = {
+			ROOT = {
+				has_country_flag = ip_enabled
+			}
+		}
+
+		effects = {
+			ip_close_button_click = {
+				ROOT = {
+					clr_country_flag = ip_enabled
+				}
+			}
+		}
+		
+		ai_enabled = {
+			always = no
+		}
+	}
+}

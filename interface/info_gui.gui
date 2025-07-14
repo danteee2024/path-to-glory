@@ -1,0 +1,359 @@
+guiTypes = {
+	containerWindowType={
+		name = "info_gui_open_window"
+		size = { width = 10 height = 10 }
+		orientation = upper_right
+		
+		buttonType ={
+			name ="info_open_button"
+			spriteType = "GFX_change_armygroup_template_down"
+			position = { x = -401 y = 3}
+		}
+        
+		buttonType ={
+			name ="info_close_button"
+			spriteType = "GFX_change_armygroup_template_up"
+			position = { x = -401 y = 3}
+		}
+	}
+
+	containerWindowType={
+		name = "info_gui_main_window"
+		size = { width = 750 height = 500 }
+		position = { x = 580 y = 275}
+		moveable = yes
+		
+		background = {
+			name = "info_main_bg"
+			quadTextureSprite = "GFX_tiled_window_w_close"
+		}
+
+		buttonType ={
+			name ="info_main_close_button"
+			spriteType = "GFX_closebutton"
+			position = { x = 705 y = 13}
+		}
+
+		buttonType ={
+			name ="info_main_page1_button"
+			spriteType = "GFX_unitlist_unitinfo_button"
+			position = { x = 12 y = 13}
+		}
+
+		instantTextboxType = {
+			name = "info_main_page1_button_loc"
+			position = { x = 25 y = 17 }
+			font = "hoi_18mbs"
+			text = page1_button_loc
+			maxWidth = 50
+			maxHeight = 23
+			format = center
+		}
+
+		buttonType ={
+			name ="info_main_page2_button"
+			spriteType = "GFX_unitlist_unitinfo_button"
+			position = { x = 85 y = 13}
+		}
+
+		instantTextboxType = {
+			name = "info_main_page2_button_loc"
+			position = { x = 98 y = 17 }
+			font = "hoi_18mbs"
+			text = page2_button_loc
+			maxWidth = 50
+			maxHeight = 23
+			format = center
+		}
+
+		buttonType ={
+			name ="info_main_page3_button"
+			spriteType = "GFX_unitlist_unitinfo_button"
+			position = { x = 158 y = 13}
+		}
+
+		instantTextboxType = {
+			name = "info_main_page3_button_loc"
+			position = { x = 171 y = 17 }
+			font = "hoi_18mbs"
+			text = page3_button_loc
+			maxWidth = 50
+			maxHeight = 23
+			format = center
+		}
+		
+	}
+
+	containerWindowType={
+		name = "info_gui_page1_window"
+		position = { x = 0 y = 0}
+         
+		instantTextboxType = {
+			name = "info_page1_poet_txt"
+			position = { x = 325 y = 120 }
+			font = "hoi_16mbs"
+			text = page1_poet_loc
+			maxWidth = 400
+			maxHeight = 23
+			format = center
+		}
+
+		instantTextboxType = {
+			name = "info_page1_poet_title_txt"
+			position = { x = 325 y = 65 }
+			font = "hoi_30header"
+			text = page1_poet_title_loc
+			maxWidth = 400
+			maxHeight = 23
+			format = center
+		}
+
+		buttonType ={
+			name ="info_page1_discord_button"
+			spriteType = "GFX_info_discord"
+			position = { x = 20 y = 440}
+			web_link = "https://discord.gg/zJQRgxA4qs"
+		}
+
+		iconType ={
+			name = "info_page1_flag"
+			spriteType = "GFX_shield_medium"
+			position = { x = 136 y = 72 }
+			alwaystransparent = yes
+		}
+
+		iconType ={
+			name = "info_page1_flag_frame"
+			spriteType = "GFX_large_flag_frame"
+			position = { x = 130 y = 70 }
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "info_page1_country_txt"
+			position = { x = 25 y = 130 }
+			font = "hoi_30header"
+			text = "[ROOT.GetName]"
+			maxWidth = 300
+			maxHeight = 23
+			format = center
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "info_changelog_bg"
+			position = { x = 35 y = 180 }
+			quadTextureSprite ="GFX_parch_bg"
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+
+			name = "info_changelog_title_txt"
+			position = { x = -70 y = 200 }
+			textureFile = ""
+			font = "hoi_24header"
+			borderSize = {x = 0 y = 0}
+			text = main_menu_version_text
+			format = centre
+			maxWidth = 500
+			maxHeight = 20
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+
+			name ="info_changelog_main_txt"	
+			position = { x = 50 y = 245 }
+			textureFile = ""
+			font = "hoi_18mbs"
+			borderSize = {x = 0 y = 0}
+			text = DESC_TEXT
+			format = centre
+			maxWidth = 250
+			maxHeight = 20
+			alwaystransparent = yes
+		}
+
+		
+	}
+
+	containerWindowType={
+		name = "info_gui_page2_window"
+		position = { x = 0 y = 0 }
+
+		iconType ={
+			name = "info_page2_portrait1"
+			spriteType = "GFX_portrait_ENG_thomas_moore"
+			position = { x = 40 y = 70 }
+			alwaystransparent = yes
+		}
+		iconType ={
+			name = "info_page2_portrait2"
+			spriteType = "GFX_portrait_NOR_carl_gustav_fleischer"
+			position = { x = 210 y = 70 }
+			alwaystransparent = yes
+		}
+		iconType ={
+			name = "info_page2_portrait3"
+			spriteType = "GFX_portrait_LIT_augustinas_voldemaras"
+			position = { x = 380 y = 70 }	
+			alwaystransparent = yes
+		}
+		iconType ={
+			name = "info_page2_portrait4"
+			spriteType = "GFX_portrait_SWE_sven_olav_lindholm"
+			position = { x = 550 y = 70 }
+			alwaystransparent = yes
+		}
+
+		iconType ={
+			name = "info_page2_portrait_bg1"
+			spriteType = "GFX_pol_leader_frame"
+			position = { x = 33 y = 60 }
+			alwaystransparent = yes
+		}
+		iconType ={
+			name = "info_page2_portrait_bg2"
+			spriteType = "GFX_pol_leader_frame"
+			position = { x = 203 y = 60 }
+			alwaystransparent = yes
+		}
+		iconType ={
+			name = "info_page2_portrait_bg3"
+			spriteType = "GFX_pol_leader_frame"
+			position = { x = 373 y = 60 }
+			alwaystransparent = yes
+		}
+		iconType ={
+			name = "info_page2_portrait_bg4"
+			spriteType = "GFX_pol_leader_frame"
+			position = { x = 543 y = 60 }
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "page2_social_txt"
+			position = { x = 45 y = 285 }
+			font = "hoi_18mbs"
+			text = page2_social_loc
+			maxWidth = 150
+			maxHeight = 23
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "page2_wia_txt"
+			position = { x = 215 y = 285 }
+			font = "hoi_18mbs"
+			text = page2_wia_loc
+			maxWidth = 150
+			maxHeight = 23
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "page2_giray_txt"
+			position = { x = 383 y = 285 }
+			font = "hoi_18mbs"
+			text = page2_giray_loc
+			maxWidth = 150
+			maxHeight = 23
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "page2_ern_txt"
+			position = { x = 550 y = 285 }
+			font = "hoi_18mbs"
+			text = page2_ern_loc
+			maxWidth = 150
+			maxHeight = 23
+			format = center
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "page2_social_desc"
+			position = { x = 45 y = 340 }
+			font = "hoi_26mbs"
+			text = page2_social_desc
+			maxWidth = 150
+			maxHeight = 23
+			format = center
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "page2_wia_desc"
+			position = { x = 215 y = 340 }
+			font = "hoi_26mbs"
+			text = page2_wia_desc
+			maxWidth = 150
+			maxHeight = 23
+			format = center
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "page2_giray_desc"
+			position = { x = 385 y = 340 }
+			font = "hoi_26mbs"
+			text = page2_giray_desc
+			maxWidth = 150
+			maxHeight = 23
+			format = center
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "page2_ern_desc"
+			position = { x = 553 y = 340 }
+			font = "hoi_26mbs"
+			text = page2_ern_desc
+			maxWidth = 150
+			maxHeight = 23
+			format = center
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "page2_rights_txt"
+			position = { x = -15 y = 470 }
+			font = "hoi_16mbs"
+			text = page2_rights_loc
+			maxWidth = 300	
+			maxHeight = 23
+			format = center
+			alwaystransparent = yes
+		}
+	}
+
+
+	containerWindowType={
+		name = "info_gui_page3_window"
+		position = { x = 0 y = 0 }
+
+		instantTextboxType = {
+			name = "info_page3_subpage1_main_txt"
+			position = { x = 30 y = 75}
+			font = "hoi_16mbs"
+			text = info_page3_subpage1_main_loc
+			maxWidth = 400	
+			maxHeight = 23
+			format = left
+			alwaystransparent = no
+		}
+
+		iconType ={
+			name = "info_page3_subpage3_poster"
+			spriteType = "GFX_info_poster"
+			position = { x = 450 y = 75 }
+			alwaystransparent = yes
+		}
+
+	}
+
+
+	
+}

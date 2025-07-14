@@ -1,0 +1,195 @@
+guiTypes = {
+	containerWindowType = {
+		name = "info_panel_open_window"
+		position = { x=0  y=0	}
+		size = { width=100 height=100 }
+		Orientation = CENTER_RIGHT
+		
+		buttonType ={
+			name = "ip_open_button"
+			spriteType = "GFX_naval_increase_amount"
+			position = { x = -35 y = 125 }
+			pdx_tooltip = ip_open_button_tt
+		}
+
+		buttonType ={
+			name = "ip_disable_button"
+			spriteType = "GFX_naval_increase_amount"
+			position = { x = 50000000000 y = 125 }
+			shortcut = "ctrl+shift+i"
+		}
+	}
+
+	containerWindowType = {
+		name = "info_panel_main_window"
+		position = { x=-110  y=-75 }
+		size = { width=1000 height=1000 }
+		Orientation = CENTER_RIGHT
+		
+		background = {
+			name = "ip_main_bg"
+			quadTextureSprite = "GFX_constructions_bg4"
+		}
+
+		buttonType ={
+			name = "ip_close_button"
+			spriteType = "GFX_naval_decrease_amount"
+			position = { x = 0 y = 0 }
+		}
+
+		iconType = {
+			name = "ip_civ_icon"
+			position = { x = 10 y = 50 }
+			quadTextureSprite = "GFX_non_available_factory_icon"
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "ip_civ_bg"
+			position = { x = 39 y = 48 }
+			quadTextureSprite = "GFX_generic_text_bg_60"
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name ="ip_civ_txt"
+			position = { x= 45 y = 52 }
+			font = "hoi_18mbs"
+			text = "ip_civ_tt"
+			format = center
+			maxWidth = 46
+			maxHeight = 24
+			fixedsize = yes
+		}
+
+		iconType = {
+			name = "ip_mil_icon"
+			position = { x = 10 y = 80 }
+			quadTextureSprite = "GFX_military_factory_icon"
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "ip_mil_bg"
+			position = { x = 39 y = 77 }
+			quadTextureSprite = "GFX_generic_text_bg_60"
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name ="ip_mil_txt"
+			position = { x= 45 y = 81 }
+			font = "hoi_18mbs"
+			text = "ip_mil_tt"
+			format = center
+			maxWidth = 46
+			maxHeight = 24
+			fixedsize = yes
+		}
+
+		iconType = {
+			name = "ip_doc_icon"
+			position = { x = 10 y = 111 }
+			quadTextureSprite = "GFX_dockyard_icon"
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "ip_doc_bg"
+			position = { x = 39 y = 106 }
+			quadTextureSprite = "GFX_generic_text_bg_60"
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name ="ip_doc_txt"
+			position = { x= 45 y = 110 }
+			font = "hoi_18mbs"
+			text = "ip_doc_tt"
+			format = center
+			maxWidth = 46
+			maxHeight = 24
+			fixedsize = yes
+		}
+
+		iconType = {
+			name = "ip_sol_icon"
+			position = { x = 12 y = 133 }
+			quadTextureSprite = "GFX_trait_infantry_officer"
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "ip_sol_bg"
+			position = { x = 39 y = 135 }
+			quadTextureSprite = "GFX_generic_text_bg_60"
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name ="ip_sol_txt"
+			position = { x= 45 y = 139 }
+			font = "hoi_18mbs"
+			text = "ip_sol_tt"
+			format = center
+			maxWidth = 46
+			maxHeight = 24
+			fixedsize = yes
+		}
+
+		iconType = {
+			name = "ip_pla_icon"
+			position = { x = 7 y = 162 }
+			quadTextureSprite = "GFX_ability_glider_planes"
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "ip_pla_bg"
+			position = { x = 39 y = 164 }
+			quadTextureSprite = "GFX_generic_text_bg_60"
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name ="ip_pla_txt"
+			position = { x= 45 y = 168 }
+			font = "hoi_18mbs"
+			text = "ip_pla_tt"
+			format = center
+			maxWidth = 46
+			maxHeight = 24
+			fixedsize = yes
+		}
+
+		iconType = {
+			name = "ip_nav_icon"
+			position = { x = 14 y = 195 }
+			quadTextureSprite = "GFX_navy_anchor"
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "ip_nav_bg"
+			position = { x = 39 y = 193 }
+			quadTextureSprite = "GFX_generic_text_bg_60"
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name ="ip_nav_txt"
+			position = { x= 45 y = 197 }
+			font = "hoi_18mbs"
+			text = "ip_nav_tt"
+			format = center
+			maxWidth = 46
+			maxHeight = 24
+			fixedsize = yes
+		}
+	}
+}
+
+default_clicksound = "click_default"
+#default_oversound = "ui_menu_over"
+default_downsound = "ui_menu_click"
+default_upsound = "ui_menu_leave"

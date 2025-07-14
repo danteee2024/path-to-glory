@@ -1,6 +1,15 @@
 on_actions = {
 	on_startup = {
+		
 		effect = {
+
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				set_country_flag = info_open_flag
+				set_country_flag = info_page1_flag
+			}
 			# Add Canals
 			IF = {
 				limit = {
