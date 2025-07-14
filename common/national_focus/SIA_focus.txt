@@ -27,10 +27,10 @@ focus_tree = {
 
 focus = {
 		id = SIA_legacy_of_bloodless_coup
-		icon = GFX_focus_JAP_break_military_influence
+		icon = GFX_focus_RAJ_red_in_the_shadows
 		x = 10
 		y = 0
-		cost = 7.2
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -54,12 +54,12 @@ focus = {
 
 		focus = {
 			id = SIA_follow_khana_ratsadon
-			icon = GFX_focus_JAP_break_military_influence
+			icon = GFX_focus_generic_industrialists
 			x = -5
 			y = 1
 			prerequisite = { focus = SIA_legacy_of_bloodless_coup }
 			mutually_exclusive = { focus = SIA_reassert_divine_rule }
-			cost = 7.2
+			cost = 5
 
 			ai_will_do = {
 				factor = 10
@@ -86,12 +86,12 @@ focus = {
 
 			focus = {
 				id = SIA_strengthen_civilian_wing_influence
-				icon = GFX_focus_JAP_break_military_influence
+				icon = GFX_focus_SWE_refuge_from_war
 				x = -3
 				y = 1
 				prerequisite = { focus = SIA_follow_khana_ratsadon }
 				mutually_exclusive = { focus = SIA_the_military_prevails }
-				cost = 7.2
+				cost = 5
 
 				ai_will_do = {
 					factor = 10
@@ -118,11 +118,11 @@ focus = {
 
 				focus = {
 					id = SIA_political_awareness
-					icon = GFX_focus_JAP_break_military_influence
+					icon = GFX_focus_generic_democratic_europe
 					x = -1
 					y = 1
 					prerequisite = { focus = SIA_strengthen_civilian_wing_influence }
-					cost = 7.2
+					cost = 5
 
 					ai_will_do = {
 						factor = 10
@@ -149,11 +149,11 @@ focus = {
 
 					focus = {
 						id = SIA_attack_corrupt_politicians
-						icon = GFX_focus_JAP_break_military_influence
+						icon = GFX_focus_RAJ_a_policy_of_silence
 						x = 1
 						y = 1
 						prerequisite = { focus = SIA_strengthen_civilian_wing_influence }
-						cost = 7.2
+						cost = 5
 
 						ai_will_do = {
 							factor = 10
@@ -180,12 +180,12 @@ focus = {
 
 						focus = {
 							id = SIA_stigmatize_the_military
-							icon = GFX_focus_JAP_break_military_influence
+							icon = GFX_focus_IRQ_attempted_assasination_of_sidqi
 							x = 0
 							y = 2
 							prerequisite = { focus = SIA_attack_corrupt_politicians }
 							prerequisite = { focus = SIA_political_awareness }
-							cost = 7.2
+							cost = 5
 
 							ai_will_do = {
 								factor = 10
@@ -212,11 +212,11 @@ focus = {
 
 							focus = {
 								id = SIA_advocate_for_reform_and_democracy
-								icon = GFX_focus_JAP_break_military_influence
+								icon = GFX_focus_NOR_restore_public_trust_in_the_storting
 								x = 1
 								y = 3
 								prerequisite = { focus = SIA_stigmatize_the_military }
-								cost = 7.2
+								cost = 5
 
 								ai_will_do = {
 									factor = 10
@@ -243,11 +243,11 @@ focus = {
 
 								focus = {
 									id = SIA_promises_of_freedom
-									icon = GFX_focus_JAP_break_military_influence
+									icon = GFX_focus_generic_democratic_europe
 									x = -1
 									y = 3
 									prerequisite = { focus = SIA_stigmatize_the_military }
-									cost = 7.2
+									cost = 5
 
 									ai_will_do = {
 										factor = 10
@@ -274,12 +274,12 @@ focus = {
 
 									focus = {
 										id = SIA_challenge_the_military
-										icon = GFX_focus_JAP_break_military_influence
+										icon = GFX_focus_RAJ_a_private_military
 										x = -1
 										y = 4
 										prerequisite = { focus = SIA_promises_of_freedom }
 										prerequisite = { focus = SIA_advocate_for_reform_and_democracy }
-										cost = 7.2
+										cost = 5
 
 										ai_will_do = {
 											factor = 10
@@ -306,12 +306,12 @@ focus = {
 
 										focus = {
 											id = SIA_alliance_with_sonsuradet
-											icon = GFX_focus_JAP_break_military_influence
+											icon = GFX_goal_generic_dangerous_deal
 											x = 2
 											y = 4
 											prerequisite = { focus = SIA_advocate_for_reform_and_democracy }
 											prerequisite = { focus = SIA_resignation_of_Prince_Aditya_Dibabha }
-											cost = 7.2
+											cost = 5
 
 											ai_will_do = {
 												factor = 10
@@ -338,12 +338,12 @@ focus = {
 
 											focus = {
 												id = SIA_democracy_prevails
-												icon = GFX_focus_JAP_break_military_influence
+												icon = GFX_focus_ARG_defense_and_democracy
 												x = 0
 												y = 5
 												prerequisite = { focus = SIA_challenge_the_military }
 												mutually_exclusive = { focus = SIA_implement_socialist_values }
-												cost = 7.2
+												cost = 5
 
 												ai_will_do = {
 													factor = 10
@@ -370,12 +370,12 @@ focus = {
 
 												focus = {
 													id = SIA_implement_socialist_values
-													icon = GFX_focus_JAP_break_military_influence
+													icon = GFX_focus_generic_join_comintern
 													x = -2
 													y = 5
 													prerequisite = { focus = SIA_challenge_the_military }
 													mutually_exclusive = { focus = SIA_democracy_prevails }
-													cost = 7.2
+													cost = 5
 
 													ai_will_do = {
 														factor = 10
@@ -406,7 +406,7 @@ focus = {
 		x = 0
 		y = 1
 		prerequisite = { focus = SIA_implement_socialist_values }
-		cost = 7.2
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -448,7 +448,7 @@ focus = {
 		x = 0
 		y = 1
 		prerequisite = { focus = SIA_democracy_prevails }
-		cost = 7.2
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -483,7 +483,7 @@ focus = {
 		x = -1
 		y = 1
 		prerequisite = { focus = SIA_begin_collectivization }
-		cost = 7.2
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -514,7 +514,7 @@ focus = {
 		x = 1
 		y = 1
 		prerequisite = { focus = SIA_begin_collectivization focus = SIA_import_machinery }
-		cost = 7.2
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -577,7 +577,7 @@ focus = {
 		x = 1
 		y = 1
 		prerequisite = { focus = SIA_import_machinery }
-		cost = 7.2
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -608,7 +608,7 @@ focus = {
 		x = 0
 		y = 2
 		prerequisite = { focus = SIA_american_support }
-		cost = 7.2
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -659,7 +659,7 @@ focus = {
 		x = 1
 		y = 1
 		prerequisite = { focus = SIA_american_support }
-		cost = 7.2
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -691,7 +691,7 @@ focus = {
 		y = 2
 		prerequisite = { focus = SIA_begin_collectivization }
 		prerequisite = { focus = SIA_state_enterprises }
-		cost = 7.2
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -732,7 +732,7 @@ focus = {
 		x = 1
 		y = 1
 		prerequisite = { focus = SIA_five_year_plan }
-		cost = 7.2
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -785,7 +785,7 @@ focus = {
 		x = -1
 		y = 1
 		prerequisite = { focus = SIA_five_year_plan }
-		cost = 7.2
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -820,7 +820,7 @@ focus = {
 		y = 2
 		prerequisite = { focus = SIA_import_machinery }
 		prerequisite = { focus = SIA_state_enterprises }
-		cost = 7.2
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -847,12 +847,12 @@ focus = {
 
 				focus = {
 					id = SIA_the_military_prevails
-					icon = GFX_focus_JAP_break_military_influence
+					icon = GFX_focus_ETH_ecole_militaire_haile_selassie_1er
 					x = 3
 					y = 1
 					prerequisite = { focus = SIA_follow_khana_ratsadon }
 					mutually_exclusive = { focus = SIA_strengthen_civilian_wing_influence }
-					cost = 7.2
+					cost = 5
 
 					ai_will_do = {
 						factor = 10
@@ -879,11 +879,11 @@ focus = {
 
 						focus = {
 							id = SIA_reduce_government_spending_on_monarchy
-							icon = GFX_focus_JAP_break_military_influence
+							icon = GFX_focus_generic_welfare
 							x = 4
 							y = 2
 							prerequisite = { focus = SIA_the_military_prevails }
-							cost = 7.2
+							cost = 5
 
 							ai_will_do = {
 								factor = 10
@@ -910,11 +910,11 @@ focus = {
 
 							focus = {
 								id = SIA_lower_status_of_royal_ministry
-								icon = GFX_focus_JAP_break_military_influence
+								icon = GFX_focus_RAJ_union_busting
 								x = 2
 								y = 2
 								prerequisite = { focus = SIA_the_military_prevails }
-								cost = 7.2
+								cost = 5
 
 								ai_will_do = {
 									factor = 10
@@ -941,12 +941,12 @@ focus = {
 
 								focus = {
 									id = SIA_bribes_and_favoritism
-									icon = GFX_focus_JAP_break_military_influence
+									icon = GFX_focus_RAJ_trickle_down_economics
 									x = 3
 									y = 3
 									prerequisite = { focus = SIA_lower_status_of_royal_ministry }
 									prerequisite = { focus = SIA_reduce_government_spending_on_monarchy }
-									cost = 7.2
+									cost = 5
 
 									ai_will_do = {
 										factor = 10
@@ -973,11 +973,11 @@ focus = {
 
 									focus = {
 										id = SIA_the_issue_of_political_parties
-										icon = GFX_focus_JAP_break_military_influence
+										icon = GFX_focus_generic_whispers
 										x = 0
 										y = 2
 										prerequisite = { focus = SIA_strengthen_civilian_wing_influence focus = SIA_the_military_prevails }
-										cost = 7.2
+										cost = 5
 
 										ai_will_do = {
 											factor = 10
@@ -1004,11 +1004,11 @@ focus = {
 
 											focus = {
 												id = SIA_resignation_of_Prince_Aditya_Dibabha
-												icon = GFX_focus_JAP_break_military_influence
+												icon = GFX_focus_CZE_german_puppet
 												x = 0
 												y = 3
 												prerequisite = { focus = SIA_the_issue_of_political_parties }
-												cost = 7.2
+												cost = 5
 
 												ai_will_do = {
 													factor = 10
@@ -1035,12 +1035,12 @@ focus = {
 
 												focus = {
 													id = SIA_ascension_of_phibun
-													icon = GFX_focus_JAP_break_military_influence
+													icon = GFX_focus_RAJ_military_into_the_workforce 
 													x = 2
 													y = 4
 													prerequisite = { focus = SIA_resignation_of_Prince_Aditya_Dibabha }
 													prerequisite = { focus = SIA_bribes_and_favoritism }
-													cost = 7.2
+													cost = 5
 
 													ai_will_do = {
 														factor = 10
@@ -1068,11 +1068,11 @@ focus = {
 
 													focus = {
 														id = SIA_begin_the_cultural_revolution
-														icon = GFX_focus_JAP_break_military_influence
+														icon = GFX_goal_generic_attack_allies
 														x = 3
 														y = 5
 														prerequisite = { focus = SIA_ascension_of_phibun }
-														cost = 7.2
+														cost = 5
 
 														ai_will_do = {
 															factor = 10
@@ -1099,11 +1099,11 @@ focus = {
 
 														focus = {
 															id = SIA_import_italian_propaganda_movies
-															icon = GFX_focus_JAP_break_military_influence
+															icon = GFX_focus_ITA_italian_irredentism
 															x = 4
 															y = 6
 															prerequisite = { focus = SIA_begin_the_cultural_revolution }
-															cost = 7.2
+															cost = 5
 
 															ai_will_do = {
 																factor = 10
@@ -1130,11 +1130,11 @@ focus = {
 
 															focus = {
 																id = SIA_implement_the_cultural_mandates
-																icon = GFX_focus_JAP_break_military_influence
+																icon = GFX_focus_hol_the_foundations_of_defense
 																x = 3
 																y = 7
 																prerequisite = { focus = SIA_implement_thai_nationalism focus = SIA_import_italian_propaganda_movies }
-																cost = 7.2
+																cost = 5
 
 																ai_will_do = {
 																	factor = 10
@@ -1161,11 +1161,11 @@ focus = {
 
 																focus = {
 																	id = SIA_establish_cult_of_personality
-																	icon = GFX_focus_JAP_break_military_influence
+																	icon = GFX_focus_generic_court
 																	x = 3
 																	y = 8
 																	prerequisite = { focus = SIA_implement_the_cultural_mandates }
-																	cost = 7.2
+																	cost = 5
 
 																	ai_will_do = {
 																		factor = 10
@@ -1193,11 +1193,11 @@ focus = {
 
 																		focus = {
 																			id = SIA_Rebellion_of_18_corpses
-																			icon = GFX_focus_JAP_break_military_influence
+																			icon = GFX_focus_SWE_neither_death_nor_dishonor
 																			x = 0
 																			y = 6
 																			prerequisite = { focus = SIA_existance_through_sheer_will }
-																			cost = 7.2
+																			cost = 5
 
 																			ai_will_do = {
 																				factor = 10
@@ -1224,11 +1224,11 @@ focus = {
 
 														focus = {
 															id = SIA_existance_through_sheer_will
-															icon = GFX_focus_JAP_break_military_influence
+															icon = GFX_focus_SIA_departemento_de_las_tropas_nacistas_de_asalto
 															x = 1
 															y = 5
 															prerequisite = { focus = SIA_ascension_of_phibun }
-															cost = 7.2
+															cost = 5
 
 															ai_will_do = {
 																factor = 10
@@ -1255,11 +1255,11 @@ focus = {
 
 															focus = {
 																id = SIA_against_the_policy_of_national_humiliation
-																icon = GFX_focus_JAP_break_military_influence
+																icon = GFX_focus_eng_concessions_to_the_trade_unions
 																x = 1
 																y = 7
 																prerequisite = { focus = SIA_existance_through_sheer_will }
-																cost = 7.2
+																cost = 5
 
 																ai_will_do = {
 																	factor = 10
@@ -1286,11 +1286,11 @@ focus = {
 
 																focus = {
 																	id = SIA_prepare_for_the_inevitable
-																	icon = GFX_focus_JAP_break_military_influence
+																	icon = GFX_focus_secret_rearmament
 																	x = 1
 																	y = 8
 																	prerequisite = { focus = SIA_against_the_policy_of_national_humiliation }
-																	cost = 7.2
+																	cost = 5
 
 																	ai_will_do = {
 																		factor = 10
@@ -1317,12 +1317,12 @@ focus = {
 
 																focus = {
 																	id = SIA_reclaim_what_deemed_lost
-																	icon = GFX_focus_JAP_break_military_influence
+																	icon = GFX_goal_generic_political_pressure
 																	x = 2
 																	y = 9
 																	prerequisite = { focus = SIA_establish_cult_of_personality }
 																	prerequisite = { focus = SIA_prepare_for_the_inevitable }
-																	cost = 7.2
+																	cost = 5
 
 																	ai_will_do = {
 																		factor = 10
@@ -1349,11 +1349,11 @@ focus = {
 
 															focus = {
 																id = SIA_implement_thai_nationalism
-																icon = GFX_focus_JAP_break_military_influence
+																icon = GFX_focus_hol_the_foundations_of_defense
 																x = 2
 																y = 6
 																prerequisite = { focus = SIA_begin_the_cultural_revolution }
-																cost = 7.2
+																cost = 5
 
 																ai_will_do = {
 																	factor = 10
@@ -1398,12 +1398,12 @@ focus = {
 
 			focus = {
 				id = SIA_reassert_divine_rule
-				icon = GFX_focus_JAP_break_military_influence
+				icon = GFX_focus_RAJ_kingmaker
 				x = 5
 				y = 1
 				prerequisite = { focus = SIA_legacy_of_bloodless_coup }
 				mutually_exclusive = { focus = SIA_follow_khana_ratsadon }
-				cost = 7.2
+				cost = 5
 
 				ai_will_do = {
 					factor = 10
@@ -1432,11 +1432,11 @@ focus = {
 
 				focus = {
 					id = SIA_a_meeting_with_death
-					icon = GFX_focus_JAP_break_military_influence
+					icon = GFX_focus_IRQ_attempted_assasination_of_sidqi
 					x = 0
 					y = 1
 					prerequisite = { focus = SIA_reassert_divine_rule }
-					cost = 7.2
+					cost = 5
 
 					ai_will_do = {
 						factor = 10
@@ -1466,11 +1466,11 @@ focus = {
 
 					focus = {
 						id = SIA_every_dream
-						icon = GFX_focus_JAP_break_military_influence
+						icon = GFX_focus_usa_guarantee_the_american_dream
 						x = -1
 						y = 1
 						prerequisite = { focus = SIA_a_meeting_with_death }
-						cost = 7.2
+						cost = 5
 
 						ai_will_do = {
 							factor = 10
@@ -1497,11 +1497,11 @@ focus = {
 
 						focus = {
 							id = SIA_must_come_to_an_end
-							icon = GFX_focus_JAP_break_military_influence
+							icon = GFX_focus_eng_move_to_secure_the_dominions
 							x = -1
 							y = 2
 							prerequisite = { focus = SIA_every_dream }
-							cost = 7.2
+							cost = 5
 
 							ai_will_do = {
 								factor = 10
@@ -1528,11 +1528,11 @@ focus = {
 
 							focus = {
 								id = SIA_chaos_in_bangkok
-								icon = GFX_focus_JAP_break_military_influence
+								icon = GFX_focus_SWE_organize_a_putsch
 								x = 1
 								y = 1
 								prerequisite = { focus = SIA_a_meeting_with_death }
-								cost = 7.2
+								cost = 5
 
 								ai_will_do = {
 									factor = 10
@@ -1559,11 +1559,11 @@ focus = {
 
 								focus = {
 									id = SIA_turmoil_in_the_military
-									icon = GFX_focus_JAP_break_military_influence
+									icon = GFX_focus_POL_beck_ribbentrop
 									x = 1
 									y = 2
 									prerequisite = { focus = SIA_chaos_in_bangkok }
-									cost = 7.2
+									cost = 5
 
 									ai_will_do = {
 										factor = 10
@@ -1590,12 +1590,12 @@ focus = {
 
 									focus = {
 										id = SIA_issue_emergency_powers
-										icon = GFX_focus_JAP_break_military_influence
+										icon = GFX_goal_generic_forceful_treaty
 										x = 0
 										y = 3
 										prerequisite = { focus = SIA_turmoil_in_the_military }
 										prerequisite = { focus = SIA_must_come_to_an_end }
-										cost = 7.2
+										cost = 5
 
 										ai_will_do = {
 											factor = 10
@@ -1622,12 +1622,12 @@ focus = {
 
 										focus = {
 											id = SIA_the_regency_rules
-											icon = GFX_focus_JAP_break_military_influence
+											icon = GFX_focus_generic_monarchy_1
 											x = 2
 											y = 1
 											prerequisite = { focus = SIA_issue_emergency_powers }
 											mutually_exclusive = { focus = SIA_the_old_king_returns }
-											cost = 7.2
+											cost = 5
 
 											ai_will_do = {
 												factor = 10
@@ -1654,12 +1654,12 @@ focus = {
 
 											focus = {
 												id = SIA_the_old_king_returns
-												icon = GFX_focus_JAP_break_military_influence
+												icon = GFX_focus_rom_royal_dictatorship
 												x = -2
 												y = 1
 												prerequisite = { focus = SIA_issue_emergency_powers }
 												mutually_exclusive = { focus = SIA_the_regency_rules }
-												cost = 7.2
+												cost = 5
 
 												ai_will_do = {
 													factor = 10
@@ -1687,11 +1687,11 @@ focus = {
 
 												focus = {
 													id = SIA_adress_political_dissent
-													icon = GFX_focus_JAP_break_military_influence
+													icon = GFX_focus_generic_treaty
 													x = -1
 													y = 1
 													prerequisite = { focus = SIA_the_regency_rules }
-													cost = 7.2
+													cost = 5
 
 													ai_will_do = {
 														factor = 10
@@ -1718,11 +1718,11 @@ focus = {
 
 													focus = {
 														id = SIA_political_overtures
-														icon = GFX_focus_JAP_break_military_influence
+														icon = GFX_focus_generic_national_security
 														x = -1
 														y = 2
 														prerequisite = { focus = SIA_adress_political_dissent }
-														cost = 7.2
+														cost = 5
 
 														ai_will_do = {
 															factor = 10
@@ -1749,11 +1749,11 @@ focus = {
 
 														focus = {
 															id = SIA_autocratic_measures
-															icon = GFX_focus_JAP_break_military_influence
+															icon = GFX_focus_generic_home_defense
 															x = 1
 															y = 1
 															prerequisite = { focus = SIA_the_regency_rules }
-															cost = 7.2
+															cost = 5
 
 															ai_will_do = {
 																factor = 10
@@ -1780,11 +1780,11 @@ focus = {
 
 															focus = {
 																id = SIA_concessions_to_the_political_elite
-																icon = GFX_focus_JAP_break_military_influence
+																icon = GFX_focus_generic_university_2
 																x = 1
 																y = 2
 																prerequisite = { focus = SIA_autocratic_measures }
-																cost = 7.2
+																cost = 5
 
 																ai_will_do = {
 																	factor = 10
@@ -1812,13 +1812,13 @@ focus = {
 
 																focus = {
 																	id = SIA_rule_from_the_shadows
-																	icon = GFX_focus_JAP_break_military_influence
+																	icon = GFX_focus_AUS_disregard_the_treaties
 																	x = -2
 																	y = 3
 																	prerequisite = { focus = SIA_political_overtures }
 																	prerequisite = { focus = SIA_concessions_to_the_political_elite }
 																	mutually_exclusive = { focus = SIA_suspend_the_regency }
-																	cost = 7.2
+																	cost = 5
 
 																	ai_will_do = {
 																		factor = 10
@@ -1845,13 +1845,13 @@ focus = {
 
 																	focus = {
 																		id = SIA_suspend_the_regency
-																		icon = GFX_focus_JAP_break_military_influence
+																		icon = GFX_focus_generic_surrender
 																		x = 2
 																		y = 3
 																		prerequisite = { focus = SIA_political_overtures }
 																		prerequisite = { focus = SIA_concessions_to_the_political_elite }
 																		mutually_exclusive = { focus = SIA_rule_from_the_shadows }
-																		cost = 7.2
+																		cost = 5
 
 																		ai_will_do = {
 																			factor = 10
@@ -1879,12 +1879,12 @@ focus = {
 
 																		focus = {
 																			id = SIA_promote_secular_thought
-																			icon = GFX_focus_JAP_break_military_influence
+																			icon = GFX_focus_ARG_develop_the_electricity_sector
 																			x = 1
 																			y = 1
 																			prerequisite = { focus = SIA_the_old_king_returns }
 																			mutually_exclusive = { focus = SIA_alliance_with_the_divine }
-																			cost = 7.2
+																			cost = 5
 
 																			ai_will_do = {
 																				factor = 10
@@ -1911,11 +1911,11 @@ focus = {
 
 																			focus = {
 																				id = SIA_allow_political_parties
-																				icon = GFX_focus_JAP_break_military_influence
+																				icon = GFX_focus_RAJ_seek_allies_with_the_muslim_league
 																				x = 1
 																				y = 2
 																				prerequisite = { focus = SIA_promote_secular_thought }
-																				cost = 7.2
+																				cost = 5
 
 																				ai_will_do = {
 																					factor = 10
@@ -1942,12 +1942,12 @@ focus = {
 
 																				focus = {
 																					id = SIA_alliance_with_the_divine
-																					icon = GFX_focus_JAP_break_military_influence
+																					icon = GFX_focus_smiling_buddha
 																					x = -1
 																					y = 1
 																					prerequisite = { focus = SIA_the_old_king_returns }
 																					mutually_exclusive = { focus = SIA_promote_secular_thought }
-																					cost = 7.2
+																					cost = 5
 
 																					ai_will_do = {
 																						factor = 10
@@ -1974,11 +1974,11 @@ focus = {
 
 																					focus = {
 																						id = SIA_benevolent_monarchy
-																						icon = GFX_focus_JAP_break_military_influence
+																						icon = GFX_focus_BEL_v_for_victory
 																						x = -1
 																						y = 2
 																						prerequisite = { focus = SIA_alliance_with_the_divine }
-																						cost = 7.2
+																						cost = 5
 
 																						ai_will_do = {
 																							factor = 10
@@ -2005,11 +2005,11 @@ focus = {
 
 																						focus = {
 																							id = SIA_royal_powers_act
-																							icon = GFX_focus_JAP_break_military_influence
+																							icon = GFX_focus_hun_elect_a_king
 																							x = 0
 																							y = 3
 																							prerequisite = { focus = SIA_benevolent_monarchy focus = SIA_allow_political_parties }
-																							cost = 7.2
+																							cost = 5
 
 																							ai_will_do = {
 																								factor = 10
@@ -2036,11 +2036,11 @@ focus = {
 
 																							focus = {
 																								id = SIA_cultural_rebirth
-																								icon = GFX_focus_JAP_break_military_influence
+																								icon = GFX_goal_generic_propaganda
 																								x = 0
 																								y = 4
 																								prerequisite = { focus = SIA_royal_powers_act }
-																								cost = 7.2
+																								cost = 5
 
 																								ai_will_do = {
 																									factor = 10
@@ -2068,11 +2068,11 @@ focus = {
 
 																								focus = {
 																									id = SIA_sangha_act
-																									icon = GFX_focus_JAP_break_military_influence
+																									icon = GFX_focus_AUS_lawmaking_leniency
 																									x = -3
 																									y = 2
 																									prerequisite = { focus = SIA_alliance_with_the_divine }
-																									cost = 7.2
+																									cost = 5
 
 																									ai_will_do = {
 																										factor = 10
@@ -2099,11 +2099,11 @@ focus = {
 
 																									focus = {
 																										id = SIA_fund_temple_expenses
-																										icon = GFX_focus_JAP_break_military_influence
+																										icon = GFX_focus_RAJ_temple_entry_movements
 																										x = -3
 																										y = 3
 																										prerequisite = { focus = SIA_sangha_act }
-																										cost = 7.2
+																										cost = 5
 
 																										ai_will_do = {
 																											factor = 10
@@ -2130,11 +2130,11 @@ focus = {
 
 																										focus = {
 																											id = SIA_develop_state_buddhism
-																											icon = GFX_focus_JAP_break_military_influence
+																											icon = GFX_focus_BEL_la_dame_blanche
 																											x = -3
 																											y = 4
 																											prerequisite = { focus = SIA_fund_temple_expenses }
-																											cost = 7.2
+																											cost = 5
 
 																											ai_will_do = {
 																												factor = 10
@@ -2162,12 +2162,12 @@ focus = {
 
 																											focus = {
 																												id = SIA_side_with_the_Thammayut
-																												icon = GFX_focus_JAP_break_military_influence
+																												icon = GFX_focus_generic_conspiracy
 																												x = 2
 																												y = 1
 																												prerequisite = { focus = SIA_develop_state_buddhism }
-																												mutually_exclusive = { focus = SIA_side_with_the_Mahānikai }
-																												cost = 7.2
+																												mutually_exclusive = { focus = SIA_side_with_the_Mahanikai }
+																												cost = 5
 
 																												ai_will_do = {
 																													factor = 10
@@ -2195,12 +2195,12 @@ focus = {
 
 																												focus = {
 																													id = SIA_side_with_the_Mahanikai
-																													icon = GFX_focus_JAP_break_military_influence
+																													icon = GFX_focus_generic_support_the_left_right
 																													x = -2
 																													y = 1
 																													prerequisite = { focus = SIA_develop_state_buddhism }
 																													mutually_exclusive = { focus = SIA_side_with_the_Thammayut }
-																													cost = 7.2
+																													cost = 5
 
 																													ai_will_do = {
 																														factor = 10
@@ -2224,5 +2224,1752 @@ focus = {
 																														add_political_power = 100
 																														}
 																													}
+### PUBLIC WORKS
+	focus = {
+		id = SIA_public_works
 
+		icon = GFX_focus_generic_public_works
+
+		x = 34
+		y = 0
+		cost = 10
+
+		mutually_exclusive = {
+			focus = SIA_dissolve_covensa
+		} 
+		
+		ai_will_do = {
+			base = 2
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+
+	
+
+		available = {
+			any_core_state = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+		
+		completion_reward = {
+
+			custom_effect_tooltip = SIA_modify_chilean_economy_ns_intro
+			add_to_variable = { SIA_economy_production_speed_buildings_factor = 0.1 tooltip = production_speed_buildings_factor_tt }
+			add_to_variable = { SIA_economy_industrial_capacity_factory = 0.05 tooltip = industrial_capacity_factory_tt }
+
+			custom_effect_tooltip = SIA_skip_one_line_tt 
+
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				prioritize = { 506 279 507 950 952 951 949 } 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_core_state = { 
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				prioritize = { 506 279 507 950 952 951 949 } 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			custom_effect_tooltip = SIA_skip_one_line_tt
+
+			every_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					is_fully_controlled_by = ROOT
+				}
+				add_dynamic_modifier = {
+					modifier = SIA_public_works_modifier
+					scope = SIA
+					days = 365
+				}
+			}	
+
+		}
+	} 
+
+	### DISSOLVE COVENSA
+	focus = {
+		id = SIA_dissolve_covensa
+
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+
+
+		x = 22
+		y = 0
+		cost = 10
+
+		mutually_exclusive = {
+			focus = SIA_public_works
+		} 
+		
+		ai_will_do = {
+			base = 2
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+
+		available = { 
+			any_core_state = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+	
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = { 
+
+			custom_effect_tooltip = SIA_modify_chilean_economy_ns_intro
+			add_to_variable = { SIA_economy_local_resources_factor = 0.15 tooltip = local_resources_factor_tt }
+			add_to_variable = { SIA_economy_industrial_capacity_dockyard = 0.1 tooltip = industrial_capacity_dockyard_tt }
+
+			custom_effect_tooltip = SIA_skip_one_line_tt 
+
+			custom_effect_tooltip = SIA_expand_mining_prospection_tt
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					has_resources_amount = {
+						resource = steel 
+						amount > 0
+					}
+				}
+				add_resource = {
+					show_state_in_tooltip = no
+					type = steel
+					amount = 4
+				}
+			}  
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					has_resources_amount = {
+						resource = tungsten 
+						amount > 0
+					}
+				}
+				add_resource = {
+					show_state_in_tooltip = no
+					type = tungsten
+					amount = 4
+				}
+			}
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					has_resources_amount = {
+						resource = chromium 
+						amount > 0
+					}
+				}
+				add_resource = {
+					show_state_in_tooltip = no
+					type = chromium
+					amount = 4
+				}
+			}
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					has_resources_amount = {
+						resource = aluminium 
+						amount > 0
+					}
+				}
+				add_resource = {
+					show_state_in_tooltip = no
+					type = aluminium
+					amount = 4
+				}
+			}
+
+		}  
+	} 
+
+	### CONSTRUCT NEW HYDROELECTRIC STATIONS
+	focus = {
+		id = SIA_construct_new_hydroelectric_stations
+
+		icon = GFX_focus_generic_hydroelectric_energy
+
+		relative_position_id = SIA_dissolve_covensa
+		x = 5
+		y = 1
+		cost = 10
+
+		#offset = {
+		#	x = -6
+		#	y = 0
+		#	trigger = {
+		#		has_game_rule = {
+		#			rule = obsolete_focus_branches_visibility
+		#			option = HIDE
+		#		}
+		#		has_completed_focus = SIA_look_to_tradition
+		#	}
+		#}
+
+		prerequisite = {
+			#focus = SIA_endorse_the_constitution  
+			#focus = SIA_look_to_tradition
+			focus = SIA_dissolve_covensa
+			focus = SIA_public_works
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				has_completed_focus = SIA_look_to_tradition
+			}
+		}
+
+		available = {
+			NOT = {
+				OR = {
+					has_country_flag = SIA_protecting_mapuche_lands
+					has_completed_focus = SIA_avenge_the_pacification_of_araucania
+				}
+			}
+			950 = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {
+
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				prioritize = { 950 } 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			add_ideas = SIA_hydroelectric_power
+
+			IF = {
+				limit = {
+					has_mapuche_conflict = yes
+				}
+				SIA_mapuche_conflict_level_up = yes
+			}
+
+		}
+	}
+
+	### IMPOSE NEW TAXES
+	focus = {
+		id = SIA_impose_new_taxes
+
+		icon = GFX_focus_mex_privatisation
+
+		relative_position_id = SIA_public_works
+		x = -3
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			#focus = SIA_endorse_the_constitution   
+			#focus = SIA_denounce_the_anarchy  
+			focus = SIA_dissolve_covensa
+			focus = SIA_public_works
+		}
+
+		offset = {
+			x = 0
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = SIA_denounce_the_anarchy
+			}
+		}
+	
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 1.5
+				has_government = fascism
+			}
+		}
+	 
+		available = {
+			OR = {
+				has_completed_focus = SIA_endorse_the_constitution
+				has_government = fascism 
+				has_completed_focus = SIA_crown_antoine_as_sovereign_king
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {
+	
+			add_timed_idea = {
+				idea = SIA_imposed_new_taxes
+				days = 360
+			}	
+
+			custom_effect_tooltip = SIA_skip_one_line_tt
+
+			custom_effect_tooltip = SIA_impose_new_taxes_tt
+
+		}
+	} 
+
+	### ISSUE BONDS
+	focus = {
+		id = SIA_issue_bonds
+
+		icon = GFX_focus_SWI_issue_war_bonds
+
+		relative_position_id = SIA_public_works
+		x = -5
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = SIA_public_works  
+			focus = SIA_dissolve_covensa  
+		}
+
+		mutually_exclusive = { 
+		}  
+		 
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = SIA_has_idea_near_anarchy
+					OR = {
+						has_idea = idea_SIA_near_anarchic_society
+						has_idea = idea_SIA_near_anarchic_society_2
+						has_idea = idea_SIA_near_anarchic_society_3
+						has_idea = idea_SIA_near_anarchic_society_4
+					}
+				}	
+				has_war = yes
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+		
+		completion_reward = {
+
+			custom_effect_tooltip = SIA_modify_chilean_economy_ns_intro
+			add_to_variable = { SIA_economy_consumer_goods_factor = -0.1 tooltip = consumer_goods_factor_tt }
+			add_to_variable = { SIA_economy_stability_factor = 0.05 tooltip = stability_factor_tt }
+
+		}
+	} 
+
+	### CONTRACT EMPRESA DE LOS FERROCARRILLES DEL ESTADO
+	focus = {
+		id = SIA_contract_efe
+ 
+		icon = GFX_focus_SIA_contract_efe
+
+		relative_position_id = SIA_public_works
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = SIA_public_works  
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+		
+		completion_reward = {
+
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				prioritize = { 506 279 507 950 952 951 949 } 
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			custom_effect_tooltip = SIA_skip_one_line_tt
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = SIA_empresa_ferrocarries_del_estado
+
+		}
+	} 
+
+	### BEGIN WORK ON THE PAN-AMERICAN HIGHWAY
+	focus = {
+		id = SIA_work_on_the_pan_american_highway
+
+		icon = GFX_focus_SIA_work_on_the_panamerican_highway
+
+		relative_position_id = SIA_dissolve_covensa
+		x = 3
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			#focus = SIA_endorse_the_constitution  
+			#focus = SIA_denounce_the_anarchy 
+			focus = SIA_dissolve_covensa
+			focus = SIA_public_works
+		}
+
+		#offset = {
+		#	x = -30 
+		#	y = 0
+		#	trigger = {
+		#		has_game_rule = {
+		#			rule = obsolete_focus_branches_visibility
+		#			option = HIDE
+		#		}
+		#		has_completed_focus = SIA_denounce_the_anarchy
+		#	}
+		#}
+
+		mutually_exclusive = {
+		} 
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		available = {
+			OR = {
+				has_completed_focus = SIA_endorse_the_constitution
+				has_government = fascism
+				has_completed_focus = SIA_crown_antoine_as_sovereign_king
+			}
+		}
+		
+		completion_reward = {
+
+			add_timed_idea = {
+				idea = pan_american_highway_connections
+				days = 365
+			}	
+
+			custom_effect_tooltip = SIA_skip_one_line_tt
+
+			random_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					NOT = {
+						state = 948
+					}
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}	
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					NOT = {
+						state = 948
+					}
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}	
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			custom_effect_tooltip = SIA_skip_one_line_tt
+			
+			every_country = {
+				limit = {
+					exists = yes
+					NOT = {
+						has_war_with = ROOT
+					}
+					OR = {
+						original_tag = CAN
+						original_tag = USA
+						original_tag = MEX
+						original_tag = GUA
+						original_tag = HON
+						original_tag = ECU
+						original_tag = NIC
+						original_tag = COS
+						original_tag = PAN
+						original_tag = COL
+						original_tag = VEN
+						original_tag = ECU
+						original_tag = PRU
+						original_tag = BOL
+						original_tag = ARG
+						original_tag = BRA
+						original_tag = SIA
+					}
+					NOT = {
+						original_tag = ROOT
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = working_on_the_pan_american_highway
+				}	
+			}
+		}
+	} 
+
+	### EXPAND THE FORESTRY INDUSTRY
+	focus = {
+		id = SIA_expand_the_forestry
+
+		icon = GFX_focus_SIA_expand_the_forestry
+
+		relative_position_id = SIA_public_works
+		x = 1 
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = SIA_public_works   
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			AND = {
+				279 = {
+					is_owned_and_controlled_by = ROOT
+				}
+				950 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+		
+		completion_reward = {
+
+			custom_effect_tooltip = SIA_expand_the_forestry_decision_tt
+
+			custom_effect_tooltip = SIA_skip_one_line_tt
+
+			every_core_state = {   
+				limit = {
+					is_owned_and_controlled_by = ROOT 
+					NOT = {
+						state = 948
+					}
+				}
+				random_select_amount = 3
+				add_extra_state_shared_building_slots = 1
+			}
+			279 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			950 = {
+				add_extra_state_shared_building_slots = 3
+			}
+
+			custom_effect_tooltip = SIA_skip_one_line_tt
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = SIA_compania_manufacura_cartones
+
+		}
+	} 
+
+	### GOVERNMENT MANDATED CONTRACTS
+	focus = {
+		id = SIA_government_mandated_contracts
+
+		icon = GFX_focus_generic_treaty
+
+		relative_position_id = SIA_expand_the_forestry
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = SIA_expand_the_forestry  
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER }
+		
+		completion_reward = {
+
+			add_political_power = 50
+
+			custom_effect_tooltip = SIA_skip_one_line_tt
+			
+			custom_effect_tooltip = SIA_modify_chilean_economy_ns_intro
+			add_to_variable = { SIA_economy_political_advisor_cost_factor = -0.25 tooltip = political_advisor_cost_factor_tt }
+
+		}
+	} 
+
+	### WE MUST DIG DEEPER
+	focus = {
+		id = SIA_we_must_dig_deeper
+
+		icon = GFX_focus_generic_mining_industry
+
+		relative_position_id = SIA_dissolve_covensa 
+		x = 1
+		y = 1
+		cost = 5
+ 
+		prerequisite = {
+			focus = SIA_dissolve_covensa  
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {
+
+			every_core_state = {   
+				limit = {
+					is_owned_and_controlled_by = ROOT 
+					OR = {
+						has_resources_amount = {
+							resource = steel
+							amount > 1
+						}
+						has_resources_amount = {
+							resource = tungsten
+							amount  > 1
+						}
+						has_resources_amount = {
+							resource = chromium
+							amount > 1
+						}
+					}
+				}
+				random_select_amount = 2
+				add_dynamic_modifier = {
+					modifier = SIA_deeper_mines_modifier
+					scope = SIA
+				}
+				
+			} 
+
+			random_core_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+				}
+
+				add_resource = {
+					type = steel
+					amount = 2
+				}
+				
+				add_resource = {
+					type = tungsten
+					amount = 4
+				}
+
+			}
+
+		}
+	} 
+
+	### ESTABLISH BENEFICIAL TRADE RELATIONSHIPS
+	focus = {
+		id = SIA_establish_trade_relationships
+
+		icon = GFX_goal_generic_positive_trade_relations
+
+		relative_position_id = SIA_dissolve_covensa
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = SIA_dissolve_covensa  
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = { 
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+		
+		completion_reward = {
+
+			every_country = {
+				limit = {
+					capital_scope = {
+						is_on_continent = south_america
+					}
+				}
+				add_opinion_modifier = {
+					target = SIA
+					modifier = chilean_trade_deals_opinion_modifier
+				}
+			}
+
+			custom_effect_tooltip = SIA_modify_chilean_economy_ns_intro
+			add_to_variable = { SIA_economy_local_resources_factor = 0.05 tooltip = local_resources_factor_tt }
+			add_to_variable = { SIA_economy_min_export_factor = 0.15 tooltip = min_export_tt }
+
+		}
+	} 
+
+	### INTERNATIONAL LOANS
+	focus = {
+		id = SIA_international_loans
+
+		icon = GFX_focus_generic_concessions
+
+		relative_position_id = SIA_establish_trade_relationships
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = SIA_establish_trade_relationships  
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+		 
+		completion_reward = {
+
+			add_political_power = 100
+
+			custom_effect_tooltip = SIA_SIA_international_loans_tt
+
+		}
+	} 
+ 
+	### CONNECT THE NORHTERN RAILWAYS
+	focus = {
+		id = SIA_connect_the_northern_railways
+
+		icon = GFX_focus_SIA_connect_the_northern_railways
+
+		relative_position_id = SIA_contract_efe
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = SIA_contract_efe  
+			focus = SIA_we_must_dig_deeper  
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			AND = {
+				controls_state = 951
+				controls_state = 506
+				controls_state = 952
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+		
+		completion_reward = {
+
+			build_railway = {
+				level = 1
+			    build_only_on_allied = yes
+			    start_province = 5228
+			    target_province = 5131
+			}	
+
+			custom_effect_tooltip = SIA_skip_one_line_tt
+
+			506 = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}	
+			}
+
+			IF = {
+				limit = {
+					951 = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+				}
+				951 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+
+			IF = {
+				limit = {
+					controls_state = 947
+					947 = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+				}
+				947 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+
+		}
+	} 
+
+	### EXPAND SOUTHERN INRFASTRUCTURE
+	focus = {
+		id = SIA_expand_southern_infrastructure
+
+		icon = GFX_focus_SIA_expand_southern_infrastructure
+
+		relative_position_id = SIA_we_must_dig_deeper
+		x = 1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = SIA_contract_efe  
+			focus = SIA_we_must_dig_deeper  
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+		}
+ 
+		available = {
+			AND = {
+				controls_state = 507
+				controls_state = 949
+				controls_state = 950
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {
+
+			build_railway = {
+				level = 1
+			    build_only_on_allied = yes
+			    start_province = 5169
+			    target_province = 5215
+			}	
+
+			build_railway = {
+				level = 1
+			    build_only_on_allied = yes
+			    start_province = 5215
+			    target_province = 5201
+			}
+
+			custom_effect_tooltip = SIA_skip_one_line_tt
+
+			IF = {
+				limit = {
+					507 = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+				}
+				507 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+
+			IF = {
+				limit = {
+					949 = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+				}
+				949 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+
+			IF = {
+				limit = {
+					950 = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+				}
+				950 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+
+		}
+	} 
+
+	### DEVALUE THE PESO
+	focus = {
+		id = SIA_devalue_the_peso
+
+		dynamic = yes
+
+		icon = GFX_focus_SIA_devalue_the_peso_export
+
+		relative_position_id = SIA_contract_efe
+		x = -5
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = SIA_contract_efe  
+			focus = SIA_we_must_dig_deeper  
+		}
+
+		mutually_exclusive = { 
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {
+
+			add_stability = -0.05
+
+			IF = {
+				limit = {
+					NOT = {
+						has_completed_focus = SIA_introduce_the_franc
+					}
+				}
+				add_timed_idea = {
+					idea = SIA_devalue_the_peso_idea
+					days = 365
+				}
+			}
+			ELSE = {
+				add_timed_idea = {
+					idea = SIA_devalue_the_franc_idea
+					days = 365
+				}
+			}
+			
+
+		}
+	} 
+
+	focus = {
+		id = SIA_promote_immigration_to_chile
+		icon = GFX_focus_generic_promote_SA_immigration
+		prerequisite = { focus = SIA_devalue_the_peso  }
+		x = 2
+		y = 1
+		relative_position_id = SIA_devalue_the_peso
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			NOT = {
+				OR = {
+					has_idea = SIA_devalue_the_peso_idea
+					has_idea = SIA_devalue_the_franc_idea
+				}
+			}
+		}
+
+		search_filters = { }
+
+		completion_reward = {
+			set_country_flag = JUNO_promote_immigration_flag
+			custom_effect_tooltip = BRA_promote_immigration_to_brazil_tt
+		}
+	}
+
+	### ESTABLISH THE MINISTRY OF MINING
+	focus = {
+		id = SIA_establish_the_ministry_of_mining
+
+		icon = GFX_focus_generic_improve_the_administration
+
+		relative_position_id = SIA_devalue_the_peso
+		x = -2
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = SIA_devalue_the_peso
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {
+			NOT = {
+				OR = {
+					has_idea = SIA_devalue_the_peso_idea
+					has_idea = SIA_devalue_the_franc_idea
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+		
+		completion_reward = {
+
+			custom_effect_tooltip = SIA_modify_chilean_economy_ns_intro
+			add_to_variable = { SIA_economy_local_resources_factor = 0.1 tooltip = local_resources_factor_tt }
+			add_to_variable = { SIA_economy_consumer_goods_factor = -0.05 tooltip = consumer_goods_factor_tt }
+
+		}
+	}
+
+	### THE NATIONALIZATION OF COPPER
+	focus = {
+		id = SIA_the_nationalization_of_copper
+
+		icon = GFX_focus_generic_self_management
+
+		relative_position_id = SIA_establish_the_ministry_of_mining
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = SIA_establish_the_ministry_of_mining
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2
+		}
+
+		available = {
+			has_stability > 0.69
+			#has_war = no
+			OR = {
+				is_in_faction = no
+				is_faction_leader = yes
+			}
+		} 
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+		
+		completion_reward = {
+
+			every_country = {
+				limit = {
+					is_major = yes
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = medium_decrease
+				}	
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = minor_sanctions
+				}
+			}
+
+			custom_effect_tooltip = SIA_skip_one_line_tt
+
+			custom_effect_tooltip = SIA_modify_chilean_economy_ns_intro
+			add_to_variable = { SIA_economy_local_resources_factor = 0.1 tooltip = local_resources_factor_tt }
+			add_to_variable = { SIA_economy_consumer_goods_factor = -0.1 tooltip = consumer_goods_factor_tt }
+
+		}
+	}
+
+	### UTILIZE FAMAE
+	focus = {
+		id = SIA_utlilize_famae
+
+		icon = GFX_focus_SIA_utilize_famae
+
+		relative_position_id = SIA_devalue_the_peso
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = SIA_devalue_the_peso  
+		}
+
+		mutually_exclusive = { 
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+ 
+		available = {
+			NOT = {
+				OR = {
+					has_idea = SIA_devalue_the_peso_idea
+					has_idea = SIA_devalue_the_franc_idea
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {
+
+			mio:SIA_famae_organization = {
+				add_mio_size = 1
+			}
+
+			custom_effect_tooltip = SIA_modify_chilean_economy_ns_intro
+			add_to_variable = { SIA_economy_industrial_capacity_factory = 0.05 tooltip = industrial_capacity_factory_tt }
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			random_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}	
+			}
+
+		}
+	} 
+
+	### DOMESTIC PRODUCTION OF THE WILLYS MB
+	focus = {
+		id = SIA_domestic_production_of_the_willys_mb
+
+		icon = GFX_focus_SIA_domestic_production_of_the_willys_mb
+
+		relative_position_id = SIA_utlilize_famae
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = SIA_utlilize_famae  
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {
+
+			mio:SIA_willys_famae_corvo_organization = {
+				add_mio_size = 1
+			}
+
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.25
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			random_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}	
+			}
+
+		}
+	} 
+
+	### HIGH QUALITY NITRATE
+	focus = {
+		id = SIA_high_quality_nitrate
+
+		icon = GFX_focus_SIA_high_quality_nitrate
+
+		relative_position_id = SIA_devalue_the_peso
+		x = -4
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = SIA_devalue_the_peso  
+		}
+
+		mutually_exclusive = { 
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+
+		available = {
+			NOT = {
+				OR = {
+					has_idea = SIA_devalue_the_peso_idea
+					has_idea = SIA_devalue_the_franc_idea
+				}
+			}
+		}
+		
+		completion_reward = {
+
+			add_ideas = SIA_high_quality_nitrate
+
+		}
+	} 
+
+	### THEY SHALL NOT PASS
+	focus = {
+		id = SIA_they_shall_not_pass
+
+		icon = GFX_goal_fortify_the_westwall
+
+		relative_position_id = SIA_high_quality_nitrate
+		x = 0
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = SIA_high_quality_nitrate  
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+
+		available = {
+		}
+		
+		completion_reward = {
+
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province =  {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+
+		}
+	} 
+
+	### STRENGHTEN THE CENTRAL BANK
+	focus = {
+		id = SIA_strengthen_the_central_bank
+
+		icon = GFX_focus_SIA_strengthen_the_central_bank
+
+		relative_position_id = SIA_devalue_the_peso
+		x = -6
+		y = 2
+		cost = 5
+
+		prerequisite = {
+			focus = SIA_devalue_the_peso  
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+		}
+
+		available = {
+			NOT = {
+				OR = {
+					has_idea = SIA_devalue_the_peso_idea
+					has_idea = SIA_devalue_the_franc_idea
+				}
+			}
+		} 
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		
+		completion_reward = {
+			
+			add_political_power = 50
+
+			add_stability = 0.05
+
+			IF = {
+				limit = {
+					NOT = {
+						has_completed_focus = SIA_inflation_control_by_the_central_bank
+					}
+				}
+				custom_effect_tooltip = SIA_skip_one_line_tt
+				custom_effect_tooltip = available_industrial_concern
+				show_ideas_tooltip = SIA_banco_central_de_chile
+			}
+
+		}
+	} 
+
+	### EXPAND THE NAVAL ARSENAL
+	focus = {
+		id = SIA_expand_the_naval_arsenal
+
+		icon = GFX_goal_generic_build_navy
+
+		relative_position_id = SIA_devalue_the_peso
+		x = 4
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = SIA_devalue_the_peso  
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+
+		available = {
+			NOT = {
+				OR = {
+					has_idea = SIA_devalue_the_peso_idea
+					has_idea = SIA_devalue_the_franc_idea
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {
+			custom_effect_tooltip = SIA_modify_chilean_economy_ns_intro
+			add_to_variable = { SIA_economy_industrial_capacity_dockyard = 0.05 tooltip = industrial_capacity_dockyard_tt }
+			IF = {
+				limit = { 
+					has_dlc = "Arms Against Tyranny" 
+				}
+				
+				mio:SIA_arsenales_de_marina_organization = {
+					add_mio_size = 2
+				}
+				
+				mio:SIA_csav_organization = {
+					add_mio_size = 2
+				}
+				
+				random_state = {
+					limit = {
+						is_capital = yes 
+						is_owned_and_controlled_by = ROOT
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}	
+				}
+			}
+			ELSE = {
+				random_state = {
+					limit = {
+						is_capital = yes 
+						is_owned_and_controlled_by = ROOT
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = dockyard
+						level = 4
+						instant_build = yes
+					}	
+				}
+			}
+		}
+	} 
+
+	### FORTIFY THE COASTLINES
+	focus = {
+		id = SIA_fortify_the_coastlines
+
+		icon = GFX_focus_generic_coastal_fort
+
+		relative_position_id = SIA_expand_the_naval_arsenal
+		x = -1
+		y = 1
+		cost = 5
+
+		prerequisite = {
+			focus = SIA_expand_the_naval_arsenal  
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+
+		available = {
+		}
+		
+		completion_reward = {
+
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					is_coastal = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province =  {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+				}
+			}
+
+		}
+	} 
+
+	### INVEST IN SHIPPING 
+	focus = {
+		id = SIA_invest_in_shipping
+
+		icon = GFX_focus_POL_develop_polish_shipbuilding
+
+		relative_position_id = SIA_expand_the_naval_arsenal
+		x = 1
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = SIA_expand_the_naval_arsenal  
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 1.5
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
+
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+		
+		completion_reward = {
+
+			random_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}	
+			}
+
+			custom_effect_tooltip = SIA_skip_one_line_tt
+
+			add_equipment_to_stockpile = { 
+				type = convoy
+				amount = 25
+				producer = ROOT
+			}
+
+			custom_effect_tooltip = SIA_skip_one_line_tt
+
+			IF = {
+				limit = {
+					NOT = {	
+						has_tech = mtg_landing_craft
+					}
+					has_dlc = "Man the Guns"
+				}
+				set_technology = { mtg_landing_craft = 1 }
+			}
+
+			custom_effect_tooltip = SIA_skip_one_line_tt
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = SIA_compania_sudamerica_vapores
+
+		}
+	} 
+
+	### ADVANCEMENTS IN TELECOMMUNICATIONS
+	focus = {
+		id = SIA_advancements_in_telecommunications
+
+		icon = GFX_focus_research
+
+		relative_position_id = SIA_domestic_production_of_the_willys_mb
+		x = 0
+		y = 1
+		cost = 10
+
+		prerequisite = {
+			focus = SIA_domestic_production_of_the_willys_mb  
+			focus = SIA_strengthen_the_central_bank
+			focus = SIA_they_shall_not_pass
+			focus = SIA_fortify_the_coastlines
+			focus = SIA_invest_in_shipping
+		}
+
+		mutually_exclusive = {
+		} 
+		
+		ai_will_do = {
+			base = 2.5
+		}
+
+		available = {
+			num_of_factories > 30
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		completion_reward = {
+
+			add_research_slot = 1
+
+			custom_effect_tooltip = SIA_skip_one_line_tt
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = SIA_via_trans_radio
+
+		}
+	} 
 }
