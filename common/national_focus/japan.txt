@@ -1,6 +1,30 @@
 ﻿focus_tree = {
 	id = japan_wtt_focus
-
+    shortcut = {
+		name = JAP_manchurian_project_focus
+		target = JAP_the_manchurian_project
+		scroll_wheel_factor = 1.0
+	}
+	shortcut = {
+		name = JAP_althistorical_pol
+		target = JAP_alternative_to_the_kodoha_faction
+		scroll_wheel_factor = 1.0
+	}
+	shortcut = {
+		name = JAP_historical_pol
+		target = JAP_fate_of_the_kodoha_faction
+		scroll_wheel_factor = 1.0
+	}
+	shortcut = {
+		name = JAP_army_expansion
+		target = JAP_army_expansion
+		scroll_wheel_factor = 1.0
+	}
+	shortcut = {
+		name = JAP_navy
+		target = JAP_new_naval_estimates
+		scroll_wheel_factor = 1.0
+	}
 	country = {
 		factor = 0
 		modifier = {
@@ -12,7 +36,7 @@
 
 	default = no
 
-	continuous_focus_position = { x = 1500 y = 1600 }
+	continuous_focus_position = { x = 4300 y = 1000 }
 
 	focus = {
 		id = JAP_alternative_to_the_kodoha_faction
@@ -20,7 +44,7 @@
 		mutually_exclusive = {
 			focus = JAP_fate_of_the_kodoha_faction
 		}
-		x = 22
+		x =10
 		y = 0
 		cost = 5
 
@@ -31,17 +55,7 @@
 		available = {
 		}
 
-		allow_branch = {
-		#	has_dlc = "Waking the Tiger"
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = SHOW
-					}
-				}
-			}
-		}
+	
 
 		offset = {
 			x = 0
@@ -132,7 +146,45 @@
 		x = -6
 		y = 1
 		relative_position_id = JAP_alternative_to_the_kodoha_faction
-
+		 offset = {
+			x = 6
+			y = 0
+			trigger = {
+				has_completed_focus = JAP_the_unthinkable_option
+			}
+		}
+         	allow_branch = {
+		#	has_dlc = "Waking the Tiger"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = JAP_strengthen_civilian_government
+					}
+				}
+			}
+		}
+		allow_branch = {
+		#	has_dlc = "Waking the Tiger"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = JAP_fate_of_the_kodoha_faction
+					}
+				}
+			}
+		}
 		cost = 5
 
 		ai_will_do = {
@@ -4679,10 +4731,21 @@
 
 		completion_reward = {
 			###EVENT GIVING BONUSES TO CURRENT GOVERNMENT
+			create_country_leader = {
+			name = "Sadao Araki"
+			desc = ""
+			picture = "gfx/leaders/JAP/Portrait_JAP_Sadao_Araki.dds"
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {
+				kadoha_faction
+			}
+		}
 			swap_ideas = {
 				remove_idea = JAP_militarism
 				add_idea = JAP_militarism_shogunate
 			}
+			
 		}
 		search_filters = {  FOCUS_FILTER_ANNEXATION FOCUS_FILTER_RESEARCH FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
 	}
@@ -5497,9 +5560,46 @@
 		x = 6
 		y = 1
 		relative_position_id = JAP_alternative_to_the_kodoha_faction
-
+         offset = {
+			x = -6
+			y = 0
+			trigger = {
+				has_completed_focus = JAP_strengthen_civilian_government
+			}
+		}
 		cost = 5
-
+		allow_branch = {
+		#	has_dlc = "Waking the Tiger"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = JAP_fate_of_the_kodoha_faction
+					}
+				}
+			}
+		}
+allow_branch = {
+		#	has_dlc = "Waking the Tiger"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = JAP_the_unthinkable_option
+					}
+				}
+			}
+		}
 		ai_will_do = {
 			factor = 2
 		}
@@ -7770,7 +7870,7 @@
 	focus = {
 		id = JAP_the_manchurian_project
 		icon = GFX_focus_jap_manchurian_project
-		x = 55
+		x = 44
 		y = 0
 		offset = {
 			x = 0
@@ -7793,7 +7893,20 @@
 				has_completed_focus = JAP_fate_of_the_kodoha_faction
 			}
 		}
-		
+		 offset = {
+			x = -5
+			y = 0
+			trigger = {
+				has_completed_focus = JAP_strengthen_civilian_government
+			}
+		}
+		offset = {
+			x = -5
+			y = 0
+			trigger = {
+				has_completed_focus = JAP_the_unthinkable_option
+			}
+		}
 		cost = 5
 
 		ai_will_do = {
@@ -8197,8 +8310,8 @@
 #############ARMY TREE #################
 	focus = {
 		id = JAP_army_expansion_law
-		icon = GFX_focus_generic_advanced_military_studies
-		x = 9
+		icon = GFX_focus_generic_japanese_imperial_glory
+		x = 10
 		y = 0
 		relative_position_id = JAP_the_manchurian_project
 
@@ -9156,7 +9269,7 @@
 ##############NAVY TREE
 	focus = {
 		id = JAP_new_naval_estimates
-		icon = GFX_goal_generic_construct_naval_dockyard
+		icon = GFX_focus_jap_strike_south
 		x = 13
 		y = 0
 		relative_position_id = JAP_army_expansion_law

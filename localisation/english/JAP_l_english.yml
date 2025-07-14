@@ -732,7 +732,13 @@
  JAP_fate_of_the_kodoha_faction:0 "Fate of the Kodoha Faction"
  JAP_fate_of_the_kodoha_faction_desc:0 "The Kadoha faction needs to be dealt with."
 
-###THUNDERDOME 
+##PATH TO GLORY
 
  JAP_shogun_party:0 "Tokugawa Shogunate"
  JAP_shogun_party_long:0 "The Tokugawa Shogunate"
+
+ JAP_manchurian_project_focus:0 "Manchurian Project"
+ JAP_althistorical_pol:0 "Politics: Opposition"
+ JAP_historical_pol:0 "Politics: Historical"
+ JAP_army_expansion:0 "Army Expansion"
+ JAP_navy:0 "The Navy"
