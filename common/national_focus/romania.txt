@@ -1950,7 +1950,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ROM_balkans_dominance
 		will_lead_to_war_with = BUL
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -1963,8 +1963,6 @@ focus_tree = {
 				is_subject = no
 				NOT = { has_war_with = ROM }
 			}
-			strength_ratio = { tag = BUL ratio > 1.5 }
-			has_army_manpower = { size > 400000 }
 		}
 
 		bypass = {
@@ -1990,12 +1988,12 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			BUL = { 
-				country_event = {
-					id = DOD_romania.40
-					hours = 12
-				}	
-			}
+
+			create_wargoal = {
+					type = puppet_wargoal_focus
+					target = BUL
+					expire = 0
+				}
 		}
 	}
 
@@ -2007,7 +2005,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ROM_balkans_dominance
 		will_lead_to_war_with = HUN
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 9
@@ -2019,11 +2017,7 @@ focus_tree = {
 				exists = yes
 				NOT = { has_war_with = ROM }
 			}
-			strength_ratio = {
-				tag = HUN
-				ratio > 1.5
-			}
-			has_army_manpower = { size > 400000 }
+			
 		}
 
 		bypass = {
@@ -2042,12 +2036,11 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			HUN = { 
-				country_event = {
-					id = DOD_romania.50
-					hours = 4
-				}	
-			}
+			create_wargoal = {
+					type = puppet_wargoal_focus
+					target = HUN
+					expire = 0
+				}
 		}
 	}
 

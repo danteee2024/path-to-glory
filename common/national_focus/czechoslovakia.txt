@@ -1917,8 +1917,11 @@ focus = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
-	 AUS = { country_event =  generic.20 }
-		
+	 create_wargoal = {
+					type = puppet_wargoal_focus
+					target = AUS
+					expire = 0
+				}
 			}
 		}
 		focus = {
