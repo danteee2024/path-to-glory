@@ -267,7 +267,7 @@ industrial_expansion = {
 
 	
 	resource_expansion_steel = {
-		base_cost = 6000
+		base_cost = 5000
 		icon_frame = 29
 		value = 1
 		infrastructure_construction_effect = yes
@@ -284,7 +284,7 @@ industrial_expansion = {
 	}
 	
 	resource_expansion_aluminium = {
-		base_cost = 7500
+		base_cost = 6000
 		icon_frame = 30
 		value = 1
 		infrastructure_construction_effect = yes
@@ -301,7 +301,7 @@ industrial_expansion = {
 	}
 	
 	resource_expansion_tungsten = {
-		base_cost = 9000
+		base_cost = 7000
 		icon_frame = 31
 		value = 1
 		infrastructure_construction_effect = yes
@@ -318,7 +318,7 @@ industrial_expansion = {
 	}
 	
 	resource_expansion_chromium = {
-		base_cost = 10500
+		base_cost = 8000
 		icon_frame = 32
 		value = 1
 		infrastructure_construction_effect = yes
