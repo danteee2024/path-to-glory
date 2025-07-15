@@ -426,11 +426,11 @@ focus_tree = {
 		id = ENG_celtic_cultural_renaissance
 		
 		prerequisite = { focus = ENG_revitalize_northern_england  }
-		icon = GFX_focus_GER_kdf_wagen
+		icon = GFX_focus_BEL_expression_of_belgian_unity
 		x = 1
 		y = 1
 		relative_position_id = ENG_revitalize_northern_england
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -679,42 +679,6 @@ mutually_exclusive = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}	
 	focus = {
-		id = ENG_increase_military_budget
-		icon = GFX_focus_FIN_increase_military_budget
-		relative_position_id = ENG_let_that_lion_roar
-		x = 2
-		y = 3
-		
-		search_filters = { FOCUS_FILTER_INDUSTRY}
-		
-      
-		cost = 10
-
-		ai_will_do = {
-			factor = 8
-		}
-		
-		prerequisite = {
-			focus = ENG_expand_southern_industry
-			focus = ENG_revitalize_northern_england
-		}
-		
-         available = {
-			threat > 0.05
-            }
-
-		available_if_capitulated = yes
-
-
-		completion_reward = {
-			add_stability = 0.05
-			custom_effect_tooltip = generic_skip_one_line_tt
-			swap_ideas = {
-				remove_idea = ENG_state_of_the_economy_two
-				add_idea = ENG_state_of_the_economy_three
-			}
-		}
-	}focus = {
 		id = ENG_housing_act
 		icon = GFX_USA_family
 		relative_position_id = ENG_expand_southern_industry
@@ -909,7 +873,7 @@ mutually_exclusive = {
 	}
     focus = {
 		id = ENG_time_of_economic_prosperity
-		icon = GFX_focus_generic_economic_recovery
+		icon = GFX_focus_AST_rats_tobruk
 		cost = 10
 		prerequisite = {
 			focus = ENG_school_cambridge
