@@ -1224,7 +1224,7 @@ focus = {
 
 														focus = {
 															id = SIA_existance_through_sheer_will
-															icon = GFX_focus_SIA_departemento_de_las_tropas_nacistas_de_asalto
+															icon = GFX_focus_CHL_departemento_de_las_tropas_nacistas_de_asalto
 															x = 1
 															y = 5
 															prerequisite = { focus = SIA_ascension_of_phibun }
@@ -3972,4 +3972,399 @@ focus = {
 
 		}
 	} 
+focus = {
+	id = SIA_invite_foreign_investors 
+	icon = GFX_focus_generic_concessions
+	x = 28
+	y = 7
+
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = SIA
+		}
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+		add_offsite_building = { type = industrial_complex level = 2 }
+	}
+}
+focus = {
+	id = SIA_axis
+	icon = GFX_goal_support_fascism
+	prerequisite = { focus = SIA_invite_foreign_investors }
+	x = 24
+	y = 8
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = SIA
+		}
+		modifier = {
+			factor = 10
+			has_country_flag = GER_befriended_by_germany_flag
+		}
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+		is_in_faction_with = GER
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+	
+	}
+}
+focus = {
+	id = SIA_mission_to_germany
+	icon = GFX_focus_chi_mission_to_germany
+	prerequisite = { focus = SIA_axis }
+	mutually_exclusive = {
+		focus = SIA_mission_to_italy focus = SIA_collaboration_with_the_japanese
+	}
+	x = 24
+	y = 9
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = SIA
+		}
+		modifier = {
+			factor = 10
+			has_country_flag = GER_befriended_by_germany_flag
+		}
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+		is_in_faction_with = GER
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+	
+	}
+}
+focus = {
+	id = SIA_mission_to_italy
+	icon = GFX_focus_befriend_italy
+	prerequisite = { focus = SIA_axis }
+	x = 26
+	y = 9
+	cost = 5
+	mutually_exclusive = {
+		focus = SIA_mission_to_germany focus = SIA_collaboration_with_the_japanese
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = SIA
+		}
+		modifier = {
+			factor = 10
+			has_country_flag = GER_befriended_by_germany_flag
+		}
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+		is_in_faction_with = GER
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+	
+	}
+}
+focus = {
+	id = SIA_commi
+	icon = GFX_goal_support_communism
+	prerequisite = { focus = SIA_invite_foreign_investors }
+	x = 28
+	y = 10
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = PRC
+		}
+		modifier = {
+			factor = 4
+			tag = SIA
+		}
+	}
+
+	available = {
+	
+	}
+
+	bypass = {
+		is_in_faction_with = SOV
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+		
+	}
+}
+focus = {
+	id = SIA_mission_to_the_soviet_union
+	icon = GFX_focus_chi_mission_to_the_soviet_union
+	prerequisite = { focus = SIA_commi }
+	x = 28
+	y = 11
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = PRC
+		}
+		modifier = {
+			factor = 4
+			tag = SIA
+		}
+	}
+
+	available = {
+	
+	}
+
+	bypass = {
+		is_in_faction_with = SOV
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+		
+	}
+}
+focus = {
+	id = SIA_reach_out_to_france
+	icon = GFX_focus_chi_reach_out_to_france
+	prerequisite = { focus = SIA_allies }
+	x = 34
+	y = 9
+	mutually_exclusive = {
+		focus = SIA_british_cooperation focus = SIA_mission_to_the_us
+	}
+
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	
+	}
+
+	bypass = {
+		
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+		
+	}
+}
+focus = {
+	id = SIA_british_cooperation
+	icon = GFX_focus_chi_british_cooperation
+	prerequisite = { focus = SIA_allies }
+	x = 30
+	y = 9
+    mutually_exclusive = {
+		focus = SIA_mission_to_the_us focus = SIA_reach_out_to_france
+	}
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = SIA
+		}
+		modifier = {
+			factor = 10
+			has_country_flag = ENG_influenced_by_britain_flag
+		}
+	}
+
+	available = {
+		
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+		
+	}
+}
+focus = {
+	id = SIA_allies
+	icon = GFX_goal_support_democracy
+	prerequisite = { focus = SIA_invite_foreign_investors }
+	x = 32
+	y = 8
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = SIA
+		}
+	}
+
+	available = {
+		
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+	
+	}
+}
+focus = {
+	id = SIA_mission_to_the_us
+	icon = GFX_focus_chi_mission_to_the_us
+	prerequisite = { focus = SIA_allies }
+	x = 32
+	y = 9
+	mutually_exclusive = {
+		focus = SIA_british_cooperation focus = SIA_reach_out_to_france
+	}
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			tag = SIA
+		}
+	}
+
+	available = {
+		
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+	
+	}
+}
+focus = {
+	id = SIA_collaboration_with_the_japanese
+	icon = GFX_focus_chi_collaboration_with_the_japanese
+	prerequisite = { focus = SIA_axis }
+	x = 22
+	y = 9
+	mutually_exclusive = {
+		focus = SIA_mission_to_germany focus = SIA_collaboration_with_the_japanese
+	}
+
+
+	cost = 5
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+	
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+		
+	}
+}
 }
