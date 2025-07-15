@@ -599,8 +599,8 @@ ideas = {
 
 			modifier = {
 				consumer_goods_factor = -0.05
-				production_speed_industrial_complex_factor = 0.1
-				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
 			}
 		}
 
@@ -1168,10 +1168,10 @@ ideas = {
 			}
 			
 			modifier = {				
-				resistance_damage_to_garrison = -0.2 
-				foreign_subversive_activites = -0.2
-				army_core_attack_factor = 0.05
-				army_core_defence_factor = 0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				resistance_damage_to_garrison = -0.1
+				foreign_subversive_activites = -0.1
 			}
 		}
 
@@ -1254,7 +1254,7 @@ ideas = {
 			}
 		}
 
-		ROM_a_deal_with_the_devil_2 = {
+		ROM_Peasent_Militias = {
 
 			picture = generic_deal_with_the_devil
 
@@ -1269,8 +1269,31 @@ ideas = {
 			}
 			
 			modifier = {
-				communism_drift = 0.01
-				conscription = 0.01
+				conscription = 0.05
+				mobilization_speed = 0.05
+				planning_speed = 0.05
+			}
+		}
+
+		ROM_Political_Left_Change = {
+
+			picture = generic_deal_with_the_devil
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				democratic_drift = -0.1
+				neutrality_drift = -0.1
+				fascism_drift = -0.1
+				political_power_factor = 0.05
 			}
 		}
 
