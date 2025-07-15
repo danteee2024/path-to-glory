@@ -1,5 +1,5 @@
 ﻿l_english:
- industrial_expansion:0 "Industrial Expansion"
+ industrial_expansion:0 "£slot_texticon Industrial Expansion"
  industrial_expansion_desc:0 "This building provides the state with extra slots for building factories."
  industrial_expansion_tech_1:0 "Expanded Industry I"
  industrial_expansion_tech_1_desc:0 "Issuing contracts for new land developments will allow us to use space more efficiently, increasing the amount of industry we can support in one area."
