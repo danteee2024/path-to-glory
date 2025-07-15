@@ -1,6 +1,106 @@
 ideas = {
 
 	country = {
+		ENG_special_areas_act_idea = {
+			picture = ARG_resource_extration_focus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				local_resources_factor = 0.10
+				consumer_goods_factor = 0.05
+			}
+		}
+		ENG_war_industry = {
+			picture = RAJ_private_military_complex
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				military_industrial_organization_research_bonus = 0.15
+				military_industrial_organization_funds_gain = 0.05
+
+				production_speed_facility_factor = 0.15
+				special_project_speed_factor = 0.1
+
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+			}
+		}
+		ENG_housing_act_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = BRA_departamento_nacional_do_cafe
+			
+			modifier = {
+				global_building_slots = 1
+				stability_factor = 0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+		ENG_return_to_sound_finance_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ARG_invest_in_railways
+			
+			modifier = {
+				production_speed_buildings_factor = -0.05
+				consumer_goods_factor = -0.10
+				stability_factor = 0.05
+			}
+		}
+		ENG_national_industrial_recovery_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = AFG_electrification
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_infrastructure_factor = 0.15
+			}
+		}
 		ENG_bomber_command = {
 			
 			allowed = {
@@ -113,36 +213,16 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = eng_guided_by_britain
+			picture = ARG_envoy_to_london
 
 			modifier = {
 				production_speed_buildings_factor = 0.05
 				consumer_goods_factor = 0
-				industrial_capacity_factory = -0.05
-				political_power_cost = 0
-				}	
-		}
-		ENG_state_of_the_economy_five = {
-			allowed = {
-				always = yes
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = eng_guided_by_britain
-
-			modifier = {
-				production_speed_buildings_factor = 0.1
-				consumer_goods_factor = -0.10
 				industrial_capacity_factory = 0.05
 				political_power_cost = 0
 				}	
-			
 		}
+		
 		public_school_funding = {
 			allowed = {
 				always = no

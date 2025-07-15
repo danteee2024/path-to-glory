@@ -172,9 +172,9 @@ focus_tree = {
 	focus = {
 		id = ENG_let_that_lion_roar_start
 		icon = GFX_focus_eng_the_sun_never_sets
-		x = 5
+		x = 0
 		y = 0
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -234,61 +234,84 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = ENG_Provoke_british_patriotism
-		icon = GFX_focus_generic_infiltration
-		cost = 5
+		id = ENG_let_that_lion_roar
+		icon = GFX_focus_hol_united_netherlands
+		cost = 10
 		prerequisite = {
 			focus = ENG_let_that_lion_roar_start
 		}
 		x = 5
 		y = 2
-		ai_will_do = {
-			factor = 10
-		}
 		relative_position_id = ENG_let_that_lion_roar_start
-		completion_reward = {
-		add_ideas = british_patriotism
-					}
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH
-		}
-	}
-
-	focus = {
-		id = ENG_let_that_lion_roar
-		icon = GFX_focus_hol_united_netherlands
-		cost = 10
-		prerequisite = {
-			focus = ENG_Provoke_british_patriotism
-		}
-		x = 0
-		y = 1
-		relative_position_id = ENG_Provoke_british_patriotism
 		ai_will_do = {
 			factor = 10
 		}
+		mutually_exclusive = {
+			focus = ENG_return_to_sound_finance
+		}
 		completion_reward = {
+			add_timed_idea = {
+				idea = ENG_national_industrial_recovery_idea
+				months = 12
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			swap_ideas = {
 				remove_idea = ENG_state_of_the_economy
 				add_idea = ENG_state_of_the_economy_two
 			}
 		}
 		search_filters = {
-			FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH
+			FOCUS_FILTER_INDUSTRY 
 		}
 	}		
+    
+	focus = {
+		id = ENG_return_to_sound_finance
+		icon = GFX_focus_generic_monetary_union
+		cost = 10
+		prerequisite = {
+			focus = ENG_let_that_lion_roar_start
+		}
+		mutually_exclusive = {
+			focus = ENG_let_that_lion_roar
+		}
+		x = 9
+		y = 2
+		relative_position_id = ENG_let_that_lion_roar_start
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = ENG_return_to_sound_finance_idea
+				months = 12
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			swap_ideas = {
+				remove_idea = ENG_state_of_the_economy
+				add_idea = ENG_state_of_the_economy_two
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY 
+		}
+	}		
+
+
+
+
 	focus = {
 		id = ENG_revitalize_northern_england
 		available = {
 			has_full_control_of_state = 131
 			has_full_control_of_state = 130
 		}
-		prerequisite = { focus = ENG_let_that_lion_roar }
+		prerequisite = { focus = ENG_let_that_lion_roar  focus = ENG_return_to_sound_finance }
 		mutually_exclusive = { focus = ENG_expand_southern_industry }
-		icon = GFX_focus_ARG_capitalize_the_beef_industry
-		x = 2
+		icon = GFX_focus_BEL_dam_the_consequences	
+		x = 5
 		y = 2
-		relative_position_id = ENG_Provoke_british_patriotism
+		relative_position_id = ENG_let_that_lion_roar
 		cost = 10
 
 		available_if_capitulated = yes
@@ -301,44 +324,35 @@ focus_tree = {
 				category = dispersed_industry_category
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			130 = {
-				if = {
-					limit = {
-						35 = {
-							free_building_slots = {
-								building = industrial_complex
-								size > 1
-								include_locked = yes
-							}
-						}
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
+			131 = {	
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = {
+						id = 11270
 					}
 				}
-			}
-			131 = {
-				if = {
-					limit = {
-						36 = {
-							free_building_slots = {
-								building = industrial_complex
-								size > 1
-								include_locked = yes
-							}
-						}
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
+				custom_effect_tooltip = {
+					localization_key = building_state_modifier|dam
+					INDENT = "    "
 				}
 			}
+			130 = {	
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = {
+						id = 9397
+					}
+				}
+				custom_effect_tooltip = {
+					localization_key = building_state_modifier|dam
+					INDENT = "    "
+				}
+			}
+
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 	}			
@@ -348,12 +362,12 @@ focus_tree = {
 			has_full_control_of_state = 127
 			has_full_control_of_state = 126
 		}
-		prerequisite = { focus = ENG_let_that_lion_roar }
+		prerequisite = { focus = ENG_let_that_lion_roar  focus = ENG_return_to_sound_finance  }
 		mutually_exclusive = { focus = ENG_revitalize_northern_england  }
 		icon = GFX_focus_GER_kdf_wagen
-		x = 0
+		x = -1
 		y = 2
-		relative_position_id = ENG_Provoke_british_patriotism
+		relative_position_id = ENG_let_that_lion_roar
 		cost = 10
 
 		available_if_capitulated = yes
@@ -407,13 +421,90 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 	}	
+	
+	focus = {
+		id = ENG_celtic_cultural_renaissance
+		
+		prerequisite = { focus = ENG_revitalize_northern_england  }
+		icon = GFX_focus_GER_kdf_wagen
+		x = 1
+		y = 1
+		relative_position_id = ENG_revitalize_northern_england
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			set_province_name = {
+						id = 377
+						name = ENG_celtic_rename_cardiff
+					}
+					set_province_name = {
+						id = 407
+						name = ENG_celtic_rename_swansea
+					}
+					set_province_name = {
+						id = 311
+						name = ENG_celtic_rename_wrexham
+					}
+           set_province_name = {
+						id = 9392
+						name = ENG_celtic_rename_edinburgh
+					}
+					set_province_name = {
+						id = 3273
+						name = ENG_celtic_rename_glasgow
+					}
+					set_province_name = {
+						id = 3150
+						name = ENG_celtic_rename_dundee
+					}
+					set_province_name = {
+						id = 6300
+						name = ENG_celtic_rename_rosynth
+					}
+					set_province_name = {
+						id = 284
+						name = ENG_celtic_rename_oban
+					}
+					set_province_name = {
+						id = 11218
+						name = ENG_celtic_rename_dumfries
+					}
+					set_province_name = {
+						id = 200
+						name = ENG_celtic_rename_aberdeen
+					}
+					set_province_name = {
+						id = 11064
+						name = ENG_celtic_rename_scapaflow
+					}
+					set_province_name = {
+						id = 6062
+						name = ENG_celtic_rename_stornoway
+					}
+					set_province_name = {
+						id = 9075
+						name = ENG_celtic_rename_inverness
+					}
+					set_province_name = {
+						id = 385
+						name = ENG_celtic_rename_londonderry
+					}
+					set_province_name = {
+						id = 3379
+						name = ENG_celtic_rename_belfast
+					}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+	}	
 	focus = {
 		id = ENG_industrialise_celtic_areas
-		prerequisite = { focus = ENG_revitalize_northern_england }
+		prerequisite = { focus = ENG_celtic_cultural_renaissance }
 		icon = GFX_focus_AUS_courting_the_princess_of_industry
-		x = 2
-		y = 3
-		relative_position_id = ENG_Provoke_british_patriotism
+		x = 1
+		y = 1
+		relative_position_id = ENG_celtic_cultural_renaissance
 		cost = 10
 		available = {
 			controls_state = 121
@@ -426,31 +517,15 @@ focus_tree = {
 			controls_state = 122
 		} 
 		available_if_capitulated = yes
-
+mutually_exclusive = {
+			focus = ENG_further_mining_expansion_in_celtic_areas
+		}
 		completion_reward = {
+			
 			122 = {
 				if = {
 					limit = {
 						122 = {
-							free_building_slots = {
-								building = industrial_complex
-								size > 1
-								include_locked = yes
-							}
-						}
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			123 = {
-				if = {
-					limit = {
-						123 = {
 							free_building_slots = {
 								building = industrial_complex
 								size > 1
@@ -466,6 +541,7 @@ focus_tree = {
 					}
 				}
 			}
+			
 			121 = {
 				if = {
 					limit = {
@@ -479,7 +555,7 @@ focus_tree = {
 					}
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
-						type = infrastructure
+						type = industrial_complex
 						level = 1
 						instant_build = yes
 					}
@@ -517,253 +593,101 @@ focus_tree = {
 					}
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			119 = {
-				if = {
-					limit = {
-						119 = {
-							free_building_slots = {
-								building = industrial_complex
-								size > 1
-								include_locked = yes
-							}
-						}
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
 						type = industrial_complex
 						level = 1
 						instant_build = yes
 					}
 				}
 			}
-			120 = {
-				if = {
-					limit = {
-						120 = {
-							free_building_slots = {
-								building = industrial_complex
-								size > 1
-								include_locked = yes
-							}
-						}
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			933 = {
-				if = {
-					limit = {
-						933 = {
-							free_building_slots = {
-								building = industrial_complex
-								size > 1
-								include_locked = yes
-							}
-						}
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			123 = {
-				if = {
-					limit = {
-						123 = {
-							free_building_slots = {
-								building = infrastructure
-								size > 1
-								include_locked = yes
-							}
-						}
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
+			
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}	
 	focus = {
-		id = ENG_amplify_the_exploitation_of_welsh_coal
-		icon = GFX_focus_generic_coal_mining
-		cost = 10
-		prerequisite = {
-			focus = ENG_expand_southern_industry
-		}
-		available = {
-			controls_state = 122
-		} 
-		x = 0
-		y = 3
-		relative_position_id = ENG_Provoke_british_patriotism
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-		add_ideas = welsh_miners_exploited
-		custom_effect_tooltip = generic_skip_one_line_tt
-		122 = {
-				add_resource = {
-					type = oil
-					amount = 19
-				}
-				add_resource = {
-					type = steel
-					amount = 7
-				}
-			}
-		}
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY 
-		}
-	}		
-	focus = {
-		id = ENG_attract_colonial_investors
-		icon = GFX_SOV_aristocratic_investments_ccp_2d_sov_compatibility
-		cost = 10
-		x = 0
-		ai_will_do = { factor = 1 }
-		y = 5
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		prerequisite = {
-			focus = ENG_increase_military_budget
-		}
-		relative_position_id = ENG_Provoke_british_patriotism
-		completion_reward = {
-			add_timed_idea = {
-				idea = ENG_colonial_investors
-				days = 1095
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			swap_ideas = {
-				remove_idea = ENG_state_of_the_economy_three
-				add_idea = ENG_state_of_the_economy_four
-			}
-		}
-	
-	}
-	focus = {
-		id = ENG_devaluate_the_pound
-		icon = GFX_focus_mex_privatisation
-		cost = 10
-		prerequisite = {
-			focus = ENG_Open_our_Markets
-		}
-		x = 2
-		y = 5
-		relative_position_id = ENG_Provoke_british_patriotism
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			add_stability = 0.05
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_timed_idea = { idea = ENG_devaluated_pound days = 720 }
-			custom_effect_tooltip = generic_skip_one_line_tt
-			swap_ideas = {
-				remove_idea = ENG_state_of_the_economy_three
-				add_idea = ENG_state_of_the_economy_four
-			}
-		}
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY 
-		}
-	}	
-	focus = {
-		id = ENG_time_of_economic_prosperity
-		icon = GFX_focus_generic_economic_recovery
-		cost = 10
-		prerequisite = {
-			focus = ENG_attract_colonial_investors
-			focus = ENG_devaluate_the_pound
-		}
-		x = 1
-		y = 6
-		relative_position_id = ENG_Provoke_british_patriotism
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = ENG_state_of_the_economy_four
-				add_idea = ENG_state_of_the_economy_five
-			}
-					}
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY 
-		}
-	}	
-	focus = {
-		id = ENG_Open_our_Markets
-		icon = GFX_goal_generic_positive_trade_relations
-		cost = 10
-		prerequisite = {
-			focus = ENG_amplify_the_exploitation_of_welsh_coal
+		id = ENG_further_mining_expansion_in_celtic_areas
+		prerequisite = { focus = ENG_celtic_cultural_renaissance }
+		icon = GFX_focus_generic_aluminum
+		x = -1
+		y = 1
+		mutually_exclusive = {
 			focus = ENG_industrialise_celtic_areas
 		}
-		mutually_exclusive = {
-			focus = ENG_increase_military_budget
-		}
-		ai_will_do = { factor = 1 }
-		x = 2
-		y = 4
-		relative_position_id = ENG_Provoke_british_patriotism
-		search_filters = { FOCUS_FILTER_INDUSTRY}
+		relative_position_id = ENG_celtic_cultural_renaissance
+		cost = 10
+		available = {
+			controls_state = 121
+			controls_state = 133
+			controls_state = 136
+			controls_state = 119
+			controls_state = 120
+			controls_state = 933
+			controls_state = 123
+			controls_state = 122
+		} 
+		available_if_capitulated = yes
+
 		completion_reward = {
-				#trade bonuses
-				if = {
-					limit = {
-						has_idea = free_trade
-					}
-					add_political_power = 100
+			modify_building_resources = {
+				building = resource_expansion_aluminium
+				resource = aluminium
+				amount = 1
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			122 = {
+				
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = resource_expansion_aluminium
+						level = 1
+						instant_build = yes
 					
 				}
-				else = {
-					add_ideas = free_trade
+			}
+			136 = {
+				
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = resource_expansion_aluminium
+						level = 1
+						instant_build = yes
+					
 				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				add_ideas = Trade_expanded
-				custom_effect_tooltip = generic_skip_one_line_tt
-				swap_ideas = {
-					remove_idea = ENG_state_of_the_economy_two
-					add_idea = ENG_state_of_the_economy_three
+			}
+			121 = {
+				
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = resource_expansion_aluminium
+						level = 1
+						instant_build = yes
+					
 				}
+			}
+			133 = {
+				
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = resource_expansion_aluminium
+						level = 1
+						instant_build = yes
+					
+				}
+			}
+		
+			
 		}
-	
-	}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}	
 	focus = {
 		id = ENG_increase_military_budget
 		icon = GFX_focus_FIN_increase_military_budget
-		relative_position_id = ENG_Provoke_british_patriotism
-		x = 0
-		y = 4
+		relative_position_id = ENG_let_that_lion_roar
+		x = 2
+		y = 3
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY}
 		
-        mutually_exclusive = {
-			focus = ENG_Open_our_Markets
-		}
+      
 		cost = 10
 
 		ai_will_do = {
@@ -771,27 +695,117 @@ focus_tree = {
 		}
 		
 		prerequisite = {
-			focus = ENG_amplify_the_exploitation_of_welsh_coal
-			focus = ENG_industrialise_celtic_areas
+			focus = ENG_expand_southern_industry
+			focus = ENG_revitalize_northern_england
 		}
 		
          available = {
-			has_war_support > 0.25
+			threat > 0.05
             }
 
 		available_if_capitulated = yes
 
 
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = partial_economic_mobilisation
-				}
-				add_political_power = 150	
+			add_stability = 0.05
+			custom_effect_tooltip = generic_skip_one_line_tt
+			swap_ideas = {
+				remove_idea = ENG_state_of_the_economy_two
+				add_idea = ENG_state_of_the_economy_three
 			}
-			else = {
-				add_ideas = partial_economic_mobilisation
-			}
+		}
+	}focus = {
+		id = ENG_housing_act
+		icon = GFX_USA_family
+		relative_position_id = ENG_expand_southern_industry
+		x = -1
+		y = 1
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY}
+		
+        
+		cost = 10
+
+		ai_will_do = {
+			factor = 8
+		}
+		
+		prerequisite = {
+			focus = ENG_expand_southern_industry
+		}
+		
+         available = {
+			
+            }
+
+		available_if_capitulated = yes
+
+
+		completion_reward = {
+			add_ideas = ENG_housing_act_idea
+		}
+	}	
+	focus = {
+		id = ENG_special_areas_act
+		icon = GFX_focus_generic_coal_mining
+		relative_position_id = ENG_expand_southern_industry
+		x = 0
+		y = 2
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY}
+		
+       
+		cost = 10
+
+		ai_will_do = {
+			factor = 8
+		}
+		
+		prerequisite = {
+			focus = ENG_expand_southern_industry
+		}
+		
+         available = {
+			
+            }
+
+		available_if_capitulated = yes
+
+
+		completion_reward = {
+			add_ideas = ENG_special_areas_act_idea
+		}
+	}
+	focus = {
+		id = ENG_increase_military_budget
+		icon = GFX_focus_FIN_increase_military_budget
+		relative_position_id = ENG_let_that_lion_roar
+		x = 2
+		y = 3
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY}
+		
+      
+		cost = 10
+
+		ai_will_do = {
+			factor = 8
+		}
+		
+		prerequisite = {
+			focus = ENG_expand_southern_industry
+			focus = ENG_revitalize_northern_england
+		}
+		
+         available = {
+			threat > 0.05
+            }
+
+		available_if_capitulated = yes
+
+
+		completion_reward = {
+			add_stability = 0.05
 			custom_effect_tooltip = generic_skip_one_line_tt
 			swap_ideas = {
 				remove_idea = ENG_state_of_the_economy_two
@@ -799,7 +813,130 @@ focus_tree = {
 			}
 		}
 	}		
+	focus = {
+		id = ENG_farmland_reform
+		icon = GFX_focus_generic_farmland
+		relative_position_id = ENG_increase_military_budget
+		x = -1
+		y = 1
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY}
+		
+        
+		cost = 10
 
+		ai_will_do = {
+			factor = 8
+		}
+		
+		prerequisite = {
+			focus = ENG_increase_military_budget
+			
+		}
+		
+        
+		available_if_capitulated = yes
+
+
+		completion_reward = {
+			custom_effect_tooltip = RAJ_agricultural_cooperatives_tt
+
+            #effect_tooltip = {
+            #    every_owned_state = {
+            #        limit = {
+            #            is_controlled_by = ROOT
+            #            industrial_complex > 3 #UPDATE RAJ_agricultural_cooperatives_tt if you change this
+            #            infrastructure < 5
+            #        }
+#
+            #        add_building_construction = {
+            #            type = infrastructure
+            #            level = 1
+            #            instant_build = yes
+            #        }
+            #    }
+            #}
+
+            set_variable = { agcoop_infra_build_counter = 0 }
+            set_variable = { agcoop_civ_build_counter = 0 }
+            for_each_scope_loop = {
+                array = owned_states_at_game_start
+                
+                 if = {
+                     limit = {
+                        is_controlled_by = ROOT
+                        industrial_complex > 3 #UPDATE RAJ_agricultural_cooperatives_tt if you change this
+                    }     
+                    ROOT = { add_to_variable = { agcoop_infra_build_counter = 1 } } #Count infra if state requirements are correct, even if one isnt build because you already technically fulfilled the requirements
+                    if = {
+                        limit = {
+                            infrastructure < 5
+                        }
+
+                        add_building_construction = {
+                            type = infrastructure
+                            level = 1
+                            instant_build = yes
+                        }
+                        set_state_flag = agcoop_built_infra #used for complete tooltip
+                    }
+
+                    log = "INFRA BUILT: [?ROOT.agcoop_infra_build_counter]"
+                    set_temp_variable = { t_infra_build_counter  = ROOT.agcoop_infra_build_counter }
+
+                    modulo_temp_variable = { var = t_infra_build_counter value = 2 } #every other infra counts as a civ
+
+                    if = {
+                        limit = {
+                            check_variable = { t_infra_build_counter = 1 } 
+                            check_variable = { ROOT.agcoop_civ_build_counter < 10 } #Max roof
+                        }
+#
+                        
+                        add_extra_state_shared_building_slots = 1
+                        add_building_construction = {
+                            type = industrial_complex
+                            level = 1
+                            instant_build = yes
+                        }
+                        set_state_flag = agcoop_built_civ
+                        add_to_variable = { ROOT.agcoop_civ_build_counter = 1 }
+                    }     
+                }
+            }
+        
+		}
+	}
+    focus = {
+		id = ENG_time_of_economic_prosperity
+		icon = GFX_focus_generic_economic_recovery
+		cost = 10
+		prerequisite = {
+			focus = ENG_school_cambridge
+
+		}
+		prerequisite = {
+			focus = ENG_farmland_reform
+			
+		}
+		x = 0
+		y = 2
+		relative_position_id = ENG_increase_military_budget
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = ENG_war_industry
+			custom_effect_tooltip = generic_skip_one_line_tt
+			swap_ideas = {
+				remove_idea = ENG_state_of_the_economy_three
+				add_idea = ENG_state_of_the_economy_four
+			}
+					}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY 
+		}
+	}
 	focus = {
 		id = ENG_adopt_bliztkrieg_tactics
 		icon = GFX_focus_generic_army_tanks2
@@ -1249,10 +1386,8 @@ focus_tree = {
 	
 	focus = {
 		id = shadow_scheme_focus
-		prerequisite = {  focus = ENG_let_that_lion_roar }
-		prerequisite = {
-			focus = radar_focus
-		}
+		prerequisite = {  focus = ENG_let_that_lion_roar_start}
+		
 		available = {
 			if = {
 				limit = {
@@ -1281,9 +1416,9 @@ focus_tree = {
 		available_if_capitulated = yes
 		
 		icon = GFX_focus_generic_reorient_production
-		x = -2
+		x = -4
 		y = 1
-		relative_position_id = ENG_let_that_lion_roar
+		relative_position_id = ENG_let_that_lion_roar_start
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -1298,19 +1433,23 @@ focus_tree = {
 
 
 	focus = {
-		id = uk_extra_tech_slot
-		text = extra_tech_slot
+		id = ENG_school_cambridge
 		icon = GFX_focus_SWE_education_reform
-		prerequisite = { focus = shadow_scheme_focus }
-		x = -2
-		y = 2
-		relative_position_id = ENG_let_that_lion_roar
+		prerequisite = { focus = ENG_increase_military_budget }
+		x = 1
+		y = 1
+		relative_position_id = ENG_increase_military_budget
 		cost = 10
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_research_slot = 1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_breakthrough_progress = {
+				specialization = specialization_nuclear
+				value = 0.25
+			}
 		}
 	}
 	
@@ -1638,7 +1777,7 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = maud_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1658,30 +1797,8 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-            random_owned_controlled_state = {
-				limit = {
-					is_in_home_area = yes
-					
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = nuclear_facility
-					level = 1
-					instant_build = yes
-				}
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_breakthrough_progress = {
-				specialization = specialization_nuclear
-				value = 0.5
-			}
- custom_effect_tooltip = generic_skip_one_line_tt
-			add_tech_bonus = {
-				name = NOR_the_weapons_of_conquest
-				bonus = 0.5
-				uses = 1 # was 2
-				category = nuclear
-			}
+           
+			
 		}
 	}
 	focus = {
