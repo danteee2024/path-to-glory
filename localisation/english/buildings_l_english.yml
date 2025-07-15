@@ -12,10 +12,18 @@
  dam_plural: "Dams"
  dam_desc: "Dams provide additional power to a state, improving industry and resource output."
  dam_mountain: "$dam$"
- 
- 
-
- 
+ resource_expansion_aluminium:0 "£aluminium_texticon §YAluminium Extractor§!"
+ resource_expansion_aluminium_plural:0 "Aluminium Extractors"
+ resource_expansion_aluminium_desc:0 "Aluminium Extractors provide the state with additional aluminium resources, in this state the aluminium extractor provides"
+ resource_expansion_steel:0 "£steel_texticon §YSteel Extractor§!"
+ resource_expansion_steel_plural:0 "Steel Extractors"
+ resource_expansion_steel_desc:0 "Steel Extractors provide the state with additional steel resources, in this state the steel extractor provides"
+ resource_expansion_tungsten:0 "£tungsten_texticon §YTungsten Extractor§!"
+ resource_expansion_tungsten_plural:0 "Tungsten Extractors"
+ resource_expansion_tungsten_desc:0 "Tungsten Extractors provide the state with additional tungsten resources, in this state the tungsten extractor provides"
+ resource_expansion_chromium:0 "£chromium_texticon §YChromium Extractor§!"
+ resource_expansion_chromium_plural:0 "Chromium Extractors"
+ resource_expansion_chromium_desc:0 "Chromium Extractors provide the state with additional chromium resources, in this state the chromium extractor provides."
 
  dam_mountain_plural: "$dam_plural$"
  
