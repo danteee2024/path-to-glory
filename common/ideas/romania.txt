@@ -261,24 +261,6 @@ ideas = {
 				economy_cost_factor = -0.25
 			}
 		}
-		ROM_Local_Resource_investment = {
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = fascism
-			}
-
-			picture = ARG_resource_extration_focus
-
-			removal_cost = -1
-
-			modifier = {
-				local_resources = 0.20
-			}
-		}
 
 		ROM_The_Empire_0 = {
 
@@ -290,7 +272,7 @@ ideas = {
 				has_government = fascism
 			}
 
-			picture = ARG_resource_extration_focus
+			picture = bra_monarchist_uprising
 
 			removal_cost = -1
 
@@ -309,7 +291,7 @@ ideas = {
 				has_government = fascism
 			}
 
-			picture = ARG_resource_extration_focus
+			picture = bra_monarchist_uprising
 
 			removal_cost = -1
 
@@ -349,7 +331,7 @@ ideas = {
 				has_government = fascism
 			}
 
-			picture = ARG_resource_extration_focus
+			picture = generic_democratic_drift_bonus
 
 			removal_cost = -1
 
@@ -368,7 +350,7 @@ ideas = {
 				has_government = fascism
 			}
 
-			picture = ARG_resource_extration_focus
+			picture = man_five_year_plan_industry
 
 			removal_cost = -1
 
@@ -387,7 +369,7 @@ ideas = {
 				has_government = fascism
 			}
 
-			picture = ARG_resource_extration_focus
+			picture = man_five_year_plan_industry
 
 			removal_cost = -1
 
@@ -409,7 +391,7 @@ ideas = {
 				has_government = fascism
 			}
 
-			picture = ARG_resource_extration_focus
+			picture = man_five_year_plan_industry
 
 			removal_cost = -1
 
@@ -431,7 +413,7 @@ ideas = {
 				has_government = fascism
 			}
 
-			picture = ARG_resource_extration_focus
+			picture = chi_army_corruption3
 
 			removal_cost = -1
 
@@ -451,7 +433,7 @@ ideas = {
 				has_government = fascism
 			}
 
-			picture = ARG_resource_extration_focus
+			picture = SOV_politicized_military_ccp_sov_compatibility
 
 			removal_cost = -1
 
@@ -471,7 +453,7 @@ ideas = {
 				has_government = fascism
 			}
 
-			picture = ARG_resource_extration_focus
+			picture = generic_communism_drift_bonus
 
 			removal_cost = -1
 
@@ -490,7 +472,7 @@ ideas = {
 				has_government = fascism
 			}
 
-			picture = ARG_resource_extration_focus
+			picture = generic_fascism_drift_bonus
 
 			removal_cost = -1
 
@@ -509,7 +491,7 @@ ideas = {
 				has_government = fascism
 			}
 
-			picture = ARG_resource_extration_focus
+			picture = generic_fascism_drift_bonus
 
 			removal_cost = -1
 
@@ -530,7 +512,7 @@ ideas = {
 				has_government = fascism
 			}
 
-			picture = ARG_resource_extration_focus
+			picture = generic_communism_drift_bonus
 
 			removal_cost = -1
 
@@ -551,8 +533,8 @@ ideas = {
 				has_government = fascism
 			}
 
-			picture = ARG_resource_extration_focus
-
+			picture = hol_expand_the_colonial_army
+			
 			removal_cost = -1
 
 			modifier = {
@@ -571,7 +553,7 @@ ideas = {
 				has_government = fascism
 			}
 
-			picture = ARG_resource_extration_focus
+			picture = hol_expand_the_colonial_army
 
 			removal_cost = -1
 
@@ -593,7 +575,7 @@ ideas = {
 				has_government = fascism
 			}
 
-			picture = ARG_resource_extration_focus
+			picture = generic_improved_industries
 
 			removal_cost = -1
 
@@ -638,7 +620,7 @@ ideas = {
 				has_government = fascism
 			}
 
-			picture = ARG_resource_extration_focus
+			picture = HUN_hungarian_monarchy_democratic
 
 			removal_cost = -1
 
@@ -658,7 +640,7 @@ ideas = {
 				has_government = fascism
 			}
 
-			picture = ARG_resource_extration_focus
+			picture = HUN_hungarian_monarchy_democratic
 
 			removal_cost = -1
 
@@ -682,7 +664,7 @@ ideas = {
 				has_government = fascism
 			}
 
-			picture = ARG_resource_extration_focus
+			picture = SOV_defense_industry_artillery_bonus_ccp_sov_compatibility
 
 			removal_cost = -1
 
@@ -709,7 +691,7 @@ ideas = {
 				has_government = fascism
 			}
 
-			picture = ARG_resource_extration_focus
+			picture = chi_army_corruption3
 
 			removal_cost = -1
 
@@ -729,7 +711,7 @@ ideas = {
 				has_government = fascism
 			}
 
-			picture = ARG_resource_extration_focus
+			picture = MEX_politicised_army_2 
 
 			removal_cost = -1
 
@@ -1196,6 +1178,8 @@ ideas = {
 
 		ROM_preserve_greater_romania = {
 
+			picture = ROM_preserve_greater_romania
+
 			removal_cost = -1
 			
 			allowed = {
@@ -1214,6 +1198,8 @@ ideas = {
 		}
 
 		ROM_Greater_Romania = {
+
+			picture = ROM_preserve_greater_romania
 
 			removal_cost = -1
 			
@@ -1277,7 +1263,7 @@ ideas = {
 
 		ROM_Political_Left_Change = {
 
-			picture = generic_deal_with_the_devil
+			picture = HUN_resurgent_communist_party_idea
 
 			removal_cost = -1
 			
