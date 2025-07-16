@@ -5,7 +5,9 @@ state={
 	manpower = 245642
 	
 	state_category = pastoral
-
+    resources = {
+		oil = 39
+	}
 	history={
 		owner = VEN
 		buildings = {
