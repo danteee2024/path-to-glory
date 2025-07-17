@@ -5336,6 +5336,7 @@ focus = {
 
 		available = {
 			is_in_faction = no
+			is_ai = no
 		}
 
 		bypass = {
