@@ -2313,7 +2313,7 @@ focus_tree = {
 		cost = 5
 
 		prerequisite = {
-			focus = SAF_align_with_Com
+			focus = SAF_side_with_moscow
 		}
 		
 		ai_will_do = {
