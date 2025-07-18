@@ -697,7 +697,7 @@ ideas = {
 
 			modifier = {
 				army_org_Factor = 0.1
-				mobilization_speed = 0.05
+				org_loss_when_moving = -0.05
 				}
 			}
 			
@@ -716,7 +716,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				experience_gain_army = 0.2
+				experience_gain_army = 0.1
 				training_time_factor = -0.1
 				}
 			}
@@ -1448,7 +1448,7 @@ ideas = {
 			}
 		}
 
-		ROM_Division_Mobilization_Training = {
+		ROM_Refined_Operational_Planning = {
 
 			picture = SOV_politicized_military_humanism_ccp_sov_compatibility
 			removal_cost = -1
@@ -1462,8 +1462,7 @@ ideas = {
 			}
 			
 			modifier = {
-				army_speed_factor = 0.05
-				mobilization_speed = 0.05
+				max_planning = 0.05
 				planning_speed = 0.05
 			}
 		}
