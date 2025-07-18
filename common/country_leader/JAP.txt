@@ -1068,6 +1068,7 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_hideki_tojo"
+				large="gfx/leaders/JAP/Portrait_Japan_Generic_land_2.dds"
 			}
 		}
 		advisor={
@@ -1076,13 +1077,35 @@ characters={
 			allowed = {
 				original_tag = JAP
 			}
+			available = {
+				NOT = {
+					OR = {
+						has_government = communism
+						any_other_country = {
+							has_country_leader = { 
+								character = JAP_hideki_tojo
+								ruling_only = yes 
+							}
+						}
+						has_completed_focus = JAP_strengthen_civilian_government
+						has_completed_focus = JAP_the_unthinkable_option
+					}
+					
+				}
+				if = {
+					limit = {
+						has_global_flag = japanese_civil_war
+					}
+					has_government = fascism
+				}
+			}			
 			traits = {
 				army_chief_morale_3
 				army_chief_drill_3
 			}
 			cost = 100
 			ai_will_do = {
-				base = 5
+				factor = 1.000
 			}
 		}
 	}

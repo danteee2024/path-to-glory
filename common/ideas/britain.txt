@@ -78,8 +78,9 @@ ideas = {
 			
 			modifier = {
 				production_speed_buildings_factor = -0.05
-				consumer_goods_factor = -0.10
+				consumer_goods_factor = -0.15
 				stability_factor = 0.05
+				trade_opinion_factor = 0.25
 			}
 		}
 		ENG_national_industrial_recovery_idea = {
@@ -136,9 +137,9 @@ ideas = {
 			picture = generic_naval_manufacturer_3
 			
 			modifier = {
-				air_nav_efficiency = 0.05
-				air_range_factor = 0.10
-				coordination_bonus = 0.05
+				air_nav_efficiency = 0.1
+				naval_strike = 0.05
+				air_range_factor = 0.05
 			}
 		}
 	ENG_fighter_command = {
