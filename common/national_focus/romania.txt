@@ -3106,7 +3106,7 @@ ROM_join_allies
 	focus = {
 		id = ROM_expand_the_air_force
 		icon = GFX_goal_generic_build_airforce
-		x = 52
+		x = 49
 		y = 0
 
 		cost = 10
@@ -3767,7 +3767,7 @@ ROM_join_allies
 	focus = {
 		id = ROM_army_maneuvers
 		icon = GFX_goal_generic_army_doctrines
-		x = 40
+		x = 39
 		y = 0
 
 		cost = 10
@@ -3971,7 +3971,7 @@ ROM_join_allies
 			add_tech_bonus = {
 				name = ROM_artillery_modernization
 				bonus = 1.0
-				uses = 1
+				uses = 2
 				category = artillery
 			}
 		}
@@ -4043,6 +4043,68 @@ ROM_join_allies
 		completion_reward = {
 			custom_effect_tooltip = mountain_guns_tt
 			hidden_effect = { set_technology = { mountain_gun = 1 } }
+		}
+	}
+
+	focus = {
+		id = ROM_reinforce_the_army
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = ROM_vanatori_de_munte }
+		x = -3
+		y = 2
+		relative_position_id = ROM_the_zb_53
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = ROM_reinforce_the_army
+		}
+	}
+
+	focus = {
+		id = ROM_Division_Mobilization_Training
+		icon = GFX_focus_generic_full_social_mobilization
+		prerequisite = { focus = ROM_reinforce_the_army }
+		x = 0
+		y = 1
+		relative_position_id = ROM_reinforce_the_army
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = ROM_Division_Mobilization_Training
 		}
 	}
 
@@ -4413,42 +4475,6 @@ ROM_join_allies
 	}
 
 	focus = {
-		id = ROM_acquire_mechanized
-		icon = GFX_focus_generic_mechanized
-		prerequisite = { focus = ROM_the_armored_division	}
-		x = 2
-		y = 1
-		relative_position_id = ROM_the_armored_division
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = ROM_acquire_modern_tanks
-				bonus = 1.0
-				uses = 1
-				category = cat_mechanized_equipment
-			}
-		}
-	}
-
-	focus = {
 		id = ROM_mobile_tank_destroyers
 		icon = GFX_goal_generic_build_tank
 		prerequisite = { focus = ROM_acquire_modern_tanks }
@@ -4483,7 +4509,7 @@ ROM_join_allies
 				custom_effect_tooltip = available_mio_tt
 				show_mio_tooltip = ROM_leonidas_works_organization
 				mio:ROM_leonidas_works_organization = {
-					add_mio_funds = 2500
+					add_mio_funds = 3000
 				}
 			}
 			else = {
@@ -4523,6 +4549,41 @@ ROM_join_allies
 			add_ideas = ROM_Armored_Army
 		}
 	}
+
+	focus = {
+		id = ROM_Armored_Army_2
+		icon = GFX_focus_generic_tank_assault
+		prerequisite = { focus = ROM_Armored_Army }
+		x = 0
+		y = 1
+		relative_position_id = ROM_Armored_Army
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ROM_Armored_Army
+				add_idea = ROM_Armored_Army_2
+			}
+		}
+	}
+
 
 	focus = {
 		id = ROM_the_maresal
@@ -4600,7 +4661,7 @@ ROM_join_allies
 	focus = {
 		id = ROM_expand_the_galati_shipyards
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 67
+		x = 57
 		y = 0
 
 		cost = 10
