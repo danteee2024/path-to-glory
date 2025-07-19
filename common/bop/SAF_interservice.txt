@@ -46,7 +46,7 @@ SAF_communism_struggle = {
 			max = -0.1
 	
 			modifier = {
-				max_planning_factor = 0.05
+				max_planning = 0.075
 				justify_war_goal_time = -0.25
 			}
 		}
@@ -56,7 +56,7 @@ SAF_communism_struggle = {
 			min = -1
 			max = -0.55
 			modifier = {
-			    max_planning_factor = 0.1
+			    max_planning_factor = 0.15
 				justify_war_goal_time = -0.5
 			}
 		}
