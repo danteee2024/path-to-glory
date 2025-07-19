@@ -26,7 +26,7 @@ ideas = {
 			modifier = {
 			}
 			research_bonus = {
-				industry = -0.20
+				industry = -0.10
 			}
 		}
 		ROM_agrarian_reform_start = {
@@ -43,10 +43,10 @@ ideas = {
 			}
 			
 			modifier = {
-				stability_factor = -0.05
+				stability_factor = -0.02
 			}
 			research_bonus = {
-				industry = -0.50
+				industry = -0.30
 			}
 		}
 
@@ -66,10 +66,9 @@ ideas = {
 			}
 			
 			modifier = {
-				max_fuel_factor = 0.3
-				industrial_capacity_factory = 0.05
-				production_factory_max_efficiency_factor = 0.02
-				production_speed_buildings_factor = 0.10					
+				max_fuel_factor = 0.1
+				production_speed_buildings_factor = 0.10		
+				min_export = 0.05		
 			}
 		}
 
@@ -91,13 +90,13 @@ ideas = {
 			}
 			
 			modifier = {
-				max_fuel_factor = 0.5
-				industrial_capacity_factory = 0.15
-				production_factory_max_efficiency_factor = 0.05
+				max_fuel_factor = 0.2
 				production_speed_buildings_factor = 0.10
+				global_building_slots_factor = 0.10
+				min_export = 0.1
 			}
 		}
-		ROM_the_resource_curse_1 = { #The Oil Must Flow 
+			ROM_the_resource_curse_1 = { #The Oil Must Flow 
 
 			picture = can_wartime_prices_and_trade_board
 
@@ -114,7 +113,7 @@ ideas = {
 				stability_factor = -0.1
 				local_resources_factor = 0.15
 				min_export = 0.1
-				consumer_goods_factor = -0.15
+				consumer_goods_factor = 0.1
 			}
 		}
 
@@ -136,7 +135,6 @@ ideas = {
 				stability_factor = -0.15
 				local_resources_factor = 0.2
 				min_export = 0.15
-				consumer_goods_factor = -0.24
 			}
 		}
 
@@ -158,7 +156,7 @@ ideas = {
 				stability_factor = -0.2
 				local_resources_factor = 0.25
 				min_export = 0.2
-				consumer_goods_factor = -0.3
+				consumer_goods_factor = -0.1
 			}
 		}
 		ROM_industrialization_1 = {
@@ -203,7 +201,7 @@ ideas = {
 					
 			modifier = {
 				stability_factor = -0.45
-				consumer_goods_factor = 0.45
+				consumer_goods_factor = 0.4
 				local_resources = -0.5	
 				production_speed_industrial_complex_factor = 0.1
 
@@ -230,7 +228,7 @@ ideas = {
 			
 			modifier = {
 				stability_factor = -0.5
-				consumer_goods_factor = 0.6
+				consumer_goods_factor = 0.5
 				local_resources = -0.55	
 				production_speed_industrial_complex_factor = 0.2
 
@@ -252,6 +250,7 @@ ideas = {
 			}
 
 			modifier = {
+				consumer_goods_factor = -0.25
 				industrial_capacity_factory = 0.10
 				production_factory_max_efficiency_factor = 0.05
 				production_speed_buildings_factor = 0.30
@@ -260,6 +259,461 @@ ideas = {
 				economy_cost_factor = -0.25
 			}
 		}
+
+		ROM_The_Empire_0 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = bra_monarchist_uprising
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.05
+			}
+		}
+
+		ROM_The_Great_Empire = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = bra_monarchist_uprising
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.1
+				compliance_growth = 0.15
+				resistance_growth = -0.15
+			}
+		}
+
+		ROM_Institute_Royal = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = ARG_resource_extration_focus
+
+			removal_cost = -1
+
+			modifier = {
+			neutrality_drift = 0.2
+			}
+		}
+
+			ROM_Support_Local_Industry = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = man_five_year_plan_industry
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+		ROM_Support_Local_Industry_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = man_five_year_plan_industry
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				industrial_capacity_factory = 0.1
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+			}
+		}
+
+		ROM_Support_Local_Industry_3 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = man_five_year_plan_industry
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				industrial_capacity_factory = 0.1
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
+			ROM_Joint_Operations_Planning = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = chi_army_corruption3
+
+			removal_cost = -1
+
+			modifier = {
+				planning_speed = 0.1
+				max_planning = 0.05
+			}
+		}
+
+		ROM_The_Great_Army = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = SOV_politicized_military_ccp_sov_compatibility
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = 0.05
+				org_loss_when_moving = -0.05
+			}
+		}
+
+		ROM_The_Left = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = generic_communism_drift_bonus
+
+			removal_cost = -1
+
+			modifier = {
+				communism_drift = 0.1
+			}
+		}
+
+		ROM_The_Right = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = generic_fascism_drift_bonus
+
+			removal_cost = -1
+
+			modifier = {
+				fascism_drift = 0.1
+			}
+		}
+
+		ROM_The_Right_Leader = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = generic_fascism_drift_bonus
+
+			removal_cost = -1
+
+			modifier = {
+				fascism_drift = 0.2
+				stability_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+
+		ROM_The_Left_Leader = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = generic_communism_drift_bonus
+
+			removal_cost = -1
+
+			modifier = {
+				communism_drift = 0.2
+				stability_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+
+		ROM_Defense_Plan = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = hol_expand_the_colonial_army
+			
+			removal_cost = -1
+
+			modifier = {
+				supply_consumption_factor = -0.1
+				army_defence_against_major_factor = 0.05
+			}
+		}
+
+		ROM_Attack_Plan = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = hol_expand_the_colonial_army
+
+			removal_cost = -1
+
+			modifier = {
+				army_speed_factor = 0.05
+				army_attack_against_major_factor = 0.05
+			}
+		}
+
+
+		
+		ROM_The_Great_Industry = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = generic_improved_industries
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+			}
+		}
+
+			ROM_King_Micheals_Coup_Cost = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = ARG_resource_extration_focus
+
+			removal_cost = -1
+
+			modifier = {
+			political_power_factor = -0.1
+			consumer_goods_factor = 0.1
+			}
+		}
+
+		ROM_The_Democrats = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = generic_democratic_drift_bonus
+
+			removal_cost = -1
+
+			modifier = {
+				democratic_drift = 0.1
+			}
+		}
+
+		ROM_Democratic_King = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = HUN_hungarian_monarchy_democratic
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.1
+				democratic_drift = 0.2
+			}
+		}
+
+		ROM_The_Great_Democratic_Kingdom = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = HUN_hungarian_monarchy_democratic
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.15
+				democratic_drift = 0.3
+			}
+		}
+
+		ROM_Carols_Industrial_Plan = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = SOV_defense_industry_artillery_bonus_ccp_sov_compatibility
+
+			removal_cost = -1
+
+			modifier = {
+				}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.10 instant = yes
+				}
+				support_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+			
+		}
+
+		ROM_Organize_the_Royal_Army = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = chi_army_corruption3
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_Factor = 0.1
+				org_loss_when_moving = -0.05
+				}
+			}
+			
+			ROM_Royal_Army_Reform = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = MEX_politicised_army_2 
+
+			removal_cost = -1
+
+			modifier = {
+				experience_gain_army = 0.1
+				training_time_factor = -0.1
+				}
+			}
+
+
 		ROM_revenge_against_soviet = {
 
 			picture = anti_soviet_pact
@@ -688,10 +1142,10 @@ ideas = {
 			}
 			
 			modifier = {				
-				resistance_damage_to_garrison = -0.2 
-				foreign_subversive_activites = -0.2
 				army_core_attack_factor = 0.05
 				army_core_defence_factor = 0.05
+				resistance_damage_to_garrison = -0.1
+				foreign_subversive_activites = -0.1
 			}
 		}
 
@@ -716,6 +1170,8 @@ ideas = {
 
 		ROM_preserve_greater_romania = {
 
+			picture = ROM_preserve_greater_romania
+
 			removal_cost = -1
 			
 			allowed = {
@@ -728,8 +1184,34 @@ ideas = {
 
 			
 			modifier = {
-				guarantee_tension = -1.0
-				guarantee_cost = -0.5
+				democratic_drift = -0.05
+				neutrality_drift = -0.05
+				stability_factor = -0.1
+				war_support_factor = -0.1
+			}
+		}
+
+		ROM_Greater_Romania = {
+
+			picture = ROM_preserve_greater_romania
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+				has_government = democratic 
+			}				
+
+			
+			modifier = {
+				democratic_drift = -0.1
+				neutrality_drift = -0.1
+				political_power_factor = 0.1
+				stability_factor = 0.1
+				war_support_factor = 0.1
 			}
 		}
 
@@ -752,7 +1234,7 @@ ideas = {
 			}
 		}
 
-		ROM_a_deal_with_the_devil_2 = {
+		ROM_Peasent_Militias = {
 
 			picture = generic_deal_with_the_devil
 
@@ -767,8 +1249,28 @@ ideas = {
 			}
 			
 			modifier = {
-				communism_drift = 0.01
-				conscription = 0.01
+				conscription = 0.05
+				mobilization_speed = 0.05
+			}
+		}
+
+		ROM_Political_Left_Change = {
+
+			picture = HUN_resurgent_communist_party_idea
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				fascism_drift = -0.02
+				political_power_factor = 0.10
 			}
 		}
 
@@ -863,6 +1365,139 @@ ideas = {
 			
 			modifier = {
 				army_leader_cost_factor = -0.3
+			}
+		}
+
+		ROM_Mountain_Training = {
+
+			picture = generic_mountain_warfare
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}
+			
+			modifier = {
+				modifier_army_sub_unit_mountaineers_attack_factor = 0.05
+				modifier_army_sub_unit_mountaineers_defence_factor = 0.05
+			}
+		}
+
+		ROM_Crucible_of_Romanian_Steel = {
+
+			picture = man_five_year_plan_tank
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}
+			
+			modifier = {
+			}
+			equipment_bonus = {
+				light_tank_chassis = {
+					build_cost_ic = -0.10 instant = yes
+					soft_attack = 0.1
+					hard_attack = 0.1
+					breakthrough = 0.05
+				}
+				medium_tank_chassis = {
+					build_cost_ic = -0.05
+					hard_attack = 0.1
+					soft_attack = 0.05
+					breakthrough = 0.05
+				}
+			}
+		}
+		ROM_reinforce_the_army = {
+
+			picture = generic_manpower_bonus
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}
+			
+			modifier = {
+				land_reinforce_rate = 0.02
+				army_morale_factor = 0.10
+			}
+		}
+
+		ROM_Refined_Operational_Planning = {
+
+			picture = SOV_politicized_military_humanism_ccp_sov_compatibility
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}
+			
+			modifier = {
+				max_planning = 0.05
+				planning_speed = 0.05
+			}
+		}
+
+		ROM_Armored_Army = {
+
+			picture = man_five_year_plan_tank
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}
+			
+			modifier = {
+				army_armor_attack_factor = 0.10
+				army_armor_defence_factor = 0.1
+			}
+		}
+
+		ROM_Armored_Army_2 = {
+
+			picture = man_five_year_plan_tank
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}
+			
+			modifier = {
+				army_armor_attack_factor = 0.10
+				army_armor_defence_factor = 0.10
+				army_armor_speed_factor = 0.05
+				org_loss_when_moving = -0.10
+				army_org_regain = 0.10
 			}
 		}
 
