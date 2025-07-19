@@ -6836,15 +6836,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_POLITICAL FOCUS_FILTER_MILITARY_CHARACTER }
 
 		completion_reward = {
-			add_ideas = FIN_lotta_svard
-
-			hidden_effect = {
-				set_technology = {
-					lotta_svard_tech = 1
-					popup = no
-				}
-			}
-
+			
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = FIN_hilja_riipinen
 
@@ -11868,7 +11860,7 @@ focus_tree = {
 		icon = GFX_focus_FIN_utilize_the_sami
 		prerequisite = { focus = FIN_winter_warfare }
 
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = FIN_winter_warfare
 		cost = 5
@@ -11892,14 +11884,15 @@ focus_tree = {
 	focus = {
 		id = FIN_long_range_patrols
 		icon = GFX_focus_FIN_sissi
-		prerequisite = { focus = FIN_winter_warfare }
-		prerequisite = { focus = FIN_motti_tactics }
+		prerequisite = { focus = FIN_national_armor_focus focus = FIN_sissi }
 
 		x = 1
 		y = 1
-		relative_position_id = FIN_winter_warfare
-		cost = 5
+		relative_position_id = FIN_sissi
+		cost = 10
 		available = {
+			num_of_factories < 75
+			date > 1941.1.1
 		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL }
@@ -11945,13 +11938,12 @@ focus_tree = {
 	focus = {
 		id = FIN_sissi
 		icon = GFX_focus_FIN_the_cold_front
-		prerequisite = { focus = FIN_long_range_patrols }
 		prerequisite = { focus = FIN_finnish_radio_intelligence }
 		prerequisite = { focus = FIN_utilize_the_sami }
 		mutually_exclusive = { focus = FIN_national_armor_focus }
-		x = 1
+		x = -1
 		y = 1
-		relative_position_id = FIN_long_range_patrols
+		relative_position_id = FIN_finnish_radio_intelligence
 		cost =5 
 		available = {
 		}
