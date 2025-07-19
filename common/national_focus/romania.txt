@@ -991,6 +991,7 @@ focus = {
 			add_ideas = ROM_preserve_greater_romania
 			add_stability = -0.15
 			add_war_support = -0.15
+			remove_ideas = ROM_king_carol_ii_hedonist
 		}
 	}
 
@@ -1893,10 +1894,6 @@ focus = {
 		}
 
 		available = {
-			is_subject = no
-			communism < 0.5
-			fascism < 0.5
-			neutrality < 0.5
 		}
 
 		bypass = {
@@ -2865,6 +2862,7 @@ ROM_join_allies
 				remove_idea = ROM_king_carol_ii_hedonist
 			}
 			remove_country_leader_trait = hedonist
+			add_country_leader_trait = Empire_Builder
 		}
 	}
 
@@ -4475,7 +4473,12 @@ ROM_join_allies
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = ROM_acquire_modern_tanks
+			add_tech_bonus = {
+				name = ROM_acquire_modern_tanks
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
 			add_tech_bonus = {
 				name = ROM_acquire_modern_tanks
 				bonus = 1.0
@@ -4599,12 +4602,10 @@ ROM_join_allies
 	focus = {
 		id = ROM_the_maresal
 		icon = GFX_goal_generic_army_tanks
-		prerequisite = { focus = ROM_mobile_tank_destroyers }
-		prerequisite = { focus = ROM_artillery_modernization }
+		prerequisite = { focus = ROM_Crucible_of_Romanian_Steel }
 		x = 0
 		y = 1
-		relative_position_id = ROM_mobile_tank_destroyers
-
+		relative_position_id = ROM_Crucible_of_Romanian_Steel
 		cost = 10
 
 		ai_will_do = {
@@ -4637,10 +4638,11 @@ ROM_join_allies
 		focus = {
 		id = ROM_Crucible_of_Romanian_Steel
 		icon = GFX_focus_generic_tank_production
-		prerequisite = { focus = ROM_the_maresal }
+		prerequisite = { focus = ROM_mobile_tank_destroyers }
+		prerequisite = { focus = ROM_artillery_modernization }
 		x = 0
 		y = 1
-		relative_position_id = ROM_the_maresal
+		relative_position_id = ROM_mobile_tank_destroyers
 
 		cost = 10
 

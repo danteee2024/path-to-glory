@@ -337,7 +337,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				democratic_drift = 0.5
+				democratic_drift = 0.3
 			}
 		}
 
@@ -459,7 +459,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				communism_drift = 0.3
+				communism_drift = 0.2
 			}
 		}
 
@@ -478,7 +478,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				fascism_drift = 0.3
+				fascism_drift = 0.2
 			}
 		}
 
@@ -497,7 +497,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				fascism_drift = 0.5
+				fascism_drift = 0.3
 				stability_factor = 0.05
 				war_support_factor = 0.05
 			}
@@ -518,7 +518,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				communism_drift = 0.5
+				communism_drift = 0.3
 				stability_factor = 0.05
 				war_support_factor = 0.05
 			}
@@ -627,7 +627,7 @@ ideas = {
 
 			modifier = {
 				political_power_factor = 0.1
-				democratic_drift = 0.5
+				democratic_drift = 0.3
 			}
 		}
 
