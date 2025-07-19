@@ -76,7 +76,15 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			if = {
+				NOT = {
+					has_idea = free_trade
+				}	
+			}
 			add_ideas = free_trade
+			else = {
+				add_political_power = 150
+			}
 		}
 	}
 
@@ -90,7 +98,7 @@ focus_tree = {
 		prerequisite = { focus = ROM_national_recovery }
 		mutually_exclusive = { focus = ROM_the_stabilization_plan }
 		icon = GFX_focus_generic_resource_extraction
-		x = -3
+		x = -5
 		y = 1
 		relative_position_id = ROM_national_recovery
 		cost = 10
@@ -171,7 +179,7 @@ focus_tree = {
 				category = synth_resources
 			}		
 		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_OIL}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -243,12 +251,19 @@ focus_tree = {
 		id = ROM_expand_the_axis_oil_trade
 		bypass = {
 		}
-		prerequisite = {focus = ROM_oil_refining_infrastructure }	
-		icon = GFX_focus_usa_reestablish_the_gold_standard
-		x = -2
+		prerequisite = {focus = ROM_national_recovery }	
+		icon = GFX_focus_PER_increase_oil_sales
+		x = -7
 		y = 1
-		relative_position_id = ROM_oil_refining_infrastructure
+		relative_position_id = ROM_national_recovery
 		cost = 10
+
+		available = {
+			OR = {
+			has_completed_focus = ROM_reduce_reliance_on_oil
+			has_completed_focus = ROM_reduce_reliance_on_foreign_imports
+			}	
+		}
 
 		available_if_capitulated = yes
 
@@ -257,7 +272,7 @@ focus_tree = {
 			46 = {
 				add_resource = {
 					type = oil
-					amount = 20
+					amount = 16
 				}
 			}
 			IF = {
@@ -327,25 +342,6 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = ROM_the_resource_curse_1
-				}
-				swap_ideas = {
-					remove_idea = ROM_the_resource_curse_1
-					add_idea = ROM_the_resource_curse_2
-				}
-			}
-			if = {
-				limit = {
-					has_idea = ROM_the_resource_curse_2
-				}
-				swap_ideas = {
-					remove_idea = ROM_the_resource_curse_2
-					add_idea = ROM_the_resource_curse_3
-				}
-			}
-
 			83 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -406,11 +402,11 @@ focus_tree = {
 			46 = {
 				add_resource = {
 					type = oil
-					amount = 20
+					amount = 16
 				}
 				add_resource = {
 					type = steel
-					amount = 12
+					amount = 8
 				}
 			}
 		}
@@ -487,7 +483,7 @@ focus = {
 		y = 1
 		relative_position_id = ROM_ensure_agricultural_self_sufficiency
 
-		cost = 20
+		cost = 15
 
 		ai_will_do = {
 			factor = 80
@@ -498,22 +494,12 @@ focus = {
 		}
 
 		available = {
-			ROM = { controls_state = 76 }
-			ROM = { controls_state = 83 }
-			ROM = { controls_state = 84 }
-			ROM = { controls_state = 82 }
-			ROM = { controls_state = 81 }
-			ROM = { controls_state = 46 }
-			ROM = { controls_state = 77 }
-			ROM = { controls_state = 971 }
-			ROM = { controls_state = 766 }
-			ROM = { controls_state = 78 }
-			ROM = { controls_state = 79 }
-			ROM = { controls_state = 80 }
+			any_controlled_state = {
+				is_core_of = ROOT
+			}
 		}
 
 		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -521,17 +507,20 @@ focus = {
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
+
+		
+
 		completion_reward = {
+			custom_effect_tooltip = ROM_Roads_tt
 			every_core_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
 					free_building_slots = {
-						building = industrial_complex
-						size > 0
+						building = infrastructure
+						size < 5
 						include_locked = yes
 					}
 				}
-				random_select_amount = 12
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -662,7 +651,7 @@ focus = {
 		prerequisite = { focus = ROM_national_recovery }
 		
 		icon = GFX_goal_generic_neutrality_focus
-		x = 3
+		x = 5
 		y = 1
 		relative_position_id = ROM_national_recovery
 		cost = 10
@@ -791,7 +780,6 @@ focus = {
 		ai_will_do = {
 			factor = 9
 		}
-
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
@@ -809,6 +797,26 @@ focus = {
 		}
 
 		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = {
+					46
+				}
+				limit = {
+					ROOT = { has_full_control_of_state = PREV } 
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = ROM_malaxa_IC
+			}
 			random_owned_controlled_state = {
 				prioritize = {
 					46
@@ -890,7 +898,6 @@ focus = {
 				}
 			}
 			add_ideas = low_economic_mobilisation
-			remove_ideas = ROM_the_resource_curse_1
 			remove_ideas = ROM_agrarian_reform_start
 			swap_ideas = {
 				remove_idea = ROM_industrialization_3
@@ -909,10 +916,121 @@ focus = {
 	}
 
 	focus = {
+		id = ROM_embrace_the_curse
+		icon = GFX_focus_DEN_expand_ivittuut_mine
+		prerequisite = { focus = ROM_expand_ploiesti_oil_production
+		focus = ROM_the_stabilization_plan }
+		mutually_exclusive = {
+			focus = ROM_break_the_curse
+		}
+		x = -4
+		y = 1
+		relative_position_id = ROM_the_stabilization_plan
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_idea = ROM_the_resource_curse_1
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ROM_the_resource_curse_1
+				add_idea = ROM_the_resource_curse_2
+			}
+		}
+	} 
+
+	focus = {
+		id = ROM_bless_the_curse
+		icon = GFX_focus_generic_currency_reforms
+		prerequisite = { focus = ROM_embrace_the_curse }
+		x = 0
+		y = 1
+		relative_position_id = ROM_embrace_the_curse
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ROM_the_resource_curse_2
+				add_idea = ROM_the_resource_curse_3
+			}
+		}
+	} 
+
+	focus = {
+		id = ROM_break_the_curse
+		icon = GFX_focus_BUL_destroy_the_zveno
+		prerequisite = { focus = ROM_the_stabilization_plan }
+		mutually_exclusive = {
+			focus = ROM_embrace_the_curse
+		}
+		x = -2
+		y = 1
+		relative_position_id = ROM_the_stabilization_plan
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_idea = ROM_the_resource_curse_1
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+		}
+
+		completion_reward = {
+				remove_ideas = ROM_the_resource_curse_1
+		}
+	} 
+
+	focus = {
 		id = ROM_expand_the_university_of_bucharest
 		icon = GFX_focus_research
 		prerequisite = { focus = ROM_national_recovery }
-		x = 5
+		x = 7
 		y = 1
 		relative_position_id = ROM_national_recovery
 
@@ -931,12 +1049,47 @@ focus = {
 	}
 
 	focus = {
-		id = ROM_exploit_the_baita_mines
-		icon = GFX_focus_generic_nuclear_development
+		id = ROM_nuclear_bomb_project
+		icon = GFX_focus_wonderweapons
 		prerequisite = { focus = ROM_expand_the_university_of_bucharest }
-		x = 5
-		y = 2
-		relative_position_id = ROM_national_recovery
+		x = 0
+		y = 1
+		relative_position_id = ROM_expand_the_university_of_bucharest
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_nuclear
+				value = 0.75
+			}
+
+			add_tech_bonus = {
+				name = ROM_nuclear_bomb_project
+				bonus = 1.0
+				uses = 1
+				category = nuclear
+			}
+
+		}
+	}
+
+	focus = {
+		id = ROM_exploit_the_baita_mines
+		icon = GFX_focus_generic_uranium_extraction
+		prerequisite = { focus = ROM_nuclear_bomb_project }
+		x = 0
+		y = 1
+		relative_position_id = ROM_nuclear_bomb_project
 
 		cost = 10
 		available = {
@@ -965,7 +1118,7 @@ focus = {
 		id = ROM_preserve_greater_romania
 		icon = GFX_focus_rom_preserve_romania
 		mutually_exclusive = { focus = ROM_Institute_Royal }
-		x = 17
+		x = 19
 		y = 0
 
 		cost = 10
@@ -989,8 +1142,6 @@ focus = {
 
 		completion_reward = {
 			add_ideas = ROM_preserve_greater_romania
-			add_stability = -0.15
-			add_war_support = -0.15
 			remove_ideas = ROM_king_carol_ii_hedonist
 		}
 	}
@@ -998,7 +1149,7 @@ focus = {
 	
 	focus = {
 		id = ROM_The_Left
-		icon = GFX_goal_support_communism
+		icon = GFX_SOV_the_komsomol_ccp_2d_sov_compatibility
 		prerequisite = {
 			focus = ROM_preserve_greater_romania
 		}
@@ -1105,12 +1256,11 @@ focus = {
 		id = ROM_War_for_Greater_Romania
 		icon = GFX_focus_generic_attack_hungary
 	    prerequisite = {
-			focus = ROM_split_czechoslovakia
-			focus = ROM_divide_yugoslavia
+			focus = ROM_Greater_Romania
 		}
 		x = 0
-		y = 4
-		relative_position_id = ROM_preserve_greater_romania
+		y = 1
+		relative_position_id = ROM_Greater_Romania
 
 		cost = 5
 
@@ -1147,10 +1297,11 @@ focus = {
 		id = ROM_The_Great_Industry
 		icon = GFX_focus_generic_industry_3
 		prerequisite = {
-			focus = ROM_War_for_Greater_Romania
+			focus = ROM_Attack_Plan
+			focus = ROM_Defense_Plan
 		}
 		x = 0
-		y = 5
+		y = 4
 		relative_position_id = ROM_preserve_greater_romania
 
 		cost = 10
@@ -1181,7 +1332,7 @@ focus = {
 		id = ROM_The_Right_Leader
 		icon = GFX_goal_support_fascism
 		prerequisite = {
-			focus = ROM_The_Great_Industry
+			focus = ROM_Greater_Romanian_Researchers
 		}
 		prerequisite = {
 			focus = ROM_Ion_Antonescu_Leadership
@@ -1226,7 +1377,7 @@ focus = {
 		id = ROM_The_Left_Leader
 		icon = GFX_goal_support_communism
 		prerequisite = {
-			focus = ROM_The_Great_Industry
+			focus = ROM_Greater_Romanian_Researchers
 		}
 		prerequisite = {
 			focus = ROM_Political_Left_Change
@@ -1271,6 +1422,9 @@ focus = {
 		id = ROM_Greater_Romania
 		icon = GFX_focus_generic_military_dictatorship
 		prerequisite = {
+			focus = ROM_Greater_Romanian_Researchers
+		}
+		prerequisite = {
 			focus = ROM_The_Left_Leader
 			focus = ROM_The_Right_Leader
 		}
@@ -1305,14 +1459,13 @@ focus = {
 		}
 	}
 
-		focus = {
-		id = ROM_Greater_Romanias_Researcher
+	focus = {
+		id = ROM_Greater_Romanian_Researchers
 		icon = GFX_focus_research
-		prerequisite = { focus = ROM_The_Right_Leader
-		focus = ROM_The_Left_Leader  }
-		x = -2
-		y = 0
-		relative_position_id = ROM_Greater_Romania
+		prerequisite = { focus = ROM_The_Great_Industry }
+		x = 0
+		y = 1
+		relative_position_id = ROM_The_Great_Industry
 
 		cost = 5
 
@@ -1340,13 +1493,13 @@ focus = {
 	focus = {
 		id = ROM_Attack_Plan
 		icon = GFX_focus_SOV_the_glory_of_the_red_army_alternative
-		prerequisite = { focus = ROM_Greater_Romania  }
+		prerequisite = { focus = ROM_The_Great_Army }
 		mutually_exclusive = {
 			focus = ROM_Defense_Plan
 		}
 		x = -1
 		y = 1
-		relative_position_id = ROM_Greater_Romania
+		relative_position_id = ROM_The_Great_Army
 
 		cost = 5
 
@@ -1374,13 +1527,13 @@ focus = {
 	focus = {
 		id = ROM_Defense_Plan
 		icon = GFX_SOV_muster_the_old_guard_ccp_2d_sov_compatibility
-		prerequisite = { focus = ROM_Greater_Romania  }
+		prerequisite = { focus = ROM_The_Great_Army }
 		mutually_exclusive = {
 			focus = ROM_Attack_Plan
 		}
 		x = 1
 		y = 1
-		relative_position_id = ROM_Greater_Romania
+		relative_position_id = ROM_The_Great_Army
 
 		cost = 5
 
@@ -1413,7 +1566,7 @@ focus = {
 		y = 1
 		relative_position_id = ROM_The_Left
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -1439,7 +1592,7 @@ focus = {
 
 	focus = {
 		id = ROM_form_peasant_militias
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_generic_spur_communist_revolutions
 		prerequisite = { focus =  ROM_The_Left_Rises }
 		x = -1
 		y = 1
@@ -1535,13 +1688,13 @@ focus = {
 
 	focus = {
 		id = ROM_join_comintern
-		icon = GFX_focus_generic_join_comintern
+		icon = GFX_focus_GER_alliance_with_the_ussr
 		prerequisite = { focus = 	ROM_Political_Left_Change }
 		x = 0
 		y = 4
 		relative_position_id =  ROM_The_Left_Rises
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1587,7 +1740,7 @@ focus = {
 		y = 1
 		relative_position_id = ROM_The_Right
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 9
@@ -1697,13 +1850,13 @@ focus = {
 
 	focus = {
 		id = ROM_join_axis
-		icon = GFX_goal_support_fascism
+		icon = GFX_focus_chi_mission_to_germany
 		prerequisite = { focus = ROM_Ion_Antonescu_Leadership }
 		x = 0
 		y = 4
 		relative_position_id = ROM_The_Iron_Guard_Rises
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1782,8 +1935,9 @@ focus = {
 				}
 				add_resource = {
 					type = oil
-					amount = 13
+					amount = 16
 				}
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = fuel_silo
 					level = 2
@@ -1800,13 +1954,10 @@ focus = {
 	focus = {
 		id = ROM_divide_yugoslavia
 		icon = GFX_focus_generic_attack_yugoslavia
-		prerequisite = { focus = ROM_The_Great_Army }
-		mutually_exclusive = {
-			focus = ROM_split_czechoslovakia
-		}
-		x = -1
+		prerequisite = { focus = ROM_Greater_Romania }
+		x = -2
 		y = 1
-		relative_position_id = ROM_The_Great_Army
+		relative_position_id = ROM_Greater_Romania
 		will_lead_to_war_with = YUG
 		cost = 5
 
@@ -1840,13 +1991,10 @@ focus = {
 	focus = {
 		id = ROM_split_czechoslovakia
 		icon = GFX_focus_generic_attack_czechoslovakia
-		prerequisite = { focus = ROM_The_Great_Army }
-		mutually_exclusive = {
-			focus = ROM_divide_yugoslavia
-		}
-		x = 1
+		prerequisite = { focus = ROM_Greater_Romania }
+		x = 2
 		y = 1
-		relative_position_id = ROM_The_Great_Army
+		relative_position_id = ROM_Greater_Romania
 		will_lead_to_war_with = CZE
 		cost = 5
 
@@ -1884,8 +2032,9 @@ focus = {
 	focus = {
 		id = ROM_Institute_Royal
 		icon = GFX_SOV_romanov_reconstruction_ccp_2d_sov_compatibility
-		x = 28
+		x = 11
 		y = 0
+		relative_position_id = ROM_preserve_greater_romania
 
 		cost = 10
 
@@ -2024,6 +2173,7 @@ focus = {
 			set_cosmetic_tag = ROM_The_Empire
 			add_stability = 0.1
 			add_war_support = 0.1
+			add_country_leader_trait = Empire_Builder
 		}		
 	}
 	focus = {
@@ -2094,10 +2244,10 @@ focus = {
 	focus = {
 		id = ROM_Carols_Industrial_Plan
 		icon = GFX_focus_generic_license_production
-		prerequisite = { focus = ROM_the_empire }
-		x = 2
+		prerequisite = { focus = ROM_his_majestys_loyal_government }
+		x = 0
 		y = 1
-		relative_position_id = ROM_the_empire
+		relative_position_id = ROM_his_majestys_loyal_government
 
 		cost = 10
 
@@ -2121,13 +2271,73 @@ focus = {
 		}		
 	}
 
+	focus = {
+		id = ROM_building_the_empire
+		icon = GFX_SOV_heavy_industry_ccp_2d_sov_compatibility
+		prerequisite = { focus = ROM_the_royal_foundation }
+		x = 0
+		y = 1
+		relative_position_id = ROM_the_royal_foundation
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+					}
+					is_core_of = ROOT
+					NOT = { has_state_flag = ROM_expand_the_war_industry_2mil }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
 		focus = {
-		id = ROM_The_Empire_is_arming_itself
+		id = ROM_arming_the_empire
 		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = ROM_all_parties_must_end }
-		x = -1
-		y = 4
-		relative_position_id = ROM_Carols_Industrial_Plan
+		prerequisite = { focus = ROM_building_the_empire }
+		x = 0
+		y = 1
+		relative_position_id = ROM_building_the_empire
 
 		cost = 10
 
@@ -2182,6 +2392,7 @@ focus = {
 			}
 		}
 	}
+
 	focus = {
 		id = ROM_king_michaels_coup
 		icon = GFX_focus_rom_coup
@@ -2229,7 +2440,8 @@ focus = {
 			}
 			remove_ideas = neutrality_idea
 			add_timed_idea = {
-				idea = ROM_King_Micheals_Coup_Cost days = 180
+				idea = ROM_King_Micheals_Coup_Cost 
+				months = 6
 			}
 		}
 	}
@@ -2337,54 +2549,18 @@ focus = {
 		}
 	}
 
-
-	focus = {
-		id = ROM_fortify_the_borders
-		icon = GFX_goal_generic_construct_military
-		prerequisite = { focus = ROM_Royal_Army_Reform  }
-		mutually_exclusive = {
-			focus = ROM_Fortify_the_Eastern_Marches
-		}
-		x = 2
-		y = 2
-		relative_position_id = ROM_Support_Local_Industry
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_ideas = ROM_fortify_the_borders
-		}
-	}
-
 	focus = {
 		id = ROM_join_allies
 		icon = GFX_goal_support_democracy
-		prerequisite = { focus = ROM_fortify_the_borders focus = ROM_Fortify_the_Eastern_Marches }
 		prerequisite = {
-			focus = ROM_Support_Local_Industry
+			focus = ROM_The_Great_Democratic_Kingdom
 		}
 		mutually_exclusive = {
 			focus = ROM_join_allies focus = ROM_join_the_Crowned_Brotherhood
 		}
-		x = -1
-		y = 1
-		relative_position_id = ROM_fortify_the_borders
+		x = 1
+		y = 3
+		relative_position_id = ROM_Support_Local_Industry
 
 		cost = 10
 
@@ -2477,7 +2653,7 @@ focus = {
 		y = 1
 		relative_position_id = ROM_Support_Local_Industry
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -2504,16 +2680,49 @@ focus = {
 		id = ROM_Change_of_the_Support_Industry_for_War
 		icon = GFX_focus_generic_military_industry
 		prerequisite = { 
-			focus = ROM_Researcher_Investment
-		}
-		mutually_exclusive = {
 			focus = ROM_Expand_the_Support_Industry
 		}
-		x = 1
+		x = 0
+		y = 1
+		relative_position_id = ROM_Expand_the_Support_Industry
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ROM_Support_Local_Industry_2
+				add_idea = ROM_Support_Local_Industry_3
+			}
+		}
+	}
+
+	focus = {
+		id = ROM_Expand_the_Support_Industry
+		icon = GFX_focus_generic_modernize_industry
+		prerequisite = {
+			focus = ROM_Researcher_Investment
+		}
+		x = 0
 		y = 1
 		relative_position_id = ROM_Researcher_Investment
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2540,54 +2749,13 @@ focus = {
 	}
 
 	focus = {
-		id = ROM_Expand_the_Support_Industry
-		icon = GFX_focus_generic_modernize_industry
-		prerequisite = {
-			focus = ROM_Researcher_Investment
-		}
-		mutually_exclusive = {
-			focus = ROM_Change_of_the_Support_Industry_for_War
-		}
-		x = -1
-		y = 1
-		relative_position_id = ROM_Researcher_Investment
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = ROM_Support_Local_Industry
-				add_idea = ROM_Support_Local_Industry_3
-			}
-		}
-	}
-
-	focus = {
 		id = ROM_The_Great_Democratic_Kingdom
 		icon = GFX_focus_AFG_parliamentary_democracy
-		prerequisite = { focus = ROM_Expand_the_Support_Industry
-			focus = ROM_Change_of_the_Support_Industry_for_War
-		}
-		
+		prerequisite = { focus = ROM_Support_Local_Industry }
+		prerequisite = { focus = ROM_Royal_Army_Reform }
 		x = 1
 		y = 1
-		relative_position_id = ROM_Expand_the_Support_Industry
+		relative_position_id = ROM_Support_Local_Industry
 
 		cost = 5
 
@@ -2620,13 +2788,15 @@ ROM_join_allies
 	focus = {
 		id = ROM_bringing_down_the_giants
 		icon = GFX_focus_generic_total_war
-		prerequisite = { focus = ROM_The_Great_Democratic_Kingdom }
+		prerequisite = {
+			focus = ROM_Change_of_the_Support_Industry_for_War
+		}
 		prerequisite = {
 			focus = ROM_join_allies focus = ROM_join_the_Crowned_Brotherhood
 		}
-		x = 1
+		x = -1
 		y = 1
-		relative_position_id = ROM_The_Great_Democratic_Kingdom
+		relative_position_id = ROM_join_allies
 
 		cost = 10
 
@@ -2787,19 +2957,18 @@ ROM_join_allies
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			add_political_power = 120
-			add_stability = 0.1
+			add_political_power = 100
+			add_country_leader_trait = disdain_for_politicians_1
 		}
 	}
 
 	focus = {
 		id = ROM_militarize_the_sentinels
 		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = ROM_his_majestys_loyal_government focus = ROM_Carols_Industrial_Plan }
-	
-		x = 1
+		prerequisite = { focus = ROM_institute_royal_dictatorship }
+		x = 2
 		y = 1
-		relative_position_id = ROM_his_majestys_loyal_government
+		relative_position_id = ROM_institute_royal_dictatorship
 
 		cost = 10
 
@@ -2828,10 +2997,12 @@ ROM_join_allies
 	focus = {
 		id = ROM_all_parties_must_end
 		icon = GFX_focus_rom_parties_end
-		prerequisite = { focus = ROM_militarize_the_sentinels }
-	
-		x = 1
-		y = 2
+		prerequisite = { focus = ROM_his_majestys_loyal_government }
+		prerequisite = {
+			focus = ROM_militarize_the_sentinels
+		}
+		x = 2
+		y = 1
 		relative_position_id = ROM_his_majestys_loyal_government
 
 		cost = 10
@@ -2849,7 +3020,6 @@ ROM_join_allies
 		}
 
 		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2862,20 +3032,22 @@ ROM_join_allies
 				remove_idea = ROM_king_carol_ii_hedonist
 			}
 			remove_country_leader_trait = hedonist
-			add_country_leader_trait = Empire_Builder
+			swap_ruler_traits = {
+				remove = disdain_for_politicians_1
+				add = disdain_for_politicians_2
+			}
 		}
 	}
-
 
 	focus = {
 		id = ROM_the_royal_foundation
 		icon = GFX_focus_research
-		prerequisite = { focus = ROM_all_parties_must_end }
-		x = -1
+		prerequisite = { focus = ROM_Carols_Industrial_Plan }
+		x = 1
 		y = 1
-		relative_position_id = ROM_all_parties_must_end
+		relative_position_id = ROM_Carols_Industrial_Plan
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -2901,13 +3073,10 @@ ROM_join_allies
 	focus = {
 		id = ROM_Fortify_the_Eastern_Marches
 		icon = GFX_focus_SWE_hedgehog_defense
-		prerequisite = { focus = ROM_Royal_Army_Reform }
-		mutually_exclusive = {
-			focus = ROM_fortify_the_borders
-		}
-		x = -2
-		y = 0
-		relative_position_id = ROM_the_royal_foundation
+		prerequisite = { focus = ROM_fortify_the_borders }
+		x = 0
+		y = 1
+		relative_position_id = ROM_fortify_the_borders
 
 		cost = 5
 
@@ -2948,13 +3117,16 @@ ROM_join_allies
 	focus = {
 		id = ROM_join_the_Crowned_Brotherhood
 		icon = GFX_focus_generic_monarchy_1 
-		prerequisite = {  focus = ROM_fortify_the_borders focus = ROM_Fortify_the_Eastern_Marches  }
+		prerequisite = {
+			focus = ROM_The_Great_Empire
+			focus = ROM_The_Great_Democratic_Kingdom
+		}
 		mutually_exclusive = {
 		focus = ROM_join_axis_0
 		}
-		x = -1
-		y = 1
-		relative_position_id = ROM_Fortify_the_Eastern_Marches
+		x = 0
+		y = 3
+		relative_position_id = ROM_Royal_Army_Reform
 
 		cost = 10
 
@@ -3002,16 +3174,15 @@ ROM_join_allies
 	focus = {
 		id = ROM_join_axis_0
 		icon = GFX_goal_support_fascism
-		prerequisite = { focus = ROM_fortify_the_borders focus = ROM_Fortify_the_Eastern_Marches }
 		prerequisite = {
-			focus = ROM_the_royal_foundation
+			focus = ROM_The_Great_Empire
 		}
 		mutually_exclusive = {
 			focus = ROM_join_the_Crowned_Brotherhood
 		}
-		x = 1
-		y = 1
-		relative_position_id = ROM_Fortify_the_Eastern_Marches
+		x = 2
+		y = 3
+		relative_position_id = ROM_Royal_Army_Reform
 
 		cost = 10
 
@@ -3060,13 +3231,11 @@ ROM_join_allies
 	focus = {
 		id = ROM_The_Great_Empire
 		icon = GFX_focus_ETH_the-italo_ethiopian_empire
-		prerequisite = { focus = ROM_join_the_Crowned_Brotherhood focus = ROM_join_axis_0 }
-		prerequisite = {
-			focus = ROM_The_Empire_is_arming_itself
-		}
-		x = 3
+		prerequisite = { focus = ROM_Carols_Industrial_Plan }
+		prerequisite = { focus = ROM_Royal_Army_Reform }
+		x = -1
 		y = 1
-		relative_position_id = ROM_join_the_Crowned_Brotherhood
+		relative_position_id = ROM_Carols_Industrial_Plan
 
 		cost = 5
 
@@ -3095,19 +3264,6 @@ ROM_join_allies
 		}		
 	}
 
-	
-
-	
-	
-
-
-	
-	
-
-
-
-
-
 	############################
 	######## AIR BRANCH ########
 	############################
@@ -3115,7 +3271,7 @@ ROM_join_allies
 	focus = {
 		id = ROM_expand_the_air_force
 		icon = GFX_goal_generic_build_airforce
-		x = 49
+		x = 52
 		y = 0
 
 		cost = 10
@@ -3726,49 +3882,6 @@ ROM_join_allies
 		}
 	}
 
-	focus = {
-		id = ROM_nuclear_bomb_project
-		icon = GFX_focus_wonderweapons
-		prerequisite = { focus = ROM_heavy_bombers }
-		x = 1
-		y = 2
-		relative_position_id = ROM_strategic_bomber_force
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-
-			add_breakthrough_progress = {
-				specialization = specialization_nuclear
-				value = 0.75
-			}
-
-			add_tech_bonus = {
-				name = ROM_nuclear_bomb_project
-				bonus = 1.0
-				uses = 1
-				category = nuclear
-			}
-
-		}
-	}
-
 	############################
 	####### ARMY BRANCH ########
 	############################
@@ -3776,7 +3889,7 @@ ROM_join_allies
 	focus = {
 		id = ROM_army_maneuvers
 		icon = GFX_goal_generic_army_doctrines
-		x = 39
+		x = 42
 		y = 0
 
 		cost = 10
@@ -3810,7 +3923,7 @@ ROM_join_allies
 		y = 1
 		relative_position_id = ROM_army_maneuvers
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -3845,6 +3958,69 @@ ROM_join_allies
 			}
 		}
 	}
+
+	focus = {
+		id = ROM_reserve_divisions
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = ROM_army_war_college }
+		x = 0
+		y = 1
+		relative_position_id = ROM_army_war_college
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			add_ideas = ROM_reserve_divisions
+		}
+	}
+
+	focus = {
+		id = ROM_fortify_the_borders
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = ROM_army_maneuvers  }
+		x = 3
+		y = 1
+		relative_position_id = ROM_army_maneuvers
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = ROM_fortify_the_borders
+		}
+	}
+
 
 	focus = {
 		id = ROM_the_zb_53
@@ -4161,7 +4337,7 @@ ROM_join_allies
 		y = 1
 		relative_position_id = ROM_army_maneuvers
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 9
@@ -4245,37 +4421,6 @@ ROM_join_allies
 	}
 
 	focus = {
-		id = ROM_reserve_divisions
-		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = ROM_army_war_college }
-		x = 0
-		y = 1
-		relative_position_id = ROM_army_war_college
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 5
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_MANPOWER }
-		completion_reward = {
-			add_ideas = ROM_reserve_divisions
-		}
-	}
-
-	focus = {
 		id = ROM_the_armored_division
 		icon = GFX_goal_generic_cavalry
 		prerequisite = { focus = ROM_army_maneuvers }
@@ -4284,7 +4429,7 @@ ROM_join_allies
 		y = 0
 		relative_position_id = ROM_royal_guards_divisions
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4674,7 +4819,7 @@ ROM_join_allies
 	focus = {
 		id = ROM_expand_the_galati_shipyards
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 57
+		x = 61
 		y = 0
 
 		cost = 10

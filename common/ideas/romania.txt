@@ -66,9 +66,7 @@ ideas = {
 			}
 			
 			modifier = {
-				max_fuel_factor = 0.3
-				industrial_capacity_factory = 0.1
-				production_factory_max_efficiency_factor = 0.02
+				max_fuel_factor = 0.1
 				production_speed_buildings_factor = 0.10		
 				min_export = 0.05		
 			}
@@ -92,14 +90,13 @@ ideas = {
 			}
 			
 			modifier = {
-				max_fuel_factor = 0.5
-				industrial_capacity_factory = 0.2
-				production_factory_max_efficiency_factor = 0.05
+				max_fuel_factor = 0.2
 				production_speed_buildings_factor = 0.10
+				global_building_slots_factor = 0.10
 				min_export = 0.1
 			}
 		}
-		ROM_the_resource_curse_1 = { #The Oil Must Flow 
+			ROM_the_resource_curse_1 = { #The Oil Must Flow 
 
 			picture = can_wartime_prices_and_trade_board
 
@@ -318,26 +315,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-			neutrality_drift = 0.5
-			}
-		}
-
-		ROM_The_Democrats = {
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = fascism
-			}
-
-			picture = generic_democratic_drift_bonus
-
-			removal_cost = -1
-
-			modifier = {
-				democratic_drift = 0.3
+			neutrality_drift = 0.2
 			}
 		}
 
@@ -377,8 +355,8 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = -0.1
 				industrial_capacity_factory = 0.1
-				production_factory_max_efficiency_factor = 0.05
-				production_factory_efficiency_gain_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
 			}
 		}
 
@@ -401,6 +379,8 @@ ideas = {
 				industrial_capacity_factory = 0.1
 				production_speed_industrial_complex_factor = 0.05
 				production_speed_arms_factory_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
 			}
 		}
 
@@ -459,7 +439,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				communism_drift = 0.2
+				communism_drift = 0.1
 			}
 		}
 
@@ -478,7 +458,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				fascism_drift = 0.2
+				fascism_drift = 0.1
 			}
 		}
 
@@ -497,7 +477,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				fascism_drift = 0.3
+				fascism_drift = 0.2
 				stability_factor = 0.05
 				war_support_factor = 0.05
 			}
@@ -518,7 +498,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				communism_drift = 0.3
+				communism_drift = 0.2
 				stability_factor = 0.05
 				war_support_factor = 0.05
 			}
@@ -587,9 +567,6 @@ ideas = {
 			}
 		}
 
-
-
-
 			ROM_King_Micheals_Coup_Cost = {
 
 			allowed = {
@@ -606,10 +583,28 @@ ideas = {
 
 			modifier = {
 			political_power_factor = -0.1
+			consumer_goods_factor = 0.1
 			}
 		}
 
+		ROM_The_Democrats = {
 
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			picture = generic_democratic_drift_bonus
+
+			removal_cost = -1
+
+			modifier = {
+				democratic_drift = 0.1
+			}
+		}
 
 		ROM_Democratic_King = {
 
@@ -627,7 +622,7 @@ ideas = {
 
 			modifier = {
 				political_power_factor = 0.1
-				democratic_drift = 0.3
+				democratic_drift = 0.2
 			}
 		}
 
@@ -647,13 +642,9 @@ ideas = {
 
 			modifier = {
 				political_power_factor = 0.15
-				democratic_drift = 0.6
-
+				democratic_drift = 0.3
 			}
 		}
-
-
-			
 
 		ROM_Carols_Industrial_Plan = {
 
@@ -1193,8 +1184,10 @@ ideas = {
 
 			
 			modifier = {
-				democratic_drift = -0.2
-				neutrality_drift = -0.2
+				democratic_drift = -0.05
+				neutrality_drift = -0.05
+				stability_factor = -0.1
+				war_support_factor = -0.1
 			}
 		}
 
@@ -1214,8 +1207,8 @@ ideas = {
 
 			
 			modifier = {
-				democratic_drift = -0.2
-				neutrality_drift = -0.2
+				democratic_drift = -0.1
+				neutrality_drift = -0.1
 				political_power_factor = 0.1
 				stability_factor = 0.1
 				war_support_factor = 0.1
@@ -1258,7 +1251,6 @@ ideas = {
 			modifier = {
 				conscription = 0.05
 				mobilization_speed = 0.05
-				planning_speed = 0.05
 			}
 		}
 
@@ -1277,10 +1269,8 @@ ideas = {
 			}
 			
 			modifier = {
-				democratic_drift = -0.1
-				neutrality_drift = -0.1
-				fascism_drift = -0.1
-				political_power_factor = 0.05
+				fascism_drift = -0.02
+				political_power_factor = 0.10
 			}
 		}
 
@@ -1444,8 +1434,8 @@ ideas = {
 			}
 			
 			modifier = {
-				land_reinforce_rate = 0.05
-				army_morale_factor = 0.05
+				land_reinforce_rate = 0.02
+				army_morale_factor = 0.10
 			}
 		}
 
@@ -1503,9 +1493,11 @@ ideas = {
 			}
 			
 			modifier = {
-				army_armor_attack_factor = 0.15
-				army_armor_defence_factor = 0.1
-				org_loss_when_moving = -0.05
+				army_armor_attack_factor = 0.10
+				army_armor_defence_factor = 0.10
+				army_armor_speed_factor = 0.05
+				org_loss_when_moving = -0.10
+				army_org_regain = 0.10
 			}
 		}
 

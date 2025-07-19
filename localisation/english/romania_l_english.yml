@@ -1,131 +1,216 @@
 ﻿l_english:
- ###FOCUSES
+################# FOCUSES #####################
  ROM_expand_the_axis_oil_trade:0 "Expand The Oil Trade"
  ROM_expand_the_axis_oil_trade_desc:0 "Expand The Oil Trade"
+
  ROM_reduce_reliance_on_foreign_imports:0 "Reduce Reliance on Foreign Imports"
  ROM_reduce_reliance_on_foreign_imports_desc:0 "Reduce Reliance on Foreign Imports"
- ROM_bessarabia_lost:0 "Bessarabia Lost"
- ROM_bessarabia_lost_desc:0 "Bessarabia Lost"
- ROM_transylvania_lost:0 "Northern Transylvania Lost"
- ROM_transylvania_lost_desc:0 "Northern Transylvania Lost"
+
  ROM_carpathian_network:0 "Carpathian Rail Network"
  ROM_carpathian_network_desc:0 "Carpathian Rail Network"
+
  ROM_national_recovery:0 "Recovery"
  ROM_national_recovery_desc:0 "Recovery"
+
  ROM_support_the_war_industry:0 "Support The War Industry"
  ROM_support_the_war_industry_desc:0 "Support The War Industry"
+
  ROM_expand_fuel_stockpiles:0 "Expand Fuel Stockpiles"
  ROM_expand_fuel_stockpiles_desc:0 "Expand Fuel Stockpiles"
+
  ROM_the_duty_to_work:0 "Duty To Work"
  ROM_the_duty_to_work_desc:0 "Duty To Work"
+
  ROM_national_defense_industry:0 "National Defense Industry"
  ROM_national_defense_industry_desc:0 "We must greatly expand our national arms industry if we are to keep up with increased demands."
+
  ROM_ensure_agricultural_self_sufficiency:0 "Agricultural Efficiency"
  ROM_ensure_agricultural_self_sufficiency_desc:0 "Agricultural Efficiency"
+
  ROM_the_stabilization_plan:0 "A New Course For Romania"
  ROM_the_stabilization_plan_desc:0 "A New Course For Romania"
+
  ROM_improve_living_standards:0 "Improve Living Standards"
  ROM_improve_living_standards_desc:0 "Improve Living Standards"
+
  ROM_reduce_reliance_on_oil:0 "Reduce Reliance On Oil"
  ROM_reduce_reliance_on_oil_desc:0 "Reduce Reliance On Oil"
+
  ROM_the_romanian_miracle:0 "The Romanian Miracle"
  ROM_the_romanian_miracle_desc:0 "The Romanian Miracle"
+
  ROM_oil_refining_infrastructure:0 "Increase Oil Refining Infrastructure"
  ROM_oil_refining_infrastructure_desc:0 "Increase Oil Refining Infrastructure"
- ####IDEAS
+
+ ROM_embrace_the_curse:0 "Embrace the Curse"
+ ROM_embrace_the_curse_desc:0 "We need to accept our fate and work with what we have."
+
+ ROM_bless_the_curse:0 "Bless the Curse"
+ ROM_bless_the_curse_desc:0 "We need to bless our fate and use it to our advantage"
+
+ ROM_break_the_curse:0 "Break the Curse"
+ ROM_break_the_curse_desc:0 "We can't accept the path that others have tracked for us. We must forge our own destiny!"
+
+ ROM_building_the_empire:0 "Building the Empire"
+ ROM_building_the_empire_desc:0 "No empire succeded without a proper build up of its indutry, we shall industrialise in order to make our empire successful."
+
+l_english:
+################## IDEAS ######################
  ROM_expanded_axis_oil_trade:0 "Expanded Oil Trade"
  ROM_the_resource_curse_1:0 "Resource Curse"
  ROM_agrarian_reform_start:0 "Agricultural Nation"
 
-ROM_Institute_Royal:0 "Institute Royal"
-ROM_Institute_Royal_desc:0 "Restore the crown to its rightful glory. By embracing our royal heritage, we shall unite the people under one banner, strengthen our ties with monarchist allies, and secure Romania’s place among Europe’s great powers once more."
-ROM_Change_of_Goverment:0 "Change of Goverment"
-ROM_Change_of_Goverment_desc:0 "A new path beckons for our nation. By reshaping our government, we can break free from old constraints, steer Romania towards a brighter future, and rally the people behind a fresh vision for prosperity and strength."
-ROM_the_empire:0 "The Empire"
-ROM_the_empire_desc:0 "No longer shall Romania be confined by its borders. With ambition and might, we shall forge a new empire, uniting all Romanian lands and extending our influence far beyond, to secure our destiny as a true regional power."
-ROM_Carols_Industrial_Plan:0 "Carols Industrial Plan"
-ROM_Carols_Industrial_Plan_desc:0 "Under King Carol’s guidance, we shall modernize our industry, expand our factories, and lay the foundation for a self-sufficient and powerful Romania. Prosperity and strength will follow this bold vision for economic growth."
-ROM_Organize_the_Royal_Army:0 "Organize the Royal Army"
-ROM_Organize_the_Royal_Army_desc:0 "The time has come to modernize and expand our land forces. By restructuring the Royal Army, we will improve training, logistics, and command efficiency, ensuring Romania stands ready to defend its borders and assert its interests in the region."
-ROM_Royal_Army_Reform:0 "Royal Army Reform"
-ROM_Royal_Army_Reform_desc:0 "Outdated tactics and equipment have no place in the modern battlefield. By reforming the Royal Army, we will strengthen our officer corps, adopt modern doctrines, and ensure our soldiers are ready to face any threat to the nation."
-ROM_Joint_Operations_Planning:0 "Joint Operations Planning"
-ROM_Joint_Operations_Planning_desc:0 "Coordinating our army, navy, and air force is vital for modern warfare. By developing comprehensive joint operations plans, we will maximize our combat effectiveness and ensure our forces strike as one, no matter the battlefield."
-ROM_Democratic_King:0 "Democratic King"
-ROM_Democratic_King_desc:0 "King Michael I has shown his dedication to democratic principles and the will of the people. By supporting his leadership, we strengthen our constitutional monarchy and guide Romania toward a freer and more stable future."
-ROM_Support_Local_Industry:0 "Support Local Industry"
-ROM_Support_Local_Industry_desc:0 "To ensure our nation’s economic independence and resilience, we must invest in our local workshops and factories. By empowering domestic producers, we strengthen our economy and lay the groundwork for sustained industrial growth."
-ROM_Researcher_Investment:0 "Researcher Investment"
-ROM_Researcher_Investment_desc:0 "By funding our brightest minds and modernizing our research institutions, we can accelerate technological progress. A stronger commitment to science today will secure Romania’s innovation and strength for tomorrow."
-ROM_Expand_the_Support_Industry:0 "Expand the Support Industry"
-ROM_Expand_the_Support_Industry_desc:0 ""
-ROM_Change_of_the_Support_Industry_for_War:0 "Change of the Support Industry for War"
-ROM_Change_of_the_Support_Industry_for_War_desc:0 "To keep our frontline troops supplied and ready, we must strengthen our support industry. Investing in logistics, maintenance, and auxiliary equipment will ensure our army remains effective in prolonged conflicts."
-ROM_The_Great_Democratic_Kingdom:0 "The Great Democratic Kingdom"
-ROM_The_Great_Democratic_Kingdom_desc:0 "By embracing democratic ideals while preserving our royal heritage, we shall forge a Romania that stands as a beacon of freedom and unity in Eastern Europe — a true kingdom where the people’s voice and the crown work hand in hand."
-ROM_bringing_down_the_giants:0 "Bringing down the Giants"
-ROM_bringing_down_the_giants_desc:0 "Surrounded by powerful neighbors, we must not cower in their shadow. By uniting our people and striking decisively, Romania will prove that even the mightiest giants can fall before the will of a determined nation."
-ROM_join_the_Crowned_Brotherhood:0 "Join the Crowned Brotherhood"
-ROM_join_the_Crowned_Brotherhood_desc:0 "Monarchies must stand together in these turbulent times. By forging closer ties with our royal allies abroad, we strengthen the bonds between crowned nations and secure Romania’s place among Europe’s enduring thrones."
-ROM_Fortify_the_Eastern_Marches:0 "Fortify the Eastern Marches"
-ROM_Fortify_the_Eastern_Marches_DESC:0 "Our eastern borders are the gateway for potential threats from the steppes and beyond. By strengthening our fortifications and defenses there, we will safeguard our homeland against any incursion from the East."
-ROM_join_axis_0:0 "Join the Axis"
-ROM_join_axis_0_desc:0 "By aligning ourselves with the Axis powers, we secure strong allies in our fight for territorial ambitions and protection against greater threats. Together, we shall reshape Europe to our advantage."
-ROM_The_Empire_is_arming_itself:0 "The Empire is Arming Itself"
-ROM_The_Empire_is_arming_itself_desc:0 "To protect our ambitions and secure our rightful place among the great powers, we must expand and modernize our armed forces. Romania shall stand ready — an empire prepared to defend its people and conquer its destiny."
-ROM_The_Great_Empire:0 "The Great Empire"
-ROM_The_Great_Empire_desc:0 "Our destiny is to rise above our past divisions and forge a mighty empire that commands respect and fear. United under one crown, Romania shall reclaim its glory and stand tall among the great nations of the world."
-ROM_Roads:0 "Roads of Romania"
-ROM_Roads_desc:0 "Improving our infrastructure is vital for military mobility and economic growth. By building better roads, we ensure faster troop movements and stronger connections between our cities and factories."
-ROM_Local_Ressource_investment:0 "Local Ressource Investment"
-ROM_Local_Ressource_investment_desc:0 "By investing in the development and extraction of our natural resources, we can fuel our industries and reduce dependence on foreign imports, strengthening Romania’s economic independence."
-ROM_The_Right:0 "The Right Side"
-ROM_The_Right_desc:0 "In these uncertain times, choosing the right allies is crucial. Romania must align itself with the forces that will secure our future and uphold our national interests in a turbulent Europe."
-ROM_The_Left:0 "The Left Side"
-ROM_The_Left_desc:0 "Embracing progressive ideals, Romania seeks to build a society rooted in equality and social justice. By joining the leftist cause, we aim to transform our nation and challenge the old order."
-ROM_The_Great_Army:0 "The Great Army"
-ROM_The_Great_Army_desc:0 "To secure our nation’s future, we must build a powerful and disciplined army capable of defending our borders and projecting strength across the region. Romania’s greatness depends on the might of its soldiers."
-ROM_The_Great_Industry:0 "The Great Industry"
-ROM_The_Great_Industry_desc:0 "By expanding and modernizing our industrial base, Romania can support a stronger military and economy. A thriving industry is the backbone of national power and future prosperity."
-ROM_The_Right_Leader:0 "The Right leader"
-ROM_The_Right_Leader_desc:0 "Romania needs a leader who embodies our values and vision, guiding the nation with strength and wisdom through these turbulent times. The right leadership will unite and inspire our people to greatness."
-ROM_The_Left_Leader:0 "The Left Leader"
-ROM_The_Left_Leader_desc:0 "A new leader committed to social reform and equality can steer Romania towards a fairer society. Embracing progressive leadership will inspire hope and change for the working people of our nation."
-ROM_War_for_Greater_Romania:0 "War for Greater Romania"
-ROM_War_for_Greater_Romania_desc:0 "Our nation’s destiny lies in reclaiming lost lands and uniting all Romanians under one flag. Through strength and sacrifice, we will restore Romania’s rightful place as a great power in the region."
-ROM_Greater_Romania:0 "Greater Romania"
-ROM_Greater_Romania_desc:0 "The dream of a united Romania lives on. By pursuing political and diplomatic efforts, we aim to bring together all Romanian lands and secure lasting peace and prosperity for our people."
-ROM_Greater_Romanias_Researcher:0 "Greater Romanias Researcher"
-ROM_Greater_Romanias_Researcher_desc:0 "To build a powerful and united nation, we must invest in our brightest minds. Advancing research and innovation is key to securing Romania’s future strength and independence."
-ROM_Attack_Plan:0 "Attack Plan"
-ROM_Attack_Plan_desc:0 "With clear objectives and coordinated strategy, our armed forces will strike decisively to reclaim lost territories and secure Romania’s borders. Success depends on careful planning and swift execution."
-ROM_Defense_Plan:0 "Defense Plan"
-ROM_Defense_Plan_desc:0 "To protect our homeland from external threats, we must develop a comprehensive defense strategy. Strengthening our fortifications and preparing our forces will ensure Romania’s security and sovereignty."
-ROM_Ion_Antonescu_Leadership:0 "Ion Antonescu Leadership"
-ROM_Ion_Antonescu_Leadership_desc:0 "Under Ion Antonescu’s strong and decisive command, Romania aims to restore order and pursue its national interests with renewed vigor. His leadership will shape our path through these turbulent times."
-ROM_romanian_oil_exploitation_company:0 "Romanian Oil Exploitation Company"
-ROM_romanian_oil_exploitation_company_desc:0 "Developing our rich oil reserves is crucial to fuel our industry and military. Establishing a dedicated company will boost production and secure Romania’s energy independence."
-ROM_The_Iron_Guard_Rises:0 "The Iron Guard Rises"
-ROM_The_Iron_Guard_Rises_desc:0 "The Iron Guard emerges as a force for national renewal, calling for a spiritual and political revolution. Their rise marks a turning point in Romania’s struggle for identity and strength."
-ROM_Political_Left_Change:0 "Political Left Change"
-ROM_Political_Left_Change_desc:0 "A shift towards leftist policies promises social reform and greater equality. Romania embarks on a new path aimed at empowering workers and reshaping society for the better."
-ROM_Peasent_Militias:0 "Peasent Militias"
-ROM_The_Left_Rises:0 "The Left Rises"
+ ROM_Institute_Royal:0 "Institute Royal"
+ ROM_Institute_Royal_desc:0 "Restore the crown to its rightful glory. By embracing our royal heritage, we shall unite the people under one banner, strengthen our ties with monarchist allies, and secure Romania’s place among Europe’s great powers once more."
+
+ ROM_Change_of_Goverment:0 "Change of Goverment"
+ ROM_Change_of_Goverment_desc:0 "A new path beckons for our nation. By reshaping our government, we can break free from old constraints, steer Romania towards a brighter future, and rally the people behind a fresh vision for prosperity and strength."
+
+ ROM_the_empire:0 "The Empire"
+ ROM_the_empire_desc:0 "No longer shall Romania be confined by its borders. With ambition and might, we shall forge a new empire, uniting all Romanian lands and extending our influence far beyond, to secure our destiny as a true regional power."
+
+ ROM_Carols_Industrial_Plan:0 "Carols Industrial Plan"
+ ROM_Carols_Industrial_Plan_desc:0 "Under King Carol’s guidance, we shall modernize our industry, expand our factories, and lay the foundation for a self-sufficient and powerful Romania. Prosperity and strength will follow this bold vision for economic growth."
+
+ ROM_Organize_the_Royal_Army:0 "Organize the Royal Army"
+ ROM_Organize_the_Royal_Army_desc:0 "The time has come to modernize and expand our land forces. By restructuring the Royal Army, we will improve training, logistics, and command efficiency, ensuring Romania stands ready to defend its borders and assert its interests in the region."
+
+ ROM_Royal_Army_Reform:0 "Royal Army Reform"
+ ROM_Royal_Army_Reform_desc:0 "Outdated tactics and equipment have no place in the modern battlefield. By reforming the Royal Army, we will strengthen our officer corps, adopt modern doctrines, and ensure our soldiers are ready to face any threat to the nation."
+
+ ROM_Joint_Operations_Planning:0 "Joint Operations Planning"
+ ROM_Joint_Operations_Planning_desc:0 "Coordinating our army, navy, and air force is vital for modern warfare. By developing comprehensive joint operations plans, we will maximize our combat effectiveness and ensure our forces strike as one, no matter the battlefield."
+
+ ROM_Democratic_King:0 "Democratic King"
+ ROM_Democratic_King_desc:0 "King Michael I has shown his dedication to democratic principles and the will of the people. By supporting his leadership, we strengthen our constitutional monarchy and guide Romania toward a freer and more stable future."
+
+ ROM_Support_Local_Industry:0 "Support Local Industry"
+ ROM_Support_Local_Industry_desc:0 "To ensure our nation’s economic independence and resilience, we must invest in our local workshops and factories. By empowering domestic producers, we strengthen our economy and lay the groundwork for sustained industrial growth."
+
+ ROM_Researcher_Investment:0 "Researcher Investment"
+ ROM_Researcher_Investment_desc:0 "By funding our brightest minds and modernizing our research institutions, we can accelerate technological progress. A stronger commitment to science today will secure Romania’s innovation and strength for tomorrow."
+
+ ROM_Expand_the_Support_Industry:0 "Expand the Support Industry"
+ ROM_Expand_the_Support_Industry_desc:0 ""
+
+ ROM_Change_of_the_Support_Industry_for_War:0 "Support Industry for War"
+ ROM_Change_of_the_Support_Industry_for_War_desc:0 "To keep our frontline troops supplied and ready, we must strengthen our support industry. Investing in logistics, maintenance, and auxiliary equipment will ensure our army remains effective in prolonged conflicts."
+
+ ROM_The_Great_Democratic_Kingdom:0 "The Great Democratic Kingdom"
+ ROM_The_Great_Democratic_Kingdom_desc:0 "By embracing democratic ideals while preserving our royal heritage, we shall forge a Romania that stands as a beacon of freedom and unity in Eastern Europe — a true kingdom where the people’s voice and the crown work hand in hand."
+
+ ROM_bringing_down_the_giants:0 "Bringing down the Giants"
+ ROM_bringing_down_the_giants_desc:0 "Surrounded by powerful neighbors, we must not cower in their shadow. By uniting our people and striking decisively, Romania will prove that even the mightiest giants can fall before the will of a determined nation."
+
+ ROM_join_the_Crowned_Brotherhood:0 "Join the Crowned Brotherhood"
+ ROM_join_the_Crowned_Brotherhood_desc:0 "Monarchies must stand together in these turbulent times. By forging closer ties with our royal allies abroad, we strengthen the bonds between crowned nations and secure Romania’s place among Europe’s enduring thrones."
+
+ ROM_Fortify_the_Eastern_Marches:0 "Fortify the Eastern Marches"
+ ROM_Fortify_the_Eastern_Marches_DESC:0 "Our eastern borders are the gateway for potential threats from the steppes and beyond. By strengthening our fortifications and defenses there, we will safeguard our homeland against any incursion from the East."
+
+ ROM_join_axis_0:0 "Join the Axis"
+ ROM_join_axis_0_desc:0 "By aligning ourselves with the Axis powers, we secure strong allies in our fight for territorial ambitions and protection against greater threats. Together, we shall reshape Europe to our advantage."
+
+ ROM_arming_the_empire:0 "Arming the Empire"
+ ROM_arming_the_empire_desc:0 "To protect our ambitions and secure our rightful place among the great powers, we must expand and modernize our armed forces. Romania shall stand ready as an empire prepared to defend its people and conquer its destiny."
+
+ ROM_The_Great_Empire:0 "The Great Empire"
+ ROM_The_Great_Empire_desc:0 "Our destiny is to rise above our past divisions and forge a mighty empire that commands respect and fear. United under one crown, Romania shall reclaim its glory and stand tall among the great nations of the world."
+
+ ROM_Roads:0 "Roads of Romania"
+ ROM_Roads_desc:0 "Improving our infrastructure is vital for military mobility and economic growth. By building better roads, we ensure faster troop movements and stronger connections between our cities and factories."
+
+ ROM_Local_Ressource_investment:0 "Local Ressource Investment"
+ ROM_Local_Ressource_investment_desc:0 "By investing in the development and extraction of our natural resources, we can fuel our industries and reduce dependence on foreign imports, strengthening Romania’s economic independence."
+
+ ROM_The_Right:0 "The Right Side"
+ ROM_The_Right_desc:0 "In these uncertain times, choosing the right allies is crucial. Romania must align itself with the forces that will secure our future and uphold our national interests in a turbulent Europe."
+
+ ROM_The_Left:0 "The Left Side"
+ ROM_The_Left_desc:0 "Embracing progressive ideals, Romania seeks to build a society rooted in equality and social justice. By joining the leftist cause, we aim to transform our nation and challenge the old order."
+
+ ROM_The_Great_Army:0 "The Great Army"
+ ROM_The_Great_Army_desc:0 "To secure our nation’s future, we must build a powerful and disciplined army capable of defending our borders and projecting strength across the region. Romania’s greatness depends on the might of its soldiers."
+
+ ROM_The_Great_Industry:0 "The Great Industry"
+ ROM_The_Great_Industry_desc:0 "By expanding and modernizing our industrial base, Romania can support a stronger military and economy. A thriving industry is the backbone of national power and future prosperity."
+
+ ROM_The_Right_Leader:0 "The Right leader"
+ ROM_The_Right_Leader_desc:0 "Romania needs a leader who embodies our values and vision, guiding the nation with strength and wisdom through these turbulent times. The right leadership will unite and inspire our people to greatness."
+
+ ROM_The_Left_Leader:0 "The Left Leader"
+ ROM_The_Left_Leader_desc:0 "A new leader committed to social reform and equality can steer Romania towards a fairer society. Embracing progressive leadership will inspire hope and change for the working people of our nation."
+
+ ROM_War_for_Greater_Romania:0 "War for Greater Romania"
+ ROM_War_for_Greater_Romania_desc:0 "Our nation’s destiny lies in reclaiming lost lands and uniting all Romanians under one flag. Through strength and sacrifice, we will restore Romania’s rightful place as a great power in the region."
+
+ ROM_Greater_Romania:0 "Greater Romania"
+ ROM_Greater_Romania_desc:0 "The dream of a united Romania lives on. By pursuing political and diplomatic efforts, we aim to bring together all Romanian lands and secure lasting peace and prosperity for our people."
+
+ ROM_Greater_Romanian_Researchers:0 "Greater Romanian Researchers"
+ ROM_Greater_Romanian_Researchers_desc:0 "To build a powerful and united nation, we must invest in our brightest minds. Advancing research and innovation is key to securing Romania’s future strength and independence."
+
+ ROM_Attack_Plan:0 "Attack Plan"
+ ROM_Attack_Plan_desc:0 "With clear objectives and coordinated strategy, our armed forces will strike decisively to reclaim lost territories and secure Romania’s borders. Success depends on careful planning and swift execution."
+
+ ROM_Defense_Plan:0 "Defense Plan"
+ ROM_Defense_Plan_desc:0 "To protect our homeland from external threats, we must develop a comprehensive defense strategy. Strengthening our fortifications and preparing our forces will ensure Romania’s security and sovereignty."
+
+ ROM_Ion_Antonescu_Leadership:0 "Ion Antonescu Leadership"
+ ROM_Ion_Antonescu_Leadership_desc:0 "Under Ion Antonescu’s strong and decisive command, Romania aims to restore order and pursue its national interests with renewed vigor. His leadership will shape our path through these turbulent times."
+
+ ROM_romanian_oil_exploitation_company:0 "Romanian Oil Exploitation Company"
+ ROM_romanian_oil_exploitation_company_desc:0 "Developing our rich oil reserves is crucial to fuel our industry and military. Establishing a dedicated company will boost production and secure Romania’s energy independence."
+
+ ROM_The_Iron_Guard_Rises:0 "The Iron Guard Rises"
+ ROM_The_Iron_Guard_Rises_desc:0 "The Iron Guard emerges as a force for national renewal, calling for a spiritual and political revolution. Their rise marks a turning point in Romania’s struggle for identity and strength."
+
+ ROM_Political_Left_Change:0 "Political Left Change"
+ ROM_Political_Left_Change_desc:0 "A shift towards leftist policies promises social reform and greater equality. Romania embarks on a new path aimed at empowering workers and reshaping society for the better."
+
+ ROM_Peasent_Militias:0 "Peasent Militias"
+
+ ROM_The_Left_Rises:0 "The Left Rises"
  ROM_The_Left_Rises_desc:0 "The growing influence of leftist movements signals a new era of social change. Romania faces a turning point as calls for justice and equality gain momentum across the nation."
-ROM_The_Democrats:0 "The Democrats"
-ROM_Support_Local_Industry_3:0 "Support Local Industry"
-ROM_Support_Local_Industry_2:0 "Support Local Industry"
-ROM_The_Empire_0:0 "The Empire"
-ROM_Armored_Army:0 "Armored Army"
-ROM_Armored_Army_desc:0 "The future of warfare lies in speed and steel. By expanding our armored divisions, Romania will field a modern, mobile force capable of breaking enemy lines and dominating the battlefield."
-ROM_Armored_Army2:0 "Organize the Armored Army"
-ROM_Armored_Army2_desc:0 "With our armored forces expanding, it is time to structure them into a cohesive and effective fighting force. Improved command, training, and logistics will ensure our tanks operate at peak efficiency."
-ROM_Armored_Army_2:0 "Armored Army"
-ROM_Crucible_of_Romanian_Steel:0 "Crucible of Romanian Steel"
-ROM_Crucible_of_Romanian_Steel_desc:0 "Forged in the fires of industry and war, Romania’s armored might will be unmatched. By focusing on domestic tank production and battlefield innovation, we will shape an army of steel to defend and conquer."
-ROM_reinforce_the_army:0 "Reinforce the Army"
-ROM_reinforce_the_army_desc:0 "To face growing threats, our armed forces must be strengthened. By recruiting more troops, expanding training programs, and improving equipment, Romania will be ready for whatever challenges lie ahead."
-ROM_Refined_Operational_Planning:0 "Refined operational Planning"
-ROM_Refined_Operational_Planning_desc:0 "Victory begins with strategy. By enhancing our military planning and coordination, Romanian forces will strike with greater precision, efficiency, and adaptability on every front."
-ROM_Mountain_Training:0 "Mountain Training"
-ROM_Mountain_Training_desc:0 "Romania’s rugged terrain has forged skilled mountain troops. By refining their training, we enhance their combat effectiveness, ensuring our mountaineers can strike hard and hold fast in even the harshest terrain."
+
+ ROM_The_Democrats:0 "The Democrats"
+
+ ROM_Support_Local_Industry_2:0 "Support Local Industry"
+
+ ROM_Support_Local_Industry_3:0 "Support Local Industry"
+
+ ROM_The_Empire_0:0 "The Empire"
+
+ ROM_Armored_Army:0 "Armored Army"
+ ROM_Armored_Army_desc:0 "The future of warfare lies in speed and steel. By expanding our armored divisions, Romania will field a modern, mobile force capable of breaking enemy lines and dominating the battlefield."
+
+ ROM_Armored_Army2:0 "Organize the Armored Army"
+ ROM_Armored_Army2_desc:0 "With our armored forces expanding, it is time to structure them into a cohesive and effective fighting force. Improved command, training, and logistics will ensure our tanks operate at peak efficiency."
+
+ ROM_Armored_Army_2:0 "Armored Army"
+
+ ROM_Crucible_of_Romanian_Steel:0 "Crucible of Romanian Steel"
+ ROM_Crucible_of_Romanian_Steel_desc:0 "Forged in the fires of industry and war, Romania’s armored might will be unmatched. By focusing on domestic tank production and battlefield innovation, we will shape an army of steel to defend and conquer."
+
+ ROM_reinforce_the_army:0 "Reinforce the Army"
+ ROM_reinforce_the_army_desc:0 "To face growing threats, our armed forces must be strengthened. By recruiting more troops, expanding training programs, and improving equipment, Romania will be ready for whatever challenges lie ahead."
+
+ ROM_Refined_Operational_Planning:0 "Refined operational Planning"
+ ROM_Refined_Operational_Planning_desc:0 "Victory begins with strategy. By enhancing our military planning and coordination, Romanian forces will strike with greater precision, efficiency, and adaptability on every front."
+
+ ROM_Mountain_Training:0 "Mountain Training"
+ ROM_Mountain_Training_desc:0 "Romania’s rugged terrain has forged skilled mountain troops. By refining their training, we enhance their combat effectiveness, ensuring our mountaineers can strike hard and hold fast in even the harshest terrain."
+
+l_english:
+################## TOOLTIPS ######################
+
+ ROM_Roads_tt:0 "Builds 1 §YInfrastructure§! level in all controlled §YCores§!" 
+
+l_english:
+################### UNUSED ######################
+
+ ROM_bessarabia_lost:0 "Bessarabia Lost"
+ ROM_bessarabia_lost_desc:0 "Bessarabia Lost"
+
+ ROM_transylvania_lost:0 "Northern Transylvania Lost"
+ ROM_transylvania_lost_desc:0 "Northern Transylvania Lost"
