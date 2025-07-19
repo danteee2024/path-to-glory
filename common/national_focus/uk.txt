@@ -45,52 +45,22 @@ focus_tree = {
 		id = ENG_mifive	
 	
 		available = {
-        
+        has_intelligence_agency = yes
 		}
-			prerequisite = {
-				focus = general_rearmament_focus
-			}
-			mutually_exclusive = {
-				focus = crypto_bomb_focus
-			}
+			
+			
 		icon =GFX_focus_generic_vatican_agents
-		x = 4
+		x = 0
 		y = 1
 		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
-relative_position_id = general_rearmament_focus
+		relative_position_id = ENG_let_that_lion_roar_start
+		prerequisite = {
+			focus = ENG_let_that_lion_roar_start
+		}
 		available_if_capitulated = yes
-		completion_reward = {
-			add_war_support = 0.01
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_ideas = ENG_mifive_idea
-		}
-	}
-	focus = {
-		id = crypto_bomb_focus
-	
-		available = {
-				
-			}
-		
-		bypass = {
-			
-		}
-		icon = GFX_focus_generic_cryptologic_bomb
-		x = 0
-		y = 1
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		relative_position_id = ENG_mifive
-         prerequisite = {
-			focus = ENG_mifive
-		 }
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			if = {
 				limit = {
@@ -110,8 +80,12 @@ relative_position_id = general_rearmament_focus
 				}
 				custom_effect_tooltip = lar_decryption_bonus_tt
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_ideas = ENG_mifive_idea
+		
 		}
 	}
+	
 	
 	focus = {
 		id = tizard_mission_focus
@@ -135,30 +109,36 @@ relative_position_id = general_rearmament_focus
 		mutually_exclusive = {
 			focus = UK_nuclear_program
 		}
+		prerequisite = {
+			focus = uk_jet_focus
+		}
+		relative_position_id = uk_jet_focus
 		icon = GFX_focus_generic_befriend_usa
-		x = -21
-		y = 0
+		x = -1
+		y = 1
 		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {FOCUS_FILTER_RESEARCH}	
 		completion_reward = {
-			USA = {
-				country_event = britain.1
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
 			add_breakthrough_progress = {
 				specialization = specialization_nuclear
 				value = 0.25
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			USA = {
+				country_event = britain.1
+			}
+			
 		}
 	}
 		focus = {
 		id = UK_nuclear_program
 		icon = GFX_focus_generic_nuclear_development
-		x = -17
-		y = 0
+		x = 1
+		y = 1
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -166,12 +146,22 @@ relative_position_id = general_rearmament_focus
         mutually_exclusive = {
 			focus = tizard_mission_focus
 		}
+		prerequisite = {
+			focus = uk_jet_focus
+		}
 		available = {
 			num_of_factories > 80
 		}
+		relative_position_id = uk_jet_focus
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
+			add_breakthrough_progress = {
+				specialization = specialization_nuclear
+				value = 0.25
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			 random_owned_controlled_state = {
 				limit = {
 					is_in_home_area = yes
@@ -184,11 +174,7 @@ relative_position_id = general_rearmament_focus
 					instant_build = yes
 				}
 			}
-           custom_effect_tooltip = generic_skip_one_line_tt
-		   add_breakthrough_progress = {
-				specialization = specialization_nuclear
-				value = 0.25
-			}
+          
 			
 		}
 	}
@@ -200,7 +186,7 @@ relative_position_id = general_rearmament_focus
 				focus = tizard_mission_focus
 			}
 		icon = GFX_focus_wonderweapons
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = UK_nuclear_program
 		cost = 10
@@ -1062,7 +1048,7 @@ completion_reward = {
 	focus = {
 		id = ENG_ramp_up_constription
 		icon =  GFX_focus_AFG_royal_guard
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = uk_small_arms_focus
 		}
@@ -1520,12 +1506,14 @@ completion_reward = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			add_research_slot = 1
-			custom_effect_tooltip = generic_skip_one_line_tt
 			add_breakthrough_progress = {
 				specialization = specialization_nuclear
 				value = 0.25
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_research_slot = 1
+			
 		}
 	}
 	
@@ -1558,9 +1546,8 @@ completion_reward = {
 		continue_if_invalid = yes
 
 		icon = GFX_focus_eng_the_sun_never_sets
-		x = -15
+		x = -8
 		y = 0
-		relative_position_id = ENG_let_that_lion_roar_start
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -1720,7 +1707,9 @@ completion_reward = {
 		ai_will_do = {
 			factor = 1
 		}
-       
+       mutually_exclusive = {
+		focus = ENG_adopt_bliztkrieg_tactics
+	   }
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
@@ -2302,7 +2291,7 @@ completion_reward = {
 		x = 0
 		y = 2
 		relative_position_id = aircraft_production_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
