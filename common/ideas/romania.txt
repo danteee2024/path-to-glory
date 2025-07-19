@@ -67,9 +67,10 @@ ideas = {
 			
 			modifier = {
 				max_fuel_factor = 0.3
-				industrial_capacity_factory = 0.05
+				industrial_capacity_factory = 0.1
 				production_factory_max_efficiency_factor = 0.02
-				production_speed_buildings_factor = 0.10					
+				production_speed_buildings_factor = 0.10		
+				min_export = 0.05		
 			}
 		}
 
@@ -92,9 +93,10 @@ ideas = {
 			
 			modifier = {
 				max_fuel_factor = 0.5
-				industrial_capacity_factory = 0.15
+				industrial_capacity_factory = 0.2
 				production_factory_max_efficiency_factor = 0.05
 				production_speed_buildings_factor = 0.10
+				min_export = 0.1
 			}
 		}
 		ROM_the_resource_curse_1 = { #The Oil Must Flow 
@@ -114,7 +116,7 @@ ideas = {
 				stability_factor = -0.1
 				local_resources_factor = 0.15
 				min_export = 0.1
-				consumer_goods_factor = -0.15
+				consumer_goods_factor = 0.1
 			}
 		}
 
@@ -136,7 +138,6 @@ ideas = {
 				stability_factor = -0.15
 				local_resources_factor = 0.2
 				min_export = 0.15
-				consumer_goods_factor = -0.24
 			}
 		}
 
@@ -158,7 +159,7 @@ ideas = {
 				stability_factor = -0.2
 				local_resources_factor = 0.25
 				min_export = 0.2
-				consumer_goods_factor = -0.3
+				consumer_goods_factor = -0.1
 			}
 		}
 		ROM_industrialization_1 = {

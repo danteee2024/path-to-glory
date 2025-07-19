@@ -93,7 +93,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = ROM_national_recovery
-		cost = 8
+		cost = 10
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -121,7 +121,7 @@ focus_tree = {
 			46 = {
 				add_resource = {
 					type = oil
-					amount = 24
+					amount = 32
 				}
 			}
 
@@ -138,7 +138,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ROM_expand_ploiesti_oil_production
 
-		cost = 8
+		cost = 10
 
 		ai_will_do = {
 			factor = 10
@@ -151,16 +151,16 @@ focus_tree = {
 		completion_reward = {
 			random_owned_controlled_state = {
 				prioritize = { 46 }
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes 
 				}
 			}
 			add_tech_bonus = {
 				category = electronics
-				uses = 2
+				uses = 1
 				bonus = 1
 				name = ROM_bucharest_technical_institute
 			}
@@ -186,7 +186,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ROM_oil_refining_infrastructure
-		cost = 8
+		cost = 10
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -218,12 +218,20 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ROM_reduce_reliance_on_foreign_imports
-		cost = 8
+		cost = 10
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
 			swap_ideas = {
 				remove_idea = ROM_agrarian_reform_start
 				add_idea = ROM_agrarian_economy_effectivized
@@ -240,7 +248,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = ROM_oil_refining_infrastructure
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -249,7 +257,7 @@ focus_tree = {
 			46 = {
 				add_resource = {
 					type = oil
-					amount = 15
+					amount = 20
 				}
 			}
 			IF = {
@@ -269,10 +277,7 @@ focus_tree = {
 		bypass = {
 		}
 		available = {
-			any_country = {
-				has_war = yes
-				is_major = yes
-			}
+			threat > 0.35
 		}
 		prerequisite = { focus = ROM_agrarian_reform }
 		
@@ -280,7 +285,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ROM_agrarian_reform
-		cost = 8
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -365,6 +370,14 @@ focus_tree = {
 					level = 2
 				}
 			}
+			46 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = fuel_silo
+					instant_build = yes 
+					level = 2
+				}
+			}
 		}
 	}
 
@@ -381,7 +394,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ROM_expand_fuel_stockpiles
-		cost = 8
+		cost = 10
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -393,11 +406,11 @@ focus_tree = {
 			46 = {
 				add_resource = {
 					type = oil
-					amount = 15
+					amount = 20
 				}
 				add_resource = {
 					type = steel
-					amount = 8
+					amount = 12
 				}
 			}
 		}
@@ -614,11 +627,6 @@ focus = {
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = arms_factory
-					level = 1
 					instant_build = yes
 				}
 			}
@@ -4554,7 +4562,7 @@ ROM_join_allies
 	}
 
 	focus = {
-		id = ROM_Armored_Army_2
+		id = ROM_Armored_Army2
 		icon = GFX_focus_generic_tank_assault
 		prerequisite = { focus = ROM_Armored_Army }
 		x = 0
@@ -4711,10 +4719,10 @@ ROM_join_allies
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = ROM_expand_the_galati_shipyards_AB
