@@ -41,43 +41,54 @@ focus_tree = {
 	continuous_focus_position = { x = 100 y = 1300 }
 
 	shared_focus = Commonwealth_form_joint_alliance
-
-	focus = {
-		id = crypto_bomb_focus
-		prerequisite = {
-			focus = ENG_let_that_lion_roar_start
-		}
+    focus = {
+		id = ENG_mifive	
+	
 		available = {
-				has_war_with = GER
-				POL = {
-					NOT = { is_in_faction_with = GER } #We assume POL will help vs Germany unless they are allied to them
-				}
-			}
-		
-		bypass = {
-			OR = {
-				AND = {
-					has_war_with = GER
-					POL = {
-							is_in_faction_with = GER # If POL is in GER's faction, no help for us
-						}
-				}
-				AND = {
-					has_war = yes
-					is_in_faction_with = USA
-				}
-				GER = { exists = no }
-			}
+        
 		}
-		relative_position_id = ENG_let_that_lion_roar_start
-		icon = GFX_focus_generic_cryptologic_bomb
-		x = -1
+			prerequisite = {
+				focus = general_rearmament_focus
+			}
+			mutually_exclusive = {
+				focus = crypto_bomb_focus
+			}
+		icon =GFX_focus_generic_vatican_agents
+		x = 4
 		y = 1
 		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
-
+relative_position_id = general_rearmament_focus
+		available_if_capitulated = yes
+		completion_reward = {
+			add_war_support = 0.01
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_ideas = ENG_mifive_idea
+		}
+	}
+	focus = {
+		id = crypto_bomb_focus
+	
+		available = {
+				
+			}
+		
+		bypass = {
+			
+		}
+		icon = GFX_focus_generic_cryptologic_bomb
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		relative_position_id = ENG_mifive
+         prerequisite = {
+			focus = ENG_mifive
+		 }
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
@@ -105,12 +116,7 @@ focus_tree = {
 	focus = {
 		id = tizard_mission_focus
 		available = {				
-			has_government = democratic
-			any_other_country = {
-				has_war_with = ROOT
-				NOT = { has_government = democratic }
-				num_of_factories > 30
-			}
+			
 			NOt = {
 				has_war_with = USA
 			}
@@ -126,12 +132,13 @@ focus_tree = {
 			}
 			
 		} 
-		prerequisite = { focus = crypto_bomb_focus }
-		icon = GFX_goal_generic_scientific_exchange
-		x = 0
-		y = 1
-		relative_position_id = crypto_bomb_focus
-		cost = 10
+		mutually_exclusive = {
+			focus = UK_nuclear_program
+		}
+		icon = GFX_focus_generic_befriend_usa
+		x = -21
+		y = 0
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -140,17 +147,62 @@ focus_tree = {
 			USA = {
 				country_event = britain.1
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_breakthrough_progress = {
+				specialization = specialization_nuclear
+				value = 0.25
+			}
 		}
 	}
+		focus = {
+		id = UK_nuclear_program
+		icon = GFX_focus_generic_nuclear_development
+		x = -17
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+        mutually_exclusive = {
+			focus = tizard_mission_focus
+		}
+		available = {
+			num_of_factories > 80
+		}
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			 random_owned_controlled_state = {
+				limit = {
+					is_in_home_area = yes
+					
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = nuclear_facility
+					level = 1
+					instant_build = yes
+				}
+			}
+           custom_effect_tooltip = generic_skip_one_line_tt
+		   add_breakthrough_progress = {
+				specialization = specialization_nuclear
+				value = 0.25
+			}
+			
+		}
+	}
+	
 	focus = {
 		id = maud_focus
 			prerequisite = {
-				focus = ENG_let_that_lion_roar_start
+				focus = UK_nuclear_program
+				focus = tizard_mission_focus
 			}
 		icon = GFX_focus_wonderweapons
-		x = 1
+		x = -2
 		y = 1
-		relative_position_id = ENG_let_that_lion_roar_start
+		relative_position_id = UK_nuclear_program
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -161,7 +213,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = maud_focus
-				bonus = 1.0
+				bonus = 1.5
 				uses = 1
 				category = nuclear
 			}
@@ -171,8 +223,8 @@ focus_tree = {
 	
 	focus = {
 		id = ENG_let_that_lion_roar_start
-		icon = GFX_focus_eng_the_sun_never_sets
-		x = 0
+		icon = GFX_focus_generic_british_trade
+		x = 7
 		y = 0
 		cost = 5
 		ai_will_do = {
@@ -208,8 +260,8 @@ focus_tree = {
 		prerequisite = { focus = general_rearmament_focus   }
 		available = { 			
 		}
-		icon = GFX_focus_CONGO_copper_cartridges
-		x = 4
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		x = 0
 		y = 1
 		relative_position_id = general_rearmament_focus
 		cost = 5
@@ -223,13 +275,7 @@ focus_tree = {
 			army_experience = 50
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = motorized_army
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_tech_bonus = {
-				name = armor_bonus
-				bonus = 1.0
-				uses = 1
-				category = motorized_equipment
-			}
+			
 		}
 	}
 	
@@ -240,7 +286,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ENG_let_that_lion_roar_start
 		}
-		x = 5
+		x = -2
 		y = 2
 		relative_position_id = ENG_let_that_lion_roar_start
 		ai_will_do = {
@@ -275,7 +321,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = ENG_let_that_lion_roar
 		}
-		x = 9
+		x = 2
 		y = 2
 		relative_position_id = ENG_let_that_lion_roar_start
 		ai_will_do = {
@@ -321,7 +367,7 @@ focus_tree = {
 				name = ENG_revitalize_northern_england
 				bonus = 1.0
 				uses = 1
-				category = dispersed_industry_category
+				category = industry
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			131 = {	
@@ -377,7 +423,7 @@ focus_tree = {
 				name = ENG_expand_southern_corporations
 				bonus = 1.0
 				uses = 1
-				category = concentrated_industry_category
+				category = industry
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			126 = {
@@ -510,11 +556,7 @@ focus_tree = {
 			controls_state = 121
 			controls_state = 133
 			controls_state = 136
-			controls_state = 119
-			controls_state = 120
-			controls_state = 933
-			controls_state = 123
-			controls_state = 122
+            controls_state = 122			
 		} 
 		available_if_capitulated = yes
 mutually_exclusive = {
@@ -618,11 +660,7 @@ mutually_exclusive = {
 			controls_state = 121
 			controls_state = 133
 			controls_state = 136
-			controls_state = 119
-			controls_state = 120
-			controls_state = 933
-			controls_state = 123
-			controls_state = 122
+            controls_state = 122
 		} 
 		available_if_capitulated = yes
 
@@ -829,7 +867,7 @@ mutually_exclusive = {
 		search_filters = { FOCUS_FILTER_INDUSTRY}
 		
       
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 8
@@ -845,11 +883,15 @@ mutually_exclusive = {
 
 
 		completion_reward = {
-			add_stability = 0.05
-			custom_effect_tooltip = generic_skip_one_line_tt
 			swap_ideas = {
 				remove_idea = ENG_state_of_the_economy_two
 				add_idea = ENG_state_of_the_economy_three
+			}
+			add_tech_bonus = {
+				name = ENG_increase_military_budget
+				bonus = 0.5
+				uses = 2
+				category = industry
 			}
 		}
 	}		
@@ -939,7 +981,10 @@ completion_reward = {
 			focus = ENG_tank_variant_focus
 		}
 		prerequisite = {
-			focus = ENG_tank_focus
+			focus = ENG_tank_focus_mech
+		}
+		 mutually_exclusive = {
+			focus = uk_small_arms_focus
 		}
 		relative_position_id = ENG_tank_variant_focus
 		x = -1
@@ -948,23 +993,50 @@ completion_reward = {
 			factor = 10
 		}
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = ENG_adopt_bliztkrieg_tactics
-				cost_reduction = 0.5
-				uses = 2
-				category = cat_mobile_warfare
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			swap_ideas = {
-				remove_idea = motorized_army_two
-				add_idea = motorized_army_three
-			}
+			
+			if = {
+                limit = {
+                    has_dlc = "Arms Against Tyranny"
+                }
+
+                mio:ENG_vauxhall_organization = {
+                    add_mio_size = 1
+					add_mio_funds_gain_factor = 0.15
+					add_mio_research_bonus = 0.05
+                }
+            }
+            else = {
+                upgrade_ordance_factories_no_aat = yes
+            }
+
+             
+             custom_effect_tooltip = generic_skip_one_line_tt
+		
+        
+
+
+           random_owned_controlled_state = {
+				limit = {
+					is_in_home_area = yes
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
 					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
 		
 	}
 	focus = {
 		id = ENG_artillery_focus
-		icon = GFX_goal_generic_army_artillery2
+		icon = GFX_focus_generic_anti_tank_guns
 		cost = 5
 		prerequisite = {
 			focus = ENG_rearmament_of_army
@@ -977,8 +1049,7 @@ completion_reward = {
 		}
 		
 		completion_reward = {
-			army_experience = 25
-			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			add_tech_bonus = {
 				name = ENG_artillery_focus
 				bonus = 1
@@ -990,22 +1061,39 @@ completion_reward = {
 	}
 	focus = {
 		id = ENG_ramp_up_constription
-		icon = GFX_focus_SOV_penal_battalions
+		icon =  GFX_focus_AFG_royal_guard
 		cost = 10
 		prerequisite = {
 			focus = uk_small_arms_focus
 		}
 		x = 2
-		y = 2
+		y = 1
 		relative_position_id = ENG_adopt_bliztkrieg_tactics
 		ai_will_do = {
 			factor = 2
 		}
 		
 		completion_reward = {
-			add_stability = -0.05
-			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = Increased_enlistment
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = ENG_reinforce_the_isles
+		icon = GFX_SOV_rehabilitated_military_ccp_2d_sov_compatibility
+		cost = 10
+		prerequisite = {
+			focus = uk_small_arms_focus
+		}
+		x = 0
+		y = 2
+		relative_position_id = uk_small_arms_focus
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			add_ideas = ENG_reinforce_the_isles_idea
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -1019,9 +1107,7 @@ completion_reward = {
 		prerequisite = {
 			focus = ENG_adopt_bliztkrieg_tactics
 		}
-		mutually_exclusive = {
-			focus = uk_small_arms_focus
-		}
+		
 		x = 0
 		y = 1
 		relative_position_id = ENG_adopt_bliztkrieg_tactics
@@ -1031,15 +1117,7 @@ completion_reward = {
 		
 		completion_reward = {
 			add_ideas = JAP_economy_by_japan_tanks
-             custom_effect_tooltip = generic_skip_one_line_tt
-			127 = {
-			add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
+			
 		}
 	}
 	focus = {
@@ -1057,24 +1135,25 @@ completion_reward = {
 		}
 		
 		completion_reward = {
-			add_tech_bonus = {
+			
+			swap_ideas = {
+				remove_idea = motorized_army_three
+				add_idea = motorized_army_four	
+			}
+             add_tech_bonus = {
 				name = GER_build_panzer_army
 				bonus = 1.0
 				ahead_reduction = 1
 				uses = 1
 				category = armor
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			swap_ideas = {
-				remove_idea = motorized_army_three
-				add_idea = motorized_army_four	
-			}
-
 		}
 	}
 	focus = {
 		id = air_defense_focus
-		prerequisite = { focus = ENG_let_that_lion_roar_start }
+			prerequisite = {
+			focus = ENG_special_air_service 
+			}
 		available = {
 			if = {
 				limit = {
@@ -1103,10 +1182,10 @@ completion_reward = {
 		available_if_capitulated = yes
 
 		icon = GFX_focus_generic_air_defense
-		x = 3
-		y = 1
-		relative_position_id = ENG_let_that_lion_roar_start
-		cost = 10
+		x = 1
+		y = 2
+		relative_position_id = ENG_chiefs_of_staff_committee
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1355,11 +1434,14 @@ completion_reward = {
 	focus = {
 		id = radar_focus
 		prerequisite = { focus = air_defense_focus }
-		icon = GFX_goal_generic_radar
-		x = 0
+		prerequisite = {
+			focus = ENG_parachute_regiments
+		}
+		icon = GFX_goal_generic_radar 
+		x = -1
 		y = 1
 		relative_position_id = air_defense_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1449,7 +1531,6 @@ completion_reward = {
 	
 	focus = {
 		id = general_rearmament_focus
-		prerequisite = { focus = ENG_let_that_lion_roar_start }
 		available = {
 			if = {
 				limit = {
@@ -1476,9 +1557,9 @@ completion_reward = {
 
 		continue_if_invalid = yes
 
-		icon = GFX_focus_generic_commonwealth_build_infantry
-		x = -7
-		y = 1
+		icon = GFX_focus_eng_the_sun_never_sets
+		x = -15
+		y = 0
 		relative_position_id = ENG_let_that_lion_roar_start
 		cost = 10
 		ai_will_do = {
@@ -1496,7 +1577,7 @@ completion_reward = {
 
 	focus = {
 		id = ENG_special_air_service
-		prerequisite = { focus = general_rearmament_focus }
+		prerequisite = { focus = ENG_chiefs_of_staff_committee }
 		available = { 
 			
 		}
@@ -1506,8 +1587,8 @@ completion_reward = {
 		icon = GFX_focus_eng_special_air_service
 		x = 0
 		y = 1
-		relative_position_id = general_rearmament_focus
-		cost = 10
+		relative_position_id = ENG_chiefs_of_staff_committee
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -1528,7 +1609,7 @@ completion_reward = {
 		continue_if_invalid = yes
 
 		icon = GFX_focus_generic_paratrooper
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = ENG_special_air_service
 		cost = 5
@@ -1536,7 +1617,6 @@ completion_reward = {
 			factor = 1
 		}	
 		completion_reward = {
-			add_potential_special_forces_tree = yes
 			add_doctrine_cost_reduction = {
 				name = ENG_parachute_regiments
 				cost_reduction = 0.25
@@ -1552,7 +1632,7 @@ completion_reward = {
 		} #at war with major or ger in rhineland or high threat
 		prerequisite = { focus = ENG_rearmament_of_army }
 		
-		icon = GFX_focus_AFG_royal_guard
+		icon = GFX_focus_generic_full_employment
 		x = 2
 		y = 1
 		relative_position_id = ENG_rearmament_of_army
@@ -1634,33 +1714,87 @@ completion_reward = {
 		prerequisite = { focus = royal_ordinance_focus }
 		icon = GFX_goal_generic_production2
 		x = 3
-		y = 3
-		relative_position_id = royal_ordinance_focus
+		y = 2
+		relative_position_id = ENG_artillery_focus
 		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
-
+       
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_ideas = british_arms_discount
 			custom_effect_tooltip = generic_skip_one_line_tt
-			add_equipment_subsidy = {
-				cic = 1500
-				equipment_type = infantry_equipment
-				seller_tags = {
-					USA FRA GER SOV HOL BEL ITA CAN SAF AST NZL 
+			   random_owned_controlled_state = {
+				limit = {
+					is_in_home_area = yes
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
 				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = uk_royal_marine_corps
+		prerequisite = { focus = uk_small_arms_focus focus = uk_convoy_focus }
+		
+		icon =GFX_focus_BEL_free_belgian_forces
+		x = 1
+		y = 1
+		relative_position_id = uk_small_arms_focus
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+       
+		available_if_capitulated = yes
+		completion_reward = {
+			add_unit_bonus = {
+				marine = {
+					amphibious = {
+						attack = 0.05
+						defence = 0.05
+					}
+					river = {
+						attack = 0.05
+						defence = 0.05
+					}
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			127 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					province = 9458
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					province = 6489
+					instant_build = yes
+				}
+				
 			}
 		}
 	}
 	
 	focus = {
-		id = ENG_tank_focus
-		prerequisite = { focus = royal_ordinance_focus }
-		icon = GFX_SOV_development_of_tankograd_ccp_2d_sov_compatibility
-		x = 2
+		id = ENG_tank_focus_mech
+		prerequisite = { focus = ENG_artillery_focus }
+		icon = GFX_focus_generic_mechanized
+		x = -1
 		y = 2
 		relative_position_id = ENG_rearmament_of_army
 		cost = 10
@@ -1680,11 +1814,11 @@ completion_reward = {
 	}
 	focus = {
 		id = ENG_tank_variant_focus
-		prerequisite = { focus = royal_ordinance_focus }
+		prerequisite = { focus = royal_ordinance_focus focus = ENG_artillery_focus }
 		icon = GFX_focus_NOR_rikstanken
-		x = 2
+		x = 1
 		y = 1
-		relative_position_id = royal_ordinance_focus
+		relative_position_id = ENG_artillery_focus
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -1729,9 +1863,9 @@ completion_reward = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 	focus = {
-		id = UK_secret_focus
+		id = ENG_james_chadwick_focus
 		prerequisite = { focus = maud_focus }
-		icon = GFX_goal_generic_secret_weapon
+		icon = GFX_focus_generic_university_3
 		x = 0
 		y = 1
 		relative_position_id = maud_focus
@@ -1743,64 +1877,32 @@ completion_reward = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
+			add_ideas = ENG_james_chadwick_idea
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
-				name = UK_secret_focus
+				name = ENG_james_chadwick
 				bonus = 1.0
 				uses = 2
 				category = electronics
 			}
 			add_tech_bonus = {
-				name = UK_secret_focus
+				name = ENG_james_chadwick
 				bonus = 1.0
 				uses = 2
 				category = rocketry
 			}
-			add_tech_bonus = {
-				name = UK_secret_focus
-				bonus = 1.0
-				uses = 1
-				category = nuclear
-			}
+			
+
 		}
 	}
 	
-	focus = {
-		id = UK_nuclear_program
-		prerequisite = { focus = UK_secret_focus focus = radar_focus }
-		icon = GFX_focus_generic_nuclear_development
-		x = 1
-		y = 2
-		relative_position_id = maud_focus
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		completion_reward = {
-			 random_owned_controlled_state = {
-				limit = {
-					is_in_home_area = yes
-					
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = nuclear_facility
-					level = 1
-					instant_build = yes
-				}
-			}
-           
-			
-		}
-	}
+	
 	focus = {
 		id = air_rearmament_focus
 		prerequisite = { focus = general_rearmament_focus }
 		icon = GFX_focus_HUN_establish_the_mavag_aircraft_factory
-		x = -2
-		y = 2
+		x = -7
+		y = 1
 		relative_position_id = general_rearmament_focus
 		cost = 10
 		ai_will_do = {
@@ -1833,7 +1935,8 @@ completion_reward = {
 		}
 
 		completion_reward = {
-			air_experience = 25
+			air_experience = 50
+			custom_effect_tooltip = generic_skip_one_line_tt
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -2006,8 +2109,7 @@ completion_reward = {
 
 	focus = {
 		id = ENG_chiefs_of_staff_committee
-		prerequisite = { focus = air_rearmament_focus }
-		prerequisite = { focus = naval_rearmament_focus }
+		prerequisite = { focus = air_rearmament_focus focus = ENG_rearmament_of_army }
 		available = { 
 			
 		}
@@ -2015,10 +2117,10 @@ completion_reward = {
 		continue_if_invalid = yes
 
 		icon = GFX_focus_eng_chiefs_of_staff_committee
-		x = 2
+		x = 4
 		y = 1
 		relative_position_id = air_rearmament_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -2033,9 +2135,9 @@ completion_reward = {
 
 	focus = {
 		id = fighter_command_focus
-		prerequisite = { focus = air_rearmament_focus }
+		prerequisite = { focus = aircraft_production_focus }
 		icon = GFX_focus_usa_escort_fighters
-		x = -1
+		x = -2
 		y = 2
 		relative_position_id = air_rearmament_focus
 		cost = 5
@@ -2044,6 +2146,7 @@ completion_reward = {
 		}
         mutually_exclusive = {
 			focus = coastal_command_focus
+			focus = bomber_command_focus
 		}
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
@@ -2054,8 +2157,7 @@ completion_reward = {
 				limit = {
 					NOT = { has_dlc = "By Blood Alone" }
 				}
-				air_experience = 25
-				custom_effect_tooltip = generic_skip_one_line_tt
+				
 				add_tech_bonus = {
 					name = fighter_command_focus
 					bonus = 1.0
@@ -2068,8 +2170,7 @@ completion_reward = {
 				limit = {
 					has_dlc = "By Blood Alone"
 				}
-				air_experience = 25
-				custom_effect_tooltip = generic_skip_one_line_tt
+				
 				add_tech_bonus = {
 					name = fighter_command_focus
 					bonus = 1.0
@@ -2084,11 +2185,15 @@ completion_reward = {
 	}
 	focus = {
 		id = bomber_command_focus
-		prerequisite = { focus = air_rearmament_focus }
+		prerequisite = { focus = aircraft_production_focus }
 		icon = GFX_focus_SWE_marauder_bombers
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = air_rearmament_focus
+		mutually_exclusive = {
+			focus = coastal_command_focus
+			focus = fighter_command_focus
+		}
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -2110,8 +2215,7 @@ completion_reward = {
 				limit = {
 					has_dlc = "By Blood Alone"
 				}
-				air_experience = 25
-				custom_effect_tooltip = generic_skip_one_line_tt
+				
 				add_tech_bonus = {
 					name = bomber_command_focus
 					bonus = 1.0
@@ -2126,9 +2230,9 @@ completion_reward = {
 	}
 	focus = {
 		id = coastal_command_focus
-		prerequisite = { focus = air_rearmament_focus }
+		prerequisite = { focus = aircraft_production_focus }
 		icon = GFX_goal_generic_air_naval_bomber
-		x = 1
+		x = 2
 		y = 2
 		relative_position_id = air_rearmament_focus
 		cost = 5
@@ -2137,6 +2241,7 @@ completion_reward = {
 		}
         mutually_exclusive = {
 			focus = fighter_command_focus
+			focus = bomber_command_focus
 		}
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
@@ -2147,8 +2252,7 @@ completion_reward = {
 				limit = {
 					NOT = { has_dlc = "By Blood Alone" }
 				}
-				air_experience = 25
-				custom_effect_tooltip = generic_skip_one_line_tt
+				
 				add_tech_bonus = {
 					name = coastal_command_focus
 					bonus = 1.0
@@ -2161,8 +2265,7 @@ completion_reward = {
 				limit = {
 					has_dlc = "By Blood Alone"
 				}
-				air_experience = 25
-				custom_effect_tooltip = generic_skip_one_line_tt
+				
 				add_tech_bonus = {
 					name = coastal_command_focus
 					bonus = 1.0
@@ -2176,11 +2279,11 @@ completion_reward = {
 		}
 	}focus = {
 		id = aircraft_production_focus
-		prerequisite = { focus = fighter_command_focus focus = coastal_command_focus }
+		prerequisite = { focus = air_rearmament_focus } 
 		icon = GFX_focus_SMB_purchase_aircraft
-		x = 1
+		x = 0
 		y = 1
-		relative_position_id = fighter_command_focus
+		relative_position_id = air_rearmament_focus
 		cost = 10
 		ai_will_do = {
 			factor = 3
@@ -2194,10 +2297,10 @@ completion_reward = {
 	}
 	focus = {
 		id = uk_jet_focus
-		prerequisite = { focus = aircraft_production_focus }
+		prerequisite = { focus = fighter_command_focus focus = bomber_command_focus focus = coastal_command_focus }
 		icon = GFX_focus_generic_jet_planes
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = aircraft_production_focus
 		cost = 10
 		ai_will_do = {
@@ -2226,8 +2329,8 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		id = naval_rearmament_focus
 		prerequisite = { focus = general_rearmament_focus }
 		icon = GFX_focus_generic_north_atlantic_fleet
-		x = 2
-		y = 2
+		x = 8
+		y = 1
 		relative_position_id = general_rearmament_focus
 		cost = 10
 		ai_will_do = {
@@ -2254,10 +2357,10 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		complete_tooltip = {
 			every_state = {
 				limit = { has_state_flag = ENG_naval_rearmament_focus_1dockyard }
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -2276,10 +2379,10 @@ custom_effect_tooltip = generic_skip_one_line_tt
 					}
 					is_core_of = ROOT
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = ENG_naval_rearmament_focus_1dockyard
@@ -2294,10 +2397,10 @@ custom_effect_tooltip = generic_skip_one_line_tt
 					}
 					is_core_of = ROOT
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = ENG_naval_rearmament_focus_1dockyard
@@ -2312,10 +2415,10 @@ custom_effect_tooltip = generic_skip_one_line_tt
 					}
 					is_core_of = ROOT
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = ENG_naval_rearmament_focus_1dockyard
@@ -2327,7 +2430,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		id = ENG_anti_non_contact_committee
 		prerequisite = { focus = naval_rearmament_focus }
 		icon = GFX_focus_generic_mine_warfare
-		x = 2
+		x = 1
 		y = 1
 		relative_position_id = naval_rearmament_focus
 		cost = 10
@@ -2361,8 +2464,8 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		id = ENG_secure_the_imperial_shipping_routes
 		prerequisite = { focus = naval_rearmament_focus }
 		icon = GFX_focus_generic_cruiser2
-		x = 3
-		y = 2
+		x = -1
+		y = 1
 		offset = {
 			x = -1
 			y = 0
@@ -2394,7 +2497,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		id = uk_destroyer_focus
 		prerequisite = { focus = naval_rearmament_focus }
 		icon = GFX_focus_generic_destroyer
-		x = -1
+		x = -2
 		y = 2
 		relative_position_id = naval_rearmament_focus
 		cost = 5
@@ -2499,7 +2602,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		id = uk_waves_focus
 		prerequisite = { focus = naval_rearmament_focus }
 		icon = GFX_focus_ger_accept_british_naval_dominance
-		x = 1
+		x = 0
 		y = 2
 		relative_position_id = naval_rearmament_focus
 		cost = 10
@@ -2573,11 +2676,11 @@ custom_effect_tooltip = generic_skip_one_line_tt
 	}
 	focus = {
 		id = uk_amphibious_focus
-		prerequisite = { focus = naval_rearmament_focus }
+		prerequisite = { focus = uk_royal_marine_corps }
 		icon = GFX_focus_generic_naval_invasion_tank
 		x = 0
-		y = 1
-		relative_position_id = naval_rearmament_focus
+		y = 2
+		relative_position_id = uk_royal_marine_corps
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -2657,11 +2760,11 @@ custom_effect_tooltip = generic_skip_one_line_tt
 
 	focus = {
 		id = ENG_vanguard
-		prerequisite = { focus = uk_battleship_focus }
+		prerequisite = { focus = ENG_expand_the_repair_yards }
 		icon = GFX_focus_generic_navy_battleship2
 		x = 0
-		y = 2
-		relative_position_id = uk_battleship_focus
+		y = 1
+		relative_position_id = ENG_expand_the_repair_yards
 		cost = 10
 		ai_will_do = {
 			factor = 1
