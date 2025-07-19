@@ -737,8 +737,87 @@ mutually_exclusive = {
 
 
 		completion_reward = {
-			add_ideas = ENG_special_areas_act_idea
+		custom_effect_tooltip = ENG_special_areas_act_tt
+		custom_effect_tooltip = generic_states_affected_no_prev_line_tt
+		every_owned_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				is_core_of = ROOT
+				OR = {
+					has_resources_amount = {
+						resource = steel
+						amount > 14
+					}
+					has_resources_amount = {
+						resource = tungsten
+						amount > 14
+					}
+					has_resources_amount = {
+						resource = chromium
+						amount > 14
+					}
+					has_resources_amount = {
+						resource = aluminium
+						amount > 14
+					}
+					
+				}
+				
+			}
+			hidden_effect = {
+				
+				if = {
+					limit = {
+						has_resources_amount = {
+							resource = steel
+							amount > 14
+						}
+					}
+					add_resource = {
+						type = steel
+						amount = 3
+					}
+				}
+				if = {
+					limit = {
+						has_resources_amount = {
+							resource = tungsten
+							amount > 14
+						}
+					}
+					add_resource = {
+						type = tungsten
+						amount = 3
+					}
+				}
+				if = {
+					limit = {
+						has_resources_amount = {
+							resource = chromium
+							amount > 14
+						}
+					}
+					add_resource = {
+						type = chromium
+						amount = 3
+					}
+				}
+				if = {
+					limit = {
+						has_resources_amount = {
+							resource = aluminium
+							amount > 14
+						}
+					}
+					add_resource = {
+						type = aluminium
+						amount = 3
+					}
+				}
+				
+			}
 		}
+	}
 	}
 	focus = {
 		id = ENG_increase_military_budget
@@ -798,76 +877,26 @@ mutually_exclusive = {
         
 		available_if_capitulated = yes
 
+     
 
-		completion_reward = {
-			custom_effect_tooltip = RAJ_agricultural_cooperatives_tt
-
-            #effect_tooltip = {
-            #    every_owned_state = {
-            #        limit = {
-            #            is_controlled_by = ROOT
-            #            industrial_complex > 3 #UPDATE RAJ_agricultural_cooperatives_tt if you change this
-            #            infrastructure < 5
-            #        }
-#
-            #        add_building_construction = {
-            #            type = infrastructure
-            #            level = 1
-            #            instant_build = yes
-            #        }
-            #    }
-            #}
-
-            set_variable = { agcoop_infra_build_counter = 0 }
-            set_variable = { agcoop_civ_build_counter = 0 }
-            for_each_scope_loop = {
-                array = owned_states_at_game_start
-                
-                 if = {
-                     limit = {
-                        is_controlled_by = ROOT
-                        industrial_complex > 3 #UPDATE RAJ_agricultural_cooperatives_tt if you change this
-                    }     
-                    ROOT = { add_to_variable = { agcoop_infra_build_counter = 1 } } #Count infra if state requirements are correct, even if one isnt build because you already technically fulfilled the requirements
-                    if = {
-                        limit = {
-                            infrastructure < 5
-                        }
-
-                        add_building_construction = {
-                            type = infrastructure
-                            level = 1
-                            instant_build = yes
-                        }
-                        set_state_flag = agcoop_built_infra #used for complete tooltip
-                    }
-
-                    log = "INFRA BUILT: [?ROOT.agcoop_infra_build_counter]"
-                    set_temp_variable = { t_infra_build_counter  = ROOT.agcoop_infra_build_counter }
-
-                    modulo_temp_variable = { var = t_infra_build_counter value = 2 } #every other infra counts as a civ
-
-                    if = {
-                        limit = {
-                            check_variable = { t_infra_build_counter = 1 } 
-                            check_variable = { ROOT.agcoop_civ_build_counter < 10 } #Max roof
-                        }
-#
-                        
-                        add_extra_state_shared_building_slots = 1
-                        add_building_construction = {
-                            type = industrial_complex
-                            level = 1
-                            instant_build = yes
-                        }
-                        set_state_flag = agcoop_built_civ
-                        add_to_variable = { ROOT.agcoop_civ_build_counter = 1 }
-                    }     
-                }
-            }
-        
-		}
+completion_reward = {
+   custom_effect_tooltip = uk_farmland_reform_tt
+    # Pass 1: build infra in all eligible states
+    every_owned_state = {
+        limit = {
+            is_controlled_by = ROOT
+            industrial_complex > 2
+			is_core_of = ROOT  # loosened from >3 so UK’s small states qualify
+        }
+        add_building_construction = {
+            type = infrastructure
+            level = 1
+            instant_build = yes
+        }
+    }
+   }
 	}
+	
     focus = {
 		id = ENG_time_of_economic_prosperity
 		icon = GFX_focus_AST_rats_tobruk
