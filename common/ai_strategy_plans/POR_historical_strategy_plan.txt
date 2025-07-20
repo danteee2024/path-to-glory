@@ -25,7 +25,6 @@ POR_historical_plan = {
 		POR_estado_novo
 		POR_continue_the_public_works
 		POR_instituto_superior_tecnico
-		POR_food_industries
 		POR_cork_exports
 		POR_army_reorganization
 		POR_support_the_spanish_nationalists
@@ -35,8 +34,6 @@ POR_historical_plan = {
 		POR_roads_bridges_and_dams
 		POR_extraction_industries
 		POR_hydroelectricity
-		POR_kickstart_the_economy
-		POR_mainland_economy_revived
 		POR_portuguese_legion
 		POR_arsenal_do_alfeite
 		POR_a_powerful_merchant_marine

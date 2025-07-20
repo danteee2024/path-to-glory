@@ -29,11 +29,9 @@ POR_fascist_axis_plan = {
 		POR_metropolitan_army
 		POR_send_assistance
 		POR_a_powerful_merchant_marine
-		POR_industrial_modernization
 		POR_ogme		
 		#1939
 		POR_refuse_the_naval_blockade
-		POR_a_new_industry
 		POR_ditadura_militar
 		POR_corpo_do_estado_maior	
 		POR_military_vehicles
