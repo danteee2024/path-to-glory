@@ -205,7 +205,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "rocket_site_speed"   
-			position = { x = 488 y = 152 } 
+			position = { x = 442 y = 152 } 
 			font = "cg_16b"              
 			text = "[?modifier@production_speed_rocket_site_factor|%0=+]"	   
 			maxWidth = 50  
@@ -216,7 +216,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "nuclear_reactor_speed"   
-			position = { x = 536 y = 152 } 
+			position = { x = 488 y = 152 } 
 			font = "cg_16b"              
 			text = "[?modifier@production_speed_nuclear_reactor_factor|%0=+]"	   
 			maxWidth = 50  
@@ -227,7 +227,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "nuclear_reactor_heavy_water_speed"   
-			position = { x = 396 y = 194 } 
+			position = { x = 536 y = 152 } 
 			font = "cg_16b"              
 			text = "[?modifier@production_speed_nuclear_reactor_heavy_water_factor|%0=+]"	   
 			maxWidth = 50  
@@ -238,7 +238,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "commercial_nuclear_reactor_speed"   
-			position = { x = 442 y = 194 } 
+			position = { x = 396 y = 194 } 
 			font = "cg_16b"              
 			text = "[?modifier@production_speed_commercial_nuclear_reactor_factor|%0=+]"	   
 			maxWidth = 50  
