@@ -17,6 +17,27 @@ ideas = {
 				nuclear_production_factor = 0.15
 			}
 		}
+		
+		ENG_blitz_spirit_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_goods_red_bonus
+			
+			modifier = {
+				consumer_goods_factor = -0.2
+				war_support_factor = 0.05
+				weekly_bombing_war_support = 0.001
+			}
+		}
 		ENG_mifive_idea = {
 			picture = RAJ_a_policy_of_silence
 			allowed = {
