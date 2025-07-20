@@ -1648,7 +1648,6 @@ focus = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			custom_effect_tooltip = NZL_offshore_military_investments_tt
 			random_core_state = {
 				add_extra_state_shared_building_slots = 2			
 				add_building_construction = {

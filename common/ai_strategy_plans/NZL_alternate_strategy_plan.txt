@@ -1,0 +1,55 @@
+NZL_fascist_plan = {
+	name = "New Zealand fascist plan"
+	desc = ""
+
+	enable = {
+		original_tag = NZL
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {				#add more focuses to match the historical pattern best
+		NZL_the_labour_partys_reform	
+		NZL_State_Housing_Initiative
+		NZL_Commitment_to_Peace
+		NZL_island_industry_1
+		NZL_island_industry_2
+		NZL_island_industry_3
+		NZL_island_industry_6
+		NZL_cooperative_industry
+		NZL_island_industry_7
+		NZL_island_industry_8
+		NZL_island_industry_9
+		NZL_island_industry_10
+		NZL_supply_the_new_zealand_navy_divsion
+		NZL_improve_the_radars
+		NZL_Pacific_Convoy_Defense
+		NZL_RNZN_Pacific_Command
+		NZL_train_new_officers
+		NZL_Invest_in_Saint_Marys_Shipbuilding
+		NZL_Prioritize_Capital_and_Carrier_Funding
+	}
+
+	research = {
+		
+	}
+
+	
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		NZL_national_party_triumphant = 0
+		NZL_unite_communist_movements = 0
+		NZL_legion_ideals = 0
+	}
+
+}
+
