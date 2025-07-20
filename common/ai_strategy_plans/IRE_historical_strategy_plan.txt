@@ -14,6 +14,7 @@ IRE_historical_plan = {
 	ai_national_focuses = {
 		IRE_Assess_the_future
 		IRE_Fianna_fail
+		#so doesnt go stupid paths
 	}
 
 	focus_factors = {
