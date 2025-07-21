@@ -201,6 +201,9 @@ l_english:
  ROM_Mountain_Training:0 "Mountain Training"
  ROM_Mountain_Training_desc:0 "Romania’s rugged terrain has forged skilled mountain troops. By refining their training, we enhance their combat effectiveness, ensuring our mountaineers can strike hard and hold fast in even the harshest terrain."
 
+ ROM_King_Micheals_Coup_Cost:0 "King Michaels Coup Cost"
+ ROM_King_Micheals_Coup_Cost_desc:0 "Organising a coup is expensive, all the prparation requires a lot of resources. It's now a bargain of the state to repay the debts of the coup."
+
 l_english:
 ################## TOOLTIPS ######################
 
