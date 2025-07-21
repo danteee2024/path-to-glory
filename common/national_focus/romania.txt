@@ -98,7 +98,7 @@ focus_tree = {
 		prerequisite = { focus = ROM_national_recovery }
 		mutually_exclusive = { focus = ROM_the_stabilization_plan }
 		icon = GFX_focus_generic_resource_extraction
-		x = -5
+		x = -4
 		y = 1
 		relative_position_id = ROM_national_recovery
 		cost = 10
@@ -253,7 +253,7 @@ focus_tree = {
 		}
 		prerequisite = {focus = ROM_national_recovery }	
 		icon = GFX_focus_PER_increase_oil_sales
-		x = -7
+		x = -6
 		y = 1
 		relative_position_id = ROM_national_recovery
 		cost = 10
@@ -680,7 +680,7 @@ focus = {
 		prerequisite = { focus = ROM_the_stabilization_plan focus = ROM_expand_ploiesti_oil_production }
 		
 		icon = GFX_focus_generic_modernize_industry
-		x = 5
+		x = 4
 		y = 1
 		relative_position_id = ROM_expand_ploiesti_oil_production
 		cost = 5
@@ -690,7 +690,12 @@ focus = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = ROM_civil_works
+				category = industry
+				uses = 2
+				bonus = 1
+			}
 		}
 	}
 
@@ -707,7 +712,7 @@ focus = {
 		prerequisite = { focus = ROM_national_recovery }
 		
 		icon = GFX_goal_generic_neutrality_focus
-		x = 5
+		x = 4
 		y = 1
 		relative_position_id = ROM_national_recovery
 		cost = 10
@@ -1079,7 +1084,7 @@ focus = {
 		id = ROM_expand_the_university_of_bucharest
 		icon = GFX_focus_research
 		prerequisite = { focus = ROM_national_recovery }
-		x = 7
+		x = 6
 		y = 1
 		relative_position_id = ROM_national_recovery
 
@@ -1167,7 +1172,7 @@ focus = {
 		id = ROM_preserve_greater_romania
 		icon = GFX_focus_rom_preserve_romania
 		mutually_exclusive = { focus = ROM_Institute_Royal }
-		x = 19
+		x = 18
 		y = 0
 
 		cost = 10
@@ -2795,7 +2800,11 @@ focus = {
 				}
 				promote_character = { 
 					character = ROM_king_michael 
-					ideology = despotism }
+					ideology = despotism
+					traits = {
+					camarilla_leader
+					}
+				}
 			if = {
 				limit = {
 					has_idea = ROM_king_carol_ii_hedonist
@@ -4775,7 +4784,7 @@ focus = {
 	focus = {
 		id = ROM_army_maneuvers
 		icon = GFX_goal_generic_army_doctrines
-		x = 43
+		x = 42
 		y = 0
 
 		cost = 10
