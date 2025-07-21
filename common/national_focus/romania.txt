@@ -1501,6 +1501,16 @@ focus = {
 				can_create_factions = yes
 			}
 			create_faction = "Romanian League"
+			unlock_decision_category_tooltip = ROM_change_sides
+			hidden_effect = {
+				news_event = { id = news.322 days = 1 }
+				set_country_flag = can_change_sides_dem
+				set_country_flag = can_change_sides_com
+				set_country_flag = can_change_sides_fas				
+			unlock_decision_tooltip = ROM_change_sides_to_allies
+			unlock_decision_tooltip = ROM_change_sides_to_axis
+			unlock_decision_tooltip = ROM_change_sides_to_commintern
+			}
 		}
 	}
 
@@ -1928,6 +1938,16 @@ focus = {
 		completion_reward = {
 			remove_ideas = neutrality_idea
 			SOV = { country_event = generic.2 }
+			unlock_decision_category_tooltip = ROM_change_sides
+			hidden_effect = {
+				news_event = { id = news.322 days = 1 }
+				set_country_flag = can_change_sides_dem
+				set_country_flag = can_change_sides_com
+				set_country_flag = can_change_sides_fas				
+			unlock_decision_tooltip = ROM_change_sides_to_allies
+			unlock_decision_tooltip = ROM_change_sides_to_axis
+			unlock_decision_tooltip = ROM_change_sides_to_commintern
+			}
 		}
 	}
 
@@ -2185,7 +2205,7 @@ focus = {
 		y = 1
 		relative_position_id = ROM_trade_treaty_with_germany
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2248,7 +2268,7 @@ focus = {
 		y = 1
 		relative_position_id = ROM_invite_german_advisors
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2325,6 +2345,16 @@ focus = {
 		completion_reward = {
 			remove_ideas = neutrality_idea
 			GER = { country_event = generic.2 }
+			unlock_decision_category_tooltip = ROM_change_sides
+			hidden_effect = {
+				news_event = { id = news.322 days = 1 }
+				set_country_flag = can_change_sides_dem
+				set_country_flag = can_change_sides_com
+				set_country_flag = can_change_sides_fas				
+			unlock_decision_tooltip = ROM_change_sides_to_allies
+			unlock_decision_tooltip = ROM_change_sides_to_axis
+			unlock_decision_tooltip = ROM_change_sides_to_commintern
+			}
 		}
 	}
 
@@ -2691,8 +2721,6 @@ focus = {
 		completion_reward = {
 			add_ideas = ROM_The_Empire_0
 			set_cosmetic_tag = ROM_The_Empire
-			add_stability = 0.1
-			add_war_support = 0.1
 			add_country_leader_trait = Empire_Builder
 		}		
 	}
@@ -2801,9 +2829,6 @@ focus = {
 				promote_character = { 
 					character = ROM_king_michael 
 					ideology = despotism
-					traits = {
-					camarilla_leader
-					}
 				}
 			if = {
 				limit = {
@@ -2892,7 +2917,7 @@ focus = {
 		y = 1
 		relative_position_id = ROM_king_michaels_coup
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2910,10 +2935,7 @@ focus = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_MANPOWER }
 		completion_reward = {			
-			swap_ideas = {
-				remove_idea = ROM_Institute_Royal
-				add_idea = ROM_The_Democrats
-			}
+				add_ideas = ROM_The_Democrats
 		}
 	}
 
@@ -2956,8 +2978,8 @@ focus = {
 				remove_idea = ROM_The_Democrats
 				add_idea = ROM_Democratic_King
 			}	
-			add_stability = 0.1
-			add_war_support = 0.1
+			add_ideas = ROM_figurehead_king_michael	
+			remove_ideas = ROM_Institute_Royal
 		}
 	}
 
@@ -3257,6 +3279,16 @@ focus = {
 		completion_reward = {
 			ENG = {
 				country_event = generic.2
+				}
+			unlock_decision_category_tooltip = ROM_change_sides
+			hidden_effect = {
+				news_event = { id = news.322 days = 1 }
+				set_country_flag = can_change_sides_dem
+				set_country_flag = can_change_sides_com
+				set_country_flag = can_change_sides_fas				
+			unlock_decision_tooltip = ROM_change_sides_to_allies
+			unlock_decision_tooltip = ROM_change_sides_to_axis
+			unlock_decision_tooltip = ROM_change_sides_to_commintern
 			}
 		}
 	}
@@ -3824,6 +3856,16 @@ focus = {
 		completion_reward = {
 			GER = {
 				country_event = generic.2
+				}
+			unlock_decision_category_tooltip = ROM_change_sides
+			hidden_effect = {
+				news_event = { id = news.322 days = 1 }
+				set_country_flag = can_change_sides_dem
+				set_country_flag = can_change_sides_com
+				set_country_flag = can_change_sides_fas				
+			unlock_decision_tooltip = ROM_change_sides_to_allies
+			unlock_decision_tooltip = ROM_change_sides_to_axis
+			unlock_decision_tooltip = ROM_change_sides_to_commintern
 			}
 		}
 	}
@@ -3858,6 +3900,16 @@ focus = {
 				can_create_factions = yes
 			}
 			create_faction = "Crowned Brotherhood"
+			unlock_decision_category_tooltip = ROM_change_sides
+			hidden_effect = {
+				news_event = { id = news.322 days = 1 }
+				set_country_flag = can_change_sides_dem
+				set_country_flag = can_change_sides_com
+				set_country_flag = can_change_sides_fas				
+			unlock_decision_tooltip = ROM_change_sides_to_allies
+			unlock_decision_tooltip = ROM_change_sides_to_axis
+			unlock_decision_tooltip = ROM_change_sides_to_commintern
+			}
 		}
 	}
 
@@ -3946,7 +3998,7 @@ focus = {
 		y = 1
 		relative_position_id = ROM_balkans_dominance
 		will_lead_to_war_with = BUL
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -4003,7 +4055,7 @@ focus = {
 		y = 1
 		relative_position_id = ROM_balkans_dominance
 		will_lead_to_war_with = HUN
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 9
@@ -4031,8 +4083,6 @@ focus = {
 			}
 		}
 
-
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -4055,7 +4105,7 @@ focus = {
 		y = 1
 		relative_position_id = ROM_puppet_bulgaria
 		will_lead_to_war_with = GRE
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4094,6 +4144,48 @@ focus = {
 		}
 	}
 
+	focus = {
+		id = ROM_secure_the_bosporus
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = ROM_puppet_bulgaria }
+		x = 1
+		y = 1
+		relative_position_id = ROM_puppet_bulgaria
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_subject = no
+			TUR = {
+				exists = yes
+				NOT = { has_war_with = ROM }
+			}
+			strength_ratio = { tag = TUR ratio > 1.5 }
+			has_army_manpower = { size > 750000 }
+		}
+
+		bypass = {
+			TUR = {
+				is_puppet_of = ROM
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = TUR
+			}
+		}
+	}
+
 	############################
 	######## AIR BRANCH ########
 	############################
@@ -4126,9 +4218,7 @@ focus = {
 		complete_tooltip = {
 			air_experience = 25
 			random_state = {
-				limit = {
-					has_state_flag = ROM_expand_the_air_force_AB
-				}
+				prioritize = {	81	}
 				add_building_construction = {
 					type = air_base
 					level = 3
@@ -4136,9 +4226,7 @@ focus = {
 				}
 			}
 			random_state = {
-				limit = {
-					has_state_flag = ROM_expand_the_air_force_AB_2
-				}
+				prioritize = {	76	}
 				add_building_construction = {
 					type = air_base
 					level = 3
@@ -4220,7 +4308,7 @@ focus = {
 		completion_reward = {
 			air_experience = 25
 			random_owned_controlled_state = {
-				prioritize = { 46 79 }
+				prioritize = { 46 }
 				limit = {
 					ROOT = { has_full_control_of_state = PREV }
 					free_building_slots = {
@@ -4236,7 +4324,7 @@ focus = {
 				set_state_flag = ROM_expand_the_air_force_AB
 			}
 			random_owned_controlled_state = {
-				prioritize = { 46 79 }
+				prioritize = { 79 }
 				limit = {
 					ROOT = { has_full_control_of_state = PREV }
 					free_building_slots = {
@@ -4296,7 +4384,7 @@ focus = {
 		y = 2
 		relative_position_id = ROM_expand_the_air_force
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -4327,7 +4415,7 @@ focus = {
 		y = 1
 		relative_position_id = ROM_acquire_licenses
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4363,7 +4451,7 @@ focus = {
 		y = 2
 		relative_position_id = ROM_local_development
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4399,7 +4487,7 @@ focus = {
 		y = 1
 		relative_position_id = ROM_ground_support
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4435,7 +4523,7 @@ focus = {
 		y = 1
 		relative_position_id = ROM_air_defense
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4547,7 +4635,7 @@ focus = {
 		y = 2
 		relative_position_id = ROM_local_development
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 9
@@ -4583,7 +4671,7 @@ focus = {
 		y = 1
 		relative_position_id = ROM_air_superiority
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4713,7 +4801,7 @@ focus = {
 		y = 2
 		relative_position_id = ROM_local_development
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -4749,7 +4837,7 @@ focus = {
 		y = 1
 		relative_position_id = ROM_strategic_bomber_force
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -5761,7 +5849,7 @@ focus = {
 		y = 0
 		relative_position_id = ROM_expand_the_air_force
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -5820,12 +5908,11 @@ focus = {
 		id = ROM_coastal_defense_navy
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		prerequisite = { focus = ROM_expand_the_galati_shipyards }
-		mutually_exclusive = { focus = ROM_black_sea_dominance }
 		x = -1
 		y = 1
 		relative_position_id = ROM_expand_the_galati_shipyards
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 9
@@ -5875,7 +5962,7 @@ focus = {
 		y = 1
 		relative_position_id = ROM_coastal_defense_navy
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 4
@@ -5911,7 +5998,7 @@ focus = {
 		y = 1
 		relative_position_id = ROM_coastal_defense_navy
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -5932,8 +6019,8 @@ focus = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = ROM_modern_destroyers
-				bonus = 3.0
-				uses = 1
+				bonus = 2
+				uses = 2
 				category = dd_tech
 			}
 		}
@@ -5947,7 +6034,7 @@ focus = {
 		y = 2
 		relative_position_id = ROM_coastal_defense_navy
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -5981,7 +6068,7 @@ focus = {
 		y = 2
 		relative_position_id = ROM_coastal_defense_navy
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -6013,12 +6100,11 @@ focus = {
 		id = ROM_black_sea_dominance
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = ROM_expand_the_galati_shipyards }
-		mutually_exclusive = { focus = ROM_coastal_defense_navy }
 		x = 1
 		y = 1
 		relative_position_id = ROM_expand_the_galati_shipyards
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -6066,7 +6152,7 @@ focus = {
 		y = 1
 		relative_position_id = ROM_black_sea_dominance
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -6104,7 +6190,7 @@ focus = {
 		y = 2
 		relative_position_id = ROM_coastal_defense_navy
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -6140,7 +6226,7 @@ focus = {
 		y = 2
 		relative_position_id = ROM_black_sea_dominance
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1

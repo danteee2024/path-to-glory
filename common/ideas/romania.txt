@@ -278,7 +278,8 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				political_power_factor = 0.05
+				political_power_factor = 0.10
+				war_support_weekly = 0.002
 			}
 		}
 
@@ -297,9 +298,10 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				political_power_factor = 0.1
+				political_power_factor = 0.15
 				compliance_growth = 0.15
 				resistance_growth = -0.15
+				war_support_weekly = 0.005
 			}
 		}
 
@@ -626,6 +628,7 @@ ideas = {
 			modifier = {
 				political_power_factor = 0.1
 				democratic_drift = 0.2
+				neutrality_drift = 0.1
 			}
 		}
 
@@ -1057,6 +1060,8 @@ ideas = {
 
 			modifier = {
 				conscription = 0.01
+				political_power_gain = 0.10
+				war_stability_factor = 0.50
 			}
 		}
 
@@ -1169,6 +1174,7 @@ ideas = {
 			
 			modifier = {
 				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
 			}
 		}
 

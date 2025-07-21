@@ -81,6 +81,12 @@
  ROM_the_faction_leader:0 "The Faction Leader"
  ROM_the_faction_leader_desc:0 "We must be the forgers of our own destiny, we must create our own faction and find our own allies."
 
+ ROM_The_Right_Leader:0 "The Right leader"
+ ROM_The_Right_Leader_desc:0 "Romania needs a leader who embodies our values and vision, guiding the nation with strength and wisdom through these turbulent times. The right leadership will unite and inspire our people to greatness."
+
+ ROM_The_Left_Leader:0 "The Left Leader"
+ ROM_The_Left_Leader_desc:0 "A new leader committed to social reform and equality can steer Romania towards a fairer society. Embracing progressive leadership will inspire hope and change for the working people of our nation."
+
 l_english:
 ################## IDEAS ######################
  ROM_expanded_axis_oil_trade:0 "Expanded Oil Trade"
