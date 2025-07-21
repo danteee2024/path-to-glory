@@ -1419,7 +1419,6 @@ focus = {
 				remove_idea = ROM_The_Right
 				add_idea = ROM_The_Right_Leader
 			}
-			remove_ideas = neutrality_idea
 		}
 	}
 
@@ -1465,7 +1464,37 @@ focus = {
 				remove_idea = ROM_The_Left
 				add_idea = ROM_The_Left_Leader
 			}
+		}
+	}
+
+	focus = {
+		id = ROM_the_faction_leader
+		icon = GFX_focus_RAJ_seek_allies_with_the_muslim_league
+		prerequisite = {
+			focus = ROM_The_Left_Leader
+			focus = ROM_The_Right_Leader
+		}
+		x = 0
+		y = 2
+		relative_position_id = ROM_Greater_Romanian_Researchers
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+
+		completion_reward = {
 			remove_ideas = neutrality_idea
+			set_rule = {
+				can_create_factions = yes
+			}
+			create_faction = "Romanian League"
 		}
 	}
 
@@ -1473,14 +1502,12 @@ focus = {
 		id = ROM_Greater_Romania
 		icon = GFX_focus_generic_military_dictatorship
 		prerequisite = {
-			focus = ROM_Greater_Romanian_Researchers
-		}
-		prerequisite = {
-			focus = ROM_The_Left_Leader
-			focus = ROM_The_Right_Leader
+			focus = ROM_the_faction_leader
+			focus = ROM_join_axis
+			focus = ROM_join_comintern
 		}
 		x = 0
-		y = 7
+		y = 8
 		relative_position_id = ROM_preserve_greater_romania
 
 		cost = 10
@@ -1490,7 +1517,10 @@ focus = {
 		}
 
 		available = {
-
+			OR = {
+			has_completed_focus = ROM_The_Left_Leader
+			has_completed_focus = ROM_The_Right_Leader
+		}
 		}
 
 		bypass = {
@@ -1503,6 +1533,9 @@ focus = {
 
 
 		completion_reward = {
+			set_rule = {
+				can_create_factions = yes
+			}
 			swap_ideas = {
 				remove_idea = ROM_preserve_greater_romania
 				add_idea = ROM_Greater_Romania
@@ -1724,7 +1757,7 @@ focus = {
 		y = 3
 		relative_position_id =  ROM_The_Left_Rises
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1751,10 +1784,10 @@ focus = {
 	focus = {
 		id = ROM_join_comintern
 		icon = GFX_focus_GER_alliance_with_the_ussr
-		prerequisite = { focus = 	ROM_Political_Left_Change }
-		x = 0
-		y = 4
-		relative_position_id =  ROM_The_Left_Rises
+		prerequisite = { focus = ROM_a_deal_with_the_devil }
+		x = 1
+		y = 1
+		relative_position_id = ROM_a_deal_with_the_devil
 
 		cost = 5
 
@@ -1789,8 +1822,90 @@ focus = {
 
 
 		completion_reward = {
-			add_country_leader_trait = staunch_stalinist
+			remove_ideas = neutrality_idea
 			SOV = { country_event = generic.2 }
+		}
+	}
+
+	focus = {
+		id = ROM_a_deal_with_the_devil
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = ROM_Political_Left_Change }
+		x = 0
+		y = 2
+		relative_position_id = ROM_Political_Left_Change
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			NOT = { has_war_with = SOU }
+			SOU = {
+				exists = yes
+				is_puppet = no
+				has_civil_war = no
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_country_leader_trait = staunch_stalinist
+			add_popularity = { ideology = communism popularity = 0.1 }
+			add_opinion_modifier = { target = SOV modifier = ROM_a_deal_with_the_devil }
+			SOV = { add_opinion_modifier = { target = ROOT modifier = ROM_a_deal_with_the_devil } }
+		}
+	}
+
+	focus = {
+		id = ROM_basing_rights_for_soviet_union
+		icon = GFX_focus_generic_soviet_politics
+		prerequisite = {
+			focus = ROM_a_deal_with_the_devil
+		}
+
+		x = -1
+		y = 1
+		relative_position_id = ROM_a_deal_with_the_devil
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_in_faction = no
+			SOV = {
+				exists = yes
+				is_puppet = no
+				NOT = {
+					has_war_with = ROOT
+				}
+				has_civil_war = no 
+			}
+		}
+
+		bypass = {
+			is_in_faction_with = SOV
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			SOV = { country_event = DOD_romania.30 }
 		}
 	}
 
@@ -1887,7 +2002,7 @@ focus = {
 		y = 1
 		relative_position_id = ROM_Ion_Antonescu_Leadership
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1911,12 +2026,148 @@ focus = {
 	}
 
 	focus = {
-		id = ROM_join_axis
-		icon = GFX_focus_chi_mission_to_germany
+		id = ROM_trade_treaty_with_germany
+		icon = GFX_goal_generic_trade
 		prerequisite = { focus = ROM_Ion_Antonescu_Leadership }
 		x = 0
-		y = 4
-		relative_position_id = ROM_The_Iron_Guard_Rises
+		y = 2
+		relative_position_id = ROM_Ion_Antonescu_Leadership
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		available = {
+			NOT = { has_war_with = GER }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_country_leader_trait = fascist_militia_leader
+			add_popularity = { ideology = fascism popularity = 0.05 }
+			add_opinion_modifier = { target = GER modifier = ROM_trade_treaty_with_germany }
+			GER = { add_opinion_modifier = { target = ROOT modifier = ROM_trade_treaty_with_germany } }
+		}
+	}
+
+	focus = {
+		id = ROM_invite_german_advisors
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = ROM_trade_treaty_with_germany }
+		x = 1
+		y = 1
+		relative_position_id = ROM_trade_treaty_with_germany
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = { has_war_with = GER }
+			OR = {
+				is_in_faction = no
+				is_in_faction_with = GER
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			custom_effect_tooltip = ROM_invite_german_advisors_tt
+			hidden_effect = {
+				GER = {
+					diplomatic_relation = {
+						country = ROOT
+						relation = military_access
+						active = yes
+					}
+				}
+			}
+			add_doctrine_cost_reduction = {
+				name = ROM_invite_german_advisors
+			    cost_reduction = 0.5
+			    uses = 2
+			    category = land_doctrine
+			}
+			add_doctrine_cost_reduction = {
+				name = ROM_invite_german_advisors
+			    cost_reduction = 0.5
+			    uses = 2
+			    category = air_doctrine
+			}
+			add_doctrine_cost_reduction = {
+				name = ROM_invite_german_advisors
+			    cost_reduction = 0.5
+			    uses = 2
+			    category = naval_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = ROM_license_german_equipment
+		icon = GFX_focus_generic_license_production
+		prerequisite = { focus = ROM_invite_german_advisors }
+		x = 0
+		y = 1
+		relative_position_id = ROM_invite_german_advisors
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				is_in_faction = no
+				is_in_faction_with = GER 
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+		completion_reward = {
+			add_relation_modifier = {
+				target = GER
+				modifier = ROM_license_german_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = ROM_join_axis
+		icon = GFX_focus_chi_mission_to_germany
+		prerequisite = { focus = ROM_trade_treaty_with_germany }
+		x = -1
+		y = 1
+		relative_position_id = ROM_trade_treaty_with_germany
 
 		cost = 5
 
@@ -1955,7 +2206,7 @@ focus = {
 
 
 		completion_reward = {
-			add_country_leader_trait = fascist_militia_leader
+			remove_ideas = neutrality_idea
 			GER = { country_event = generic.2 }
 		}
 	}
