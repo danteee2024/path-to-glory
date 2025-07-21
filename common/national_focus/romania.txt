@@ -1385,6 +1385,7 @@ focus = {
 		}
 		prerequisite = {
 			focus = ROM_Ion_Antonescu_Leadership
+			focus = ROM_national_christian_party 
 		}
 		x = 1
 		y = 6
@@ -1782,6 +1783,104 @@ focus = {
 	}
 
 	focus = {
+		id = ROM_a_deal_with_the_devil
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = ROM_Political_Left_Change }
+		x = 0
+		y = 2
+		relative_position_id = ROM_Political_Left_Change
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			NOT = { has_war_with = SOU }
+			SOU = {
+				exists = yes
+				is_puppet = no
+				has_civil_war = no
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_country_leader_trait = staunch_stalinist
+			add_popularity = { ideology = communism popularity = 0.1 }
+			add_opinion_modifier = { target = SOV modifier = ROM_a_deal_with_the_devil }
+			SOV = { add_opinion_modifier = { target = ROOT modifier = ROM_a_deal_with_the_devil } }
+		}
+	}
+
+	focus = {
+		id = ROM_basing_rights_for_soviet_union
+		icon = GFX_focus_generic_soviet_politics
+		prerequisite = { focus = ROM_a_deal_with_the_devil }
+		x = -1
+		y = 1
+		relative_position_id = ROM_a_deal_with_the_devil
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_in_faction = no
+			SOV = {
+				exists = yes
+				is_puppet = no
+				NOT = {
+					has_war_with = ROOT
+				}
+				has_civil_war = no 
+			}
+		}
+
+		bypass = {
+			is_in_faction_with = SOV
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+		completion_reward = {
+			SOV = { country_event = DOD_romania.30 }
+			add_doctrine_cost_reduction = {
+				name = ROM_invite_german_advisors
+			    cost_reduction = 0.5
+			    uses = 2
+			    category = land_doctrine
+			}
+			add_doctrine_cost_reduction = {
+				name = ROM_invite_german_advisors
+			    cost_reduction = 0.5
+			    uses = 2
+			    category = air_doctrine
+			}
+			add_doctrine_cost_reduction = {
+				name = ROM_invite_german_advisors
+			    cost_reduction = 0.5
+			    uses = 2
+			    category = naval_doctrine
+			}
+		}
+	}
+
+	focus = {
 		id = ROM_join_comintern
 		icon = GFX_focus_GER_alliance_with_the_ussr
 		prerequisite = { focus = ROM_a_deal_with_the_devil }
@@ -1828,84 +1927,49 @@ focus = {
 	}
 
 	focus = {
-		id = ROM_a_deal_with_the_devil
-		icon = GFX_goal_generic_dangerous_deal
-		prerequisite = { focus = ROM_Political_Left_Change }
-		x = 0
-		y = 2
-		relative_position_id = ROM_Political_Left_Change
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 5
-		}
-
-		available = {
-			NOT = { has_war_with = SOU }
-			SOU = {
-				exists = yes
-				is_puppet = no
-				has_civil_war = no
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			add_country_leader_trait = staunch_stalinist
-			add_popularity = { ideology = communism popularity = 0.1 }
-			add_opinion_modifier = { target = SOV modifier = ROM_a_deal_with_the_devil }
-			SOV = { add_opinion_modifier = { target = ROOT modifier = ROM_a_deal_with_the_devil } }
-		}
-	}
-
-	focus = {
-		id = ROM_basing_rights_for_soviet_union
-		icon = GFX_focus_generic_soviet_politics
-		prerequisite = {
-			focus = ROM_a_deal_with_the_devil
-		}
-
+		id = ROM_romanian_oil_exploitation_company
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = ROM_basing_rights_for_soviet_union
+		focus = ROM_join_comintern }
 		x = -1
 		y = 1
-		relative_position_id = ROM_a_deal_with_the_devil
+		relative_position_id = ROM_join_comintern
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
 		}
 
 		available = {
-			is_in_faction = no
-			SOV = {
-				exists = yes
-				is_puppet = no
-				NOT = {
-					has_war_with = ROOT
-				}
-				has_civil_war = no 
-			}
 		}
 
 		bypass = {
-			is_in_faction_with = SOV
+
 		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			SOV = { country_event = DOD_romania.30 }
+			random_owned_controlled_state = {
+				prioritize = { 46 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+				}
+				add_resource = {
+					type = oil
+					amount = 12
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = fuel_silo
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -1944,10 +2008,57 @@ focus = {
 	}
 
 	focus = {
+		id = ROM_national_christian_party
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = ROM_The_Iron_Guard_Rises }
+		mutually_exclusive = {
+			focus = ROM_Ion_Antonescu_Leadership
+		}
+		x = -1
+		y = 2
+		relative_position_id = ROM_The_Iron_Guard_Rises
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			ROM_octavian_goga = {
+				promote_character = {
+					ideology = fascism_ideology
+				}
+			}
+			set_party_name = {
+				ideology = fascism
+				long_name = ROM_fascism_party2_long
+				name = ROM_fascism_party2
+			}
+			add_ideas = ROM_national_christian_party_in_power
+		}
+	}		
+
+	focus = {
 		id = ROM_Ion_Antonescu_Leadership
 		icon = GFX_SOV_fascist_youth_union_ccp_2d_sov_compatibility
 		prerequisite = { focus = ROM_The_Iron_Guard_Rises }
-		x = 0
+		mutually_exclusive = {
+			focus = ROM_national_christian_party
+		}
+		x = 1
 		y = 2
 		relative_position_id = ROM_The_Iron_Guard_Rises
 
@@ -1998,7 +2109,7 @@ focus = {
 		id = ROM_iron_guard
 		icon = GFX_focus_generic_fascist_troops
 		prerequisite = { focus = ROM_Ion_Antonescu_Leadership }
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = ROM_Ion_Antonescu_Leadership
 
@@ -2028,8 +2139,9 @@ focus = {
 	focus = {
 		id = ROM_trade_treaty_with_germany
 		icon = GFX_goal_generic_trade
-		prerequisite = { focus = ROM_Ion_Antonescu_Leadership }
-		x = 0
+		prerequisite = { focus = ROM_Ion_Antonescu_Leadership 
+		focus = ROM_national_christian_party }
+		x = -1
 		y = 2
 		relative_position_id = ROM_Ion_Antonescu_Leadership
 
@@ -2127,7 +2239,7 @@ focus = {
 		id = ROM_license_german_equipment
 		icon = GFX_focus_generic_license_production
 		prerequisite = { focus = ROM_invite_german_advisors }
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = ROM_invite_german_advisors
 
@@ -2212,13 +2324,13 @@ focus = {
 	}
 
 	focus = {
-		id = ROM_romanian_oil_exploitation_company
+		id = ROM_german_romanian_oil_exploitation_company
 		icon = GFX_goal_generic_oil_refinery
-		prerequisite = { focus = ROM_The_Iron_Guard_Rises }
-		x = 1
+		prerequisite = { focus = ROM_invite_german_advisors
+		focus = ROM_join_axis }
+		x = -1
 		y = 1
-		relative_position_id = ROM_The_Iron_Guard_Rises
-
+		relative_position_id = ROM_invite_german_advisors
 
 		cost = 10
 
@@ -2227,6 +2339,10 @@ focus = {
 		}
 
 		available = {
+			GER = {
+				exists = yes
+				is_puppet = no
+			}
 		}
 
 		bypass = {
@@ -2246,7 +2362,7 @@ focus = {
 				}
 				add_resource = {
 					type = oil
-					amount = 16
+					amount = 8
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -2255,19 +2371,32 @@ focus = {
 					instant_build = yes
 				}
 			}
+			GER = {
+				random_owned_controlled_state = {
+					limit = {
+						GER = { has_full_control_of_state = PREV }
+					}
+					add_resource = {
+						type = oil
+						amount = 8
+					}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = fuel_silo
+					level = 1
+					instant_build = yes
+				}
+				}
+			}
 		}
 	}
-
-
-
-	
 
 	focus = {
 		id = ROM_divide_yugoslavia
 		icon = GFX_focus_generic_attack_yugoslavia
 		prerequisite = { focus = ROM_Greater_Romania }
-		x = -2
-		y = 1
+		x = -1
+		y = 2
 		relative_position_id = ROM_Greater_Romania
 		will_lead_to_war_with = YUG
 		cost = 5
@@ -2303,8 +2432,8 @@ focus = {
 		id = ROM_split_czechoslovakia
 		icon = GFX_focus_generic_attack_czechoslovakia
 		prerequisite = { focus = ROM_Greater_Romania }
-		x = 2
-		y = 1
+		x = 1
+		y = 2
 		relative_position_id = ROM_Greater_Romania
 		will_lead_to_war_with = CZE
 		cost = 5
@@ -2333,6 +2462,80 @@ focus = {
 				target = CZE
 				expire = 0
 			}
+		}
+	}
+
+	focus = {
+		id = ROM_bessarabia_lost
+		prerequisite = { focus = ROM_Greater_Romania }
+		prerequisite = { focus = ROM_join_comintern }
+		icon = GFX_focus_CZE_german_puppet
+		x = -2
+		y = 1
+		relative_position_id = ROM_Greater_Romania
+		cost = 8
+		available = {
+			
+			NOT= {
+				AND = {
+					has_full_control_of_state = 78
+					has_full_control_of_state = 766
+					has_full_control_of_state = 80
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			ROM = {
+				remove_state_core = 78
+				remove_state_core = 766
+				remove_state_core = 80
+			}
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 2
+			}
+			add_manpower = 40000
+		}
+	}
+	
+	focus = {
+		id = ROM_transylvania_lost
+		prerequisite = { focus = ROM_Greater_Romania }
+		prerequisite = { focus = ROM_join_axis }
+		icon = GFX_focus_CZE_german_puppet
+		x = 2
+		y = 1
+		relative_position_id = ROM_Greater_Romania
+		cost = 8
+		available = {
+			NOT= {
+				has_full_control_of_state = 76
+			}
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			ROM = {
+				remove_state_core = 76
+			}
+			
+			add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+			add_manpower = 40000
 		}
 	}
 
@@ -2550,159 +2753,6 @@ focus = {
 		completion_reward = {
 			add_ideas = ROM_Royal_Army_Reform
 		}		
-	}
-
-
-	focus = {
-		id = ROM_Carols_Industrial_Plan
-		icon = GFX_focus_generic_license_production
-		prerequisite = { focus = ROM_his_majestys_loyal_government }
-		x = 0
-		y = 1
-		relative_position_id = ROM_his_majestys_loyal_government
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 9
-		}
-
-		available = {
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			add_ideas = ROM_Carols_Industrial_Plan
-		}		
-	}
-
-	focus = {
-		id = ROM_building_the_empire
-		icon = GFX_SOV_heavy_industry_ccp_2d_sov_compatibility
-		prerequisite = { focus = ROM_the_royal_foundation }
-		x = 0
-		y = 1
-		relative_position_id = ROM_the_royal_foundation
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 9
-		}
-
-		available = {
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-					}
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-					}
-					is_core_of = ROOT
-					NOT = { has_state_flag = ROM_expand_the_war_industry_2mil }
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-		focus = {
-		id = ROM_arming_the_empire
-		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = ROM_building_the_empire }
-		x = 0
-		y = 1
-		relative_position_id = ROM_building_the_empire
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 9
-		}
-
-		available = {
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-						random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-					}
-					is_core_of = ROOT
-				}
-				set_state_flag = ROM_expand_the_war_industry_2mil
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-					}
-					is_core_of = ROOT
-					NOT = { has_state_flag = ROM_expand_the_war_industry_2mil }
-				}
-				set_state_flag = ROM_expand_the_war_industry_2mil
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
 	}
 
 	focus = {
@@ -2933,68 +2983,6 @@ focus = {
 	}
 
 	focus = {
-		id = ROM_join_allies
-		icon = GFX_goal_support_democracy
-		prerequisite = {
-			focus = ROM_The_Great_Democratic_Kingdom
-		}
-		mutually_exclusive = {
-			focus = ROM_join_allies focus = ROM_join_the_Crowned_Brotherhood
-		}
-		x = 1
-		y = 3
-		relative_position_id = ROM_Support_Local_Industry
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				OR = {
-					ENG = {
-						has_capitulated = yes
-					}
-					FRA = {
-						has_capitulated = yes
-					}
-				}
-			}
-		}
-
-		available = {
-			ENG = {
-				is_faction_leader = yes
-				has_government = democratic
-			}
-			is_in_faction = no
-			NOT = { has_war_with = ENG }
-			is_subject = no
-			NOT = {
-				any_other_country = {
-					is_in_faction_with = ENG
-					has_war_with = ROM
-				}
-			}
-		}
-
-		bypass = {
-			is_in_faction_with = ENG
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-
-		completion_reward = {
-			ENG = {
-				country_event = generic.2
-			}
-		}
-	}
-
-	focus = {
 		id = ROM_Joint_Operations_Planning
 		icon = GFX_focus_SOV_mobilization_plan
 		prerequisite = { focus = ROM_democratic_support focus = ROM_the_empire }
@@ -3149,7 +3137,6 @@ focus = {
 		available = {
 
 		}
-ROM_join_allies
 		bypass = {
 
 		}
@@ -3165,6 +3152,103 @@ ROM_join_allies
 			}
 			add_stability = 0.1
 			add_war_support = 0.1
+		}
+	}
+
+	focus = {
+		id = ROM_constitutional_guarantees
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = ROM_The_Great_Democratic_Kingdom }
+		x = 1
+		y = 1
+		relative_position_id = ROM_The_Great_Democratic_Kingdom
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			if = {
+				limit = { 
+					NOT = { has_idea = ROM_constitutional_guarantees } 
+				}
+				add_ideas = ROM_constitutional_guarantees
+			}
+		}
+	}
+
+	focus = {
+		id = ROM_join_allies
+		icon = GFX_goal_support_democracy
+		prerequisite = {
+			focus = ROM_The_Great_Democratic_Kingdom
+		}
+		mutually_exclusive = {
+			focus = ROM_join_allies focus = ROM_join_the_Crowned_Brotherhood
+		}
+		x = 1
+		y = 3
+		relative_position_id = ROM_Support_Local_Industry
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					ENG = {
+						has_capitulated = yes
+					}
+					FRA = {
+						has_capitulated = yes
+					}
+				}
+			}
+		}
+
+		available = {
+			ENG = {
+				is_faction_leader = yes
+				has_government = democratic
+			}
+			is_in_faction = no
+			NOT = { has_war_with = ENG }
+			is_subject = no
+			NOT = {
+				any_other_country = {
+					is_in_faction_with = ENG
+					has_war_with = ROM
+				}
+			}
+		}
+
+		bypass = {
+			is_in_faction_with = ENG
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		completion_reward = {
+			ENG = {
+				country_event = generic.2
+			}
 		}
 	}
 
@@ -3453,13 +3537,202 @@ ROM_join_allies
 			add_research_slot = 1
 		}
 	}
+
 	focus = {
-		id = ROM_Fortify_the_Eastern_Marches
-		icon = GFX_focus_SWE_hedgehog_defense
-		prerequisite = { focus = ROM_fortify_the_borders }
+		id = ROM_Carols_Industrial_Plan
+		icon = GFX_focus_generic_license_production
+		prerequisite = { focus = ROM_his_majestys_loyal_government }
 		x = 0
 		y = 1
-		relative_position_id = ROM_fortify_the_borders
+		relative_position_id = ROM_his_majestys_loyal_government
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_ideas = ROM_Carols_Industrial_Plan
+		}		
+	}
+
+	focus = {
+		id = ROM_building_the_empire
+		icon = GFX_SOV_heavy_industry_ccp_2d_sov_compatibility
+		prerequisite = { focus = ROM_the_royal_foundation }
+		x = 0
+		y = 1
+		relative_position_id = ROM_the_royal_foundation
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+					}
+					is_core_of = ROOT
+					NOT = { has_state_flag = ROM_expand_the_war_industry_2mil }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+		focus = {
+		id = ROM_arming_the_empire
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = ROM_building_the_empire }
+		x = 0
+		y = 1
+		relative_position_id = ROM_building_the_empire
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+						random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+					}
+					is_core_of = ROOT
+				}
+				set_state_flag = ROM_expand_the_war_industry_2mil
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+					}
+					is_core_of = ROOT
+					NOT = { has_state_flag = ROM_expand_the_war_industry_2mil }
+				}
+				set_state_flag = ROM_expand_the_war_industry_2mil
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ROM_The_Great_Empire
+		icon = GFX_focus_ETH_the-italo_ethiopian_empire
+		prerequisite = { focus = ROM_Carols_Industrial_Plan }
+		prerequisite = { focus = ROM_Royal_Army_Reform }
+		x = -1
+		y = 1
+		relative_position_id = ROM_Carols_Industrial_Plan
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ROM_The_Empire_0
+				add_idea = ROM_The_Great_Empire
+			}
+			add_stability = 0.1
+			add_war_support = 0.1
+		}		
+	}
+
+	focus = {
+		id = ROM_securitate
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = ROM_The_Great_Empire }
+		x = -1
+		y = 1
+		relative_position_id = ROM_The_Great_Empire
 
 		cost = 5
 
@@ -3468,65 +3741,24 @@ ROM_join_allies
 		}
 
 		available = {
-			ROM = { controls_state = 78 }
-			ROM = { controls_state = 766 }
+
 		}
 
 		bypass = {
-			
+
 		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		available_if_capitulated = no
 
 		completion_reward = {
-		78 = {
-				add_building_construction = { type = bunker province = 3407 level = 3 instant_build = yes }
-				add_building_construction = { type = bunker province = 414 level = 3 instant_build = yes }
-				add_building_construction = { type = bunker province = 6600 level = 3 instant_build = yes }
-				add_building_construction = { type = bunker province = 11705 level = 3 instant_build = yes }
-				add_building_construction = { type = bunker province = 9683 level = 3 instant_build = yes }
-				add_building_construction = { type = bunker province = 11686 level = 3 instant_build = yes }
+			if = {
+				limit = { 
+					NOT = { has_idea = ROM_securitate	} 
+				}
+				add_ideas = ROM_securitate	
 			}
-		766 = {
-				add_building_construction = { type = bunker province = 6743 level = 3 instant_build = yes }
-				add_building_construction = { type = bunker province = 6727 level = 3 instant_build = yes }
-			}
-		}
-	}
-
-	focus = {
-		id = ROM_join_the_Crowned_Brotherhood
-		icon = GFX_focus_generic_monarchy_1 
-		prerequisite = {
-			focus = ROM_The_Great_Empire
-			focus = ROM_The_Great_Democratic_Kingdom
-		}
-		mutually_exclusive = {
-		focus = ROM_join_axis_0
-		}
-		x = 0
-		y = 3
-		relative_position_id = ROM_Royal_Army_Reform
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-
-		completion_reward = {
-			set_rule = {
-				can_create_factions = yes
-			}
-			create_faction = "Crowned Brotherhood"
 		}
 	}
 
@@ -3584,6 +3816,39 @@ ROM_join_allies
 			GER = {
 				country_event = generic.2
 			}
+		}
+	}
+
+	focus = {
+		id = ROM_join_the_Crowned_Brotherhood
+		icon = GFX_focus_generic_monarchy_1 
+		prerequisite = {
+			focus = ROM_The_Great_Empire
+			focus = ROM_The_Great_Democratic_Kingdom
+		}
+		mutually_exclusive = {
+		focus = ROM_join_axis_0
+		}
+		x = 0
+		y = 3
+		relative_position_id = ROM_Royal_Army_Reform
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+
+		completion_reward = {
+			set_rule = {
+				can_create_factions = yes
+			}
+			create_faction = "Crowned Brotherhood"
 		}
 	}
 
@@ -3818,42 +4083,6 @@ ROM_join_allies
 				target = GRE
 			}
 		}
-	}
-
-	focus = {
-		id = ROM_The_Great_Empire
-		icon = GFX_focus_ETH_the-italo_ethiopian_empire
-		prerequisite = { focus = ROM_Carols_Industrial_Plan }
-		prerequisite = { focus = ROM_Royal_Army_Reform }
-		x = -1
-		y = 1
-		relative_position_id = ROM_Carols_Industrial_Plan
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 9
-		}
-
-		available = {
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = ROM_The_Empire_0
-				add_idea = ROM_The_Great_Empire
-			}
-			add_stability = 0.1
-			add_war_support = 0.1
-		}		
 	}
 
 	############################
@@ -4678,6 +4907,49 @@ ROM_join_allies
 		}
 	}
 
+	focus = {
+		id = ROM_Fortify_the_Eastern_Marches
+		icon = GFX_focus_SWE_hedgehog_defense
+		prerequisite = { focus = ROM_fortify_the_borders }
+		x = 0
+		y = 1
+		relative_position_id = ROM_fortify_the_borders
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			ROM = { controls_state = 78 }
+			ROM = { controls_state = 766 }
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+		78 = {
+				add_building_construction = { type = bunker province = 3407 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 414 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 6600 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 11705 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 9683 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 11686 level = 3 instant_build = yes }
+			}
+		766 = {
+				add_building_construction = { type = bunker province = 6743 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 6727 level = 3 instant_build = yes }
+			}
+		}
+	}
 
 	focus = {
 		id = ROM_the_zb_53
