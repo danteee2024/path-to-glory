@@ -4902,15 +4902,7 @@ focus_tree = {
 				}
 				create_intelligence_agency = yes
 			}			
-			if = {
-				limit = {
-					has_dlc = "La Resistance" 
-				}
-				add_ideas = SOV_world_revolution_idea_LaR
-			}
-			else = {
-				add_ideas = SOV_world_revolution_idea
-			}
+			
 			hidden_effect = {
 				every_country = {
 					IF = {

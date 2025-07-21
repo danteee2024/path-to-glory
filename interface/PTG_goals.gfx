@@ -28,7 +28,10 @@ spriteTypes = {
 		name = "GFX_USA_family"
 		texturefile = "gfx/interface/goals/usa/family.dds"
 	}
-	
+	SpriteType = {
+		name = "GFX_goal_FRA_social_reforms"
+		texturefile = "gfx/interface/goals/fra/goal_FRA_social_reforms.dds"
+	}
 	spriteType = {
 		name = "GFX_beacon_of_democracy_shine"
 		textureFile = "gfx/interface/goals/usa/last_stand_beacon_of_democracy_shine.dds"
