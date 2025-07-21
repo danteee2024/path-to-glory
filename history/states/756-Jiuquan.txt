@@ -8,13 +8,18 @@ state={
 	buildings_max_level_factor=1.000
 	state_category = wasteland
 	history={
-		owner = XSM
-		add_core_of = XSM
+		owner = CHI
 		add_core_of = CHI
-		add_core_of = PRC
+		
 		buildings = {
 			infrastructure = 1
 
+		}
+		victory_points = {
+			2028 1
+		}
+		victory_points = {
+			5100 1
 		}
 		1938.10.25 = {
 			if = {

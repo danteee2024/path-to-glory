@@ -7,22 +7,19 @@ state = {
 	manpower = 400000
 	buildings_max_level_factor = 1.000
 	state_category = rural
-	history = {
-		owner = XSM
-		add_core_of = XSM
+	history={
+		owner = CHI
 		add_core_of = CHI
-		add_core_of = PRC
-
+		
 		victory_points = {
-			12732 10 #Was 3 when it was Lanzhou, but should be Xining, the capital of Xibei 
+			12732 7
 		}
-
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
 			arms_factory = 1
-		}
 
+		}
 		1938.10.25 = {
 			if = {
 				limit = {
@@ -38,6 +35,7 @@ state = {
 			}
 		}
 	}
+
 
 	local_supplies = 0.0 
 }
