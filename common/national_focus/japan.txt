@@ -2970,19 +2970,23 @@
 			is_subject = no
 			OR = {
 				PHI = {
-					is_subject_of = ROOT
+					NOT = {
+						is_subject_of = ROOT
+					}
 				}
 				any_state = {
 					is_core_of = PHI
+					NOT = {
 					is_controlled_by = ROOT
+					}
 				}
 			}
 		}
-		
 		bypass = {
-
+			PHI = {
+					is_subject_of = ROOT
+				}
 		}
-		
 		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -8391,10 +8395,10 @@ allow_branch = {
 	focus = {
 		id = JAP_modern_artillery
 		icon = GFX_goal_generic_army_artillery
-		prerequisite = { focus = JAP_small_arms_modernization }
-		x = -2
+		prerequisite = { focus = JAP_army_expansion_law }
+		x = -4
 		y = 1
-		relative_position_id = JAP_small_arms_modernization
+		relative_position_id = JAP_army_expansion_law
 
 		cost = 7.5
 
@@ -8461,10 +8465,10 @@ allow_branch = {
 	focus = {
 		id = JAP_pack_guns
 		icon = GFX_goal_generic_army_artillery2
-		prerequisite = { focus = JAP_supremacy_of_technology }
-		x = -2
-		y = 2
-		relative_position_id = JAP_supremacy_of_technology
+		prerequisite = { focus = JAP_modern_artillery }
+		x = 0
+		y = 1
+		relative_position_id = JAP_modern_artillery
 
 		cost = 5
 

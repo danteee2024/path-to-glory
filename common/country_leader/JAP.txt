@@ -1100,8 +1100,8 @@ characters={
 				}
 			}			
 			traits = {
-				army_chief_morale_3
-				army_chief_drill_3
+				army_chief_morale_2
+				army_chief_drill_2
 			}
 			cost = 100
 			ai_will_do = {
