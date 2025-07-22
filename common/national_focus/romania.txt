@@ -1950,6 +1950,11 @@ focus = {
 			unlock_decision_tooltip = ROM_change_sides_to_axis
 			unlock_decision_tooltip = ROM_change_sides_to_commintern
 			}
+			hidden_effect = {
+			set_rule = {
+				can_create_factions = yes
+			}
+			}
 		}
 	}
 
@@ -2357,6 +2362,11 @@ focus = {
 			unlock_decision_tooltip = ROM_change_sides_to_allies
 			unlock_decision_tooltip = ROM_change_sides_to_axis
 			unlock_decision_tooltip = ROM_change_sides_to_commintern
+			}
+			hidden_effect = {
+			set_rule = {
+				can_create_factions = yes
+			}
 			}
 		}
 	}
@@ -3293,6 +3303,11 @@ focus = {
 			unlock_decision_tooltip = ROM_change_sides_to_axis
 			unlock_decision_tooltip = ROM_change_sides_to_commintern
 			}
+			hidden_effect = {
+			set_rule = {
+				can_create_factions = yes
+			}
+			}
 		}
 	}
 
@@ -3869,6 +3884,11 @@ focus = {
 			unlock_decision_tooltip = ROM_change_sides_to_allies
 			unlock_decision_tooltip = ROM_change_sides_to_axis
 			unlock_decision_tooltip = ROM_change_sides_to_commintern
+			}
+			hidden_effect = {
+			set_rule = {
+				can_create_factions = yes
+			}
 			}
 		}
 	}
