@@ -4220,7 +4220,7 @@ focus = {
 		y = 0
 		relative_position_id = ROM_army_maneuvers
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -4255,6 +4255,40 @@ focus = {
 					level = 3
 					instant_build = yes
 				}
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 46 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					free_building_slots = {
+						building = air_base
+						size > 2
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = ROM_expand_the_air_force_AB
+			}
+			random_owned_controlled_state = {
+				prioritize = { 79 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					free_building_slots = {
+						building = air_base
+						size > 2
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = ROM_expand_the_air_force_AB_2
 			}
 		}
 	}	
@@ -4292,6 +4326,7 @@ focus = {
 		}
 
 		completion_reward = {
+			air_experience = 25
 			random_owned_controlled_state = {
 				prioritize = { 81 }
 				limit = {
@@ -4310,7 +4345,23 @@ focus = {
 				}
 				set_state_flag = ROM_invest_in_the_iar_AF1
 			}
-
+			random_owned_controlled_state = {
+					limit = {
+						is_core_of = ROOT
+						air_facility < 1
+						land_facility < 1
+						naval_facility < 1
+						nuclear_facility < 1
+					}
+					prioritize = { 46 }
+				has_full_control_of_state = 46
+				add_building_construction = {
+				state = 46
+				type = air_facility
+				level = 1
+				province = 9617
+			    }
+			}
 			IF = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
@@ -4325,42 +4376,6 @@ focus = {
 			else = {
 				custom_effect_tooltip = available_designer
 				show_ideas_tooltip = ROM_iar
-			}
-		}
-
-		completion_reward = {
-			air_experience = 25
-			random_owned_controlled_state = {
-				prioritize = { 46 }
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-					free_building_slots = {
-						building = air_base
-						size > 2
-					}
-				}
-				add_building_construction = {
-					type = air_base
-					level = 3
-					instant_build = yes
-				}
-				set_state_flag = ROM_expand_the_air_force_AB
-			}
-			random_owned_controlled_state = {
-				prioritize = { 79 }
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-					free_building_slots = {
-						building = air_base
-						size > 2
-					}
-				}
-				add_building_construction = {
-					type = air_base
-					level = 3
-					instant_build = yes
-				}
-				set_state_flag = ROM_expand_the_air_force_AB_2
 			}
 		}
 	}	
@@ -5826,8 +5841,25 @@ focus = {
 				uses = 1
 				category = cat_Light_armor
 			}
+			random_owned_controlled_state = {
+					limit = {
+						is_core_of = ROOT
+						air_facility < 1
+						land_facility < 1
+						naval_facility < 1
+						nuclear_facility < 1
+					}
+					prioritize = { 79 }
+				has_full_control_of_state = 79 
+				add_building_construction = {
+				state = 79
+				type = land_facility
+				level = 1
+				province = 6706
+				}
+			}
 		}
-	}
+	}	
 
 		focus = {
 		id = ROM_Crucible_of_Romanian_Steel
@@ -5872,7 +5904,7 @@ focus = {
 		y = 0
 		relative_position_id = ROM_expand_the_air_force
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 3
@@ -5924,9 +5956,25 @@ focus = {
 				}
 				set_state_flag = ROM_expand_the_galati_shipyards_AB
 			}
+			random_owned_controlled_state = {
+					limit = {
+						is_core_of = ROOT
+						air_facility < 1
+						land_facility < 1
+						naval_facility < 1
+						nuclear_facility < 1
+					}
+					prioritize = { 971 }
+				has_full_control_of_state = 971
+				add_building_construction = {
+				state = 971
+				type = naval_facility
+				level = 1
+				province = 657
+				}
+			}
 		}
 	}
-
 	focus = {
 		id = ROM_coastal_defense_navy
 		icon = GFX_goal_generic_navy_doctrines_tactics
@@ -6098,11 +6146,9 @@ focus = {
 		}
 
 		available = {
-
 		}
 
 		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -6113,7 +6159,7 @@ focus = {
 			add_tech_bonus = {
 				name = ROM_modern_submarines
 				bonus = 1.0
-				uses = 1
+				uses = 2
 				category = ss_tech
 			}
 		}
@@ -6237,6 +6283,12 @@ focus = {
 				bonus = 1.0
 				uses = 1
 				category = naval_bomber
+			}
+			add_tech_bonus = {
+				name = ROM_torpedo_bombers
+				bonus = 1.0
+				uses = 1
+				category = air_equipment
 			}
 		}
 	}

@@ -2102,6 +2102,10 @@ ideas = {
 					has_dlc = "Death or Dishonor"
 				}
 			}
+
+			available = {
+				has_completed_focus = ROM_invest_in_the_iar
+			}
 			
 			research_bonus = {
 				air_equipment = 0.15
