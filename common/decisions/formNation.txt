@@ -12137,12 +12137,12 @@ formable_nations_mod_category = {
 			}
 			# China
 			743 = { add_core_of = ROOT }
-			598 = { add_claim_by = ROOT }
-			613 = { add_claim_by = ROOT }
+			598 = { add_core_of = ROOT }
+			613 = { add_core_of = ROOT }
 			# Soviets
 			657 = { add_claim_by = ROOT }
 			560 = { add_claim_by = ROOT }
-			# 637 = { add_claim_by = ROOT }
+			637 = { add_claim_by = ROOT }
 			# USA
 			650 = { add_claim_by = ROOT } #attu island
 			638 = { add_claim_by = ROOT } # Guam
