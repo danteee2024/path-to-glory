@@ -6896,7 +6896,7 @@ add_timed_idea = {
 			}
 		}
 		
-		offset = {
+		 = {
 			x = -37
 			y = 0
 			trigger = {
