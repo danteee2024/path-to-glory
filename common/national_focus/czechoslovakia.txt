@@ -13,7 +13,7 @@
 	
 	default = no
 
-	continuous_focus_position = { x = 50 y = 1100 }
+	continuous_focus_position = { x = 100 y = 550 }
 
 	shared_focus = HABSBURG_part_of_something_bigger
 
@@ -60,7 +60,7 @@
 	focus = {
 		id = CZE_fortification_studies
 		icon = GFX_focus_hol_the_foundations_of_defense
-		x = 3
+		x = 16
 		y = 0
 
 		cost = 5
@@ -898,9 +898,8 @@
 	focus = {
 		id = CZE_industrial_legacy
 		icon = GFX_goal_generic_construct_civ_factory
-		x = 6
+		x = 28
 		y = 0
-		relative_position_id = CZE_fortification_studies
 
 		cost = 5
 
@@ -1651,9 +1650,8 @@ focus = {
 	focus = {
 		id = CZE_political_direction
 		icon = GFX_goal_generic_intelligence_exchange
-		x = 14
+		x = 44
 		y = 0
-		relative_position_id = CZE_industrial_legacy
 
 		cost = 5
 
@@ -4824,7 +4822,7 @@ focus = {
 	focus = {
 		id = CZE_strategy_decisions
 		icon = GFX_goal_generic_position_armies
-		x = 20
+		x = 26
 		y = 0
 		relative_position_id = CZE_political_direction
 
