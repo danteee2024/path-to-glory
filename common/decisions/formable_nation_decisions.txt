@@ -9073,9 +9073,7 @@ form_greater_german_reich_category = {
 			217 = { #Stalingrad
 				state_is_fully_controlled_by_ROOT_or_subject = yes
 			}
-			all_owned_state = {
-				is_fully_controlled_by = ROOT
-			}
+			all_owned_state = { controls_or_subject_of = yes }
 		}
 
 		visible = {
@@ -14813,17 +14811,11 @@ antilles_category = {
 
 		available = {
 			
-			319 = {
-				is_fully_controlled_by = ROOT
-			}
+			319 = { controls_or_subject_of = yes }
 
-			318 = {
-				is_fully_controlled_by = ROOT
-			}
+			318 = { controls_or_subject_of = yes }
 
-			315 = {
-				is_fully_controlled_by = ROOT
-			}
+			315 = { controls_or_subject_of = yes }
 
 		}
 
@@ -15004,9 +14996,7 @@ antilles_category = {
 
 		available = {
 			
-			695 = {
-				is_fully_controlled_by = ROOT
-			}
+			695 = { controls_or_subject_of = yes }
 
 		}
 
@@ -15072,9 +15062,7 @@ antilles_category = {
 
 		available = {
 			
-			691 = {
-				is_fully_controlled_by = ROOT
-			}
+			691 = { controls_or_subject_of = yes }
 
 		}
 
@@ -15148,77 +15136,41 @@ latin_africa_category = {
 
 		available = {
 			
-			295 = {
-				is_controlled_by = ROOT
-			}
+			295 = { owns_or_subject_of = yes }
 
-			888 = {
-				is_controlled_by = ROOT
-			}
+			888 = { owns_or_subject_of = yes }
 
-			889 = {
-				is_controlled_by = ROOT
-			}
+			889 = { owns_or_subject_of = yes }
 
-			890 = {
-				is_controlled_by = ROOT
-			}
+			890 = { owns_or_subject_of = yes }
 
-			718 = {
-				is_controlled_by = ROOT
-			}
+			718 = { owns_or_subject_of = yes }
 
-			538 = {
-				is_controlled_by = ROOT
-			}
+			538 = { owns_or_subject_of = yes }
 
-			768 = {
-				is_controlled_by = ROOT
-			}
+			768 = { owns_or_subject_of = yes }
 
-			769 = {
-				is_controlled_by = ROOT
-			}
+			769 = { owns_or_subject_of = yes }
 
-			796 = {
-				is_controlled_by = ROOT
-			}
+			796 = { owns_or_subject_of = yes }
 
-			540 = {
-				is_controlled_by = ROOT
-			}
+			540 = { owns_or_subject_of = yes }
 
-			891 = {
-				is_controlled_by = ROOT
-			}
+			891 = { owns_or_subject_of = yes }
 
-			892 = {
-				is_controlled_by = ROOT
-			}
+			892 = { owns_or_subject_of = yes }
 
-			772 = {
-				is_controlled_by = ROOT
-			}
+			772 = { owns_or_subject_of = yes }
 
-			539 = {
-				is_controlled_by = ROOT
-			}
+			539 = { owns_or_subject_of = yes }
 
-			297 = {
-				is_controlled_by = ROOT
-			}
+			297 = { owns_or_subject_of = yes }
 
-			773 = {
-				is_controlled_by = ROOT
-			}
+			773 = { owns_or_subject_of = yes }
 
-			660 = {
-				is_controlled_by = ROOT
-			}
+			660 = { owns_or_subject_of = yes }
 
-			774 = {
-				is_controlled_by = ROOT
-			}
+			774 = { owns_or_subject_of = yes }
 
 		}
 
@@ -15994,9 +15946,7 @@ germany_formable_category = {
 
 		available = {
 			
-			8 = {
-				is_fully_controlled_by = ROOT
-			}
+			8 = { controls_or_subject_of = yes }
 
 		}
 
@@ -16101,9 +16051,7 @@ germany_formable_category = {
 
 		available = {
 			
-			28 = {
-				is_fully_controlled_by = ROOT
-			}
+			28 = { controls_or_subject_of = yes }
 
 		}
 
@@ -16203,9 +16151,7 @@ germany_formable_category = {
 
 		available = {
 			
-			912 = {
-				is_fully_controlled_by = ROOT
-			}
+			912 = { controls_or_subject_of = yes }
 
 		}
 
@@ -16312,17 +16258,11 @@ germany_formable_category = {
 
 		available = {
 			
-			5 = {
-				is_fully_controlled_by = ROOT
-			}
+			5 = { controls_or_subject_of = yes }
 
-			763 = {
-				is_fully_controlled_by = ROOT
-			}
+			763 = { controls_or_subject_of = yes }
 
-			188 = {
-				is_fully_controlled_by = ROOT
-			}
+			188 = { controls_or_subject_of = yes }
 
 		}
 
@@ -16452,17 +16392,11 @@ germany_formable_category = {
 
 		available = {
 			
-			66 = {
-				is_fully_controlled_by = ROOT
-			}
+			66 = { controls_or_subject_of = yes }
 
-			67 = {
-				is_fully_controlled_by = ROOT
-			}
+			67 = { controls_or_subject_of = yes }
 
-			762 = {
-				is_fully_controlled_by = ROOT
-			}
+			762 = { controls_or_subject_of = yes }
 
 		}
 
@@ -16601,25 +16535,15 @@ germany_formable_category = {
 
 		available = {
 			
-			68 = {
-				is_fully_controlled_by = ROOT
-			}
+			68 = { controls_or_subject_of = yes }
 
-			63 = {
-				is_fully_controlled_by = ROOT
-			}
+			63 = { controls_or_subject_of = yes }
 
-			86 = {
-				is_fully_controlled_by = ROOT
-			}
+			86 = { controls_or_subject_of = yes }
 
-			807 = {
-				is_fully_controlled_by = ROOT
-			}
-
-			85 = {
-				is_fully_controlled_by = ROOT
-			}
+			807 = { controls_or_subject_of = yes }
+			
+			85 = { controls_or_subject_of = yes }
 
 		}
 
@@ -16739,89 +16663,47 @@ neo_assyrian_empire_category = {
 
 		available = {
 
-			676 = {
-				is_controlled_by = ROOT
-			}
+			676 = { owns_or_subject_of = yes }
 
-			291 = {
-				is_controlled_by = ROOT
-			}
+			291 = { owns_or_subject_of = yes }
 
-			1010 = {
-				is_controlled_by = ROOT
-			}
+			1010 = { owns_or_subject_of = yes }
 
-			675 = {
-				is_controlled_by = ROOT
-			}
+			675 = { owns_or_subject_of = yes }
 
-			1011 = {
-				is_controlled_by = ROOT
-			}
+			1011 = { owns_or_subject_of = yes }
 
-			656 = {
-				is_controlled_by = ROOT
-			}
+			656 = { owns_or_subject_of = yes }
 
-			680 = {
-				is_controlled_by = ROOT
-			}
+			680 = { owns_or_subject_of = yes }
 
-			554 = {
-				is_controlled_by = ROOT
-			}
+			554 = { owns_or_subject_of = yes }
 
-			677 = {
-				is_controlled_by = ROOT
-			}
+			677 = { owns_or_subject_of = yes }
 
-			799 = {
-				is_controlled_by = ROOT
-			}
+			799 = { owns_or_subject_of = yes }
 
-			553 = {
-				is_controlled_by = ROOT
-			}
+			553 = { owns_or_subject_of = yes }
 
-			344 = {
-				is_controlled_by = ROOT
-			}
+			344 = { owns_or_subject_of = yes }
 
-			350 = {
-				is_controlled_by = ROOT
-			}
+			350 = { owns_or_subject_of = yes }
 
-			454 = {
-				is_controlled_by = ROOT
-			}
+			454 = { owns_or_subject_of = yes }
 
-			455 = {
-				is_controlled_by = ROOT
-			}
+			455 = { owns_or_subject_of = yes }
 
-			453 = {
-				is_controlled_by = ROOT
-			}
+			453 = { owns_or_subject_of = yes }
 
-			446 = {
-				is_controlled_by = ROOT
-			}
+			446 = { owns_or_subject_of = yes }
 
-			907 = {
-				is_controlled_by = ROOT
-			}
+			907 = { owns_or_subject_of = yes }
 
-			447 = {
-				is_controlled_by = ROOT
-			}
+			447 = { owns_or_subject_of = yes }
 
-			348 = {
-				is_controlled_by = ROOT
-			}
+			348 = { owns_or_subject_of = yes }
 
-			345 = {
-				is_controlled_by = ROOT
-			}
+			345 = { owns_or_subject_of = yes }
 
 
 		}
@@ -16949,72 +16831,28 @@ neo_mesopotamia_category = {
 		}
 
 		available = {
-			413 = {
-				is_fully_controlled_by = ROOT
-			}
-			421 = {
-				is_fully_controlled_by = ROOT
-			}
-			1001 = {
-				is_fully_controlled_by = ROOT
-			}
-			676 = {
-				is_fully_controlled_by = ROOT
-			}
-			291 = {
-				is_fully_controlled_by = ROOT
-			}
-			1011 = {
-				is_fully_controlled_by = ROOT
-			}
-			656 = {
-				is_fully_controlled_by = ROOT
-			}
-			675 = {
-				is_fully_controlled_by = ROOT
-			}
-			1010 = {
-				is_fully_controlled_by = ROOT
-			}
-			680 = {
-				is_fully_controlled_by = ROOT
-			}
-			677 = {
-				is_fully_controlled_by = ROOT
-			}
-			799 = {
-				is_fully_controlled_by = ROOT
-			}
-			350 = {
-				is_fully_controlled_by = ROOT
-			}
-			344 = {
-				is_fully_controlled_by = ROOT
-			}
-			183 = {
-				is_fully_controlled_by = ROOT
-			}
-			554 = {
-				is_fully_controlled_by = ROOT
-			}
-			553 = {
-				is_fully_controlled_by = ROOT
-			}
-			454 = {
-				is_fully_controlled_by = ROOT
-			}
-			453 = {
-				is_fully_controlled_by = ROOT
-			}
-			446 = {
-				is_fully_controlled_by = ROOT
-			}
-			907 = {
-				is_fully_controlled_by = ROOT
-			}
-			447 = {
-				is_fully_controlled_by = ROOT
-			}
+			413 = { controls_or_subject_of = yes }
+			421 = { controls_or_subject_of = yes }
+			1001 = { controls_or_subject_of = yes }
+			676 = { controls_or_subject_of = yes }
+			291 = { controls_or_subject_of = yes }
+			1011 = { controls_or_subject_of = yes }
+			656 = { controls_or_subject_of = yes }
+			675 = { controls_or_subject_of = yes }
+			1010 = { controls_or_subject_of = yes }
+			680 = { controls_or_subject_of = yes }
+			677 = { controls_or_subject_of = yes }
+			799 = { controls_or_subject_of = yes }
+			350 = { controls_or_subject_of = yes }
+			344 = { controls_or_subject_of = yes }
+			183 = { controls_or_subject_of = yes }
+			554 = { controls_or_subject_of = yes }
+			553 = { controls_or_subject_of = yes }
+			454 = { controls_or_subject_of = yes }
+			453 = { controls_or_subject_of = yes }
+			446 = { controls_or_subject_of = yes }
+			907 = { controls_or_subject_of = yes }
+			447 = { controls_or_subject_of = yes }
 		}
 
 		highlight_states = {
