@@ -387,8 +387,8 @@ focus_tree = {
 
 		available = {
 			OR = {
-			has_completed_focus = ROM_the_romanian_miracle
-			has_completed_focus = ROM_bless_the_curse
+				has_completed_focus = ROM_the_romanian_miracle
+				has_completed_focus = ROM_expand_ploiesti_oil_production
 			}	
 		}
 
