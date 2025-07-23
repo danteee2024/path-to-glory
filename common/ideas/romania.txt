@@ -384,7 +384,6 @@ ideas = {
 				industrial_capacity_factory = 0.1
 				production_speed_industrial_complex_factor = 0.1
 				production_speed_arms_factory_factor = 0.1
-				production_factory_max_efficiency_factor = 0.05
 				production_factory_efficiency_gain_factor = 0.05
 				line_change_production_efficiency_factor = 0.10
 			}
@@ -589,7 +588,7 @@ ideas = {
 
 			modifier = {
 			political_power_factor = -0.1
-			consumer_goods_factor = 0.1
+			stability_weekly = -0.005
 			}
 		}
 
@@ -1062,7 +1061,7 @@ ideas = {
 			modifier = {
 				conscription = 0.01
 				political_power_gain = 0.10
-				war_stability_factor = 0.50
+				war_stability_factor = 0.15
 			}
 		}
 

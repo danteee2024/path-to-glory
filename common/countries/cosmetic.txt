@@ -3114,3 +3114,10 @@ FORM_CELTIC = {
 	color = rgb { 1 50 33 }
 	color_ui = rgb { 1 50 33 }
 }
+
+
+
+FORM_greater_romania = {
+	color = rgb { 180 140 20 }
+color_ui = rgb { 180 140 20 }
+}
