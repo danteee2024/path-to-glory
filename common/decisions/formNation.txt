@@ -12019,7 +12019,7 @@ formable_nations_mod_category = {
 				state = 610
 				state = 525
 				state = 527
-				
+
 				 # Soviet
 				state = 408
 				state = 409
@@ -12034,7 +12034,8 @@ formable_nations_mod_category = {
 		
 		available = {
 			custom_trigger_tooltip = { 
-				tooltip = highlighted_state_tooltip 
+				tooltip = greater_japan_tt
+				tooltip = core_land
 				OR = {
 					AND = {
 						528 = { is_controlled_by = ROOT }
@@ -12091,7 +12092,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_greater_japan
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_GJA
-			
+			custom_effect_tooltip = greater_japan_tt
 			custom_effect_tooltip = core_land
 			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
 				528 = { add_core_of = ROOT }
