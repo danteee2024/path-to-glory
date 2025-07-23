@@ -9,8 +9,8 @@
  ROM_carpathian_network:0 "Carpathian Rail Network"
  ROM_carpathian_network_desc:0 "Carpathian Rail Network"
 
- ROM_national_recovery:0 "Recovery"
- ROM_national_recovery_desc:0 "Recovery"
+ ROM_national_recovery:0 "Romanian National Economic Recovery"
+ ROM_national_recovery_desc:0 "Romanian National Economic Recovery"
 
  ROM_support_the_war_industry:0 "Support The War Industry"
  ROM_support_the_war_industry_desc:0 "Support The War Industry"
@@ -42,14 +42,14 @@
  ROM_oil_refining_infrastructure:0 "Increase Oil Refining Infrastructure"
  ROM_oil_refining_infrastructure_desc:0 "Increase Oil Refining Infrastructure"
 
- ROM_embrace_the_curse:0 "Embrace the Curse"
- ROM_embrace_the_curse_desc:0 "We need to accept our fate and work with what we have."
+ ROM_embrace_the_curse:0 "Accept Foreign Influence Over Our Resources"
+ ROM_embrace_the_curse_desc:0 "We need to embrace foreign influence and take advantage of our resources."
 
- ROM_bless_the_curse:0 "Bless the Curse"
- ROM_bless_the_curse_desc:0 "We need to bless our fate and use it to our advantage"
+ ROM_bless_the_curse:0 "Encourage Foreign Influence"
+ ROM_bless_the_curse_desc:0 "We need to encourage foreign influence and take advantage of our resources."
 
- ROM_break_the_curse:0 "Break the Curse"
- ROM_break_the_curse_desc:0 "We can't accept the path that others have tracked for us. We must forge our own destiny!"
+ ROM_break_the_curse:0 "Crush Foreign Influence Over Our Resources"
+ ROM_break_the_curse_desc:0 "We need to break free from the foreign influence and take control of our resources."
 
  ROM_building_the_empire:0 "Building the Empire"
  ROM_building_the_empire_desc:0 "No empire succeded without a proper build up of its indutry, we shall industrialise in order to make our empire successful."
@@ -96,7 +96,9 @@
 l_english:
 ################## IDEAS ######################
  ROM_expanded_axis_oil_trade:0 "Expanded Oil Trade"
- ROM_the_resource_curse_1:0 "Resource Curse"
+ ROM_the_resource_curse_1:0 "Foreign Influence Over Romanian National Resources"
+ ROM_the_resource_curse_1_desc:0 "Foreign powers have long exploited Romania's rich natural resources for their own gain. We must reclaim control over our wealth and ensure it benefits our people first and foremost."
+
  ROM_agrarian_reform_start:0 "Agricultural Nation"
 
  ROM_Institute_Royal:0 "Institute Royal"

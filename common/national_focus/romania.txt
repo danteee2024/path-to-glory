@@ -2604,77 +2604,7 @@ focus = {
 		}
 	}
 
-	focus = {
-		id = ROM_bessarabia_lost
-		prerequisite = { focus = ROM_Greater_Romania }
-		prerequisite = { focus = ROM_join_comintern }
-		icon = GFX_focus_CZE_german_puppet
-		x = -2
-		y = 1
-		relative_position_id = ROM_Greater_Romania
-		cost = 7.5
-		available = {
-			
-			NOT= {
-				AND = {
-					has_full_control_of_state = 78
-					has_full_control_of_state = 766
-				}
-			}
-		}
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			ROM = {
-				remove_state_core = 78
-				remove_state_core = 766
-			}
-			add_offsite_building = {
-				type = industrial_complex
-				level = 3
-			}
-			add_offsite_building = {
-				type = arms_factory
-				level = 2
-			}
-			add_manpower = 40000
-		}
-	}
 	
-	focus = {
-		id = ROM_transylvania_lost
-		prerequisite = { focus = ROM_Greater_Romania }
-		prerequisite = { focus = ROM_join_axis }
-		icon = GFX_focus_CZE_german_puppet
-		x = 2
-		y = 1
-		relative_position_id = ROM_Greater_Romania
-		cost = 7.5
-		available = {
-			NOT= {
-				has_full_control_of_state = 76
-			}
-		}
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			ROM = {
-				remove_state_core = 76
-			}
-			
-			add_offsite_building = {
-				type = industrial_complex
-				level = 2
-			}
-			add_offsite_building = {
-				type = arms_factory
-				level = 1
-			}
-			add_manpower = 40000
-		}
-	}
 
 	#############################
 	######## KING BRANCH ########
