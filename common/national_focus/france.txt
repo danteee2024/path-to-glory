@@ -392,9 +392,9 @@ focus = {
 		completion_reward = {
 			add_political_power = 25
 			custom_effect_tooltip = generic_skip_one_line_tt
-add_timed_idea = {
+			add_timed_idea = {
 				idea = FRA_investment
-				days = 14
+				days = 15
 			}
             custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
@@ -472,9 +472,9 @@ add_timed_idea = {
 		completion_reward = {
 			add_political_power = 25
 			custom_effect_tooltip = generic_skip_one_line_tt
-add_timed_idea = {
+			add_timed_idea = {
 				idea = FRA_investment
-				days = 14
+				days = 15
 			}
             custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -567,9 +567,9 @@ add_timed_idea = {
 		completion_reward = {
 			add_political_power = 25
 			custom_effect_tooltip = generic_skip_one_line_tt
-add_timed_idea = {
+			add_timed_idea = {
 				idea = FRA_investment
-				days = 14
+				days = 15
 			}
             custom_effect_tooltip = generic_skip_one_line_tt
 			461 = {
@@ -630,9 +630,9 @@ add_timed_idea = {
 		completion_reward = {
 			add_political_power = 25
 			custom_effect_tooltip = generic_skip_one_line_tt
-add_timed_idea = {
+			add_timed_idea = {
 				idea = FRA_investment
-				days = 14
+				days = 15
 			}
             custom_effect_tooltip = generic_skip_one_line_tt
 			458 = {
@@ -697,7 +697,7 @@ add_timed_idea = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 add_timed_idea = {
 				idea = FRA_investment
-				days = 14
+				days = 15
 			}
             custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -733,9 +733,9 @@ add_timed_idea = {
 		completion_reward = {
 			add_political_power = 25
 			custom_effect_tooltip = generic_skip_one_line_tt
-add_timed_idea = {
+			add_timed_idea = {
 				idea = FRA_investment
-				days = 14
+				days = 15
 			}
             custom_effect_tooltip = generic_skip_one_line_tt
 			31 = {
@@ -760,7 +760,7 @@ add_timed_idea = {
 		x = 2
 		y = 1
 		relative_position_id = FRA_vienot_agreement
-available = {
+		available = {
 			not = { has_idea = FRA_investment }
 		}
 		
@@ -770,9 +770,9 @@ available = {
 		completion_reward = {
 			add_political_power = 25
 			custom_effect_tooltip = generic_skip_one_line_tt
-add_timed_idea = {
+			add_timed_idea = {
 				idea = FRA_investment
-				days = 14
+				days = 15
 			}
             custom_effect_tooltip = generic_skip_one_line_tt
 			28 = {
@@ -797,7 +797,7 @@ add_timed_idea = {
 		x = 1
 		y = 1
 		relative_position_id = FRA_southern_development
-available = {
+		available = {
 			not = { has_idea = FRA_investment }
 		}
 		
@@ -807,9 +807,9 @@ available = {
 		completion_reward = {
 			add_political_power = 25
 			custom_effect_tooltip = generic_skip_one_line_tt
-add_timed_idea = {
+		add_timed_idea = {
 				idea = FRA_investment
-				days = 14
+				days = 15
 			}
             custom_effect_tooltip = generic_skip_one_line_tt
 			24 = {
@@ -846,7 +846,7 @@ add_timed_idea = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_timed_idea = {
 				idea = FRA_investment
-				days = 14
+				days = 15
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			735 = {
@@ -880,9 +880,9 @@ add_timed_idea = {
 		completion_reward = {
 			add_political_power = 25
 			custom_effect_tooltip = generic_skip_one_line_tt
-add_timed_idea = {
+		add_timed_idea = {
 				idea = FRA_investment
-				days = 14
+				days = 15
 			}
             custom_effect_tooltip = generic_skip_one_line_tt
 			14 = {
@@ -3380,8 +3380,24 @@ add_timed_idea = {
 		search_filters = { FOCUS_FILTER_MANPOWER }
 	}
 
-
-
+	focus = {
+		id = FRA_army_of_aggression
+		icon = GFX_SOV_military_engineering_university_ccp_2d_sov_compatibility
+		cost = 10
+		prerequisite = {
+			focus = FRA_union_latins
+		}
+		relative_position_id = FRA_service_ordre_legionnaire
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_ideas = FRA_army_of_aggression_focus
+		}
+		search_filters = { FOCUS_FILTER_MANPOWER }
+	}
 
 	focus = {
 		id = FRA_claim_rhineland
@@ -3784,7 +3800,7 @@ add_timed_idea = {
 		available = {
 			neutrality > 0.4
 		}
-		x = 8
+		x = 7
 		y = 1
 		relative_position_id = FRA_repeal_the_law_of_exile
 		
@@ -4247,7 +4263,7 @@ add_timed_idea = {
 			factor = 6
 		}
 		allow_branch = {
-			has_dlc = "La Resistance"
+		#	has_dlc = "La Resistance"
 			if = {
 				limit = {
 					has_game_rule = {
@@ -4884,7 +4900,7 @@ add_timed_idea = {
 			focus = FRA_brumaire_movement
 			focus = FRA_side_with_the_orleanists
 		}
-		x = -3
+		x = -2
 		y = 1
 		relative_position_id = FRA_brumaire_movement
 		ai_will_do = {
@@ -5534,10 +5550,6 @@ add_timed_idea = {
 			has_war_with = SOV
 		}
 
-		
-		
-		
-
 		completion_reward = {
 			create_wargoal = {
 				target = SOV
@@ -5549,7 +5561,7 @@ add_timed_idea = {
 	focus = {
 		id = FRA_restore_the_mexican_monarchy
 		icon = GFX_focus_attack_mexico
-		x = -1
+		x = 0
 		y = 1
 		prerequisite = {
 			focus = FRA_destroy_albion
@@ -5600,12 +5612,12 @@ add_timed_idea = {
 	focus = {
 		id = FRA_take_back_north_america
 		icon = GFX_focus_spa_the_war_of_vengeance
-		x = 1
+		x = 0
 		y = 1
 		prerequisite = {
-			focus = FRA_destroy_albion
+			focus = FRA_restore_the_mexican_monarchy
 		}
-		relative_position_id = FRA_destroy_albion
+		relative_position_id = FRA_restore_the_mexican_monarchy
 		cost = 5
 
 		ai_will_do = {

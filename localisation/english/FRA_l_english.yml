@@ -745,7 +745,11 @@
  FRA_restore_the_mexican_monarchy_desc:0 "It was Napoleon III who created the Second Mexican Empire. It will be Napoleon VI who will make the Third Mexican Empire."
  FRA_take_back_north_america_desc:0 "Haiti, Louisianan, Acadia, Quebec, all these lands were once ours but are now lost. We will reclaim what is ours."
  FRA_proclaim_the_dual_monarchy_tt:0 "We will annex and gain cores on Spain if they are our puppet or if [SPB.GetNameDef] exists and has won the Spanish Civil War. Otherwise, we will gain a core on all Spanish cores if we own a core of Spain."
-	#### MILITARY FOCUS ####
+ FRA_army_of_aggression:0 "Army of Aggression"
+ FRA_army_of_aggression_desc:0 "An Army of Aggression is needed to fullfull our expansionistic goals."
+
+############ MILITARY FOCUS #####################
+
  FRA_giraud_plan:0 "Giraud Plan"
  FRA_giraud_plan_desc:0 "In times like these, it is best to strengthen our defenses. If there are threats, let them come to us so that we can deal with them on our land. We have a perfect candidate to lead our army; all we need is the word to do so."
  FRA_fortification_focus:0 "Fortification Focus"

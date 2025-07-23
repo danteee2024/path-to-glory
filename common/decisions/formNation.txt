@@ -1256,6 +1256,7 @@ formable_nations_mod_category = {
 				original_tag = SIK
 				original_tag = PRC
 				original_tag = MAN
+				# original_tag = JAP
 			}
 		}
 
@@ -1777,6 +1778,7 @@ formable_nations_mod_category = {
 				has_global_flag = no_limit
 				original_tag = AUS
 				original_tag = HUN
+				original_tag = CZE
 			}
 		}
 		
@@ -2406,6 +2408,7 @@ formable_nations_mod_category = {
 				original_tag = GLC
 				original_tag = NAV
 				original_tag = CAT
+				original_tag = POR
 			}
 		}
 
@@ -2540,6 +2543,8 @@ formable_nations_mod_category = {
 				original_tag = SWE
 				original_tag = NOR
 				original_tag = ICE
+				original_tag = KAR
+				original_tag = SMI
 			}
 		}
 
@@ -2835,6 +2840,7 @@ formable_nations_mod_category = {
 				has_global_flag = no_limit
 				original_tag = CZE
 				original_tag = SLO
+				original_tag = HUN
 			}
 			NOT = { has_global_flag = modern_country }
 		}
@@ -3388,6 +3394,7 @@ formable_nations_mod_category = {
 				has_global_flag = no_limit
 				original_tag = BLR
 				original_tag = UKR
+				original_tag = SOV
 			}
 			NOT = { has_global_flag = modern_country }
 		}
@@ -8703,6 +8710,7 @@ formable_nations_mod_category = {
 				has_global_flag = no_limit
 				original_tag = AUS
 				original_tag = SWI
+				original_tag = ITA
 			}
 		}
 

@@ -51,7 +51,7 @@ buildings = {
 		}
 	}
 
-industrial_expansion = {
+	industrial_expansion = {
 		base_cost = 2500
 		per_level_extra_cost = 500
 		icon_frame = 28
@@ -139,8 +139,8 @@ industrial_expansion = {
 	
 	naval_facility = {
 		show_on_map = 1
-		base_cost = 12000
-		per_controlled_building_extra_cost = 5000
+		base_cost = 10000
+		per_controlled_building_extra_cost = 2500
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
 		icon_frame = 18
 		value = 1
@@ -152,6 +152,7 @@ industrial_expansion = {
 		need_detection = yes
 		detecting_intel_type = navy
 		only_display_if_exists = yes
+		infrastructure_construction_effect = yes
 		special_icon = GFX_specialization_naval
 		level_cap = {
 			province_max = 1
@@ -228,7 +229,7 @@ industrial_expansion = {
 	stronghold_network = {
 		show_on_map = 1
 		has_destroyed_mesh = yes
-		base_cost = 20000
+		base_cost = 15000
 		disabled_in_dmz = yes
 		icon_frame = 23
 		value = 1
@@ -247,8 +248,6 @@ industrial_expansion = {
 			state_production_speed_coastal_bunker_factor = 0.1
 		}		
 	}
-
-
 	
 	anti_air_building = {
 		show_on_map = 3
@@ -264,7 +263,6 @@ industrial_expansion = {
 			state_max = 5
 		}
 	}
-
 	
 	resource_expansion_steel = {
 		base_cost = 5000
@@ -357,6 +355,7 @@ industrial_expansion = {
 			state_max = 3
 		}
 	}
+
 	fuel_silo = {
 		show_on_map = 1
 		base_cost = 4500
@@ -371,7 +370,6 @@ industrial_expansion = {
 				max_fuel_building = 150.0 #k
 			}
 		}
-		
 		level_cap = {
 			state_max = 2
 			shares_slots = no
@@ -380,7 +378,7 @@ industrial_expansion = {
 
 	radar_station = {
 		show_on_map = 1
-		base_cost = 3375
+		base_cost = 3300
 		icon_frame = 11
 		radar = yes
 		damage_factor = 0.5
@@ -537,6 +535,7 @@ industrial_expansion = {
 		tags = { facility }
 		disabled_in_dmz = yes
 		only_display_if_exists = yes
+		infrastructure_construction_effect = yes
 		special_icon = GFX_specialization_nuclear
 		#state_damage_modifier = { conscription_exemptions_granted }
 		#construction_speed_factor = {
@@ -558,8 +557,8 @@ industrial_expansion = {
 
 	air_facility = {
 		show_on_map = 1
-		base_cost = 12000
-		per_controlled_building_extra_cost = 5000
+		base_cost = 12500
+		per_controlled_building_extra_cost = 2500
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
 		icon_frame = 17
 		value = 1
@@ -571,6 +570,7 @@ industrial_expansion = {
 		detecting_intel_type = airforce
 		disabled_in_dmz = yes
 		only_display_if_exists = yes
+		infrastructure_construction_effect = yes
 		special_icon = GFX_specialization_air
 		level_cap = {
 			province_max = 1
@@ -581,8 +581,8 @@ industrial_expansion = {
 
 	land_facility = {
 		show_on_map = 1
-		base_cost = 12000
-		per_controlled_building_extra_cost = 5000
+		base_cost = 12500
+		per_controlled_building_extra_cost = 2500
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
 		icon_frame = 19
 		value = 1
@@ -594,6 +594,7 @@ industrial_expansion = {
 		need_detection = yes
 		detecting_intel_type = army
 		only_display_if_exists = yes
+		infrastructure_construction_effect = yes
 		special_icon = GFX_specialization_land
 		level_cap = {
 			province_max = 1

@@ -3606,7 +3606,8 @@ ideas = {
 				industry = 0.15
 			}
 			
-			traits = { industrial_concern }
+			traits = { industrial_concern
+			construction_company }
 		}
 		
 		sumitomo = {
@@ -3619,7 +3620,8 @@ ideas = {
 				electronics = 0.15
 			}
 			
-			traits = { electronics_concern }
+			traits = { electronics_concern
+			telephone_company }
 		}
 
 		JAP_idemitsu_kosan = {
@@ -3646,14 +3648,13 @@ ideas = {
 			}
 			
 			research_bonus = {
-				industry = 0.10
-				refining_tech = 0.25
+				construction_tech = 0.10
 			}
 			modifier = {
 				fuel_gain_factor = 0.1
 			}			
 			
-			traits = { refinery_concern }
+			traits = { oil_extraction_company_trait }
 	
 			ai_will_do = {
 				factor = 1
