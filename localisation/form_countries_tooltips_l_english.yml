@@ -15,7 +15,7 @@
 
  is_puppet_tooltip:0 "Is not a puppet or puppet formation is allowed."
 
- greater_japan_tt:0 "Requires Either the 3 states from the USSR or the 3 States from China"
+ greater_japan_tt:0 "Requires either the 3 states from the USSR or the 3 states from China"
  
  Brazil_South_tt:0 "Controls All States in Brazil"
  Uruguay_South_tt:0 "Controls All States in Uruguay"
