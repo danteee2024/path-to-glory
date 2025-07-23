@@ -360,8 +360,8 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = -0.1
 				industrial_capacity_factory = 0.1
-				production_speed_industrial_complex_factor = 0.05
-				production_speed_arms_factory_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
 			}
 		}
 
@@ -382,10 +382,11 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = -0.1
 				industrial_capacity_factory = 0.1
-				production_speed_industrial_complex_factor = 0.05
-				production_speed_arms_factory_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
 				production_factory_max_efficiency_factor = 0.05
 				production_factory_efficiency_gain_factor = 0.05
+				line_change_production_efficiency_factor = 0.10
 			}
 		}
 
@@ -567,8 +568,8 @@ ideas = {
 
 			modifier = {
 				consumer_goods_factor = -0.05
-				production_speed_industrial_complex_factor = 0.05
-				production_speed_arms_factory_factor = 0.05
+				production_speed_buildings_factor = 0.10
+				global_building_slots_factor = 0.10
 			}
 		}
 
@@ -1260,7 +1261,7 @@ ideas = {
 			
 			modifier = {
 				conscription = 0.05
-				mobilization_speed = 0.05
+				mobilization_speed = 0.10
 				supply_combat_penalties_on_core_factor = -0.1
 				no_supply_grace = -36
 			}

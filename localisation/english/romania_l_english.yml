@@ -87,6 +87,12 @@
  ROM_The_Left_Leader:0 "The Left Leader"
  ROM_The_Left_Leader_desc:0 "A new leader committed to social reform and equality can steer Romania towards a fairer society. Embracing progressive leadership will inspire hope and change for the working people of our nation."
 
+ ROM_the_king_maintains_power:0 "The King Maintains Power"
+ ROM_the_king_maintains_power_desc:0 "The King, thanks to some connections in the political parties, is able to avoid a countercoup and maintain power."
+
+ ROM_The_Military_Youth:0 "The Military Youth"
+ ROM_The_Military_Youth_desc:0 "A fascist regime has as one of his founding principles the education and the forming of the new generations."
+
 l_english:
 ################## IDEAS ######################
  ROM_expanded_axis_oil_trade:0 "Expanded Oil Trade"

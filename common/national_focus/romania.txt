@@ -594,13 +594,12 @@ focus = {
 
 	focus = {
 		id = ROM_ensure_agricultural_self_sufficiency
+		icon = GFX_focus_generic_agricultural_subsidies
 		available = {
 		}
 		bypass = {
 		}
 		prerequisite = { focus = ROM_civil_works }
-		
-		icon = GFX_focus_generic_modernize_industry
 		x = 0
 		y = 1
 		relative_position_id = ROM_civil_works
@@ -1169,11 +1168,62 @@ focus = {
 	############################
 
 	focus = {
+		id = ROM_institute_royal_dictatorship
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 24
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			create_country_leader = {
+				name = "Carol II"
+				desc = "POLITICS_CAROL_II_DESC"
+				picture = GFX_Portrait_romania_Carol_II				
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					hedonist
+				}
+				id = 550
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			set_political_party = {
+				ideology = neutrality
+				popularity = 65
+			}
+			add_political_power = 100
+			remove_ideas = neutrality_idea
+		}		
+	}
+
+	focus = {
 		id = ROM_preserve_greater_romania
 		icon = GFX_focus_rom_preserve_romania
+		prerequisite = {
+			focus = ROM_institute_royal_dictatorship
+		}
 		mutually_exclusive = { focus = ROM_Institute_Royal }
-		x = 18
-		y = 0
+		x = -6
+		y = 1
+		relative_position_id = ROM_institute_royal_dictatorship
 
 		cost = 10
 
@@ -1212,7 +1262,7 @@ focus = {
 		y = 1
 		relative_position_id = ROM_preserve_greater_romania
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 9
@@ -1233,6 +1283,12 @@ focus = {
 
 		completion_reward = {
 			add_ideas = ROM_The_Left
+			if = {
+				limit = {
+					has_idea = neutrality_idea
+				}
+				remove_ideas = neutrality_idea
+			}
 		}
 	}
 
@@ -1247,7 +1303,7 @@ focus = {
 		y = 1
 		relative_position_id = ROM_preserve_greater_romania
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 9
@@ -1268,6 +1324,12 @@ focus = {
 
 		completion_reward = {
 			add_ideas = ROM_The_Right
+			if = {
+				limit = {
+					has_idea = neutrality_idea
+				}
+				remove_ideas = neutrality_idea
+			}
 		}
 	}
 
@@ -1497,7 +1559,6 @@ focus = {
 
 
 		completion_reward = {
-			remove_ideas = neutrality_idea
 			set_rule = {
 				can_create_factions = yes
 			}
@@ -1568,7 +1629,7 @@ focus = {
 		y = 1
 		relative_position_id = ROM_The_Great_Industry
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1938,7 +1999,6 @@ focus = {
 
 
 		completion_reward = {
-			remove_ideas = neutrality_idea
 			SOV = { country_event = generic.2 }
 			unlock_decision_category_tooltip = ROM_change_sides
 			hidden_effect = {
@@ -2036,6 +2096,38 @@ focus = {
 			add_popularity = { ideology = fascism popularity = 0.05 }
 			add_popularity = { ideology = democratic popularity = -0.05 }
 			add_popularity = { ideology = neutrality popularity = -0.05 }
+		}
+	}
+
+	focus = {
+		id = ROM_The_Military_Youth
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = ROM_The_Iron_Guard_Rises }
+		x = 0
+		y = 1
+		relative_position_id = ROM_The_Iron_Guard_Rises
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 9
+		}
+
+		available = {
+			NOT = { has_war_with = GER }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = military_youth_focus
 		}
 	}
 
@@ -2351,7 +2443,6 @@ focus = {
 
 
 		completion_reward = {
-			remove_ideas = neutrality_idea
 			GER = { country_event = generic.2 }
 			unlock_decision_category_tooltip = ROM_change_sides
 			hidden_effect = {
@@ -2521,14 +2612,13 @@ focus = {
 		x = -2
 		y = 1
 		relative_position_id = ROM_Greater_Romania
-		cost = 8
+		cost = 7.5
 		available = {
 			
 			NOT= {
 				AND = {
 					has_full_control_of_state = 78
 					has_full_control_of_state = 766
-					has_full_control_of_state = 80
 				}
 			}
 		}
@@ -2539,11 +2629,10 @@ focus = {
 			ROM = {
 				remove_state_core = 78
 				remove_state_core = 766
-				remove_state_core = 80
 			}
 			add_offsite_building = {
 				type = industrial_complex
-				level = 1
+				level = 3
 			}
 			add_offsite_building = {
 				type = arms_factory
@@ -2561,7 +2650,7 @@ focus = {
 		x = 2
 		y = 1
 		relative_position_id = ROM_Greater_Romania
-		cost = 8
+		cost = 7.5
 		available = {
 			NOT= {
 				has_full_control_of_state = 76
@@ -2594,9 +2683,12 @@ focus = {
 	focus = {
 		id = ROM_Institute_Royal
 		icon = GFX_SOV_romanov_reconstruction_ccp_2d_sov_compatibility
-		x = 12
-		y = 0
-		relative_position_id = ROM_preserve_greater_romania
+		prerequisite = {
+			focus = ROM_institute_royal_dictatorship
+		}
+		x = 6
+		y = 1
+		relative_position_id = ROM_institute_royal_dictatorship
 
 		cost = 10
 
@@ -2628,7 +2720,7 @@ focus = {
 		y = 1
 		relative_position_id = ROM_Institute_Royal
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 9
@@ -2655,14 +2747,14 @@ focus = {
 	}
 
 	focus = {
-		id = ROM_institute_royal_dictatorship
-		icon = GFX_focus_rom_royal_dictatorship
+		id = ROM_the_king_maintains_power
+		icon = GFX_focus_RAJ_kingmaker
 		prerequisite = { focus = ROM_Change_of_Goverment }
 		x = 3
 		y = 1
 		relative_position_id = ROM_Change_of_Goverment
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 9
@@ -2681,40 +2773,21 @@ focus = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			create_country_leader = {
-				name = "Carol II"
-				desc = "POLITICS_CAROL_II_DESC"
-				picture = GFX_Portrait_romania_Carol_II				
-				expire = "1965.1.1"
-				ideology = despotism
-				traits = {
-					hedonist
-					camarilla_leader
-				}
-				id = 550
-			}
-			set_politics = {
-				ruling_party = neutrality
-				elections_allowed = no
-			}
-			set_political_party = {
-				ideology = neutrality
-				popularity = 65
-			}
+			add_country_leader_trait = camarilla_leader
+			add_stability = 0.10
 			remove_ideas = neutrality_idea
 		}		
 	}
 
-
 	focus = {
 		id = ROM_the_empire
 		icon = GFX_focus_hun_elect_a_king
-		prerequisite = { focus = ROM_institute_royal_dictatorship }
+		prerequisite = { focus = ROM_the_king_maintains_power }
 		x = 0
 		y = 1
-		relative_position_id = ROM_institute_royal_dictatorship
+		relative_position_id = ROM_the_king_maintains_power
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 9
@@ -2735,6 +2808,12 @@ focus = {
 			add_ideas = ROM_The_Empire_0
 			set_cosmetic_tag = ROM_The_Empire
 			add_country_leader_trait = Empire_Builder
+			if = {
+				limit = {
+					has_idea = neutrality_idea
+				}
+				remove_ideas = neutrality_idea
+			}
 		}		
 	}
 	focus = {
@@ -2806,7 +2885,7 @@ focus = {
 		icon = GFX_focus_rom_coup
 		prerequisite = { focus = ROM_Change_of_Goverment }
 		mutually_exclusive = {
-			focus = ROM_institute_royal_dictatorship
+			focus = ROM_the_king_maintains_power
 		}
 		x = -3
 		y = 1
@@ -2849,7 +2928,12 @@ focus = {
 				}
 				remove_ideas = ROM_king_carol_ii_hedonist
 			}
-			remove_ideas = neutrality_idea
+			if = {
+				limit = {
+					has_idea = neutrality_idea
+				}
+				remove_ideas = neutrality_idea
+			}
 			add_timed_idea = {
 				idea = ROM_King_Micheals_Coup_Cost 
 				years = 1
@@ -2859,13 +2943,13 @@ focus = {
 
 	focus = {
 		id = ROM_politicise_the_sentinels
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_generic_advanced_military_studies
 		prerequisite = { focus = ROM_king_michaels_coup }
 		x = -2
 		y = 1
 		relative_position_id = ROM_king_michaels_coup
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2930,7 +3014,7 @@ focus = {
 		y = 1
 		relative_position_id = ROM_king_michaels_coup
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -3068,7 +3152,7 @@ focus = {
 		y = 1
 		relative_position_id = ROM_Support_Local_Industry
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -3101,7 +3185,7 @@ focus = {
 		y = 1
 		relative_position_id = ROM_Expand_the_Support_Industry
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -3137,7 +3221,7 @@ focus = {
 		y = 1
 		relative_position_id = ROM_Researcher_Investment
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -3172,7 +3256,7 @@ focus = {
 		y = 1
 		relative_position_id = ROM_Support_Local_Industry
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -3491,12 +3575,12 @@ focus = {
 	focus = {
 		id = ROM_militarize_the_sentinels
 		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = ROM_institute_royal_dictatorship }
+		prerequisite = { focus = ROM_the_king_maintains_power }
 		x = 2
 		y = 1
-		relative_position_id = ROM_institute_royal_dictatorship
+		relative_position_id = ROM_the_king_maintains_power
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -3573,7 +3657,7 @@ focus = {
 		y = 1
 		relative_position_id = ROM_Carols_Industrial_Plan
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -3689,7 +3773,7 @@ focus = {
 
 		focus = {
 		id = ROM_arming_the_empire
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_focus_generic_combined_arms
 		prerequisite = { focus = ROM_building_the_empire }
 		x = 0
 		y = 1
@@ -3758,7 +3842,7 @@ focus = {
 		y = 1
 		relative_position_id = ROM_Carols_Industrial_Plan
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 9
@@ -3938,7 +4022,7 @@ focus = {
 
 	focus = {
 		id = ROM_balkans_dominance
-		icon = GFX_goal_demand_sudetenland
+		icon = GFX_focus_BUL_free_balkan_states
 		prerequisite = { focus = ROM_join_axis_0 focus = ROM_join_the_Crowned_Brotherhood }
 		prerequisite = { focus = ROM_arming_the_empire }
 		x = 1
@@ -4015,7 +4099,7 @@ focus = {
 
 	focus = {
 		id = ROM_puppet_bulgaria
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_BUL_consolidate_the_third_bulgarian_state
 		prerequisite = { focus = ROM_balkans_dominance }
 		x = -1
 		y = 1
@@ -4072,7 +4156,7 @@ focus = {
 
 	focus = {
 		id = ROM_align_hungary
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_generic_attack_hungary
 		prerequisite = { focus = ROM_balkans_dominance }
 		x = 1
 		y = 1
@@ -4122,7 +4206,7 @@ focus = {
 
 	focus = {
 		id = ROM_secure_greece
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_focus_generic_attack_greece
 		prerequisite = { focus = ROM_puppet_bulgaria }
 		x = -1
 		y = 1
@@ -4169,7 +4253,7 @@ focus = {
 
 	focus = {
 		id = ROM_secure_the_bosporus
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_focus_generic_attack_turkey
 		prerequisite = { focus = ROM_puppet_bulgaria }
 		x = 1
 		y = 1
