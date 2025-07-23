@@ -24,9 +24,6 @@
  ROM_national_defense_industry:0 "National Defense Industry"
  ROM_national_defense_industry_desc:0 "We must greatly expand our national arms industry if we are to keep up with increased demands."
 
- ROM_ensure_agricultural_self_sufficiency:0 "Agricultural Efficiency"
- ROM_ensure_agricultural_self_sufficiency_desc:0 "Agricultural Efficiency"
-
  ROM_the_stabilization_plan:0 "A New Course For Romania"
  ROM_the_stabilization_plan_desc:0 "A New Course For Romania"
 
@@ -228,7 +225,7 @@ l_english:
 l_english:
 ################## TOOLTIPS ######################
 
- ROM_Roads_tt:0 "Builds 1 §YInfrastructure§! level in all controlled §YCores§!" 
+ ROM_Roads_tt:0 "Builds 1 §YInfrastructure§! level in all controlled Romanian §YInitial Cores§!" 
  ROM_german_romanian_oil_exploitation_company_tt:0 "§RWe will establish a joint oil exploitation company with Germany, boosting our oil production and securing vital resources for the war effort. Whilst also giving§! @GER§H[GER.getnamedefcap]§! §RResource Rights§! §Rto our§! §YOil§! §Rin§! §YMuntenia§! §RThis partnership will enhance our economic ties and military capabilities. We will use the profits to fund our extraction in southern Romania,§! §Yfrom this we will gain§!:"
 
 l_english:

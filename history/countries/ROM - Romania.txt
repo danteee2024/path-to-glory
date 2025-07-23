@@ -149,6 +149,7 @@ if = {
 }
 add_ideas = neutrality_idea
 add_ideas = ROM_the_resource_curse_1
+add_ideas = ROM_agrarian_reform_start
 
 #Kick off kings crazy life
 if = {
@@ -271,20 +272,16 @@ set_convoys = 10
 		complete_national_focus = ROM_agrarian_reform
 		complete_national_focus = ROM_local_development
 		complete_national_focus = ROM_army_war_college
-		complete_national_focus = ROM_danubian_transport_network
 		complete_national_focus = ROM_malaxa
-		complete_national_focus = ROM_flexible_foreign_policy
 		complete_national_focus = ROM_air_superiority
 		complete_national_focus = ROM_expand_the_galati_shipyards
 		complete_national_focus = ROM_trade_treaty_with_germany
 		complete_national_focus = ROM_iar_80
-		complete_national_focus = ROM_appoint_allied_friendly_government
 		complete_national_focus = ROM_cas
 		complete_national_focus = ROM_royal_guards_divisions
 		complete_national_focus = ROM_the_zb_53
 		complete_national_focus = ROM_vanatori_de_munte
 		complete_national_focus = ROM_hunedoara_steel_works
-		complete_national_focus = ROM_appoint_german_friendly_government
 		complete_national_focus = ROM_invite_german_advisors
 		complete_national_focus = ROM_iron_guard
 

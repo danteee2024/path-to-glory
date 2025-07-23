@@ -16,7 +16,6 @@ ROM_allies = {
 		ROM_preserve_greater_romania
 		ROM_army_maneuvers
 		ROM_expand_the_air_force
-		ROM_civil_works
 		ROM_agrarian_reform
 		ROM_local_development
 		ROM_army_war_college
@@ -209,7 +208,6 @@ ROM_communist = {
 	ai_national_focuses = {
 		
 		ROM_preserve_greater_romania
-		ROM_civil_works
 		ROM_agrarian_reform
 		ROM_danubian_transport_network
 		ROM_malaxa

@@ -66,9 +66,10 @@ ideas = {
 			}
 			
 			modifier = {
-				max_fuel_factor = 0.1
-				production_speed_buildings_factor = 0.10		
-				min_export = 0.05		
+				max_fuel_factor = 0.2
+				industrial_capacity_factory = 0.03
+				production_factory_max_efficiency_factor = 0.02
+				production_speed_buildings_factor = 0.05	
 			}
 		}
 
@@ -90,13 +91,13 @@ ideas = {
 			}
 			
 			modifier = {
-				max_fuel_factor = 0.2
+				max_fuel_factor = 0.3
+				industrial_capacity_factory = 0.05
+				production_factory_max_efficiency_factor = 0.02
 				production_speed_buildings_factor = 0.10
-				global_building_slots_factor = 0.10
-				min_export = 0.1
 			}
 		}
-			ROM_the_resource_curse_1 = { #The Oil Must Flow 
+		ROM_the_resource_curse_1 = { #The Oil Must Flow 
 
 			picture = can_wartime_prices_and_trade_board
 
@@ -259,7 +260,7 @@ ideas = {
 				production_speed_buildings_factor = 0.30
 				stability_factor = 0.1
 				global_building_slots_factor = 0.20
-				economy_cost_factor = -0.25
+				#economy_cost_factor = -0.25
 			}
 		}
 
