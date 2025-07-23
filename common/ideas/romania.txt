@@ -583,7 +583,7 @@ ideas = {
 				has_government = fascism
 			}
 
-			picture = ARG_resource_extration_focus
+			picture = NOR_printing_money
 
 			removal_cost = -1
 

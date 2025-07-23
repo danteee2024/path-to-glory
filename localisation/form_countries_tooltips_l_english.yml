@@ -15,15 +15,15 @@
 
  is_puppet_tooltip:0 "Is not a puppet or puppet formation is allowed."
 
-
+ greater_japan_tt:0 "Requires either the 3 states from the USSR or the 3 states from China"
  
-Brazil_South_tt:0 "Controls All States in Brazil"
-Uruguay_South_tt:0 "Controls All States in Uruguay"
-Paraguay_South_tt:0 "Controls All States in Paraguay"
-Argentine_South_tt:0 "Controls All States in Argentina"
-Chile_South_tt:0 "Controls All States in Chile"
-Boliva_South_tt:0 "Controls All States in Boliva"
-Peru_South_tt:0 "Controls All States in Peru"
-Ecuador_South_tt:0 "Controls All States in Ecuador"
-Colombia_South_tt:0 "Controls All States in Colombia"
-Venezela_South_tt:0 "Controls All States in Venezela"
+ Brazil_South_tt:0 "Controls All States in Brazil"
+ Uruguay_South_tt:0 "Controls All States in Uruguay"
+ Paraguay_South_tt:0 "Controls All States in Paraguay"
+ Argentine_South_tt:0 "Controls All States in Argentina"
+ Chile_South_tt:0 "Controls All States in Chile"
+ Boliva_South_tt:0 "Controls All States in Boliva"
+ Peru_South_tt:0 "Controls All States in Peru"
+ Ecuador_South_tt:0 "Controls All States in Ecuador"
+ Colombia_South_tt:0 "Controls All States in Colombia"
+ Venezela_South_tt:0 "Controls All States in Venezela"

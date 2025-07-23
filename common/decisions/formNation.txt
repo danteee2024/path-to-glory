@@ -12019,13 +12019,23 @@ formable_nations_mod_category = {
 				state = 610
 				state = 525
 				state = 527
+
+				 # Soviet
+				state = 408
+				state = 409
+				state = 655
 				
+				 # China
+				state = 608
+				state = 614
+				state = 597
 			}
 		}
 		
 		available = {
 			custom_trigger_tooltip = { 
-				tooltip = highlighted_state_tooltip 
+				tooltip = greater_japan_tt
+				tooltip = core_land
 				OR = {
 					AND = {
 						528 = { is_controlled_by = ROOT }
@@ -12041,7 +12051,6 @@ formable_nations_mod_category = {
 						526 = { is_controlled_by = ROOT }
 						537 = { is_controlled_by = ROOT }
 						555 = { is_controlled_by = ROOT }
-						
 						611 = { is_controlled_by = ROOT }
 						612 = { is_controlled_by = ROOT }
 						328 = { is_controlled_by = ROOT }
@@ -12051,13 +12060,25 @@ formable_nations_mod_category = {
 						716 = { is_controlled_by = ROOT }
 						717 = { is_controlled_by = ROOT }
 						761 = { is_controlled_by = ROOT }
-						
 						745 = { is_controlled_by = ROOT }
 						609 = { is_controlled_by = ROOT }
-						
-						
 						525 = { is_controlled_by = ROOT }
 						527 = { is_controlled_by = ROOT }
+
+						OR = { 
+						AND = {
+							# Chinese
+						614 = { is_controlled_by = ROOT }
+						608 = { is_controlled_by = ROOT } 
+						597 = { is_controlled_by = ROOT }
+						}	
+						AND = {
+							# Soviet
+						408 = { is_controlled_by = ROOT }
+						409 = { is_controlled_by = ROOT } 
+						655 = { is_controlled_by = ROOT }
+						}	
+						}
 					}
 					AND = {
 						is_ai = no
@@ -12071,7 +12092,7 @@ formable_nations_mod_category = {
 		icon = formable_nations_greater_japan
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_GJA
-			
+			custom_effect_tooltip = greater_japan_tt
 			custom_effect_tooltip = core_land
 			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
 				528 = { add_core_of = ROOT }
@@ -12105,13 +12126,26 @@ formable_nations_mod_category = {
 				409 = { add_core_of = ROOT }
 				611 = { add_core_of = ROOT }
 				612 = { add_core_of = ROOT }
+				# Chinese
+				608 = { add_core_of = ROOT }
+				614 = { add_core_of = ROOT }
+				597 = { add_core_of = ROOT }
+				# Soviet
+				408 = { add_core_of = ROOT }
+				409 = { add_core_of = ROOT }
+				655 = { add_core_of = ROOT }
 			}
-			608 = { add_claim_by = ROOT }
-			614 = { add_claim_by = ROOT }
-			597 = { add_claim_by = ROOT }
-			743 = { add_claim_by = ROOT }
+			# China
+			743 = { add_core_of = ROOT }
 			598 = { add_claim_by = ROOT }
 			613 = { add_claim_by = ROOT }
+			# Soviets
+			657 = { add_claim_by = ROOT }
+			560 = { add_claim_by = ROOT }
+			# 637 = { add_claim_by = ROOT }
+			# USA
+			650 = { add_claim_by = ROOT } #attu island
+			638 = { add_claim_by = ROOT } # Guam
 		}
 	}
 
