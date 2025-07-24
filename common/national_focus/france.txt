@@ -3363,7 +3363,7 @@ add_timed_idea = {
 	focus = {
 		id = FRA_service_ordre_legionnaire
 		icon = GFX_SOV_military_engineering_university_ccp_2d_sov_compatibility
-		cost = 10
+		cost = 7.5
 		prerequisite = {
 			focus = FRA_union_latins
 		}
@@ -3382,10 +3382,10 @@ add_timed_idea = {
 
 	focus = {
 		id = FRA_army_of_aggression
-		icon = GFX_SOV_military_engineering_university_ccp_2d_sov_compatibility
-		cost = 10
+		icon = GFX_SOV_an_adaptable_army_ccp_2d_sov_compatibility
+		cost = 7.5
 		prerequisite = {
-			focus = FRA_union_latins
+			focus = FRA_service_ordre_legionnaire
 		}
 		relative_position_id = FRA_service_ordre_legionnaire
 		x = 0
@@ -4900,7 +4900,7 @@ add_timed_idea = {
 			focus = FRA_brumaire_movement
 			focus = FRA_side_with_the_orleanists
 		}
-		x = -2
+		x = -3
 		y = 1
 		relative_position_id = FRA_brumaire_movement
 		ai_will_do = {
@@ -6896,7 +6896,7 @@ add_timed_idea = {
 			}
 		}
 		
-		 = {
+		offset = {
 			x = -37
 			y = 0
 			trigger = {
