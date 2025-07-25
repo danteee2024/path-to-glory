@@ -1,0 +1,34 @@
+﻿division_template = {
+	name = "Macedonia Infantry"
+	division_names_group = ALB_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+	}
+	support = {
+	}
+}
+
+units = {
+	#Ushtria Shqipëtarë
+	division = {
+		location = 3882
+		division_template = "Macedonia Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	
+	division = {
+		location = 6886
+		division_template = "Macedonia Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+}

@@ -1,0 +1,169 @@
+@tier1 = 30
+@tier2 = 20
+@tier3 = 10
+
+@experience_gain_low = 0.03
+@experience_gain_medium = 0.06
+@experience_gain_high = 0.08
+
+@chief_experience_gain_low = 0.20
+@chief_experience_gain_medium = 0.30
+@chief_experience_gain_high = 0.40
+
+###Todo remove commented advisor experience gains
+
+leader_traits = {
+
+	chain_smoker = {
+		random = no
+		consumer_goods_factor = 0.10
+		neutrality_drift = 0.02
+		army_core_attack_factor = 0.02
+		army_core_defence_factor = 0.02
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	chain_smoker_1 = {
+		random = no
+		consumer_goods_factor = 0.15
+		army_core_attack_factor = 0.03
+		army_core_defence_factor = 0.03
+		neutrality_drift = 0.03
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	chain_smoker_2 = {
+		random = no
+		consumer_goods_factor = 0.20
+		army_core_attack_factor = 0.04
+		army_core_defence_factor = 0.04
+		neutrality_drift = 0.04
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	chain_smoker_3 = {
+		random = no
+		consumer_goods_factor = 0.25
+		army_core_attack_factor = 0.05
+		army_core_defence_factor = 0.05
+		neutrality_drift = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	chain_smoker_4 = {
+		random = no
+		consumer_goods_factor = 0.30
+		army_core_attack_factor = 0.06
+		army_core_defence_factor = 0.06
+		neutrality_drift = 0.06
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	chain_smoker_5 = {
+		random = no
+		consumer_goods_factor = 0.35
+		army_core_attack_factor = 0.07
+		army_core_defence_factor = 0.07
+		neutrality_drift = 0.07
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	chain_smoker_6 = {
+		random = no
+		consumer_goods_factor = 0.40
+		army_core_attack_factor = 0.08
+		army_core_defence_factor = 0.08
+		neutrality_drift = 0.08
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	chain_smoker_7 = {
+		random = no
+		consumer_goods_factor = 0.45
+		army_core_attack_factor = 0.09
+		army_core_defence_factor = 0.09
+		neutrality_drift = 0.09
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	chain_smoker_8 = {
+		random = no
+		consumer_goods_factor = 0.50
+		army_core_attack_factor = 0.10
+		army_core_defence_factor = 0.10
+		neutrality_drift = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	chain_smoker_9 = {
+		random = no
+		army_attack_factor = 0.10
+		army_defence_factor = 0.10
+		neutrality_drift = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	cult_of_zog = {
+		random = no
+		max_command_power = 100
+		command_power_gain_mult = 0.30
+		political_power_factor = 0.20
+		skill_bonus_factor = 0.2
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	balkan_emperor = {
+		random = no
+		terrain_penalty_reduction = 0.10
+		justify_war_goal_time = -0.5
+		puppet_cost_factor = -0.3
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	sultan = {
+		random = no
+		stability_factor = 0.1
+		resistance_target = -0.05
+		resistance_damage_to_garrison = -0.3
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

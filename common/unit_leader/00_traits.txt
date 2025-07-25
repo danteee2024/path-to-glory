@@ -55,8 +55,20 @@
 #	enable_ability = ability_key
 #}
 leader_traits = {
-
-	
+      #ptg
+	power_of_cigarettes = {
+		type = land
+		trait_type = status_trait
+		gui_row = 5
+		
+		modifier = {
+			breakthrough_factor = 0.15
+		}
+		
+		non_shared_modifier = {
+			experience_gain_factor = 2.0
+		}
+	}
 ##################################
 # Common Traits
 ##################################

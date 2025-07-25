@@ -1,0 +1,228 @@
+﻿add_namespace = albania
+
+country_event = {
+	id = albania.1
+	title = albania.1.t
+	desc = albania.1.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = albania.1.a	# Unfortunate
+		ai_chance = { factor = 10 }
+		effect_tooltip = {
+			802 = {
+				remove_core_of = YUG
+				add_claim_by = ALB
+			}
+		}
+	}
+}
+
+country_event = {
+	id = albania.2
+	title = albania.2.t
+	desc = albania.2.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = albania.2.a	# Yes
+		ai_chance = { factor = 10 }
+		if = {
+			limit = { ALB = { OR = { has_country_flag = revolution_montenegro has_country_flag = revolution_macedonia } } }
+			802 = { 
+				add_core_of = ALB
+			}
+			hidden_effect = {
+				802 = { set_demilitarized_zone = no }
+				105 = { add_core_of = YUG set_demilitarized_zone = no }
+				106 = { add_core_of = YUG set_demilitarized_zone = no }
+			}
+			
+		}
+		else = {
+			YUG = { release = KOS }
+			puppet = KOS
+			hidden_effect = {
+				802 = { set_demilitarized_zone = no }
+			}
+		}
+		YUG = { clr_country_flag = albanian_revolt }
+		ALB = { clr_country_flag = albanian_revolt clr_country_flag = revolution_montenegro clr_country_flag = revolution_macedonia set_country_flag = albanian_revolt_happened }
+	}
+	
+	option = {
+		name = albania.2.b	# No
+		ai_chance = { factor = 10 }
+		YUG = { add_political_power = 100 }
+	}
+}
+
+country_event = { # Truce with Albania
+	id = albania.3
+	title = albania.3.t
+	desc = albania.3.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = albania.3.a	# Accept Peace
+		ai_chance = { factor = 10 }
+		white_peace = ALB
+		hidden_effect = {
+			set_truce = {
+				target = ALB
+				days = 365
+			}
+			every_country = {
+				limit = { is_in_faction_with = ITA }
+				white_peace = ALB
+			}
+		}
+		ALB = { country_event = albania.4 }
+	}
+	
+	option = {
+		name = albania.3.b	# Deny
+		ai_chance = { factor = 0 }
+		add_political_power = -60
+		add_stability = -0.10
+		add_war_support = -0.10
+		ALB = { country_event = albania.5 }
+	}
+}
+
+country_event = { # Truce with Albania - Accept
+	id = albania.4
+	title = albania.4.t
+	desc = albania.4.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = albania.4.a
+		ai_chance = { factor = 10 }
+	}
+}
+
+country_event = { # Truce with Albania - Deny
+	id = albania.5
+	title = albania.5.t
+	desc = albania.5.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = albania.5.a
+		ai_chance = { factor = 10 }
+	}
+}
+
+country_event = { # Demand Levant
+	id = albania.6
+	title = albania.6.t
+	desc = albania.6.d
+	picture = GFX_report_event_tur_the_saadabad_pact
+	
+	is_triggered_only = yes
+	
+	option = { # Do not give land
+		name = albania.6.a
+		ai_chance = { factor = 0.5 }
+		
+		ALB = {
+			create_wargoal = {
+				type = annex_everything
+				target = ROOT
+			}
+			country_event = albania.7
+		}
+	}
+	
+	option = { # Give land
+		name = albania.6.b
+		ai_chance = { 
+			factor = 0
+			modifier = {
+				factor = 1
+				strength_ratio = {
+					tag = ALB
+					ratio > 2
+				}
+			}
+			modifier = {
+				factor = 1
+				naval_strength_ratio = {
+					tag = ALB
+					ratio > 2
+				}
+			}
+		}
+		
+		
+		
+		if = {
+			limit = { owns_state = 454 }
+			454 = { transfer_state_to = ALB }
+		}
+		if = {
+			limit = { owns_state = 455 }
+			455 = { transfer_state_to = ALB }
+		}
+		if = {
+			limit = { owns_state = 553 }
+			553 = { transfer_state_to = ALB }
+		}
+		if = {
+			limit = { owns_state = 554 }
+			554 = { transfer_state_to = ALB }
+		}
+		if = {
+			limit = { owns_state = 677 }
+			677 = { transfer_state_to = ALB }
+		}
+		if = {
+			limit = { owns_state = 680 }
+			680 = { transfer_state_to = ALB }
+		}
+		if = {
+			limit = { owns_state = 799 }
+			799 = { transfer_state_to = ALB }
+		}
+		ALB = { country_event = albania.8 }
+	}
+}
+
+country_event = { # Demand Levant - Denied
+	id = albania.7
+	title = albania.7.t
+	desc = albania.7.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = albania.7.a
+		ai_chance = { factor = 10 }
+	}
+}
+
+country_event = { # Demand Levant - Accepted
+	id = albania.8
+	title = albania.8.t
+	desc = albania.8.d
+	picture = GFX_report_event_albanian_king_zog
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = albania.8.a
+		ai_chance = { factor = 10 }
+	}
+}

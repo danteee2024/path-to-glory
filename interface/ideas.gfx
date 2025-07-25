@@ -8,7 +8,10 @@ spriteTypes = {
 	}	
 	
 
-
+spriteType = {
+		name = "GFX_trait_power_of_cigarettes"
+		texturefile = "gfx/interface/traits/trait_power_of_cigarettes.dds"
+	}
 
 	
 spriteType = {
