@@ -45,7 +45,7 @@ ALB_resistance_in_yugoslavia = {
 
 ALB_defending_our_nation = {
 
-	icon = GFX_decision_category_generic_industry
+	icon = GFX_decision_category_eng_organize_the_blackshirts
 	
 	allowed = {
 		original_tag = ALB

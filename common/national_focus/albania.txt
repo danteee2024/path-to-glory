@@ -50,7 +50,7 @@ focus_tree = {
 	focus = {
 		id = ALB_rally_to_the_king
 
-		icon = GFX_goal_generic_production2
+		icon = GFX_focus_ITA_albanian_fascist_militia
 		x = 8
 		y = 0
 		cost = 5
@@ -61,6 +61,31 @@ focus_tree = {
 			add_political_power = 150
 			custom_effect_tooltip = generic_skip_one_line_tt
 			activate_mission = ALB_time_till_stress
+			
+		}
+	}
+	focus = {
+		id = ALB_dictate_italian_influence
+
+		icon = GFX_focus_ITA_to_live_as_a_lion
+		x = 8
+		y = 1
+		cost = 2.5
+		prerequisite = {
+			focus = ALB_rally_to_the_king
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {
+			ITA = {
+				
+			add_opinion_modifier = {
+				target = PREV
+				modifier = medium_increase
+			}
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = dictate_italian_influence_tt
 			
 		}
 	}
@@ -84,9 +109,10 @@ focus_tree = {
 			swap_ruler_traits = { remove = chain_smoker add = chain_smoker_1 }
 			if = {
 				limit = { has_active_mission = ALB_time_till_stress }
-				add_days_mission_timeout = {
+				custom_effect_tooltip = generic_skip_one_line_tt
+add_days_mission_timeout = {
 					mission = ALB_time_till_stress
-					days = 215
+					days = 120
 				}
 			}
 			if = {
@@ -103,23 +129,24 @@ focus_tree = {
 		icon = GFX_goal_generic_CAS
 		prerequisite = { focus = ALB_smoke_200_cigarettes }
 		relative_position_id = ALB_smoke_200_cigarettes
-		x = 0
+		x = -1
 		y = 1
 		cost = 5
 
 		available = {
-			
+			has_country_flag = ordered_200_cigarettes
 		}
 		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		
 		completion_reward = {
-			swap_ruler_traits = { remove = chain_smoker_1 add = chain_smoker_2 }
+			swap_ruler_traits = { remove = chain_smoker_2 add = chain_smoker_3 }
 			if = {
 				limit = { has_active_mission = ALB_time_till_stress }
-				add_days_mission_timeout = {
+				custom_effect_tooltip = generic_skip_one_line_tt
+add_days_mission_timeout = {
 					mission = ALB_time_till_stress
-					days = 215
+					days = 120
 				}
 			}
 			if = {
@@ -134,9 +161,9 @@ focus_tree = {
 		id = ALB_smoke_200_cigarettes_again
 
 		icon = GFX_goal_generic_CAS
-		prerequisite = { focus = ALB_smoke_another_200_cigarettes }
-		relative_position_id = ALB_smoke_another_200_cigarettes
-		x = 0
+		prerequisite = { focus = ALB_smoke_200_cigarettes }
+		relative_position_id = ALB_smoke_200_cigarettes
+		x = 1
 		y = 1
 		cost = 5
 
@@ -147,18 +174,22 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		
 		completion_reward = {
-			swap_ruler_traits = { remove = chain_smoker_2 add = chain_smoker_3 }
+			swap_ruler_traits = { remove = chain_smoker_1 add = chain_smoker_2 }
 			if = {
 				limit = { has_active_mission = ALB_time_till_stress }
-				add_days_mission_timeout = {
+				custom_effect_tooltip = generic_skip_one_line_tt
+add_days_mission_timeout = {
 					mission = ALB_time_till_stress
-					days = 215
+					days = 120
 				}
 			}
 			if = {
 				limit = { has_idea = ALB_king_zog_stress }
 				remove_ideas = ALB_king_zog_stress
 				activate_mission = ALB_time_till_stress
+			}
+			hidden_effect = {
+				set_country_flag = ordered_200_cigarettes
 			}
 		}
 	}
@@ -167,11 +198,11 @@ focus_tree = {
 		id = ALB_encourage_italian_immigration
 
 		icon = GFX_focus_ETH_invite_italian_settlers
-		prerequisite = { focus = ALB_rally_to_the_king }
-		relative_position_id = ALB_rally_to_the_king
+		prerequisite = { focus = ALB_dictate_italian_influence }
+		relative_position_id = ALB_dictate_italian_influence
 		x = -1
 		y = 1
-		cost = 5
+		cost = 10
 
 		available = {
 			has_idea = ALB_italian_dependency
@@ -181,19 +212,20 @@ focus_tree = {
 		
 		completion_reward = {
 			add_ideas = ALB_italian_immigration_0
-			44 = { add_manpower = 10000 }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			44 = { add_manpower = 14051 }
 		}
 	}
 	
 	focus = {
 		id = ALB_selling_the_albanian_dream
 
-		icon = GFX_focus_ETH_invite_italian_settlers
+		icon = GFX_focus_ITA_cavalry_charge
 		prerequisite = { focus = ALB_encourage_italian_immigration }
 		relative_position_id = ALB_encourage_italian_immigration
 		x = 0
 		y = 1
-		cost = 5
+		cost = 10
 
 		available = {
 			has_idea = ALB_italian_dependency
@@ -206,8 +238,19 @@ focus_tree = {
 				remove_idea = ALB_italian_immigration_0
 				add_idea = ALB_italian_immigration_1
 			}
-			934 = { add_manpower = 8000 }
-			805 = { add_manpower = 3000 }
+
+		
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+		custom_effect_tooltip = generic_skip_one_line_tt
+			934 = { add_manpower = 8219 }
+			805 = { add_manpower = 6031 }
 		}
 	}
 	
@@ -215,11 +258,11 @@ focus_tree = {
 		id = ALB_invite_italian_investors
 
 		icon = GFX_focus_befriend_italy
-		prerequisite = { focus = ALB_rally_to_the_king }
-		relative_position_id = ALB_rally_to_the_king
+		prerequisite = { focus = ALB_dictate_italian_influence }
+		relative_position_id = ALB_dictate_italian_influence
 		x = 1
 		y = 1
-		cost = 5
+		cost = 10
 
 		available = {
 			has_idea = ALB_italian_dependency
@@ -229,19 +272,20 @@ focus_tree = {
 		
 		completion_reward = {
 			add_ideas = ALB_italian_investments_0
-			44 = { add_manpower = 1500 }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			44 = { add_manpower = 1428 }
 		}
 	}
 	
 	focus = {
 		id = ALB_italian_tax_haven
 
-		icon = GFX_focus_befriend_italy
+		icon = GFX_focus_BRA_joint_italian_motor_development
 		prerequisite = { focus = ALB_invite_italian_investors }
 		relative_position_id = ALB_invite_italian_investors
 		x = 0
 		y = 1
-		cost = 5
+		cost = 10
 
 		available = {
 			has_idea = ALB_italian_dependency
@@ -254,15 +298,17 @@ focus_tree = {
 				remove_idea = ALB_italian_investments_0
 				add_idea = ALB_italian_investments_1
 			}
-			805 = { add_manpower = 600 }
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			805 = { add_manpower = 586 }
 		}
 	}
 	
 	focus = {
 		id = ALB_sieze_italian_assets
 
-		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
-		prerequisite = { focus = ALB_rally_to_the_king focus = ALB_encourage_italian_immigration focus = ALB_selling_the_albanian_dream focus = ALB_invite_italian_investors focus = ALB_italian_tax_haven }
+		icon = GFX_focus_ARG_anti_corruption_policies
+		prerequisite = { focus = ALB_dictate_italian_influence focus = ALB_encourage_italian_immigration focus = ALB_selling_the_albanian_dream focus = ALB_invite_italian_investors focus = ALB_italian_tax_haven }
 		relative_position_id = ALB_selling_the_albanian_dream
 		x = 1
 		y = 1
@@ -275,8 +321,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		
 		completion_reward = {
-			custom_effect_tooltip = 0_ALB_TT
+			
 			remove_ideas = ALB_italian_dependency
+			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
 				limit = {
 					OR = {
@@ -375,7 +422,7 @@ focus_tree = {
 					}
 				}
 			}
-			
+			custom_effect_tooltip = generic_skip_one_line_tt
 			hidden_effect = {
 				remove_ideas = {
 					ALB_italian_immigration_0
@@ -398,7 +445,11 @@ focus_tree = {
 			}
 			set_temp_variable = { ALB_ita_support = party_popularity@fascism }
 			multiply_temp_variable = { ALB_ita_support = -0.5 }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = stability_loss_from_italian_influence
 			add_stability = ALB_ita_support
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = 0_ALB_TT
 		}
 	}
 	
@@ -559,14 +610,21 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = ALB_find_more_cigarettes
+		id = ALB_smoke_once_again
 
-		icon = GFX_goal_generic_wolf_pack
-		prerequisite = { focus = ALB_smoke_200_cigarettes_again }
-		relative_position_id = ALB_smoke_200_cigarettes_again
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = ALB_smoke_another_200_cigarettes }
+		prerequisite = {
+			focus = ALB_smoke_200_cigarettes_again
+		}
+		relative_position_id = ALB_smoke_200_cigarettes
 		x = 0
-		y = 1
+		y = 2
 		cost = 5
+
+		available = {
+
+		}
 		
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		
@@ -574,108 +632,10 @@ focus_tree = {
 			swap_ruler_traits = { remove = chain_smoker_3 add = chain_smoker_4 }
 			if = {
 				limit = { has_active_mission = ALB_time_till_stress }
-				add_days_mission_timeout = {
+				custom_effect_tooltip = generic_skip_one_line_tt
+add_days_mission_timeout = {
 					mission = ALB_time_till_stress
-					days = 215
-				}
-			}
-			if = {
-				limit = { has_idea = ALB_king_zog_stress }
-				remove_ideas = ALB_king_zog_stress
-				activate_mission = ALB_time_till_stress
-			}
-		}
-	}
-	
-	focus = {
-		id = ALB_smoke_another_200_cigarettes_again
-
-		icon = GFX_goal_generic_CAS
-		prerequisite = { focus = ALB_find_more_cigarettes }
-		relative_position_id = ALB_find_more_cigarettes
-		x = 0
-		y = 1
-		cost = 5
-
-		available = {
-			
-		}
-		
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		
-		completion_reward = {
-			swap_ruler_traits = { remove = chain_smoker_4 add = chain_smoker_5 }
-			if = {
-				limit = { has_active_mission = ALB_time_till_stress }
-				add_days_mission_timeout = {
-					mission = ALB_time_till_stress
-					days = 215
-				}
-			}
-			if = {
-				limit = { has_idea = ALB_king_zog_stress }
-				remove_ideas = ALB_king_zog_stress
-				activate_mission = ALB_time_till_stress
-			}
-		}
-	}
-	
-	focus = {
-		id = ALB_achieve_the_world_record
-
-		icon = GFX_focus_POL_support_global_falangism
-		prerequisite = { focus = ALB_smoke_another_200_cigarettes_again }
-		relative_position_id = ALB_smoke_another_200_cigarettes_again
-		x = 0
-		y = 1
-		cost = 5
-
-		available = {
-			
-		}
-		
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		
-		completion_reward = {
-			swap_ruler_traits = { remove = chain_smoker_5 add = chain_smoker_6 }
-			if = {
-				limit = { has_active_mission = ALB_time_till_stress }
-				add_days_mission_timeout = {
-					mission = ALB_time_till_stress
-					days = 215
-				}
-			}
-			if = {
-				limit = { has_idea = ALB_king_zog_stress }
-				remove_ideas = ALB_king_zog_stress
-				activate_mission = ALB_time_till_stress
-			}
-		}
-	}
-	
-	focus = {
-		id = ALB_smoke_once_again
-
-		icon = GFX_goal_generic_CAS
-		prerequisite = { focus = ALB_achieve_the_world_record }
-		relative_position_id = ALB_achieve_the_world_record
-		x = 0
-		y = 1
-		cost = 5
-
-		available = {
-
-		}
-		
-		search_filters = { FOCUS_FILTER_POLITICAL }
-		
-		completion_reward = {
-			swap_ruler_traits = { remove = chain_smoker_6 add = chain_smoker_7 }
-			if = {
-				limit = { has_active_mission = ALB_time_till_stress }
-				add_days_mission_timeout = {
-					mission = ALB_time_till_stress
-					days = 215
+					days = 120
 				}
 			}
 			if = {
@@ -692,7 +652,7 @@ focus_tree = {
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = ALB_smoke_once_again }
 		relative_position_id = ALB_smoke_once_again
-		x = -2
+		x = -1
 		y = 1
 		cost = 5
 
@@ -703,12 +663,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
 		
 		completion_reward = {
-			custom_effect_tooltip = 1_ALB_TT
+			
 			add_ideas = ALB_tobacco_industry
-			if = {
-				limit = { has_idea = ALB_king_zog_stress }
-				remove_ideas = ALB_king_zog_stress
-			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = 1_ALB_TT
 		}
 	}
 	
@@ -718,7 +676,7 @@ focus_tree = {
 		icon = GFX_goal_generic_CAS
 		prerequisite = { focus = ALB_smoke_once_again }
 		relative_position_id = ALB_smoke_once_again
-		x = 0
+		x = 1
 		y = 1
 		cost = 5
 
@@ -729,12 +687,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		
 		completion_reward = {
-			swap_ruler_traits = { remove = chain_smoker_7 add = chain_smoker_8 }
+			swap_ruler_traits = { remove = chain_smoker_4 add = chain_smoker_5 }
 			if = {
 				limit = { has_active_mission = ALB_time_till_stress }
-				add_days_mission_timeout = {
+				custom_effect_tooltip = generic_skip_one_line_tt
+add_days_mission_timeout = {
 					mission = ALB_time_till_stress
-					days = 215
+					days = 120
 				}
 			}
 			if = {
@@ -763,8 +722,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		
 		completion_reward = {
-			swap_ruler_traits = { remove = chain_smoker_8 add = chain_smoker_9 }
-			
+			swap_ruler_traits = { remove = chain_smoker_5 add = chain_smoker_9 }
+			custom_effect_tooltip = generic_skip_one_line_tt
 			ALB_king_zog = {
 				add_field_marshal_role = {
 				  traits = { power_of_cigarettes }
@@ -795,8 +754,13 @@ focus_tree = {
 		
 		completion_reward = {
 			remove_ideas = ALB_italian_high_command
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			
 			effect_tooltip = { add_ideas = ALB_understaffed_army }
 			hidden_effect = { add_dynamic_modifier = { modifier = ALB_understaffed_army_dynamic_modifier } }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = unlock_army_reforms_tt
 		}
 	}
 	
@@ -1116,7 +1080,7 @@ focus_tree = {
 		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = ALB_encourage_nationalism }
 		relative_position_id = ALB_encourage_nationalism
-		x = 0
+		x = 3
 		y = 2
 		cost = 5
 		
@@ -3172,6 +3136,8 @@ focus_tree = {
 					}
 				}
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = unlock_army_reforms_tt
 		}
 	}
 	

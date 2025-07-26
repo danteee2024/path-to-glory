@@ -489,7 +489,7 @@ ideas = {
 
 			modifier = {
 				custom_modifier_tooltip = 26_ALB_TT
-				monthly_population = 1.0
+				monthly_population = 0.25
 				fascism_drift = 0.01
 			}
 			
@@ -519,7 +519,7 @@ ideas = {
 
 			modifier = {
 				custom_modifier_tooltip = 26_ALB_TT
-				monthly_population = 2.0
+				monthly_population = 0.5
 				fascism_drift = 0.02
 			}
 			

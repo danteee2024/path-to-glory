@@ -26,4 +26,6 @@ opinion_modifiers = {
 		trade = no
 		value = -20
 	}
+
+	
 }
