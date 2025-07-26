@@ -1145,17 +1145,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 9
 		}
-        	offset = {
-			x = 7
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = ROM_preserve_greater_romania
-			}
-		}
+        
 		available = {
 
 		}
