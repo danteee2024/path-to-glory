@@ -101,10 +101,10 @@ leader_traits = {
 	
 	cult_of_zog = {
 		random = no
-		max_command_power = 100
-		command_power_gain_mult = 0.30
+		max_command_power = 50
+		command_power_gain_mult = 0.10
 		political_power_factor = 0.20
-		skill_bonus_factor = 0.2
+		skill_bonus_factor = 0.05
 
 		ai_will_do = {
 			factor = 1
@@ -113,9 +113,9 @@ leader_traits = {
 	
 	balkan_emperor = {
 		random = no
-		terrain_penalty_reduction = 0.10
+		terrain_penalty_reduction = 0.02
 		justify_war_goal_time = -0.5
-		puppet_cost_factor = -0.3
+		puppet_cost_factor = -0.25
 
 		ai_will_do = {
 			factor = 1
@@ -126,7 +126,7 @@ leader_traits = {
 		random = no
 		stability_factor = 0.1
 		resistance_target = -0.05
-		resistance_damage_to_garrison = -0.3
+		resistance_damage_to_garrison = -0.25
 
 		ai_will_do = {
 			factor = 1

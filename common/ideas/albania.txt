@@ -746,9 +746,9 @@ ideas = {
 
 			modifier = {
 				conscription = 0.005
-				weekly_manpower = 2500
-				stability_weekly = 0.002
-				war_support_weekly = 0.002
+				weekly_manpower = 2000
+				stability_factor = 0.05
+				war_support_factor = 0.05
 				army_core_attack_factor = 0.1
 				army_core_defence_factor = 0.1
 			}
@@ -1187,13 +1187,12 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				conscription = 0.05
-				generate_wargoal_tension = -1.0
+				conscription = 0.03
+				army_breakthrough_against_major_factor = 0.1
 				justify_war_goal_time = -0.35
-				generate_wargoal_tension_against = -1.0
+				
 				army_core_attack_factor = 0.1
 				army_core_defence_factor = 0.1
-				subjects_autonomy_gain = -2.0
 			}
 		}
 		
@@ -1223,9 +1222,9 @@ ideas = {
 			
 			targeted_modifier = {
 				tag = YUG
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.15
-				generate_wargoal_tension_against = -1.0
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+				
 			}
 		}
 		
@@ -1255,9 +1254,9 @@ ideas = {
 
 			targeted_modifier = {
 				tag = ROM
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.15
-				generate_wargoal_tension_against = -1.0
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+				
 			}
 		}
 		
@@ -1287,16 +1286,16 @@ ideas = {
 			
 			targeted_modifier = {
 				tag = HUN
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.15
-				generate_wargoal_tension_against = -1.0
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+				
 			}
 			
 			targeted_modifier = {
 				tag = SLO
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.15
-				generate_wargoal_tension_against = -1.0
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+				
 			}
 		}
 		
@@ -1334,16 +1333,16 @@ ideas = {
 			
 			targeted_modifier = {
 				tag = BUL
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.15
-				generate_wargoal_tension_against = -1.0
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+				
 			}
 			
 			targeted_modifier = {
 				tag = GRE
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.15
-				generate_wargoal_tension_against = -1.0
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+				
 			}
 		}
 		
@@ -1404,8 +1403,8 @@ ideas = {
 
 			targeted_modifier = {
 				tag = ITA
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.15
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
 			}
 		}
 		
@@ -1434,8 +1433,8 @@ ideas = {
 
 			targeted_modifier = {
 				tag = TUR
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.15
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
 			}
 		}
 		
@@ -1464,9 +1463,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				industrial_capacity_dockyard = 3.0
-				industrial_capacity_factory = -0.1
-				production_speed_dockyard_factor = 0.33
+				industrial_capacity_dockyard = 0.75
+				industrial_capacity_factory = -0.10
+				production_speed_dockyard_factor = 0.25
 			}
 		}
 		
@@ -1486,10 +1485,10 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				industrial_capacity_dockyard = 0.25
+				industrial_capacity_dockyard = 0.10
 				experience_gain_navy_unit_factor = 0.1
 				experience_gain_navy_factor = 0.1
-				navy_org_factor = 0.1
+				navy_org_factor = 0.05
 			}
 		}
 		
@@ -1511,12 +1510,12 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				industrial_capacity_dockyard = 0.5
-				naval_speed_factor = 0.1
+				industrial_capacity_dockyard = 0.20
+				naval_speed_factor = 0.05
 				experience_gain_navy_unit_factor = 0.1
 				experience_gain_navy_factor = 0.1
-				navy_org_factor = 0.1
-				naval_detection = 0.1
+				navy_org_factor = 0.05
+				naval_detection = 0.05
 			}
 		}
 		
@@ -1537,7 +1536,7 @@ ideas = {
 			
 			modifier = {
 				army_org_regain = 0.10
-				war_stability_factor = 0.50
+				war_stability_factor = 0.20
 			}
 		}
 		
@@ -1558,8 +1557,8 @@ ideas = {
 			
 			targeted_modifier = {
 				tag = BUL
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.15
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
 			}
 		}
 		
@@ -1580,8 +1579,8 @@ ideas = {
 			
 			targeted_modifier = {
 				tag = GRE
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.15
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
 			}
 		}
 		
@@ -1601,9 +1600,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				compliance_growth = 0.1
 				resistance_target = -0.1
-				resistance_damage_to_garrison = -0.3
+				resistance_damage_to_garrison = -0.25
 			}
 		}
 		
@@ -1624,10 +1622,9 @@ ideas = {
 			
 			modifier = {
 				non_core_manpower = 0.1
-				compliance_growth = 0.10
 				resistance_target = -0.10
-				resistance_damage_to_garrison = -0.3
-				army_morale = 0.2
+				resistance_damage_to_garrison = -0.25
+				army_morale_factor = 0.1
 			}
 		}
 		
@@ -1687,9 +1684,9 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				production_factory_max_efficiency_factor = 0.05
-				army_defence_factor = 0.10
-				max_dig_in_factor = 0.10
+				production_factory_max_efficiency_factor = 0.02
+				army_defence_factor = 0.05
+				max_dig_in_factor = 0.05
 			}
 		}
 		

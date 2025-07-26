@@ -19,8 +19,8 @@
  ALB_smoke_once_again_desc:0 "Zog has been smoking a lot today, but he still feels like he needs another smoke break. Who would be cruel enough to not let him have it?"
  ALB_local_tobacco_industry:0 "Local Tobacco Industry"
  ALB_local_tobacco_industry_desc:0 "By creating our own tobacco industry, we can cut big spendings from our budget dedicated to the import of Zogs cigarettes."
- ALB_do_some_more_smoking:0 "Do some more smoking"
- ALB_do_some_more_smoking_desc:0 "Zog continues somking despite doctors advicing him not to, but at this point no one dare to stop him."
+ ALB_do_some_more_smoking:0 "Fine Loose-Rolled Macedonian Cigarettes"
+ ALB_do_some_more_smoking_desc:0 "Zog continues smoking despite doctors advising him not to, but at this point no one dares to stop him."
  ALB_200_cigarettes_a_day:0 "200 Cigarettes A Day"
  ALB_200_cigarettes_a_day_desc:0 "The inevitable has happened. Zog can no longer go a day without smoking at least 200 cigarettes. Despite this, he somehow seems healthier, as if he has become more than human."
  ALB_encourage_italian_immigration:0 "Encourage Italian Immigration"
@@ -131,18 +131,18 @@
  ALB_deterrence_desc:0 ""
  ALB_national_unity:0 "National Unity"
  ALB_national_unity_desc:0 ""
- ALB_proclaim_greater_albania:0 "Proclaim Greater Albania" 
- ALB_proclaim_greater_albania_desc:0 "Our nation has regained its former glory." 
+ ALB_proclaim_greater_albania:0 "Italy Recognises Greater Albania" 
+ ALB_proclaim_greater_albania_desc:0 "Italy has recognised Albania's claim to the greater Albanian territories, and will not interfere with our plans." 
  ALB_king_of_albania:0 "King of Albania"
  ALB_king_of_albania_desc:0 "Zog is the only true ruler of Albania, his ability to rule, smoke in hand, is proof that no man is quite like him.\nAll hail King Zog I!"
- ALB_balkan_hegemon:0 "Balkan Hegemon"
+ ALB_balkan_hegemon:0 "King Zog I's Balkan Hegemony"
  ALB_balkan_hegemon_desc:0 "Zog dares do what no man has done before."
  ALB_claim_western_balkans:0 "Claim Western Balkans"
  ALB_claim_western_balkans_desc:0 ""
- ALB_claim_eastern_balkans:0 "Claim Eastern Balkans"
- ALB_claim_eastern_balkans_desc:0 ""
- ALB_claim_northern_balkans:0 "Claim Northern Balkans"
- ALB_claim_northern_balkans_desc:0 ""
+ ALB_claim_eastern_balkans:0 "Address the Nation"
+ ALB_claim_eastern_balkans_desc:0 "Zog will address the nation and proclaim his ambitions for Albania."
+ ALB_claim_northern_balkans:0 "Promote Propaganda Campaigns in Tirana"
+ ALB_claim_northern_balkans_desc:0 "Zog will promote propaganda campaigns in Tirana to ensure that the people of Albania are aware of his ambitions for the nation."
  ALB_claim_southern_balkans:0 "Claim Southern Balkans"
  ALB_claim_southern_balkans_desc:0 ""
  ALB_balkans_without_italy:0 "A Balkans Without Italy"
@@ -530,3 +530,28 @@
  stability_loss_from_italian_influence:0 "[ITA.GetFlag] Stability loss from §OFascism§! support [ITA.GetFlag]:"
 
  unlock_army_reforms_tt:0 "Unlock Decisions:£decision_icon_small §YAlbanian Armed Forces§!"
+
+
+ ALB_mechanized_effort:0 "Investments in Mechanized Forces"
+  ALB_mechanized_effort_desc:0 "We will invest in mechanized forces to ensure that our army is ready for the future. This will allow us to field more mechanized divisions and improve our overall military capabilities."
+ ALB_tank_focus:0 "Investments in Armored Forces"
+ ALB_tank_focus_desc:0 "We will focus on developing our armored forces to ensure that we have a strong and modern tank division. This will allow us to effectively engage enemy forces and secure our borders."
+
+ ALB_ottoman_succession_tt:0 "§RIn this alt-historical path, Turkey must be AI controlled otherwise you cannot do this path§!." 
+
+
+ ALB_rally_to_the_king:0 "Rally to the King"
+ ALB_rally_to_the_king_desc:0 "King Zog has proven that he is the true ruler of Albania, and that Albania will stand, now and always. With the power of cigarettes, he will lead his nation to greatness, whilst learning the quarters of the battlefield more efficiently than anyone ever!\n\nAll hail King Zog I!"
+
+ ALB_dictate_italian_influence:0 "Dictate Italian Influence"
+ ALB_dictate_italian_influence_desc:0 "King Zog may choose to exploit Italy's presence in Albania for short-term gains but doing so risks giving Fascism a foothold in our politics.\n\nEach of the following focuses will grant useful benefits.
+
+ ALB_tirana_square_fire_of_1936:0 "Tirana Square Fire of 1936"
+ ALB_tirana_square_fire_of_1936_desc:0 "The fire at Tirana Square in 1936 was a pivotal moment in Albanian history. It galvanized support for King Zog and his government, allowing him to consolidate power and push back against fascist influences."
+ ALB_loyalists_to_zog:0 "Loyalists to Zog"
+ ALB_loyalists_to_zog_desc:0 "The loyalists to King Zog are a group of individuals who support the king and his vision for Albania. They are committed to preserving the monarchy and ensuring that King Zog remains in power."
+
+ ALB_take_yugoslav_territories:0 "Take Yugoslav Territories"
+ ALB_take_yugoslav_territories_desc:0 "King Zog has set his sights on expanding Albania's borders by taking territories from Yugoslavia. This will allow us to strengthen our position in the Balkans and assert our dominance in the region."
+ ALB_take_greek_territories:0 "Take Greek Territories"
+ ALB_take_greek_territories_desc:0 "King Zog has set his sights on expanding Albania's borders by taking territories from Greece. This will allow us to strengthen our position in the Balkans and assert our dominance in the region."
