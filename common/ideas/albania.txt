@@ -174,8 +174,8 @@ ideas = {
 			picture = generic_disjointed_gov
 
 			modifier = {
-				political_power_factor = -0.05
-				monthly_population = 0.40
+				political_power_factor = 0.10
+				monthly_population = 0.15
 			}
 			
 		}
@@ -379,7 +379,7 @@ ideas = {
 		
 		ALB_national_industry_01 = {
 		
-			picture = alb_national_industry
+			picture = SWE_gotaverken_retooled_for_rapid_repairs
 
 			allowed = {
 				original_tag = ALB
@@ -398,7 +398,7 @@ ideas = {
 
 		ALB_national_industry_02 = {
 		
-			picture = alb_national_industry
+			picture = SWE_gotaverken_retooled_for_rapid_repairs
 			
 			name = ALB_national_industry_01
 
@@ -414,14 +414,14 @@ ideas = {
 			
 			modifier = {
 				production_speed_buildings_factor = 0.05
-				production_factory_efficiency_gain_factor = 0.02
-				production_factory_max_efficiency_factor = 0.02
+				production_speed_industrial_complex_factor = 0.05	
+				production_factory_efficiency_gain_factor = 0.05
 			}
 		}
 		
 		ALB_national_industry_03 = {
 		
-			picture = alb_national_industry
+			picture = SWE_gotaverken_retooled_for_rapid_repairs
 			
 			name = ALB_national_industry_01
 
@@ -437,14 +437,14 @@ ideas = {
 			
 			modifier = {
 				production_speed_buildings_factor = 0.1
-				production_factory_efficiency_gain_factor = 0.05
-				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+				production_speed_industrial_complex_factor = 0.05	
 			}
 		}
 		
 		ALB_national_industry_04 = {
 		
-			picture = alb_national_industry
+			picture = SWE_gotaverken_retooled_for_rapid_repairs
 			
 			name = ALB_national_industry_01
 
@@ -461,8 +461,9 @@ ideas = {
 			modifier = {
 				global_building_slots_factor = 0.2
 				production_speed_buildings_factor = 0.15
-				production_factory_efficiency_gain_factor = 0.1
-				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05	
 			}
 		}
 		
@@ -601,11 +602,7 @@ ideas = {
 			picture = generic_exploit_mines
 
 			modifier = {
-				production_speed_infrastructure_factor = 0.2
-				#production_speed_bunker_factor = 0.2
-				#production_speed_coastal_bunker_factor = 0.2
-				production_speed_industrial_complex_factor = 0.2
-				production_speed_rail_way_factor = 0.2
+				cic_construction_boost = 0.15
 			}
 			
 		}

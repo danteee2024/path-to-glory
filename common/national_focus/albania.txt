@@ -27,15 +27,14 @@ focus_tree = {
 	focus = {
 		id = ALB_acquire_modern_tools
 
-		icon = GFX_goal_generic_production2
-		x = 8
+		icon = GFX_focus_generic_modernize_industry
+		x = 35
 		y = 0
 		cost = 5
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		
 		completion_reward = {
-			activate_mission = ALB_time_till_stress
 			44 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -44,16 +43,33 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = ALB_national_industry_01
 		}
 	}
-	
+	focus = {
+		id = ALB_rally_to_the_king
+
+		icon = GFX_goal_generic_production2
+		x = 8
+		y = 0
+		cost = 5
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {
+			add_political_power = 150
+			custom_effect_tooltip = generic_skip_one_line_tt
+			activate_mission = ALB_time_till_stress
+			
+		}
+	}
 	focus = {
 		id = ALB_smoke_200_cigarettes
 
 		icon = GFX_goal_generic_CAS
-		prerequisite = { focus = ALB_acquire_modern_tools }
-		relative_position_id = ALB_acquire_modern_tools
+		prerequisite = { focus = ALB_rally_to_the_king }
+		relative_position_id = ALB_rally_to_the_king
 		x = -5
 		y = 1
 		cost = 5
@@ -151,8 +167,8 @@ focus_tree = {
 		id = ALB_encourage_italian_immigration
 
 		icon = GFX_focus_ETH_invite_italian_settlers
-		prerequisite = { focus = ALB_acquire_modern_tools }
-		relative_position_id = ALB_acquire_modern_tools
+		prerequisite = { focus = ALB_rally_to_the_king }
+		relative_position_id = ALB_rally_to_the_king
 		x = -1
 		y = 1
 		cost = 5
@@ -199,8 +215,8 @@ focus_tree = {
 		id = ALB_invite_italian_investors
 
 		icon = GFX_focus_befriend_italy
-		prerequisite = { focus = ALB_acquire_modern_tools }
-		relative_position_id = ALB_acquire_modern_tools
+		prerequisite = { focus = ALB_rally_to_the_king }
+		relative_position_id = ALB_rally_to_the_king
 		x = 1
 		y = 1
 		cost = 5
@@ -246,7 +262,7 @@ focus_tree = {
 		id = ALB_sieze_italian_assets
 
 		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
-		prerequisite = { focus = ALB_acquire_modern_tools focus = ALB_encourage_italian_immigration focus = ALB_selling_the_albanian_dream focus = ALB_invite_italian_investors focus = ALB_italian_tax_haven }
+		prerequisite = { focus = ALB_rally_to_the_king focus = ALB_encourage_italian_immigration focus = ALB_selling_the_albanian_dream focus = ALB_invite_italian_investors focus = ALB_italian_tax_haven }
 		relative_position_id = ALB_selling_the_albanian_dream
 		x = 1
 		y = 1
@@ -389,10 +405,10 @@ focus_tree = {
 	focus = {
 		id = ALB_construct_better_infrastructure
 
-		icon = GFX_goal_generic_construct_infrastructure
+		icon = GFX_focus_GER_customs_union
 		prerequisite = { focus = ALB_acquire_modern_tools }
 		relative_position_id = ALB_acquire_modern_tools
-		x = 25
+		x = -1
 		y = 1
 		offset = {
 			x = -3
@@ -404,7 +420,9 @@ focus_tree = {
 				}
 			}
 		}
-		
+		mutually_exclusive = {
+			focus = ALB_invest_in_albanian_entrepreneurship
+		}
 		cost = 5
 
 		available = {
@@ -428,11 +446,11 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = BUL_acquire_modern_tools
 				bonus = 0.5
-				uses = 2
+				uses = 1
 				category = industry
 			}
 		}
@@ -441,12 +459,15 @@ focus_tree = {
 	focus = {
 		id = ALB_invest_in_albanian_entrepreneurship
 
-		icon = GFX_goal_generic_production
-		prerequisite = { focus = ALB_construct_better_infrastructure }
-		relative_position_id = ALB_construct_better_infrastructure
-		x = 0
+		icon = GFX_focus_generic_university_2
+		prerequisite = { focus = ALB_acquire_modern_tools }
+		relative_position_id = ALB_acquire_modern_tools
+		x = 1
 		y = 1
-		cost = 10
+		cost = 5
+		mutually_exclusive = {
+			focus = ALB_construct_better_infrastructure
+		}
 
 		available = {
 			
@@ -456,23 +477,20 @@ focus_tree = {
 		
 		completion_reward = {
 			add_ideas = ALB_albanian_entrepreneurs
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_cic = 1500
+			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			add_tech_bonus = {
-				name = BUL_acquire_modern_tools
-				bonus = 0.5
-				uses = 2
-				category = industry
-			}
 		}
 	}
 	
 	focus = {
 		id = ALB_invigorate_national_industry
 
-		icon = GFX_focus_generic_industry_1
-		prerequisite = { focus = ALB_invest_in_albanian_entrepreneurship }
+		icon = GFX_focus_ITA_workers_unions
+		prerequisite = { focus = ALB_construct_better_infrastructure focus = ALB_invest_in_albanian_entrepreneurship }
 		relative_position_id = ALB_invest_in_albanian_entrepreneurship
-		x = 0
+		x = -1
 		y = 1
 		cost = 10
 
@@ -493,7 +511,7 @@ focus_tree = {
 	focus = {
 		id = ALB_greenlight_building_projects
 
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_focus_RAJ_go_into_hiding
 		prerequisite = { focus = ALB_invigorate_national_industry }
 		relative_position_id = ALB_invigorate_national_industry
 		x = 2
@@ -598,30 +616,6 @@ focus_tree = {
 				limit = { has_idea = ALB_king_zog_stress }
 				remove_ideas = ALB_king_zog_stress
 				activate_mission = ALB_time_till_stress
-			}
-		}
-	}
-	
-	focus = {
-		id = ALB_invade_cuba
-
-		icon = GFX_goal_generic_more_territorial_claims
-		prerequisite = { focus = ALB_smoke_another_200_cigarettes_again }
-		relative_position_id = ALB_smoke_another_200_cigarettes_again
-		x = -2
-		y = 1
-		cost = 5
-
-		available = {
-			country_exists = CUB
-		}
-		
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-		
-		completion_reward = {
-			create_wargoal = {
-				type = puppet_wargoal_focus
-				target = CUB
 			}
 		}
 	}
@@ -810,8 +804,8 @@ focus_tree = {
 		id = ALB_national_defense_budget
 
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = ALB_acquire_modern_tools }	
-		relative_position_id = ALB_acquire_modern_tools
+		prerequisite = { focus = ALB_rally_to_the_king }	
+		relative_position_id = ALB_rally_to_the_king
 		x = 11
 		y = 1
 		cost = 5
@@ -2866,7 +2860,7 @@ focus_tree = {
 	focus = {
 		id = ALB_university_of_tirana
 
-		icon = GFX_focus_research
+		icon = GFX_focus_ARG_universidad_de_buenos_aires
 		prerequisite = { focus = ALB_invigorate_national_industry }
 		relative_position_id = ALB_invigorate_national_industry
 		x = -2
@@ -2887,12 +2881,12 @@ focus_tree = {
 	focus = {
 		id = ALB_increase_industry_spending
 
-		icon = GFX_focus_generic_industry_2
+		icon = GFX_focus_PER_stage_mass_protests
 		prerequisite = { focus = ALB_invigorate_national_industry }
 		relative_position_id = ALB_invigorate_national_industry
 		x =0
 		y = 1
-		cost = 10
+		cost = 2.5
 
 		available = {
 			
@@ -2901,9 +2895,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = ALB_national_industry_02
-				add_idea = ALB_national_industry_03
+			add_stability = -0.05
+			custom_effect_tooltip = generic_skip_one_line_tt
+			44 = {
+				add_manpower = 9723
+			}
+			934 = {
+				add_manpower = -9723
 			}
 		}
 	}
@@ -3445,9 +3443,43 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		
 		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = {
+					805
+				}
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			swap_ideas = {
-				remove_idea = ALB_national_industry_03
-				add_idea = ALB_national_industry_04
+				remove_idea = ALB_national_industry_02
+				add_idea = ALB_national_industry_03
 			}
 		}
 	}
@@ -3455,7 +3487,7 @@ focus_tree = {
 	focus = {
 		id = ALB_research_grant
 
-		icon = GFX_focus_research2
+		icon = GFX_focus_PER_university_of_isfahan
 		prerequisite = { focus = ALB_optimise_industry }
 		relative_position_id = ALB_optimise_industry
 		x = 0
@@ -3473,7 +3505,7 @@ focus_tree = {
 		id = ALB_assess_internal_affairs
 
 		icon = GFX_goal_generic_intelligence_exchange
-		prerequisite = { focus = ALB_increase_industry_spending }
+		prerequisite = { focus = ALB_increase_industry_spending focus = ALB_greenlight_building_projects }
 		relative_position_id = ALB_increase_industry_spending
 		x = 3
 		y = 1
@@ -3493,7 +3525,7 @@ focus_tree = {
 	focus = {
 		id = ALB_continue_zogs_efforts
 
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_focus_hol_the_foundations_of_defense
 		prerequisite = { focus = ALB_assess_internal_affairs }
 		prerequisite = { focus = ALB_import_foreign_media }
 		relative_position_id = ALB_assess_internal_affairs
@@ -3518,7 +3550,7 @@ focus_tree = {
 	focus = {
 		id = ALB_look_to_the_east
 
-		icon = GFX_focus_generic_befriend_turkey
+		icon = GFX_focus_renounce_the_treaty_of_trianon
 		prerequisite = { focus = ALB_import_foreign_media }
 		prerequisite = { focus = ALB_assess_internal_affairs }
 		relative_position_id = ALB_assess_internal_affairs
@@ -3543,7 +3575,7 @@ focus_tree = {
 	focus = {
 		id = ALB_increase_westernisation_effort
 
-		icon = GFX_goal_support_democracy
+		icon = GFX_focus_GER_european_confederation
 		prerequisite = { focus = ALB_continue_zogs_efforts }
 		relative_position_id = ALB_continue_zogs_efforts
 		mutually_exclusive = { focus = ALB_placate_minorities }
@@ -3580,7 +3612,7 @@ focus_tree = {
 	focus = {
 		id = ALB_placate_minorities
 
-		icon = GFX_goal_generic_neutrality_focus
+		icon = GFX_focus_generic_befriend_turkey
 		prerequisite = { focus = ALB_look_to_the_east focus = ALB_continue_zogs_efforts }
 		relative_position_id = ALB_look_to_the_east
 		mutually_exclusive = { focus = ALB_increase_westernisation_effort }
@@ -3613,7 +3645,7 @@ focus_tree = {
 	focus = {
 		id = ALB_albanian_science
 
-		icon = GFX_goal_tfv_generic_tech_sharing
+		icon = GFX_focus_spa_save_the_alcazar
 		prerequisite = { focus = ALB_research_grant }
 		prerequisite = { focus = ALB_increase_westernisation_effort focus = ALB_placate_minorities }
 		relative_position_id = ALB_research_grant
@@ -3628,7 +3660,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		
 		completion_reward = {
-			add_research_slot = 1
+				swap_ideas = {
+				remove_idea = ALB_national_industry_03
+				add_idea = ALB_national_industry_04
+			}
 		}
 	}
 	
