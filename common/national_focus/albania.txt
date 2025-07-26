@@ -50,7 +50,7 @@ focus_tree = {
 	focus = {
 		id = ALB_rally_to_the_king
 
-		icon = GFX_focus_ITA_albanian_fascist_militia
+		icon =  GFX_focus_NOR_the_kings_no
 		x = 8
 		y = 0
 		cost = 5
@@ -299,7 +299,6 @@ add_days_mission_timeout = {
 				add_idea = ALB_italian_investments_1
 			}
 			
-			custom_effect_tooltip = generic_skip_one_line_tt
 			805 = { add_manpower = 586 }
 		}
 	}
@@ -2873,7 +2872,7 @@ add_days_mission_timeout = {
 	focus = {
 		id = ALB_more_men_for_the_army
 
-		icon = GFX_focus_generic_manpower
+		icon = GFX_focus_ITA_albanian_fascist_militia
 		prerequisite = { focus = ALB_national_defense_budget }
 		relative_position_id = ALB_national_defense_budget
 		x = 6
@@ -3074,7 +3073,6 @@ add_days_mission_timeout = {
 		search_filters = { FOCUS_FILTER_MANPOWER }
 		
 		completion_reward = {
-			custom_effect_tooltip = 6_ALB_TT # Get Fortify Decisions
 			swap_ideas = {
 				remove_idea = ALB_fortification_focus
 				add_idea = ALB_fortification_focus2
@@ -3144,7 +3142,7 @@ add_days_mission_timeout = {
 	focus = {
 		id = ALB_expand_military_industry
 
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_focus_generic_reorient_production
 		prerequisite = { focus = ALB_albanian_fortifications }
 		relative_position_id = ALB_albanian_fortifications
 		x = -1
@@ -3236,7 +3234,7 @@ add_days_mission_timeout = {
 	focus = {
 		id = ALB_expand_naval_industry
 
-		icon = GFX_goal_generic_construct_naval_dockyard
+		icon = GFX_focus_generic_navy_research_bonus
 		prerequisite = { focus = ALB_albanian_fortifications }
 		relative_position_id = ALB_albanian_fortifications
 		x = 1
