@@ -1281,10 +1281,10 @@ focus = {
 			if = {
 				limit = { has_full_control_of_state = 180 }
 				180 = {
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = arms_factory
-						level = 2
+						level = 1
 						instant_build = yes
 					}
 				}
@@ -1296,14 +1296,14 @@ focus = {
 						is_core_of = ROOT
 						free_building_slots = {
 							building = arms_factory
-							size > 2
+							size > 1
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = arms_factory
-						level = 2
+						level = 1
 						instant_build = yes
 					}
 				}
@@ -1761,10 +1761,10 @@ focus = {
 			if = {
 				limit = { has_full_control_of_state = 112 }
 				112 = {
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = arms_factory
-						level = 2
+						level = 1
 						instant_build = yes
 					}
 				}
@@ -3686,21 +3686,6 @@ focus = {
 	}
 
 	focus = {
-		id = POR_special_military_vehicles
-		icon = GFX_focus_generic_tank_production
-		prerequisite = { focus = POR_army_research_institute }
-		prerequisite = { focus = POR_metropolitan_army_primacy }
-		x = -1
-		y = 1
-		relative_position_id = POR_army_research_institute
-		cost = 10
-		completion_reward = {
-			complete_special_project = sp:sp_land_military_engineering_vehicles
-			complete_special_project = sp:sp_land_flamethrower_tank
-		}
-	}
-
-	focus = {
 		id = POR_colonial_army_primacy
 		icon = GFX_focus_CONGO_congo_army
 		prerequisite = { focus = POR_embrace_jungle_warfare }
@@ -3830,6 +3815,21 @@ focus = {
 		cost = 10
 		completion_reward = {
 			complete_special_project = sp:sp_land_super_heavy_howitzer
+		}
+	}
+
+	focus = {
+		id = POR_special_military_vehicles
+		icon = GFX_focus_generic_tank_production
+		prerequisite = { focus = POR_army_research_institute }
+		prerequisite = { focus = POR_metropolitan_army_primacy }
+		x = -1
+		y = 1
+		relative_position_id = POR_army_research_institute
+		cost = 10
+		completion_reward = {
+			complete_special_project = sp:sp_land_military_engineering_vehicles
+			complete_special_project = sp:sp_land_flamethrower_tank
 		}
 	}
 
