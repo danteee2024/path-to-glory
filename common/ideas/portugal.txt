@@ -993,7 +993,7 @@ ideas = {
 			
 			modifier = {
 				conscription_factor = 0.10
-				army_org_factor = 0.10
+				army_org_factor = -0.05
 				training_time_factor = -0.10
 			}
 		}

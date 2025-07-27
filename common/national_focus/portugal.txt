@@ -3242,6 +3242,170 @@ focus = {
 	}
 
 	focus = {
+		id = POR_institute_paratrooper_corps
+		prerequisite = { focus = POR_army_reorganization }
+		mutually_exclusive = { 
+		focus = POR_institute_marine_corps 
+		focus = POR_institute_mountaineer_corps }
+		icon = GFX_focus_generic_paratrooper
+		x = 7
+		y = 1
+
+		relative_position_id = POR_second_navy_reequipment
+		cost = 5
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = { 
+			
+			add_tech_bonus = {
+				name = POR_tropas_paraquedistas
+				bonus = 1
+				uses = 1
+				category = para_tech
+			}
+			add_tech_bonus = {
+				name = POR_tropas_paraquedistas
+				bonus = 1
+				uses = 1
+				category = transport_planes_cat
+			}
+		}
+	}
+
+	focus = {
+		id = POR_tropas_paraquedistas
+		prerequisite = { focus = POR_institute_paratrooper_corps }
+		icon = GFX_focus_eng_special_air_service
+		x = 0
+		y = 1
+		relative_position_id = POR_institute_paratrooper_corps
+		cost = 5
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = { 
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				add_doctrine_cost_reduction = {
+					cost_reduction = 0.5
+					uses = 1
+					category = special_forces_doctrine
+				}
+			}
+			add_ideas = POR_tropas_paraquedistas_idea
+		}
+	}
+
+	focus = {
+		id = POR_tropas_paraquedistas_paradropping_innovations
+		icon = GFX_SOV_transpolar_flights_ccp_2d_sov_compatibility
+		prerequisite = { focus = POR_tropas_paraquedistas }
+		prerequisite = { focus = POR_regimento_de_comandos }
+		icon = GFX_focus_PER_desert_training
+		x = 0
+		y = 2
+		relative_position_id = POR_tropas_paraquedistas
+		cost = 10
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = { 
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				add_doctrine_cost_reduction = {
+					cost_reduction = 0.5
+					uses = 1
+					category = special_forces_doctrine
+				}
+			}
+			swap_ideas = {
+				remove_idea = POR_tropas_paraquedistas_idea
+				add_idea = POR_tropas_paraquedistas_idea2
+			}
+		}
+	}
+
+	focus = {
+		id = POR_tropas_paraquedistas_desert_training
+		prerequisite = { focus = POR_tropas_paraquedistas_paradropping_innovations }
+		icon = GFX_focus_PER_desert_training
+		x = 0
+		y = 1
+		relative_position_id = POR_tropas_paraquedistas_paradropping_innovations
+		cost = 10
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = { 
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				
+			}
+			swap_ideas = {
+				remove_idea = POR_tropas_paraquedistas_idea2
+				add_idea = POR_tropas_paraquedistas_idea3
+			}
+			add_unit_bonus = {
+				paratrooper = {
+					desert = {
+						attack = 0.10
+						defence = 0.10
+					}
+				}
+			}
+			
+		}
+	}
+
+	focus = {
+		id = POR_expand_special_forces
+	
+		prerequisite = { focus = POR_iberian_elites 
+		focus = POR_fuzileiros 
+	    focus = POR_tropas_paraquedistas }	
+		icon = GFX_focus_SMB_special_forces_option_3
+		x = -1
+		y = 1
+
+		relative_position_id = POR_iberian_elites
+		cost = 5
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {
+			add_ideas = special_forces
+		}
+	}
+
+	focus = {
+		id = POR_regimento_de_comandos
+	
+		prerequisite = { focus = POR_iberian_elites 
+		focus = POR_fuzileiros 
+	    focus = POR_tropas_paraquedistas }	
+		icon = GFX_goal_generic_special_forces
+		x = 1
+		y = 1
+
+		relative_position_id = POR_iberian_elites
+		cost = 5
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = POR_regimento_de_comandos
+				bonus = 1
+				uses = 1
+				technology = paratroopers2
+				technology = paratroopers3
+				technology = marines2
+				technology = marines3
+				technology = tech_mountaineers2
+				technology = tech_mountaineers3
+			}
+		}
+	}
+
+	focus = {
 		id = POR_institute_marine_corps
 		prerequisite = { focus = POR_second_navy_reequipment }
 		prerequisite = { focus = POR_army_reorganization }
@@ -3338,7 +3502,6 @@ focus = {
 				}
 			}
 		}
-		
 	}
 
 	focus = {
@@ -3483,7 +3646,7 @@ focus = {
 		x = 0
 		y = 1
 		relative_position_id = POR_standardization
-		cost = 5
+		cost = 10
 		available = {
 			any_owned_state = {
 				is_core_of = ROOT
@@ -3545,7 +3708,7 @@ focus = {
 		x = 0
 		y = 1
 		relative_position_id = POR_embrace_jungle_warfare
-		cost = 5
+		cost = 10
 		available = {
 			any_owned_state = {
 				NOT = { is_core_of = ROOT }
@@ -3584,21 +3747,6 @@ focus = {
 				remove_idea = POR_colonial_army_primacy_idea
 				add_idea = POR_colonial_army_dominance_idea
 			}
-		}
-	}
-
-	focus = {
-		id = POR_colonial_army_tactics
-		icon = GFX_focus_AFG_contact_amanullah_loyalists_alt
-		prerequisite = { focus = POR_army_research_institute }
-		prerequisite = { focus = POR_colonial_army_primacy }
-		x = 1
-		y = 1
-		relative_position_id = POR_army_research_institute
-		cost = 10
-		completion_reward = {
-			complete_special_project = sp:sp_land_super_heavy_howitzer
-			complete_special_project = sp:sp_land_
 		}
 	}
 
@@ -3668,6 +3816,96 @@ focus = {
 			army_experience = 50
 			add_political_power = 50
 			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = POR_colonial_army_tactics
+		icon = GFX_focus_AFG_contact_amanullah_loyalists_alt
+		prerequisite = { focus = POR_army_research_institute }
+		prerequisite = { focus = POR_colonial_army_primacy }
+		x = 1
+		y = 1
+		relative_position_id = POR_army_research_institute
+		cost = 10
+		completion_reward = {
+			complete_special_project = sp:sp_land_super_heavy_howitzer
+		}
+	}
+
+	focus = {
+		id = POR_corpo_do_estado_maior
+		available = {			
+		}
+
+		bypass = {		
+		}
+		prerequisite = { focus = POR_army_reorganization }
+		icon = GFX_goal_generic_army_doctrines
+		x = -1		
+		y = 1
+
+		relative_position_id = POR_army_reorganization
+		cost = 5
+		completion_reward = { 
+			army_experience = 25
+			add_political_power = 50
+			add_ideas = POR_corpo_do_estado_maior
+		}
+	}
+
+	focus = {
+		id = POR_staff_wargames
+		available = {			
+		}
+
+		bypass = {		
+		}
+		prerequisite = { focus = POR_army_reorganization }
+		icon = GFX_focus_generic_license_production
+		x = 1		
+		y = 1
+
+		relative_position_id = POR_army_reorganization
+		cost = 5
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = { 
+			army_experience = 25
+			add_political_power = 50
+			add_doctrine_cost_reduction = {
+				name = POR_staff_wargames
+			    cost_reduction = 0.5
+			    uses = 2
+			    category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = POR_fortification_focus
+		available = {	
+		}
+		prerequisite = { focus = POR_staff_wargames }
+		prerequisite = { focus = POR_corpo_do_estado_maior }	
+		icon = GFX_goal_fortify_the_westwall 
+		x = -1
+		y = 1
+
+		relative_position_id = POR_staff_wargames
+		cost = 10
+
+		search_filters = {FOCUS_FILTER_RESEARCH}
+
+		completion_reward = { 
+			add_stability = 0.05
+			army_experience = 25
+			add_ideas = POR_fortification_focus_idea
+			add_doctrine_cost_reduction = {
+				name = POR_field_maneuvers
+			    cost_reduction = 0.5
+			    uses = 2
+			    category = land_doctrine
+			}
 		}
 	}
 
@@ -3894,245 +4132,7 @@ focus = {
 		}
 	}
 
-	focus = {
-		id = POR_institute_paratrooper_corps
-		prerequisite = { focus = POR_army_reorganization }
-		mutually_exclusive = { 
-		focus = POR_institute_marine_corps 
-		focus = POR_institute_mountaineer_corps }
-		icon = GFX_focus_generic_paratrooper
-		x = 7
-		y = 1
-
-		relative_position_id = POR_second_navy_reequipment
-		cost = 5
-
-		search_filters = {FOCUS_FILTER_RESEARCH}
-
-		completion_reward = { 
-			
-			add_tech_bonus = {
-				name = POR_tropas_paraquedistas
-				bonus = 1
-				uses = 1
-				category = para_tech
-			}
-			add_tech_bonus = {
-				name = POR_tropas_paraquedistas
-				bonus = 1
-				uses = 1
-				category = transport_planes_cat
-			}
-		}
-	}
-
-	focus = {
-		id = POR_tropas_paraquedistas
-		prerequisite = { focus = POR_institute_paratrooper_corps }
-		icon = GFX_focus_eng_special_air_service
-		x = 0
-		y = 1
-		relative_position_id = POR_institute_paratrooper_corps
-		cost = 5
-		search_filters = {FOCUS_FILTER_RESEARCH}
-
-		completion_reward = { 
-			if = {
-				limit = { has_dlc = "Arms Against Tyranny" }
-				add_doctrine_cost_reduction = {
-					cost_reduction = 0.5
-					uses = 1
-					category = special_forces_doctrine
-				}
-			}
-			add_ideas = POR_tropas_paraquedistas_idea
-		}
-	}
-
-	focus = {
-		id = POR_tropas_paraquedistas_paradropping_innovations
-		icon = GFX_SOV_transpolar_flights_ccp_2d_sov_compatibility
-		prerequisite = { focus = POR_tropas_paraquedistas }
-		prerequisite = { focus = POR_regimento_de_comandos }
-		icon = GFX_focus_PER_desert_training
-		x = 0
-		y = 2
-		relative_position_id = POR_tropas_paraquedistas
-		cost = 10
-		search_filters = {FOCUS_FILTER_RESEARCH}
-
-		completion_reward = { 
-			if = {
-				limit = { has_dlc = "Arms Against Tyranny" }
-				add_doctrine_cost_reduction = {
-					cost_reduction = 0.5
-					uses = 1
-					category = special_forces_doctrine
-				}
-			}
-			swap_ideas = {
-				remove_idea = POR_tropas_paraquedistas_idea
-				add_idea = POR_tropas_paraquedistas_idea2
-			}
-		}
-	}
-
-	focus = {
-		id = POR_tropas_paraquedistas_desert_training
-		prerequisite = { focus = POR_tropas_paraquedistas_paradropping_innovations }
-		icon = GFX_focus_PER_desert_training
-		x = 0
-		y = 1
-		relative_position_id = POR_tropas_paraquedistas_paradropping_innovations
-		cost = 10
-		search_filters = {FOCUS_FILTER_RESEARCH}
-
-		completion_reward = { 
-			if = {
-				limit = { has_dlc = "Arms Against Tyranny" }
-				
-			}
-			swap_ideas = {
-				remove_idea = POR_tropas_paraquedistas_idea2
-				add_idea = POR_tropas_paraquedistas_idea3
-			}
-			add_unit_bonus = {
-				paratrooper = {
-					desert = {
-						attack = 0.10
-						defence = 0.10
-					}
-				}
-			}
-			
-		}
-	}
-
-	focus = {
-		id = POR_expand_special_forces
 	
-		prerequisite = { focus = POR_iberian_elites 
-		focus = POR_fuzileiros 
-	    focus = POR_tropas_paraquedistas }	
-		icon = GFX_focus_SMB_special_forces_option_3
-		x = -1
-		y = 1
-
-		relative_position_id = POR_iberian_elites
-		cost = 5
-
-		search_filters = {FOCUS_FILTER_RESEARCH}
-
-		completion_reward = {
-			add_ideas = special_forces
-		}
-	}
-
-	focus = {
-		id = POR_regimento_de_comandos
-	
-		prerequisite = { focus = POR_iberian_elites 
-		focus = POR_fuzileiros 
-	    focus = POR_tropas_paraquedistas }	
-		icon = GFX_goal_generic_special_forces
-		x = 1
-		y = 1
-
-		relative_position_id = POR_iberian_elites
-		cost = 5
-
-		search_filters = {FOCUS_FILTER_RESEARCH}
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = POR_regimento_de_comandos
-				bonus = 1
-				uses = 1
-				technology = paratroopers2
-				technology = paratroopers3
-				technology = marines2
-				technology = marines3
-				technology = tech_mountaineers2
-				technology = tech_mountaineers3
-			}
-		}
-	}
-
-	focus = {
-		id = POR_corpo_do_estado_maior
-		available = {			
-		}
-
-		bypass = {		
-		}
-		prerequisite = { focus = POR_army_reorganization }
-		icon = GFX_goal_generic_army_doctrines
-		x = -1		
-		y = 1
-
-		relative_position_id = POR_army_reorganization
-		cost = 5
-		completion_reward = { 
-			army_experience = 25
-			add_political_power = 50
-			add_ideas = POR_corpo_do_estado_maior
-		}
-	}
-
-	focus = {
-		id = POR_staff_wargames
-		available = {			
-		}
-
-		bypass = {		
-		}
-		prerequisite = { focus = POR_army_reorganization }
-		icon = GFX_focus_generic_license_production
-		x = 1		
-		y = 1
-
-		relative_position_id = POR_army_reorganization
-		cost = 5
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		completion_reward = { 
-			army_experience = 25
-			add_political_power = 50
-			add_doctrine_cost_reduction = {
-				name = POR_staff_wargames
-			    cost_reduction = 0.5
-			    uses = 2
-			    category = land_doctrine
-			}
-		}
-	}
-
-	focus = {
-		id = POR_fortification_focus
-		available = {	
-		}
-		prerequisite = { focus = POR_staff_wargames }
-		prerequisite = { focus = POR_corpo_do_estado_maior }	
-		icon = GFX_goal_fortify_the_westwall 
-		x = -1
-		y = 1
-
-		relative_position_id = POR_staff_wargames
-		cost = 5
-
-		search_filters = {FOCUS_FILTER_RESEARCH}
-
-		completion_reward = { 
-			add_stability = 0.05
-			army_experience = 25
-			add_ideas = POR_fortification_focus_idea
-			add_doctrine_cost_reduction = {
-				name = POR_field_maneuvers
-			    cost_reduction = 0.5
-			    uses = 2
-			    category = land_doctrine
-			}
-		}
-	}
 
 	focus = {
 		id = POR_field_maneuvers
@@ -4255,7 +4255,7 @@ focus = {
 		y = 1
 
 		relative_position_id = POR_popular_front
-		cost = 5
+		cost = 10
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 			add_popularity = {
@@ -5778,7 +5778,6 @@ focus = {
 		relative_position_id = POR_allow_free_elections
 		cost = 5
 		completion_reward = {
-			add_ideas = POR_nation_in_arms
 			hidden_effect = {
 				every_other_country = {
 					limit = {
