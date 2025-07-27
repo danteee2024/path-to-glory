@@ -830,9 +830,6 @@ add_days_mission_timeout = {
 		y = 6
 		cost = 5
 		
-		available = {
-			has_country_flag = albanian_revolt_happened
-		}
 		
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
 		
