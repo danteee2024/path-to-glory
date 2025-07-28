@@ -2572,6 +2572,9 @@ focus_tree = {
 	focus = {
 		id = ROM_the_king_maintains_power
 		icon = GFX_focus_RAJ_kingmaker
+		mutually_exclusive = {
+			focus = ROM_king_michaels_coup
+		}
 		prerequisite = { focus = ROM_Change_of_Goverment }
 		x = 3
 		y = 1
