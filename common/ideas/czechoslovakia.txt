@@ -356,7 +356,7 @@ ideas = {
 			modifier = {
 				political_power_factor = -0.05
 				war_stability_factor = 0.10
-				stability_weekly_factor = 0.01
+				stability_factor = 0.15
 			}
 		}
 			CZE_Red_Czechs_Army =  {

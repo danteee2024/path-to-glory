@@ -2741,7 +2741,7 @@ focus = {
 			 }
 		}
 
-		focus = {
+	    focus = {
 		id = CZE_Austria_Puppet
 		icon = GFX_focus_AUS_austromarxism
 		prerequisite = { focus = CZE_The_Great_Union }
@@ -2758,11 +2758,17 @@ focus = {
 			}
 		}
 
-		available = { AUS ={
-			is_subject_of = CZE
-		} }
+		available = {
+			is_subject = no
+		}
 
-		bypass = {
+		bypass = { 
+			AUS = { 
+				OR = { 
+					exists = no
+					is_puppet_of = CZE
+				}
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -2792,11 +2798,17 @@ focus = {
 			}
 		}
 
-		available = { HUN ={
-			is_subject_of = CZE
-		} }
+		available = {
+			is_subject = no
+		}
 
-		bypass = {
+		bypass = { 
+			HUN = { 
+				OR = { 
+					exists = no
+					is_puppet_of = CZE
+				}
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -2825,11 +2837,17 @@ focus = {
 			}
 		}
 
-		available = { POL ={
-			is_subject_of = CZE
-		} }
+		available = {
+			is_subject = no
+		}
 
-		bypass = {
+		bypass = { 
+			POL = { 
+				OR = { 
+					exists = no
+					is_puppet_of = CZE
+				}
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -2840,7 +2858,6 @@ focus = {
 			POL = { country_event =  generic.20 }
 		}
 	}
-
 	
 	
 
