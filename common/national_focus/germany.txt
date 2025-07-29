@@ -139,7 +139,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL_CHARACTER }
 
 		completion_reward = {
-			add_ideas = civilian_economy
+		#	add_ideas = civilian_economy
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -1280,242 +1280,12 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = GER_grosraumwirtschaft
 			}		
-		}
-
-	
-	focus = {
-		id = GER_expand_the_reichsautobahn_north
-		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = GER_grosraumwirtschaft }
-		prerequisite = { focus = GER_kdf_wagen_factories }
-		x = -1
-		y = 3
-		relative_position_id = GER_grosraumwirtschaft
-		cost = 5
-		available = {
-			OR = {
-				53 = { #Niederbayern
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				52 = { #Oberbayern
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				152 = { #Upper Austria
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				4 = { #Lower Austria
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-			}
-		}
-		bypass = {
-		}
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			custom_effect_tooltip = GER_expand_the_reichsautobahn_south_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
-			if = {
-				limit = {
-					53 = { #Niederbayern
-						infrastructure < 5
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-				}
-				53 = { 
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			if = {
-				limit = {
-					52 = { #Oberbayern
-						infrastructure < 5
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-				}
-				52 = { 
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			if = {
-				limit = {
-					152 = { #Upper Austria
-						infrastructure < 5
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-				}
-				152 = { 
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			if = {
-				limit = {
-					4 = { #Lower Austria
-						infrastructure < 5
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-				}
-				4 = { 
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-
-			if = {
-				limit = {
-					52 = { #Oberbayern
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-					152 = { #Upper Austria
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-					4 = { #Lower Austria
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-				}
-				#Regensburg - Wien
-				build_railway = {
-					path = { 9515 9681 3703 9665 11651 704 11666 }
-				}
-			}
-		}
-	}
-	
-	focus = {
-		id = GER_expand_the_reichsautobahn_west
-		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = GER_grosraumwirtschaft }
-		prerequisite = { focus = GER_kdf_wagen_factories }
-		x = 1
-		y = 3
-		relative_position_id = GER_grosraumwirtschaft
-		cost = 5
-		available = {
-			OR = {
-				68 = { #Ostmark
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				63 = { #Hinterpommern
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				807 = { #Gdynia
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				85 = { #Danzig
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-			}
-		}
-		bypass = {
-		}
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			custom_effect_tooltip = GER_expand_the_reichsautobahn_east_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
-			if = {
-				limit = {
-					68 = { #Ostmark
-						infrastructure < 5
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-				}
-				68 = { 
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			if = {
-				limit = {
-					63 = { #Hinterpommern
-						infrastructure < 5
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-				}
-				63 = { 
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			if = {
-				limit = {
-					807 = { #Gdynia
-						infrastructure < 5
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-				}
-				807 = { 
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			if = {
-				limit = {
-					85 = { #Danzig
-						infrastructure < 5
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-				}
-				85 = { 
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-
-			if = {
-				limit = {
-					63 = { #Hinterpommern
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-					807 = { #Gdynia
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-					85 = { #Danzig
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-				}
-				#Köslin - Danzig
-				build_railway = {
-					path = { 11372 11343 9263 362 }
-				}
-			}
-		}
-	}
+		}	
 
 	focus = {
 		id = GER_expand_the_reichsautobahn_south
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = GER_grosraumwirtschaft }
-
 		x = -1
 		y = 1
 		relative_position_id = GER_grosraumwirtschaft
@@ -1629,7 +1399,6 @@ focus_tree = {
 		id = GER_expand_the_reichsautobahn_east
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = GER_grosraumwirtschaft }
-
 		x = 1
 		y = 1
 		relative_position_id = GER_grosraumwirtschaft
@@ -1734,6 +1503,271 @@ focus_tree = {
 				#Köslin - Danzig
 				build_railway = {
 					path = { 11372 11343 9263 362 }
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GER_expand_the_reichsautobahn_north
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = GER_expand_the_reichsautobahn_south }
+		prerequisite = { focus = GER_kdf_wagen_factories }
+		x = -1
+		y = 3
+		relative_position_id = GER_grosraumwirtschaft
+		cost = 5
+		available = {
+			OR = {
+				61 = { #mecklenburg
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+				}
+				58 = { #holstein
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+				}
+				909 = { #schleswig
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+				}
+				912 = { #Norden schleswig
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+				}
+				911 = { #fyn
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+				}
+			}
+		}
+		bypass = {
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			custom_effect_tooltip = GER_expand_the_reichsautobahn_north_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					61 = { #mecklenburg
+						infrastructure < 5
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+				}
+				61 = { 
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					58 = { #holstein
+						infrastructure < 5
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+				}
+				58 = { 
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					909 = { #schleswig
+						infrastructure < 5
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+				}
+				909 = { 
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					912 = { #Norden schleswig
+						infrastructure < 5
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+				}
+				912 = { 
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					911 = { #Fyn
+						infrastructure < 5
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+				}
+				911 = { 
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					58 = { #holstein
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+					909 = { #schleswig
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+					912 = { #Norden schleswig
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+					911 = { #fyn
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+				}
+				#kiel - Odense
+				build_railway = {
+					path = { 6389 11366 317 11251 3325 }
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GER_expand_the_reichsautobahn_west
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = GER_expand_the_reichsautobahn_east }
+		prerequisite = { focus = GER_kdf_wagen_factories }
+		x = 1
+		y = 3
+		relative_position_id = GER_grosraumwirtschaft
+		cost = 5
+		available = {
+			OR = {
+				42 = { #moselland
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+				}
+				51 = { #rhineland
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+				}
+				28 = { #alsace
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+				}
+				8 = { #lux
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+				}
+				978 = { #baden
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+				}
+			}
+		}
+		bypass = {
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			custom_effect_tooltip = GER_expand_the_reichsautobahn_west_tt
+			custom_effect_tooltip = generic_skip_one_line_tt 
+			if = {
+				limit = {
+					42 = { #moselland
+						infrastructure < 5
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+				}
+				42 = { 
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					978 = { #baden
+						infrastructure < 5
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+				}
+				978 = { 
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					51 = { #rhineland
+						infrastructure < 5
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+				}
+				51 = { 
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					28 = { #alsace
+						infrastructure < 5
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+				}
+				28 = { 
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					8 = { #luxemburg
+						infrastructure < 5
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+				}
+				8 = { 
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					978 = { #baden
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+					28 = { #alsace
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+				}
+				#lux alsace
+				build_railway = {
+					path = { 6583 9559 }
 				}
 			}
 		}
@@ -2950,7 +2984,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = GER_accelerate_the_rearmament_program
-		cost = 5
+		cost = 10
 		available = {
 		}
 
@@ -2987,7 +3021,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_accelerate_the_rearmament_program
-		cost = 5
+		cost = 10
 		available = {
 		}
 
@@ -3911,7 +3945,7 @@ focus_tree = {
 		available = {}
 		x = 1
 		y = 1
-		cost = 7.5
+		cost = 10
 		relative_position_id = GER_lessons_of_the_great_war
 
 		available_if_capitulated = yes	
@@ -3935,7 +3969,7 @@ focus_tree = {
 				limit = {
 			has_idea = GER_recarne_artillery_kaiser
 					}
-			army_experience = 100
+			army_experience = 50
 			}
 			else = {
 			add_ideas = GER_recarne_artillery
@@ -3945,7 +3979,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = artillery_bonus
 				ahead_reduction = 0.25
-				bonus = 0.75
+				bonus = 1
 				uses = 1
 				category = artillery
 			}
@@ -4034,7 +4068,6 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = GER_counter_armor
-				ahead_reduction = 0.5
 				bonus = 0.75
 				uses = 2
 				category = cat_anti_tank
@@ -4989,9 +5022,9 @@ focus_tree = {
 	focus = {
 		id = GER_festung_deutschland
 		icon = GFX_goal_generic_fortify_city
-		prerequisite = { focus = GER_volunteer_workers }
-		relative_position_id = GER_volunteer_workers
-		x = -1
+		prerequisite = { focus = GER_defend_the_vaterland }
+		relative_position_id = GER_defend_the_vaterland
+		x = 2
 		y = 1
 		cost = 5
 		available = {
@@ -5263,44 +5296,7 @@ focus_tree = {
 				}
 			}
 		} 
-	}		focus = {
-		id = GER_endsieg
-		icon = GFX_z_goal_generic_defensive_strategy
-		prerequisite = { focus = GER_volunteer_workers }
-		relative_position_id = GER_volunteer_workers
-		x = 1
-		y = 1
-		cost = 5
-		available = {
-		    has_war_with_major = yes
-			OR = {
-				surrender_progress > 0.2
-				casualties_k > 3000
-			}
-		}
-		ai_will_do = {
-			factor = 5
-		}
-		available_if_capitulated = no
-		continue_if_invalid = yes
-
-		completion_reward = {
-			add_ideas = GER_the_last_stand_of_the_reich
-			if = {
-				limit = {
-					has_character = GER_ferdinand_schorner
-					GER_ferdinand_schorner = {
-						is_field_marshal = no
-					}
-				}
-				GER_ferdinand_schorner = {
-					promote_leader = yes
-				}
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = GER_spirit_ends_at_peace_tt
-		} 
-	}
+	}		
 	
 	focus = {
 		id = GER_adopt_new_panzer_doctrine
@@ -5988,7 +5984,7 @@ focus_tree = {
 		alternate_icon = GFX_focus_GER_sturzkampfbomber_historical
 
 		prerequisite = { focus = GER_aeronautical_research_institute }
-	#	mutually_exclusive = { focus = GER_tactical_bombers focus = GER_uralbomber_program }
+		mutually_exclusive = { focus = GER_tactical_bombers focus = GER_uralbomber_program }
 		x = -2
 		y = 1
 		relative_position_id = GER_aeronautical_research_institute
@@ -6119,7 +6115,7 @@ focus_tree = {
 		id = GER_tactical_bombers
 		icon = GFX_goal_generic_air_bomber
 		prerequisite = { focus = GER_aeronautical_research_institute }
-	#	mutually_exclusive = { focus = GER_dive_bombers focus = GER_uralbomber_program }
+		mutually_exclusive = { focus = GER_dive_bombers focus = GER_uralbomber_program }
 		x = 0
 		y = 1
 		relative_position_id = GER_aeronautical_research_institute
@@ -6249,7 +6245,7 @@ focus_tree = {
 		id = GER_uralbomber_program
 		icon = GFX_focus_generic_long_range_aircraft
 		prerequisite = { focus = GER_aeronautical_research_institute }
-	#	mutually_exclusive = { focus = GER_dive_bombers focus = GER_tactical_bombers }
+		mutually_exclusive = { focus = GER_dive_bombers focus = GER_tactical_bombers }
 		x = 2
 		y = 1
 		relative_position_id = GER_aeronautical_research_institute
@@ -9801,6 +9797,7 @@ focus_tree = {
 			has_completed_focus = GER_anschluss
 			country_exists = AUS
 			NOT = { has_full_control_of_state = 4 }
+			is_in_faction_with = ROOT
 		}
 		
 		bypass = {
@@ -11891,6 +11888,8 @@ focus_tree = {
 					country_event = { id = generic.5 hours = 4 random_hours = 4 }
 				}
 				custom_effect_tooltip = generic_invite_to_faction_tt
+				custom_effect_tooltip = generic_skip_one_line_tt
+				add_ideas = ITA_pact_of_steel
 			}
 		}
 	}
@@ -14084,7 +14083,8 @@ focus_tree = {
 	focus = {
 		id = GER_cold_war
 		icon = GFX_focus_GER_japanese_naval_cooperation
-		prerequisite = { focus = GER_shatter_usas_hegemony }
+		prerequisite = { focus = GER_challenge_the_monroe_doctrine focus = GER_shatter_usas_hegemony }
+
 		relative_position_id = GER_shatter_usas_hegemony
 
 		available = { 
@@ -14150,7 +14150,6 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = GER_cold_war_tt
-			custom_effect_tooltip = GER_cold_war_2tt
 			JAP = { 
 				add_opinion_modifier = { target = ROOT modifier = HOL_germany_is_the_greater_threat }
 				send_embargo = GER
@@ -14185,28 +14184,28 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = GER_high_castle
-		icon = GFX_focus_ARG_anti_american_propaganda
-		
-		available = { 
-			has_government = fascism
-			is_subject = no
-			strength_ratio = { tag = USA ratio > 1 }
-		}
-
-	    prerequisite = { focus = GER_cold_war }
-		x = 0
-		y = 1
-		relative_position_id = GER_cold_war
-		cost = 10
-
-		completion_reward = {
-            USA = {
-                country_event = germany.9917
-			}
-		}
-	}
+#	focus = {
+#		id = GER_high_castle
+#		icon = GFX_focus_ARG_anti_american_propaganda
+#		
+#		available = { 
+#			has_government = fascism
+#			is_subject = no
+#			strength_ratio = { tag = USA ratio > 1 }
+#		}
+#
+#	    prerequisite = { focus = GER_cold_war }
+#		x = 0
+#		y = 1
+#		relative_position_id = GER_cold_war
+#		cost = 10
+#
+#		completion_reward = {
+#            USA = {
+#                country_event = germany.9917
+#			}
+#		}
+#	}
 
 	focus = {
 		id = GER_demand_slovenia
@@ -18855,7 +18854,7 @@ focus_tree = {
 		x = -7
 		y = 1
 		relative_position_id = GER_fuhrerprinzip
-		cost = 2
+		cost = 2.5
 		
 		available = {
 			if = {
@@ -19203,7 +19202,7 @@ focus_tree = {
 		x = 2
 		y = 0
 		relative_position_id = GER_ascension_of_todt
-		cost = 2
+		cost = 2.5
 		
 		available = {
 			if = {
@@ -19699,7 +19698,7 @@ focus_tree = {
 		x = 2
 		y = 0
 		relative_position_id = GER_ascension_of_speer
-		cost = 2
+		cost = 2.5
 		
 		available = {
 			if = {
@@ -20186,7 +20185,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_fuhrerprinzip
-		cost = 2
+		cost = 2.5
 		
 		available = {
 			if = {
@@ -20937,7 +20936,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = GER_fuhrerprinzip
-		cost = 2
+		cost = 2.5
 		
 		available = {
 			if = {
@@ -21261,7 +21260,7 @@ focus_tree = {
 		x = 5
 		y = 1
 		relative_position_id = GER_fuhrerprinzip
-		cost = 2
+		cost = 2.5
 		
 		available = {
 			if = {
@@ -21406,7 +21405,7 @@ focus_tree = {
 		x = 2
 		y = 0
 		relative_position_id = GER_party_chancellor_hess
-		cost = 2
+		cost = 2.5
 		
 		available = {
 			if = {
@@ -22298,7 +22297,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_new_militarsitc_leadership
-		icon = GFX_focus_SWE_revoke_infantry_law
+		icon = GFX_focus_GER_prussian_legacy
 		cost = 10
 		relative_position_id = GER_hermann_goring_ascended 
 		prerequisite = { focus = GER_hermann_goring_ascended }
@@ -22328,7 +22327,7 @@ focus_tree = {
 	focus = {
 		id = GER_luftwaffe_ww
 		text = GER_wuffafe
-		icon = GFX_goal_expand_the_luftwaffe
+		icon = GFX_focus_PER_luftwaffe_planes
 		prerequisite = { focus = GER_new_militarsitc_leadership } 
 		relative_position_id = GER_new_militarsitc_leadership
 		x = 1
@@ -22362,7 +22361,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_increase_the_air_force_budget
-		icon = GFX_focus_PER_luftwaffe_planes
+		icon = GFX_focus_generic_economic_recovery
 		prerequisite = { focus = GER_luftwaffe_ww } 
 		relative_position_id = GER_luftwaffe_ww
 		x = 0
@@ -22472,6 +22471,7 @@ focus_tree = {
 		}	
 		
 		allow_branch = {
+			always = no
 			if = {
 				limit = {
 					has_game_rule = {
@@ -22768,7 +22768,7 @@ focus_tree = {
 		available = {
 			is_subject = no
 			is_faction_leader = yes
-			date > 1942.1.1
+			date > 1943.1.1
 			GER_new_order_focus_trigger = yes
 		}
 		
@@ -23022,13 +23022,13 @@ focus_tree = {
 		icon = GFX_focus_generic_industry_3
 		cost = 7.5
 		prerequisite = {
-			focus = GER_oppose_hitler_ww
+			focus = GER_rebuild_the_nation_ww
 		}
-		x = 2
+		x = 1
 		y = 1
-		relative_position_id = GER_oppose_hitler_ww
+		relative_position_id = GER_rebuild_the_nation_ww
 		available = {
-		has_civil_war = no
+		
 		}
 		ai_will_do = {
 			factor = 10
@@ -23073,11 +23073,11 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_mil_factory
 		cost = 7.5
 		prerequisite = {
-			focus = GER_upgrade_civilian_industry
+			focus = GER_rebuild_the_nation_ww
 		}
-		x = 0
+		x = -1
 		y = 1
-		relative_position_id = GER_upgrade_civilian_industry
+		relative_position_id = GER_rebuild_the_nation_ww
 		ai_will_do = {
 			factor = 10
 		}
@@ -23197,13 +23197,14 @@ focus_tree = {
 	focus = {
 		id = GER_rebuild_the_nation_ww
 		icon = GFX_goal_generic_construction2
-		prerequisite = { focus = GER_rally_the_nation }
+		prerequisite = { focus = GER_oppose_hitler_ww }
 
-		x = 1
+		x = 2
 		y = 1
-		relative_position_id = GER_rally_the_nation
+		relative_position_id = GER_oppose_hitler_ww
 		cost = 5
 		available = {
+			has_civil_war = no
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -23219,16 +23220,15 @@ focus_tree = {
 	focus = {
 		id = GER_revitalize_the_nation
 		icon = GFX_focus_generic_public_works
-		prerequisite = { focus = GER_denazification_campaigns focus = GER_rebuild_the_nation_ww }
-
+		prerequisite = { focus = GER_upgrade_military_industry
+		focus = GER_upgrade_civilian_industry }
 		x = 1
 		y = 1
-		relative_position_id = GER_denazification_campaigns
+		relative_position_id = GER_upgrade_military_industry
 		
 		cost = 5
 
 		available = {
-			has_civil_war = no
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
@@ -23286,7 +23286,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = GER_oppose_hitler_ww
-		cost = 2
+		cost = 2.5
 		available = {
 			has_civil_war = no
 		}
@@ -27115,7 +27115,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_tend_to_the_future_of_germany
 		
-		cost = 2
+		cost = 2.5
 
 		available = {
 		}
@@ -28087,7 +28087,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_franco_germanic_pact
 
-		cost = 10
+		cost = 5
 
 		available = {
 			is_subject = no
@@ -28234,7 +28234,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_revive_the_kaiserreich_ww
 
-		cost = 2
+		cost = 2.5
 
 		available = {
 			has_government = neutrality
@@ -28325,7 +28325,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = GER_revive_the_kaiserreich_ww
-		cost = 2
+		cost = 2.5
 		available = {
 			has_government = neutrality
 		}
@@ -28373,7 +28373,8 @@ focus_tree = {
 	focus = {
 		id = GER_invite_scientists_back
 		icon = GFX_focus_generic_university_2
-		prerequisite = { focus = GER_return_of_the_kaiser_ww }
+		prerequisite = { focus = GER_return_of_the_kaiser_ww 
+		focus = GER_military_dictatorship }
 
 		x = 0
 		y = 1
@@ -28521,7 +28522,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_prussian_artillery_production
-		icon = GFX_
+		icon = GFX_goal_generic_army_artillery2
 
 		prerequisite = { focus = GER_prussian_artillery }
 
@@ -28561,7 +28562,7 @@ focus_tree = {
 		icon = GFX_focus_generic_military_mission
 		prerequisite = { focus = GER_return_of_the_kaiser_ww focus = GER_military_dictatorship }
 
-		x = 6
+		x = 7
 		y = 1
 		relative_position_id = GER_return_of_the_kaiser_ww
 		cost = 10
@@ -28777,7 +28778,8 @@ focus_tree = {
 
 		icon = GFX_focus_generic_stockpile_fuel
 
-		prerequisite = { focus = GER_military_dictatorship }
+		prerequisite = { focus = GER_return_of_the_kaiser_ww 
+		focus = GER_military_dictatorship }
 
 		x = 2
 		y = 1
@@ -28814,10 +28816,7 @@ focus_tree = {
 
 			custom_effect_tooltip = GER_war_preparations_tt
 			effect_tooltip = {
-				add_timed_idea = {
-					idea = GER_strengthened_supply_lines_ns
-					days = 730
-				}
+				add_ideas  = GER_strengthened_supply_lines_ns
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -28957,12 +28956,70 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_rustung_und_ruhm
+		icon = GFX_GER_A_Workers_Struggle
+
+		prerequisite = { focus = GER_glory_to_the_imperial_army }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_glory_to_the_imperial_army
+
+		cost = 5
+
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				random_select_amount = 2
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			GER_modify_industrial_modifier = yes
+			add_to_variable = { 
+				GER_industrial_industrial_capacity_factory = 0.05
+				tooltip = industrial_capacity_factory_tt
+			}
+			add_to_variable = { 
+				GER_industrial_industrial_capacity_dockyard = 0.05
+				tooltip = industrial_capacity_dockyard_tt
+			}
+			add_to_variable = { 
+				GER_industrial_production_factory_max_efficiency_factor = 0.05
+				tooltip = production_factory_max_efficiency_factor_tt
+			}
+			add_to_variable = { 
+				GER_industrial_production_factory_efficiency_gain_factor = 0.05
+				tooltip = production_factory_efficiency_gain_factor_tt
+			}
+		}
+	}
+
+	focus = {
 		id = GER_demand_the_return_of_southern_jutland
 		icon = GFX_focus_generic_invade_denmark
 
 		prerequisite = { focus = GER_return_of_the_kaiser_ww focus = GER_military_dictatorship }
 
-		x = 8
+		x = 9
 		y = 1
 		relative_position_id = GER_return_of_the_kaiser_ww
 
@@ -29092,10 +29149,10 @@ focus_tree = {
 		prerequisite = { focus = GER_the_monarchy_compromise_ww focus = GER_revive_the_kaiserreich_ww }
 
 		x = 1
-		y = 5
+		y = 6
 		relative_position_id = GER_the_monarchy_compromise_ww
 
-		cost = 2
+		cost = 2.5
 
 		available = {
 			is_subject = no
@@ -29158,7 +29215,7 @@ focus_tree = {
 		x = -9
 		y = 1
 		relative_position_id = GER_realpolitik
-		cost = 2
+		cost = 2.5
 		available = {
 			is_subject = no
 			OR = {
@@ -33863,7 +33920,7 @@ focus_tree = {
 		mutually_exclusive = { focus = GER_carte_blanche_for_alsace_and_french_colonies_ww }
 
 		x = 0
-		y = 4
+		y = 5
 		relative_position_id = GER_demand_the_return_of_southern_jutland
 		cost = 10
 
@@ -34855,8 +34912,8 @@ focus_tree = {
 
 		mutually_exclusive = { focus = GER_reject_the_locarno_treaty }
 
-		x = -3
-		y = 2
+		x = -2
+		y = 3
 		relative_position_id = GER_anglo_germanic_defense_pact
 
 		cost = 10
@@ -35058,7 +35115,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = GER_petition_for_the_return_of_old_colonies }
 
-		x = -1
+		x = 1
 		y = 1
 		relative_position_id = GER_petition_for_the_return_of_old_colonies
 		cost = 10

@@ -1,0 +1,196 @@
+country_event = {
+	id = germany.9917
+	title = "Deutsches Reich Ultimatum"
+	picture = GFX_report_event_czech_soldiers_01
+	desc = ""
+	is_triggered_only = yes
+	
+	option = { # Ok
+		name = "FOR REICH!"
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 10
+				is_historical_focus_on = no
+			}
+			modifier = {
+				add = -10
+				GER = { has_army_size = { size < 200 } }
+			}
+			modifier = {
+				add = 10
+				GER = { has_army_size = { size > 201 } }
+			}
+			modifier = {
+				add = 10
+				USA = { has_army_size = { size < 200 } }
+			}
+			modifier = {
+				add = 10
+				USA = { has_army_manpower = { size < 1000000 } }
+			}
+		}
+		GER = {
+		    set_autonomy = {
+			    target = USA
+			    autonomy_state = autonomy_reichsprotectorate
+			    freedom_level = 0.40
+		    }
+			if = {
+				limit = {
+					NOT = { has_country_leader = { character = GER_heinrich_himmler } }
+				}
+				set_country_flag = GER_himmler_goes_america_flag
+				GER_heinrich_himmler = {
+					hidden_effect = {
+						if = {
+							limit = {
+								is_advisor = yes
+							}
+							remove_any_country_role_from_character = yes
+						}
+					}
+					set_nationality = USA
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = { has_country_leader = { character = GER_hermann_goring } }
+				}
+				set_country_flag = GER_goring_goes_america_flag
+				GER_hermann_goring = {
+					hidden_effect = {
+						if = {
+							limit = {
+								is_advisor = yes
+							}
+							remove_any_country_role_from_character = yes
+						}
+					}
+					set_nationality = USA
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = { has_country_leader = { character = GER_martin_bormann } }
+				}
+				set_country_flag = GER_bormann_goes_america_flag
+				GER_martin_bormann = {
+					hidden_effect = {
+						if = {
+							limit = {
+								is_advisor = yes
+							}
+							remove_any_country_role_from_character = yes
+						}
+					}
+					set_nationality = USA
+				}
+			}
+	    }
+	    USA = {
+			if = {
+				limit = {
+					GER = { has_country_flag = GER_himmler_goes_america_flag }
+				}
+				GER_heinrich_himmler = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = nazism
+							expire = "1965.1.1.1"
+							traits = { nazi_sympathizer }
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					GER = { has_country_flag = GER_goring_goes_america_flag }
+				}
+				GER_hermann_goring = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = nazism
+							expire = "1965.1.1.1"
+							traits = { nazi_sympathizer }
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					GER = { has_country_flag = GER_bormann_goes_america_flag }
+				}
+				GER_martin_bormann = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = nazism
+							expire = "1965.1.1.1"
+							traits = { nazi_sympathizer }
+						}
+					}
+				}
+			}
+			set_party_name = { 
+				ideology = fascism
+				long_name = GER_fascism_party_long
+				name = GER_fascism_party
+			}
+			add_ideas = GER_RHSA_idea
+	        every_state = {
+		        limit = {
+			        is_on_continent = North_America
+		        }
+	            add_core_of = USA
+	        }
+	    }
+	}
+	option = { # No
+		name = "Bullshit!"
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 3
+				strength_ratio = {
+					tag = GER
+					ratio > 0.7
+				}
+			}
+			modifier = {
+				factor = 20
+				any_other_country = {
+					is_major = yes
+					is_in_faction_with = USA
+				}
+			}
+			modifier = {
+				add = 20
+				GER = { has_army_size = { size < 200 } }
+			}
+			modifier = {
+				add = 10
+				USA = { has_army_size = { size > 300 } }
+			}
+			modifier = {
+				add = 10
+				USA = { has_army_manpower = { size > 1000000 } }
+			}
+		}
+		GER = {
+            country_event = germany.10013
+		 	create_wargoal = {
+				type = take_state_focus
+				target = USA
+				expire = 0
+				generator = { 49 }
+			}
+		}
+	}
+}

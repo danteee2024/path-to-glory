@@ -15,7 +15,6 @@ ideas = {
 
 			modifier = {
 				intelligence_agency_defense = 0.5
-				encryption_factor = 0.05
 				crypto_strength = 2
 			}
 		}
@@ -42,7 +41,7 @@ ideas = {
 				political_advisor_cost_factor = -0.25
 				economy_cost_factor = -0.25
 				mobilization_laws_cost_factor = -0.25
-				monthly_population = 0.5
+				monthly_population = 0.25
 				research_speed_factor = 0.1
 				resistance_target = -0.05
 			}
@@ -96,7 +95,7 @@ ideas = {
 					build_cost_ic = -0.05 
 					reliability = 0.05
 				}
-				heavy_tank_chassis = {
+				modern_tank_chassis = {
 					build_cost_ic = -0.05 
 					reliability = 0.05 
 				}				
