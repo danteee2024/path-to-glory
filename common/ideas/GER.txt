@@ -159,7 +159,7 @@ ideas = {
 			}
 		}
 
-				GER_himlers_army= {
+		GER_himmlers_army_idea = {
 			allowed = {
 				always = no
 			}
@@ -212,6 +212,7 @@ ideas = {
 				air_chief_cost_factor = 0.1
 			}
 		}
+
 		GER_air_dominance = {
 			name = FRA_air_dominance
 			picture = generic_air_bonus
@@ -318,6 +319,54 @@ ideas = {
 				research_speed_factor = -0.04
 				industrial_capacity_factory = 0.05
 				monthly_population = -0.15
+			}
+		}
+
+		GER_volkssturm = {
+			picture = generic_war_preparation
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			cancel = {
+				has_war = no
+			}
+			modifier = {
+				conscription = 0.02
+				mobilization_speed = 0.25
+				minimum_training_level = -0.05
+				army_org_regain = 0.05
+				industrial_capacity_factory = -0.05
+			}
+		}
+
+		GER_guestworkers = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			cancel = {
+				has_war = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_fascist_workers
+
+			modifier = {
+				stability_factor = -0.1
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.1
+				industry_repair_factor = 0.1
+				resistance_damage_to_garrison = 0.15
 			}
 		}
 
