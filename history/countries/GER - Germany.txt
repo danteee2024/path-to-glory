@@ -811,6 +811,7 @@ add_ideas = {
 	limited_exports
 	limited_conscription
 	partial_economic_mobilisation
+	GER_racial_laws
 }
 
 # Activates the MEFO Bills Mission
