@@ -282,7 +282,7 @@ shared_focus = {
 
 shared_focus = {
 		id = SMB_acquire_tanks
-		icon = GFX_goal_generic_army_tanks
+		icon = GFX_focus_NOR_rikstanken
 		prerequisite = { focus = SMB_army	}
 		x = -3
 		y = 1
@@ -293,6 +293,17 @@ shared_focus = {
 		ai_will_do = {
 			factor = 1
 		}
+
+		allow_branch = {
+		NOT = {
+			OR = {
+				original_tag = BRA
+				original_tag = PAR
+				original_tag = URG
+				original_tag = CHL
+			}
+		}
+	}
 
 		available = {
 
@@ -315,6 +326,114 @@ shared_focus = {
 			}
 		}
 	}
+
+	shared_focus = {
+		id = SMB_Tank_technology_advancing
+		icon = GFX_focus_generic_tank_assembly
+		prerequisite = { focus = SMB_acquire_tanks	}
+		x = 0
+		y = 1
+		relative_position_id = SMB_acquire_tanks
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		allow_branch = {
+		NOT = {
+			OR = {
+				original_tag = BRA
+				original_tag = PAR
+				original_tag = URG
+				original_tag = CHL
+			}
+		}
+	}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			
+	IF = {
+			limit = { has_dlc = "No Step Back" }
+			IF = {
+				limit = {
+					NOT = {
+						has_tech = gwtank_chassis
+					}
+				}
+				set_technology = { gwtank_chassis = 1 }
+			}
+			ELSE_IF = {
+				limit = {
+					NOT = {
+						has_tech = basic_medium_tank_chassis
+					}
+				}
+				set_technology = { basic_medium_tank_chassis = 1 }
+			}
+			ELSE_IF = {
+				limit = {
+					NOT = {
+						has_tech = improved_medium_tank_chassis
+					}
+				}
+				set_technology = { improved_medium_tank_chassis = 1 }
+			}
+			ELSE_IF = {
+				limit = {
+					NOT = {
+						has_tech = advanced_medium_tank_chassis
+					}
+				}
+				set_technology = { advanced_medium_tank_chassis = 1 }
+			}
+		}
+		ELSE = {
+			IF = {
+				limit = {
+					NOT = {
+						has_tech = gwtank
+					}
+				}
+				set_technology = { gwtank = 1 }
+			}
+			ELSE_IF = {
+				limit = {
+					NOT = {
+						has_tech = basic_medium_tank
+					}
+				}
+				set_technology = { basic_medium_tank = 1 }
+			}
+			ELSE_IF = {
+				limit = {
+					NOT = {
+						has_tech = improved_medium_tank
+					}
+				}
+				set_technology = { improved_medium_tank = 1 }
+			}
+			ELSE_IF = {
+				limit = {
+					NOT = {
+						has_tech = advanced_medium_tank
+					}
+				}
+				set_technology = { advanced_medium_tank = 1 }
+			}
+		}
+	}
+    }
+
 
 shared_focus = {
 	id = SMB_military_facilities
