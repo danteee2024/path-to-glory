@@ -641,6 +641,7 @@ ideas = {
 			}
 
 			modifier = {
+				army_org = 5
 				conscription_factor = 0.05
 				defensive_war_stability_factor = 0.35
 				improve_relations_maintain_cost_factor = -0.5
@@ -826,8 +827,8 @@ ideas = {
 
 			modifier = {
 				political_power_factor = 0.1
-				industrial_capacity_factory = 0.05
-				industrial_capacity_dockyard = 0.05
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
 				production_speed_buildings_factor = 0.05
 				conscription_factor = 0.1
 			}
@@ -847,6 +848,8 @@ ideas = {
 				drift_defence_factor = 0.25
 				intelligence_agency_defense = 0.5
 				agency_upgrade_time = -0.3
+				special_forces_attack_factor = 0.10
+				special_forces_training_time_factor = 0.15
 			}
 		}
 
@@ -959,6 +962,8 @@ ideas = {
 				intel_network_gain_factor = 0.15
 				political_power_factor = 0.1
 				decryption_power = 25
+				army_attack_speed_factor = 0.025
+				army_core_attack_factor = 0.15
 			}
 		}
 
