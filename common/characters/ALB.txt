@@ -510,7 +510,7 @@ characters = {
 					original_tag  = ALB
 				}
 				traits  = {
-					socialite_connections
+					captain_of_industry
 				}
 		}
 		name="Turhan Dushku"
