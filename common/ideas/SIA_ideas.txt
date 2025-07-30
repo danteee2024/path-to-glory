@@ -927,7 +927,7 @@ ideas = {
 		}
 		
 		SIA_New_Thai_Military_Academies = {
-			picture = generic_army_war_college
+			picture = SOV_politicized_military_keep_humanism_ccp_sov_compatibility
 			
 			available = {
 				tag = SIA
@@ -1325,7 +1325,6 @@ ideas = {
 			
 			research_bonus = { 
 				industry = 0.25
-				
 			}
 			
 			traits = { 

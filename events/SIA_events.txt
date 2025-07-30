@@ -94,7 +94,6 @@
 		
 		fire_only_once = yes
 		
-		
 		## Attempt to maintain control
 		
 		option = {
@@ -103,9 +102,7 @@
 			set_country_flag = SIA_Fascism_Rise
 			
 			ai_chance = {
-			
-				base = 5
-				
+				base = 20	
 			}
 		}
 		
@@ -115,6 +112,10 @@
 			name = SIA.3.b
 			
 			set_country_flag = SIA_Monarchy_Support
+
+			ai_chance = {
+				base = 10
+			}
 		}
 	}
 	
