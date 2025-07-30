@@ -2363,3 +2363,14 @@ URG_legacy_of_batlle_desc: "Whatever the future takes us it is clear that the Co
 
 URG_statism: "Statism"
 URG_statism_desc: "A clear and strong state with centralized control over social and economic affairs is a must in these times."
+
+
+SMB_acquire_tanks:0 "Ingeniería Blindada Nacional"
+SMB_acquire_tanks_desc:0 "To break away from reliance on foreign designs, we must cultivate our own armored engineering capabilities. By investing in domestic research and innovation, Argentina will pave the way for a new generation of tanks built to suit our terrain and doctrine."
+SMB_Tank_technology_advancing:0 "Orígenes del Tanque Argentino"
+SMB_Tank_technology_advancing_desc:0 "The path to a modern armored force begins with understanding and adapting early tank designs. By studying inter-war developments and laying the groundwork for domestic innovation, Argentina will take its first steps toward creating its own line of battle tanks."
+SMB_Invest_into_the_Tank_Industry:0 "Dirección General de Fabricaciones Militares"
+SMB_Invest_into_the_Tank_Industry_desc:0 "To ensure our army is equipped with modern and reliable arms, we have established the Dirección General de Fabricaciones Militares. By investing in domestic production of tanks, weapons, and munitions, Argentina will reduce dependence on foreign suppliers and lay the foundation for a self-sufficient war machine."
+SMB_Land_Facility:0 "Modernización del Ejército"
+SMB_Land_Facility_desc:0 "Our army still relies on outdated tactics and equipment. By modernizing its structure, doctrine, and armaments, we will transform the Ejército Argentino into a capable and professional fighting force, ready to meet the challenges of a new era."
+SMB_Armor_Investment:0 "Nahuel Production Standards"
