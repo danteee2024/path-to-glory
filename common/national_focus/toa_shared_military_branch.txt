@@ -1186,7 +1186,8 @@ shared_focus = {
 shared_focus = {
 		id = SMB_Invest_into_the_Tank_Industry
 		icon = GFX_focus_NOR_rikstanken
-		prerequisite = { focus = SMB_mechanized_troops	}
+		prerequisite = { focus = SMB_mechanized_troops focus = SMB_tank_warfare 
+		}
 		x = 0
 		y = 1
 		relative_position_id = SMB_mechanized_troops
@@ -1511,7 +1512,59 @@ shared_focus = {
 			add_ideas = JUNO_license_idea
 		} 
 	}
+}	
+
+
+shared_focus = {
+	id = SMB_Modernización_del_Ejército
+	icon = GFX_focus_generic_military_industry
+	relative_position_id = SMB_army
+	prerequisite = { focus = SMB_army }
+	x = 3
+	y = 1
+
+	cost = 10
+
+	ai_will_do = {
+			factor = 20
+		}
+
+	available = {
+	}
+
+	allow_branch = {
+		NOT = {
+			OR = {
+				original_tag = BRA
+				original_tag = PAR
+				original_tag = URG
+				original_tag = CHL
+			}
+		}
+	}
+
+	bypass = {
+		
+	}
+
+	completion_reward = {
+		random_owned_controlled_state = {
+				limit = {
+					can_construct_building = land_facility
+				}
+				prioritize = { 47 }
+				construct_building_in_random_province = {
+					land_facility = 1
+				}
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 1.0
+			}
+	}
 }
+		
+
 
 shared_focus = {
 	id = SMB_foreign_advisors
@@ -1692,103 +1745,8 @@ shared_focus = {
 	}
 }
 
-shared_focus = {
-	id = SMB_experimental_weapons_department
-	icon = GFX_focus_rocketry
-	relative_position_id = SMB_foreign_advisors
-	prerequisite = { focus = SMB_army_professionalism focus = SMB_conscription }
-	x = 0
-	y = 2
 
-	cost = 10
 
-	available = {
-
-	}
-
-	bypass = {
-		
-	}
-
-	ai_will_do = {
-			factor = 20
-		}
-
-	completion_reward = {
-
-		add_breakthrough_progress = {
-			specialization = specialization_air
-			value = 0.75
-		}
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		add_ideas = generic_secret_weapons_ns
-
-		#add_tech_bonus = {
-		#	name = secret_bonus
-		#	bonus = 0.5
-		#	uses = 2
-		#	category = electronics
-		#	category = nuclear
-		#	category = rocketry
-		#}
-
-	}
-}
-
-shared_focus = {
-	id = SMB_nuclear_program
-	icon = GFX_focus_wonderweapons
-	relative_position_id = SMB_experimental_weapons_department
-	prerequisite = { focus = SMB_experimental_weapons_department }
-	prerequisite = { focus = SMB_strategic_bombing }
-	x = 3
-	y = 1
-
-	cost = 10
-
-	available = {
-
-	}
-
-	bypass = {
-		
-	}
-
-	ai_will_do = {
-		factor = 20
-	} 
-
-	completion_reward = {
-
-		if = {
-			limit = {
-				NOT = {
-					has_tech = atomic_research
-				}
-			}
-			add_tech_bonus = {
-				name = JUNO_nuclear_initiative
-				ahead_reduction = 2
-				bonus = 1
-				uses = 1
-				category = nuclear
-			}
-			add_breakthrough_progress = {
-				specialization = specialization_nuclear
-				value = 0.25
-			}
-		}
-		else = {
-			add_breakthrough_progress = {
-				specialization = specialization_nuclear
-				value = 0.75
-			}
-		}
-
-	}   
-}  
  
 shared_focus = {
 	id = SMB_special_forces
@@ -2523,7 +2481,7 @@ shared_focus = {
 	relative_position_id = SMB_army
 	prerequisite = { focus = SMB_army }
 	prerequisite = { focus = SMB_air_force}
-	x = 4
+	x = 5
 	y = 1
 
 	offset = {
@@ -2740,7 +2698,7 @@ shared_focus = {
 	icon = GFX_focus_SOV_flying_clubs
 	relative_position_id = SMB_air_force
 	prerequisite = { focus = SMB_air_force}
-	x = -2
+	x = -1
 	y = 1
 
 	cost = 5
@@ -2893,7 +2851,7 @@ shared_focus = {
 	relative_position_id = SMB_air_academy
 	mutually_exclusive = { focus = SMB_license_designs focus = SMB_purchase_aircraft }
 	prerequisite = { focus = SMB_air_academy focus = SMB_construct_air_bases }
-	x = 0
+	x = -1
 	y = 1
 
 	cost = 5
@@ -3785,7 +3743,7 @@ shared_focus = {
 	relative_position_id = SMB_air_defense
 	prerequisite = { focus = SMB_army_academy }
 	prerequisite = { focus = SMB_air_academy }
-	x = 0
+	x = -1
 	y = 1
 
 	cost = 10
