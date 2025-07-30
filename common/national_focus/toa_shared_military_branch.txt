@@ -1148,8 +1148,7 @@ shared_focus = {
 shared_focus = {
 	id = SMB_mechanized_troops
 	icon = GFX_goal_generic_army_motorized
-	relative_position_id = SMB_tank_warfare
-	prerequisite = { focus = SMB_tank_warfare }
+	relative_position_id = SMB_motorized
 	prerequisite = { focus = SMB_motorized}
 	x = -2
 	y = 1
@@ -1183,6 +1182,48 @@ shared_focus = {
 		}
 	}
 }
+
+shared_focus = {
+		id = SMB_Invest_into_the_Tank_Industry
+		icon = GFX_focus_NOR_rikstanken
+		prerequisite = { focus = SMB_mechanized_troops	}
+		x = 0
+		y = 1
+		relative_position_id = SMB_mechanized_troops
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		allow_branch = {
+		NOT = {
+			OR = {
+				original_tag = BRA
+				original_tag = PAR
+				original_tag = URG
+				original_tag = CHL
+			}
+		}
+	}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = SMB_Armor_Investment
+		}
+	}
 
 shared_focus = {
 	id = SMB_army_academy
