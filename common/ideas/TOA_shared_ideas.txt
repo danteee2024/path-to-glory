@@ -83,6 +83,25 @@ ideas = {
 				}
 			}
 		}
+		
+		SMB_River_Training = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = eng_special_air_service
+			
+			modifier = {
+				river_crossing_factor = -0.2
+			}
+		}
 
 		SMB_dreadnought_debt_fra = {
 			

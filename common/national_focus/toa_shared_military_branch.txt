@@ -1838,10 +1838,9 @@ shared_focus = {
 shared_focus = {
 	id = SMB_special_forces_option_1
 	icon = GFX_focus_SMB_special_forces_option_1
-	relative_position_id = SMB_special_forces
-	prerequisite = { focus = SMB_special_forces }
-	mutually_exclusive = { focus = SMB_special_forces_option_2 focus = SMB_special_forces_option_3 }
-	x = -2
+	relative_position_id = SMB_artillery
+	prerequisite = { focus = SMB_artillery }
+	x = 1
 	y = 1
 
 	cost = 5
@@ -1863,6 +1862,9 @@ shared_focus = {
 			OR = {
 				original_tag = BRA
 				original_tag = ARG
+				original_tag = URG
+				original_tag = PAR
+				original_tag = BOL
 			}
 		}
 	}
@@ -1873,9 +1875,6 @@ shared_focus = {
 		trigger = {
 			OR = {
 				original_tag = CHL
-				original_tag = URG
-				original_tag = PAR
-				original_tag = BOL
 			}
 		}
 	}
@@ -1924,10 +1923,9 @@ shared_focus = {
 		}
 		value = GFX_goal_generic_amphibious_assault
 	} 
-	relative_position_id = SMB_special_forces
-	prerequisite = { focus = SMB_special_forces }
-	mutually_exclusive = { focus = SMB_special_forces_option_1 focus = SMB_special_forces_option_3 }
-	x = 2
+	relative_position_id = SMB_tank_warfare
+	prerequisite = { focus = SMB_tank_warfare }
+	x = -1
 	y = 1
 
 	cost = 5
@@ -1936,6 +1934,10 @@ shared_focus = {
 		NOT = {
 			OR = {
 				original_tag = ARG
+				original_tag = CHL
+				original_tag = URG
+				original_tag = PAR
+				original_tag = BOL
 			}
 		}
 	}
@@ -1957,10 +1959,6 @@ shared_focus = {
 		y = 0
 		trigger = {
 			OR = {
-				original_tag = CHL
-				original_tag = URG
-				original_tag = PAR
-				original_tag = BOL
 				original_tag = BRA
 			}
 		}
@@ -1994,203 +1992,7 @@ shared_focus = {
 	}
 }
 
-shared_focus = {
-	id = SMB_special_forces_option_3
-	icon = GFX_focus_SMB_special_forces_option_3 
-	relative_position_id = SMB_special_forces
-	prerequisite = { focus = SMB_special_forces }
-	mutually_exclusive = { focus = SMB_special_forces_option_1 focus = SMB_special_forces_option_2 }
-	x = 0
-	y = 1
 
-	cost = 5
-
-	allow_branch = {
-		NOT = {
-			OR = {
-				original_tag = CHL
-				original_tag = URG
-				original_tag = PAR
-				original_tag = BOL
-				original_tag = ARG
-			}
-		}
-	}
-
-	offset = {
-		x = -1
-		y = 0
-		trigger = {
-			OR = {
-				original_tag = BRA
-			}
-		}
-	}
- 
-	available = {
-
-	}
-
-	bypass = {
-		 
-	}
-
-	ai_will_do = {
-			factor = 10
-		} 
-
-	completion_reward = {
-		IF = {
-			limit = { NOT = { has_tech = paratroopers }}
-			set_technology = { paratroopers = 1 }
-		}
-		ELSE_IF = {
-			limit = { NOT = { has_tech = paratroopers2 }}
-			set_technology = { paratroopers2 = 1 }
-		}
-		ELSE_IF = {
-			limit = { NOT = { has_tech = paratroopers3 }}
-			set_technology = { paratroopers3 = 1 }
-		}
-
-		IF = {
-			limit = {
-				has_dlc = "Arms Against Tyranny"
-			}
-			add_doctrine_cost_reduction = {
-				name = JUNO_expand_the_special_foces
-				cost_reduction = 0.25
-				uses = 1
-				category = special_forces_doctrine
-			}
-		}
-	}
-}
-
-shared_focus = {
-	id = SMB_special_forces_option_3_continuation
-	icon = GFX_goal_generic_build_airforce 
-	relative_position_id = SMB_special_forces_option_3
-	prerequisite = { focus = SMB_special_forces_option_3 }
-
-	x = 0
-	y = 1
-
-	cost = 5
-
-	
-	allow_branch = {
-		NOT = {
-			OR = {
-				original_tag = ARG
-			}
-		}
-	}
- 
-	available = {
-
-	}
-
-	bypass = {
-		 
-	}
-
-	ai_will_do = {
-			factor = 20
-		} 
-
-	completion_reward = {
-
-		IF = {
-			limit = {
-				original_tag = CHL
-			}
-			custom_effect_tooltip = CHL_modify_chilean_army_ns_intro
-			add_to_variable = { JUNO_army_modifier_special_forces_out_of_supply_factor = -0.15 tooltip = special_forces_out_of_supply_factor_tt }
-		}
-		ELSE_IF = {
-			limit = {
-				original_tag = BRA
-			}
-			custom_effect_tooltip = BRA_modify_brazilian_army_ns_intro
-			add_to_variable = { JUNO_army_modifier_special_forces_out_of_supply_factor = -0.15 tooltip = special_forces_out_of_supply_factor_tt }
-		}
-		ELSE_IF = {
-			limit = {
-				original_tag = PAR
-			}
-			custom_effect_tooltip = PAR_modify_paraguayan_army_ns_intro
-			add_to_variable = { JUNO_army_modifier_special_forces_out_of_supply_factor = -0.15 tooltip = special_forces_out_of_supply_factor_tt }
-		}
-		ELSE_IF = {
-			limit = {
-				original_tag = URG
-			}
-			custom_effect_tooltip = URG_modify_uruguayan_army_ns_intro
-			add_to_variable = { JUNO_army_modifier_special_forces_out_of_supply_factor = -0.15 tooltip = special_forces_out_of_supply_factor_tt }
-		}
-		ELSE = {
-			custom_effect_tooltip = JUNO_modify_south_american_army_ns_intro
-			add_to_variable = { JUNO_army_modifier_special_forces_out_of_supply_factor = -0.15 tooltip = special_forces_out_of_supply_factor_tt }
-		}
-
-		IF = {
-			limit = { has_dlc = "No Step Back" }
-			IF = {
-				limit = {
-					NOT = {
-						has_tech = basic_light_tank_chassis
-					}
-				}
-				set_technology = { basic_light_tank_chassis = 1 }
-			}
-			ELSE_IF = {
-				limit = {
-					NOT = {
-						has_tech = improved_light_tank_chassis
-					}
-				}
-				set_technology = { improved_light_tank_chassis = 1 }
-			}
-			ELSE_IF = {
-				limit = {
-					NOT = {
-						has_tech = advanced_light_tank_chassis
-					}
-				}
-				set_technology = { advanced_light_tank_chassis = 1 }
-			}
-		}
-		ELSE = {
-			IF = {
-				limit = {
-					NOT = {
-						has_tech = basic_light_tank
-					}
-				}
-				set_technology = { basic_light_tank = 1 }
-			}
-			ELSE_IF = {
-				limit = {
-					NOT = {
-						has_tech = improved_light_tank
-					}
-				}
-				set_technology = { improved_light_tank = 1 }
-			}
-			ELSE_IF = {
-				limit = {
-					NOT = {
-						has_tech = advanced_light_tank
-					}
-				}
-				set_technology = { advanced_light_tank = 1 }
-			}
-		}
-		army_experience = 15
-		air_experience = 15
-	}
-}
 
 shared_focus = {
 	id = SMB_special_forces_option_2_continuation 
@@ -2207,6 +2009,10 @@ shared_focus = {
 		NOT = {
 			OR = {
 				original_tag = ARG
+				original_tag = CHL
+				original_tag = URG
+				original_tag = PAR
+				original_tag = BOL
 			}
 		}
 	}
@@ -2419,10 +2225,10 @@ shared_focus = {
 	id = SMB_mountain_guns
 	icon = GFX_focus_SMB_mountain_guns
 	relative_position_id = SMB_special_forces_option_1
-	prerequisite = { focus = SMB_special_forces_option_1 }
+	prerequisite = { focus = SMB_special_forces_option_1_continuation }
 	mutually_exclusive = { }
-	x = -2
-	y = 1
+	x = 1
+	y = 2
 
 	cost = 5
 
@@ -5163,6 +4969,35 @@ shared_focus = {
 			}
 		}
 		custom_effect_tooltip = SMB_jungle_pioneers_tt
+	}
+}
+
+shared_focus = {  
+	id = SMB_River_Training
+	icon = GFX_SOV_an_adaptable_army_ccp_2d_sov_compatibility
+	relative_position_id = SMB_jungle_pioneers
+	prerequisite = { focus = SMB_jungle_pioneers }  
+	x = 0
+	y = 1
+
+	cost = 5
+
+	allow_branch = { tag = BRA }
+
+	available = {
+		
+	}
+
+	bypass = {
+		
+	}
+
+	ai_will_do = {
+			factor = 20
+		}
+
+	completion_reward = {
+		add_ideas = SMB_River_Training
 	}
 }
 
