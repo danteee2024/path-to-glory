@@ -1,5 +1,4 @@
 ﻿l_english:
-############################### IDEAS #################################
 
  expandable_soldier_doctrine_spirit:0 "Expendable Soldier Doctrine"   
  JGT01_zzwy:0 "political commissar"
@@ -157,6 +156,9 @@
  JGT01_sdjlbxzy_desc:0 "First, all actions follow the command; second, do not take a needle or a thread from the masses; third, all seizures should be returned to the public.The Eight Points of Attention are —— First, speak kindly; second, buy and sell fairly; third, return what you borrow; fourth, pay for what you damage; fifth, don't beat or curse; sixth, don't damage crops; seventh, don't molest women; and eighth, don't mistreat captives."
  
  
+
+ 
+ 
  JGT01_wczmlhql:0 "Proletarians unite!"
  
  JGT01_wczmlhql_desc:0 "Death does not belong to the working class!"
@@ -244,6 +246,9 @@
  
  
  
+  
+ 
+ 
  tactic_breakthrough_preferred_weight_factor:0 "If for the choice of tactics,Extra breakthrough probability"
  tactic_guerrilla_tactics_preferred_weight_factor:0 "If for the choice of tactics,Extra guerrilla tactics probability"
  tactic_blitz_preferred_weight_factor:0 "If for the choice of tactics,guerrilla blitz probability"
@@ -252,6 +257,8 @@
  modifier_tactic_banzai_charge_preferred_weight_factor:0 "If for the choice of tactics,guerrilla tactic banzai probability"
  tactic_tactical_withdrawal_preferred_weight_factor:0 "If for the choice of tactics,guerrilla tactical withdrawal probability"
  modifier_tactic_elastic_defense_preferred_weight_factor:0 "If for the choice of tactics,guerrilla tactic elastic probability "
+
+
 
 
  JGT03_hjhkbb:0 "Imperial Airways Headquarters"
@@ -334,3 +341,11 @@
  JGT02_hmzz_desc:0 "The age of big ships and big guns was coming to an end, and the time of naval aviation was coming to an end."
  JGT02_lhjd:0 "combined fleet"
  JGT02_lhjd_desc:0 "The predecessor of the Combined Fleet was the Standing Fleet, which was formed on 29 July 1889. The Japanese Combined Fleet was established on 28 December 1903 and disbanded on 1 May 1945."
+
+
+ 
+ 
+ 
+ 
+ 
+ 
