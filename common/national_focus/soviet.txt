@@ -17211,14 +17211,52 @@ ai_will_do = {
 				specialization = specialization_land
 				value = 1
 			}
-			add_tech_bonus = {
-				name = SOV_the_iron_wall_of_russian_resolve
-				ahead_reduction = 1 # was 2
-				bonus = 1
-				uses = 1
-				technology = super_heavy_tank_chassis
-			}
 			add_ideas = SOV_the_iron_wall_of_russian_resolve
+		}
+	}
+
+	focus = {
+		id = SOV_the_iron_wall_Power
+		icon = GFX_focus_generic_heavy_tank
+		prerequisite = { 
+			focus = SOV_the_iron_wall_of_russian_resolve
+ 		}
+		prerequisite = {
+			focus = SOV_panslavic_nationalism
+			focus = SOV_our_slavic_commitments
+		}
+		x = 0
+		y = 2
+		relative_position_id = SOV_the_iron_wall_of_russian_resolve
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = SOV_the_iron_wall_power
+		}
+	}
+
+	focus = {
+		id = SOV_Slavic_War_Economy
+		icon = GFX_SOV_war_economy_ccp_2d_sov_compatibility
+		prerequisite = {
+			focus = SOV_panslavic_nationalism
+			focus = SOV_our_slavic_commitments
+		}
+		x = 1
+		y = 1
+		relative_position_id = SOV_panslavic_nationalism
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = Slavic_War_Economy
 		}
 	}
 
