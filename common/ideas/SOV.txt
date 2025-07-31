@@ -2361,7 +2361,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = -0.10
+				consumer_goods_factor = -0.15
 				conscription = 0.01
 			}
 		}
@@ -2530,6 +2530,28 @@ ideas = {
 			}
 		}
 
+		SOV_legacy_of_rome_2 = {
+			picture = SOV_legacy_of_rome_ccp_sov_compatibility
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				original_tag = SOV
+			}
+
+			modifier = {
+				neutrality_drift = 0.1
+				stability_weekly = 0.001
+				war_support_factor = 0.1
+				army_attack_factor = 0.1
+				army_defence_factor = 0.05
+				army_org_factor = 0.05
+				conscription = 0.02
+		}
+	}
+
 		SOV_the_iron_wall_of_russian_resolve = {
 			picture = SOV_the_iron_wall_of_russian_resolve_nsb_ccp_sov_compatibility
 			removal_cost = -1
@@ -2544,14 +2566,15 @@ ideas = {
 			equipment_bonus = {
 				heavy_tank_chassis = {
 					build_cost_ic = -0.1
-					reliability = 0.05 instant = yes
+					reliability = 0.1 instant = yes
 					armor_value = 0.05
+					breakthrough = 0.05
 				}
 			}
 		}
 
 		SOV_the_iron_wall_power = {
-			picture = SOV_the_iron_wall_of_russian_resolve_nsb_ccp_sov_compatibility
+			picture = generic_armor
 			removal_cost = -1
 
 			allowed = {
