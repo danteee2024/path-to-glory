@@ -12068,15 +12068,15 @@ formable_nations_mod_category = {
 						OR = { 
 						AND = {
 							# Chinese
-						614 = { owns_or_subject_of = yes }
-						608 = { owns_or_subject_of = yes } 
-						597 = { owns_or_subject_of = yes }
+						614 = { controls_or_subject_of = yes }
+						608 = { controls_or_subject_of = yes } 
+						597 = { controls_or_subject_of = yes }
 						}	
 						AND = {
 							# Soviet
-						408 = { owns_or_subject_of = yes }
-						409 = { owns_or_subject_of = yes } 
-						655 = { owns_or_subject_of = yes }
+						408 = { controls_or_subject_of = yes }
+						409 = { controls_or_subject_of = yes } 
+						655 = { controls_or_subject_of = yes }
 						}	
 						}
 					}
