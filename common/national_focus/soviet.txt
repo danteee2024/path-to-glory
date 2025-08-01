@@ -17267,9 +17267,9 @@ ai_will_do = {
 			focus = SOV_panslavic_nationalism
 			focus = SOV_our_slavic_commitments
 		}
-		x = 0
+		x = 1
 		y = 1
-		relative_position_id = SOV_panslavic_nationalism
+		relative_position_id = SOV_our_slavic_commitments
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -18041,9 +18041,7 @@ ai_will_do = {
 	focus = {
 		id = SOV_panslavic_nationalism
 		icon = GFX_focus_SOV_panslavic_nationalism
-		prerequisite = { focus = SOV_secure_the_baltics }
-		prerequisite = { focus = SOV_secure_finland }
-		prerequisite = { focus = SOV_the_old_enemy }
+		prerequisite = { focus = SOV_secure_the_baltics focus = SOV_secure_finland  focus = SOV_the_old_enemy }
 		mutually_exclusive = { focus = SOV_the_rightful_heir_to_the_empire focus = SOV_our_slavic_commitments }
 		x = 0
 		y = 1
@@ -18229,7 +18227,7 @@ ai_will_do = {
 		id = SOV_the_fate_of_romania
 		icon = GFX_SOV_the_fate_of_romania_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_our_slavic_commitments focus = SOV_panslavic_nationalism }
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = SOV_our_slavic_commitments
 		cost = 5
