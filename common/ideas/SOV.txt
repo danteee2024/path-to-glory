@@ -2345,6 +2345,27 @@ ideas = {
 			}
 		}
 
+		SOV_Industry_of_the_Tsar = {
+
+			picture = generic_industrial_concern_1
+
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				original_tag = SOV
+				NOT = { has_government = communism }
+			}
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
 		SOV_honest_serfdom_idea = {
 
 			picture = SOV_honest_serfdom_idea_ccp_sov_compatibility
