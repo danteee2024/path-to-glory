@@ -16890,11 +16890,32 @@ ai_will_do = {
 		}
 	}
 
+	
+	focus = {
+		id = SOV_russian_war_industry
+		icon = GFX_SOV_superior_war_machines_ccp_2d_sov_compatibility
+		prerequisite = { focus = SOV_dismantle_the_zemsky_sobor }
+		x = 1
+		y = 1
+		relative_position_id = SOV_dismantle_the_zemsky_sobor
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = no
+		
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			add_ideas = SOV_russian_war_industry
+		}
+	}
+
 	focus = {
 		id = SOV_russian_corporate_state
 		icon = GFX_SOV_russian_corporate_state_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_dismantle_the_zemsky_sobor }
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = SOV_dismantle_the_zemsky_sobor
 		cost = 5
@@ -17196,7 +17217,7 @@ ai_will_do = {
 	}
 
 	focus = {
-		id = SOV_the_iron_wall_of_russian_resolve
+		id = SOV_the_iron_wall_of_russian_resolve1
 		icon = GFX_SOV_the_iron_wall_of_russian_resolve_ccp_2d_sov_compatibility
 		prerequisite = { 
 			focus = SOV_romanov_reconstruction focus = SOV_dismantle_the_zemsky_sobor
@@ -18164,7 +18185,7 @@ ai_will_do = {
 		id = SOV_the_iron_wall_Power
 		icon = GFX_focus_generic_heavy_tank
 		prerequisite = { 
-			focus = SOV_the_iron_wall_of_russian_resolve
+			focus = SOV_the_iron_wall_of_russian_resolve1
  		}
 		prerequisite = {
 			focus = SOV_panslavic_nationalism
@@ -18172,7 +18193,7 @@ ai_will_do = {
 		}
 		x = -1
 		y = 3
-		relative_position_id = SOV_the_iron_wall_of_russian_resolve
+		relative_position_id = SOV_the_iron_wall_of_russian_resolve1
 		cost = 5
 		ai_will_do = {
 			factor = 1

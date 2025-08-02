@@ -2574,6 +2574,24 @@ ideas = {
 		}
 	}
 
+	
+		SOV_russian_war_industry = {
+			picture = SOV_defense_industry_artillery_bonus_ccp_sov_compatibility
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				original_tag = SOV
+			}
+
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = -0.10
+		}
+	}
+
 		SOV_the_iron_wall_of_russian_resolve = {
 			picture = SOV_the_iron_wall_of_russian_resolve_nsb_ccp_sov_compatibility
 			removal_cost = -1
@@ -2624,8 +2642,8 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_factory = 0.05
-				industrial_capacity_dockyard = 0.05
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
 			}
 		}
 
