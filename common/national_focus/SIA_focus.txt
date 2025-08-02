@@ -326,35 +326,6 @@ focus_tree = {
 			factor = 10
 		}
 	}
-
-	focus = {
-		id = SIA_Public_Education
-		icon = GFX_focus_education
-		prerequisite = { focus = SIA_Cultural_Mandates }
-		
-		relative_position_id = SIA_Cultural_Mandates
-
-		x = -1
-		y = 1
-		
-		cost = 10
-
-		available = {
-		}
-		
-		completion_reward = {
-			add_research_slot = 1
-			add_ideas = SIA_Public_Education
-			
-		#	custom_effect_tooltip = SIA_Principles_Education_Tooltip
-		#	
-		#	add_to_variable = { SIA_Principles_Research = 0.05 }
-		}
-		
-		ai_will_do = {
-			factor = 50
-		}
-	}
 	
 	focus = {
 		id = SIA_Pan_Thai_Nationalism
@@ -404,62 +375,6 @@ focus_tree = {
 			factor = 50
 		}
 	}
-
-	focus = {
-		id = SIA_Revenge_Against_Burma
-		icon = GFX_focus_generic_total_war
-		prerequisite = { focus = SIA_Pan_Thai_Nationalism }
-		relative_position_id = SIA_Pan_Thai_Nationalism
-		mutually_exclusive = {
-			focus = SIA_request_occupation_of_burma
-		}
-		x = -1
-		y = 1
-		cost = 5
-		bypass = {
-			AND = {
-				owns_state = 288
-				owns_state = 640
-			}
-		}
-		available = {
-		}
-		completion_reward = {
-			add_ideas = SIA_Revenge_Against_Burma
-		}
-		
-		ai_will_do = {
-			factor = 5
-		}
-	}
-
-	focus = {
-		id = SIA_request_occupation_of_burma
-		icon = GFX_focus_generic_subjugation
-		prerequisite = { focus = SIA_Pan_Thai_Nationalism }
-		relative_position_id = SIA_Pan_Thai_Nationalism
-        mutually_exclusive = {
-			focus = SIA_Revenge_Against_Burma
-		}
-		x = 1
-		y = 1
-		
-		cost = 5
-
-		available = {
-			country_exists = BRM
-		}
-		
-		completion_reward = {
-			BRM = { country_event = SIA.17 }
-			
-			
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
 	
 	focus = {
 		id = SIA_Thai_Propaganda
@@ -482,39 +397,6 @@ focus_tree = {
 		
 		ai_will_do = {
 			factor = 10
-		}
-	}
-
-	focus = {
-		id = SIA_National_Security
-		icon = GFX_focus_security
-		
-		prerequisite = { focus = SIA_Cultural_Mandates }
-		
-		relative_position_id = SIA_Cultural_Mandates
-
-		x = 1
-		y = 1
-		
-		cost = 10
-
-		available = {
-			
-		}
-		
-		completion_reward = {
-			
-			add_ideas = SIA_National_Security
-			
-		#	custom_effect_tooltip = SIA_Principles_Security_Tooltip
-		#	
-		#	add_to_variable = { SIA_Principles_Attack = 0.1 }
-		#	add_to_variable = { SIA_Principles_Defense = 0.1 }
-			
-		}
-		
-		ai_will_do = {
-			factor = 50
 		}
 	}
 	
@@ -746,7 +628,7 @@ focus_tree = {
 		id = SIA_South_East_Asian_Pact
 		icon = GFX_focus_PER_fund_imperial_excellency
 		mutually_exclusive = { focus = SIA_Join_Allies focus = SIA_Seek_Closer_Relations_To_Japan focus = SIA_The_Two_Italys}
-		prerequisite = { focus = SIA_Proclaim_Great_Kingdom_of_Thailand focus = SIA_Legacy_of_Ayutthaya }
+		prerequisite = { focus = SIA_Proclaim_Great_Kingdom_of_Thailand focus = SIA_Legacy_of_Ayutthaya}
 		
 		relative_position_id = SIA_Legacy_of_Ayutthaya
 
@@ -1145,6 +1027,34 @@ focus_tree = {
 			factor = 1
 		}
 	}
+	
+	focus = {
+		id = SIA_Revenge_Against_Burma
+		icon = GFX_focus_generic_total_war
+		prerequisite = { focus = SIA_Pan_Thai_Nationalism }
+		relative_position_id = SIA_Pan_Thai_Nationalism
+		mutually_exclusive = {
+			focus = SIA_request_occupation_of_burma
+		}
+		x = -1
+		y = 1
+		cost = 5
+		bypass = {
+			AND = {
+				owns_state = 288
+				owns_state = 640
+			}
+		}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = SIA_Revenge_Against_Burma
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+	}
 
 ## Democracy
 
@@ -1321,38 +1231,33 @@ focus_tree = {
 			factor = 1
 		}
 	}
-
+	
 	focus = {
-		id = SIA_Economic_Welfare
-		icon = GFX_focus_economic
-		prerequisite = { focus = SIA_National_Economic_Council }
+		id = SIA_Thammasat_University
+		icon = GFX_focus_thammasat
 		
-		relative_position_id = SIA_National_Economic_Council
+		prerequisite = { focus = SIA_Reinstate_Peoples_Assembly }
+
+		relative_position_id = SIA_Reinstate_Peoples_Assembly
 
 		x = 0
-		y = 2
+		y = 1
 		
 		cost = 10
 
 		available = {
-			
+
 		}
 		
 		completion_reward = {
-			
-			swap_ideas = {
-				remove_idea = SIA_National_Economic_Council
-				add_idea = SIA_Economic_Welfare
-			} 
-			
-		#	custom_effect_tooltip = SIA_Principles_Economic_Tooltip
-		#	
-		#	add_to_variable = { SIA_Principles_Consumer_Goods = -0.1 }
-			
+			add_research_slot = 1
+			add_ideas = SIA_Thammasat_University
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = sia_thammasat_university_laboratories
 		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 1
 		}
 	}
 
@@ -1398,23 +1303,36 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
-
+	
 	focus = {
-		id = SIA_Protect_Asia
-		icon = GFX_focus_protect_asia
-		prerequisite = { focus = SIA_securing_the_free_world }
-		x = 0
-		y = 2
-		relative_position_id = SIA_securing_the_free_world
+		id = SIA_Look_Outward
+		icon = GFX_focus_PER_white_revolution
 		
-		cost = 10
+		prerequisite = { focus = SIA_Equality_of_Thai_People }
+		prerequisite = {
+			focus = SIA_Protect_Asia
+			focus = SIA_Economic_Welfare
+		}
+
+		relative_position_id = SIA_Equality_of_Thai_People
+
+		x = 0
+		y = 1
+		
+		cost = 5
 
 		available = {
-			
+
 		}
 		
 		completion_reward = {
-			add_ideas = SIA_Protect_Asia
+			## spy stuff, operatives, intel efficiency
+			remove_ideas = SIA_Thai_Neutrality
+			set_rule = { can_send_volunteers = yes }
+			
+			add_political_power = 150
+			
+			set_country_flag = SIA_No_Longer_Neutral
 		}
 		
 		ai_will_do = {
@@ -1495,7 +1413,7 @@ focus_tree = {
 		id = SIA_Join_Allies
 		icon = GFX_focus_eng_motion_of_no_confidence
 		prerequisite = { focus = SIA_Look_Outward 
-		focus = SIA_Legacy_of_Ayutthaya }
+		focus = SIA_Legacy_of_Ayutthaya}
 		mutually_exclusive = { focus = SIA_United_East_Asia 
 		focus = SIA_South_East_Asian_Pact 
 		focus = SIA_Seek_Closer_Relations_To_Japan }
@@ -1574,6 +1492,33 @@ focus_tree = {
 			factor = 1
 		}
 	}
+	focus = {
+		id = SIA_request_occupation_of_burma
+		icon = GFX_focus_generic_subjugation
+		prerequisite = { focus = SIA_Pan_Thai_Nationalism }
+		relative_position_id = SIA_Pan_Thai_Nationalism
+        mutually_exclusive = {
+			focus = SIA_Revenge_Against_Burma
+		}
+		x = 1
+		y = 1
+		
+		cost = 5
+
+		available = {
+			country_exists = BRM
+		}
+		
+		completion_reward = {
+			BRM = { country_event = SIA.17 }
+			
+			
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	
 	focus = {
 		id = SIA_Offer_To_Take_Over_Indonesia
@@ -1593,6 +1538,29 @@ focus_tree = {
 		completion_reward = {
 			ENG = { country_event = SIA.23 }
 			FRA = { country_event = SIA.26 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	focus = {
+		id = SIA_Protect_Asia
+		icon = GFX_focus_protect_asia
+		prerequisite = { focus = SIA_securing_the_free_world }
+		x = 0
+		y = 2
+		relative_position_id = SIA_securing_the_free_world
+		
+		cost = 10
+
+		available = {
+			
+		}
+		
+		completion_reward = {
+			add_ideas = SIA_Protect_Asia
 		}
 		
 		ai_will_do = {
@@ -1708,35 +1676,6 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = SIA_Thammasat_University
-		icon = GFX_focus_thammasat
-		
-		prerequisite = { focus = SIA_Reinstate_Peoples_Assembly }
-
-		relative_position_id = SIA_Reinstate_Peoples_Assembly
-
-		x = 0
-		y = 1
-		
-		cost = 10
-
-		available = {
-
-		}
-		
-		completion_reward = {
-			add_research_slot = 1
-			add_ideas = SIA_Thammasat_University
-			custom_effect_tooltip = available_industrial_concern
-			show_ideas_tooltip = sia_thammasat_university_laboratories
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
 ## Communism
 
 	focus = {
@@ -1838,7 +1777,6 @@ focus_tree = {
 	focus = {
 		id = SIA_Align_Military_Officials
 		icon = GFX_goal_generic_military_deal
-
 		prerequisite = { focus = SIA_Agitate_the_Masses }
 		prerequisite = { focus = SIA_Yellow_Dossier }
 		
@@ -1866,7 +1804,6 @@ focus_tree = {
 	focus = {
 		id = SIA_Communist_Sieze_Control_of_Government
 		icon = GFX_focus_spr_masters_of_our_own_fate
-
 		prerequisite = { focus = SIA_Align_Military_Officials }
 		prerequisite = { focus = SIA_Reinstate_Peoples_Assembly }
 		
@@ -1883,6 +1820,86 @@ focus_tree = {
 		
 		completion_reward = {
 			country_event = SIA.29
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	focus = {
+		id = SIA_Unite_the_Thai
+		icon = GFX_focus_CHL_invite_french_aristocracy
+		prerequisite = {
+			focus = SIA_Redistribute_Land
+		}
+		relative_position_id = SIA_Redistribute_Land
+
+		x = 1
+		y = 1
+		
+		cost = 5
+
+		available = {
+			NOT = {
+			670 = { is_owned_by = SIA }
+			741 = { is_owned_by = SIA }
+			336 = { is_owned_by = SIA }
+			}
+		}
+		
+		completion_reward = {
+			add_state_claim = 670
+			add_state_claim = 741
+			add_state_claim = 336
+			
+			create_wargoal = {
+            target = FRA
+            type = take_core_state
+            generator = { 670 741 }
+			}
+			
+			create_wargoal = {
+            target = ENG
+            type = take_core_state
+            generator = { 336 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	focus = {
+		id = SIA_Remember_the_Past
+		icon = GFX_focus_ARG_invite_ghioldi_back_to_argentina
+		prerequisite = {
+			focus = SIA_Redistribute_Land
+		}
+		relative_position_id = SIA_Redistribute_Land
+
+		x = -1
+		y = 1
+		
+		cost = 5
+
+		available = {
+			NOT = {
+			288 = { is_owned_by = SIA }
+			640 = { is_owned_by = SIA }
+			}
+		}
+		
+		completion_reward = {
+			add_state_claim = 288
+			add_state_claim = 640
+			
+			create_wargoal = {
+            target = RAJ
+            type = take_core_state
+            generator = { 288 640 }
+			}
 		}
 		
 		ai_will_do = {
@@ -1935,30 +1952,6 @@ focus_tree = {
 		}
 	}
 	
-	focus = {
-		id = SIA_spies
-		icon = GFX_focus_generic_secret_service_agency
-		prerequisite = { focus = SIA_Empower_the_Peoples_Assembly }
-		relative_position_id = SIA_Empower_the_Peoples_Assembly
-		x = -2
-		y = 1
-		cost = 5
-
-	#	allow_branch = { has_dlc = "La Resistance" }
-		
-		completion_reward = {
-			
-			create_intelligence_agency = {
-				name = "National Intelligence Agency"
-				icon = GFX_intelligence_agency_logo_SIA_nia
-			}		
-			add_ideas = SIA_spies
-		}
-		ai_will_do = {
-			factor = 5
-		}
-	}
-
 	focus = {
 		id = SIA_The_Permanent_Revolution
 		icon = GFX_focus_por_workers_of_iberia
@@ -2024,6 +2017,30 @@ focus_tree = {
 		
 		ai_will_do = {
 			factor = 1
+		}
+	}
+	
+	focus = {
+		id = SIA_spies
+		icon = GFX_focus_generic_secret_service_agency
+		prerequisite = { focus = SIA_Empower_the_Peoples_Assembly }
+		relative_position_id = SIA_Empower_the_Peoples_Assembly
+		x = -2
+		y = 1
+		cost = 5
+
+		allow_branch = { has_dlc = "La Resistance" }
+		
+		completion_reward = {
+			
+			create_intelligence_agency = {
+				name = "National Intelligence Agency"
+				icon = GFX_intelligence_agency_logo_SIA_nia
+			}		
+			add_ideas = SIA_spies
+		}
+		ai_will_do = {
+			factor = 5
 		}
 	}
 	
@@ -2171,31 +2188,6 @@ focus_tree = {
 			factor = 1
 		}
 	}
-
-	focus = {
-		id = SIA_Rural_Economic_Subsidies
-		icon = GFX_focus_generic_workers_and_farmers_rise
-		prerequisite = { focus = SIA_Expand_Yellow_Dossier}
-
-		relative_position_id = SIA_Expand_Yellow_Dossier
-
-		x = 2
-		y = 1
-		
-		cost = 5
-
-		available = {
-			
-		}
-		
-		completion_reward = {
-			add_ideas = SIA_Rural_Economic_Subsidies
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
 	
 	focus = {
 		id = SIA_State_Welfare
@@ -2222,6 +2214,7 @@ focus_tree = {
 		}
 	}
 	
+	
 	focus = {
 		id = SIA_Redistribute_Land
 		icon = GFX_focus_generic_communist_industry
@@ -2246,80 +2239,25 @@ focus_tree = {
 			factor = 1
 		}
 	}
-
-	focus = {
-		id = SIA_Unite_the_Thai
-		icon = GFX_focus_CHL_invite_french_aristocracy
-		prerequisite = {
-			focus = SIA_Redistribute_Land
-		}
-		relative_position_id = SIA_Redistribute_Land
-
-		x = 1
-		y = 1
-		
-		cost = 5
-
-		available = {
-			NOT = {
-			670 = { is_owned_by = SIA }
-			741 = { is_owned_by = SIA }
-			336 = { is_owned_by = SIA }
-			}
-		}
-		
-		completion_reward = {
-			add_state_claim = 670
-			add_state_claim = 741
-			add_state_claim = 336
-			
-			create_wargoal = {
-            target = FRA
-            type = take_core_state
-            generator = { 670 741 }
-			}
-			
-			create_wargoal = {
-            target = ENG
-            type = take_core_state
-            generator = { 336 }
-			}
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
 	
 	focus = {
-		id = SIA_Remember_the_Past
-		icon = GFX_focus_ARG_invite_ghioldi_back_to_argentina
-		prerequisite = {
-			focus = SIA_Redistribute_Land
-		}
-		relative_position_id = SIA_Redistribute_Land
+		id = SIA_Rural_Economic_Subsidies
+		icon = GFX_focus_generic_workers_and_farmers_rise
+		prerequisite = { focus = SIA_Expand_Yellow_Dossier}
 
-		x = -1
+		relative_position_id = SIA_Expand_Yellow_Dossier
+
+		x = 2
 		y = 1
 		
 		cost = 5
 
 		available = {
-			NOT = {
-			288 = { is_owned_by = SIA }
-			640 = { is_owned_by = SIA }
-			}
+			
 		}
 		
 		completion_reward = {
-			add_state_claim = 288
-			add_state_claim = 640
-			
-			create_wargoal = {
-            target = RAJ
-            type = take_core_state
-            generator = { 288 640 }
-			}
+			add_ideas = SIA_Rural_Economic_Subsidies
 		}
 		
 		ai_will_do = {
@@ -4157,38 +4095,72 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = SIA_Rights_and_Liberties
-		icon = GFX_focus_rights_liberties
-		prerequisite = { focus = SIA_Supreme_Power_of_Thai_People }
+		id = SIA_National_Security
+		icon = GFX_focus_security
 		
-		relative_position_id = SIA_Supreme_Power_of_Thai_People
+		prerequisite = { focus = SIA_Cultural_Mandates }
+		
+		relative_position_id = SIA_Cultural_Mandates
 
-		x = 0
+		x = 1
 		y = 1
 		
-		cost = 5
+		cost = 10
 
 		available = {
 			
 		}
 		
 		completion_reward = {
-
-			swap_ideas = {
-				remove_idea = SIA_Supreme_Power_of_Thai_People
-				add_idea = SIA_Rights_and_Liberties 
-			}
 			
-		#	custom_effect_tooltip = SIA_Principles_Rights_Tooltip
+			add_ideas = SIA_National_Security
+			
+		#	custom_effect_tooltip = SIA_Principles_Security_Tooltip
 		#	
-		#	add_to_variable = { SIA_Principles_Compliance = 0.05 }
+		#	add_to_variable = { SIA_Principles_Attack = 0.1 }
+		#	add_to_variable = { SIA_Principles_Defense = 0.1 }
+			
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	
+	focus = {
+		id = SIA_Economic_Welfare
+		icon = GFX_focus_economic
+		prerequisite = { focus = SIA_National_Economic_Council }
+		
+		relative_position_id = SIA_National_Economic_Council
+
+		x = 0
+		y = 2
+		
+		cost = 10
+
+		available = {
+			
+		}
+		
+		completion_reward = {
+			
+			swap_ideas = {
+				remove_idea = SIA_National_Economic_Council
+				add_idea = SIA_Economic_Welfare
+			} 
+			
+		#	custom_effect_tooltip = SIA_Principles_Economic_Tooltip
+		#	
+		#	add_to_variable = { SIA_Principles_Consumer_Goods = -0.1 }
+			
 		}
 		
 		ai_will_do = {
 			factor = 5
 		}
 	}
-
+	
 	focus = {
 		id = SIA_Equality_of_Thai_People
 		icon = GFX_focus_equality
@@ -4222,18 +4194,13 @@ focus_tree = {
 			factor = 5
 		}
 	}
-
+	
 	focus = {
-		id = SIA_Look_Outward
-		icon = GFX_focus_PER_white_revolution
+		id = SIA_Rights_and_Liberties
+		icon = GFX_focus_rights_liberties
+		prerequisite = { focus = SIA_Supreme_Power_of_Thai_People }
 		
-		prerequisite = { focus = SIA_Equality_of_Thai_People }
-		prerequisite = {
-			focus = SIA_Protect_Asia
-			focus = SIA_Economic_Welfare
-		}
-
-		relative_position_id = SIA_Equality_of_Thai_People
+		relative_position_id = SIA_Supreme_Power_of_Thai_People
 
 		x = 0
 		y = 1
@@ -4241,21 +4208,52 @@ focus_tree = {
 		cost = 5
 
 		available = {
-
+			
 		}
 		
 		completion_reward = {
-			## spy stuff, operatives, intel efficiency
-			remove_ideas = SIA_Thai_Neutrality
-			set_rule = { can_send_volunteers = yes }
+
+			swap_ideas = {
+				remove_idea = SIA_Supreme_Power_of_Thai_People
+				add_idea = SIA_Rights_and_Liberties 
+			}
 			
-			add_political_power = 150
-			
-			set_country_flag = SIA_No_Longer_Neutral
+		#	custom_effect_tooltip = SIA_Principles_Rights_Tooltip
+		#	
+		#	add_to_variable = { SIA_Principles_Compliance = 0.05 }
 		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 5
+		}
+	}
+	
+	focus = {
+		id = SIA_Public_Education
+		icon = GFX_focus_education
+		prerequisite = { focus = SIA_Cultural_Mandates }
+		
+		relative_position_id = SIA_Cultural_Mandates
+
+		x = -1
+		y = 1
+		
+		cost = 10
+
+		available = {
+		}
+		
+		completion_reward = {
+			add_research_slot = 1
+			add_ideas = SIA_Public_Education
+			
+		#	custom_effect_tooltip = SIA_Principles_Education_Tooltip
+		#	
+		#	add_to_variable = { SIA_Principles_Research = 0.05 }
+		}
+		
+		ai_will_do = {
+			factor = 50
 		}
 	}
 }
