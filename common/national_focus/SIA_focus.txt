@@ -2057,17 +2057,16 @@ focus_tree = {
 		
 		cost = 5
 		
-		completion_reward = {		
+		completion_reward = {
+						
 			add_trait = {
 			 character = SIA_pridi_bhanomyong
-			 ideology = marxism
 			 trait = peoples_dictator
 			}
-			set_politics = {
-				ruling_party = communism
-				elections_allowed = yes
-				election_frequency = 120
-			}
+		
+			
+		
+			
 		}
 		
 		ai_will_do = {
