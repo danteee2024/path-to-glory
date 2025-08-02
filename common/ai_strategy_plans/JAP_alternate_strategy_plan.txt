@@ -236,20 +236,15 @@ JAP_alternate_plan_strike_north = {
 		JAP_modern_shogunate
 		JAP_prepare_for_war_with_the_soviet_union
 		JAP_the_manchurian_project
-		JAP_fortify_the_border
-		JAP_expand_manchurian_railways
 		JAP_expand_the_showa_steel_works
 		JAP_heavy_industry_development
 		JAP_fighter_modernization
 		JAP_range_focus
 		JAP_new_naval_estimates
-		JAP_join_the_london_naval_treaty
-		JAP_non_aggression_pact_with_china
 		JAP_bomber_modernization
 		JAP_build_up_the_manchurian_army
 		JAP_create_a_manchurian_imperial_air_force
 		JAP_armored_divisions
-		JAP_technological_exchange
 		JAP_preemptive_war
 		JAP_national_defense_state
 		JAP_spiritual_mobilization

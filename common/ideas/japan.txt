@@ -3011,7 +3011,7 @@ ideas = {
 		JAP_german_rocketry = {
 
 			name = JAP_german_rocketry
-
+             
 			removal_cost = -1
 			
 			allowed = {
@@ -3025,11 +3025,8 @@ ideas = {
 			picture = generic_research_bonus
 			
 			modifier = {
-				research_speed_factor = 0.10
-				special_project_speed_factor = 0.10
-				scientist_breakthrough_bonus_factor = 0.10
-				scientist_xp_gain_factor = 0.05
-				scientist_research_bonus_factor = 0.05
+				research_speed_factor = 0.075
+				
 			}
 		}
 

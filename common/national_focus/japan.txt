@@ -2696,7 +2696,7 @@
 		y = 1
 		relative_position_id = JAP_secure_china
 
-		cost = 7.5
+		cost = 5
 
 		ai_will_do = {
 			factor = 4
@@ -3687,7 +3687,7 @@
 		y = 1
 		relative_position_id = JAP_strike_on_the_southern_resource_area
 
-		cost = 7.5
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -3942,7 +3942,8 @@
 					level = 2
 					instant_build = yes
 				}
-			}											
+			}		
+			custom_effect_tooltip = generic_skip_one_line_tt									
 			swap_ideas = {
 				remove_idea = JAP_zaibatsus
 				add_idea = JAP_guide_the_zaibatsus
@@ -4681,6 +4682,7 @@
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			swap_ideas = {
 				remove_idea = JAP_zaibatsus
 				add_idea = JAP_zaibatsus_challenged
@@ -4931,7 +4933,7 @@
 		y = 1
 		relative_position_id = JAP_develop_vladivostok
 
-		cost = 7.5
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -5532,7 +5534,7 @@
 		y = 1
 		relative_position_id = JAP_national_research_policy
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -8400,7 +8402,7 @@ allow_branch = {
 		y = 1
 		relative_position_id = JAP_army_expansion_law
 
-		cost = 7.5
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -9326,6 +9328,7 @@ allow_branch = {
 			else = {
 				navy_experience = 150
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			random_owned_controlled_state = {
 				limit = {
 					ROOT = { has_full_control_of_state = PREV }
@@ -9525,14 +9528,13 @@ allow_branch = {
 
 	focus = {
 		id = JAP_carrier_warfare_experiments
-		icon = GFX_goal_generic_navy_doctrines_tactics
+		icon = GFX_focus_generic_air_carrier
 		prerequisite = { focus = JAP_new_naval_estimates }
-		mutually_exclusive = { focus = JAP_supremacy_of_the_battlefleet }
 		x = -1
 		y = 1
 		relative_position_id = JAP_new_naval_estimates
 
-		cost = 7.5
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -9610,7 +9612,7 @@ allow_branch = {
 		y = 2
 		relative_position_id = JAP_carrier_warfare_experiments
 
-		cost = 7.5
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -9683,12 +9685,11 @@ allow_branch = {
 		id = JAP_supremacy_of_the_battlefleet
 		icon = GFX_focus_generic_navy_battleship2
 		prerequisite = { focus = JAP_new_naval_estimates }
-		mutually_exclusive = { focus = JAP_carrier_warfare_experiments }
 		x = 1
 		y = 1
 		relative_position_id = JAP_new_naval_estimates
 
-		cost = 7.5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -9739,8 +9740,10 @@ allow_branch = {
 		y = 2
 		relative_position_id = JAP_supremacy_of_the_battlefleet
 
-		cost = 7.5
-
+		cost = 10
+        available = {
+			has_tech = ship_hull_super_heavy
+		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -9772,14 +9775,6 @@ allow_branch = {
 				}
 			}
 			else = {
-				if = {
-					limit = {
-						not = { has_tech = ship_hull_super_heavy }
-					}
-					set_technology = {
-						ship_hull_super_heavy = 1
-					}
-				}
 				create_equipment_variant = {
 					name = "Yamato Class"
 					type = ship_hull_super_heavy_1
@@ -9853,7 +9848,7 @@ allow_branch = {
 	}
 	focus = {
 		id = JAP_increased_repair_capabilities
-		icon = GFX_goal_continuous_repairments
+		icon = GFX_focus_generic_refit_civilian_ships
 		prerequisite = { focus = JAP_first_air_fleet focus = JAP_the_ultimate_battleship }
 		x = 1
 		y = 1
@@ -9918,7 +9913,7 @@ allow_branch = {
 			focus = JAP_submarine_modernization
 		}		
 
-		cost = 7.5
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -9975,7 +9970,7 @@ allow_branch = {
 		y = 1
 		relative_position_id = JAP_new_naval_estimates
 
-		cost = 7.5
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -10017,7 +10012,7 @@ allow_branch = {
 		y = 2
 		relative_position_id = JAP_submarine_modernization
 
-		cost = 7.5
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -10163,7 +10158,7 @@ allow_branch = {
 		y = 1
 		relative_position_id = JAP_cruiser_modernization
 
-		cost = 7.5
+		cost = 5
 
 		ai_will_do = {
 			factor = 4
@@ -10195,7 +10190,7 @@ allow_branch = {
 		y = 1
 		relative_position_id = JAP_long_lance_torpedoes
 
-		cost = 7.5
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
