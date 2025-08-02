@@ -2566,10 +2566,11 @@ ideas = {
 				neutrality_drift = 0.1
 				stability_weekly = 0.001
 				war_support_factor = 0.1
-				army_attack_factor = 0.1
+				army_attack_factor = 0.05
 				army_defence_factor = 0.05
 				army_org_factor = 0.05
 				conscription = 0.02
+				org_loss_when_moving = -0.05
 		}
 	}
 
