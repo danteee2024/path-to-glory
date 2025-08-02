@@ -13,14 +13,15 @@ leader_traits = {
 	
 	Father_of_the_Celts = {
 		random = no
-		stability_factor = 0.3
-		political_advisor_cost_factor = -0.3
-		high_command_cost_factor = -0.3
-		air_chief_cost_factor = -0.3
-		army_chief_cost_factor = -0.3
-		navy_chief_cost_factor = -0.3
-		mobilization_laws_cost_factor = -0.25
-		economy_cost_factor = -0.25
+		political_advisor_cost_factor = -0.15
+		high_command_cost_factor = -0.15
+		air_chief_cost_factor = -0.15
+		army_chief_cost_factor = -0.15
+		navy_chief_cost_factor = -0.15
+		mobilization_laws_cost_factor = -0.15
+		economy_cost_factor = -0.15
+		stability_factor = 0.25
+		
 	}
 	
 	IRE_Advocate_of_St_Patrick = {

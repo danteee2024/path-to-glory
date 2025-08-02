@@ -101,7 +101,7 @@ focus_tree = {
 		x = 5
 		y = 1
 	
-		cost = 7.2
+		cost = 5
 		
 		prerequisite = { focus = IRE_Fianna_fail }
 		relative_position_id = IRE_Fianna_fail
@@ -139,7 +139,7 @@ focus_tree = {
 		x = 1
 		y = 1
 	
-		cost = 7.2
+		cost = 5
 		
 		prerequisite = { focus = IRE_The_Emergency_Powers_Act }
 		relative_position_id = IRE_The_Emergency_Powers_Act
@@ -159,7 +159,7 @@ focus_tree = {
 		x = -1
 		y = 1
 	
-		cost = 7.2
+		cost = 5
 		
 		prerequisite = { focus = IRE_The_Emergency_Powers_Act }
 		relative_position_id = IRE_The_Emergency_Powers_Act
@@ -606,7 +606,7 @@ focus_tree = {
 		x = -5
 		y = 1
 	
-		cost = 7.2
+		cost = 5
 		
 		prerequisite = { focus = IRE_Fianna_fail }
 		relative_position_id = IRE_Fianna_fail
@@ -668,7 +668,7 @@ focus_tree = {
 		x = -1
 		y = 1
 	
-		cost = 7.2
+		cost = 5
 		
 		prerequisite = { focus = IRE_Strengthen_the_welfare_state }
 		relative_position_id = IRE_Strengthen_the_welfare_state
@@ -707,7 +707,7 @@ focus_tree = {
 		x = 1
 		y = 1
 	
-		cost = 7.2
+		cost = 5
 		
 		prerequisite = { focus = IRE_Strengthen_the_welfare_state }
 		relative_position_id = IRE_Strengthen_the_welfare_state
@@ -755,7 +755,7 @@ focus_tree = {
 		x = 0
 		y = 2
 	
-		cost = 7.2
+		cost = 5
 		
 		prerequisite = { focus = IRE_Housing_Development focus = IRE_Reform_the_punt }
 		relative_position_id = IRE_Strengthen_the_welfare_state
@@ -783,7 +783,7 @@ focus_tree = {
 		x = 0
 		y = 1
 	
-		cost = 7.2
+		cost = 5
 		
 		prerequisite = { focus = IRE_Trinity_College_Dublin }
 		relative_position_id = IRE_Trinity_College_Dublin
@@ -855,7 +855,7 @@ focus_tree = {
 		x = 0
 		y = 1
 	
-		cost = 7.2
+		cost = 5
 		
 		prerequisite = { focus = IRE_Fianna_fail }
 		relative_position_id = IRE_Fianna_fail
@@ -1010,7 +1010,7 @@ focus_tree = {
 		x = 0
 		y = 1
 	
-		cost = 7.2
+		cost = 5
 		
 		prerequisite = { focus = IRE_Expression_of_Irish_Unity focus = IRE_Treaty_Port_Proposition }
 		relative_position_id = IRE_The_Irish_Language_Act
@@ -1193,7 +1193,7 @@ focus_tree = {
 		x = 4
 		y = 1
 	
-		cost = 7.2
+		cost = 5
 		
 		prerequisite = { focus = IRE_Empower_the_National_Corporate_Party }
 		relative_position_id = IRE_Empower_the_National_Corporate_Party
@@ -1287,7 +1287,7 @@ focus_tree = {
 		x = 0
 		y = 1
 	
-		cost = 7.2
+		cost = 5
 		
 		prerequisite = { focus = IRE_Empower_the_National_Corporate_Party }
 		relative_position_id = IRE_Empower_the_National_Corporate_Party
@@ -1316,7 +1316,7 @@ focus_tree = {
 		x = 1
 		y = 1
 	
-		cost = 7.2
+		cost = 5
 		
 		prerequisite = { focus = IRE_The_IRA_Dictatorship }
 		relative_position_id = IRE_The_IRA_Dictatorship
@@ -1339,7 +1339,7 @@ focus_tree = {
 		x = -1
 		y = 1
 	
-		cost = 7.2
+		cost = 5
 		
 		prerequisite = { focus = IRE_The_IRA_Dictatorship }
 		relative_position_id = IRE_The_IRA_Dictatorship
@@ -1362,7 +1362,7 @@ focus_tree = {
 		x = 0
 		y = 2
 	
-		cost = 7.2
+		cost = 5
 		
 		prerequisite = { focus = IRE_The_IRA_Dictatorship }
 		relative_position_id = IRE_The_IRA_Dictatorship
@@ -1543,7 +1543,7 @@ focus_tree = {
 		x = 2
 		y = 1
 	
-		cost = 7.2
+		cost = 5
 		
 		prerequisite = { focus = IRE_Ireland_First focus = IRE_Join_The_Germans }
 		prerequisite = { focus = IRE_Declare_Our_Freedom }
@@ -1692,30 +1692,6 @@ focus_tree = {
 	
 	
 	focus = {
-		id = IRE_North_of_Ireland_or_War
-		text = "North of Ireland or WAR"
-		icon = GFX_focus_ARG_cut_ties_with_britain
-			
-		x = 0
-		y = 1
-	
-		cost = 7.2
-		
-		prerequisite = { focus = IRE_Eire_Blitz }
-		
-		relative_position_id = IRE_Eire_Blitz
-		
-		available = {
-		}
-	
-		search_filters = { FOCUS_FILTER_HISTORICAL }
-	
-		completion_reward = {
-			ENG = { country_event = { id = IRE_noiorwar.1 hours = 6 } }
-		}
-	}
-	
-	focus = {
 		id = IRE_Fortify_our_borders
 		text = "Fortify Our Borders"
 		icon = GFX_focus_NOR_drobak_coastal_fort						
@@ -1723,7 +1699,7 @@ focus_tree = {
 		x = 1
 		y = 1
 	
-		cost = 7.2
+		cost = 5
 		
 		prerequisite = { focus = IRE_Promote_Anti-British_Sentiments }
 		prerequisite = { focus = IRE_Get_the_Brits_out }
@@ -2126,7 +2102,7 @@ focus_tree = {
 		x = 3
 		y = 1
 	
-		cost = 7.2
+		cost = 5
 		
 		prerequisite = { focus = IRE_Empower_the_Revolution }
 		relative_position_id = IRE_Empower_the_Revolution
@@ -2158,7 +2134,7 @@ focus_tree = {
 		x = -3
 		y = 1
 	
-		cost = 7.2
+		cost = 5
 		
 		prerequisite = { focus = IRE_Empower_the_Revolution }
 		relative_position_id = IRE_Empower_the_Revolution
@@ -2477,7 +2453,7 @@ focus_tree = {
 		x = 0
 		y = 1
 	
-		cost = 7.2
+		cost = 5
 		
 		prerequisite = { focus = IRE_Align_with_Moscow }
 		relative_position_id = IRE_Align_with_Moscow
@@ -2526,7 +2502,7 @@ focus_tree = {
 		x = -2
 		y = 1
 	
-		cost = 7.2
+		cost = 5
 		
 		prerequisite = { focus = IRE_Align_with_Moscow }
 		relative_position_id = IRE_Align_with_Moscow
@@ -2558,7 +2534,7 @@ focus_tree = {
 		x = 2
 		y = 1
 	
-		cost = 7.2
+		cost = 5
 		
 		prerequisite = { focus = IRE_Align_with_Moscow }
 		relative_position_id = IRE_Align_with_Moscow
@@ -2868,7 +2844,7 @@ focus_tree = {
 		x = 1
 		y = 1
 	
-		cost = 7.2
+		cost = 5
 		
 		prerequisite = { focus = IRE_Shipyard_Island focus = IRE_Join_the_Comintern }
 		relative_position_id = IRE_Shipyard_Island
@@ -2935,7 +2911,7 @@ focus_tree = {
 		x = -1
 		y = 1
 	
-		cost = 7.2
+		cost = 5
 		
 		prerequisite = { focus = IRE_Join_the_Comintern focus = IRE_Shipyard_Island }
 		relative_position_id = IRE_Join_the_Comintern
@@ -3304,26 +3280,23 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			random_core_state = {
-				limit = {
-					is_owned_and_controlled_by = ROOT
-				}
+			113 = {
 				add_extra_state_shared_building_slots = 1
-				add_resource = {
-					type = steel
-					amount = 11
+				add_building_construction = {
+					type = resource_expansion_steel
+					level = 1
+					instant_build = yes
 				}
 			}
-			random_core_state = {
-				limit = {
-					is_owned_and_controlled_by = ROOT
-				}
+			135 = {
 				add_extra_state_shared_building_slots = 1
-				add_resource = {
-					type = aluminium
-					amount = 8
+				add_building_construction = {
+					type = resource_expansion_steel
+					level = 1
+					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = CHL_skip_one_line_tt
 			add_tech_bonus = {
 				name = IRE_resource_extraction_bonus
 				bonus = 0.50
@@ -3451,7 +3424,7 @@ focus_tree = {
 		prerequisite = { focus = IRE_Attract_Foreign_Capital }
 		relative_position_id = IRE_The_Coal_Cattle_Pact
 		
-		cost = 7.2
+		cost = 5
 
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 		completion_reward = {
@@ -3632,7 +3605,7 @@ focus_tree = {
 		x = -1
 		y = 1
 	
-		cost = 1.5
+		cost = 2.5
 		
 		prerequisite = { focus = IRE_Irish_Military_Academy }
 		relative_position_id = IRE_Irish_Military_Academy
@@ -3715,7 +3688,7 @@ focus_tree = {
 		x = 1
 		y = 1
 	
-		cost = 1.5
+		cost = 2.5
 		
 		prerequisite = { focus = IRE_Expand_Procurement_Department }
 		relative_position_id = IRE_Expand_Procurement_Department
@@ -3740,7 +3713,7 @@ focus_tree = {
 		x = 1
 		y = 1
 	
-		cost = 7.2
+		cost = 5
 		
 		prerequisite = { focus = IRE_Invest_in_the_motor_industries focus = IRE_Evolve_the_Irish_Man }
 		relative_position_id = IRE_Invest_in_the_motor_industries
@@ -3830,7 +3803,7 @@ focus_tree = {
 		x = -10
 		y = 1
 	
-		cost = 7.2
+		cost = 5
 		
 		prerequisite = { focus = IRE_Irish_Army }
 		relative_position_id = IRE_Irish_Army
@@ -3855,7 +3828,7 @@ focus_tree = {
 		x = -6
 		y = 1
 	
-		cost = 7.2
+		cost = 5
 		
 		prerequisite = { focus = IRE_Irish_Army }
 		relative_position_id = IRE_Irish_Army
@@ -3888,7 +3861,7 @@ focus_tree = {
 		x = 0
 		y = 1
 	
-		cost = 7.2
+		cost = 5
 		
 		prerequisite = { focus = IRE_Irish_Army }
 		relative_position_id = IRE_Irish_Army
@@ -3985,7 +3958,7 @@ focus_tree = {
 		x = -1
 		y = 1
 	
-		cost = 7.2
+		cost = 5
 		
 		prerequisite = { focus = IRE_Establish_the_Irish_Airforce }
 		relative_position_id = IRE_Establish_the_Irish_Airforce
@@ -4153,7 +4126,7 @@ focus_tree = {
 		x = 1
 		y = 1
 	
-		cost = 7.2
+		cost = 5
 		
 		prerequisite = { focus = IRE_Irish_Military_Academy }
 		relative_position_id = IRE_Irish_Military_Academy
@@ -4588,7 +4561,7 @@ focus_tree = {
 		x = 0
 		y = 2
 
-		cost = 7.2
+		cost = 5
 
 		available = {
 
@@ -4634,7 +4607,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 7.2
+		cost = 5
 
 		available = {
 
@@ -4696,7 +4669,7 @@ focus_tree = {
 		x = 3
 		y = 1
 	
-		cost = 7.2
+		cost = 5
 		
 		prerequisite = { focus = IRE_Irish_Army }
 		relative_position_id = IRE_Irish_Army
@@ -4975,7 +4948,7 @@ focus_tree = {
 			}
 		}
 		relative_position_id = IRE_convoy_focus
-		cost = 7.2
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -5079,7 +5052,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = IRE_naval_rearmament_focus
-		cost = 7.2
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -5393,7 +5366,7 @@ focus_tree = {
 		x = 0
 		y = 1
 	
-		cost = 7.2
+		cost = 5
 		
 		available = {
 		}
@@ -5429,7 +5402,7 @@ focus_tree = {
 		x = -3
 		y = 1
 	
-		cost = 5
+		cost = 10
 		
 		available = {
 		}
@@ -5440,23 +5413,28 @@ focus_tree = {
 	
 		completion_reward = {
 			add_stability = -0.05
-			random_owned_controlled_state = {
-				add_resource = {
-					type = steel
-					amount = 26
-				}
+			add_war_support = 0.05
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			modify_building_resources = {
+				building = resource_expansion_aluminium
+				resource = aluminium
+				amount = 1
 			}
-			113 = {
-				add_resource = {
-					type = steel
-					amount = 18
-				}
+			
+			modify_building_resources = {
+				building = resource_expansion_steel
+				resource = steel
+				amount = 1
 			}
-			random_owned_controlled_state = {
-				add_resource = {
-					type = aluminium
-					amount = 10
-				}
+			modify_building_resources = {
+				building = resource_expansion_tungsten
+				resource = tungsten
+				amount = 1
+			}
+			modify_building_resources = {
+				building = resource_expansion_chromium
+				resource = chromium
+				amount = 1
 			}
 		}
 	}
@@ -5500,7 +5478,7 @@ focus_tree = {
 		x = -1
 		y = 2
 	
-		cost = 7.2
+		cost = 5
 		
 		available = {
 		}
@@ -5551,7 +5529,7 @@ focus_tree = {
 		x = 1
 		y = 2
 	
-		cost = 7.2
+		cost = 5
 		
 		available = {
 		}
@@ -5918,7 +5896,7 @@ focus_tree = {
 		x = -2
 		y = 1
 	
-		cost = 7.2
+		cost = 5
 		
 		prerequisite = { focus = IRE_Restore_old_government_structures }
 		relative_position_id = IRE_Restore_old_government_structures
@@ -6164,7 +6142,7 @@ focus_tree = {
 		x = 2
 		y = 1
 	
-		cost = 7.2
+		cost = 5
 		
 		prerequisite = { focus = IRE_Restore_old_government_structures }
 		relative_position_id = IRE_Restore_old_government_structures
@@ -6213,83 +6191,6 @@ focus_tree = {
 		}
 	}
 	
-	
-	focus = {
-		id = IRE_Take_Advantage_of_the_chaos
-		text = "Take Advantage of the Chaos"
-		icon = GFX_focus_generic_total_war							
-			
-		x = 0
-		y = 1
-	
-		cost = 5
-		
-		prerequisite = { focus = IRE_Celtic_Nationalism }
-		relative_position_id = IRE_Celtic_Nationalism
-
-		available = {
-			country_exists = NIR
-		}
-	
-		search_filters = { FOCUS_FILTER_HISTORICAL }
-	
-		completion_reward = {
-			IRE = { transfer_state = 119 }
-		}
-	}
-	
-	focus = {
-		id = IRE_Incorporate_the_Scottish_Celts
-		text = "Incorporate the Scottish Celts"
-		icon = GFX_focus_generic_annex_country							
-			
-		x = -1
-		y = 1
-	
-		cost = 5
-		
-		prerequisite = { focus = IRE_Take_Advantage_of_the_chaos }
-		relative_position_id = IRE_Take_Advantage_of_the_chaos
-
-		available = {
-			country_exists = SCO
-			SCO = { has_war = no }
-		}
-	
-		search_filters = { FOCUS_FILTER_HISTORICAL }
-	
-		completion_reward = {
-			IRE = { transfer_state = 133 }
-			IRE = { transfer_state = 121 }
-			IRE = { transfer_state = 136 }
-			IRE = { transfer_state = 120 }
-		}
-	}
-	
-	focus = {
-		id = IRE_Incorporate_the_Welsh_Celts
-		text = "Incorporate the Welsh Celts"
-		icon = GFX_focus_generic_annex_country_2							
-			
-		x = 1
-		y = 1
-	
-		cost = 5
-		
-		prerequisite = { focus = IRE_Take_Advantage_of_the_chaos }
-		relative_position_id = IRE_Take_Advantage_of_the_chaos
-
-		available = {
-			country_exists = WLS
-			WLS = { has_war = no }
-		}
-	
-		search_filters = { FOCUS_FILTER_HISTORICAL }
-	
-		completion_reward = {
-			IRE = { transfer_state = 122 }
-		}
-	}
 	
 	focus = {
 		id = IRE_Celtic_Workforce
@@ -6401,7 +6302,7 @@ focus_tree = {
 		text = "Form The Scythe of the Celts Pact"
 		icon = GFX_focus_RAJ_i_am_death							
 			
-		x = -3
+		x = -1
 		y = 1
 	
 		cost = 5
@@ -6621,7 +6522,7 @@ focus_tree = {
 		text = "Look to the Lost Celtic Lands"
 		icon = GFX_focus_BEL_the_lost_tribe							
 			
-		x = 3
+		x = 1
 		y = 1
 	
 		cost = 5
