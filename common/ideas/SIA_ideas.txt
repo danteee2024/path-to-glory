@@ -1,20 +1,7 @@
 # This only tells the game that you have NATIONAL SPIRITs stored here
 ideas = {
 	country = {
-    SIA_under_pribi  = {
-			picture = ARG_towards_a_greater_argentina
-			
-			available = {
-				tag = SIA
-			
-			}
-			
-			removal_cost = -1
 
-			modifier = {
-				political_power_factor = 0.25
-			}
-		}
 	SIA_SEA_economic_plan_idea = {
 			picture = ARG_towards_a_greater_argentina
 			

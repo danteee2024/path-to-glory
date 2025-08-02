@@ -2061,11 +2061,27 @@ focus_tree = {
 						
 			add_trait = {
 			 character = SIA_pridi_bhanomyong
+			 ideology = social_democracy
 			 trait = peoples_dictator
 			}
 		
-			
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = yes
+				election_frequency = 120
+			}
 		
+			hidden_effect = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
 			
 		}
 		
