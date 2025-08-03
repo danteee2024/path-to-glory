@@ -17310,7 +17310,7 @@ ai_will_do = {
 		id = SOV_the_rightful_heir_to_the_empire
 		icon = GFX_SOV_the_rightful_heir_to_the_empire_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_church_candidates }
-		mutually_exclusive = { focus = SOV_panslavic_nationalism }
+		mutually_exclusive = { focus = SOV_panslavic_nationalism focus = SOV_our_slavic_commitments }
 		x = 0
 		y = 2
 		relative_position_id = SOV_church_candidates
@@ -17816,7 +17816,7 @@ ai_will_do = {
 		id = SOV_our_slavic_commitments
 		icon = GFX_SOV_our_slavic_commitments_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_the_triple_entente }
-		mutually_exclusive = { focus = SOV_panslavic_nationalism }
+		mutually_exclusive = { focus = SOV_panslavic_nationalism focus = SOV_the_rightful_heir_to_the_empire }
 		x = 2
 		y = 1
 		relative_position_id = SOV_the_triple_entente
