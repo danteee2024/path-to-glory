@@ -16830,7 +16830,7 @@ ai_will_do = {
 		icon = GFX_SOV_dismantle_the_zemsky_sobor_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_reconvene_the_zemsky_sobor }
 		mutually_exclusive = { focus = SOV_romanov_reconstruction focus = SOV_reinstate_the_duma }
-		x = 5
+		x = 6
 		y = 1
 		relative_position_id = SOV_reconvene_the_zemsky_sobor
 		cost = 5
@@ -16890,11 +16890,32 @@ ai_will_do = {
 		}
 	}
 
+	
+	focus = {
+		id = SOV_russian_war_industry
+		icon = GFX_SOV_superior_war_machines_ccp_2d_sov_compatibility
+		prerequisite = { focus = SOV_dismantle_the_zemsky_sobor }
+		x = 1
+		y = 1
+		relative_position_id = SOV_dismantle_the_zemsky_sobor
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = no
+		
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			add_ideas = SOV_russian_war_industry
+		}
+	}
+
 	focus = {
 		id = SOV_russian_corporate_state
 		icon = GFX_SOV_russian_corporate_state_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_dismantle_the_zemsky_sobor }
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = SOV_dismantle_the_zemsky_sobor
 		cost = 5
@@ -16963,7 +16984,7 @@ ai_will_do = {
 		icon = GFX_SOV_romanov_reconstruction_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_reconvene_the_zemsky_sobor }
 		mutually_exclusive = { focus = SOV_dismantle_the_zemsky_sobor focus = SOV_reinstate_the_duma }
-		x = -5
+		x = -6
 		y = 1
 		relative_position_id = SOV_reconvene_the_zemsky_sobor
 		cost = 5
@@ -17036,7 +17057,7 @@ ai_will_do = {
 					add_extra_state_shared_building_slots = 6
 					add_building_construction = {
 						type = industrial_complex
-						level = 2
+						level = 4
 						instant_build = yes
 					}
 				}
@@ -17051,7 +17072,7 @@ ai_will_do = {
 					add_extra_state_shared_building_slots = 5
 					add_building_construction = {
 						type = industrial_complex
-						level = 2
+						level = 4
 						instant_build = yes
 					}
 				}
@@ -17059,14 +17080,14 @@ ai_will_do = {
 					limit = {
 						free_building_slots = {
 							building = industrial_complex
-							size > 3
+							size > 4
 							include_locked = yes
 						}
 					}
 					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 						type = industrial_complex
-						level = 2
+						level = 4
 						instant_build = yes
 					}
 				}
@@ -17074,14 +17095,14 @@ ai_will_do = {
 					limit = {
 						free_building_slots = {
 							building = industrial_complex
-							size > 2
+							size > 4
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 3
+					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 						type = industrial_complex
-						level = 2
+						level = 4
 						instant_build = yes
 					}
 				}
@@ -17093,10 +17114,10 @@ ai_will_do = {
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 						type = industrial_complex
-						level = 2
+						level = 4
 						instant_build = yes
 					}
 				}
@@ -17117,7 +17138,7 @@ ai_will_do = {
 		id = SOV_church_candidates
 		icon = GFX_focus_generic_diplomatic_treaty
 		prerequisite = { focus = SOV_romanov_reconstruction focus = SOV_dismantle_the_zemsky_sobor }
-		x = 5
+		x = 7
 		y = 1
 		relative_position_id = SOV_romanov_reconstruction
 		cost = 5
@@ -17150,6 +17171,27 @@ ai_will_do = {
 		}
 	}
 
+	focus = {
+		id = SOV_Industry_of_the_Tsar
+		icon = GFX_focus_generic_military_industry
+		prerequisite = { 
+			focus = SOV_capital_of_the_tsars
+ 		}
+		x = -1
+		y = 1
+		relative_position_id = SOV_capital_of_the_tsars
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			add_ideas = SOV_Industry_of_the_Tsar
+		}
+	}
 
 
 	focus = {
@@ -17158,7 +17200,7 @@ ai_will_do = {
 		prerequisite = { 
 			focus = SOV_romanov_reconstruction 
  		}
-		x = -5
+		x = -4
 		y = 1
 		relative_position_id = SOV_romanov_reconstruction
 		cost = 5
@@ -17175,14 +17217,14 @@ ai_will_do = {
 	}
 
 	focus = {
-		id = SOV_the_iron_wall_of_russian_resolve
+		id = SOV_the_iron_wall_of_russian_resolve1
 		icon = GFX_SOV_the_iron_wall_of_russian_resolve_ccp_2d_sov_compatibility
 		prerequisite = { 
-			focus = SOV_reinstitute_the_mestnichestvo
+			focus = SOV_romanov_reconstruction focus = SOV_dismantle_the_zemsky_sobor
  		}
-		x = -1
+		x = 1
 		y = 1
-		relative_position_id = SOV_reinstitute_the_mestnichestvo
+		relative_position_id = SOV_romanov_reconstruction
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -17210,13 +17252,6 @@ ai_will_do = {
 			add_breakthrough_progress = {
 				specialization = specialization_land
 				value = 1
-			}
-			add_tech_bonus = {
-				name = SOV_the_iron_wall_of_russian_resolve
-				ahead_reduction = 1 # was 2
-				bonus = 1
-				uses = 1
-				technology = super_heavy_tank_chassis
 			}
 			add_ideas = SOV_the_iron_wall_of_russian_resolve
 		}
@@ -17412,6 +17447,42 @@ ai_will_do = {
 	}
 
 	focus = {
+		id = SOV_the_holy_army
+		icon = GFX_goal_generic_small_arms
+
+		prerequisite = { focus = SOV_the_third_rome }
+
+		x = 0
+		y = 1
+		relative_position_id = SOV_the_third_rome
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = no
+
+		available = {
+			is_subject = no
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+			}
+		}
+		
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SOV_legacy_of_rome
+				add_idea = SOV_legacy_of_rome_2
+			}
+   			}
+	}
+
+	focus = {
 		id = SOV_vengeance_for_the_yoke
 		icon = GFX_focus_generic_attack_mongolia
 		prerequisite = { focus = SOV_romanov_reconstruction focus = SOV_dismantle_the_zemsky_sobor }
@@ -17449,57 +17520,12 @@ ai_will_do = {
 		}
 	}
 
-	focus = {
-		id = SOV_reclaim_uryankhay_krai
-
-		icon = GFX_goal_generic_occupy_states_ongoing_war
-
-		dynamic = yes
-
-		prerequisite = { focus = SOV_romanov_reconstruction focus = SOV_dismantle_the_zemsky_sobor }
-
-		x = -7
-		y = 1
-		relative_position_id = SOV_dismantle_the_zemsky_sobor
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = no
-
-		will_lead_to_war_with = TAN
-
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-
-		available = {
-			is_subject = no
-			TAN = {
-				exists = yes
-				NOT = {
-					OR = {
-						is_in_faction_with = ROOT
-						is_subject_of = ROOT
-					}
-				}
-			}
-		}
-
-		completion_reward = {
-			create_wargoal = { 
-				type = annex_everything 
-				target = TAN 
-			}		
-		}
-	}
-
 
 	focus = {
 		id = SOV_westward_bound
 		icon = GFX_SOV_westward_bound_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_romanov_reconstruction focus = SOV_dismantle_the_zemsky_sobor }
-		x = 1
+		x = 3
 		y = 1
 		relative_position_id = SOV_romanov_reconstruction
 		cost = 5
@@ -17677,7 +17703,7 @@ ai_will_do = {
 	focus = {
 		id = SOV_the_triple_entente
 		icon = GFX_SOV_the_triple_entente_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_westward_bound }
+		prerequisite = { focus = SOV_capital_of_the_tsars }
 		prerequisite = { focus = SOV_romanov_reconstruction }
 		x = -4
 		y = 1
@@ -17791,7 +17817,7 @@ ai_will_do = {
 		icon = GFX_SOV_our_slavic_commitments_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_the_triple_entente }
 		mutually_exclusive = { focus = SOV_panslavic_nationalism }
-		x = 0
+		x = 2
 		y = 1
 		relative_position_id = SOV_the_triple_entente
 		cost = 5
@@ -17819,8 +17845,8 @@ ai_will_do = {
 	focus = {
 		id = SOV_the_old_enemy
 		icon = GFX_focus_generic_attack_sweden
-		prerequisite = { focus = SOV_westward_bound }
-		x = -2
+		prerequisite = { focus = SOV_westward_bound focus = SOV_secure_the_baltics }
+		x = 0
 		y = 1
 		relative_position_id = SOV_westward_bound
 		cost = 5
@@ -17855,8 +17881,8 @@ ai_will_do = {
 	focus = {
 		id = SOV_secure_finland
 		icon = GFX_focus_generic_attack_finland
-		prerequisite = { focus = SOV_westward_bound }
-		x = 0
+		prerequisite = { focus = SOV_westward_bound focus = SOV_secure_the_baltics }
+		x = 2
 		y = 1
 		relative_position_id = SOV_westward_bound 
 		cost = 5
@@ -17892,10 +17918,10 @@ ai_will_do = {
 	focus = {
 		id = SOV_secure_the_baltics
 		icon = GFX_focus_generic_attack_baltics
-		prerequisite = { focus = SOV_westward_bound }
-		x = 2
+		prerequisite = { focus = SOV_romanov_reconstruction focus = SOV_dismantle_the_zemsky_sobor }
+		x = 5
 		y = 1
-		relative_position_id = SOV_westward_bound
+		relative_position_id = SOV_romanov_reconstruction
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -17946,11 +17972,9 @@ ai_will_do = {
 	focus = {
 		id = SOV_panslavic_nationalism
 		icon = GFX_focus_SOV_panslavic_nationalism
-		prerequisite = { focus = SOV_secure_the_baltics }
-		prerequisite = { focus = SOV_secure_finland }
-		prerequisite = { focus = SOV_the_old_enemy }
+		prerequisite = { focus = SOV_secure_finland  focus = SOV_the_old_enemy }
 		mutually_exclusive = { focus = SOV_the_rightful_heir_to_the_empire focus = SOV_our_slavic_commitments }
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = SOV_secure_finland
 		cost = 5
@@ -18134,7 +18158,7 @@ ai_will_do = {
 		id = SOV_the_fate_of_romania
 		icon = GFX_SOV_the_fate_of_romania_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_our_slavic_commitments focus = SOV_panslavic_nationalism }
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = SOV_our_slavic_commitments
 		cost = 5
@@ -18156,6 +18180,51 @@ ai_will_do = {
 			create_wargoal = { type = annex_everything target = ROM }
 		}
 	}	
+
+	focus = {
+		id = SOV_the_iron_wall_Power
+		icon = GFX_focus_generic_heavy_tank
+		prerequisite = { 
+			focus = SOV_the_iron_wall_of_russian_resolve1
+ 		}
+		prerequisite = {
+			focus = SOV_panslavic_nationalism
+			focus = SOV_our_slavic_commitments
+		}
+		x = -1
+		y = 3
+		relative_position_id = SOV_the_iron_wall_of_russian_resolve1
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = SOV_the_iron_wall_power
+		}
+	}
+
+	focus = {
+		id = SOV_Slavic_War_Economy
+		icon = GFX_SOV_war_economy_ccp_2d_sov_compatibility
+		prerequisite = {
+			focus = SOV_panslavic_nationalism
+			focus = SOV_our_slavic_commitments
+		}
+		x = 1
+		y = 1
+		relative_position_id = SOV_our_slavic_commitments
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = Slavic_War_Economy
+		}
+	}
 
 	focus = {
 		id = SOV_pacify_the_rim
@@ -18889,7 +18958,7 @@ ai_will_do = {
 		icon = GFX_focus_ETH_re-convene_the_parliament
 		prerequisite = { focus = SOV_reconvene_the_zemsky_sobor }
 		mutually_exclusive = { focus = SOV_romanov_reconstruction focus = SOV_dismantle_the_zemsky_sobor }
-		x = 20
+		x = 21
 		y = 1
 		relative_position_id = SOV_reconvene_the_zemsky_sobor
 		cost = 5
