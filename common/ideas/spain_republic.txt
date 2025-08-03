@@ -34,7 +34,7 @@ ideas = {
 		
 			modifier = {
 				resistance_target = -0.2
-				consumer_goods_expected_value = 0.15
+				consumer_goods_expected_value = 0.1
 				production_speed_industrial_complex_factor = 0.15
 				production_speed_arms_factory_factor = 0.3
 				conversion_cost_civ_to_mil_factor= -0.3
@@ -43,8 +43,8 @@ ideas = {
 				industrial_capacity_factory = 0.7
 				industrial_capacity_dockyard = 0.7
 				research_speed_factor = -0.1
-				production_factory_efficiency_gain_factor = -0.2
-				production_factory_max_efficiency_factor = -0.2
+				production_factory_efficiency_gain_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
 				line_change_production_efficiency_factor = 0.1
 			}
 			
@@ -57,7 +57,22 @@ ideas = {
 	}
 
 	country = {
+		SPR_rebuild_the_nation_idea = {
 
+			picture = GFX_goal_generic_reconstruction
+
+			allowed = {
+				original_tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				production_speed_industrial_complex_factor = -0.35
+			}
+		}
 		SPR_government_power_struggle = {
 
 			picture = generic_disjointed_gov
@@ -868,7 +883,7 @@ ideas = {
 			modifier = {
 				war_support_weekly = -0.005
 				army_defence_factor = 0.1
-				army_attack_factor = 0.05
+				army_attack_factor = 0.15
 			}
 		}
 
@@ -942,8 +957,8 @@ ideas = {
 
 			targeted_modifier = {
 				tag = SPD
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.05
+				attack_bonus_against = 0.25
+				defense_bonus_against = -0.05
 			}
 		}
 
@@ -964,8 +979,8 @@ ideas = {
 
 			targeted_modifier = {
 				tag = SPR
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.05
+				attack_bonus_against = 0.25
+				defense_bonus_against = -0.05
 			}
 		}
 
@@ -984,8 +999,8 @@ ideas = {
 
 			targeted_modifier = {
 				tag = SPC
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.05
+				attack_bonus_against = 0.05
+				defense_bonus_against = -0.05
 			}
 		}
 
@@ -1160,8 +1175,7 @@ ideas = {
 			}
 
 			modifier = {
-				army_defence_factor = 0.05
-				army_attack_factor = 0.05
+				combat_width_factor = -0.15
 				industrial_capacity_factory = 0.05
 				conscription = 0.02
 			}
@@ -1183,8 +1197,7 @@ ideas = {
 			}
 
 			modifier = {
-				army_defence_factor = 0.05
-				army_attack_factor = 0.05
+				combat_width_factor = -0.15
 				industrial_capacity_factory = 0.05
 				consumer_goods_factor = -0.15
 				conscription = 0.02
@@ -1207,8 +1220,7 @@ ideas = {
 			}
 
 			modifier = {
-				army_defence_factor = 0.05
-				army_attack_factor = 0.05
+				combat_width_factor = -0.15
 				industrial_capacity_factory = 0.05
 				consumer_goods_factor = -0.15
 				conscription = 0.05
@@ -1250,7 +1262,7 @@ ideas = {
 			}
 
 			modifier = {
-				conscription = 0.03
+				conscription = 0.05
 			}
 		}
 
@@ -1289,7 +1301,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = -0.15
+				consumer_goods_factor = -0.25
 			}
 		}
 
@@ -1482,7 +1494,8 @@ ideas = {
 			}
 
 			modifier = {
-				stability_weekly = 0.002
+				stability_weekly = 0.01
+				production_speed_buildings_factor = 0.25
 				communism_drift = 0.05
 				industry_repair_factor = 0.1
 			}
@@ -1504,6 +1517,7 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = -0.15
 				stability_factor = 0.1
+				army_morale_factor = 0.15
 			}
 		}
 
@@ -1521,9 +1535,9 @@ ideas = {
 			}
 
 			modifier = {
-				production_speed_buildings_factor = 0.1
-				industrial_capacity_factory = 0.05
-				industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.25
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
 			}
 		}
 
@@ -1625,7 +1639,8 @@ ideas = {
 			}
 
 			modifier = {
-				army_attack_factor = 0.1
+				army_org_regain = 0.25
+				army_speed_factor = 0.15
 			}
 		}
 
@@ -1644,7 +1659,8 @@ ideas = {
 
 			modifier = {
 				war_support_factor = 0.10
-				justify_war_goal_time = -0.75
+				justify_war_goal_time = -0.7
+			    stability_weekly = 0.02
 			}
 		}
 

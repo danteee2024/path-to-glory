@@ -1814,7 +1814,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = SPA_glory_and_wealth_on_the_sea_lanes
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -1849,6 +1849,40 @@ focus_tree = {
 				}
 				set_state_flag = SPA_improve_domestic_naval_facilities_3DY
 			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = SPA_improve_domestic_naval_facilities_3DY
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = SPA_improve_domestic_naval_facilities_3DY
+			}
 		}
 	}
 
@@ -1864,7 +1898,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SPA_improve_domestic_naval_facilities
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -1878,6 +1912,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			
 		}
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
@@ -1893,6 +1928,40 @@ focus_tree = {
 				bonus = 1
 				uses = 1
 				category = cv_tech
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = SPA_a_great_maritime_power_4DY
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = SPA_a_great_maritime_power_4DY
 			}
 			random_owned_controlled_state = {
 				limit = {
@@ -2713,7 +2782,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SPA_mandatory_pre_military_training
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER}
@@ -2929,22 +2998,7 @@ focus_tree = {
 		available = {
 			has_global_flag = scw_over
 			is_in_faction = no
-			OR = {
-				AND = {
-					GER = {
-						has_government = fascism
-						is_faction_leader = yes
-					}
-				}
-				AND = {
-					ITA = {
-						has_government = fascism
-						is_faction_leader = yes
-					}
-				}
-			}
-			NOT = { has_completed_focus = SPA_the_latin_bloc }
-			NOT = { has_global_flag = POR_iberian_summit_in_progress_flag }
+			
 		}
 		bypass = {
 			OR = {
@@ -3698,12 +3752,10 @@ focus_tree = {
 	focus = {
 		id = SPA_expand_the_axis_gold_trade
 		available = {
-			NOT = { has_completed_focus = SPA_the_stabilization_plan }
 		}
 		bypass = {
 		}
 		prerequisite = { focus = SPA_spanish_austerity }
-		mutually_exclusive = { focus = SPA_capitalist_economic_aid }
 		
 		icon = GFX_focus_usa_reestablish_the_gold_standard
 		x = 0
@@ -4444,24 +4496,7 @@ focus_tree = {
 		available = {
 			has_global_flag = scw_over
 			is_in_faction = no
-			OR = {
-				AND = {
-					ENG = {
-						has_government = democratic
-						is_faction_leader = yes
-					}
-				}
-				AND = {
-					USA = {
-						has_government = democratic
-						is_faction_leader = yes
-					}
-				}
-			}
-			NOT = { has_completed_focus = SPA_the_latin_bloc }
-			NOT = { has_government = fascism }
-			fascism < 0.4		
-			NOT = { has_global_flag = POR_iberian_summit_in_progress_flag }
+			
 		}
 		bypass = {
 			OR = {
@@ -4517,11 +4552,7 @@ focus_tree = {
 	focus = {
 		id = SPA_the_stabilization_plan
 		available = {
-			NOT = { has_completed_focus = SPA_expand_the_axis_gold_trade }
-			OR = {
-				is_in_faction_with = ENG
-				is_in_faction_with = USA
-			}
+			
 		}
 		bypass = {
 		}
@@ -4545,10 +4576,7 @@ focus_tree = {
 	focus = {
 		id = SPA_expand_spanish_bases
 		available = {
-			OR = {
-				is_in_faction_with = ENG
-				is_in_faction_with = USA
-			}
+			
 		}
 		bypass = {
 		}
@@ -4709,16 +4737,12 @@ focus_tree = {
 	focus = {
 		id = SPA_capitalist_economic_aid
 		available = {
-			OR = {
-				is_in_faction_with = ENG
-				is_in_faction_with = USA
-			}
+			
 		}
 		bypass = {
 		}
 		prerequisite = { focus = SPA_expand_spanish_bases }
 		prerequisite = { focus = SPA_reduce_reliance_on_foreign_resources }
-		mutually_exclusive = { focus = SPA_expand_the_axis_gold_trade }
 		
 		icon = GFX_focus_generic_the_giant_wakes
 		x = -1
@@ -4773,10 +4797,7 @@ focus_tree = {
 	focus = {
 		id = SPA_improve_living_standards
 		available = {
-			OR = {
-				is_in_faction_with = ENG
-				is_in_faction_with = USA
-			}
+			
 		}
 		bypass = {
 		}
@@ -4831,10 +4852,7 @@ focus_tree = {
 	focus = {
 		id = SPA_domestic_industrial_developments
 		available = {
-			OR = {
-				is_in_faction_with = ENG
-				is_in_faction_with = USA
-			}
+			
 		}
 		bypass = {
 		}
@@ -4887,10 +4905,7 @@ focus_tree = {
 	focus = {
 		id = SPA_the_spanish_miracle
 		available = {
-			OR = {
-				is_in_faction_with = ENG
-				is_in_faction_with = USA
-			}
+			
 		}
 		bypass = {
 		}
@@ -6418,7 +6433,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SPA_militarize_the_masses
-		cost = 20
+		cost = 10
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_MANPOWER}
@@ -9892,7 +9907,7 @@ focus_tree = {
 					}
 					is_core_of = ROOT
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				set_state_flag = SPR_land_redistribution_1slot
 			}
 			random_owned_controlled_state = {
@@ -9905,7 +9920,7 @@ focus_tree = {
 					is_core_of = ROOT
 					NOT = { has_state_flag = SPR_land_redistribution_1slot }
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				set_state_flag = SPR_land_redistribution_1slot
 			}
 			random_owned_controlled_state = {
@@ -9918,7 +9933,7 @@ focus_tree = {
 					is_core_of = ROOT
 					NOT = { has_state_flag = SPR_land_redistribution_1slot }
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				set_state_flag = SPR_land_redistribution_1slot
 			}
 			random_owned_controlled_state = {
@@ -9931,7 +9946,7 @@ focus_tree = {
 					is_core_of = ROOT
 					NOT = { has_state_flag = SPR_land_redistribution_1slot }
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				set_state_flag = SPR_land_redistribution_1slot
 			}
 			random_owned_controlled_state = {
@@ -9944,7 +9959,7 @@ focus_tree = {
 					is_core_of = ROOT
 					NOT = { has_state_flag = SPR_land_redistribution_1slot }
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				set_state_flag = SPR_land_redistribution_1slot
 			}
 		}
@@ -10042,7 +10057,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = SPR_class_war
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
@@ -13009,7 +13024,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SPR_engineering_advances
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -13026,6 +13041,106 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
+			add_ideas = SPR_rebuild_the_nation_idea
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+					}
+					is_core_of = ROOT
+				}
+				set_state_flag = SPR_rebuild_the_nation_2civ
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+					}
+					is_core_of = ROOT
+					NOT = { has_state_flag = SPR_rebuild_the_nation_2civ }
+				}
+				set_state_flag = SPR_rebuild_the_nation_2civ
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+					}
+					is_core_of = ROOT
+				}
+				set_state_flag = SPR_rebuild_the_nation_2civ
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+					}
+					is_core_of = ROOT
+					NOT = { has_state_flag = SPR_rebuild_the_nation_2civ }
+				}
+				set_state_flag = SPR_rebuild_the_nation_2civ
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+					}
+					is_core_of = ROOT
+				}
+				set_state_flag = SPR_rebuild_the_nation_2civ
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+					}
+					is_core_of = ROOT
+					NOT = { has_state_flag = SPR_rebuild_the_nation_2civ }
+				}
+				set_state_flag = SPR_rebuild_the_nation_2civ
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -13385,10 +13500,10 @@ focus_tree = {
 					is_core_of = ROOT
 				}
 				set_state_flag = SPR_wartime_industry_1mil
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -13402,10 +13517,10 @@ focus_tree = {
 					NOT = { has_state_flag = SPR_wartime_industry_1mil }
 				}
 				set_state_flag = SPR_wartime_industry_1mil
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -13419,10 +13534,10 @@ focus_tree = {
 					NOT = { has_state_flag = SPR_wartime_industry_1mil }
 				}
 				set_state_flag = SPR_wartime_industry_1mil
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -13436,10 +13551,10 @@ focus_tree = {
 					NOT = { has_state_flag = SPR_wartime_industry_1mil }
 				}
 				set_state_flag = SPR_wartime_industry_1mil
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}

@@ -464,7 +464,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = -0.15
+				consumer_goods_factor = -0.25
 			}
 		}
 
@@ -499,10 +499,17 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-
+             equipment_bonus = {
+				infantry_equipment = {
+					soft_attack = 0.25
+					hard_attack = 0.75
+					build_cost_ic = 0.05
+				}
+			}
 			modifier = {
 				training_time_factor = -0.1
 				minimum_training_level = -0.1
+				
 			}
 		}
 
@@ -519,7 +526,31 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-
+  equipment_bonus = {
+				infantry_equipment = {
+					soft_attack = 0.25
+					hard_attack = 0.75
+					build_cost_ic = 0.05
+				}
+				light_tank_equipment = {
+					soft_attack = 0.05
+					hard_attack = 0.05
+					breakthrough_factor = 0.05
+					build_cost_ic = -0.05
+				}
+				medium_tank_equipment = {
+					soft_attack = 0.05
+					hard_attack = 0.05
+					breakthrough_factor = 0.05
+					build_cost_ic = -0.05
+				}
+				heavy_tank_equipment = {
+					soft_attack = 0.05
+					hard_attack = 0.05
+					breakthrough_factor = 0.05
+					build_cost_ic = -0.05
+				}
+			}
 			modifier = {
 				conscription = 0.02
 				training_time_factor = -0.1
@@ -740,7 +771,7 @@ ideas = {
 			}
 
 			modifier = {
-				production_speed_buildings_factor = 0.25
+				production_speed_buildings_factor = 0.15
 			}
 		}
 
@@ -793,7 +824,7 @@ ideas = {
 			}
 
 			modifier = {
-				breakthrough_factor = 0.10
+				breakthrough_factor = 0.15
 				army_attack_factor = 0.05
 			}
 		}
@@ -1043,8 +1074,8 @@ ideas = {
 
 			modifier = {
 				army_defence_factor = 0.1
-				army_attack_factor = 0.15
-				army_org_factor = 0.1
+				army_attack_factor = 0.25
+				army_org_factor = 0.15
 				army_speed_factor = 0.05
 				training_time_factor = -0.2
 				conscription = 0.05
