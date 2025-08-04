@@ -1,3 +1,10 @@
+nuclear_deterrence_category = {
+	icon = GFX_nukestate_decisions
+	visible = {
+    has_country_flag = has_nukes_but_hidden
+  }
+}
+
 debug_decisions = {
 	icon = generic_research
 	visible = {

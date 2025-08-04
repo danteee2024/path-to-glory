@@ -1,0 +1,59 @@
+add_namespace = nuclear_deterrence
+
+country_event = {
+  id = nuclear_deterrence.1
+  title = nuclear_deterrence.1.t
+  desc = nuclear_deterrence.1.d
+  picture = GFX_report_event_physics_lab_01
+
+  is_triggered_only = yes
+
+  trigger = {
+    num_of_nukes > 0
+  }
+  option = {
+
+    name = nuclear_deterrence.1.a
+
+    set_country_flag = got_nuclear_deterrent_spirit_flag
+
+    set_country_flag = nukes_declared
+    
+    add_ideas = nuclear_state_idea
+
+    hidden_effect = {
+    news_event = { hours = 6 id = news.1000 }
+    }
+  }
+
+  option = {
+
+    name = nuclear_deterrence.1.b
+
+    set_country_flag = has_nukes_but_hidden
+
+    add_decision_category = nuclear_deterrence_category
+
+    set_country_flag = got_nuclear_deterrent_spirit_flag
+  }
+
+}
+
+news_event = {
+	id = news.1000
+	title = news.1000.t
+	desc = news.1000.d
+	picture = GFX_news_event_nuke
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.1000.a
+      trigger = {
+      }
+		}
+#	option = {
+#		name = news.1000.b
+#		trigger = { TAG = ROOT }
+#	}
+}

@@ -1,0 +1,21 @@
+ideas = {
+  country = {
+
+  nuclear_state_idea = {
+    picture = nukestate
+    allowed = {
+      always = yes
+    }
+    removal_cost = -1
+    modifier = {
+      enemy_justify_war_goal_time = 1
+      enemy_declare_war_tension = 0.25
+      political_power_gain = 0.05
+      defensive_war_stability_factor = 0.15
+      offensive_war_stability_factor = 0.15
+      stability_factor = 0.1
+      war_support_factor = 0.1
+      }
+    }
+  }
+}
