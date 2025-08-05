@@ -83,37 +83,3 @@ defined_text = {
 		localization_key = "50"
 	}
 }
-defined_text = {
-	name = NIDEAS_SCRIPT_LOC_ELECTION_LIBERTY
-	text = {
-		trigger = {
-			ROOT = {
-				has_elections = no
-			}
-		}
-		localization_key = "                                               Elections will be held every 48 months"
-	}
-	text = {
-		trigger = {
-			always = yes
-		}
-		localization_key = ""
-	}
-}
-defined_text = {
-	name = NIDEAS_SCRIPT_LOC_ELECTION_AUTHORITY
-	text = {
-		trigger = {
-			ROOT = {
-				has_elections = yes
-			}
-		}
-		localization_key = "                               Elections will no longer be held"
-	}
-	text = {
-		trigger = {
-			always = yes
-		}
-		localization_key = ""
-	}
-}

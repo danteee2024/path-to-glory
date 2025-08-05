@@ -52,7 +52,6 @@ ideas = {
 			modifier = {
 				democratic_drift = 0.05
 				defensive_war_stability_factor = 0.2
-				stability_weekly = 0.001
 			}
 		}	
 	}
@@ -64,7 +63,7 @@ ideas = {
 
 			modifier = {
 				political_power_gain = 0.5
-				compliance_growth = 0.1
+				compliance_growth = 0.01
 				#custom_modifier_tooltip = NIDEAS_IDEA_GROUP1_CORING_COST_MODIFIER
 			}
 		}	
@@ -78,7 +77,6 @@ ideas = {
 			modifier = {
 				democratic_drift = -0.05
 				offensive_war_stability_factor = 0.2
-				war_support_weekly = 0.001
 			}
 		}	
 	}
@@ -112,10 +110,9 @@ ideas = {
 				
 				democratic_drift = 0.05
 				defensive_war_stability_factor = 0.2
-				stability_weekly = 0.001
 
 				#political_power_gain = 0.5
-				compliance_growth = 0.1
+				compliance_growth = 0.01
 				#custom_modifier_tooltip = NIDEAS_IDEA_GROUP1_CORING_COST_MODIFIER
 				
 				political_power_gain = 0.8
@@ -139,7 +136,6 @@ ideas = {
 				
 				democratic_drift = -0.05
 				offensive_war_stability_factor = 0.2
-				war_support_weekly = 0.001
 				
 				#political_power_gain = 0.5
 				resistance_damage_to_garrison = -0.2
@@ -302,8 +298,7 @@ ideas = {
 				
 				justify_war_goal_time = -0.25
 				civilian_intel_to_others = -10
-				
-				stability_weekly = 0.001				
+				stability_weekly = 0.001
 			}
 		}
 	}
@@ -352,7 +347,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				production_speed_buildings_factor = 0.10
+				production_speed_buildings_factor = 0.05
 			}
 			research_bonus = {
 				industry = 0.05
@@ -417,7 +412,7 @@ ideas = {
 				
 				global_building_slots_factor = 0.10
 				
-				production_speed_buildings_factor = 0.10
+				production_speed_buildings_factor = 0.05
 				
 				industrial_capacity_factory = 0.1
 				
@@ -441,7 +436,7 @@ ideas = {
 				
 				global_building_slots_factor = 0.10
 				
-				production_speed_buildings_factor = 0.10
+				production_speed_buildings_factor = 0.05
 				
 				monthly_population = 0.1
 				weekly_manpower = 200
@@ -513,8 +508,8 @@ ideas = {
 
 			modifier = {
 				non_core_manpower = 0.05
-				resistance_growth = -0.2
-				resistance_decay = 0.1
+				resistance_growth = -0.1
+				resistance_decay = 0.05
 			}
 		}	
 	}
@@ -525,7 +520,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				compliance_growth = 0.1
+				compliance_growth = 0.01
 				local_factory_sabotage = -0.5
 			}
 		}	
@@ -572,10 +567,10 @@ ideas = {
 				#custom_modifier_tooltip = NIDEAS_IDEA_GROUP4_FORM_NATION_DEBUFFS_MODIFIER
 				
 				non_core_manpower = 0.05
-				resistance_growth = -0.2
-				resistance_decay = 0.1
+				resistance_growth = -0.1
+				resistance_decay = 0.05
 
-				compliance_growth = 0.1
+				compliance_growth = 0.01
 				local_factory_sabotage = -0.5
 			}
 		}	
@@ -638,7 +633,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				operative_slot = 2
+				operative_slot = 1
 			}
 		}	
 	}
@@ -717,7 +712,7 @@ ideas = {
 				
 				commando_trait_chance_factor = 0.2
 				
-				operative_slot = 3
+				operative_slot = 2
 				
 				intelligence_agency_defense = 1.0
 				enemy_operative_detection_chance_factor = 0.5
@@ -744,7 +739,7 @@ ideas = {
 				
 				commando_trait_chance_factor = 0.2
 				
-				operative_slot = 3
+				operative_slot = 2
 				
 				intel_from_operatives_factor = 0.20
 				operation_steal_tech_outcome = 0.25
@@ -991,8 +986,8 @@ ideas = {
 
 			modifier = {
 				army_defence_factor = 0.05
-				special_forces_defence_factor = 0.075
-				special_forces_attack_factor = 0.075
+				special_forces_defence_factor = 0.05
+				special_forces_attack_factor = 0.05
 			}
 		}	
 	}
@@ -1027,7 +1022,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				conscription = 0.05
+				conscription = 0.02
 				industrial_capacity_factory = 0.05
 				special_forces_cap = 0.025
 			}
@@ -1066,8 +1061,8 @@ ideas = {
 				#max_command_power = 50
 				
 				army_defence_factor = 0.05
-				special_forces_defence_factor = 0.075
-				special_forces_attack_factor = 0.075
+				special_forces_defence_factor = 0.05
+				special_forces_attack_factor = 0.05
 				
 				experience_gain_army_unit_factor = 0.15
 				army_org_factor = 0.05
@@ -1100,7 +1095,7 @@ ideas = {
 				army_intel_to_others = -5
 				#max_command_power = 50
 				
-				conscription = 0.05
+				conscription = 0.02
 				industrial_capacity_factory = 0.05
 				special_forces_cap = 0.025
 				

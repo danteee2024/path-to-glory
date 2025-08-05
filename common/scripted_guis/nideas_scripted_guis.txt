@@ -296,41 +296,7 @@ scripted_gui = {
 					NIDEAS_IDEA_GROUP1_SPIRIT4
 					NIDEAS_IDEA_GROUP1_SPIRIT5
 				}
-				if = {
-					limit = { has_elections = no }
-					if = {
-						limit = { has_government = var:communism }
-						set_politics = { ruling_party = var:communism   elections_allowed = yes   election_frequency = 48 }
-					}
-					if = {
-						limit = { has_government = var:fascism }
-						set_politics = { ruling_party = var:fascism   elections_allowed = yes   election_frequency = 48 }
-					}
-					if = {
-						limit = { has_government = var:democratic }
-						set_politics = { ruling_party = var:democratic   elections_allowed = yes   election_frequency = 48 }
-					}
-					if = {
-						limit = { has_government = var:neutrality }
-						set_politics = { ruling_party = var:neutrality   elections_allowed = yes   election_frequency = 48 }
-					}
-					if = {
-						limit = { has_government = var:technocracy   }
-						set_politics = { ruling_party = var:technocracy   elections_allowed = yes   election_frequency = 48 }
-					}
-					if = {
-						limit = { has_government = var:trozkism }
-						set_politics = { ruling_party = var:trozkism   elections_allowed = yes   election_frequency = 48 }
-					}
-					if = {
-						limit = { has_government = var:monarchy }
-						set_politics = { ruling_party = var:monarchy   elections_allowed = yes   election_frequency = 48 }
-					}
-					if = {
-						limit = { has_government = var:anarchism }
-						set_politics = { ruling_party = var:anarchism   elections_allowed = yes   election_frequency = 48 }
-					}
-				}
+				
 				add_to_variable = { var = ROOT.idea_group1_taken value = 1 }
 				add_to_variable = { var = ROOT.national_ideas_taken value = 1 }
 				#set_country_flag = nideas_coring_cost_reduced_cflag
@@ -369,41 +335,7 @@ scripted_gui = {
 					NIDEAS_IDEA_GROUP1_SPIRIT4
 					NIDEAS_IDEA_GROUP1_SPIRIT7
 				}
-				if = {
-					limit = { has_elections = yes }
-					if = {
-						limit = { has_government = var:communism }
-						set_politics = { ruling_party = var:communism   elections_allowed = no }
-					}
-					if = {
-						limit = { has_government = var:fascism }
-						set_politics = { ruling_party = var:fascism   elections_allowed = no }
-					}
-					if = {
-						limit = { has_government = var:democratic }
-						set_politics = { ruling_party = var:democratic   elections_allowed = no }
-					}
-					if = {
-						limit = { has_government = var:neutrality }
-						set_politics = { ruling_party = var:neutrality   elections_allowed = no }
-					}
-					if = {
-						limit = { has_government = var:technocracy   }
-						set_politics = { ruling_party = var:technocracy   elections_allowed = no }
-					}
-					if = {
-						limit = { has_government = var:trozkism }
-						set_politics = { ruling_party = var:trozkism   elections_allowed = no }
-					}
-					if = {
-						limit = { has_government = var:monarchy }
-						set_politics = { ruling_party = var:monarchy   elections_allowed = no }
-					}
-					if = {
-						limit = { has_government = var:anarchism }
-						set_politics = { ruling_party = var:anarchism   elections_allowed = no }
-					}
-				}
+				
 				add_to_variable = { var = ROOT.idea_group1_taken value = 1 }
 				add_to_variable = { var = ROOT.national_ideas_taken value = 1 }
 				#set_country_flag = nideas_border_war_cooldown_reduced_cflag
