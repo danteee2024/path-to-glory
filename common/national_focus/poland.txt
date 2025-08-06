@@ -10571,7 +10571,7 @@ focus_tree = {
 
 		x = -3
 		y = 1
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2.5
@@ -10660,7 +10660,7 @@ focus_tree = {
 
 		x = 2
 		y = 1
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2.5
@@ -10683,13 +10683,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POL_commonwealth_economy
-		icon = GFX_SOV_planned_economy_ccp_2d_sov_compatibility
-		prerequisite = { focus = POL_claim_greater_lithuania }
-		prerequisite = { focus = POL_claim_prussia }
-		relative_position_id = POL_claim_prussia
+		id = POL_restore_poland_sweden
+		icon = GFX_focus_generic_befriend_sweden
+		prerequisite = { focus = POL_commonwealth_army }
+		relative_position_id = POL_commonwealth_army
 
-		x = 1
+		x = -2
 		y = 1
 		cost = 10
 
@@ -10697,22 +10696,63 @@ focus_tree = {
 			factor = 2.5
 		}
 
-		available_if_capitulated = yes
+		available = {
+			is_subject = no 
+			}
 
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = { 
-			add_ideas = Commonwealth_Economy
-
+		bypass = {
+			POL = {
+				OR = {
+					is_subject_of = ROOT
+					exists = no
+				}
+			}
 		}
+
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+
+			if = {
+				limit = {
+					SWE = { exists = yes }
+				}
+				SWE = { country_event = NSB_poland_events.21e }
+				custom_effect_tooltip =  if_they_accept_tt
+				every_state = {
+					limit = {
+						is_core_of = SWE
+						NOT = { is_core_of = FIN }
+					}
+					add_claim_by = POL
+				}
+			}
+			else = {
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = SWE
+						}
+						NOT = { is_core_of = FIN }
+						NOT = { is_core_of = NOR }
+						NOT = { is_core_of = DEN }
+					}
+					add_claim_by = POL
+				}
+			}
+		}	
 	}	
+		
 
 	focus = {
 		id = POL_commonwealth_army
 		icon = GFX_focus_SOV_mobilization_plan
-		prerequisite = { focus = POL_commonwealth_economy }
-		relative_position_id = POL_commonwealth_economy
+		prerequisite = { focus = POL_claim_greater_lithuania }
+		prerequisite = { focus = POL_claim_prussia }
+		relative_position_id = POL_claim_prussia
 
-		x = -2
+		x = 1
 		y = 1
 		cost = 5
 
@@ -10730,8 +10770,8 @@ focus_tree = {
 	focus = {
 		id = POL_greater_commonwealth
 		icon = GFX_goal_generic_propaganda
-		prerequisite = { focus = POL_commonwealth_economy }
-		relative_position_id = POL_commonwealth_economy
+		prerequisite = { focus = POL_commonwealth_army }
+		relative_position_id = POL_commonwealth_army
 
 		x = 0
 		y = 1

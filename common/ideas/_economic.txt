@@ -795,37 +795,6 @@ level = 1
 			cancel_if_invalid = no
 		}
 
-		Commonwealth_Economy = {
-			picture = ARG_civilian_economy_boost
-             level = 1
-			allowed = {
-				tag = POL
-			}
-
-			available = {
-				has_completed_focus = POL_commonwealth_economy
-				has_stability > 0.7
-				OR = {
-					has_government = neutrality
-					}				
-			}
-
-			visible = {
-				tag = POL
-			}
-
-			cost = 300
-			removal_cost = -1
-
-			modifier = {
-				consumer_goods_expected_value = 0.15
-				production_speed_arms_factory_factor = 0.15
-				production_speed_dockyard_factor = 0.15
-				conversion_cost_civ_to_mil_factor= -0.1
-				conversion_cost_mil_to_civ_factor = -0.1
-			}
-			cancel_if_invalid = no
-		}
 
 
 
