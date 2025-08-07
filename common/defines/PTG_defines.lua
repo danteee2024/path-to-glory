@@ -96,7 +96,6 @@ NDefines.NDiplomacy.OPINION_FOR_DEMO_FROM_WT_GENERATION = -1.0		-- How much less
 
 
 
-NDefines.NCountry.BASE_RESEARCH_SLOTS = 3
 NDefines.NCountry.FEMALE_UNIT_LEADER_BASE_CHANCE = { 
         -- applies as a factor to female unit leader randomization
         -- the values needs to be zero if you don't actually have random portraits
