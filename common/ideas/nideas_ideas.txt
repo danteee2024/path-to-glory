@@ -296,6 +296,7 @@ ideas = {
 				
 				justify_war_goal_time = -0.25
 				civilian_intel_to_others = -10
+				
 				stability_weekly = 0.001
 			}
 		}
