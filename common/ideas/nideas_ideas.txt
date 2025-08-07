@@ -286,7 +286,6 @@ ideas = {
 
 			modifier = {
 				trade_opinion_factor = 0.25
-				custom_modifier_tooltip = NIDEAS_IDEA_GROUP2_TRADE_AGREEMENT_COST_MODIFIER
 				
 				research_sharing_per_country_bonus_factor = 1.0
 				
@@ -294,7 +293,6 @@ ideas = {
 				
 				extra_trade_to_overlord_factor = 0.25
 				autonomy_gain_trade_factor = 0.5
-				custom_modifier_tooltip = NIDEAS_IDEA_GROUP2_DEFENSE_AGREEMENT_COST_MODIFIER
 				
 				justify_war_goal_time = -0.25
 				civilian_intel_to_others = -10
