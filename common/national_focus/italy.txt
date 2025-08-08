@@ -2892,7 +2892,7 @@ focus_tree = {
 					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = industrial_complex
-						level = 1
+						level = 3
 						instant_build = yes
 					}
 				}
@@ -2911,7 +2911,7 @@ focus_tree = {
 					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = industrial_complex
-						level = 1
+						level = 3
 						instant_build = yes
 					}
 				}
@@ -2932,7 +2932,7 @@ focus_tree = {
 					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = arms_factory
-						level = 1
+						level = 3
 						instant_build = yes
 					}
 				}
@@ -2951,7 +2951,7 @@ focus_tree = {
 					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = arms_factory
-						level = 1
+						level = 3
 						instant_build = yes
 					}
 				}
@@ -2972,7 +2972,7 @@ focus_tree = {
 					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = industrial_complex
-						level = 1
+						level = 3
 						instant_build = yes
 					}
 				}
@@ -2991,7 +2991,7 @@ focus_tree = {
 					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = industrial_complex
-						level = 1
+						level = 3
 						instant_build = yes
 					}
 				}
@@ -3059,7 +3059,7 @@ focus_tree = {
 					117 = {
 						free_building_slots = {
 							building = industrial_complex
-							size > 1
+							size > 2
 							include_locked = yes
 						}
 					}
@@ -3075,15 +3075,15 @@ focus_tree = {
 							instant_build = yes						
 						}
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 6
 					add_building_construction = {
 						type = industrial_complex
-						level = 2
+						level = 4
 						instant_build = yes
 					}
 					add_building_construction = {
 						type = arms_factory
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 					add_building_construction = {
@@ -3115,15 +3115,15 @@ focus_tree = {
 							instant_build = yes						
 						}
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 6
 					add_building_construction = {
 						type = industrial_complex
-						level = 2
+						level = 4
 						instant_build = yes
 					}
 					add_building_construction = {
 						type = arms_factory
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -3144,10 +3144,10 @@ focus_tree = {
 							instant_build = yes						
 						}
 					}
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 						type = dockyard
-						level = 1
+						level = 4
 						instant_build = yes
 					}
 					add_building_construction = {
@@ -3221,7 +3221,7 @@ focus_tree = {
 				162 = {
 					add_resource = {
 						type = steel
-						amount = 12
+						amount = 24
 					}
 				}
 			}
