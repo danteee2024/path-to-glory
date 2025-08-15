@@ -1852,12 +1852,17 @@ focus = {
 		
 		available = {
 			date > 1937.6.1
+			controls_state = 284
+			controls_state = 723
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			every_core_state = {
+			284 = {
+				set_state_category = metropolis
+			}
+			723 = {
 				set_state_category = metropolis
 			}
 		}
