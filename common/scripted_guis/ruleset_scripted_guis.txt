@@ -1,0 +1,10 @@
+scripted_gui = {
+	ruleset = {
+		window_name = "ruleset_window"
+		context_type = player_context
+		visible = {
+			is_ai = no
+			has_global_flag = rt56rp_gr_ruleset_gflag
+		}
+	}
+}

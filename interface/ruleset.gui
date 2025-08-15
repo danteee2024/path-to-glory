@@ -1,0 +1,25 @@
+guiTypes = {
+	containerWindowType = {
+		name = "ruleset_window"
+		position = { x = -73 y = 60}
+		size = { width = 60 height = 60 }
+		orientation = UPPER_RIGHT
+		origo = UPPER_RIGHT
+		fade_time = 100
+		moveable = yes
+		fade_type = linear
+		click_to_front = no
+		clipping = no
+		#scale = 0.7
+		
+		buttonType = {
+			name = "open_ruleset"
+			spriteType = "GFX_ruleset_button"
+			position = { x = -29 y = 34 }
+			pdx_tooltip = "RULESET_TT"
+			web_link = "https://docs.google.com/document/d/1b_TxaY0-g_xUpXlXYGPMLi9QAzgx360Kz-1HDpjaE9w"
+			clicksound = click_ok
+			oversound = ui_menu_over
+		}
+	}
+}

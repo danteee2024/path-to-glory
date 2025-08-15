@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ruleset_button"
+		textureFile = "gfx/interface/ruleset/open_ruleset.dds"
+	}
+}
