@@ -112,7 +112,7 @@ guiTypes = {
 			name ="info_page1_discord_button"
 			spriteType = "GFX_info_discord"
 			position = { x = 20 y = 440}
-			web_link = "https://discord.gg/zJQRgxA4qs"
+			web_link = "https://discord.gg/KcxhwfVyus"
 		}
 
 		iconType ={

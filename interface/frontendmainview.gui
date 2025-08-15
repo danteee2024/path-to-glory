@@ -325,7 +325,7 @@ guiTypes = {
 			quadTextureSprite ="GFX_main_lobby_button"
 			buttonText = "Path To Glory Discord"
 			buttonFont = "hoi_24header"
-			web_link = "https://discord.gg/zJQRgxA4q"
+			web_link = "https://discord.gg/KcxhwfVyus"
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
