@@ -121,6 +121,7 @@ political_actions = {
 }
 
 foreign_influence = {
+	priority = -999
 	icon = generic_political_actions
 }
 
