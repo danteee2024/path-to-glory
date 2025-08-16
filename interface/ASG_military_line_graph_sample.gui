@@ -157,24 +157,7 @@ guiTypes = {
 			spriteType = "GFX_closebutton"
 			position = { x = 870 y = 20 }
 		}
-		buttonType = {
-			name = "add_button"
-			spriteType = "GFX_NV_btn_add"
-			position = { x = 20 y = 20 }
-		}
-		buttonType = {
-			name = "remove_button"
-			spriteType = "GFX_naval_decrease_amount"
-			position = { x = 20 y = 50 }
-		}
-		instantTextboxType = {
-			name = "SCALE_FACTOR"
-			position = { x = 15 y = 90}
-			font = "cg_18b"
-			text = ASG_military_scale_factor
-			maxWidth = 55
-			format = center
-		}
+		
 		instantTextboxType = {
 			name = "GER_legend"
 			position = { x = 200 y = 510}
