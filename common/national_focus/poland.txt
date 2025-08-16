@@ -305,12 +305,12 @@ focus_tree = {
 				limit = { has_state_flag = POL_start_central_industrial_region_1 }
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -330,15 +330,15 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = POL_start_central_industrial_region_1
@@ -383,7 +383,7 @@ focus_tree = {
 				limit = { has_state_flag = POL_start_central_industrial_region_1 }
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -420,10 +420,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = POL_start_central_industrial_region_1
@@ -720,7 +720,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = POL_central_defence_of_poland
-		cost = 4
+		cost = 5
 
 		available = {
 			
@@ -759,16 +759,38 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = POL_develop_upper_silesia_1
 			}
 		}
 	}
+
+		focus = {
+		id = POL_war_industry
+		icon = GFX_focus_generic_military_industry
+		prerequisite = { focus = POL_develop_upper_silesia }
+		x = 0
+		y = 2
+		relative_position_id = POL_develop_upper_silesia
+		cost = 5
+
+		available = {
+			
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = { 
+			add_ideas = POL_war_industry
+		}
+		}
 
 	focus = {
 		id = POL_agrarian_reform
@@ -836,7 +858,7 @@ focus_tree = {
 		id = POL_invest_in_eastern_poland
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = POL_agrarian_reform focus = POL_develop_upper_silesia }
-		x = 0
+		x = 1
 		y = 2
 		relative_position_id = POL_national_defence_fund
 		cost = 10
@@ -965,6 +987,39 @@ focus_tree = {
 				set_state_flag = POL_develop_east_poland_4
 			}
 		}
+	}
+
+	focus = {
+		id = POL_Economy_Trade
+		icon = GFX_focus_AFG_a_modern_economy
+		prerequisite = { focus = POL_agrarian_reform focus = POL_develop_upper_silesia }
+		x = 0
+		y = 1
+		relative_position_id = POL_agrarian_reform
+		cost = 5
+
+		available = {
+			
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+	if = {
+				limit = {
+					has_idea = uncontrolled_exports
+				}
+				swap_ideas = {
+					remove_idea = uncontrolled_exports
+					add_idea = export_focus
+				}
+			}
+	 }
 	}
 
 	focus = {
@@ -1130,9 +1185,14 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
 					level = 1
 					instant_build = yes
 				}
@@ -1147,7 +1207,12 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -1251,6 +1316,29 @@ focus_tree = {
 			}
 		}
 			#	Increase Infrastructure in Warsaw
+	}
+
+	focus = {
+		id = POL_Polish_Production
+		icon = GFX_focus_generic_reorient_production
+		prerequisite = { focus = POL_warsaw_main_railway_station }
+		prerequisite = { focus = POL_expand_central_industrial_region }
+		x = 1
+		y = 1
+		relative_position_id = POL_warsaw_main_railway_station
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		completion_reward = { 
+			add_ideas = POL_Polish_Production
+		}
 	}
 
 	############################
@@ -10493,7 +10581,7 @@ focus_tree = {
 
 		x = -3
 		y = 1
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2.5
@@ -10547,7 +10635,7 @@ focus_tree = {
 
 		x = 0
 		y = 1
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2.5
@@ -10582,7 +10670,7 @@ focus_tree = {
 
 		x = 2
 		y = 1
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2.5
@@ -10605,11 +10693,95 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POL_greater_commonwealth
-		icon = GFX_goal_generic_propaganda
+		id = POL_restore_poland_sweden
+		icon = GFX_focus_generic_befriend_sweden
+		prerequisite = { focus = POL_commonwealth_army }
+		relative_position_id = POL_commonwealth_army
+
+		x = -2
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available = {
+			is_subject = no 
+			}
+
+		bypass = {
+			POL = {
+				OR = {
+					is_subject_of = ROOT
+					exists = no
+				}
+			}
+		}
+
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+
+			if = {
+				limit = {
+					SWE = { exists = yes }
+				}
+				SWE = { country_event = NSB_poland_events.21e }
+				custom_effect_tooltip =  if_they_accept_tt
+				every_state = {
+					limit = {
+						is_core_of = SWE
+						NOT = { is_core_of = FIN }
+					}
+					add_claim_by = POL
+				}
+			}
+			else = {
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = SWE
+						}
+						NOT = { is_core_of = FIN }
+						NOT = { is_core_of = NOR }
+						NOT = { is_core_of = DEN }
+					}
+					add_claim_by = POL
+				}
+			}
+		}	
+	}	
+		
+
+	focus = {
+		id = POL_commonwealth_army
+		icon = GFX_focus_SOV_mobilization_plan
 		prerequisite = { focus = POL_claim_greater_lithuania }
 		prerequisite = { focus = POL_claim_prussia }
 		relative_position_id = POL_claim_prussia
+
+		x = 1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = { 
+			add_ideas = POL_Commonwealth_Army
+		}
+	}
+
+	focus = {
+		id = POL_greater_commonwealth
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = POL_commonwealth_army }
+		relative_position_id = POL_commonwealth_army
 
 		x = 0
 		y = 1
@@ -15376,15 +15548,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = uncontrolled_exports
-				}
-				swap_ideas = {
-					remove_idea = uncontrolled_exports
-					add_idea = export_focus
-				}
-			}
 			random_owned_controlled_state = {
 				prioritize = { 807 }
 				limit = {
@@ -15431,29 +15594,20 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = uncontrolled_exports
-				}
-				swap_ideas = {
-					remove_idea = uncontrolled_exports
-					add_idea = export_focus
-				}
-			}
 			random_owned_controlled_state = {
 				prioritize = { 85 }
 				limit = {
 					is_coastal = yes
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}			

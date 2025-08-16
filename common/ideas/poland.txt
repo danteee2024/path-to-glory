@@ -22,8 +22,46 @@ country = {
 			conscription = 0.02
 		}
 
-
 	}
+
+	POL_Commonwealth_Army = {
+
+		allowed = {
+			original_tag = POL
+		}
+
+		allowed_civil_war = {
+		}
+
+		removal_cost = -1
+
+		picture = MEX_politicised_army
+
+	    modifier = {
+			army_attack_against_major_factor = 0.1
+			army_defence_against_major_factor = 0.1
+		}
+	}
+
+	POL_Polish_Production = {
+
+		allowed = {
+			original_tag = POL
+		}
+
+		allowed_civil_war = {
+		}
+
+		removal_cost = -1
+
+		picture = generic_production_bonus
+
+	    modifier = {
+			industrial_capacity_factory = 0.1
+			consumer_goods_factor = -0.1
+		}
+	}
+
 	POL_anti_sov = {
 
 		name = "Focus on the Soviets"
@@ -155,6 +193,27 @@ country = {
 
 		modifier = {
 			production_speed_buildings_factor = 0.1
+			consumer_goods_factor = -0.1
+		}
+	}
+
+	POL_war_industry = {
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = no
+		}
+
+		removal_cost = -1
+
+		picture = SOV_rebuild_the_savior_cathedral_ccp_sov_compatibility
+
+		modifier = {
+			production_speed_arms_factory_factor = 0.15
+			production_speed_industrial_complex_factor = -0.1
 		}
 	}
 

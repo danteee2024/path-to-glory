@@ -796,6 +796,8 @@ level = 1
 		}
 
 
+
+
 		totaler_krieg_economy = {
 			visible = {
 				original_tag = GER
