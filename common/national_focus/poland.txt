@@ -1368,6 +1368,7 @@ focus_tree = {
 				category = land_doctrine
 			}
 			#1x 50% cost reduction for one land doctrine research
+			add_ideas = POL_prepare_for_war
 		}
 	}
 
@@ -1413,12 +1414,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_tech_bonus = {
-				name = POL_standardisation_of_equipment
-				bonus = 1.0
-				uses = 1
-				category = infantry_weapons
-			}
+			add_ideas = POL_standard_equipment
 			army_experience = 10
 		}
 	}
@@ -1538,8 +1534,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POL_cruiser_tank_experiments
-		icon = GFX_goal_generic_army_tanks
+		id = POL_artillery_power
+		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = POL_study_foreign_tanks }
 		
 		x = 0
@@ -1554,7 +1550,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-				add_ideas = POL_The_Ursus_Initiative 
+				add_ideas = POL_artillery_fire_power
 		}
 	}
 
@@ -2104,7 +2100,7 @@ focus_tree = {
 		icon = GFX_focus_POL_complete_april_constitution
 		mutually_exclusive = { focus = POL_organize_the_peasants_strike focus = POL_nationalist_constitution focus = POL_assemble_the_regency_council focus = POL_restore_the_sejm }
 		
-		x = 49
+		x = 50
 		y = 0
 		cost = 10
 
@@ -4043,7 +4039,7 @@ focus_tree = {
 		icon = GFX_focus_POL_plan_east
 		prerequisite = { focus = POL_prepare_for_the_next_war }
 		mutually_exclusive = { focus = POL_plan_west }
-		x = -17
+		x = -18
 		y = 1
 		relative_position_id = POL_complete_april_constitution
 		cost = 5
@@ -4076,6 +4072,30 @@ focus_tree = {
 					scope = POL
 				}
 			}
+		}
+	}
+
+	focus = {
+		id = POL_organized_plan
+		icon = GFX_SOV_keep_commissars_organization_ccp_2d_sov_compatibility
+		prerequisite = { focus = POL_plan_east focus = POL_plan_west }
+		x = 2
+		y = 1
+		relative_position_id = POL_plan_east
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		completion_reward = {
+		add_ideas = POL_organize_the_plan
 		}
 	}
 
@@ -5153,7 +5173,7 @@ focus_tree = {
 		
 		mutually_exclusive = { focus = POL_complete_april_constitution focus = POL_assemble_the_regency_council focus = POL_nationalist_constitution }
 
-		x = 61
+		x = 62
 		y = 0
 		cost = 10
 		
@@ -7651,7 +7671,7 @@ focus_tree = {
 		available = {
 		}
 
-		x = 77
+		x = 78
 		y = 0
 		cost = 5
 
@@ -7854,7 +7874,7 @@ focus_tree = {
 
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2.5
@@ -8064,7 +8084,7 @@ focus_tree = {
 
 		x = 0
 		y = 1
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2.5
@@ -9950,7 +9970,7 @@ focus_tree = {
 
 		x = 2
 		y = 1
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2.5
@@ -10893,7 +10913,7 @@ focus_tree = {
 
 		x = 0
 		y = 2
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2.5
@@ -11510,7 +11530,7 @@ focus_tree = {
 			}
 		}
 
-		x = 91
+		x = 93
 		y = 0
 		offset = {
 			x = 2
@@ -11686,7 +11706,7 @@ focus_tree = {
 
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2.5
@@ -11722,7 +11742,7 @@ focus_tree = {
 		cost = 10
 		
 		available = {
-			fascism > 0.5
+			fascism > 0.4
 			is_subject = no 
 		}
 
@@ -11768,7 +11788,7 @@ focus_tree = {
 		}
 		
 		available = {
-			fascism > 0.5
+			fascism > 0.4
 			is_subject = no 
 		}
 
@@ -11810,7 +11830,7 @@ focus_tree = {
 
 		x = -2
 		y = 1
-		cost = 10
+		cost = 5
 		
 		available = {
 			is_subject = no
@@ -11919,7 +11939,7 @@ focus_tree = {
 			}
 		}
 
-		x = 87
+		x = 88
 		y = 7
 		cost = 10
 		
@@ -11995,7 +12015,7 @@ focus_tree = {
 			}
 		}
 
-		x = 89
+		x = 90
 		y = 7
 		cost = 10
 		
@@ -12291,7 +12311,7 @@ focus_tree = {
 
 		x = 0
 		y = 1
-		cost = 10
+		cost = 5
 		
 		available = {
 			is_subject = no
@@ -12363,7 +12383,7 @@ focus_tree = {
 
 		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2.5
@@ -12417,7 +12437,7 @@ focus_tree = {
 
 		x = 4
 		y = 1
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2.5
@@ -12489,9 +12509,9 @@ focus_tree = {
 		prerequisite = { focus = POL_falangist_international }
 		relative_position_id = POL_falangist_international
 
-		x = 1
+		x = 3
 		y = 1
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2.5
@@ -12545,6 +12565,112 @@ focus_tree = {
 					}
 					country_event = NSB_polish_fascist_events.5 #Event to invite them to the faction and flip them fascist.
 					clr_country_flag = POL_valid_fascist_invitee
+				}
+			}
+		}
+	}
+
+		focus = {
+		id = POL_ask_for_the_Indies
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = POL_invite_the_lowlands }
+		relative_position_id = POL_invite_the_lowlands
+
+		x = -1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+
+		available_if_capitulated = no
+		
+		available = {
+		}
+		
+		bypass = {
+			OR = {
+				INS = {
+					OR = {
+						exists = no
+						has_capitulated = yes
+						has_war_with = ROOT
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			if = {
+				limit = {
+					INS = { has_war = no }
+				}
+				INS = {
+					country_event = {
+						id = generic.20
+						days = 1
+					}
+				}
+			}
+			else = {
+				create_wargoal = {
+					type = annex_everything
+					target = INS
+				}
+			}
+		}
+	}
+
+		focus = {
+		id = POL_ask_for_the_Congo
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = POL_invite_the_lowlands }
+		relative_position_id = POL_invite_the_lowlands
+
+		x = 1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		
+
+		available_if_capitulated = no
+		
+		available = {
+		}
+		
+		bypass = {
+			OR = {
+				COG = {
+					OR = {
+						exists = no
+						has_capitulated = yes
+						has_war_with = ROOT
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			if = {
+				limit = {
+					COG = { has_war = no }
+				}
+				COG = {
+					country_event = {
+						id = generic.20
+						days = 1
+					}
+				}
+			}
+			else = {
+				create_wargoal = {
+					type = annex_everything
+					target = COG
 				}
 			}
 		}
@@ -12672,9 +12798,9 @@ focus_tree = {
 		prerequisite = { focus = POL_falangist_international }
 		relative_position_id = POL_falangist_international
 
-		x = 3
+		x = 1
 		y = 1
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2.5
@@ -12794,7 +12920,7 @@ focus_tree = {
 		prerequisite = { focus = POL_demand_LIT }
 		relative_position_id = POL_demand_LIT
 
-		x = 0
+		x = -2
 		y = 1
 		cost = 10
 
@@ -12842,10 +12968,6 @@ focus_tree = {
 						controls_state = 815
 						controls_state = 814
 					}			
-					core_compliance = {
-						occupied_country_tag = LIT
-						value > 65
-					}
 				}
 				AND = {
 					LIT = {
@@ -12887,6 +13009,145 @@ focus_tree = {
 			}
 		}
 	}
+
+	focus = {
+		id = POL_demand_slovakia_pavel
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = POL_the_national_commonwealth }
+		relative_position_id = POL_the_national_commonwealth
+
+		x = -1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available_if_capitulated = yes
+		
+		available = {
+			is_subject = no
+			IF = {
+				limit = { has_completed_focus = POL_romanov }
+				has_government = neutrality
+			}
+			ELSE = {
+				has_government = fascism
+			}
+			has_army_manpower = { size > 499999 }	
+			OR = {
+				AND = {
+					SLO = {
+						exists = yes
+						is_subject = no
+						has_war = no
+						NOT = {
+							is_in_faction_with = ROOT
+						}
+					}
+				}
+				AND = {
+					CZE = {
+						exists = yes
+						is_subject = no
+						has_war = no
+						NOT = {
+							is_in_faction_with = ROOT
+						}
+						OR = {
+							owns_state = 73
+							owns_state = 664
+							owns_state = 71
+							owns_state = 70
+							owns_state = 72
+						}
+					}
+				}
+			}
+		}
+		
+		bypass = {
+			OR = {
+				AND = {
+					SLO = { exists = no }
+					CZE = { exists = no }
+				}
+				ROOT = {
+					controls_state = 73
+					controls_state = 664
+					controls_state = 71
+					controls_state = 70
+					controls_state = 72
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			73 = {
+				add_claim_by = POL
+			}
+			664 = {
+				add_claim_by = POL
+			}
+			71 = {
+				add_claim_by = POL
+			}
+			70 = {
+				add_claim_by = POL
+			}
+			72 = {
+				add_claim_by = POL
+			}
+			if = {
+				limit = {
+					SLO = { exists = yes }
+				}
+				SLO = {
+					country_event = NSB_poland_events.1
+				}
+			}
+			else_if = {
+				limit = {
+					CZE = { exists = yes }
+				}
+				CZE = {
+					country_event = NSB_poland_events.1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = POL_national_army
+		icon = GFX_SOV_depoliticize_the_military_ccp_2d_sov_compatibility
+		prerequisite = { focus = POL_the_national_commonwealth }
+		relative_position_id = POL_the_national_commonwealth
+
+		x = 1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+		}
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = POL_national_army
+		}
+	}
+
 
 	focus = {
 		id = POL_anti_germans_abroad
@@ -13625,7 +13886,7 @@ focus_tree = {
 				has_completed_focus = POL_invite_romania_to_morges
 			}
 		}
-		x = 97
+		x = 99
 		y = 0
 		offset = {
 			x = 2
@@ -14425,7 +14686,7 @@ focus_tree = {
 			}
 		}
 		allow_branch = { has_dlc = "Man the Guns" }
-		x = 106
+		x = 108
 		y = 0
 		offset = {
 			x = 2
