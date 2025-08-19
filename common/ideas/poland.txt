@@ -905,7 +905,7 @@ country = {
 		modifier = {
 			conscription = 0.02
 			training_time_army_factor = -0.1
-			fascism_drift = 0.02
+			fascism_drift = 0.05
 		}
 	}
 
@@ -1650,7 +1650,7 @@ country = {
 
 		modifier = {
 			stability_factor = -0.1
-			fascism_drift = 0.05
+			fascism_drift = 0.1
 		}
 	}
 
