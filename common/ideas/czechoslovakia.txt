@@ -95,7 +95,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				production_factory_efficiency_gain_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.05
 			}
 			equipment_bonus = {
 				infantry_equipment = {
@@ -464,7 +464,7 @@ ideas = {
 
 			removal_cost = -2	
 			modifier = {
-			conscription = 0.1
+			conscription = 0.02
 			war_support_factor = 0.05
 			}
 		}

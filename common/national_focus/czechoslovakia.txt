@@ -4134,10 +4134,10 @@ focus = {
 	}	
 
 		focus = {
-		id = CZE_Germanys_Production
+		id = CZE_Germanys_Production_focus
 		icon = GFX_focus_generic_reorient_production
-		prerequisite = { focus = CZE_the_polish_question }
-		x = 0
+		prerequisite = { focus = CZE_the_polish_question focus = CZE_the_hungarian_situation }
+		x = 2
 		y = 1
 		relative_position_id = CZE_the_polish_question
 
@@ -4168,20 +4168,20 @@ focus = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_ideas = CZE_Germanys_production
+			add_ideas = CZE_Germanys_Production
 		}
 	}
 
 	focus = {
 		id = CZE_Strong_Force
 		icon = GFX_focus_generic_tank_assault
-		prerequisite = { focus = CZE_Germanys_Production }
+		prerequisite = { focus = CZE_Germanys_Production_focus }
 		prerequisite = { focus = CZE_Bohemias_Researcher
 			
 		}
-		x = -1
+		x = 1
 		y = 1
-		relative_position_id = CZE_Germanys_Production
+		relative_position_id = CZE_Germanys_Production_focus
 
 		cost = 10
 
