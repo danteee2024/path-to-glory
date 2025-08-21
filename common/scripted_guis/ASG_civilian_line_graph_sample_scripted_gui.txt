@@ -9,7 +9,16 @@ scripted_gui = {
 			close_button_click = {
 				clr_country_flag = open_civilian_line_graph_gui
 			}
-			
+			remove_button_click = {
+				# Invoke scripted effect to add a random point to the line
+				# See scripted effect file
+				ASG_civilian_rescale_down = yes
+			}
+			add_button_click = {
+				# Invoke scripted effect to add a random point to the line
+				# See scripted effect file
+				ASG_civilian_rescale_up = yes
+			}
 		}
 		# Set up dynamic list to generate one line segment per point
 		dynamic_lists = {
