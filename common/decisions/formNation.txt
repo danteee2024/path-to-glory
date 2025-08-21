@@ -4534,21 +4534,12 @@ formable_nations_mod_category = {
 				state = 43
 				state = 154
 				state = 155
-				state = 109
 				state = 70
 				state = 664
 				state = 71
-				state = 88
-				state = 89
-				state = 80
 				state = 79
-				state = 78
-				state = 766
 				state = 81
 				state = 46
-				state = 77
-				state = 45
-				state = 764
 				state = 83
 				state = 84
 				state = 82
@@ -4557,7 +4548,6 @@ formable_nations_mod_category = {
 				state = 73
 				state = 973
 				state = 974
-				state = 971
 			}
 		}
 		
@@ -4566,39 +4556,22 @@ formable_nations_mod_category = {
 				tooltip = highlighted_state_tooltip
 				OR = {
 					AND = {
-						76 = { owns_or_subject_of = yes }
-						77 = { owns_or_subject_of = yes }
-						78 = { owns_or_subject_of = yes }
-						79 = { owns_or_subject_of = yes }
-						80 = { owns_or_subject_of = yes }
-						46 = { owns_or_subject_of = yes }
-						81 = { owns_or_subject_of = yes }
-						82 = { owns_or_subject_of = yes }
-						83 = { owns_or_subject_of = yes }
-						84 = { owns_or_subject_of = yes }
-						766 = { owns_or_subject_of = yes }
-						
 						43 = { owns_or_subject_of = yes }
-						154 = { owns_or_subject_of = yes }
-						155 = { owns_or_subject_of = yes }
-						
-						43 = { owns_or_subject_of = yes }
-						154 = { owns_or_subject_of = yes }
-						155 = { owns_or_subject_of = yes }
-						
-						109 = { owns_or_subject_of = yes }
-						
-						70 = { owns_or_subject_of = yes }
-						71 = { owns_or_subject_of = yes }
-						73 = { owns_or_subject_of = yes }
-						664 = { owns_or_subject_of = yes }
-						
-						88 = { owns_or_subject_of = yes }
-						89 = { owns_or_subject_of = yes }
-
-						973 = { owns_or_subject_of = yes }
-						974 = { owns_or_subject_of = yes }
-						971 = { owns_or_subject_of = yes }
+                        154 = { owns_or_subject_of = yes }
+                        155 = { owns_or_subject_of = yes }
+                        70 = { owns_or_subject_of = yes }
+                        664 = { owns_or_subject_of = yes }
+                        71 = { owns_or_subject_of = yes }
+                        79 = { owns_or_subject_of = yes }
+                        81 = { owns_or_subject_of = yes }
+                        46 = { owns_or_subject_of = yes }
+                        83 = { owns_or_subject_of = yes }
+                        84 = { owns_or_subject_of = yes }
+                        82 = { owns_or_subject_of = yes }
+                        76 = { owns_or_subject_of = yes }
+                        73 = { owns_or_subject_of = yes }
+                        973 = { owns_or_subject_of = yes }
+                        974 = { owns_or_subject_of = yes }
 					}
 					AND = {
 						has_global_flag = debug_mode
