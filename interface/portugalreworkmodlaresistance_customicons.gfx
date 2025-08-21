@@ -1,0 +1,51 @@
+spriteTypes = { 
+	##Icon For: Portuguese Offer
+	SpriteType = { 
+		name = "portuguese_offer-26736"
+		texturefile = "gfx/interface/event_gfx/portuguese_offer-26736.dds"
+	}
+
+	##Icon For: Mapa Cor-De-Rosa Confrence
+	SpriteType = { 
+		name = "mapa_corderosa_confrence-26730"
+		texturefile = "gfx/interface/event_gfx/mapa_corderosa_confrence-26730.dds"
+	}
+
+	##Icon For: Mapa Cor-De-Rosa Conference Success!
+	SpriteType = { 
+		name = "mapa_corderosa_conference_success-26730"
+		texturefile = "gfx/interface/event_gfx/mapa_corderosa_conference_success-26730.dds"
+	}
+
+	##Icon For: Mapa Cor-De-Rosa Conference Failed!
+	SpriteType = { 
+		name = "mapa_corderosa_conference_failed-26730"
+		texturefile = "gfx/interface/event_gfx/mapa_corderosa_conference_failed-26730.dds"
+	}
+
+	##Icon For: The Iberian Kingdom Proposal
+	SpriteType = { 
+		name = "the_iberian_kingdom_proposal-26734"
+		texturefile = "gfx/interface/event_gfx/the_iberian_kingdom_proposal-26734.dds"
+	}
+
+	##Icon For: Spain Agrees To The Proposal
+	SpriteType = { 
+		name = "spain_agrees_to_the_proposal-26734"
+		texturefile = "gfx/interface/event_gfx/spain_agrees_to_the_proposal-26734.dds"
+	}
+
+	##Icon For: Spain Rejects The Proposal!
+	SpriteType = { 
+		name = "spain_rejects_the_proposal-26733"
+		texturefile = "gfx/interface/event_gfx/spain_rejects_the_proposal-26733.dds"
+	}
+
+	##Icon For: The King Crisis
+	SpriteType = { 
+		name = "cbCKtNIH-35288"
+		texturefile = "gfx/interface/event_gfx/cbCKtNIH-35288.dds"
+	}
+
+ 
+ }

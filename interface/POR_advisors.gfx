@@ -1,0 +1,17 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_idea_POR_Matos"
+		texturefile = "gfx/interface/ideas/POR_Matos.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_POR_Salzar"
+		texturefile = "gfx/interface/ideas/POR_Salzar.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_POR_Barcelos"
+		texturefile = "gfx/interface/ideas/POR_Barcelos.dds"
+	}
+
+}

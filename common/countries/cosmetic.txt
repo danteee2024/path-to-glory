@@ -2960,7 +2960,18 @@ CHL_new_fatherland = {
 	color = rgb { 255 224 102 }
 	color_ui = rgb { 204 163 0 }
 }
-
+POR_Iberia = {
+	color = rgb { 0  80  152 }
+	color_ui = rgb { 0  80  152 }
+}
+POR_Hispania = {
+	color = rgb { 0 102 45 }
+	color_ui = rgb { 0 102 45 }
+}
+POR_Portugaliza = {
+	color = rgb { 0 135 156 }
+	color_ui = rgb { 0 135 156 }
+}
 # TODO JA, implement flags for these once in
 true_plurinational_bolivia = {
 	color = rgb { 179 0 179 }

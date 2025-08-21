@@ -1,0 +1,22 @@
+leader_traits = {
+	recent_unification = {
+		random = no
+		
+		stability_factor = -0.15
+	}
+	
+	portuguese_advisors = {
+		random = no
+		
+		training_time_factor = -0.05
+		mobilization_speed = 0.05
+	}
+	
+	viva_portugal = {
+		random = no
+		
+		army_attack_factor = 0.1
+		army_org = 0.5
+		mobilization_speed = 0.05
+	}
+}

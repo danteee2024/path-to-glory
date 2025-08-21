@@ -4,10 +4,8 @@ state={
 	name="STATE_171"
 	manpower = 2295085
 	
-	state_category = metropolis
-    resources = {
-		tungsten = 32
-	}
+	state_category = city
+
 	history={
 		owner = SPR
 		add_core_of = GLC

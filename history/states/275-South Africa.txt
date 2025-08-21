@@ -23,6 +23,7 @@ state={
 			10400 10
 		}
 		add_core_of = SAF
+                add_core_of = MSA
 	}
 
 	provinces={

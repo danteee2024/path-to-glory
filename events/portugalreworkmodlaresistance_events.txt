@@ -1,0 +1,1192 @@
+add_namespace = portugalreworkmodlaresistance
+
+##Event: Qingdao for Advisors
+country_event = {
+	id = portugalreworkmodlaresistance.1
+	title = portugalreworkmodlaresistance.1.title
+	desc = portugalreworkmodlaresistance.1.desc
+	picture = GFX_report_event_portugal_navy_mutiny_prisoners
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.1.a
+		ai_chance = { factor = 2}
+		CHI = {
+    add_timed_idea = { 
+        idea = POR_portuguese_advisors
+        days = 730
+    }
+}
+POR = {
+    set_state_owner = 743
+    country_event = {
+        days = 1
+        id = portugalreworkmodlaresistance.2
+    }
+}
+	}
+	option = {
+		name = portugalreworkmodlaresistance.1.b
+		ai_chance = { factor = 1}
+		POR = {
+add_state_claim = 743
+add_war_support = 5
+country_event = {
+    days = 1
+    id = portugalreworkmodlaresistance.3
+}
+}
+	}
+}
+##Event: [CHI.GetName] accepts Qingdao proposal!
+country_event = {
+	id = portugalreworkmodlaresistance.2
+	title = portugalreworkmodlaresistance.2.title
+	desc = portugalreworkmodlaresistance.2.desc
+	picture = GFX_report_event_china_chiang_kai_shek
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.2.a
+		ai_chance = { factor = 1}
+	}
+}
+##Event: [CHI.GetName] denies Qingdao proposal!
+country_event = {
+	id = portugalreworkmodlaresistance.3
+	title = portugalreworkmodlaresistance.3.title
+	desc = portugalreworkmodlaresistance.3.desc
+	picture = GFX_event_test
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.3.a
+		ai_chance = { factor = 1}
+	}
+}
+##Event: Portuguese Offer
+country_event = {
+	id = portugalreworkmodlaresistance.4
+	title = portugalreworkmodlaresistance.4.title
+	desc = portugalreworkmodlaresistance.4.desc
+	picture = GFX_portuguese_offer-26736
+	is_triggered_only = yes
+	fire_only_once = no
+	option = {
+		name = portugalreworkmodlaresistance.4.a
+		ai_chance = { factor = 1}
+		var:POR_Purchase_Tag = {
+add_offsite_building = {
+    type = industrial_complex
+    level = 2
+}
+}
+POR = {
+    set_state_owner = var:POR_Purchase_State
+}
+	}
+	option = {
+		name = portugalreworkmodlaresistance.4.b
+		ai_chance = { factor = 0}
+	}
+}
+##Event: Portuguese Pressure
+country_event = {
+	id = portugalreworkmodlaresistance.5
+	title = portugalreworkmodlaresistance.5.title
+	desc = portugalreworkmodlaresistance.5.desc
+	picture = GFX_report_event_african_soldiers
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.5.a
+		ai_chance = { factor = 3}
+		POR = {
+    transfer_state = 769
+    transfer_state = 538
+    transfer_state = 295
+    transfer_state = 768
+    transfer_state = 718
+    release_puppet = COG
+}
+	}
+	option = {
+		name = portugalreworkmodlaresistance.5.b
+		ai_chance = { factor = 2}
+		POR = {
+    country_event = {
+        days = 1
+        id = portugalreworkmodlaresistance.7
+    }
+}
+	}
+}
+##Event: Belgians Cede the Congo!
+country_event = {
+	id = portugalreworkmodlaresistance.6
+	title = portugalreworkmodlaresistance.6.title
+	desc = portugalreworkmodlaresistance.6.desc
+	picture = GFX_event_test
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.6.a
+		ai_chance = { factor = 1}
+	}
+}
+##Event: Belgians Are Defiant!
+country_event = {
+	id = portugalreworkmodlaresistance.7
+	title = portugalreworkmodlaresistance.7.title
+	desc = portugalreworkmodlaresistance.7.desc
+	picture = GFX_event_test
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.7.a
+		ai_chance = { factor = 1}
+		POR = {
+    create_wargoal = {
+        type = puppet_wargoal_focus
+        target = BEL
+    }
+}
+	}
+}
+##Event: Mapa Cor-De-Rosa Confrence
+country_event = {
+	id = portugalreworkmodlaresistance.8
+	title = portugalreworkmodlaresistance.8.title
+	desc = portugalreworkmodlaresistance.8.desc
+	picture = GFX_mapa_corderosa_confrence-26730
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.8.a
+		ai_chance = { factor = 0}
+		POR = {
+    country_event = {
+        days = 1
+        id = portugalreworkmodlaresistance.10
+    }
+}
+	}
+	option = {
+		name = portugalreworkmodlaresistance.8.b
+		ai_chance = { factor = 1}
+		POR = {
+    transfer_state = 770
+    transfer_state = 771
+    transfer_state = 545
+    transfer_state = 981
+    country_event = {
+        days = 1
+        id = portugalreworkmodlaresistance.9
+    }
+}
+	}
+}
+##Event: Mapa Cor-De-Rosa Conference Success!
+country_event = {
+	id = portugalreworkmodlaresistance.9
+	title = portugalreworkmodlaresistance.9.title
+	desc = portugalreworkmodlaresistance.9.desc
+	picture = GFX_mapa_corderosa_conference_success-26730
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.9.a
+		ai_chance = { factor = 1}
+	}
+}
+##Event: Mapa Cor-De-Rosa Conference Failed!
+country_event = {
+	id = portugalreworkmodlaresistance.10
+	title = portugalreworkmodlaresistance.10.title
+	desc = portugalreworkmodlaresistance.10.desc
+	picture = GFX_mapa_corderosa_conference_failed-26730
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.10.a
+		ai_chance = { factor = 1}
+	}
+}
+##Event: The Iberian Kingdom Proposal
+country_event = {
+	id = portugalreworkmodlaresistance.11
+	title = portugalreworkmodlaresistance.11.title
+	desc = portugalreworkmodlaresistance.11.desc
+	picture = GFX_the_iberian_kingdom_proposal-26734
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.11.a
+		ai_chance = { factor = 1}
+		POR = {
+    country_event = {
+        days = 1
+        id = portugalreworkmodlaresistance.12
+    }
+}
+	}
+	option = {
+		name = portugalreworkmodlaresistance.11.b
+		ai_chance = { factor = 0}
+		POR = {
+    country_event = {
+        days = 1
+        id = portugalreworkmodlaresistance.13
+    }
+}
+	}
+}
+##Event: Spain Agrees To The Proposal
+country_event = {
+	id = portugalreworkmodlaresistance.12
+	title = portugalreworkmodlaresistance.12.title
+	desc = portugalreworkmodlaresistance.12.desc
+	picture = GFX_spain_agrees_to_the_proposal-26734
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.12.a
+		ai_chance = { factor = 1}
+		POR = {
+    add_ideas = POR_Recently_United
+    puppet = SPR
+    complete_national_focus = POR_a_united_kingdom_of_iberia
+}
+	}
+}
+##Event: Spain Rejects The Proposal!
+country_event = {
+	id = portugalreworkmodlaresistance.13
+	title = portugalreworkmodlaresistance.13.title
+	desc = portugalreworkmodlaresistance.13.desc
+	picture = GFX_spain_rejects_the_proposal-26733
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.13.a
+		ai_chance = { factor = 1}
+		POR = {
+    complete_national_focus = POR_iberian_neutrality
+}
+	}
+}
+##Event: The King Crisis
+country_event = {
+	id = portugalreworkmodlaresistance.14
+	title = portugalreworkmodlaresistance.14.title
+	desc = portugalreworkmodlaresistance.14.desc
+	picture = GFX_cbCKtNIH-35288
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.14.a
+		ai_chance = { factor = 1}
+		create_country_leader= {
+			name = "Dom Duarte Nuno"
+			desc = 'POLITICS_DOM_DUARTE_NUNO_DESC' 
+			picture = 'gfx/leaders/POR/portrait_por_duarte_nuno.dds' 
+			expire = "1976.12.24.12"
+			ideology = despotism 
+			traits = {
+				constitutional_monarch_minor
+			}
+
+		}
+	}
+	option = {
+		name = portugalreworkmodlaresistance.14.b
+		ai_chance = { factor = 1}
+		create_country_leader= {
+ name = "Alfonso XIII"
+desc = 'POLITICS_ALFONSO_XIII_DESC' 
+picture = 'gfx/leaders/SPA/portrait_spa_alfonso_xiii.dds' 
+expire = "1941.02.28.12"
+ideology = despotism 
+traits = {
+}
+
+ }
+	}
+}
+##Event: Alfonso XIII is Dead!!
+country_event = {
+	id = portugalreworkmodlaresistance.15
+	title = portugalreworkmodlaresistance.15.title
+	desc = portugalreworkmodlaresistance.15.desc
+	picture = GFX_event_test
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		date > 1941.2.28
+	}
+	option = {
+		name = portugalreworkmodlaresistance.15.a
+		ai_chance = { factor = 1}
+		create_country_leader= {
+ name = "Dom Duarte Nuno"
+desc = 'POLITICS_PETER_II_DESC' 
+picture = 'gfx/leaders/POR/portrait_por_duarte_nuno.dds' 
+expire = "1976.12.24.12" 
+ideology = despotism 
+traits = {
+constitutional_monarch_minor
+}
+
+ }
+add_stability = -0.05
+	}
+}
+##Event: The United Kingdom of Portugal & Brazil Demands Subjection
+country_event = {
+	id = portugalreworkmodlaresistance.16
+	title = portugalreworkmodlaresistance.16.title
+	desc = portugalreworkmodlaresistance.16.desc
+	picture = GFX_report_event_manchukuo_army
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.16.a
+		ai_chance = { factor = 1}
+	}
+	option = {
+		name = portugalreworkmodlaresistance.16.b
+		ai_chance = { factor = 1}
+	}
+}
+##Event: The United Kingdom of Portugal & Brazil Demands Subjection
+country_event = {
+	id = portugalreworkmodlaresistance.17
+	title = portugalreworkmodlaresistance.17.title
+	desc = portugalreworkmodlaresistance.17.desc
+	picture = GFX_event_test
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.17.a
+		ai_chance = { factor = 1}
+	}
+	option = {
+		name = portugalreworkmodlaresistance.17.b
+		ai_chance = { factor = 0}
+	}
+}
+##Event: The United Kingdom of Portugal & Brazil Demands Subjection
+country_event = {
+	id = portugalreworkmodlaresistance.18
+	title = portugalreworkmodlaresistance.18.title
+	desc = portugalreworkmodlaresistance.18.desc
+	picture = GFX_event_test
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.18.a
+		ai_chance = { factor = 2}
+	}
+	option = {
+		name = portugalreworkmodlaresistance.18.b
+		ai_chance = { factor = 1}
+	}
+}
+##Event: Portugal Demands Transfer of East Indies States
+country_event = {
+	id = portugalreworkmodlaresistance.19
+	title = portugalreworkmodlaresistance.19.title
+	desc = portugalreworkmodlaresistance.19.desc
+	picture = GFX_event_test
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.19.a
+		ai_chance = { factor = 1}
+		POR = {
+    set_state_owner = 335
+    set_state_owner = 667
+    country_event = {
+        days = 1
+        id = portugalreworkmodlaresistance.22
+    }
+}
+	}
+	option = {
+		name = portugalreworkmodlaresistance.19.b
+		ai_chance = { factor = 1}
+		POR = {
+    country_event = {
+        days = 1
+        id = portugalreworkmodlaresistance.20
+    }
+}
+	}
+}
+##Event: The Dutch Reject Our Demands
+country_event = {
+	id = portugalreworkmodlaresistance.20
+	title = portugalreworkmodlaresistance.20.title
+	desc = portugalreworkmodlaresistance.20.desc
+	picture = GFX_event_test
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.20.a
+		ai_chance = { factor = 1}
+	}
+	option = {
+		name = portugalreworkmodlaresistance.20.b
+		ai_chance = { factor = 1}
+		HOL = {
+    country_event = {
+        days = 1
+        id = portugalreworkmodlaresistance.21
+    }
+}
+	}
+}
+##Event: Germany's Pressure
+country_event = {
+	id = portugalreworkmodlaresistance.21
+	title = portugalreworkmodlaresistance.21.title
+	desc = portugalreworkmodlaresistance.21.desc
+	picture = GFX_event_test
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.21.a
+		ai_chance = { factor = 2}
+		POR = {
+    set_state_owner = 335
+    set_state_owner = 667
+    country_event = {
+        days = 1
+        id = portugalreworkmodlaresistance.22
+    }
+}
+	}
+	option = {
+		name = portugalreworkmodlaresistance.21.b
+		ai_chance = { factor = 1}
+		POR = {
+    create_wargoal = {
+        type = annex_everything
+        target = INS
+    }
+}
+	}
+}
+##Event: Dutch Governmant Caves
+country_event = {
+	id = portugalreworkmodlaresistance.22
+	title = portugalreworkmodlaresistance.22.title
+	desc = portugalreworkmodlaresistance.22.desc
+	picture = GFX_event_test
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.22.a
+		ai_chance = { factor = 1}
+	}
+}
+##Event: The Populace Have Decided..
+country_event = {
+	id = portugalreworkmodlaresistance.23
+	title = portugalreworkmodlaresistance.23.title
+	desc = portugalreworkmodlaresistance.23.desc
+	picture = GFX_event_test
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.23.a
+		ai_chance = { factor = 1}
+		create_country_leader= {
+name = "Pedro Henrique"
+desc = "POLITICS_DOM_DUARTE_NUNO_DESC" 
+picture = "gfx/leaders/POR/pedroh.dds" 
+expire = "1981.7.5" 
+ideology = despotism
+traits = {
+constitutional_monarch_minor
+}
+
+}
+	}
+	option = {
+		name = portugalreworkmodlaresistance.23.b
+		ai_chance = { factor = 1}
+		create_country_leader= {
+name = "Dom Duarte Nuno"
+desc = "POLITICS_DOM_DUARTE_NUNO_DESC" 
+picture = "gfx/leaders/POR/portrait_por_duarte_nuno.dds" 
+expire = "1976.12.24" 
+ideology = despotism 
+traits = {
+constitutional_monarch_minor
+}
+
+}
+	}
+}
+##Event: The Capital Question
+country_event = {
+	id = portugalreworkmodlaresistance.24
+	title = portugalreworkmodlaresistance.24.title
+	desc = portugalreworkmodlaresistance.24.desc
+	picture = GFX_event_test
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.24.a
+		ai_chance = { factor = 1}
+		set_capital= { state = 500 }
+	}
+	option = {
+		name = portugalreworkmodlaresistance.24.b
+		ai_chance = { factor = 1}
+		set_capital= { state = 501 }
+	}
+	option = {
+		name = portugalreworkmodlaresistance.24.c
+		ai_chance = { factor = 1}
+		set_capital= { state = 112 }
+	}
+}
+##Event: The United Kingdom of Portugal & Brazil Offers to buy our Guyana Colony..
+country_event = {
+	id = portugalreworkmodlaresistance.25
+	title = portugalreworkmodlaresistance.25.title
+	desc = portugalreworkmodlaresistance.25.desc
+	picture = GFX_event_test
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.25.a
+		ai_chance = { factor = 1}
+		ENG = {
+add_equipment_to_stockpile = {
+type = infantry_equipment_1
+amount = 1000
+}
+POR = {
+add_equipment_to_stockpile = {
+type = infantry_equipment_1
+amount = -1000
+}
+set_state_owner = 687
+}
+}
+FRA = {
+add_equipment_to_stockpile = {
+type = infantry_equipment_1
+amount = 1000
+}
+POR = {
+add_equipment_to_stockpile = {
+type = infantry_equipment_1
+amount = -1000
+}
+set_state_owner = 310
+}
+}
+HOL = {
+add_equipment_to_stockpile = {
+type = infantry_equipment_1
+amount = 1000
+}
+POR = {
+add_equipment_to_stockpile = {
+type = infantry_equipment_1
+amount = -1000
+}
+set_state_owner = 309
+}
+}
+	}
+	option = {
+		name = portugalreworkmodlaresistance.25.b
+		ai_chance = { factor = 1}
+	}
+}
+##Event: DIVIDE ESPANA
+country_event = {
+	id = portugalreworkmodlaresistance.26
+	title = portugalreworkmodlaresistance.26.title
+	desc = portugalreworkmodlaresistance.26.desc
+	picture = GFX_event_test
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.26.a
+		ai_chance = { factor = 1}
+		ITA = {
+  country_event = {
+    id = portugalreworkmodlaresistance.27
+    days = 1
+  }
+}
+	}
+}
+##Event: porto inviet to confrence!
+country_event = {
+	id = portugalreworkmodlaresistance.27
+	title = portugalreworkmodlaresistance.27.title
+	desc = portugalreworkmodlaresistance.27.desc
+	picture = GFX_event_test
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.27.a
+		ai_chance = { factor = 1}
+		POR = {
+  country_event = {
+    id = portugalreworkmodlaresistance.29
+    days = 2
+  }
+}
+	}
+	option = {
+		name = portugalreworkmodlaresistance.27.b
+		ai_chance = { factor = 0}
+		POR = {
+  country_event = {
+    id = portugalreworkmodlaresistance.28
+    days = 2
+  }
+}
+	}
+}
+##Event: itlan say no!
+country_event = {
+	id = portugalreworkmodlaresistance.28
+	title = portugalreworkmodlaresistance.28.title
+	desc = portugalreworkmodlaresistance.28.desc
+	picture = GFX_event_test
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.28.a
+		ai_chance = { factor = 1}
+		POR = {
+  add_opinion_modifier = {
+    target = ITA
+    modifier = small_decrease
+  }
+}
+	}
+}
+##Event: it ally say yed :D
+country_event = {
+	id = portugalreworkmodlaresistance.29
+	title = portugalreworkmodlaresistance.29.title
+	desc = portugalreworkmodlaresistance.29.desc
+	picture = GFX_event_test
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.29.a
+		ai_chance = { factor = 1}
+		hidden_effect = {
+  
+  POR = {
+    set_country_flag = ITA_AgreedKillSpain
+    country_event = {
+      id = portugalreworkmodlaresistance.33
+      days = 2
+    }
+  }
+  }
+  ITA = {
+    country_event = {
+      id = portugalreworkmodlaresistance.33
+      days = 2 
+    }
+  }
+	}
+	option = {
+		name = portugalreworkmodlaresistance.29.b
+		ai_chance = { factor = 0}
+		ITA = {
+  country_event = {
+    id = portugalreworkmodlaresistance.30
+    days = 2
+  }
+}
+	}
+}
+##Event: porto no lieky our claims
+country_event = {
+	id = portugalreworkmodlaresistance.30
+	title = portugalreworkmodlaresistance.30.title
+	desc = portugalreworkmodlaresistance.30.desc
+	picture = GFX_event_test
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.30.a
+		ai_chance = { factor = 1}
+		ITA = {
+  add_opinion_modifier = {
+    target = POR
+    modifier = small_decrease
+  }
+}
+	}
+}
+##Event: We have declared war
+country_event = {
+	id = portugalreworkmodlaresistance.31
+	title = portugalreworkmodlaresistance.31.title
+	desc = portugalreworkmodlaresistance.31.desc
+	picture = GFX_event_test
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.31.a
+		ai_chance = { factor = 1}
+	}
+}
+##Event: warring!
+country_event = {
+	id = portugalreworkmodlaresistance.32
+	title = portugalreworkmodlaresistance.32.title
+	desc = portugalreworkmodlaresistance.32.desc
+	picture = GFX_event_test
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.32.a
+		ai_chance = { factor = 1}
+		every_country = {
+					limit = {
+						original_tag = SPR
+					}
+					ITA = {
+						declare_war_on = {
+						  	target = PREV
+						    type = annex_everything
+						}
+					}
+				}
+		hidden_effect = {
+		  POR = { set_country_flag = ITA_follows_through }
+		}
+	}
+	option = {
+		name = portugalreworkmodlaresistance.32.b
+		ai_chance = { factor = 1}
+		POR = {
+  add_opinion_modifier = {
+    target = ITA
+    modifier = medium_decrease
+  }
+}
+	}
+}
+##Event: agreemnet made
+country_event = {
+	id = portugalreworkmodlaresistance.33
+	title = portugalreworkmodlaresistance.33.title
+	desc = portugalreworkmodlaresistance.33.desc
+	picture = GFX_event_test
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.33.a
+		ai_chance = { factor = 1}
+	}
+}
+
+##Event: Hidden Spain Capitulation Event
+country_event = {
+	id = portugalreworkmodlaresistance.34
+
+	is_triggered_only = yes
+	
+	hidden = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				POR = { has_country_flag = ITA_follows_through }
+				OR = {
+					ITA = {
+						controls_state = 177
+						controls_state = 165
+						controls_state = 167
+						controls_state = 794
+						controls_state = 166
+						controls_state = 172
+					}
+					POR = {
+						controls_state = 177
+						controls_state = 165
+						controls_state = 167
+						controls_state = 794
+						controls_state = 166
+						controls_state = 172
+					}
+					var:SpainTag?SPR = {
+						AND = {
+							OR = {
+								controls_state = 177
+								controls_state = 165
+								controls_state = 167
+								controls_state = 794
+								controls_state = 166
+								controls_state = 172
+							}
+							has_capitulated = yes
+						}
+					}
+				}
+			}
+			ITA = {
+				transfer_state = 165
+				transfer_state = 167
+				transfer_state = 794
+				transfer_state = 166
+				transfer_state = 172
+				transfer_state = 177
+				release_autonomy = {
+					target = ARA
+					autonomy_state = autonomy_puppet
+					freedom_level = 0.2
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					ITA = {
+						OR = {
+							controls_state = 169
+							controls_state = 170
+							controls_state = 788
+							controls_state = 174
+							controls_state = 171
+							controls_state = 170
+							controls_state = 790
+							controls_state = 791
+							controls_state = 41
+							controls_state = 175
+							controls_state = 189
+							controls_state = 173
+							controls_state = 792
+							controls_state = 176
+							controls_state = 793
+							controls_state = 168
+							controls_state = 290
+							controls_state = 690
+							controls_state = 297
+							controls_state = 699
+							controls_state = 783
+						}
+					}
+					POR = {
+						OR = {
+							controls_state = 169
+							controls_state = 170
+							controls_state = 788
+							controls_state = 174
+							controls_state = 171
+							controls_state = 170
+							controls_state = 790
+							controls_state = 791
+							controls_state = 41
+							controls_state = 175
+							controls_state = 189
+							controls_state = 173
+							controls_state = 792
+							controls_state = 176
+							controls_state = 793
+							controls_state = 168
+							controls_state = 290
+							controls_state = 690
+							controls_state = 297
+							controls_state = 699
+							controls_state = 783
+						}
+					}
+					var:SpainTag?SPR = {
+						OR = {
+							controls_state = 169
+							controls_state = 170
+							controls_state = 788
+							controls_state = 174
+							controls_state = 171
+							controls_state = 170
+							controls_state = 790
+							controls_state = 791
+							controls_state = 41
+							controls_state = 175
+							controls_state = 189
+							controls_state = 173
+							controls_state = 792
+							controls_state = 176
+							controls_state = 793
+							controls_state = 168
+							controls_state = 290
+							controls_state = 690
+							controls_state = 297
+							controls_state = 699
+							controls_state = 783
+						}
+						has_capitulated = yes
+					}
+#					SPB = {
+#						AND = {
+#							OR = {
+#								controls_state = 169
+#								controls_state = 170
+#								controls_state = 788
+#								controls_state = 174
+#								controls_state = 171
+#								controls_state = 170
+#								controls_state = 790
+#								controls_state = 791
+#								controls_state = 41
+#								controls_state = 175
+#								controls_state = 189
+#								controls_state = 173
+#								controls_state = 792
+#								controls_state = 176
+#								controls_state = 793
+#								controls_state = 168
+#								controls_state = 290
+#								controls_state = 690
+#								controls_state = 297
+#								controls_state = 699
+#								controls_state = 783
+#								controls_state = 178
+#							}
+#							has_capitulated = yes
+#						}
+#					}
+				}
+			}
+			POR = {
+				transfer_state = 169
+				transfer_state = 170
+				transfer_state = 788
+				transfer_state = 174
+				transfer_state = 171
+				transfer_state = 170
+				transfer_state = 790
+				transfer_state = 791
+				transfer_state = 41
+				transfer_state = 175
+				transfer_state = 789
+				transfer_state = 173
+				transfer_state = 792
+				transfer_state = 176
+				transfer_state = 793
+				transfer_state = 168
+				transfer_state = 290
+				transfer_state = 690
+				transfer_state = 297
+				transfer_state = 699
+				transfer_state = 783
+				transfer_state = 178
+			}
+		}
+	}
+}
+
+##Event: mespotamia ultimatun
+country_event = {
+	id = portugalreworkmodlaresistance.35
+	title = portugalreworkmodlaresistance.35.title
+	desc = portugalreworkmodlaresistance.35.desc
+	picture = GFX_event_test
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.35.a
+		ai_chance = { factor = 2}
+		POR = {
+  transfer_state = 509
+  transfer_state = 510
+  transfer_state = 278
+  transfer_state = 957
+  transfer_state = 956
+
+  country_event = {
+    id = portugalreworkmodlaresistance.36
+    days = 1
+  }
+}
+	}
+	option = {
+		name = portugalreworkmodlaresistance.35.b
+		ai_chance = { factor = 1}
+		custom_effect_tooltip = ARG_deny_mesopotamia
+POR = {
+  country_event = {
+    id = portugalreworkmodlaresistance.37
+    days = 1
+  }
+}
+	}
+}
+##Event: ARGENTINE GIB US LAND HAHHAAHAHHA
+country_event = {
+	id = portugalreworkmodlaresistance.36
+	title = portugalreworkmodlaresistance.36.title
+	desc = portugalreworkmodlaresistance.36.desc
+	picture = GFX_event_test
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.36.a
+		ai_chance = { factor = 1}
+	}
+}
+##Event: they say no D:
+country_event = {
+	id = portugalreworkmodlaresistance.37
+	title = portugalreworkmodlaresistance.37.title
+	desc = portugalreworkmodlaresistance.37.desc
+	picture = GFX_event_test
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.37.a
+		ai_chance = { factor = 9}
+		POR = {
+  create_wargoal = {
+    type = take_state_focus
+    target = ARG
+    generator = { 509 510 278 }
+  }
+  add_state_claim = 509
+  add_state_claim = 510
+  add_state_claim = 278
+}
+	}
+	option = {
+		name = portugalreworkmodlaresistance.37.b
+		ai_chance = { factor = 1}
+		POR = {
+  add_opinion_modifier = {
+    target = ARG
+    modifier = medium_decrease
+  }
+}
+ARG = {
+  add_opinion_modifier = {
+    target = POR
+    modifier = medium_decrease
+  }
+}
+	}
+}
+##Event: Porgutal Want Reserch Bonus
+country_event = {
+	id = portugalreworkmodlaresistance.38
+	title = portugalreworkmodlaresistance.38.title
+	desc = portugalreworkmodlaresistance.38.desc
+	picture = GFX_event_test
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.38.a
+		ai_chance = { factor = 1}
+		POR = {
+add_tech_bonus = {
+bonus = 1.0
+uses = 1
+category = cat_light_armor
+category = cat_medium_armor
+category = cat_heavy_armor
+}
+country_event = {
+days = 1
+id = portugalreworkmodlaresistance.39
+}
+
+}
+	}
+	option = {
+		name = portugalreworkmodlaresistance.38.b
+		ai_chance = { factor = 1}
+		POR = {
+add_tech_bonus = {
+bonus = 1.0
+uses = 1
+category = artillery
+}
+country_event = {
+days = 1
+id = portugalreworkmodlaresistance.40
+}
+}
+	}
+	option = {
+		name = portugalreworkmodlaresistance.38.c
+		ai_chance = { factor = 1}
+		POR = {
+add_tech_bonus = {
+bonus = 1.0
+uses = 1
+category = infantry_weapons
+}
+country_event = {
+days = 1
+id = portugalreworkmodlaresistance.41
+}
+}
+	}
+}
+##Event: Germny gib buff!
+country_event = {
+	id = portugalreworkmodlaresistance.39
+	title = portugalreworkmodlaresistance.39.title
+	desc = portugalreworkmodlaresistance.39.desc
+	picture = GFX_event_test
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.39.a
+		ai_chance = { factor = 1}
+		add_opinion_modifier = {
+target = GER
+modifier = small_increase
+}
+	}
+}
+##Event: Germny gib buff!
+country_event = {
+	id = portugalreworkmodlaresistance.40
+	title = portugalreworkmodlaresistance.40.title
+	desc = portugalreworkmodlaresistance.40.desc
+	picture = GFX_event_test
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.40.a
+		ai_chance = { factor = 1}
+		add_opinion_modifier = {
+target = GER
+modifier = small_increase
+}
+	}
+}
+##Event: Germny gib buff!
+country_event = {
+	id = portugalreworkmodlaresistance.41
+	title = portugalreworkmodlaresistance.41.title
+	desc = portugalreworkmodlaresistance.41.desc
+	picture = GFX_event_test
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = portugalreworkmodlaresistance.41.a
+		ai_chance = { factor = 1}
+		add_opinion_modifier = {
+target = GER
+modifier = small_increase
+}
+	}
+}
