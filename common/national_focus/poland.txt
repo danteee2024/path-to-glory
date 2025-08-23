@@ -11713,7 +11713,6 @@ focus_tree = {
 		}
 		
 		available = {
-			fascism > 0.4
 		}
 
 		available_if_capitulated = yes
@@ -11725,6 +11724,10 @@ focus_tree = {
 			add_popularity = {
 				ideology = neutrality
 				popularity = -0.2
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
 			}
 		}
 	}
@@ -11754,18 +11757,17 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			effect_tooltip = {
 				set_politics = {
 					ruling_party = fascism
 					elections_allowed = no
 				}
 				promote_character = POL_boleslaw_piasecki
-			}
+
 			country_event = NSB_polish_fascist_events.6
 			hidden_effect = {
 				news_event = {
 					id = nsb_news.6
-					days = 10
+					days = 1
 				}
 			}
 		}
@@ -11796,7 +11798,6 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			effect_tooltip = {
 				set_party_name = { 
 					ideology = fascism 
 					long_name = POL_natdem_party_long
@@ -11808,13 +11809,12 @@ focus_tree = {
 					election_frequency = 60
 				}
 				promote_character = POL_roman_dmowski
-			}
 			country_event = NSB_polish_fascist_events.7
 			hidden_effect = {
 				set_cosmetic_tag = POL_NATDEM
 				news_event = {
 					id = nsb_news.6
-					days = 10
+					days = 1
 				}
 			}
 		}
@@ -12570,111 +12570,6 @@ focus_tree = {
 		}
 	}
 
-		focus = {
-		id = POL_ask_for_the_Indies
-		icon = GFX_goal_demand_sudetenland
-		prerequisite = { focus = POL_invite_the_lowlands }
-		relative_position_id = POL_invite_the_lowlands
-
-		x = -1
-		y = 1
-		cost = 5
-
-		ai_will_do = {
-			factor = 2.5
-		}
-		
-
-		available_if_capitulated = no
-		
-		available = {
-		}
-		
-		bypass = {
-			OR = {
-				INS = {
-					OR = {
-						exists = no
-						has_capitulated = yes
-						has_war_with = ROOT
-					}
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-		completion_reward = {
-			if = {
-				limit = {
-					INS = { has_war = no }
-				}
-				INS = {
-					country_event = {
-						id = generic.20
-						days = 1
-					}
-				}
-			}
-			else = {
-				create_wargoal = {
-					type = annex_everything
-					target = INS
-				}
-			}
-		}
-	}
-
-		focus = {
-		id = POL_ask_for_the_Congo
-		icon = GFX_goal_demand_sudetenland
-		prerequisite = { focus = POL_invite_the_lowlands }
-		relative_position_id = POL_invite_the_lowlands
-
-		x = 1
-		y = 1
-		cost = 5
-
-		ai_will_do = {
-			factor = 2.5
-		}
-		
-
-		available_if_capitulated = no
-		
-		available = {
-		}
-		
-		bypass = {
-			OR = {
-				COG = {
-					OR = {
-						exists = no
-						has_capitulated = yes
-						has_war_with = ROOT
-					}
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-		completion_reward = {
-			if = {
-				limit = {
-					COG = { has_war = no }
-				}
-				COG = {
-					country_event = {
-						id = generic.20
-						days = 1
-					}
-				}
-			}
-			else = {
-				create_wargoal = {
-					type = annex_everything
-					target = COG
-				}
-			}
-		}
-	}
 
 	focus = {
 		id = POL_invite_the_baltics
@@ -13035,7 +12930,6 @@ focus_tree = {
 			ELSE = {
 				has_government = fascism
 			}
-			has_army_manpower = { size > 499999 }	
 			OR = {
 				AND = {
 					SLO = {
@@ -13331,7 +13225,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = bunker
-					level = 2
+					level = 4
 					instant_build = yes
 					province = {
 						all_provinces = yes

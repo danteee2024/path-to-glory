@@ -1868,7 +1868,8 @@ country = {
 		picture = generic_goods_red_bonus
 
 		modifier = {
-			consumer_goods_factor = -0.05
+			consumer_goods_factor = -0.1
+			production_speed_buildings_factor = 0.05
 		}
 	}
 
@@ -1998,7 +1999,7 @@ country = {
 		removal_cost = -1
 
 		modifier = {
-			conscription = 0.01
+			conscription = 0.02
 		}
 	
 		}
@@ -2020,8 +2021,8 @@ country = {
 		equipment_bonus = {
 			infantry_equipment = {
 				build_cost_ic = -0.1
-				soft_attack = 0.1
-				hard_attack = 0.1
+				soft_attack = 0.05
+				hard_attack = 0.05
 				instant = yes
 			}
 		}
