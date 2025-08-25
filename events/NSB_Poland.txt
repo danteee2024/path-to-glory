@@ -227,9 +227,9 @@ country_event = {
 	}
 }
 
-#Poland claims the throne of Hungary
+#Poland claims the throne of Sweden
 country_event = {
-	id = NSB_poland_events.21e
+	id = NSB_poland_events.21
 	title = NSB_poland_events.2.t
 	desc = NSB_poland_events.2.d
 	picture = GFX_report_event_generic_rally
@@ -239,7 +239,7 @@ country_event = {
 	fire_only_once = yes
 
 	option = { #Sure!
-		name = NSB_poland_events.2.a
+		name = NSB_poland_events.2.ae
 		ai_chance = {
 			base = 30
 			modifier = {
@@ -260,7 +260,7 @@ country_event = {
 			}
 		}
 		POL = {
-			country_event = { hours = 2 id = NSB_poland_events.201 }
+			country_event = { hours = 2 id = NSB_poland_events.201e }
 		}
 		effect_tooltip = {
 			POL = {
@@ -273,7 +273,7 @@ country_event = {
 	}
 
 	option = { #No thank you
-		name = NSB_poland_events.2.b
+		name = NSB_poland_events.2.be
 		ai_chance = {
 			base = 10
 			modifier = {
@@ -305,7 +305,7 @@ country_event = {
 		}
 		POL = {
 			add_opinion_modifier = { target = PREV modifier = POL_annexation_refused }
-			country_event = { hours = 2 id = NSB_poland_events.202 }
+			country_event = { hours = 2 id = NSB_poland_events.202e }
 			if = { limit = { is_in_faction_with = SWE }
 				remove_from_faction = SWE
 			}
@@ -315,7 +315,7 @@ country_event = {
 
 #Sweden says yes, Sweden becomes a puppet
 country_event = {
-	id = NSB_poland_events.201
+	id = NSB_poland_events.201e
 	title = NSB_poland_events.201.t
 	desc = NSB_poland_events.201.desc
 	picture = GFX_report_event_generic_parliament
@@ -325,7 +325,7 @@ country_event = {
 	fire_only_once = yes
 
 	option = { #Sweden is ceded to Poland
-		name = NSB_poland_events.201.a
+		name = NSB_poland_events.201.e
 		ai_chance = {
 			base = 10
 		}
@@ -337,7 +337,7 @@ country_event = {
 }
 #Sweden says no, gain a wargoal
 country_event = {
-	id = NSB_poland_events.202
+	id = NSB_poland_events.202e
 	title = NSB_poland_events.202.t
 	desc = NSB_poland_events.202.desc
 	picture = GFX_report_event_military_planning
@@ -347,7 +347,7 @@ country_event = {
 	fire_only_once = yes
 
 	option = { #Getting annexed by Poland? Sounds like a great idea!
-		name = NSB_poland_events.202.a
+		name = NSB_poland_events.202.ae
 		ai_chance = {
 			base = 10
 		}
@@ -395,7 +395,7 @@ country_event = {
 			}
 		}
 		POL = {
-			country_event = { hours = 2 id = NSB_poland_events.201 }
+			country_event = { hours = 2 id = NSB_poland_events.2011}
 		}
 		effect_tooltip = {
 			POL = {
@@ -440,7 +440,7 @@ country_event = {
 		}
 		POL = {
 			add_opinion_modifier = { target = PREV modifier = POL_annexation_refused }
-			country_event = { hours = 2 id = NSB_poland_events.202 }
+			country_event = { hours = 2 id = NSB_poland_events.2021 }
 			if = { limit = { is_in_faction_with = HUN }
 				remove_from_faction = HUN
 			}
@@ -450,7 +450,7 @@ country_event = {
 
 #Hungary says yes, Hungary becomes a puppet
 country_event = {
-	id = NSB_poland_events.201
+	id = NSB_poland_events.2011
 	title = NSB_poland_events.201.t
 	desc = NSB_poland_events.201.desc
 	picture = GFX_report_event_generic_parliament
@@ -472,7 +472,7 @@ country_event = {
 }
 #Hungary says no, gain a wargoal
 country_event = {
-	id = NSB_poland_events.202
+	id = NSB_poland_events.2021
 	title = NSB_poland_events.202.t
 	desc = NSB_poland_events.202.desc
 	picture = GFX_report_event_military_planning

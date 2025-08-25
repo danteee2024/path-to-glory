@@ -10748,7 +10748,7 @@ focus_tree = {
 				limit = {
 					SWE = { exists = yes }
 				}
-				SWE = { country_event = NSB_poland_events.21e }
+				SWE = { country_event = NSB_poland_events.21 }
 				custom_effect_tooltip =  if_they_accept_tt
 				every_state = {
 					limit = {
