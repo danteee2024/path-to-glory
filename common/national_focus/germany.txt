@@ -25655,11 +25655,11 @@ focus_tree = {
 	focus = {
 		id = GER_re_ratify_the_locarno_treaty
 		icon = GFX_focus_generic_treaty
-		prerequisite = { focus = GER_re_establish_free_elections_ww }
+		prerequisite = { focus = GER_weltpolitik }
 
-		x = 3
+		x = -6
 		y = 1
-		relative_position_id = GER_re_establish_free_elections_ww
+		relative_position_id = GER_weltpolitik
 		cost = 5
 
 		dynamic = yes
@@ -26158,7 +26158,7 @@ focus_tree = {
 		prerequisite = { focus = GER_revive_the_kaiserreich_ww }
 		mutually_exclusive = { focus = GER_return_of_the_kaiser_ww }
 
-		x = 2
+		x = 10
 		y = 1
 		relative_position_id = GER_revive_the_kaiserreich_ww
 		cost = 2
@@ -26257,11 +26257,51 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_Empire_Recovery
+		icon = GFX_focus_generic_economic_recovery
+		prerequisite = { focus = GER_invite_scientists_back }
+		x = -1
+		y = 1
+		relative_position_id = GER_invite_scientists_back
+		cost = 5
+		available = {
+			} 
+		
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = GER_Empire_Recovery
+		}
+	}
+
+	focus = {
+		id = GER_Empire_Industry
+		icon = GFX_focus_AFG_a_modern_economy
+		prerequisite = { focus = GER_Empire_Recovery }
+		prerequisite = { focus = GER_danzig_for_guarantees_ww focus = GER_demand_the_return_of_southern_jutland }
+		x = 2
+		y = 2
+		relative_position_id = GER_Empire_Recovery
+		cost = 5
+		available = {
+		NOT = { num_of_controlled_factories < 100 }
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			swap_ideas = { remove_idea = GER_Empire_Recovery
+		add_idea = GER_Empire_Industry }
+		}
+	}
+
+	focus = {
 		id = GER_glorious_mechanical_machinations
 		icon = GFX_focus_GER_wunderwaffe
 		prerequisite = { focus = GER_invite_scientists_back }
 
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = GER_invite_scientists_back
 		cost = 5
@@ -26318,11 +26358,11 @@ focus_tree = {
 		id = GER_prussian_artillery
 		icon = GFX_goal_generic_army_artillery
 
-		prerequisite = { focus = GER_invite_scientists_back focus = GER_prepare_for_the_next_naval_blockade }
+		prerequisite = { focus = GER_military_dictatorship focus = GER_return_of_the_kaiser_ww }
 
-		x = 1
+		x = 2
 		y = 1
-		relative_position_id = GER_glorious_mechanical_machinations
+		relative_position_id = GER_return_of_the_kaiser_ww
 
 		cost = 5
 
@@ -26360,7 +26400,7 @@ focus_tree = {
 		icon = GFX_focus_generic_military_mission
 		prerequisite = { focus = GER_return_of_the_kaiser_ww focus = GER_military_dictatorship }
 
-		x = 6
+		x = 5
 		y = 1
 		relative_position_id = GER_return_of_the_kaiser_ww
 		cost = 10
@@ -26399,7 +26439,7 @@ focus_tree = {
 		icon = GFX_goal_generic_axis_build_infantry
 		prerequisite = { focus = GER_fan_prussian_militarism }
 
-		x = -1
+		x = -2
 		y = 1
 		relative_position_id = GER_fan_prussian_militarism
 		cost = 5
@@ -26485,7 +26525,7 @@ focus_tree = {
 		icon = GFX_focus_generic_full_social_mobilization
 		prerequisite = { focus = GER_fan_prussian_militarism }
 
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = GER_fan_prussian_militarism
 		cost = 5
@@ -26522,11 +26562,11 @@ focus_tree = {
 	focus = {
 		id = GER_glory_to_the_imperial_army
 		icon = GFX_focus_GER_glory_to_the_imperial_army
-		prerequisite = { focus = GER_re_form_the_freikorps focus = GER_re_establish_the_landwehr  }
+		prerequisite = { focus = GER_fan_prussian_militarism }
 
-		x = 1
+		x = 0
 		y = 1 
-		relative_position_id = GER_re_form_the_freikorps
+		relative_position_id = GER_fan_prussian_militarism
 
 		cost = 10
 		available = { 
@@ -26578,9 +26618,9 @@ focus_tree = {
 
 		prerequisite = { focus = GER_military_dictatorship }
 
-		x = 2
+		x = 0
 		y = 1
-		relative_position_id = GER_return_of_the_kaiser_ww
+		relative_position_id = GER_military_dictatorship
 
 		cost = 5
 
@@ -26676,7 +26716,7 @@ focus_tree = {
 
 		cancel_if_invalid = yes
 
-		x = 4
+		x = 8
 		y = 1
 		relative_position_id = GER_return_of_the_kaiser_ww
 
@@ -26759,10 +26799,10 @@ focus_tree = {
 		id = GER_demand_the_return_of_southern_jutland
 		icon = GFX_focus_generic_invade_denmark
 
-		prerequisite = { focus = GER_return_of_the_kaiser_ww focus = GER_military_dictatorship }
+		prerequisite = { focus = GER_all_for_the_front focus = GER_glorious_mechanical_machinations }
 
-		x = 8
-		y = 1
+		x = 6
+		y = 3
 		relative_position_id = GER_return_of_the_kaiser_ww
 
 		cost = 5
@@ -26888,10 +26928,10 @@ focus_tree = {
 
 		icon = GFX_focus_GER_realpolitik
 
-		prerequisite = { focus = GER_the_monarchy_compromise_ww focus = GER_revive_the_kaiserreich_ww }
+		prerequisite = { }
 
-		x = 1
-		y = 5
+		x = 25
+		y = 25
 		relative_position_id = GER_the_monarchy_compromise_ww
 
 		cost = 2
@@ -29731,13 +29771,12 @@ focus_tree = {
 		id = GER_danzig_for_guarantees_ww
 		icon = GFX_focus_generic_polish_deal
 
-		prerequisite = { focus = GER_see_to_the_eastern_front_ww }
+		prerequisite = { focus = GER_all_for_the_front focus = GER_glorious_mechanical_machinations }
 
-		mutually_exclusive = { focus = GER_safeguard_poland }
 
-		x = -1
-		y = 1
-		relative_position_id = GER_see_to_the_eastern_front_ww
+		x = -2
+		y = 0
+		relative_position_id = GER_demand_the_return_of_southern_jutland
 
 		cost = 10
 
@@ -29811,7 +29850,6 @@ focus_tree = {
 		id = GER_safeguard_poland
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = GER_see_to_the_eastern_front_ww }
-		mutually_exclusive = { focus = GER_danzig_for_guarantees_ww }
 		x = -3
 		y = 1
 		relative_position_id = GER_see_to_the_eastern_front_ww
@@ -29877,7 +29915,7 @@ focus_tree = {
 	focus = {
 		id = GER_build_the_eastern_bulwark
 		icon = GFX_focus_SWE_hedgehog_defense
-		prerequisite = { focus = GER_safeguard_the_baltic_ww focus = GER_tributes_for_guarantees focus = GER_danzig_for_guarantees_ww focus = GER_safeguard_poland }
+		prerequisite = { focus = GER_safeguard_the_baltic_ww focus = GER_tributes_for_guarantees focus = GER_safeguard_poland }
 
 		x = 1
 		y = 1
@@ -29964,7 +30002,7 @@ focus_tree = {
 	focus = {
 		id = GER_liberate_oppressed_people
 		icon = GFX_focus_SWE_refuge_from_war
-		prerequisite = { focus = GER_safeguard_the_baltic_ww focus = GER_tributes_for_guarantees focus = GER_danzig_for_guarantees_ww focus = GER_safeguard_poland }
+		prerequisite = { focus = GER_safeguard_the_baltic_ww focus = GER_tributes_for_guarantees focus = GER_safeguard_poland }
 
 		dynamic = yes
 
@@ -30046,7 +30084,7 @@ focus_tree = {
 	focus = {
 		id = GER_offer_military_production_support
 		icon = GFX_focus_generic_license_production
-		prerequisite = { focus = GER_safeguard_the_baltic_ww focus = GER_tributes_for_guarantees focus = GER_danzig_for_guarantees_ww focus = GER_safeguard_poland }
+		prerequisite = { focus = GER_safeguard_the_baltic_ww focus = GER_tributes_for_guarantees focus = GER_safeguard_poland }
 
 		x = 5
 		y = 1
@@ -31657,12 +31695,11 @@ focus_tree = {
 	focus = {
 		id = GER_reject_the_locarno_treaty
 		icon = GFX_focus_AUS_disregard_the_treaties
-		prerequisite = { focus = GER_realpolitik }
-		prerequisite = { focus = GER_demand_the_return_of_southern_jutland }
+		prerequisite = { }
 		mutually_exclusive = { focus = GER_carte_blanche_for_alsace_and_french_colonies_ww }
 
-		x = 0
-		y = 4
+		x = 30
+		y = 20
 		relative_position_id = GER_demand_the_return_of_southern_jutland
 		cost = 10
 
@@ -32259,7 +32296,7 @@ focus_tree = {
 		icon = GFX_focus_GER_weltpolitik
 		prerequisite = { focus = GER_monarchist_sentiment }
 
-		x = 17
+		x = 23
 		y = 1
 		relative_position_id = GER_monarchist_sentiment
 
@@ -32646,103 +32683,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = GER_carte_blanche_for_alsace_and_french_colonies_ww
-		icon = GFX_focus_attack_france
-
-		prerequisite = { focus = GER_anglo_germanic_defense_pact }
-
-		mutually_exclusive = { focus = GER_reject_the_locarno_treaty }
-
-		x = -3
-		y = 2
-		relative_position_id = GER_anglo_germanic_defense_pact
-
-		cost = 10
-
-		available = {
-			is_subject = no
-			has_added_tension_amount > 10
-			NOT = {
-				has_completed_focus = GER_re_ratify_the_locarno_treaty
-				has_wargoal_against = ENG
-				is_justifying_wargoal_against = ENG
-				has_war_with = ENG
-			}
-			FRA = {
-				NOT = { is_in_faction_with = ENG }
-				OR = {
-					has_war_with = ENG
-					has_government = fascism
-					has_government = communism
-				}
-			}
-			ENG = {
-				NOT = {
-					has_government = communism
-				}
-			}
-		}
-
-		will_lead_to_war_with = FRA
-
-		search_filters = {  FOCUS_FILTER_ANNEXATION FOCUS_FILTER_WAR_SUPPORT }
-
-		completion_reward = {
-
-			every_other_country = {
-				limit = {
-					NOT = { is_ally_with = ROOT }
-					NOT = { is_ally_with = ENG } #We don't want to accidentally drag ENG into a war
-					OR = {
-						controls_state = 28
-						controls_state = 773
-						controls_state = 777
-						controls_state = 461
-						controls_state = 462
-					}
-				}
-				display_individual_scopes = yes
-				every_controlled_state = {
-					limit = {
-						OR = {
-							state = 28
-							state = 773
-							state = 777
-							state = 461
-							state = 462
-						}
-					}
-					add_to_array = {
-						array = PREV.GER_french_possessions
-						value = THIS
-					}
-					
-					add_claim_by = ROOT
-				}
-				ROOT = {
-					create_wargoal = {
-						type = take_state_focus
-						target = PREV
-						generator = PREV.GER_french_possessions
-					}
-				}
-			}
-
-			add_ai_strategy = {
-				type = conquer
-				id = FRA
-				value = 100
-			}
-
-			add_ai_strategy = {
-				type = antagonize
-				id = FRA
-				value = 100
-			}
-
-		}
-	}
+	
 
 	focus = {
 		id = GER_petition_for_the_return_of_old_colonies
