@@ -26257,6 +26257,33 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_The_Hannover_Oil
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = GER_Empire_Recovery }
+		x = 1
+		y = 1
+		relative_position_id = GER_Empire_Recovery
+		cost = 10
+		available = {
+			} 
+		
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+				random_owned_controlled_state = {
+				prioritize = { 59 }
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 4
+					instant_build = yes 
+				}
+			}
+		}
+	}
+
+		focus = {
 		id = GER_Empire_Recovery
 		icon = GFX_focus_generic_economic_recovery
 		prerequisite = { focus = GER_invite_scientists_back }
@@ -26272,6 +26299,25 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = GER_Empire_Recovery
+		}
+	}
+
+		focus = {
+		id = GER_Prussia_Air
+		icon = GFX_SOV_long_range_aircraft_ccp_2d_sov_compatibility
+		prerequisite = { focus = GER_glorious_mechanical_machinations }
+		x = 1
+		y = 1
+		relative_position_id = GER_glorious_mechanical_machinations
+		cost = 5
+		available = {
+			} 
+		
+
+		search_filters = { FOCUS_FILTER_AIR_XP }
+
+		completion_reward = {
+			add_ideas = GER_Prussia_Air
 		}
 	}
 
@@ -26295,6 +26341,27 @@ focus_tree = {
 		add_idea = GER_Empire_Industry }
 		}
 	}
+
+	focus = {
+		id = GER_Empire_War_Industry
+		icon = GFX_SOV_war_economy_ccp_2d_sov_compatibility
+		prerequisite = { focus = GER_Empire_Industry }
+		x = -1
+		y = 1
+		relative_position_id = GER_Empire_Industry
+		cost = 5
+		available = {
+		NOT = { num_of_controlled_factories < 130 }
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			swap_ideas = { remove_idea = GER_Empire_Industry
+		add_idea = GER_Empire_War_Industry }
+		}
+	}
+
 
 	focus = {
 		id = GER_glorious_mechanical_machinations

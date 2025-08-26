@@ -68,15 +68,57 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = GER_recovering_economy
+			picture = generic_improved_industries
 
 			removal_cost = -1
 			
 			modifier = {
 			production_speed_industrial_complex_factor = 0.15
 			production_speed_arms_factory_factor = -0.15
-			production_factory_max_efficiency_factor = 0.05
+			production_factory_max_efficiency_factor = 0.1
 			production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+
+		
+		GER_Empire_War_Industry = {
+			
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_improved_industries
+
+			removal_cost = -1
+			
+			modifier = {
+			production_speed_industrial_complex_factor = -0.15
+			production_speed_arms_factory_factor = 0.15
+			production_factory_max_efficiency_factor = 0.1
+			production_factory_efficiency_gain_factor = 0.1
+			industrial_capacity_factory = 0.1
+			industrial_capacity_dockyard = 0.1
+			}
+		}
+		GER_Prussia_Air = {
+			
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GER_airforce
+
+			removal_cost = -1
+			
+			modifier = {
+			air_agility_factor = 0.05
+			air_defence_factor = 0.05
 			}
 		}
 
