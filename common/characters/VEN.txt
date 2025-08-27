@@ -1,0 +1,791 @@
+characters={
+	VEN_luis_figueroa={
+		name="Luis Figueroa"
+		portraits={
+			civilian={
+				large="gfx/leaders/VEN/r56_portrait_VEN_Jovito_Villalba.ddso"
+			}
+		}
+		country_leader={
+			traits = {
+				financial_expert
+			}
+			ideology=liberalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	VEN_juan_Bautista_fuenmayor={
+		name="Juan Bautista Fuenmayor"
+		portraits={
+			civilian={
+				large="gfx/leaders/VEN/r56_portrait_VEN_Juan_Fuenmayor.dds"
+			}
+		}
+		country_leader={
+			traits = {
+				propaganda_bungler
+				baron_of_terror
+			}
+			ideology= marxism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	VEN_eleazar_lopez_contreras={
+		name="Eleazar Lopez Contreras"
+		portraits={
+			army = {
+				large="gfx/leaders/VEN/r56_portrait_VEN_Elezar_Lopez_Contreras_young.ddss"
+			}
+		}
+		country_leader={
+			traits = {
+				empire_builder
+			}
+			ideology= despotism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		field_marshal={
+			traits = { old_guard war_hero politically_connected organizer media_personality }
+			skill = 3
+    		attack_skill = 2
+    		defense_skill = 2
+    		planning_skill = 3
+    		logistics_skill = 3
+			legacy_id=6967
+		}
+
+	}
+
+	VEN_eleazar_lopez_contreras_k={
+		name="Eleazar Lopez Contreras"
+		portraits={
+			army = {
+				large="gfx/leaders/VEN/r56_portrait_VEN_Elezar_Lopez_Contreras_young.ddss"
+			}
+		}
+		country_leader={
+			traits = {
+				conservative_nationalist
+			}
+			ideology= falangism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	VEN_enrique_c_rolas={
+		advisor={
+			
+			
+			slot = high_command
+			idea_token = CUB_enrique_c_rolas
+			ledger = navy
+				allowed = {
+					original_tag = VEN
+				}
+				traits = {
+					air_naval_strike_1
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name="Enrique C. Rolas"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_south_america_1"
+			}
+		}
+	}
+	VEN_palaez_menendez={
+		advisor={
+			
+			
+			slot = air_chief
+			idea_token = CUB_palaez_menendez
+			allowed = {
+					original_tag = VEN
+				}
+				traits = {
+					air_chief_reform_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name="Palaez Menendez"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_south_america_3"
+			}
+		}
+	}
+	VEN_domingo_r_del_toro={
+		advisor={
+			
+			
+			slot = air_chief
+			idea_token = CUB_domingo_r_del_toro
+			allowed = {
+					original_tag = VEN
+				}
+				traits = {
+					air_chief_night_operations_1
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name="Domingo R. del Toro"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_south_america_1"
+			}
+		}
+	}
+	VEN_eduardo_chibas={
+		advisor={
+			cost = 100
+			
+			slot = theorist
+			idea_token = CUB_eduardo_chibas
+			ledger = army
+				allowed = {
+					original_tag = VEN
+				}
+				
+				traits = {
+					military_theorist
+				}
+		}
+		name="Eduardo Chibas"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_south_america_3"
+			}
+		}
+	}
+	VEN_Teo={
+		advisor={
+			slot = high_command
+			idea_token = CUB_Teo
+			ledger = army
+				allowed = {
+					original_tag = VEN
+				}
+				traits = {
+					army_infantry_2
+				}
+				cost = 100
+		    }
+		    name="José Eleuterio Pedraza"
+		    portraits={
+			    army={
+				    small="GFX_idea_teo_advisor"
+			    }
+		    }
+	    }
+	VEN_rodrigo_a_fuentes={
+		advisor={
+			
+			
+			slot = navy_chief
+			idea_token = CUB_rodrigo_a_fuentes
+			allowed = {
+					original_tag = VEN
+				}
+				traits = {
+					navy_chief_maneuver_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name="Rodrigo A. Fuentes"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_south_america_3"
+			}
+		}
+	}
+	VEN_sandalio_junco={
+		advisor={
+			
+			
+			slot = navy_chief
+			idea_token = CUB_sandalio_junco
+			allowed = {
+					original_tag = VEN
+				}
+				traits = {
+					navy_fleet_logistics_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name="Sandalio Junco"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_south_america_2"
+			}
+		}
+	}
+	VEN_salvador_castaneda_castro={
+		advisor={
+			
+			
+			slot = army_chief
+			idea_token = CUB_salvador_castaneda_castro
+			allowed = {
+					original_tag = VEN
+				}
+				traits = {
+					army_chief_defensive_3
+				}
+				cost = 200
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name="Salvador Castaneda Castro"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_south_america_4"
+			}
+		}
+	}
+	VEN_angel_gonzalez={
+		advisor={
+			
+			
+			slot = high_command
+			idea_token = CUB_angel_gonzalez
+			ledger = army
+				allowed = {
+					original_tag = VEN
+				}
+				traits = {
+					navy_amphibious_assault_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name="Angel Gonzalez"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_south_america_2"
+			}
+		}
+	}
+	VEN_julio_sanguily={
+		advisor={
+			cost = 100
+			
+			slot = theorist
+			idea_token = CUB_julio_sanguily
+			ledger = navy
+				allowed = {
+					original_tag = CUB
+				}
+				
+				traits = {
+					naval_theorist
+				}
+		}
+		name="Julio Sanguily"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_south_america_3"
+			}
+		}
+	}
+	VEN_carlos_prio={
+		advisor={
+			slot = political_advisor
+			idea_token = CUB_carlos_prio
+			allowed  = {
+					original_tag  = VEN
+				}
+				traits  = {
+					smooth_talking_charmer 
+				}
+		}
+		name="Carlos Prio"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_south_america_1"
+			}
+		}
+	}
+	VEN_gerardo_machado={
+		advisor={
+			slot = political_advisor
+			idea_token = CUB_gerardo_machado
+			allowed  = {
+					original_tag  = VEN
+				}
+				traits  = {
+					silent_workhorse 
+				}
+		}
+		name="Gerardo Machado"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_south_america_3"
+			}
+		}
+	}
+	VEN_eugenio_molinet_castro={
+		advisor={
+			slot = political_advisor
+			idea_token = CUB_eugenio_molinet_castro
+			allowed  = {
+					original_tag  = VEN
+				}
+				traits  = {
+					captain_of_industry 
+				}
+		}
+		name="Eugenio Molinet Castro"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_south_america_2"
+			}
+		}
+	}
+	
+	VEN_oswaldo_lopez_arellano={
+		advisor={
+			
+			
+			slot = high_command
+			idea_token = CUB_oswaldo_lopez_arellano
+			ledger = navy
+				allowed = {
+					original_tag = VEN
+				}
+				traits = {
+					navy_anti_submarine_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name="Oswaldo López Arellano"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_south_america_3"
+			}
+		}
+	}
+	VEN_carlos_vaupel_comeza={
+		advisor={
+			
+			
+			slot = navy_chief
+			idea_token = CUB_carlos_vaupel_comeza
+			allowed = {
+					original_tag = VEN
+				}
+				traits = {
+					navy_chief_naval_aviation_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name="Carlos Vaupel Comeza"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_south_america_2"
+			}
+		}
+	}
+	VEN_neto_britto={
+		advisor={
+			
+			
+			slot = high_command
+			idea_token = CUB_neto_britto
+			ledger = army
+				allowed = {
+					original_tag = VEN
+				}
+				traits = {
+					army_cavalry_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name="Neto Britto"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_south_america_4"
+			}
+		}
+	}
+	VEN_jose_zuniga_huete={
+		advisor={
+			
+			
+			slot = army_chief
+			idea_token = CUB_jose_zuniga_huete
+			allowed = {
+					original_tag = VEN
+				}
+				traits = {
+					army_chief_drill_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name="José Zuñiga Huete"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_south_america_1"
+			}
+		}
+	}
+	VEN_teodore_alberto={
+		advisor={
+			
+			
+			slot = high_command
+			idea_token = CUB_teodore_alberto
+			ledger = navy
+				allowed = {
+					original_tag = VEN
+				}
+				traits = {
+					navy_naval_air_defense_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name="Teodore Alberto"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_south_america_1"
+			}
+		}
+	}
+	VEN_rufio_villegas={
+		advisor={
+			cost = 100
+			
+			slot = theorist
+			idea_token = CUB_rufio_villegas
+			ledger = navy
+				allowed = {
+					original_tag = VEN
+				}
+				
+				traits = {
+					naval_theorist
+				}
+		}
+		name="Rufio Villegas"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_south_america_2"
+			}
+		}
+	}
+	VEN_carlos_molina_dejonje={
+		advisor={
+			cost = 100
+			
+			slot = theorist
+			idea_token = CUB_carlos_molina_dejonje
+			ledger = air
+				allowed = {
+					original_tag = VEN
+				}
+				
+				traits = {
+					air_warfare_theorist
+				}
+		}
+		name="Carlos Molina Dejonje"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_south_america_1"
+			}
+		}
+	}
+	VEN_didier_masson={
+		advisor={
+			
+			
+			slot = air_chief
+			idea_token = CUB_didier_masson
+			allowed = {
+					original_tag = VEN
+				}
+				traits = {
+					air_chief_ground_support_3
+				}
+				cost = 200
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name="Didier Masson"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_south_america_3"
+			}
+		}
+	}
+	VEN_miguel_angel_sevilla={
+		advisor={
+			
+			
+			slot = air_chief
+			idea_token = CUB_miguel_angel_sevilla
+			allowed = {
+					original_tag = VEN
+				}
+				traits = {
+					air_chief_all_weather_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name="Miguel Ángel Sevilla"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_south_america_2"
+			}
+		}
+	}
+	VEN_raimundo_stochler_garcia={
+		advisor={
+			
+			
+			slot = army_chief
+			idea_token = CUB_raimundo_stochler_garcia
+			allowed = {
+					original_tag = VEN
+				}
+				traits = {
+					army_chief_offensive_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name="Raimundo Stochler Garcia"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_south_america_2"
+			}
+		}
+	}
+	VEN_francisco_s_tapio_toro={
+		advisor={
+			
+			
+			slot = navy_chief
+			idea_token = CUB_francisco_s_tapio_toro
+			allowed = {
+					original_tag = VEN
+				}
+				traits = {
+					navy_chief_commerce_raiding_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name="Francisco S. Tapio Toro"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_south_america_3"
+			}
+		}
+	}
+	VEN_enrique_doll_rojas={
+		advisor={
+			
+			
+			slot = army_chief
+			idea_token = CUB_enrique_doll_rojas
+			allowed = {
+					original_tag = CUB
+				}
+				traits = {
+					army_chief_morale_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name="Enrique Doll Rojas"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_south_america_3"
+			}
+		}
+	}
+	VEN_gustavo_schmidt={
+		advisor={
+			
+			
+			slot = high_command
+			idea_token = CUB_gustavo_schmidt
+			ledger = air
+				allowed = {
+					original_tag = VEN
+				}
+				traits = {
+					air_air_superiority_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name="Gustavo Schmidt"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_south_america_2"
+			}
+		}
+	}
+	VEN_carlos_alberto_ucles={
+		advisor={
+			slot = political_advisor
+			idea_token = CUB_carlos_alberto_ucles
+			allowed  = {
+					original_tag  = VEN
+				}
+				traits  = {
+					war_industrialist 
+				}
+		}
+		name="Carlos Alberto Ucles"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_south_america_1"
+			}
+		}
+	}
+	VEN_roberto_michelleti_bain={
+		advisor={
+			slot = political_advisor
+			idea_token = CUB_roberto_michelleti_bain
+			allowed  = {
+					original_tag  = VEN
+				}
+				traits  = {
+					quartermaster_general 
+				}
+		}
+		name="Roberto Michelleti Bain"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_south_america_2"
+			}
+		}
+	}
+	VEN_orlando_rodriguez_jimino={
+		advisor={
+			slot = political_advisor
+			idea_token = CUB_orlando_rodriguez_jimino
+			allowed  = {
+					original_tag  = VEN
+				}
+				traits  = {
+					ideological_crusader 
+				}
+		}
+		name="Orlando Rodriguez Jimino"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_south_america_3"
+			}
+		}
+	}
+	VEN_abraham_williams_calderon={
+		advisor={
+			slot = political_advisor
+			idea_token = CUB_abraham_williams_calderon
+			allowed  = {
+					original_tag  = VEN
+				}
+				traits  = {
+					prince_of_terror 
+				}
+		}
+		name="Abraham Williams Calderon"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_south_america_1"
+			}
+		}
+	}
+
+	VEN_kyle_general={
+		name="Kyle Giersdorf"
+		portraits={
+			army={
+				large="gfx/leaders/VEN/r56_portrait_VEN_Marcos_Perez_Jimenez.dds"
+			}
+		}
+		corps_commander={
+			traits={ infantry_leader career_officer}
+			skill=3
+			attack_skill=1
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+
+	VEN_david_general={
+		name="David Abogado"
+		portraits={
+			army={
+				large="gfx/leaders/VEN/r56_portrait_VEN_Audelino_Moreno.dds"
+			}
+		}
+		corps_commander={
+			traits={ old_guard harsh_leader}
+			skill=3
+			attack_skill=1
+			defense_skill=1
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+
+}

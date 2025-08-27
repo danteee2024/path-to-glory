@@ -1,0 +1,80 @@
+capital = 307
+
+OOB = "VEN_1936"
+
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	tech_trucks = 1
+	tech_support = 1
+	transport = 1
+	fuel_silos = 1
+	basic_train = 1
+}
+
+add_ideas = {
+	USA_monroe_doctrine_idea
+	
+}
+
+add_manpower = 370
+set_research_slots = 3
+set_stability = 0.65
+set_war_support = 0.5
+set_convoys = 275
+
+recruit_character = VEN_luis_figueroa
+recruit_character = VEN_juan_Bautista_fuenmayor
+recruit_character = VEN_eleazar_lopez_contreras
+recruit_character = VEN_eleazar_lopez_contreras_k
+recruit_character = VEN_enrique_c_rola
+recruit_character = VEN_enrique_c_rolas
+recruit_character = VEN_palaez_menendez
+recruit_character = VEN_domingo_r_del_toro
+recruit_character = VEN_eduardo_chibas
+recruit_character = VEN_rodrigo_a_fuentes
+recruit_character = VEN_sandalio_junco
+recruit_character = VEN_salvador_castaneda_castro
+recruit_character = VEN_angel_gonzalez
+recruit_character = VEN_julio_sanguily
+recruit_character = VEN_gerardo_machado
+recruit_character = VEN_eugenio_molinet_castro
+recruit_character = VEN_oswaldo_lopez_arellano
+recruit_character = VEN_carlos_vaupel_comeza
+recruit_character = VEN_kyle_general
+recruit_character = VEN_david_general
+recruit_character = VEN_neto_britto
+recruit_character = VEN_jose_zuniga_huete
+recruit_character = VEN_teodore_alberto
+recruit_character = VEN_rufio_villegas
+recruit_character = VEN_carlos_molina_dejonje
+recruit_character = VEN_didier_masson
+recruit_character = VEN_miguel_angel_sevilla
+recruit_character = VEN_raimundo_stochler_garcia
+recruit_character = VEN_francisco_s_tapio_toro
+recruit_character = VEN_enrique_doll_rojas
+recruit_character = VEN_gustavo_schmidt
+recruit_character = VEN_carlos_alberto_ucles
+recruit_character = VEN_roberto_michelleti_bain
+recruit_character = VEN_orlando_rodriguez_jimino
+recruit_character = VEN_abraham_williams_calderon
+
+
+
+
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 0
+	fascism = 80
+	communism = 15
+	democratic = 5
+}
+
+
