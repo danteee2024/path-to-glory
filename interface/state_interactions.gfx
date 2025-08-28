@@ -1,0 +1,83 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_si_main_bg"
+		textureFile = "gfx/state_interactions/main_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_si_state_core_button"
+		textureFile = "gfx/state_interactions/state_core.dds"
+	}
+	spriteType = {
+		name = "GFX_si_state_uncore_button"
+		textureFile = "gfx/state_interactions/state_uncore.dds"
+	}
+	spriteType = {
+		name = "GFX_si_state_move_capital_button"
+		textureFile = "gfx/state_interactions/state_move_capital.dds"
+	}
+	spriteType = {
+		name = "GFX_si_state_request_resource_rights_button"
+		textureFile = "gfx/state_interactions/state_request_resource_rights.dds"
+	}
+	spriteType = {
+		name = "GFX_si_state_remove_resource_rights_button"
+		textureFile = "gfx/state_interactions/state_remove_resource_rights.dds"
+	}
+	spriteType = {
+		name = "GFX_si_state_demiliterise_button"
+		textureFile = "gfx/state_interactions/state_demiliterise.dds"
+	}
+	spriteType = {
+		name = "GFX_si_state_remiliterise_button"
+		textureFile = "gfx/state_interactions/state_remiliterise.dds"
+	}
+	spriteType = {
+		name = "GFX_si_state_border_war_button"
+		textureFile = "gfx/state_interactions/state_border_war.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_si_border_war_idea"
+		textureFile = "gfx/state_interactions/border_war_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_si_border_war_state_modifier"
+		textureFile = "gfx/state_interactions/border_war_state_modifier.dds"
+	}
+	spriteType = {
+		name = "GFX_si_state_spend_money_re_button"
+		textureFile = "gfx/state_interactions/state_spend_money_re.dds"
+	}
+	spriteType = {
+		name = "GFX_si_state_spend_money_ie_button"
+		textureFile = "gfx/state_interactions/state_spend_money_ie.dds"
+	}
+	spriteType = {
+		name = "GFX_si_state_spend_money_civ_button"
+		textureFile = "gfx/state_interactions/state_spend_money_civ.dds"
+	}
+	spriteType = {
+		name = "GFX_si_state_spend_money_mil_button"
+		textureFile = "gfx/state_interactions/state_spend_money_mil.dds"
+	}
+	spriteType = {
+		name = "GFX_si_state_spend_money_dy_button"
+		textureFile = "gfx/state_interactions/state_spend_money_dy.dds"
+	}
+	spriteType = {
+		name = "GFX_si_money_bg"
+		textureFile = "gfx/state_interactions/money_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_si_generic_long_button"
+		textureFile = "gfx/state_interactions/generic_long_button.dds"
+	}
+	spriteType = {
+		name = "GFX_si_state_transfer_button"
+		textureFile = "gfx/state_interactions/state_transfer_button.dds"
+	}
+	spriteType = {
+		name = "GFX_si_state_claim_button"
+		textureFile = "gfx/state_interactions/state_claim_button.dds"
+	}
+
+}

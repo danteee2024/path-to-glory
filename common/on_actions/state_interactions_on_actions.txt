@@ -1,0 +1,45 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_possible_country = {
+				set_variable = { si_money_var = 0 }
+				set_variable = { si_spend_money_re_var = 1 }
+				set_variable = { si_claim_cost_multiplier_var = 1 }
+			}
+			random_country = {
+				set_variable = { global.si_border_war_duration_var = 60 }
+				set_variable = { global.si_claim_cost_base_var = 50 }
+			}
+			every_state = {
+				if = {
+					limit = { has_global_flag = rt56rp_gr_state_interactions_ie_1_gflag }
+					set_variable = { si_ie_free_slots_var = 16 }
+				}
+				else_if = {
+					limit = { has_global_flag = rt56rp_gr_state_interactions_ie_2_gflag }
+					set_variable = { si_ie_free_slots_var = 8 }
+				}
+				else_if = {
+					limit = { has_global_flag = rt56rp_gr_state_interactions_ie_3_gflag }
+					set_variable = { si_ie_free_slots_var = 4 }
+				}
+				else_if = {
+					limit = { has_global_flag = rt56rp_gr_state_interactions_ie_4_gflag }
+					set_variable = { si_ie_free_slots_var = 0 }
+				}
+			}
+		}
+	}
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					FROM.FROM = { #state
+						has_state_flag = si_resource_rights_sflag
+					}
+				}
+				clr_state_flag = si_resource_rights_sflag
+			}
+		}
+	}
+}

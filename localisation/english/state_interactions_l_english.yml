@@ -1,0 +1,125 @@
+﻿l_english: 
+
+ si_title:0 "§HState Interactions:§!\n[?THIS.GetName]"
+
+### Toggle Button
+ si_toggle_button_tt1:0 "\n\n§RDisabled by Game Rule§!"
+ si_toggle_button_tt:0 "Click here to toggle the §HState Interactions§! menu for selected states. You can also find the §HState Transfer and Claim Tool§! here.[si_toggle_button_tt_scriptloc]"
+
+### Core
+ si_core_button_1_1:0 "This action costs £pol_power §H1§! due to:\n   State population: §H<50k§!\n   §HCutthroat Politics§!: §G-50%§!\n   §HBeacon of Liberty§!: §G-25%§!"
+ si_core_button_1_2:0 "This action costs £pol_power §H2§! due to:\n   State population: §H<50k§!\n   §HCutthroat Politics§!: §G-50%§!"
+ si_core_button_1_3:0 "This action costs £pol_power §H3§! due to:\n   State population: §H<50k§!\n   §HBeacon of Liberty§!: §G-25%§!"
+ si_core_button_1_4:0 "This action costs £pol_power §H4§! due to:\n   State population: §H<50k§!"
+ si_core_button_2_1:0 "This action costs £pol_power §H3§! due to:\n   State population: §H50k§! - §H100k§!\n   §HCutthroat Politics§!: §G-50%§!\n   §HBeacon of Liberty§!: §G-25%§!"
+ si_core_button_2_2:0 "This action costs £pol_power §H6§! due to:\n   State population: §H50k§! - §H100k§!\n   §HCutthroat Politics§!: §G-50%§!"
+ si_core_button_2_3:0 "This action costs £pol_power §H9§! due to:\n   State population: §H50k§! - §H100k§!\n   §HBeacon of Liberty§!: §G-25%§!"
+ si_core_button_2_4:0 "This action costs £pol_power §H12§! due to:\n   State population: §H50k§! - §H100k§!"
+ si_core_button_3_1:0 "This action costs £pol_power §H5§! due to:\n   State population: §H100k§! - §H250k§!\n   §HCutthroat Politics§!: §G-50%§!\n   §HBeacon of Liberty§!: §G-25%§!"
+ si_core_button_3_2:0 "This action costs £pol_power §H10§! due to:\n   State population: §H100k§! - §H250k§!\n   §HCutthroat Politics§!: §G-50%§!"
+ si_core_button_3_3:0 "This action costs £pol_power §H15§! due to:\n   State population: §H100k§! - §H250k§!\n   §HBeacon of Liberty§!: §G-25%§!"
+ si_core_button_3_4:0 "This action costs £pol_power §H20§! due to:\n   State population: §H100k§! - §H250k§!"
+ si_core_button_4_1:0 "This action costs £pol_power §H7§! due to:\n   State population: §H250k§! - §H500k§!\n   §HCutthroat Politics§!: §G-50%§!\n   §HBeacon of Liberty§!: §G-25%§!"
+ si_core_button_4_2:0 "This action costs £pol_power §H14§! due to:\n   State population: §H250k§! - §H500k§!\n   §HCutthroat Politics§!: §G-50%§!"
+ si_core_button_4_3:0 "This action costs £pol_power §H21§! due to:\n   State population: §H250k§! - §H500k§!\n   §HBeacon of Liberty§!: §G-25%§!"
+ si_core_button_4_4:0 "This action costs £pol_power §H28§! due to:\n   State population: §H250k§! - §H500k§!"
+ si_core_button_5_1:0 "This action costs £pol_power §H9§! due to:\n   State population: §H500k§! - §H1.0M§!\n   §HCutthroat Politics§!: §G-50%§!\n   §HBeacon of Liberty§!: §G-25%§!"
+ si_core_button_5_2:0 "This action costs £pol_power §H18§! due to:\n   State population: §H500k§! - §H1.0M§!\n   §HCutthroat Politics§!: §G-50%§!"
+ si_core_button_5_3:0 "This action costs £pol_power §H27§! due to:\n   State population: §H500k§! - §H1.0M§!\n   §HBeacon of Liberty§!: §G-25%§!"
+ si_core_button_5_4:0 "This action costs £pol_power §H36§! due to:\n   State population: §H500k§! - §H1.0M§!"
+ si_core_button_6_1:0 "This action costs £pol_power §H11§! due to:\n   State population: §H1.0M§! - §H2.5M§!\n   §HCutthroat Politics§!: §G-50%§!\n   §HBeacon of Liberty§!: §G-25%§!"
+ si_core_button_6_2:0 "This action costs £pol_power §H22§! due to:\n   State population: §H1.0M§! - §H2.5M§!\n   §HCutthroat Politics§!: §G-50%§!"
+ si_core_button_6_3:0 "This action costs £pol_power §H33§! due to:\n   State population: §H1.0M§! - §H2.5M§!\n   §HBeacon of Liberty§!: §G-25%§!"
+ si_core_button_6_4:0 "This action costs £pol_power §H44§! due to:\n   State population: §H1.0M§! - §H2.5M§!"
+ si_core_button_7_1:0 "This action costs £pol_power §H13§! due to:\n   State population: §H2.5M§! - §H5.0M§!\n   §HCutthroat Politics§!: §G-50%§!\n   §HBeacon of Liberty§!: §G-25%§!"
+ si_core_button_7_2:0 "This action costs £pol_power §H26§! due to:\n   State population: §H2.5M§! - §H5.0M§!\n   §HCutthroat Politics§!: §G-50%§!"
+ si_core_button_7_3:0 "This action costs £pol_power §H39§! due to:\n   State population: §H2.5M§! - §H5.0M§!\n   §HBeacon of Liberty§!: §G-25%§!"
+ si_core_button_7_4:0 "This action costs £pol_power §H52§! due to:\n   State population: §H2.5M§! - §H5.0M§!"
+ si_core_button_8_1:0 "This action costs £pol_power §H15§! due to:\n   State population: §H>5.0M§!\n   §HCutthroat Politics§!: §G-50%§!\n   §HBeacon of Liberty§!: §G-25%§!"
+ si_core_button_8_2:0 "This action costs £pol_power §H30§! due to:\n   State population: §H>5.0M§!\n   §HCutthroat Politics§!: §G-50%§!"
+ si_core_button_8_3:0 "This action costs £pol_power §H45§! due to:\n   State population: §H>5.0M§!\n   §HBeacon of Liberty§!: §G-25%§!"
+ si_core_button_8_4:0 "This action costs £pol_power §H60§! due to:\n   State population: §H>5.0M§!"
+ si_core_button_tt:0 "§HIntegrate [?THIS.GetName]§!\n\n[si_core_button_tt_scriptloc]\n\n§HAll of the following must be true:§!\n   Owns and fully controls state\n   Is not a core\n   §HOne of the following must be true:§!\n      State compliance is §H>60%§!\n      Is a colony state\n   Coring allowed by game rule"
+
+### Uncore
+ si_uncore_button_1:0 "This action costs £pol_power §H2§! due to:\n   State population: §H<50k§!"
+ si_uncore_button_2:0 "This action costs £pol_power §H6§! due to:\n   State population: §H50k§! - §H100k§!"
+ si_uncore_button_3:0 "This action costs £pol_power §H10§! due to:\n   State population: §H100k§! - §H250k§!"
+ si_uncore_button_4:0 "This action costs £pol_power §H14§! due to:\n   State population: §H250k§! - §H500k§!"
+ si_uncore_button_5:0 "This action costs £pol_power §H18§! due to:\n   State population: §H500k§! - §H1.0M§!"
+ si_uncore_button_6:0 "This action costs £pol_power §H22§! due to:\n   State population: §H1.0M§! - §H2.5M§!"
+ si_uncore_button_7:0 "This action costs £pol_power §H26§! due to:\n   State population: §H2.5M§! - §H5.0M§!"
+ si_uncore_button_8:0 "This action costs £pol_power §H30§! due to:\n   State population: §H>5.0M§!"
+ si_uncore_button_tt:0 "§HAbandon core of [?THIS.GetName]§!\n\n[si_uncore_button_tt_scriptloc]\n\n§HAll of the following must be true:§!\n   Is a core\n   Is not the current capital\n   Uncoring allowed by game rule"
+
+### Move Capital
+ si_move_capital_button_tt:0"§HMove capital to [?THIS.GetName]§!\n\nThis action costs £pol_power §H100§!.\n\n§HAll of the following must be true:§!\n   Owns and fully controls state\n   Is a core\n   Is not the current capital"
+
+### Request Resource Rights
+ si_request_resource_rights_button_tt:0"§HRequest resource rights to [?THIS.GetName]§!\n\nThis action costs £pol_power §H5§! via diplomatic action.\n\n§HAll of the following must be true:§!\n   Is a foreign state\n   State does not have foreign resource rights"
+
+ SI_REQUEST_RESOURCE_RIGHTS_TITLE:0 "Request resource rights"
+ SI_REQUEST_RESOURCE_RIGHTS_ACTION_DESC:0 "Ask for rights to the resources in one of their states or subject's states.\n\n§RIf they accept, you can choose the state via state interactions.§!"
+ si_request_resource_rights_send_desc:0 "Asking for resource rights from\n§Y[From.GetnameDefCap]§!\nwill give us direct access to the resources in a state of our choice!"
+ si_request_resource_rights_receive_desc:0 "We have been asked to give resource rights to\n§Y[?ROOT.GetnameDefCap]§!.\nIf we accept, they will be free to choose a state with which to exploit!"
+ si_request_resource_rights_accept:0 "They Accepted"
+ si_request_resource_rights_accept_desc:0 "They accepted our offer and we can now request the resources in a state of our choice via state interactions!"
+ si_request_resource_rights_reject:0 "They Refused"
+ si_request_resource_rights_reject_desc:0 "They refused our request to the rights of their resources! We should try to improve relations before asking again."
+ si_request_resource_rights_ai_condition:0 "Is AI"
+ si_request_resource_rights1_opmod:0 "Relation: Resource Rights"
+
+### Remove Resource Rights
+ si_remove_resource_rights_button_tt:0 "§HRemove resource rights from [?THIS.GetName]§!\n\nThis action costs £pol_power §H5§!.\n\n§HAll of the following must be true:§!\n   Owns and fully controls state\n   State has foreign resource rights"
+
+
+### Demiliterise
+ si_demiliterise_button_tt:0 "§HDemiliterise [?THIS.GetName]§!\n\nThis action costs £pol_power §H15§!.\n\n§HAll of the following must be true:§!\n   Owns and fully controls state\n   Is not the current capital\n   Is not at war\n   Is militerised"
+
+### Remiliterise
+ si_remiliterise_button_tt:0 "§HRemiliterise [?THIS.GetName]§!\n\nThis action costs £pol_power §H15§!.\n\n§HAll of the following must be true:§!\n   Owns and fully controls state\n   Is demiliterised\n   Is after Jan 1st 1939"
+
+###  Border War (Custom)
+ si_border_war_attacker_idea:0 "Launched a Border Skirmish"
+ si_border_war_attacker_idea_desc:0 "This country has recently launched a coordinated attack into their neighbour, weakening the effectiveness of any local response to further escalation."
+ si_border_war_defender_idea:0 "Target of a Border Skirmish"
+ si_border_war_defender_idea_desc:0 "This country has recently become the target of a pre-meditated attack on their border personnel, and have placed their security services on high alert in response. The governing authority is working to restore order and is exploring retalliatory measures."
+ si_border_war_state_modifier:0 "Recent Border Skirmish"
+ si_border_war_state_modifier_desc:0 "This state has recently been the target of a border skirmish which has damaged the local infrastructure and ability to effectively coordinate a response."
+ si.3.t:0 "Border Skirmish Resolved"
+ si.3.desc:0 "The situation in the state of [?ROOT.si_border_war_attacked_state_var.GetName], which was targeted in a border skirmish [?global.si_border_war_duration] days ago by [?ROOT.si_border_war_attacker_tag_var.GetNameDef], has now returned to normal along with our ability to effectively coordinate a response in the region."
+ si.3.a:0 "A return to normal?"
+ si.4.t:0 "A Skirmish along our Border!"
+ si.4.desc:0 "A skirmish in our state of [?ROOT.si_border_war_attacked_state_var.GetName] has broken out between our border force and their counter-parts in [?ROOT.si_border_war_attacker_tag_var.GetNameDef]! Initial reports conclude that this was pre-meditated, with the enemy forces targeting key infrastructure and supply lines which has hampered our army's ability to redeploy and organise itself. A State of High Alert has been declared and the central government has requested additional intelligence gathering measures be put in place to uncover any other plots that may threaten the security and safety of the [?ROOT.GetAdjective] people."
+ si.4.a:0 "We demand an explanation!"
+ si_border_war_button_1:0 "\n\n§R[?ROOT.GetNameDefCap] has recently launched a border skirmish\n\n[?OWNER.GetNameDefCap] has recently been the target of a border skirmish§!"
+ si_border_war_button_2:0 "\n\n§R[?ROOT.GetNameDefCap] has recently launched a border skirmish§!"
+ si_border_war_button_3:0 "\n\n§R[?OWNER.GetNameDefCap] has recently been the target of a border skirmish§!"
+ si_border_war_button_tt:0 "§HStart border skirmish in [?THIS.GetName]§!\n\nThis action costs £pol_power §H10§! and £command_power §H10§!.\n\n§HAll of the following must be true:§!\n   Defender: Neutral country\n   Defender: Neighbouring state\n   Defender: Not the target of this recently (2 mo.)\n   Attacker: Not used this recently (2 mo.)[si_border_war_button_tt_scriptloc]"
+
+
+
+### Mark/Unmark States
+ si_target_lock_tt:0 "Locked Target: §H[?ROOT.si_target_var.GetNameDefCap]§!."
+ si_mark_state_button_text:0 "Mark State"
+ si_mark_state_button_tt:0 "Mark selected state owned by §H[?OWNER.GetNameDef]§!. This will lock the state targeting tool to this country. If the owner is you (or your subject; game-rule dependent), the transfer tool will be enabled. Otherwise, the claim tool will be enabled.\n\n§Y[?ROOT.si_states_marked^num]/[?ROOT.si_target_var:num_of_controlled_states]§! state(s) marked.\n\n[si_target_lock_tt_scriptloc]"
+ si_mark_all_states_button_text:0 "Mark All"
+ si_mark_all_states_button_tt:0 "Mark all states owned by §H[?OWNER.GetNameDef]§!. This will lock the state targeting tool to this country.\n\n§Y[?ROOT.si_states_marked^num]/[?ROOT.si_target_var:num_of_controlled_states]§! state(s) marked.\n\n[si_target_lock_tt_scriptloc]"
+ si_unmark_state_button_text:0 "Unmark State"
+ si_unmark_state_button_tt:0 "Unmark selected state owned by §H[?OWNER.GetNameDef]§!. If this is the last marked state, the state targeting tool will be unlocked.\n\n§Y[?ROOT.si_states_marked^num]/[?ROOT.si_target_var:num_of_controlled_states]§! state(s) marked.\n\n[si_target_lock_tt_scriptloc]"
+ si_unmark_all_states_button_text:0 "Unmark All"
+ si_unmark_all_states_button_tt:0 "Unmark all states owned by §H[?OWNER.GetNameDef]§!. This will unlock the state targeting tool.\n\n§Y[?ROOT.si_states_marked^num]/[?ROOT.si_target_var:num_of_controlled_states]§! state(s) marked.\n\n[si_target_lock_tt_scriptloc]"
+
+### Transfer
+ si.1.t:0 "The Map Changes"
+ si.1.desc:0 "\n[?ROOT.GetNameDefCap]\n\nhas transferred §R[?ROOT.si_states_marked^num] [?ROOT.si_target_var.GetAdjectiveCap]§! state(s) to\n\n[?ROOT.si_receiver_var.GetNameDef]."
+ si.1.a:0 "Ok"
+ si_transfer_button_tt:0 "Transfer §Y[?ROOT.si_states_marked^num]/[?ROOT.si_target_var:num_of_controlled_states]§! state(s) to §H[?OWNER.GetNameDef]§!.\n\n§HAll of the following must be true:§!\n   State Transfer Tool Enabled\n   Marked your own states and currently selecting other country\n   §HOne of the following must be true:§!\n§H      All of the following must be true:§!\n         State targeting tool locked to you\n         Have not marked all of your states\n§H      All of the following must be true:§!\n         State targeting tool locked to your subject\n         Allowed by game-rule"
+
+### Claim
+ si.2.t:0 "The Path to War"
+ si.2.desc:0 "\n[?ROOT.GetNameDefCap]\n\nhas claimed §R[?ROOT.si_unclaimed_states_marked^num]§! state(s) owned by\n\n[?ROOT.si_target_var.GetNameDef]."
+ si.2.a:0 "Ok"
+ si_claim_button_tt:0 "Claim §Y[?ROOT.si_unclaimed_states_marked^num]/[?ROOT.si_target_var:num_of_controlled_states]§! state(s). This action costs £pol_power §H[?global.si_claim_cost_base_var]§! per state.\n\n§HAll of the following must be true:§!\n   At least 1 unclaimed state marked\n   Has at least £pol_power §H[?ROOT.si_claim_cost_var]§!\n   State targeting tool locked to neutral country"
+ 
+ 

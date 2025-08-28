@@ -1,0 +1,921 @@
+scripted_gui = {
+
+
+	si_main_container = {
+		context_type = selected_state_context
+		window_name = "si_main_container"
+		
+		visible = {
+			ROOT = { has_country_flag = transfer_enabled }
+		}
+
+		triggers = {
+### Core / Uncore
+			si_core_button_click_enabled = {
+				# check if have enough pp, if root owns and fully controls state, if either the compliance is more than 60% or the state is a colony, and coring is enabled by game rule
+				OR = {
+					AND = {
+						NOT = { state_population > 50000 }
+						ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+						AND = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+						ROOT = { check_variable = { var = ROOT.political_power   value = 1   compare = greater_than_or_equals } }
+					}
+					AND = {
+						NOT = { state_population > 50000 }
+						AND  = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+						ROOT = { check_variable = { var = ROOT.political_power   value = 2   compare = greater_than_or_equals } }
+					}
+					AND = {
+						NOT = { state_population > 50000 }
+						ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+						ROOT = { check_variable = { var = ROOT.political_power   value = 3   compare = greater_than_or_equals } }
+					}
+					AND = {
+						NOT = { state_population > 50000 }
+						ROOT = { check_variable = { var = ROOT.political_power   value = 4   compare = greater_than_or_equals } }
+					}
+					AND = {
+						AND = { state_population > 50000     NOT = { state_population > 100000 } }
+						ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+						AND = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+						ROOT = { check_variable = { var = ROOT.political_power   value = 3   compare = greater_than_or_equals } }
+					}
+					AND = {
+						AND = { state_population > 50000     NOT = { state_population > 100000 } }
+						AND  = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+						ROOT = { check_variable = { var = ROOT.political_power   value = 6   compare = greater_than_or_equals } }
+					}
+					AND = {
+						AND = { state_population > 50000     NOT = { state_population > 100000 } }
+						ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+						ROOT = { check_variable = { var = ROOT.political_power   value = 9   compare = greater_than_or_equals } }
+					}
+					AND = {
+						AND = { state_population > 50000     NOT = { state_population > 100000 } }
+						ROOT = { check_variable = { var = ROOT.political_power   value = 12   compare = greater_than_or_equals } }
+					}
+					AND = {
+						AND = { state_population > 100000     NOT = { state_population > 250000 } }
+						ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+						AND = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+						ROOT = { check_variable = { var = ROOT.political_power   value = 5   compare = greater_than_or_equals } }
+					}
+					AND = {
+						AND = { state_population > 100000     NOT = { state_population > 250000 } }
+						AND  = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+						ROOT = { check_variable = { var = ROOT.political_power   value = 10   compare = greater_than_or_equals } }
+					}
+					AND = {
+						AND = { state_population > 100000     NOT = { state_population > 250000 } }
+						ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+						ROOT = { check_variable = { var = ROOT.political_power   value = 15   compare = greater_than_or_equals } }
+					}
+					AND = {
+						AND = { state_population > 100000     NOT = { state_population > 250000 } }
+						ROOT = { check_variable = { var = ROOT.political_power   value = 20   compare = greater_than_or_equals } }
+					}
+					AND = {
+						AND = { state_population > 250000     NOT = { state_population > 500000 } }
+						ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+						AND = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+						ROOT = { check_variable = { var = ROOT.political_power   value = 7   compare = greater_than_or_equals } }
+					}
+					AND = {
+						AND = { state_population > 250000     NOT = { state_population > 500000 } }
+						AND  = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+						ROOT = { check_variable = { var = ROOT.political_power   value = 14   compare = greater_than_or_equals } }
+					}
+					AND = {
+						AND = { state_population > 250000     NOT = { state_population > 500000 } }
+						ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+						ROOT = { check_variable = { var = ROOT.political_power   value = 21   compare = greater_than_or_equals } }
+					}
+					AND = {
+						AND = { state_population > 250000     NOT = { state_population > 500000 } }
+						ROOT = { check_variable = { var = ROOT.political_power   value = 28   compare = greater_than_or_equals } }
+					}
+					AND = {
+						AND = { state_population > 500000     NOT = { state_population > 1000000 } }
+						ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+						AND = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+						ROOT = { check_variable = { var = ROOT.political_power   value = 9   compare = greater_than_or_equals } }
+					}
+					AND = {
+						AND = { state_population > 500000     NOT = { state_population > 1000000 } }
+						AND  = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+						ROOT = { check_variable = { var = ROOT.political_power   value = 18   compare = greater_than_or_equals } }
+					}
+					AND = {
+						AND = { state_population > 500000     NOT = { state_population > 1000000 } }
+						ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+						ROOT = { check_variable = { var = ROOT.political_power   value = 27   compare = greater_than_or_equals } }
+					}
+					AND = {
+						AND = { state_population > 500000     NOT = { state_population > 1000000 } }
+						ROOT = { check_variable = { var = ROOT.political_power   value = 36   compare = greater_than_or_equals } }
+					}
+					AND = {
+						AND = { state_population > 1000000     NOT = { state_population > 2500000 } }
+						ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+						AND = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+						ROOT = { check_variable = { var = ROOT.political_power   value = 11   compare = greater_than_or_equals } }
+					}
+					AND = {
+						AND = { state_population > 1000000     NOT = { state_population > 2500000 } }
+						AND  = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+						ROOT = { check_variable = { var = ROOT.political_power   value = 22   compare = greater_than_or_equals } }
+					}
+					AND = {
+						AND = { state_population > 1000000     NOT = { state_population > 2500000 } }
+						ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+						ROOT = { check_variable = { var = ROOT.political_power   value = 33   compare = greater_than_or_equals } }
+					}
+					AND = {
+						AND = { state_population > 1000000     NOT = { state_population > 2500000 } }
+						ROOT = { check_variable = { var = ROOT.political_power   value = 44   compare = greater_than_or_equals } }
+					}
+					AND = {
+						AND = { state_population > 2500000     NOT = { state_population > 5000000 } }
+						ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+						AND = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+						ROOT = { check_variable = { var = ROOT.political_power   value = 13   compare = greater_than_or_equals } }
+					}
+					AND = {
+						AND = { state_population > 2500000     NOT = { state_population > 5000000 } }
+						AND  = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+						ROOT = { check_variable = { var = ROOT.political_power   value = 26   compare = greater_than_or_equals } }
+					}
+					AND = {
+						AND = { state_population > 2500000     NOT = { state_population > 5000000 } }
+						ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+						ROOT = { check_variable = { var = ROOT.political_power   value = 39   compare = greater_than_or_equals } }
+					}
+					AND = {
+						AND = { state_population > 2500000     NOT = { state_population > 5000000 } }
+						ROOT = { check_variable = { var = ROOT.political_power   value = 52   compare = greater_than_or_equals } }
+					}
+					AND = {
+						state_population > 5000000
+						ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+						AND = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+						ROOT = { check_variable = { var = ROOT.political_power   value = 15   compare = greater_than_or_equals } }
+					}
+					AND = {
+						state_population > 5000000
+						AND  = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+						ROOT = { check_variable = { var = ROOT.political_power   value = 30   compare = greater_than_or_equals } }
+					}
+					AND = {
+						state_population > 5000000
+						ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+						ROOT = { check_variable = { var = ROOT.political_power   value = 45   compare = greater_than_or_equals } }
+					}
+					AND = {
+						state_population > 5000000
+						ROOT = { check_variable = { var = ROOT.political_power   value = 60   compare = greater_than_or_equals } }
+					}
+				}
+				is_owned_and_controlled_by = ROOT
+				NOT = { is_core_of = FROM }
+				OR = {
+					compliance > 60
+					has_resistance = no
+				}	
+				
+			}
+			si_uncore_button_click_enabled = {
+				# check if have enough pp, if root owns and fully controls state, if either the compliance is more than 60% or the state is a colony, and coring is enabled by game rule
+				OR = {
+					AND = {
+						NOT = { state_population > 50000 }
+						ROOT = { check_variable = { var = ROOT.political_power   value = 2   compare = greater_than_or_equals } }
+					}
+					AND = {
+						AND = { state_population > 50000     NOT = { state_population > 100000 } }
+						ROOT = { check_variable = { var = ROOT.political_power   value = 6   compare = greater_than_or_equals } }
+					}
+					AND = {
+						AND = { state_population > 100000     NOT = { state_population > 250000 } }
+						ROOT = { check_variable = { var = ROOT.political_power   value = 10   compare = greater_than_or_equals } }
+					}
+					AND = {
+						AND = { state_population > 250000     NOT = { state_population > 500000 } }
+						ROOT = { check_variable = { var = ROOT.political_power   value = 14   compare = greater_than_or_equals } }
+					}
+					AND = {
+						AND = { state_population > 500000     NOT = { state_population > 1000000 } }
+						ROOT = { check_variable = { var = ROOT.political_power   value = 18   compare = greater_than_or_equals } }
+					}
+					AND = {
+						AND = { state_population > 1000000     NOT = { state_population > 2500000 } }
+						ROOT = { check_variable = { var = ROOT.political_power   value = 22   compare = greater_than_or_equals } }
+					}
+					AND = {
+						AND = { state_population > 2500000     NOT = { state_population > 5000000 } }
+						ROOT = { check_variable = { var = ROOT.political_power   value = 26   compare = greater_than_or_equals } }
+					}
+					AND = {
+						state_population > 5000000
+						ROOT = { check_variable = { var = ROOT.political_power   value = 30   compare = greater_than_or_equals } }
+					}
+				}
+				is_core_of = ROOT
+				ROOT = {
+					capital_scope = {
+						NOT = { state = PREV.PREV }
+					}
+				}
+				#is_capital = no
+				
+			}
+
+
+### Move Capital
+			si_move_capital_button_click_enabled = {
+				
+				is_owned_and_controlled_by = ROOT
+				is_core_of = FROM
+				is_capital = no
+				ROOT = { check_variable = { var = ROOT.political_power   value = 100   compare = greater_than_or_equals } }
+			}
+
+
+### Request / Remove Resource Rights
+			si_request_resource_rights_button_click_enabled = {
+				NOT = { is_owned_and_controlled_by = ROOT }
+				NOT = { has_state_flag = si_resource_rights_sflag }
+				ROOT = { has_relation_modifier = { target = PREV   modifier = si_resource_rights_given_opmod } }
+			}
+			si_remove_resource_rights_button_click_enabled = {
+				
+				is_owned_and_controlled_by = ROOT
+				has_state_flag = si_resource_rights_sflag
+				ROOT = { check_variable = { var = ROOT.political_power   value = 5   compare = greater_than_or_equals } }
+			}
+
+
+### De- / Re-militerise
+			si_demiliterise_button_click_enabled = {
+				
+				# check if root owns and controls the state, it isn't the capital, it isn't already demiliterised, and has the PP available
+				is_owned_and_controlled_by = ROOT
+				is_capital = no
+				is_demilitarized_zone = no
+				OWNER = { has_war = no }
+				ROOT = { check_variable = { var = ROOT.political_power   value = 15   compare = greater_than_or_equals } }
+			}
+			si_remiliterise_button_click_enabled = {
+				
+				# check if root owns and controls the state, it is already demiliterised, the date is after 1939, and has the PP available
+				is_owned_and_controlled_by = ROOT
+				is_demilitarized_zone = yes
+				date > 1938.12.31
+				ROOT = { check_variable = { var = ROOT.political_power   value = 15   compare = greater_than_or_equals } }
+			}
+
+
+### Border War (Custom)
+			si_border_war_button_click_enabled = {
+				
+				# check if defender is neutral, not guaranteed, their state neighbours root's and is not their capital, defender/attacker haven't been in a border war recently, and has the PP/CP available
+				OWNER = {
+					NOT = { is_ally_with = ROOT }
+					NOT = { has_war_with = ROOT }
+				}
+				any_neighbor_state = { is_owned_and_controlled_by = ROOT }
+				#is_capital = no
+				OWNER = { NOT = { has_idea = si_border_war_defender_idea } }
+				ROOT = { NOT = { has_idea = si_border_war_attacker_idea } }
+				ROOT = { check_variable = { var = ROOT.political_power   value = 10   compare = greater_than_or_equals } }
+				ROOT = { check_variable = { var = ROOT.command_power   value = 10   compare = greater_than_or_equals } }
+			}
+
+
+### Mark / Unmark
+			si_mark_state_button_click_enabled = {
+				
+				# check if owner is a subject and game rule is enabled, or if owner isn't a subject
+				OR = {
+					AND = {
+						
+						OWNER = {
+							any_country = {
+								is_subject_of = ROOT
+								tag = PREV
+							}
+						}
+					}
+					NOT = { OWNER = { is_subject_of = ROOT } }
+				}
+				# check if no lock, or if the owner is the locked target and the state isn't already marked
+				OR = {
+					check_variable = { ROOT.si_target_var = 0 }
+					AND = {
+						NOT = { check_variable = { ROOT.si_target_var = 0 } }
+						OWNER = { tag = ROOT.si_target_var }
+						NOT = { is_in_array = { array = ROOT.si_states_marked   value = THIS } }
+					}
+				}
+			}
+			si_mark_all_states_button_click_enabled = {
+				
+				# check if owner is a subject and game rule is enabled, or if owner isn't a subject
+				OR = {
+					AND = {
+						
+						OWNER = {
+							any_country = {
+								is_subject_of = ROOT
+								tag = PREV
+							}
+						}
+					}
+					NOT = { OWNER = { is_subject_of = ROOT } }
+				}
+				# check if no lock, or if the owner is the locked target and all of their states are not already marked
+				OR = {
+					check_variable = { ROOT.si_target_var = 0 }
+					AND = {
+						NOT = { check_variable = { ROOT.si_target_var = 0 } }
+						OWNER = { tag = ROOT.si_target_var }
+						NOT = {
+							count_triggers = {
+								amount = 1
+								ROOT = {
+									all_owned_state = { is_in_array = { array = ROOT.si_states_marked   value = THIS } }
+								}
+							}
+						}
+					}
+				}
+			}
+			si_unmark_state_button_click_enabled = {
+				
+				# check if state is in the array
+				is_in_array = { array = ROOT.si_states_marked   value = THIS }
+			}
+			si_unmark_all_states_button_click_enabled = {
+				
+				# check if array is not empty
+				NOT = { check_variable = { ROOT.si_states_marked^num = 0 } }
+			}
+
+
+### Transfer / Claim
+			si_transfer_button_click_enabled = {
+				# check if game rule enabled, the locked target is not owner of selected state (preventing transferring to self), not all of roots states are marked (preventing annex) and the marked states are owned by root or root's subject if game rule enabled
+				
+				OWNER = { NOT = { var:ROOT.si_target_var = { tag = PREV } } }
+				all_of = {
+					array = ROOT.si_states_marked
+					value = v
+					index = i
+					var:v = {
+						OR = {
+							AND = {
+								ROOT = { owns_state = PREV }
+								ROOT = { num_of_controlled_states > ROOT.si_states_marked^num }
+							}
+							AND = {
+								
+								any_country = {
+									is_subject_of = ROOT
+									owns_state = PREV
+								}
+							}
+						}
+					}
+				}
+			}
+			si_claim_button_click_enabled = {
+				# check if pp available, and the locked target is a neutral country (not root, root's subjects, root's allies/guarantees, or any of root's enemies), and the marked states are not owned by root or root's subject if game rule enabled
+				OR = {
+					check_variable = { ROOT.political_power = ROOT.si_claim_cost_var }
+					check_variable = { ROOT.political_power > ROOT.si_claim_cost_var }
+				}
+				AND = {
+					NOT = { check_variable = { ROOT.si_states_marked^num = 0 } }
+					var:ROOT.si_target_var = {
+						NOT = { is_guaranteed_by = ROOT }
+						NOT = { is_ally_with = ROOT }
+						NOT = { has_war_with = ROOT }
+					}
+				}
+				NOT = {
+					all_of = {
+						array = ROOT.si_states_marked
+						value = v
+						index = i
+						var:v = {
+							OR = {
+								ROOT = { owns_state = PREV }
+								AND = {
+									
+									any_country = {
+										is_subject_of = ROOT
+										owns_state = PREV
+									}
+								}
+							}
+						}
+					}
+				}
+				check_variable = { ROOT.si_unclaimed_states_marked^num > 0 }
+			}
+		}
+
+		effects = {
+
+### Core / Uncore
+			si_core_button_click = {
+				if = {
+					limit = {
+						NOT = { state_population > 50000 }
+						ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+						AND = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+					}
+					ROOT = { add_political_power = -1 }
+				}
+				else_if = {
+					limit = {
+						NOT = { state_population > 50000 }
+						AND  = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+					}
+					ROOT = { add_political_power = -2 }
+				}
+				else_if = {
+					limit = {
+						NOT = { state_population > 50000 }
+						ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+					}
+					ROOT = { add_political_power = -3 }
+				}
+				else_if = {
+					limit = {
+						NOT = { state_population > 50000 }
+					}
+					ROOT = { add_political_power = -4 }
+				}
+				else_if = {
+					limit = {
+						AND = { state_population > 50000     NOT = { state_population > 100000 } }
+						ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+						AND = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+					}
+					ROOT = { add_political_power = -3 }
+				}
+				else_if = {
+					limit = {
+						AND = { state_population > 50000     NOT = { state_population > 100000 } }
+						AND  = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+					}
+					ROOT = { add_political_power = -6 }
+				}
+				else_if = {
+					limit = {
+						AND = { state_population > 50000     NOT = { state_population > 100000 } }
+						ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+					}
+					ROOT = { add_political_power = -9 }
+				}
+				else_if = {
+					limit = {
+						AND = { state_population > 50000     NOT = { state_population > 100000 } }
+					}
+					ROOT = { add_political_power = -12 }
+				}
+				else_if = {
+					limit = {
+						AND = { state_population > 100000     NOT = { state_population > 250000 } }
+						ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+						AND = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+					}
+					ROOT = { add_political_power = -5 }
+				}
+				else_if = {
+					limit = {
+						AND = { state_population > 100000     NOT = { state_population > 250000 } }
+						AND  = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+					}
+					ROOT = { add_political_power = -10 }
+				}
+				else_if = {
+					limit = {
+						AND = { state_population > 100000     NOT = { state_population > 250000 } }
+						ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+					}
+					ROOT = { add_political_power = -15 }
+				}
+				else_if = {
+					limit = {
+						AND = { state_population > 100000     NOT = { state_population > 250000 } }
+					}
+					ROOT = { add_political_power = -20 }
+				}
+				else_if = {
+					limit = {
+						AND = { state_population > 250000     NOT = { state_population > 500000 } }
+						ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+						AND = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+					}
+					ROOT = { add_political_power = -7 }
+				}
+				else_if = {
+					limit = {
+						AND = { state_population > 250000     NOT = { state_population > 500000 } }
+						AND  = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+					}
+					ROOT = { add_political_power = -14 }
+				}
+				else_if = {
+					limit = {
+						AND = { state_population > 250000     NOT = { state_population > 500000 } }
+						ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+					}
+					ROOT = { add_political_power = -21 }
+				}
+				else_if = {
+					limit = {
+						AND = { state_population > 250000     NOT = { state_population > 500000 } }
+					}
+					ROOT = { add_political_power = -28 }
+				}
+				else_if = {
+					limit = {
+						AND = { state_population > 500000     NOT = { state_population > 1000000 } }
+						ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+						AND = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+					}
+					ROOT = { add_political_power = -9 }
+				}
+				else_if = {
+					limit = {
+						AND = { state_population > 500000     NOT = { state_population > 1000000 } }
+						AND  = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+					}
+					ROOT = { add_political_power = -18 }
+				}
+				else_if = {
+					limit = {
+						AND = { state_population > 500000     NOT = { state_population > 1000000 } }
+						ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+					}
+					ROOT = { add_political_power = -27 }
+				}
+				else_if = {
+					limit = {
+						AND = { state_population > 500000     NOT = { state_population > 1000000 } }
+					}
+					ROOT = { add_political_power = -36 }
+				}
+				else_if = {
+					limit = {
+						AND = { state_population > 1000000     NOT = { state_population > 2500000 } }
+						ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+						AND = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+					}
+					ROOT = { add_political_power = -11 }
+				}
+				else_if = {
+					limit = {
+						AND = { state_population > 1000000     NOT = { state_population > 2500000 } }
+						AND  = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+					}
+					ROOT = { add_political_power = -22 }
+				}
+				else_if = {
+					limit = {
+						AND = { state_population > 1000000     NOT = { state_population > 2500000 } }
+						ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+					}
+					ROOT = { add_political_power = -33 }
+				}
+				else_if = {
+					limit = {
+						AND = { state_population > 1000000     NOT = { state_population > 2500000 } }
+					}
+					ROOT = { add_political_power = -44 }
+				}
+				else_if = {
+					limit = {
+						AND = { state_population > 2500000     NOT = { state_population > 5000000 } }
+						ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+						AND = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+					}
+					ROOT = { add_political_power = -13 }
+				}
+				else_if = {
+					limit = {
+						AND = { state_population > 2500000     NOT = { state_population > 5000000 } }
+						AND  = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+					}
+					ROOT = { add_political_power = -26 }
+				}
+				else_if = {
+					limit = {
+						AND = { state_population > 2500000     NOT = { state_population > 5000000 } }
+						ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+					}
+					ROOT = { add_political_power = -39 }
+				}
+				else_if = {
+					limit = {
+						AND = { state_population > 2500000     NOT = { state_population > 5000000 } }
+					}
+					ROOT = { add_political_power = -52 }
+				}
+				else_if = {
+					limit = {
+						state_population > 5000000
+						ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+						AND = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+					}
+					ROOT = { add_political_power = -15 }
+				}
+				else_if = {
+					limit = {
+						state_population > 5000000
+						AND  = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+					}
+					ROOT = { add_political_power = -30 }
+				}
+				else_if = {
+					limit = {
+						state_population > 5000000
+						ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+					}
+					ROOT = { add_political_power = -45 }
+				}
+				else_if = {
+					limit = {
+						state_population > 5000000
+						ROOT = { check_variable = { var = ROOT.political_power   value = 60   compare = greater_than_or_equals } }
+					}
+					ROOT = { add_political_power = -60 }
+				}
+				add_core_of = FROM
+				remove_claim_by = FROM
+			}
+			si_uncore_button_click = {
+				if = {
+					limit = { NOT = { state_population > 50000 } }
+					ROOT = { add_political_power = -2 }
+				}
+				else_if = {
+					limit = { state_population > 50000     NOT = { state_population > 100000 } }
+					ROOT = { add_political_power = -6 }
+				}
+				else_if = {
+					limit = { state_population > 100000     NOT = { state_population > 250000 } }
+					ROOT = { add_political_power = -10 }
+				}
+				else_if = {
+					limit = { state_population > 250000     NOT = { state_population > 500000 } }
+					ROOT = { add_political_power = -14 }
+				}
+				else_if = {
+					limit = { state_population > 500000     NOT = { state_population > 1000000 } }
+					ROOT = { add_political_power = -18 }
+				}
+				else_if = {
+					limit = { state_population > 1000000     NOT = { state_population > 2500000 } }
+					ROOT = { add_political_power = -22 }
+				}
+				else_if = {
+					limit = { state_population > 2500000     NOT = { state_population > 5000000 } }
+					ROOT = { add_political_power = -26 }
+				}
+				else_if = {
+					limit = { state_population > 5000000 }
+					ROOT = { add_political_power = -30 }
+				}
+				remove_core_of = ROOT
+				if = {
+					limit = {
+						THIS = { is_owned_and_controlled_by = ROOT }
+					}
+					start_resistance = yes
+					force_enable_resistance = ROOT
+					set_compliance = 50
+				}
+			}
+
+
+### Move Capital
+			si_move_capital_button_click = {
+				ROOT = {
+					add_political_power = -100
+					set_capital = { state = PREV }
+				}
+			}
+
+
+### Request / Remove Resource Rights
+			si_request_resource_rights_button_click = {
+				random_country = {
+					limit = { owns_state = FROM   NOT = { tag = ROOT } }
+					give_resource_rights = { receiver = ROOT   state = FROM }
+					ROOT = { remove_relation_modifier = { target = PREV   modifier = si_resource_rights_given_opmod } }
+				}
+				set_state_flag = si_resource_rights_sflag
+			}
+			si_remove_resource_rights_button_click = {
+				every_country = { remove_resource_rights = PREV }
+				ROOT = { add_political_power = -5 }
+				clr_state_flag = si_resource_rights_sflag
+			}
+
+
+### De- / Re-militerise
+			si_demiliterise_button_click = {
+				ROOT = { add_political_power = -15 }
+				set_demilitarized_zone = yes
+			}
+			si_remiliterise_button_click = {
+				ROOT = { add_political_power = -15 }
+				set_demilitarized_zone = no
+			}
+
+
+### Border War (Custom)
+			si_border_war_button_click = {
+				ROOT = { # attacker
+					add_timed_idea = { idea = si_border_war_attacker_idea   days = var:global.si_border_war_duration_var }
+				}
+				OWNER = { # defender
+					set_variable = { si_border_war_attacked_state_var = PREV }
+					set_variable = { si_border_war_attacker_tag_var = ROOT }
+					add_timed_idea = { idea = si_border_war_defender_idea   days = var:global.si_border_war_duration_var }
+					country_event = si.4
+				}
+				add_dynamic_modifier = { modifier = si_border_war_state_modifier }
+				#set_border_war = yes
+			}
+
+
+### Mark / Unmark
+			si_mark_state_button_click = {
+				# if this is the first marked state, lock the target then add this owned state to the array
+				if = {
+					limit = { check_variable = { ROOT.si_states_marked^num = 0 } }
+					
+					OWNER = { ROOT = { set_variable = { ROOT.si_target_var = PREV } } }
+				}
+				add_to_array = { array = ROOT.si_states_marked   value = THIS }
+
+				# calculate cost to claim
+				clear_array = ROOT.si_unclaimed_states_marked
+				for_each_loop = {
+					array = ROOT.si_states_marked
+					value = v
+					if = {
+						limit = { var:v = { NOT = { is_claimed_by = ROOT } } }
+						add_to_array = { array = ROOT.si_unclaimed_states_marked   value = v }
+					}
+				}
+				ROOT = {
+					set_variable = { ROOT.si_claim_cost_var = ROOT.si_unclaimed_states_marked^num }
+					multiply_variable = { ROOT.si_claim_cost_var = global.si_claim_cost_base_var }
+					multiply_variable = { ROOT.si_claim_cost_var = ROOT.si_claim_cost_multiplier_var }
+				}
+			}
+			si_mark_all_states_button_click = {
+				# if this is the first marked state, lock the target then add all states the target owns to the array
+				if = {
+					limit = { check_variable = { ROOT.si_states_marked^num = 0 } }
+					
+					OWNER = { ROOT = { set_variable = { ROOT.si_target_var = PREV } } }
+				}
+				every_state = {
+					limit = {
+						var:ROOT.si_target_var = { owns_state = PREV }
+						NOT = { is_in_array = { array = ROOT.si_states_marked   value = THIS } }
+					}
+					add_to_array = { array = ROOT.si_states_marked   value = THIS }
+				}
+
+				# calculate cost to claim
+				clear_array = ROOT.si_unclaimed_states_marked
+				for_each_loop = {
+					array = ROOT.si_states_marked
+					value = v
+					if = {
+						limit = { var:v = { NOT = { is_claimed_by = ROOT } } }
+						add_to_array = { array = ROOT.si_unclaimed_states_marked   value = v }
+					}
+				}
+				ROOT = {
+					set_variable = { ROOT.si_claim_cost_var = ROOT.si_unclaimed_states_marked^num }
+					multiply_variable = { ROOT.si_claim_cost_var = global.si_claim_cost_base_var }
+					multiply_variable = { ROOT.si_claim_cost_var = ROOT.si_claim_cost_multiplier_var }
+				}
+			}
+			si_unmark_state_button_click = {
+				# remove this owned state from the array, and if this is the last state unlock the target
+				remove_from_array = { array = ROOT.si_states_marked   value = THIS }
+				if = {
+					limit = { check_variable = { ROOT.si_states_marked^num = 0 } }
+					
+					set_variable = { ROOT.si_target_var = 0 }
+				}
+
+				# calculate cost to claim
+				clear_array = ROOT.si_unclaimed_states_marked
+				for_each_loop = {
+					array = ROOT.si_states_marked
+					value = v
+					if = {
+						limit = { var:v = { NOT = { is_claimed_by = ROOT } } }
+						add_to_array = { array = ROOT.si_unclaimed_states_marked   value = v }
+					}
+				}
+				ROOT = {
+					set_variable = { ROOT.si_claim_cost_var = ROOT.si_unclaimed_states_marked^num }
+					multiply_variable = { ROOT.si_claim_cost_var = global.si_claim_cost_base_var }
+					multiply_variable = { ROOT.si_claim_cost_var = ROOT.si_claim_cost_multiplier_var }
+				}
+			}
+			si_unmark_all_states_button_click = {
+				# remove all marked states from the array, unlock the target, and clear claim cost
+				clear_array = ROOT.si_states_marked
+				clear_array = ROOT.si_unclaimed_states_marked
+				ROOT = {
+					set_variable = { ROOT.si_target_var = 0 }
+					set_variable = { ROOT.si_claim_cost_var = 0 }
+				}
+			}
+
+
+### Transfer / Claim
+			si_transfer_button_click = {
+				OWNER = { ROOT = { set_variable = { ROOT.si_receiver_var = PREV } } }
+
+				for_each_loop = {
+					array = ROOT.si_states_marked
+					value = v
+					OWNER = { transfer_state = v }
+				}
+				if = {
+					limit = { has_global_flag = rt56rp_gr_state_interactions_events_gflag }
+					ROOT = { news_event = si.1 }
+				}
+
+				clear_array = ROOT.si_states_marked
+				clear_array = ROOT.si_unclaimed_states_marked
+				ROOT = {
+					set_variable = { ROOT.si_target_var = 0 }
+					set_variable = { ROOT.si_claim_cost_var = 0 }
+				}
+			}
+
+			si_claim_button_click = {
+				# check which of the marked states are not claimed by ROOT
+				for_each_loop = {
+					array = ROOT.si_states_marked
+					value = v
+					if = {
+						limit = { var:v = { NOT = { is_claimed_by = ROOT } } }
+						ROOT = { add_state_claim = v }
+					}
+				}
+
+				if = {
+					limit = { has_global_flag = rt56rp_gr_state_interactions_events_gflag }
+					ROOT = { news_event = si.2 }
+				}
+
+				ROOT = {
+					multiply_variable = { ROOT.si_claim_cost_var = -1 }
+					add_political_power = ROOT.si_claim_cost_var
+				}
+
+				clear_array = ROOT.si_states_marked
+				clear_array = ROOT.si_unclaimed_states_marked
+				ROOT = {
+					set_variable = { ROOT.si_target_var = 0 }
+					set_variable = { ROOT.si_claim_cost_var = 0 }
+				}
+				
+			}
+		}
+
+		ai_check = {
+			check_variable = { ai_random > 0.65 }
+			check_variable = { political_power > 100 }
+		}
+
+		ai_weights = {
+			si_core_button_click = {
+				ai_will_do = {
+					factor = 100
+				}
+			}
+			si_border_war_button_click = {
+				ai_will_do = {
+					factor = 0.1
+				}
+			}
+		}
+	}
+
+}
