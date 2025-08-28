@@ -26336,6 +26336,27 @@ focus_tree = {
 		}
 	}
 
+	
+		focus = {
+		id = GER_Empire_Mefo
+		icon = GFX_SOV_infiltrate_the_nkvd_ccp_2d_sov_compatibility
+		prerequisite = { focus = GER_The_Industry_Grows }
+		x = -1
+		y = 1
+		relative_position_id = GER_The_Industry_Grows
+		cost = 5
+		available = {
+			} 
+
+		completion_reward = {
+			GER_modify_industrial_modifier = yes
+			add_to_variable = { 
+				GER_industrial_consumer_goods_factor = -0.15
+				tooltip = consumer_goods_factor_tt
+			}
+		}
+	}
+
 		focus = {
 		id = GER_Prussia_Air
 		icon = GFX_SOV_long_range_aircraft_ccp_2d_sov_compatibility
@@ -26375,6 +26396,21 @@ focus_tree = {
 		add_idea = GER_Empire_Industry }
 		}
 	}
+
+	focus = {
+		id = GER_Empire_Tank
+		icon = GFX_focus_generic_tank_assembly
+		prerequisite = { focus = GER_Empire_Industry }
+		x = 1
+		y = 1
+		relative_position_id = GER_Empire_Industry
+		cost = 5
+		available = {
+		}
+
+		completion_reward = {
+		add_ideas = GER_Empire_Tank }
+		}
 
 	focus = {
 		id = GER_Empire_War_Industry
@@ -26803,6 +26839,342 @@ focus_tree = {
 		}
 	}
 
+		focus = {
+		id = GER_Military_Construction
+		icon = GFX_SOV_expand_the_aircraft_industry_ccp_2d_sov_compatibility
+		prerequisite = { focus = GER_all_for_the_front } 
+
+		x = 1
+		y = 1
+		relative_position_id = GER_all_for_the_front
+		cost = 10
+		available = {
+			has_war = yes
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = GER_Military_Construct
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes 
+				}
+			}
+
+		}
+	}
+
+	focus = {
+		id = GER_Military_Army
+		icon = GFX_focus_GER_army
+		prerequisite = { focus = GER_all_for_the_front } 
+
+		x = -1
+		y = 1
+		relative_position_id = GER_all_for_the_front
+		cost = 5
+		available = {
+			has_war = yes
+		}
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			add_ideas = GER_Military_Army
+			}
+
+		}
+
+		focus = {
+		id = GER_Demand_Austria
+
+		icon = GFX_focus_GER_the_austrian_question
+
+		prerequisite = { focus = GER_Military_Army focus = GER_Military_Construction }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_Military_Army
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_government = democratic
+					has_government = communism
+				}
+			}
+		}
+
+		bypass = {
+			OR = {
+				AUS = {
+					OR = {
+						is_subject = yes
+						exists = no 
+						AND = {
+							is_in_faction = yes
+							is_in_faction_with = GER
+						}
+					}
+				}
+				GER = {
+					owns_state = 4
+					owns_state = 152
+					owns_state = 153
+					owns_state = 848
+					owns_state = 975
+					owns_state = 976
+				}
+			}
+		}
+
+		continue_if_invalid = yes
+		
+		available_if_capitulated = no
+		
+		available = {
+			has_war = no
+			is_subject = no
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				date < 1938.1.1
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_ARMY_XP FOCUS_FILTER_STABILITY }
+
+		select_effect = {
+			AUS = {
+				country_event = {
+					id = AUS_political_events.77
+					hours = 12
+				}
+				set_country_flag = AUS_anschluss_process_has_begun_flag
+			}
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			if = {
+				limit = {
+					country_exists = AUS
+					AUS = {
+						has_civil_war = no
+						OR = {
+							owns_state = 4
+							owns_state = 152
+							owns_state = 153
+							owns_state = 848
+							owns_state = 975
+							owns_state = 976
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_dlc = "Gotterdammerung" }
+						ITA = {
+							has_completed_focus = ITA_guarantee_austrian_independence
+							has_guaranteed = AUS
+						}
+					}
+			
+					ITA = {
+						country_event = {
+							id = BBA_italy_interaction_events.24
+							days = 1
+						}
+					}
+				}
+				else = { #ITA has not Guaranteed Austrian Independence
+					AUS = {
+						country_event = {
+							id = germany.28
+							days = 1
+						}
+					}		
+					effect_tooltip = {
+						custom_effect_tooltip = if_they_accept_tt
+						add_political_power = 75
+						add_war_support = 0.1
+						add_stability = 0.05
+						army_experience = 10
+
+						custom_effect_tooltip = generic_skip_one_line_tt
+
+						annex_country = { target = AUS transfer_troops = yes }
+												
+						GER_anschluss_modify_mefo_bills_or_economy_of_conquest = yes
+
+						custom_effect_tooltip = if_they_refuse_tt
+						create_wargoal = {
+							type = take_state_focus
+							target = AUS
+							generator = { 4 152 153 848 975 976 }
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_other_country = {
+						original_tag = AUS
+						has_civil_war = yes
+						OR = {
+							owns_state = 4
+							owns_state = 152
+							owns_state = 153
+							owns_state = 848
+							owns_state = 975
+							owns_state = 976
+						}
+						
+					}
+					ITA = {
+						NOT = {
+							has_completed_focus = ITA_guarantee_austrian_independence
+						}
+					}
+				}
+				custom_effect_tooltip = germany.126.warning
+				random_other_country = {
+					limit = {
+						original_tag = AUS
+						OR = {
+							has_government = fascism
+							AND = {
+								has_government = neutrality
+								NOT = {
+									any_other_country = {
+										original_tag = AUS
+										has_government = fascism
+									}
+								}
+							}
+							NOT = {
+								any_other_country = {
+									original_tag = AUS
+									OR = {
+										has_government = fascism
+										has_government = neutrality
+									}
+								}
+							}							
+						}
+						
+					}
+					country_event = { id = germany.126 days = 1 }
+				}
+			}
+
+			if = {
+				limit = {
+					4 = {
+						owner = {
+							NOT = {
+								tag = AUS
+							}
+							NOT = {
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				add_state_core = 4
+			}
+			if = {
+				limit = {
+					152 = {
+						owner = {
+							NOT = {
+								tag = AUS
+							}
+							NOT = {
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				add_state_core = 152
+			}
+			if = {
+				limit = {
+					153 = {
+						owner = {
+							NOT = {
+								tag = AUS
+							}
+							NOT = {
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				add_state_core = 153
+			}
+			if = {
+				limit = {
+					848 = {
+						owner = {
+							NOT = {
+								tag = AUS
+							}
+							NOT = {
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				add_state_core = 848
+			}
+			IF = {
+				limit = {
+					975 = {
+						owner = {
+							NOT = {
+								tag = AUS
+							}
+							NOT = {
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				add_state_core = 975
+			}
+			IF = {
+				limit = {
+					976 = {
+						owner = {
+							NOT = {
+								tag = AUS
+							}
+							NOT = {
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				add_state_core = 976
+			}
+		}
+	}
+
+
+
+
 	focus = {
 		id = GER_expatriate_the_communists_ww
 		icon = GFX_goal_anti_comintern_pact
@@ -27016,6 +27388,34 @@ focus_tree = {
 					}
 				}
 			}
+		}
+	}
+
+	focus = {
+		id = GER_Revive_the_Central_Powers
+		icon = GFX_SOV_the_triple_entente_ccp_2d_sov_compatibility
+
+		prerequisite = { focus = GER_demand_the_return_of_southern_jutland focus = GER_danzig_for_guarantees_ww }
+
+		x = -1
+		y = 3
+		relative_position_id = GER_demand_the_return_of_southern_jutland
+
+		cost = 5
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		will_lead_to_war_with = DEN
+
+		search_filters = { FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+			create_faction = "GER_Central_Power"
 		}
 	}
 
@@ -29947,6 +30347,7 @@ focus_tree = {
 
 		}
 	}
+
 
 	focus = {
 		id = GER_safeguard_poland
