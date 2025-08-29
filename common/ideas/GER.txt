@@ -87,6 +87,7 @@ ideas = {
 
 			modifier = {
 				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
 			}
 		}
 
@@ -96,7 +97,6 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				has_government = fascism
 			}
 
 			removal_cost = -1
@@ -105,6 +105,25 @@ ideas = {
 
 			modifier = {
 				production_speed_arms_factory_factor = 0.25
+				production_speed_dockyard_factor = 0.1
+			}
+		}
+
+		GER_Military_Construct_3 = {
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+			}
+
+			removal_cost = -1
+
+			picture = ARG_rapid_militarization
+
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.25
 			}
 		}
 
@@ -114,7 +133,6 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				has_government = fascism
 			}
 
 			removal_cost = -1

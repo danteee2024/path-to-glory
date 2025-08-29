@@ -27172,6 +27172,54 @@ focus_tree = {
 		}
 	}
 
+		focus = {
+		id = GER_Military_Construction_2
+		icon = GFX_focus_generic_military_industry
+		mutually_exclusive = { focus = GER_Military_Construction_3 }
+		prerequisite = { focus = GER_Demand_Austria } 
+
+		x = -1
+		y = 1
+		relative_position_id = GER_Demand_Austria
+		cost = 5
+		available = {
+			has_war = yes
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+				swap_ideas = { remove_idea = GER_Military_Construct 
+		add_idea = GER_Military_Construct_2 }
+
+		}
+	}
+
+	focus = {
+		id = GER_Military_Construction_3
+		icon = GFX_goal_generic_construct_naval_dockyard
+		mutually_exclusive = { focus = GER_Military_Construction_2 }
+		prerequisite = { focus = GER_Demand_Austria } 
+
+		x = 1
+		y = 1
+		relative_position_id = GER_Demand_Austria
+		cost = 5
+		available = {
+			has_war = yes
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			swap_ideas = { remove_idea = GER_Military_Construct 
+		add_idea = GER_Military_Construct_3 }
+
+		}
+	}
+
+
+
 
 
 
