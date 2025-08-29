@@ -27,15 +27,16 @@ ideas = {
 				local_resources_factor = -0.1
 			}
 		}
-		VEN_neglected_agriculture_4 = {
+		VEN_agriculture_boom = {
 			picture = LIT_invested_in_farms
 			modifier = {
-				stability_factor = -0.05
-				conscription_factor = -0.1
-				local_resources_factor = -0.05
+				stability_factor = 0.05
+				conscription_factor = 0.1
+				local_resources_factor = 0.05
+				weekly_manpower = 500
 			}
 		}
-
+	
 		VEN_power_vacum = {
 			picture = generic_disjointed_gov
 			modifier = {
@@ -58,6 +59,15 @@ ideas = {
 				army_attack_factor = -0.1
 				army_defence_factor = -0.1
 				army_morale_factor = -0.1
+
+			}
+		}
+		VEN_industry_boom = {
+			picture = MEX_revolutionary_army
+			modifier = {
+				local_resources_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
 
 			}
 		}
