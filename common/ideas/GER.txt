@@ -40,6 +40,8 @@ ideas = {
 		}
 
 		GER_Empire_Tank = {
+
+			picture = generic_acquire_tanks
 			
 			allowed = {
 				original_tag = GER
@@ -72,6 +74,34 @@ ideas = {
 			}
 		}
 
+		GER_Ship_Build = {
+			picture = generic_coastal_defense_ships
+			
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			
+			}
+
+		equipment_bonus = {
+				ship_hull_cruiser = {
+					build_cost_ic = -0.15 instant = yes
+				}
+				ship_hull_heavy = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+		}
+
+
 		GER_Military_Construct = {
 			allowed = {
 				original_tag = GER
@@ -88,6 +118,7 @@ ideas = {
 			modifier = {
 				production_speed_arms_factory_factor = 0.1
 				production_speed_dockyard_factor = 0.1
+				production_speed_industrial_complex_factor = -0.1
 			}
 		}
 
@@ -106,6 +137,7 @@ ideas = {
 			modifier = {
 				production_speed_arms_factory_factor = 0.25
 				production_speed_dockyard_factor = 0.1
+				production_speed_industrial_complex_factor = -0.1
 			}
 		}
 
@@ -124,6 +156,25 @@ ideas = {
 			modifier = {
 				production_speed_arms_factory_factor = 0.1
 				production_speed_dockyard_factor = 0.25
+				production_speed_industrial_complex_factor = -0.1
+			}
+		}
+
+		GER_Special_Army = {
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+			}
+
+			removal_cost = -1
+
+			picture = eng_special_air_service
+
+			modifier = {
+				special_forces_cap = 0.05
+				special_forces_attack_factor = 0.05
 			}
 		}
 
@@ -144,6 +195,27 @@ ideas = {
 				army_speed_factor = 0.05
 			}
 		}
+
+			GER_Military_Army_2 = {
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+			}
+
+			removal_cost = -1
+
+			picture = chi_army_corruption3
+
+			modifier = {
+				army_attack_factor = 0.05
+				army_speed_factor = 0.05
+				org_loss_when_moving = -0.05
+				army_defence_factor = 0.05
+			}
+		}
+
 
 		GER_Empire_Recovery = {
 			

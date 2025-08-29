@@ -26829,7 +26829,6 @@ focus_tree = {
 		relative_position_id = GER_prepare_for_the_next_naval_blockade
 		cost = 5
 		available = {
-			has_war = yes
 		}
 
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER }
@@ -26849,20 +26848,16 @@ focus_tree = {
 		relative_position_id = GER_all_for_the_front
 		cost = 10
 		available = {
-			has_war = yes
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			add_ideas = GER_Military_Construct
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes 
-				}
+			GER_modify_industrial_modifier = yes
+			add_to_variable = { 
+				GER_industrial_consumer_goods_factor = -0.1
+				tooltip = consumer_goods_factor_tt
 			}
 
 		}
@@ -26895,6 +26890,7 @@ focus_tree = {
 		icon = GFX_focus_GER_the_austrian_question
 
 		prerequisite = { focus = GER_Military_Army focus = GER_Military_Construction }
+		prerequisite = { focus = GER_danzig_for_guarantees_ww focus = GER_demand_the_return_of_southern_jutland }
 
 		x = 1
 		y = 1
@@ -27183,7 +27179,6 @@ focus_tree = {
 		relative_position_id = GER_Demand_Austria
 		cost = 5
 		available = {
-			has_war = yes
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -27206,7 +27201,6 @@ focus_tree = {
 		relative_position_id = GER_Demand_Austria
 		cost = 5
 		available = {
-			has_war = yes
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -27217,6 +27211,63 @@ focus_tree = {
 
 		}
 	}
+
+	focus = {
+		id = GER_Kaiser_Special_Force
+		icon = GFX_focus_SMB_special_forces_option_3
+		prerequisite = { focus = GER_Military_Construction_3 focus = GER_Military_Construction_2 } 
+		x = 1
+		y = 1
+		relative_position_id = GER_Military_Construction_2
+		cost = 5
+		available = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = GER_Special_Army
+		}
+	}
+
+	
+	focus = {
+		id = GER_Kaiser_Ship
+		icon = GFX_focus_generic_refit_civilian_ships
+		prerequisite = { focus = GER_Military_Construction_3 } 
+		x = 1
+		y = 1
+		relative_position_id = GER_Military_Construction_3
+		cost = 5
+		available = {
+	
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = GER_Ship_Build
+	}
+ }
+
+ focus = {
+		id = GER_Kaiser_Army
+		icon = GFX_focus_generic_army_doctrines_2
+		prerequisite = { focus = GER_Military_Construction_2 } 
+		x = -1
+		y = 1
+		relative_position_id = GER_Military_Construction_2
+		cost = 5
+		available = {
+
+		}
+
+		completion_reward = {
+		swap_ideas = { remove_idea = GER_Military_Army
+		add_idea = GER_Military_Army_2 }
+	}
+ }
 
 
 
