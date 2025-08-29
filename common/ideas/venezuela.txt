@@ -1,0 +1,66 @@
+ideas = {
+	country = {
+		VEN_neglected_agriculture = {
+			picture = LIT_invested_in_farms
+			modifier = {
+				stability_factor = -0.2
+				consumer_goods_factor = 0.15
+				conscription_factor = -0.4
+				local_resources_factor = -0.2
+			}
+		}
+		VEN_neglected_agriculture_2 = {
+			picture = LIT_invested_in_farms
+			modifier = {
+				stability_factor = -0.15
+				consumer_goods_factor = 0.10
+				conscription_factor = -0.3
+				local_resources_factor = -0.15
+			}
+		}
+		VEN_neglected_agriculture_3 = {
+			picture = LIT_invested_in_farms
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_factor = 0.05
+				conscription_factor = -0.2
+				local_resources_factor = -0.1
+			}
+		}
+		VEN_neglected_agriculture_4 = {
+			picture = LIT_invested_in_farms
+			modifier = {
+				stability_factor = -0.05
+				conscription_factor = -0.1
+				local_resources_factor = -0.05
+			}
+		}
+
+		VEN_power_vacum = {
+			picture = generic_disjointed_gov
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = -0.1
+			}
+		}
+
+		VEN_western_monoply = {
+			picture = NOR_printing_money
+			modifier = {
+				local_resources_factor = -0.1
+				production_speed_buildings_factor = -0.05
+			}
+		}
+
+		VEN_political_army = {
+			picture = MEX_revolutionary_army
+			modifier = {
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+				army_morale_factor = -0.1
+
+			}
+		}
+
+	}
+}

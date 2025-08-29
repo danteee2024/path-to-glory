@@ -1,0 +1,1588 @@
+focus_tree = {
+	id = ven_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = VEN
+		}
+		
+		modifier = {
+			add = 10
+			original_tag = VEN
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1600 }
+	default = no
+
+
+focus = {
+		id = VEN_keep_eleazar
+		text = "Keep Eleazar Lopez Contreras"
+		icon = GFX_focus_SOV_my_brothers_keeper						
+		
+		x = 10
+		y = 0
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+		mutually_exclusive = {
+			focus = VEN_rebel_aganst_the_dictator
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_rebel_aganst_the_dictator
+		text = "Rebel Aganst Lopez Contreras"
+		icon = GFX_focus_BEL_government_resigns					
+		
+		x = 32
+		y = 0
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+		mutually_exclusive = {
+			focus = VEN_keep_eleazar
+		}
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_democratic_instution
+		text = "Liberals Take Control"
+		icon = GFX_goal_support_democracy					
+		
+		x = 5
+		y = 1
+	
+		cost = 5
+		
+	
+		mutually_exclusive = {
+			focus = VEN_turn_to_communist
+		}
+		relative_position_id = VEN_rebel_aganst_the_dictator
+		prerequisite = {
+			focus = VEN_rebel_aganst_the_dictator
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_americian_investments
+		text = "Americian Ivestments"
+		icon = GFX_focus_generic_befriend_usa						
+		
+		x = 1
+		y = 1
+	
+		cost = 5
+		
+	
+
+		relative_position_id = VEN_democratic_instution
+		prerequisite = {
+			focus = VEN_democratic_instution
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_trade_talks
+		text = "End Our Embargos"
+		icon = GFX_goal_generic_trade						
+		
+		x = -1
+		y = 1
+	
+		cost = 5
+		
+	
+
+		relative_position_id = VEN_democratic_instution
+		prerequisite = {
+			focus = VEN_democratic_instution
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_capitlism
+		text = "Americian Capitlism"
+		icon = GFX_focus_NORDIC_dem_capstone_civilian			
+		
+		x = -3
+		y = 1
+	
+		cost = 5
+		
+	
+
+		relative_position_id = VEN_democratic_instution
+		prerequisite = {
+			focus = VEN_democratic_instution
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_our_own_companies_in_charge
+		text = "Our Companies In Charge"
+		icon = GFX_SOV_bring_old_trotskyists_back_ccp_2d_sov_compatibility						
+		
+		x = 1
+		y = 1
+	
+		cost = 5
+		
+	
+
+		relative_position_id = VEN_capitlism
+		prerequisite = {
+			focus = VEN_capitlism
+		}
+		prerequisite = {
+			focus = VEN_trade_talks
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_allied_training
+		text = "Allied Traing"
+		icon = GFX_focus_ARG_join_the_allies						
+		
+		x = -1
+		y = 1
+	
+		cost = 5
+		
+	
+
+		relative_position_id = VEN_work_with_poor
+		prerequisite = {
+			focus = VEN_americian_investments
+		}
+		prerequisite = {
+			focus = VEN_work_with_poor
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_work_with_poor
+		text = "Give Money To The Poor"
+		icon = GFX_focus_ARG_anti_corruption_policies						
+		
+		x = 3
+		y = 1
+	
+		cost = 5
+		
+	
+
+		relative_position_id = VEN_democratic_instution
+		prerequisite = {
+			focus = VEN_democratic_instution
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_americian_puppet
+		text = "Americian Puppet"
+		icon = GFX_focus_usa_guarantee_the_american_dream						
+		
+		x = 5
+		y = 3
+	
+		cost = 5
+		
+	
+mutually_exclusive = {
+			focus = VEN_our_own_path
+		}
+		relative_position_id = VEN_democratic_instution
+		prerequisite = {
+			focus = VEN_democratic_instution
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_work_with_cuba
+		text = "Cuba Venezuela Pact"
+		icon = GFX_focus_ARG_balancing_act					
+		
+		x = -1
+		y = 1
+	
+		cost = 5
+		
+	
+		relative_position_id = VEN_americian_puppet
+		prerequisite = {
+			focus = VEN_americian_puppet
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_americian_army_generals
+		text = "Americian Army Generals"
+		icon = GFX_focus_BEL_la_dame_blanche					
+		
+		x = 1
+		y = 1
+	
+		cost = 5
+		
+	
+		relative_position_id = VEN_work_with_cuba
+		prerequisite = {
+			focus = VEN_work_with_cuba
+			focus = VEN_americian_econemy
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_americian_econemy
+		text = "Americian Subsidizing"
+		icon = GFX_focus_generic_american_investments					
+		
+		x = 1
+		y = 1
+	
+		cost = 5
+		
+	
+		relative_position_id = VEN_americian_puppet
+		prerequisite = {
+			focus = VEN_americian_puppet
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_our_own_path
+		text = "Our Own Path"
+		icon = GFX_focus_RAJ_the_crown_and_the_world						
+		
+		x = -2
+		y = 1
+	
+		cost = 5
+		
+	
+		mutually_exclusive = {
+			focus = VEN_americian_puppet
+		}
+		relative_position_id = VEN_allied_training
+		prerequisite = {
+			focus = VEN_allied_training
+		}
+		prerequisite = {
+			focus = VEN_our_own_companies_in_charge
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_free_colonies
+		text = "Free Colonies From Europeons"
+		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony						
+		
+		x = -2
+		y = 2
+	
+		cost = 5
+		
+	
+		relative_position_id = VEN_our_own_path
+		prerequisite = {
+			focus = VEN_our_own_path
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_buy_old_allied_equitment
+		text = "Buy Old Allied Equitment"
+		icon = GFX_SOV_optimize_production_lines_ccp_2d_sov_compatibility					
+		
+		x = 2
+		y = 2
+	
+		cost = 5
+		
+	
+		relative_position_id = VEN_our_own_path
+		prerequisite = {
+			focus = VEN_our_own_path
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_join_the_allies
+		text = "Join The Allies"
+		icon = GFX_focus_RAJ_seek_allies_with_the_muslim_league					
+		
+		x = 2
+		y = 1
+	
+		cost = 5
+		
+	
+		relative_position_id = VEN_free_colonies
+		prerequisite = {
+			focus = VEN_buy_old_allied_equitment
+		}
+		prerequisite = {
+			focus = VEN_free_colonies
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_turn_to_communist
+		text = "Turn To Communist"
+		icon = GFX_focus_por_workers_of_iberia						
+		
+		x = -5
+		y = 1
+	
+		cost = 5
+		
+	
+		mutually_exclusive = {
+			focus = VEN_democratic_instution
+		}
+		relative_position_id = VEN_rebel_aganst_the_dictator
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+		prerequisite = {
+			focus = VEN_rebel_aganst_the_dictator
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_equality
+		text = "Satisfy The Poor"
+		icon = GFX_focus_ARG_develop_the_electricity_sector					
+		
+		x = -2
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		relative_position_id = VEN_turn_to_communist
+		prerequisite = {
+			focus = VEN_turn_to_communist
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_ban_monoplies
+		text = "Ban Western Monoplies"
+		icon = GFX_focus_AUS_ban_dnsap					
+		
+		x = 2
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		relative_position_id = VEN_turn_to_communist
+		prerequisite = {
+			focus = VEN_turn_to_communist
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_ask_big_brother
+		text = "Ask Soviets For Help In Negotiations"
+		icon = GFX_SOV_father_of_nations_ccp_2d_sov_compatibility					
+		
+		x = 0
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		relative_position_id = VEN_turn_to_communist
+		prerequisite = {
+			focus = VEN_turn_to_communist
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_set_our_eco_free
+		text = "Embargoed No More"
+		icon = GFX_focus_RAJ_trickle_down_economics				
+		
+		x = -1
+		y = 2
+	
+		cost = 5
+		
+	
+		
+		relative_position_id = VEN_ask_big_brother
+		prerequisite = {
+			focus = VEN_ask_big_brother
+		}
+		prerequisite = {
+			focus = VEN_equality
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_spread_communism
+		text = "Down With The Colonizers"
+		icon = GFX_SOV_beaten_but_not_defeated_ccp_2d_sov_compatibility					
+		
+		x = 1
+		y = 2
+	
+		cost = 5
+		
+	
+		
+		relative_position_id = VEN_ask_big_brother
+		prerequisite = {
+			focus = VEN_ask_big_brother
+		}
+		prerequisite = {
+			focus = VEN_ban_monoplies
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_soviet_investments
+		text = "Soviet Investments"
+		icon = GFX_SOV_architect_of_communism_ccp_2d_sov_compatibility						
+		
+		x = 1
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		relative_position_id = VEN_set_our_eco_free
+		prerequisite = {
+			focus = VEN_spread_communism
+		}
+		prerequisite = {
+			focus = VEN_set_our_eco_free
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_devlops_capital
+		text = "Devlops The Capital"
+		icon = GFX_SOV_develop_the_urals_ccp_2d_sov_compatibility					
+		
+		x = 3
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		relative_position_id = VEN_set_our_eco_free
+		prerequisite = {
+			focus = VEN_spread_communism
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_workers_rights
+		text = "Workers Rights"
+		icon = GFX_focus_generic_workers_and_farmers_rise					
+		
+		x = -1
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		relative_position_id = VEN_set_our_eco_free
+		prerequisite = {
+			focus = VEN_set_our_eco_free
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_five_year_plan
+		text = "Five Year Plan"
+		icon = GFX_SOV_fourth_five_year_plan_ccp_2d_sov_compatibility				
+		
+		x = 1
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		relative_position_id = VEN_workers_rights
+		prerequisite = {
+			focus = VEN_workers_rights
+		}
+		prerequisite = {
+			focus = VEN_soviet_investments
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_secret_police
+		text = "Secret Police"
+		icon = GFX_focus_generic_secret_service_agency					
+		
+		x = 1
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		relative_position_id = VEN_soviet_investments
+		prerequisite = {
+			focus = VEN_soviet_investments
+		}
+		prerequisite = {
+			focus = VEN_devlops_capital
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_workers_paradise
+		text = "Workers Paradise"
+		icon = GFX_focus_ICE_embrace_the_workers_revolution					
+		
+		x = 1
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		relative_position_id = VEN_five_year_plan
+		prerequisite = {
+			focus = VEN_five_year_plan
+		}
+		prerequisite = {
+			focus = VEN_secret_police
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_new_monarch
+		text = "The New King"
+		icon = GFX_focus_hun_elect_a_king
+		mutually_exclusive = {
+			focus = VEN_keep_eleazar
+		}
+		prerequisite = {
+			focus = VEN_keep_eleazar
+		}
+		relative_position_id = VEN_keep_eleazar						
+		
+		x = 6
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+focus = {
+		id = VEN_negotiate_with_the_west
+		text = "Metting With Western Monoplies"
+		icon = GFX_focus_SOV_my_brothers_keeper
+		prerequisite = {
+			focus = VEN_new_monarch
+		}
+		relative_position_id = VEN_new_monarch				
+		
+		x = 1
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_negotiate_with_the_west
+		text = "Meeting With Western Monoplies"
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = {
+			focus = VEN_new_monarch
+		}
+		relative_position_id = VEN_new_monarch				
+		
+		x = 1
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+
+	focus = {
+		id = VEN_stabalize_goverment
+		text = "Stabalize The Goverment"
+		icon = GFX_focus_AFG_establish_darulaman
+		prerequisite = {
+			focus = VEN_new_monarch
+		}
+		relative_position_id = VEN_new_monarch				
+		
+		x = -1
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_remove_sanctions
+		text = "Remove Sanctions"
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = {
+			focus = VEN_negotiate_with_the_west
+		}
+		prerequisite = {
+			focus = VEN_stabalize_goverment
+		}
+		relative_position_id = VEN_stabalize_goverment			
+		
+		x = 1
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_quell_the_poor
+		text = "Quell The Poor"
+		icon = GFX_focus_COG_force_publique_mutiny
+		prerequisite = {
+			focus = VEN_remove_sanctions
+		}
+		relative_position_id = VEN_remove_sanctions		
+		
+		x = 2
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+
+	focus = {
+		id = VEN_royal_investments
+		text = "Royal Investments"
+		icon = GFX_focus_NOR_our_royal_claims
+		prerequisite = {
+			focus = VEN_remove_sanctions
+		}
+		relative_position_id = VEN_remove_sanctions		
+		
+		x = -2
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_royal_guards
+		text = "Royal Guards"
+		icon = GFX_focus_AFG_royal_guard
+		prerequisite = {
+			focus = VEN_remove_sanctions
+		}
+		relative_position_id = VEN_remove_sanctions		
+		
+		x = 0
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+focus = {
+		id = VEN_buy_colony
+		text = "Buy Colonies"
+		icon = GFX_focus_ARG_revive_the_colonial_plan
+		prerequisite = {
+			focus = VEN_remove_sanctions
+		}
+		relative_position_id = VEN_remove_sanctions		
+		
+		x = -4
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_strike_columbia
+		text = "Strike Columbia"
+		icon = GFX_focus_generic_attack_colombia
+		prerequisite = {
+			focus = VEN_buy_colony
+		}
+		prerequisite = {
+			focus = VEN_royal_investments
+		}
+		relative_position_id = VEN_buy_colony	
+		
+		x = -2
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_strike_cenetral_americia
+		text = "Strike Cenetral Americia"
+		icon = GFX_focus_CHL_unite_hispanic_america
+		prerequisite = {
+			focus = VEN_quell_the_poor
+		}
+		prerequisite = {
+			focus = VEN_open_the_market
+		}
+		relative_position_id = VEN_open_the_market
+		
+		x = 2
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_strike_hispaniola
+		text = "Strike Hispaniola"
+		icon = GFX_focus_generic_attack_haiti
+		prerequisite = {
+			focus = VEN_royal_guards
+		}
+		prerequisite = {
+			focus = VEN_royal_investments
+		}
+		relative_position_id = VEN_royal_guards
+		
+		x = -2
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_empires_goverment
+		text = "Empire Goverment"
+		icon = GFX_focus_SWI_establish_pro_helvetia
+		prerequisite = {
+			focus = VEN_strike_hispaniola
+		}
+		prerequisite = {
+			focus = VEN_strike_columbia
+		}
+		relative_position_id = VEN_strike_columbia
+		
+		x = 2
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_empires_land
+		text = "Empire land"
+		icon = GFX_focus_generic_land_reclamation
+		prerequisite = {
+			focus = VEN_strike_panama
+		}
+		prerequisite = {
+			focus = VEN_strike_cenetral_americia
+		}
+		relative_position_id = VEN_strike_cenetral_americia
+		
+		x = -2
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_strike_panama
+		text = "Strike Panama"
+		icon = GFX_focus_CAN_rifle_association
+		prerequisite = {
+			focus = VEN_royal_guards
+		}
+		prerequisite = {
+			focus = VEN_quell_the_poor
+		}
+		relative_position_id = VEN_royal_guards
+		
+		x = 2
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+focus = {
+		id = VEN_open_the_market
+		text = "Foreign Investments"
+		icon = GFX_SOV_aristocratic_investments_ccp_2d_sov_compatibility
+		prerequisite = {
+			focus = VEN_remove_sanctions
+		}
+		relative_position_id = VEN_remove_sanctions		
+		
+		x = 4
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_venezuelian_empire
+		text = "Venezuelian Empire"
+		icon = GFX_focus_ETH_the-italo_ethiopian_empire
+		prerequisite = {
+			focus = VEN_empires_land
+		}
+		prerequisite = {
+			focus = VEN_empires_goverment
+		}
+		relative_position_id = VEN_empires_goverment
+		
+		x = 4
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_keep_the_nation
+		text = "The Forever Ruler"
+		icon = GFX_focus_generic_fascist_propaganda
+		mutually_exclusive = {
+			focus = VEN_new_monarch
+		}
+		prerequisite = {
+			focus = VEN_keep_eleazar
+		}
+		relative_position_id = VEN_keep_eleazar						
+		
+		x = -6
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_kick_out_western_monopilies
+		text = "Out With The West"
+		icon = GFX_focus_RAJ_special_economic_zones
+		prerequisite = {
+			focus = VEN_keep_the_nation
+		}
+		relative_position_id = VEN_keep_the_nation				
+		
+		x = -1
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_end_rebilion
+		text = "End The Rebels"
+		icon = GFX_SOV_organize_uprisings_in_the_country_ccp_2d_sov_compatibility
+		prerequisite = {
+			focus = VEN_keep_the_nation
+		}
+		relative_position_id = VEN_keep_the_nation				
+		
+		x = 1
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_support_rebels_in_colonys
+		text = "Support Rebels In Colonies"
+		icon = GFX_focus_CHL_liberate_the_caribbean
+		prerequisite = {
+			focus = VEN_kick_out_western_monopilies
+		}
+		relative_position_id = VEN_kick_out_western_monopilies			
+		
+		x = -2
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_negotiate_with_germans
+		text = "German Negotiations"
+		icon = GFX_focus_chi_mission_to_germany
+		prerequisite = {
+			focus = VEN_kick_out_western_monopilies
+		}
+		prerequisite = {
+			focus = VEN_end_rebilion
+		}
+		relative_position_id = VEN_end_rebilion	
+		
+		x = -3
+		y = 2
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_negotiate_with_italians
+		text = "Italians Negotiations"
+		icon = GFX_focus_befriend_italy
+		prerequisite = {
+			focus = VEN_kick_out_western_monopilies
+		}
+		prerequisite = {
+			focus = VEN_end_rebilion
+		}
+		relative_position_id = VEN_end_rebilion	
+		
+		x = -1
+		y = 2
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_negotiate_with_japanese
+		text = "Japanese Negotiations"
+		icon = GFX_focus_PER_fascist_reach_out_to_japan
+		prerequisite = {
+			focus = VEN_kick_out_western_monopilies
+		}
+		prerequisite = {
+			focus = VEN_end_rebilion
+		}
+		relative_position_id = VEN_end_rebilion	
+		
+		x = 1
+		y = 2
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_study_japanese_italian_ships
+		text = "Study Japanese And Italian Ships"
+		icon = GFX_focus_generic_refit_civilian_ships
+		prerequisite = {
+			focus = VEN_negotiate_with_italians
+		}
+		prerequisite = {
+			focus = VEN_negotiate_with_japanese
+		}
+		relative_position_id = VEN_negotiate_with_italians
+		
+		x = 1
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_study_german_and_italian_warfare
+		text = "Study German And Italian Warfare"
+		icon = GFX_SOV_war_measures_in_the_east_ccp_2d_sov_compatibility
+		prerequisite = {
+			focus = VEN_negotiate_with_italians
+		}
+		prerequisite = {
+			focus = VEN_negotiate_with_germans
+		}
+		relative_position_id = VEN_negotiate_with_italians
+		
+		x = -1
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_study_german_armour
+		text = "Study German Armour"
+		icon = GFX_focus_ITA_ferrea_mole_ferreo_cuore
+		prerequisite = {
+			focus = VEN_negotiate_with_germans
+		}
+		relative_position_id = VEN_negotiate_with_germans
+		
+		x = -1
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_study_japanese_planes
+		text = "Study Japanese Planes"
+		icon = GFX_focus_jap_zero
+		prerequisite = {
+			focus = VEN_negotiate_with_japanese
+		}
+		relative_position_id = VEN_negotiate_with_japanese
+		
+		x = 1
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_join_the_war_in_europe
+		text = "Join The War In Europe"
+		icon = GFX_focus_usa_focus_on_europe
+		prerequisite = {
+			focus = VEN_study_german_armour
+		}
+		prerequisite = {
+			focus = VEN_study_german_and_italian_warfare
+		}
+		mutually_exclusive = {
+			focus = VEN_strike_americia
+		}
+		relative_position_id = VEN_study_german_armour
+		
+		x = 1
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+focus = {
+		id = VEN_strike_americia
+		text = "Strike America"
+		icon = GFX_focus_generic_attack_usa
+		prerequisite = {
+			focus = VEN_study_japanese_italian_ships
+		}
+		prerequisite = {
+			focus = VEN_study_japanese_planes
+		}
+		mutually_exclusive = {
+			focus = VEN_join_the_war_in_europe
+		}
+		relative_position_id = VEN_study_japanese_italian_ships
+		
+		x = 1
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_africia_corps
+		text = "Africia Corps"
+		icon = GFX_focus_IRQ_liberate_north_africa
+		prerequisite = {
+			focus = VEN_join_the_war_in_europe
+		}
+		relative_position_id = VEN_join_the_war_in_europe
+		
+		x = -1
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_marine_corps
+		text = "Marine Corps"
+		icon = GFX_focus_ITA_milizia_marittima_di_artiglieria
+		prerequisite = {
+			focus = VEN_join_the_war_in_europe
+			focus = VEN_strike_americia
+		}
+		relative_position_id = VEN_join_the_war_in_europe
+		
+		x = 2
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_flying_chonchón
+		text = "Flying Chonchóns"
+		icon = GFX_focus_SWE_neither_death_nor_dishonor
+		prerequisite = {
+			focus = VEN_strike_americia
+		}
+		relative_position_id = VEN_strike_americia
+		
+		x = 1
+		y = 1
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+	
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+	
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+}

@@ -15,6 +15,10 @@ set_technology = {
 add_ideas = {
 	USA_monroe_doctrine_idea
 	
+	VEN_neglected_agriculture
+	VEN_power_vacum
+	VEN_western_monoply
+	VEN_political_army
 }
 
 add_manpower = 370
