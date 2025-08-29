@@ -43,6 +43,883 @@ focus = {
 	}
 
 	focus = {
+		id = VEN_air_devlopment
+		text = "Devlop Our Airforce"
+		icon = GFX_SOV_modernize_aircraft_facilities_ccp_2d_sov_compatibility		
+		
+		x = 62
+		y = 0
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_bomber_effort
+		text = "Devlop Modern Bombers"
+		icon = GFX_focus_usa_escort_fighters		
+		
+		x = 2
+		y = 1
+	
+		cost = 5
+		
+	
+		relative_position_id = VEN_air_devlopment
+		prerequisite = {
+			focus = VEN_air_devlopment
+		}
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_fighter_effort
+		text = "Devlop Modern Fighters"
+		icon = GFX_goal_generic_air_fighter2		
+		
+		x = -2
+		y = 1
+	
+		cost = 5
+		
+	
+		relative_position_id = VEN_air_devlopment
+		prerequisite = {
+			focus = VEN_air_devlopment
+		}
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_cas_effort
+		text = "Devlop Modern Close Air Support"
+		icon = GFX_focus_generic_cas_aircraft			
+		
+		x = 0
+		y = 1
+	
+		cost = 5
+		
+	
+		relative_position_id = VEN_air_devlopment
+		prerequisite = {
+			focus = VEN_air_devlopment
+		}
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_new_air_bases
+		text = "New Air Bases"
+		icon = GFX_focus_generic_air_bases			
+		
+		x = 1
+		y = 1
+	
+		cost = 5
+		
+	
+		relative_position_id = VEN_fighter_effort
+		prerequisite = {
+			focus = VEN_fighter_effort
+			focus = VEN_cas_effort
+		}
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_new_bombs
+		text = "Modern Bombs"
+		icon = GFX_goal_generic_air_naval_bomber		
+		
+		x = 1
+		y = 1
+	
+		cost = 5
+		
+	
+		relative_position_id = VEN_cas_effort
+		prerequisite = {
+			focus = VEN_bomber_effort
+			focus = VEN_cas_effort
+		}
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_fix_our_armed_forces
+		text = "Fix The Army"
+		icon = GFX_SOV_an_adaptable_army_ccp_2d_sov_compatibility	
+		
+		x = 82
+		y = 0
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_devlop_guns
+		text = "Devlop New Guns"
+		icon = GFX_focus_ETH_freedom_at_gunpoint	
+		
+		x = 2
+		y = 1
+	
+		cost = 5
+		
+	
+		prerequisite = {
+			focus = VEN_fix_our_armed_forces
+		}
+		relative_position_id = VEN_fix_our_armed_forces
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_devlop_artillery
+		text = "Devlop Artillery"
+		icon = GFX_SOV_soviet_artillery_ccp_2d_sov_compatibility	
+		
+		x = -2
+		y = 1
+	
+		cost = 5
+		
+	
+		prerequisite = {
+			focus = VEN_fix_our_armed_forces
+		}
+		relative_position_id = VEN_fix_our_armed_forces
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_un_poltical_army
+		text = "Un Poltized The Army"
+		icon = GFX_SOV_the_glory_of_the_red_army_ccp_2d_sov_compatibility	
+		
+		x = 2
+		y = 1
+	
+		cost = 5
+		
+		available = {
+			has_completed_focus = VEN_rebel_aganst_the_dictator
+		}
+		prerequisite = {
+			focus = VEN_devlop_artillery
+		}
+		prerequisite = {
+			focus = VEN_devlop_guns
+		}
+		relative_position_id = VEN_devlop_guns
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_new_army_future
+		text = "New Army Future"
+		icon = GFX_focus_NORDIC_dem_army	
+		
+		x = 1
+		y = 1
+	
+		cost = 5
+		
+
+		prerequisite = {
+			focus = VEN_un_poltical_army
+		}
+		relative_position_id = VEN_un_poltical_army
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_special_forces
+		text = "Speacil Force Traning"
+		icon = GFX_focus_SMB_special_forces_option_1	
+		
+		x = -1
+		y = 1
+	
+		cost = 5
+		
+
+		prerequisite = {
+			focus = VEN_un_poltical_army
+		}
+		relative_position_id = VEN_un_poltical_army
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_army_in_politics
+		text = "The Army In Power"
+		icon = GFX_focus_ARG_march_to_la_casa_rosada	
+		
+		x = -6
+		y = 1
+	
+		cost = 5
+		
+		available = {
+			has_completed_focus = VEN_keep_eleazar
+		}
+		prerequisite = {
+			focus = VEN_devlop_artillery
+		}
+		prerequisite = {
+			focus = VEN_devlop_guns
+		}
+		relative_position_id = VEN_devlop_guns
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_army_general_traing
+		text = "Army General School"
+		icon = GFX_focus_NORDIC_com_capstone_army		
+		
+		x = -1
+		y = 1
+	
+		cost = 5
+		
+		prerequisite = {
+			focus = VEN_army_in_politics
+		}
+		relative_position_id = VEN_army_in_politics
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_army_exspert_army
+		text = "Army Soldiers Exspertise"
+		icon = GFX_focus_NORDIC_com_selector_army	
+		
+		x = 1
+		y = 1
+	
+		cost = 5
+		
+		prerequisite = {
+			focus = VEN_army_in_politics
+		}
+		relative_position_id = VEN_army_in_politics
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_mil_tech
+		text = "Milatary Tech Devlopment"
+		icon = GFX_focus_NORDIC_dem_capstone_research	
+		
+		x = -2
+		y = 1
+	
+		cost = 5
+		
+		prerequisite = {
+			focus = VEN_devlop_artillery
+		}
+		prerequisite = {
+			focus = VEN_devlop_guns
+		}
+		relative_position_id = VEN_devlop_guns
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_mil_factory
+		text = "Milatary Factory"
+		icon = GFX_goal_generic_construct_mil_factory		
+		
+		x = -1
+		y = 1
+	
+		cost = 5
+		
+		prerequisite = {
+			focus = VEN_mil_tech
+		}
+		relative_position_id = VEN_mil_tech
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_tech_advancment
+		text = "Tech Advancment"
+		icon = GFX_goal_tfv_generic_tech_sharing	
+		
+		x = 1
+		y = 1
+	
+		cost = 5
+		
+		prerequisite = {
+			focus = VEN_mil_tech
+		}
+		relative_position_id = VEN_mil_tech
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_naval_devlopment
+		text = "Devlop Our Navy"
+		icon = GFX_goal_continuous_naval_production		
+		
+		x = 72
+		y = 0
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_battleship_effort
+		text = "Devlop Modern Battleships"
+		icon = GFX_focus_generic_navy_battleship2		
+		
+		x = 2
+		y = 1
+	
+		cost = 5
+		
+	
+		relative_position_id = VEN_naval_devlopment
+		prerequisite = {
+			focus = VEN_naval_devlopment
+		}
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_cruiser_effort
+		text = "Devlop Modern Cruisers"
+		icon = GFX_focus_generic_cruiser2		
+		
+		x = -2
+		y = 1
+	
+		cost = 5
+		
+	
+		relative_position_id = VEN_naval_devlopment
+		prerequisite = {
+			focus = VEN_naval_devlopment
+		}
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_sub_effort
+		text = "Devlop Modern Submarines"
+		icon = GFX_SOV_submarine_warfare_ccp_2d_sov_compatibility		
+		
+		x = 0
+		y = 1
+	
+		cost = 5
+		
+	
+		relative_position_id = VEN_naval_devlopment
+		prerequisite = {
+			focus = VEN_naval_devlopment
+		}
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_new_naval_bases
+		text = "New Naval Bases"
+		icon = GFX_goal_generic_construct_naval_dockyard		
+		
+		x = 1
+		y = 1
+	
+		cost = 5
+		
+	
+		relative_position_id = VEN_cruiser_effort
+		prerequisite = {
+			focus = VEN_cruiser_effort
+			focus = VEN_sub_effort
+		}
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_new_guns
+		text = "New Ship Batterys"
+		icon = GFX_focus_generic_naval_invasion_tank		
+		
+		x = 1
+		y = 1
+	
+		cost = 5
+		
+	
+		relative_position_id = VEN_sub_effort
+		prerequisite = {
+			focus = VEN_battleship_effort
+			focus = VEN_sub_effort
+		}
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_fix_the_broken_eco
+		text = "Fix The Broken Economy"
+		icon = GFX_SOV_infiltrate_the_nkvd_ccp_2d_sov_compatibility			
+		
+		x = 52
+		y = 0
+	
+		cost = 5
+		
+	
+		
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_road_devlopment_north
+		text = "Northern Road Devlopment"
+		icon = GFX_focus_SOV_the_road_of_life			
+		
+		x = 1
+		y = 1
+	
+		cost = 5
+		
+	prerequisite = {
+		focus = VEN_fix_the_broken_eco
+	}
+		relative_position_id = VEN_fix_the_broken_eco
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_road_devlopment_south
+		text = "Southern Road Devlopment"
+		icon = GFX_focus_generic_road_investment				
+		
+		x = -1
+		y = 1
+	
+		cost = 5
+		
+	prerequisite = {
+		focus = VEN_fix_the_broken_eco
+	}
+		relative_position_id = VEN_fix_the_broken_eco
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_farm_devlopment
+		text = "Farm Devlopment"
+		icon = GFX_focus_generic_farmland				
+		
+		x = -1
+		y = 1
+	
+		cost = 5
+		
+	prerequisite = {
+		focus = VEN_road_devlopment_north
+	}
+	prerequisite = {
+		focus = VEN_road_devlopment_south
+	}
+		relative_position_id = VEN_road_devlopment_north
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_civ_devlopment
+		text = "Civilian Center Devlopment"
+		icon = GFX_goal_generic_construct_civ_factory					
+		
+		x = -1
+		y = 1
+	
+		cost = 5
+		
+	prerequisite = {
+		focus = VEN_farm_devlopment
+	}
+		relative_position_id = VEN_farm_devlopment
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = VEN_expand_other_resources
+		text = "Mine For Resources"
+		icon = GFX_focus_generic_resource_extraction				
+		
+		x = -1
+		y = 1
+	
+		cost = 5
+		
+	prerequisite = {
+		focus = VEN_civ_devlopment
+	}
+		relative_position_id = VEN_civ_devlopment
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_new_fields
+		text = "Grow Wheat"
+		icon = GFX_focus_generic_welfare				
+		
+		x = 1
+		y = 1
+	
+		cost = 5
+		
+	prerequisite = {
+		focus = VEN_mil_devlopment
+	}
+		relative_position_id = VEN_mil_devlopment
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_mil_devlopment
+		text = "Milatary Center Devlopment"
+		icon = GFX_goal_generic_construct_mil_factory				
+		
+		x = 1
+		y = 1
+	
+		cost = 5
+		
+	prerequisite = {
+		focus = VEN_farm_devlopment
+	}
+		relative_position_id = VEN_farm_devlopment
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_farmer_rights
+		text = "Farmer Rights"
+		icon = GFX_focus_DEN_schleswigian_farmers					
+		
+		x = 1
+		y = 1
+	
+		cost = 5
+		
+	prerequisite = {
+		focus = VEN_mil_devlopment
+	}
+	prerequisite = {
+		focus = VEN_civ_devlopment
+	}
+		relative_position_id = VEN_civ_devlopment
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_farm_boom
+		text = "Agriculture Boom"
+		icon = GFX_focus_AUS_reclaim_habsburg			
+		
+		x = 0
+		y = 1
+	
+		cost = 5
+		
+	prerequisite = {
+		focus = VEN_farmer_rights
+	}
+	prerequisite = {
+		focus = VEN_expand_other_resources
+	}
+	prerequisite = {
+		focus = VEN_new_fields
+	}
+		relative_position_id = VEN_farmer_rights
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_industry_devlop
+		text = "Industralazation"
+		icon = GFX_focus_BEL_government_resigns					
+		
+		x = 0
+		y = 1
+	
+		cost = 5
+		
+	prerequisite = {
+		focus = VEN_farm_boom
+	}
+		relative_position_id = VEN_farm_boom
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_industry_devlop
+		text = "Industralazation"
+		icon = GFX_focus_mex_privatisation				
+		
+		x = 0
+		y = 1
+	
+		cost = 5
+		
+	prerequisite = {
+		focus = VEN_farm_boom
+	}
+		relative_position_id = VEN_farm_boom
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_tech_delopment
+		text = "Tech Devlopment"
+		icon = GFX_focus_SWE_institute_of_technology				
+		
+		x = 1
+		y = 1
+	
+		cost = 5
+		
+	prerequisite = {
+		focus = VEN_industry_devlop
+	}
+		relative_position_id = VEN_industry_devlop
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_tool_reserch
+		text = "Tool Reaserch"
+		icon = GFX_SOV_leningrad_polytechnical_institute_ccp_2d_sov_compatibility					
+		
+		x = -1
+		y = 1
+	
+		cost = 5
+		
+	prerequisite = {
+		focus = VEN_industry_devlop
+	}
+		relative_position_id = VEN_industry_devlop
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_first_factory_builds
+		text = "New Northern Factories"
+		icon = GFX_focus_NORDIC_dem_capstone_civilian				
+		
+		x = -3
+		y = 1
+	
+		cost = 5
+		
+	prerequisite = {
+		focus = VEN_industry_devlop
+	}
+		relative_position_id = VEN_industry_devlop
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_second_factory_builds
+		text = "New Southern Factories"
+		icon = GFX_focus_NORDIC_com_capstone_civilian				
+		
+		x = 3
+		y = 1
+	
+		cost = 5
+		
+	prerequisite = {
+		focus = VEN_industry_devlop
+	}
+		relative_position_id = VEN_industry_devlop
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
 		id = VEN_rebel_aganst_the_dictator
 		text = "Rebel Aganst Lopez Contreras"
 		icon = GFX_focus_BEL_government_resigns					
