@@ -27518,6 +27518,155 @@ focus_tree = {
 		}
 	}
 
+		focus = {
+		id = GER_establish_Industry
+		icon = GFX_focus_generic_modernize_industry
+		prerequisite = { focus = GER_Revive_the_Central_Powers }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_Revive_the_Central_Powers
+		cost = 5
+		available = {
+			is_subject = no
+			is_faction_leader = yes
+			any_other_country = {
+				is_in_faction_with = ROOT
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+
+			add_ideas = GER_Central_Power_Eco
+			custom_effect_tooltip = GER_pool_technical_know_how_tt
+			hidden_effect = {
+				every_other_country = {
+					limit = { is_in_faction_with = GER }
+					add_ideas = GER_Central_Power_Eco
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_establish_Army
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = GER_Revive_the_Central_Powers }
+
+		x = -1
+		y = 1
+		relative_position_id = GER_Revive_the_Central_Powers
+		cost = 5
+		available = {
+			is_subject = no
+			is_faction_leader = yes
+			any_other_country = {
+				is_in_faction_with = ROOT
+			}
+		}
+
+		completion_reward = {
+
+			add_ideas = GER_Central_Power_Army
+			custom_effect_tooltip = GER_pool_technical_know_how_tt
+			hidden_effect = {
+				every_other_country = {
+					limit = { is_in_faction_with = GER }
+					add_ideas = GER_Central_Power_Army
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_build_the_eastern_bulwark
+		icon = GFX_focus_SWE_hedgehog_defense
+		prerequisite = { focus = GER_establish_Industry focus = GER_establish_Army }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_establish_Army
+		available = {
+			any_other_country = {
+				OR = {
+					is_guaranteed_by = ROOT
+					is_in_faction_with = ROOT
+				}
+				is_neighbor_of = SOV
+			}
+		}
+
+		dynamic = yes
+
+		search_filters = {}
+
+		completion_reward = {
+
+			custom_effect_tooltip = GER_build_the_eastern_bulwark_tt
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							is_owned_and_controlled_by = ROOT
+							any_country = {
+								is_guaranteed_by = ROOT
+								owns_state = PREV
+								controls_state = PREV
+							}
+							any_country = {
+								is_in_faction_with = ROOT
+								owns_state = PREV
+								controls_state = PREV
+							}
+							any_country = {
+								is_subject_of = ROOT
+								owns_state = PREV
+								controls_state = PREV
+							}
+						}
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province =  {
+							all_provinces = yes
+							limit_to_border = yes
+							limit_to_border_country = SOV
+							level < 3
+						}
+					}	
+				}
+			}
+
+			custom_effect_tooltip =  generic_skip_one_line_tt
+			
+			IF = {
+				limit = {
+					has_war_with = SOV
+				}
+				add_timed_idea = {
+					idea = GER_the_eastern_bulwark_ns
+					days = 365
+				}
+				set_global_flag = GER_eastern_bulwark_already_triggered_flag
+			}
+			ELSE = {
+				custom_effect_tooltip = GER_build_the_eastern_bulwark_ns_tt
+				effect_tooltip = {
+					add_timed_idea = {
+						idea = GER_the_eastern_bulwark_ns
+						days = 365
+					}	
+				}
+			}
+
+		}
+	}
+ 
+
 	#####################
 	#####################
 	#### REALPOLITIK ####
@@ -30515,93 +30664,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_build_the_eastern_bulwark
-		icon = GFX_focus_SWE_hedgehog_defense
-		prerequisite = { focus = GER_safeguard_the_baltic_ww focus = GER_tributes_for_guarantees focus = GER_safeguard_poland }
-
-		x = 1
-		y = 1
-		relative_position_id = GER_safeguard_poland
-		cost = 5
-		available = {
-			any_other_country = {
-				OR = {
-					is_guaranteed_by = ROOT
-					is_in_faction_with = ROOT
-				}
-				is_neighbor_of = SOV
-			}
-		}
-
-		dynamic = yes
-
-		search_filters = {}
-
-		completion_reward = {
-
-			custom_effect_tooltip = GER_build_the_eastern_bulwark_tt
-			hidden_effect = {
-				every_state = {
-					limit = {
-						OR = {
-							is_owned_and_controlled_by = ROOT
-							any_country = {
-								is_guaranteed_by = ROOT
-								owns_state = PREV
-								controls_state = PREV
-							}
-							any_country = {
-								is_in_faction_with = ROOT
-								owns_state = PREV
-								controls_state = PREV
-							}
-							any_country = {
-								is_subject_of = ROOT
-								owns_state = PREV
-								controls_state = PREV
-							}
-						}
-					}
-					add_building_construction = {
-						type = bunker
-						level = 2
-						instant_build = yes
-						province =  {
-							all_provinces = yes
-							limit_to_border = yes
-							limit_to_border_country = SOV
-							level < 3
-						}
-					}	
-				}
-			}
-
-			custom_effect_tooltip =  generic_skip_one_line_tt
-			
-			IF = {
-				limit = {
-					has_war_with = SOV
-				}
-				add_timed_idea = {
-					idea = GER_the_eastern_bulwark_ns
-					days = 365
-				}
-				set_global_flag = GER_eastern_bulwark_already_triggered_flag
-			}
-			ELSE = {
-				custom_effect_tooltip = GER_build_the_eastern_bulwark_ns_tt
-				effect_tooltip = {
-					add_timed_idea = {
-						idea = GER_the_eastern_bulwark_ns
-						days = 365
-					}	
-				}
-			}
-
-		}
-	}
-
-	focus = {
 		id = GER_liberate_oppressed_people
 		icon = GFX_focus_SWE_refuge_from_war
 		prerequisite = { focus = GER_safeguard_the_baltic_ww focus = GER_tributes_for_guarantees focus = GER_safeguard_poland }
@@ -30781,7 +30843,7 @@ focus_tree = {
 	focus = {
 		id = GER_ally_white_russian_forces
 		icon = GFX_focus_SOV_the_true_tsars
-		prerequisite = { focus = GER_offer_military_production_support focus = GER_liberate_oppressed_people focus = GER_build_the_eastern_bulwark }
+		prerequisite = { focus = GER_offer_military_production_support focus = GER_liberate_oppressed_people   }
 
 		x = 2
 		y = 2
@@ -30941,7 +31003,7 @@ focus_tree = {
 	focus = {
 		id = GER_hold_joint_military_drills
 		icon = GFX_focus_SWE_varnplikt
-		prerequisite = { focus = GER_offer_military_production_support focus = GER_liberate_oppressed_people focus = GER_build_the_eastern_bulwark }
+		prerequisite = { focus = GER_offer_military_production_support focus = GER_liberate_oppressed_people  }
 
 		dynamic = yes
 
@@ -31049,7 +31111,7 @@ focus_tree = {
 		icon = GFX_focus_GER_extend_mitteleuropa
 
 		prerequisite = { focus = GER_establish_a_customs_union }
-		prerequisite = { focus = GER_offer_military_production_support focus = GER_liberate_oppressed_people focus = GER_build_the_eastern_bulwark }
+		prerequisite = { focus = GER_offer_military_production_support focus = GER_liberate_oppressed_people  }
 
 		x = 2
 		y = 1

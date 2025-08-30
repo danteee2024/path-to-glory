@@ -122,6 +122,44 @@ ideas = {
 			}
 		}
 
+		GER_Central_Power_Eco = {
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = generic_industrial_concern_1
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		GER_Central_Power_Army = {
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = ARG_war_division
+
+			modifier = {
+				army_attack_against_major_factor = 0.05
+				army_defence_against_major_factor = 0.05
+			}
+		}
+
+
 		GER_Military_Construct_2 = {
 			allowed = {
 				original_tag = GER
@@ -295,8 +333,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-			air_agility_factor = 0.05
-			air_defence_factor = 0.05
+			air_agility_factor = 0.1
+			air_defence_factor = 0.1
 			}
 		}
 
