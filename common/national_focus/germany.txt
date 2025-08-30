@@ -26066,7 +26066,7 @@ focus_tree = {
 
 		mutually_exclusive = { focus = GER_military_dictatorship }
 
-		x = 0
+		x = 10
 		y = 1
 		relative_position_id = GER_revive_the_kaiserreich_ww
 
@@ -26158,7 +26158,7 @@ focus_tree = {
 		prerequisite = { focus = GER_revive_the_kaiserreich_ww }
 		mutually_exclusive = { focus = GER_return_of_the_kaiser_ww }
 
-		x = 10
+		x = 20
 		y = 1
 		relative_position_id = GER_revive_the_kaiserreich_ww
 		cost = 2
@@ -27577,6 +27577,226 @@ focus_tree = {
 					add_ideas = GER_Central_Power_Army
 				}
 			}
+		}
+	}
+
+	focus = {
+		id = GER_memel_ultimatum
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = GER_establish_Army }
+
+		x = -1
+		y = 1
+		relative_position_id = GER_establish_Army
+
+		cost = 5
+
+		available = {
+			is_subject = no
+			has_army_manpower = { size > 599999 }
+			NOT = {
+				188 = {
+					is_controlled_by = ROOT
+					OWNER = {
+						is_ally_with = ROOT
+					}
+					controller = {
+						is_ally_with = ROOT
+					}
+				}
+			}
+		}
+
+		bypass = {
+			188 = {
+				is_controlled_by = ROOT
+				OWNER = {
+					is_ally_with = ROOT
+				}
+				controller = {
+					is_ally_with = ROOT
+				}
+			}
+		}
+
+		will_lead_to_war_with = LIT
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		completion_reward = {
+
+			add_named_threat = { threat = 2 name = GER_demand_memel_threat }
+
+			188 = { #Memel
+				add_claim_by = GER
+				controller = {
+					country_event = { 
+						id = baltic.4 
+						days = 1
+						random_days = 3
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_ally_white_russian_forces
+		icon = GFX_focus_SOV_the_true_tsars
+		prerequisite = { focus = GER_build_the_eastern_bulwark   }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_build_the_eastern_bulwark
+		cost = 10
+		available = {
+			SOV = {
+				has_government = communism
+				has_civil_war = no
+			}
+		}
+
+		bypass = {
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+
+			IF = {
+				limit = {
+					SOV = {
+						has_government = communism
+						has_civil_war = no
+					}
+					DON = {
+						exists = no
+					}
+					KUB = {
+						exists = no
+					}
+				}
+				custom_effect_tooltip = GER_andrey_shckuro_and_pyotr_krasnov_join_tt
+				hidden_effect = {
+					every_possible_country = {
+						limit = {
+							has_character = SOV_andrey_shkuro
+						}
+						SOV_andrey_shkuro = {
+							clr_character_flag = SOV_exiled_flag
+							clr_character_flag = SOV_exiled_army_leader
+						}
+						set_nationality = {
+						    target_country = ROOT
+						    character = SOV_andrey_shkuro
+						}
+					}
+					every_possible_country = {
+						limit = {
+							has_character = SOV_pyotr_krasnov
+						}
+						SOV_pyotr_krasnov = {
+							clr_character_flag = SOV_exiled_flag
+							clr_character_flag = SOV_exiled_army_leader
+						}
+						set_nationality = {
+						    target_country = ROOT
+						    character = SOV_pyotr_krasnov
+						}
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+			}
+
+			add_manpower = 15000
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}	
+
+			custom_effect_tooltip = GER_white_russian_exiles_divisions_recruitment_tt
+
+			hidden_effect = {
+				delete_unit_template_and_units = {
+					division_template = "Kosaken-Kavallerie-Division"
+					disband = yes #if yes, will refund equipment/manpower.
+				}
+				delete_unit_template_and_units = {
+					division_template = "Russische Befreiungsarmee"
+					disband = yes #if yes, will refund equipment/manpower.
+				}
+
+				division_template = {
+					name = "Kosaken-Kavallerie-Division"	
+					division_names_group = GER_CAV_01
+					template_counter = 106 # The Cossack Regiment Symbol 
+					regiments = {
+						cavalry = { x = 0 y = 0 }
+						cavalry = { x = 0 y = 1 }
+						cavalry = { x = 0 y = 2 }
+						cavalry = { x = 1 y = 0 }
+						cavalry = { x = 1 y = 1 }
+						cavalry = { x = 1 y = 2 }
+					}
+					support = {
+						recon = { x = 0 y = 0 }  
+						artillery = { x = 0 y = 1 }  
+					}
+				}
+
+				division_template = {
+					name = "Russische Befreiungsarmee"	
+					division_names_group = GER_INF_01
+					template_counter = 49 # The Griffin 
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 1 y = 3 }
+						artillery_brigade = { x = 2 y = 0 }
+						artillery_brigade = { x = 2 y = 1 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }  
+						artillery = { x = 0 y = 1 }  
+						anti_tank = { x = 0 y = 2 }  
+					}
+				}
+
+				random_state = { 
+					limit = {
+						is_fully_controlled_by = ROOT
+						is_owned_by = ROOT
+						is_core_of = ROOT
+					}
+					create_unit = {
+					    division = "name = \"Kosaken-Kavallerie-Division 'Don-Wolga'\" division_template = \"Kosaken-Kavallerie-Division\" start_experience_factor = 0.3 start_equipment_factor = 0.7"
+					    owner = ROOT
+					}
+					create_unit = {
+					    division = "name = \"Kosaken-Kavallerie-Division 'Kuban'\" division_template = \"Kosaken-Kavallerie-Division\" start_experience_factor = 0.3 start_equipment_factor = 0.8"
+					    owner = ROOT
+					}
+				}
+				random_state = { 
+					limit = {
+						is_fully_controlled_by = ROOT
+						is_owned_by = ROOT
+						is_core_of = ROOT
+					}
+					create_unit = {
+					    division = "name = \"Russische Befreiungsarmee 'Moskau'\" division_template = \"Russische Befreiungsarmee\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
+					    owner = ROOT
+					}
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_ideas = GER_white_russian_advisors
 		}
 	}
 
@@ -30840,185 +31060,20 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = GER_ally_white_russian_forces
-		icon = GFX_focus_SOV_the_true_tsars
-		prerequisite = { focus = GER_offer_military_production_support focus = GER_liberate_oppressed_people   }
-
-		x = 2
-		y = 2
-		relative_position_id = GER_liberate_oppressed_people
-		cost = 10
-		available = {
-			SOV = {
-				has_government = communism
-				has_civil_war = no
-			}
-		}
-
-		bypass = {
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_MANPOWER }
-
-		completion_reward = {
-
-			IF = {
-				limit = {
-					SOV = {
-						has_government = communism
-						has_civil_war = no
-					}
-					DON = {
-						exists = no
-					}
-					KUB = {
-						exists = no
-					}
-				}
-				custom_effect_tooltip = GER_andrey_shckuro_and_pyotr_krasnov_join_tt
-				hidden_effect = {
-					every_possible_country = {
-						limit = {
-							has_character = SOV_andrey_shkuro
-						}
-						SOV_andrey_shkuro = {
-							clr_character_flag = SOV_exiled_flag
-							clr_character_flag = SOV_exiled_army_leader
-						}
-						set_nationality = {
-						    target_country = ROOT
-						    character = SOV_andrey_shkuro
-						}
-					}
-					every_possible_country = {
-						limit = {
-							has_character = SOV_pyotr_krasnov
-						}
-						SOV_pyotr_krasnov = {
-							clr_character_flag = SOV_exiled_flag
-							clr_character_flag = SOV_exiled_army_leader
-						}
-						set_nationality = {
-						    target_country = ROOT
-						    character = SOV_pyotr_krasnov
-						}
-					}
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-			}
-
-			add_manpower = 15000
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.05
-			}	
-
-			custom_effect_tooltip = GER_white_russian_exiles_divisions_recruitment_tt
-
-			hidden_effect = {
-				delete_unit_template_and_units = {
-					division_template = "Kosaken-Kavallerie-Division"
-					disband = yes #if yes, will refund equipment/manpower.
-				}
-				delete_unit_template_and_units = {
-					division_template = "Russische Befreiungsarmee"
-					disband = yes #if yes, will refund equipment/manpower.
-				}
-
-				division_template = {
-					name = "Kosaken-Kavallerie-Division"	
-					division_names_group = GER_CAV_01
-					template_counter = 106 # The Cossack Regiment Symbol 
-					regiments = {
-						cavalry = { x = 0 y = 0 }
-						cavalry = { x = 0 y = 1 }
-						cavalry = { x = 0 y = 2 }
-						cavalry = { x = 1 y = 0 }
-						cavalry = { x = 1 y = 1 }
-						cavalry = { x = 1 y = 2 }
-					}
-					support = {
-						recon = { x = 0 y = 0 }  
-						artillery = { x = 0 y = 1 }  
-					}
-				}
-
-				division_template = {
-					name = "Russische Befreiungsarmee"	
-					division_names_group = GER_INF_01
-					template_counter = 49 # The Griffin 
-					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-						infantry = { x = 0 y = 3 }
-						infantry = { x = 1 y = 0 }
-						infantry = { x = 1 y = 1 }
-						infantry = { x = 1 y = 2 }
-						infantry = { x = 1 y = 3 }
-						artillery_brigade = { x = 2 y = 0 }
-						artillery_brigade = { x = 2 y = 1 }
-					}
-					support = {
-						engineer = { x = 0 y = 0 }  
-						artillery = { x = 0 y = 1 }  
-						anti_tank = { x = 0 y = 2 }  
-					}
-				}
-
-				random_state = { 
-					limit = {
-						is_fully_controlled_by = ROOT
-						is_owned_by = ROOT
-						is_core_of = ROOT
-					}
-					create_unit = {
-					    division = "name = \"Kosaken-Kavallerie-Division 'Don-Wolga'\" division_template = \"Kosaken-Kavallerie-Division\" start_experience_factor = 0.3 start_equipment_factor = 0.7"
-					    owner = ROOT
-					}
-					create_unit = {
-					    division = "name = \"Kosaken-Kavallerie-Division 'Kuban'\" division_template = \"Kosaken-Kavallerie-Division\" start_experience_factor = 0.3 start_equipment_factor = 0.8"
-					    owner = ROOT
-					}
-				}
-				random_state = { 
-					limit = {
-						is_fully_controlled_by = ROOT
-						is_owned_by = ROOT
-						is_core_of = ROOT
-					}
-					create_unit = {
-					    division = "name = \"Russische Befreiungsarmee 'Moskau'\" division_template = \"Russische Befreiungsarmee\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
-					    owner = ROOT
-					}
-				}
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_ideas = GER_white_russian_advisors
-		}
-	}
 
 	focus = {
 		id = GER_hold_joint_military_drills
 		icon = GFX_focus_SWE_varnplikt
-		prerequisite = { focus = GER_offer_military_production_support focus = GER_liberate_oppressed_people  }
+		prerequisite = { focus = GER_memel_ultimatum  }
 
 		dynamic = yes
 
 		x = 0
-		y = 3
-		relative_position_id = GER_liberate_oppressed_people
+		y = 1
+		relative_position_id = GER_memel_ultimatum
 		cost = 10
 
 		available = {
-			any_other_country = {
-				OR = {
-					is_guaranteed_by = ROOT
-					is_in_faction_with = ROOT
-				}
-			}
 		}
 
 		bypass = {
@@ -31324,7 +31379,7 @@ focus_tree = {
 
 		icon = GFX_focus_invite_finland
 
-		prerequisite = { focus = GER_safeguard_the_baltic_ww focus = GER_tributes_for_guarantees focus = GER_memel_ultimatum }
+		prerequisite = { focus = GER_safeguard_the_baltic_ww focus = GER_tributes_for_guarantees }
 
 		dynamic = yes
 
@@ -31493,74 +31548,15 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = GER_memel_ultimatum
-		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = GER_restore_the_brest_litovsk_borders }
-
-		x = -1
-		y = 1
-		relative_position_id = GER_restore_the_brest_litovsk_borders
-
-		cost = 5
-
-		available = {
-			is_subject = no
-			has_army_manpower = { size > 599999 }
-			NOT = {
-				188 = {
-					is_controlled_by = ROOT
-					OWNER = {
-						is_ally_with = ROOT
-					}
-					controller = {
-						is_ally_with = ROOT
-					}
-				}
-			}
-		}
-
-		bypass = {
-			188 = {
-				is_controlled_by = ROOT
-				OWNER = {
-					is_ally_with = ROOT
-				}
-				controller = {
-					is_ally_with = ROOT
-				}
-			}
-		}
-
-		will_lead_to_war_with = LIT
-
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-
-		completion_reward = {
-
-			add_named_threat = { threat = 2 name = GER_demand_memel_threat }
-
-			188 = { #Memel
-				add_claim_by = GER
-				controller = {
-					country_event = { 
-						id = baltic.4 
-						days = 1
-						random_days = 3
-					}
-				}
-			}
-		}
-	}
 	
 	focus = {
 		id = GER_demand_lithuanian_integration
 		icon = GFX_focus_generic_subjugation
-		prerequisite = { focus = GER_memel_ultimatum }
+		prerequisite = { focus =  }
 
 		x = 0
 		y = 1
-		relative_position_id = GER_memel_ultimatum
+		relative_position_id = GER_puppet_finland
 
 		cost = 10
 
@@ -32186,7 +32182,7 @@ focus_tree = {
 	focus = {
 		id = GER_strike_eastward
 		icon = GFX_focus_ger_strike_at_the_source
-		prerequisite = { focus = GER_subduing_the_baltic_states focus = GER_hold_joint_military_drills }
+		prerequisite = { focus = GER_subduing_the_baltic_states }
 
 		x = -3
 		y = 1
@@ -32359,28 +32355,14 @@ focus_tree = {
 	focus = {
 		id = GER_reject_the_locarno_treaty
 		icon = GFX_focus_AUS_disregard_the_treaties
-		prerequisite = { }
-		mutually_exclusive = { focus = GER_carte_blanche_for_alsace_and_french_colonies_ww }
+		prerequisite = { focus = GER_establish_Industry }
 
-		x = 30
-		y = 20
-		relative_position_id = GER_demand_the_return_of_southern_jutland
+		x = 1
+		y = 1
+		relative_position_id = GER_establish_Industry
 		cost = 10
 
 		available = {
-			is_subject = no
-			has_army_manpower = { size > 949999 }
-			28 = {
-				NOT = {
-					controller = {
-						is_in_faction_with = ROOT
-						has_war_with = ROOT
-					}
-					owner = {
-						is_in_faction_with = ROOT
-					}
-				}
-			}
 		}
 
 		bypass = {
@@ -32421,11 +32403,11 @@ focus_tree = {
 	focus = {
 		id = GER_backdoor_negotiations
 		icon = GFX_goal_generic_dangerous_deal
-		prerequisite = { focus = GER_reject_the_locarno_treaty }
-		mutually_exclusive = { focus = GER_schlieffen_once_more_ww focus = GER_bypass_maginot_in_the_south_ww }
-		x = -2
+		prerequisite = { focus = GER_realpolitik }
+		mutually_exclusive = { focus = GER_bypass_maginot_in_the_south_ww }
+		x = 15
 		y = 1
-		relative_position_id = GER_reject_the_locarno_treaty
+		relative_position_id = GER_realpolitik
 		cost = 10
 		available = {
 			is_subject = no
@@ -32527,23 +32509,11 @@ focus_tree = {
 		id = GER_schlieffen_once_more_ww
 		icon = GFX_focus_GER_schlieffen_once_more
 		prerequisite = { focus = GER_reject_the_locarno_treaty }
-		mutually_exclusive = { focus = GER_backdoor_negotiations focus = GER_bypass_maginot_in_the_south_ww }
 		x = 0
 		y = 1
 		relative_position_id = GER_reject_the_locarno_treaty
-		cost = 4
+		cost = 5
 		available = {
-			is_subject = no
-			OR = {
-				has_war_with = FRA
-				has_wargoal_against = FRA
-			}
-			NOT = {
-				is_in_faction_with = BEL
-			}
-			NOT = {
-				is_in_faction_with = LUX
-			}
 		}
 
 		bypass = {
@@ -32634,13 +32604,13 @@ focus_tree = {
 		id = GER_bypass_maginot_in_the_south_ww
 		icon = GFX_focus_attack_switzerland
 
-		prerequisite = { focus = GER_reject_the_locarno_treaty focus = GER_carte_blanche_for_alsace_and_french_colonies_ww }
+		prerequisite = { focus = GER_carte_blanche_for_alsace_and_french_colonies_ww }
 
-		mutually_exclusive = { focus = GER_backdoor_negotiations focus = GER_schlieffen_once_more_ww }
+		mutually_exclusive = { focus = GER_backdoor_negotiations }
 
-		x = 2
+		x = 20
 		y = 1
-		relative_position_id = GER_reject_the_locarno_treaty
+		relative_position_id = GER_realpolitik
 
 		cost = 4
 
@@ -32725,7 +32695,7 @@ focus_tree = {
 	focus = {
 		id = GER_reinstate_imperial_possessions_ww
 		icon = GFX_focus_GER_reinstate_imperial_possessions
-		prerequisite = { focus = GER_backdoor_negotiations focus = GER_schlieffen_once_more_ww focus = GER_bypass_maginot_in_the_south_ww }
+		prerequisite = { focus = GER_backdoor_negotiations focus = GER_bypass_maginot_in_the_south_ww }
 
 		x = 1
 		y = 1
@@ -32777,7 +32747,7 @@ focus_tree = {
 	focus = {
 		id = GER_establish_western_grand_duchies
 		icon = GFX_focus_GER_western_grand_duchies
-		prerequisite = { focus = GER_backdoor_negotiations focus = GER_schlieffen_once_more_ww focus = GER_bypass_maginot_in_the_south_ww }
+		prerequisite = { focus = GER_backdoor_negotiations focus = GER_bypass_maginot_in_the_south_ww }
 
 		dynamic = yes
 
@@ -32960,7 +32930,7 @@ focus_tree = {
 		icon = GFX_focus_GER_weltpolitik
 		prerequisite = { focus = GER_monarchist_sentiment }
 
-		x = 23
+		x = 33
 		y = 1
 		relative_position_id = GER_monarchist_sentiment
 
@@ -35857,7 +35827,7 @@ focus_tree = {
 			has_country_flag = GER_mackensen_dead
 			NOT = { has_government = democratic }
 		}
-		x = -2
+		x = -12
 		y = 1
 		relative_position_id = GER_revive_the_kaiserreich
 		cost = 5
@@ -36783,7 +36753,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		x = 0
 		y = 1
-		relative_position_id = GER_schlieffen_once_more
+		relative_position_id = GER_bypass_maginot_in_the_south
 		cost = 10
 		ai_will_do = {
 			factor = 10
