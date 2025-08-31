@@ -38,7 +38,7 @@ focus = {
 			focus = VEN_rebel_aganst_the_dictator
 		}
 		completion_reward = {
-			add_political_power = 50
+			add_ideas = VEN_rebels
 		}
 	}
 
@@ -1711,6 +1711,10 @@ mutually_exclusive = {
 	
 		completion_reward = {
 			add_political_power = 50
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.5
+			}
 		}
 	}
 
@@ -1763,6 +1767,7 @@ focus = {
 	
 		completion_reward = {
 			add_political_power = 50
+			remove_ideas = VEN_western_monoply
 		}
 	}
 
@@ -1790,6 +1795,9 @@ focus = {
 	
 		completion_reward = {
 			add_political_power = 50
+			remove_ideas = VEN_rebels
+			add_stability = 0.05
+			add_war_support = 0.05
 		}
 	}
 
@@ -1818,7 +1826,8 @@ focus = {
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 	
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 150
+			
 		}
 	}
 
@@ -2182,6 +2191,10 @@ focus = {
 	
 		completion_reward = {
 			add_political_power = 50
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
 		}
 	}
 
@@ -2207,6 +2220,7 @@ focus = {
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 	
 		completion_reward = {
+			remove_ideas = VEN_western_monoply
 			add_political_power = 50
 		}
 	}
@@ -2234,6 +2248,9 @@ focus = {
 	
 		completion_reward = {
 			add_political_power = 50
+			remove_ideas = VEN_rebels
+			add_stability = 0.05
+			add_war_support = 0.05
 		}
 	}
 
@@ -2288,7 +2305,7 @@ focus = {
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 	
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 100
 		}
 	}
 
@@ -2317,7 +2334,7 @@ focus = {
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 	
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 100
 		}
 	}
 
@@ -2346,7 +2363,8 @@ focus = {
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 	
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 100
+			
 		}
 	}
 
@@ -2375,7 +2393,16 @@ focus = {
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 	
 		completion_reward = {
-			add_political_power = 50
+			add_ideas = VEN_jap_and_ita_ships
+			307 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				
+			}
 		}
 	}
 
@@ -2404,7 +2431,7 @@ focus = {
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 	
 		completion_reward = {
-			add_political_power = 50
+			add_ideas = VEN_axis_warfare
 		}
 	}
 
@@ -2430,7 +2457,7 @@ focus = {
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 	
 		completion_reward = {
-			add_political_power = 50
+			add_ideas = VEN_ger_tank
 		}
 	}
 
@@ -2456,7 +2483,15 @@ focus = {
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 	
 		completion_reward = {
-			add_political_power = 50
+			add_ideas = VEN_jap_air
+			307 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+				
+			}
 		}
 	}
 
@@ -2489,6 +2524,7 @@ focus = {
 	
 		completion_reward = {
 			add_political_power = 50
+			
 		}
 	}
 
@@ -2547,6 +2583,8 @@ focus = {
 	
 		completion_reward = {
 			add_political_power = 50
+			add_ideas = VEN_africia_army
+			
 		}
 	}
 
@@ -2573,7 +2611,7 @@ focus = {
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 	
 		completion_reward = {
-			add_political_power = 50
+			add_ideas = VEN_marine_div
 		}
 	}
 
@@ -2599,7 +2637,7 @@ focus = {
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 	
 		completion_reward = {
-			add_political_power = 50
+			add_ideas = VEN_flying_planes
 		}
 	}
 

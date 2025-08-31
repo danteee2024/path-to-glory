@@ -63,12 +63,96 @@ ideas = {
 			}
 		}
 		VEN_industry_boom = {
-			picture = MEX_revolutionary_army
+			picture = man_five_year_plan_industry
 			modifier = {
 				local_resources_factor = 0.1
 				production_speed_buildings_factor = 0.05
 				production_factory_efficiency_gain_factor = 0.05
 
+			}
+		}
+
+		VEN_rebels = {
+			picture = chi_war_of_resistance3
+			modifier = {
+				stability_weekly = -0.05
+				war_support_weekly = -0.05
+				political_power_factor = -0.05
+
+			}
+		}
+
+		VEN_ger_tank = {
+			picture = generic_acquire_tanks
+			modifier = {
+				armor_factor = 0.05
+				army_armor_attack_factor = 0.05
+				army_armor_defence_factor = 0.05
+			}
+		}
+
+		VEN_ger_tank = {
+			picture = generic_acquire_tanks
+			modifier = {
+				armor_factor = 0.05
+				army_armor_attack_factor = 0.05
+				army_armor_defence_factor = 0.05
+			}
+		}
+
+
+
+		VEN_axis_warfare = {
+			picture = SWE_land_air_warfare
+			modifier = {
+				army_speed_factor = 0.1
+				army_armor_speed_factor = 0.1
+				army_morale_factor = 0.05
+			}
+		}
+
+
+		VEN_jap_and_ita_ships = {
+			picture = generic_coastal_defense_ships2
+			modifier = {
+				navy_org_factor = 0.1
+				industrial_capacity_dockyard = 0.1
+			}
+		}
+
+		VEN_jap_air = {
+			picture = generic_coastal_defense_ships2
+			modifier = {
+				air_attack_factor = 0.05
+				air_defence_factor = 0.05
+			}
+		}
+
+		VEN_africia_army = {
+			picture = SOV_desperate_measures_ns_nsb_ccp_sov_compatibility
+			modifier = {
+				acclimatization_hot_climate_gain_factor = 0.1
+				heat_attrition = -0.1
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+
+		VEN_marine_div = {
+			picture = GER_deschimag
+			modifier = {
+				naval_invasion_penalty = -0.1
+				modifier_army_sub_unit_marine_attack_factor = 0.05
+				modifier_army_sub_unit_marine_defence_factor = 0.05
+				modifier_army_sub_unit_marine_max_org_factor = 0.05
+			}
+		}
+
+		VEN_flying_planes = {
+			picture = air_support_focus
+			modifier = {
+				air_attack_factor = 0.05
+				air_defence_factor = 0.05
 			}
 		}
 

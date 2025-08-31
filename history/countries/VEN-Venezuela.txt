@@ -14,7 +14,7 @@ set_technology = {
 
 add_ideas = {
 	USA_monroe_doctrine_idea
-	
+	closed_economy
 	VEN_neglected_agriculture
 	VEN_power_vacum
 	VEN_western_monoply
