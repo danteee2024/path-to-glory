@@ -25997,7 +25997,7 @@ focus_tree = {
 		id = GER_revive_the_kaiserreich_ww
 		icon = GFX_focus_ger_revive_kaiserreich
 		prerequisite = { focus = GER_monarchist_sentiment }
-		mutually_exclusive = { focus = GER_the_monarchy_compromise_ww }
+		mutually_exclusive = { focus = GER_the_monarchy_compromise_ww focus = GER_return_of_the_Holy_Roman_Empire }
 
 		x = 1
 		y = 1
@@ -26058,13 +26058,67 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_return_of_the_Holy_Roman_Empire
+
+		icon = GFX_focus_hun_elect_a_king
+
+		prerequisite = { focus = GER_revive_the_kaiserreich_ww }
+
+		mutually_exclusive = { focus = GER_military_dictatorship focus = GER_return_of_the_kaiser_ww }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_revive_the_kaiserreich_ww
+
+		cost = 2
+
+		available = {
+			has_government = neutrality
+			36 = { #State with Utrecht, where Wilhelm II resided
+				controller = {	
+					NOT = { has_war_with = ROOT }
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {
+
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.05
+			}
+			add_war_support = 0.05
+
+			
+					GER_victoria = {
+						add_country_leader_role = {
+							country_leader = {
+								expire = "1965.1.1"
+								ideology = despotism
+								traits = {
+									imperial_connections	
+									anti_democrat
+								}
+							}
+							promote_leader = yes
+						}
+					}
+				}
+			}
+			
+		
+
+
+	focus = {
 		id = GER_return_of_the_kaiser_ww
 
 		icon = GFX_focus_ger_return_of_the_kaiser
 
 		prerequisite = { focus = GER_revive_the_kaiserreich_ww }
 
-		mutually_exclusive = { focus = GER_military_dictatorship }
+		mutually_exclusive = { focus = GER_military_dictatorship focus = GER_return_of_the_Holy_Roman_Empire }
 
 		x = 10
 		y = 1
@@ -26156,7 +26210,7 @@ focus_tree = {
 		id = GER_military_dictatorship
 		icon = GFX_focus_generic_military_dictatorship
 		prerequisite = { focus = GER_revive_the_kaiserreich_ww }
-		mutually_exclusive = { focus = GER_return_of_the_kaiser_ww }
+		mutually_exclusive = { focus = GER_return_of_the_kaiser_ww focus = GER_return_of_the_Holy_Roman_Empire }
 
 		x = 20
 		y = 1
