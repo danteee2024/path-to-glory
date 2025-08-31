@@ -26107,6 +26107,31 @@ focus_tree = {
 					}
 				}
 			}
+		
+		
+	focus = {
+		id = GER_Holy_Roman_Industry
+
+		icon = GFX_focus_generic_modernize_industry
+
+		prerequisite = { focus = GER_return_of_the_Holy_Roman_Empire }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_return_of_the_Holy_Roman_Empire
+
+		cost = 5
+
+		available = {
+			
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = GER_Holy_Roman_Industry
+				}
+			}
 			
 		
 
