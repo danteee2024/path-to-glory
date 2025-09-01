@@ -26116,7 +26116,7 @@ focus_tree = {
 
 		prerequisite = { focus = GER_return_of_the_Holy_Roman_Empire }
 
-		x = 1
+		x = -3
 		y = 1
 		relative_position_id = GER_return_of_the_Holy_Roman_Empire
 
@@ -26130,6 +26130,167 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = GER_Holy_Roman_Industry
+				}
+			}
+	
+	focus = {
+		id = GER_Strengthen_the_People
+
+		icon = GFX_goal_generic_propaganda
+
+		prerequisite = { focus = GER_return_of_the_Holy_Roman_Empire }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_return_of_the_Holy_Roman_Empire
+
+		cost = 5
+
+		available = {
+			
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.1
+				}
+			}
+
+		focus = {
+		id = GER_Army_Plan
+
+		icon = GFX_focus_SOV_mobilization_plan
+
+		prerequisite = { focus = GER_Recruit_more }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_Recruit_more
+
+		cost = 5
+
+		available = {
+			
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = GER_Army_Plan
+				}
+			}
+
+		
+		focus = {
+		id = GER_Swiss
+
+		icon = GFX_goal_demand_sudetenland
+
+		prerequisite = { focus = GER_Strengthen_the_People }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_Strengthen_the_People
+
+		cost = 5
+
+		available = {
+			
+		}
+
+
+		completion_reward = {
+			SWI = { country_event =  generic.20 }
+				}
+			}
+
+			focus = {
+		id = GER_Austria
+
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = GER_Strengthen_the_People }
+
+		x = -1
+		y = 1
+		relative_position_id = GER_Strengthen_the_People
+
+		cost = 5
+
+		available = {
+			
+		}
+
+		completion_reward = {
+			AUS = { country_event =  generic.20 }
+				}
+			}
+		
+		focus = {
+		id = GER_Holy_Roman_Empire
+
+		icon = GFX_focus_ETH_the-italo_ethiopian_empire
+		prerequisite = { focus = GER_Austria }
+		prerequisite = { focus = GER_Swiss }
+
+		x = -1
+		y = 1
+		relative_position_id = GER_Swiss
+
+		cost = 5
+
+		available = {
+			
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		completion_reward = {
+				annex_country = {
+					target = SWI
+					transfer_troops = yes
+				}
+				every_state = {
+				limit = { is_core_of = SWI }
+				add_core_of = ROOT
+			}
+			annex_country = {
+					target = AUS
+					transfer_troops = yes
+				}
+			every_state = {
+				limit = { is_core_of = AUS }
+				add_core_of = ROOT
+			}
+			set_cosmetic_tag =  FORM_HRE
+			set_country_flag = FORM_HRE
+			
+				}
+			}
+			
+
+		focus = {
+		id = GER_Recruit_more
+
+		icon = GFX_SOV_consolidate_power_ccp_2d_sov_compatibility
+
+		prerequisite = { focus = GER_return_of_the_Holy_Roman_Empire }
+
+		x = 3
+		y = 1
+		relative_position_id = GER_return_of_the_Holy_Roman_Empire
+
+		cost = 5
+
+		available = {
+			
+		}
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+			add_ideas = GER_Recruit_More
 				}
 			}
 			
