@@ -1,0 +1,129 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {	# only minor performance impact to calculate at startup
+				calculate_gdp = yes
+				compute_y_axis_intervals = yes
+
+				add_to_variable = { sGDPui_graph_dirty = 1 }
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = sgdpui_update_frequency
+						option = SGDPUI_UPDATE_FREQUENCY_MONTHLY
+					}
+				}
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = sgdpui_sp_optimization
+							option = RULE_SGDPUI_SP_OPTIM_ON
+						}
+						ROOT = { is_ai = no }
+					}
+					calculate_gdp = yes
+
+					compute_y_axis_intervals = yes
+
+					sGDPui_add_point_to_graph = yes
+				}
+				else_if = {
+					limit = {
+						has_game_rule = {
+							rule = sgdpui_sp_optimization
+							option = RULE_SGDPUI_SP_OPTIM_OFF
+						}
+					}
+					calculate_gdp = yes
+
+					compute_y_axis_intervals = yes
+
+					sGDPui_add_point_to_graph = yes
+				}
+			}
+		}
+	}
+	on_weekly = {
+		effect = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = sgdpui_update_frequency
+						option = SGDPUI_UPDATE_FREQUENCY_WEEKLY
+					}
+				}
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = sgdpui_sp_optimization
+							option = RULE_SGDPUI_SP_OPTIM_ON
+						}
+						ROOT = { is_ai = no }
+					}
+					calculate_gdp = yes
+
+					compute_y_axis_intervals = yes
+
+					sGDPui_add_point_to_graph = yes
+				}
+				else_if = {
+					limit = {
+						has_game_rule = {
+							rule = sgdpui_sp_optimization
+							option = RULE_SGDPUI_SP_OPTIM_OFF
+						}
+					}
+					calculate_gdp = yes
+
+					compute_y_axis_intervals = yes
+
+					sGDPui_add_point_to_graph = yes
+				}
+			}
+		}
+	}
+	on_daily = {
+		effect = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = sgdpui_update_frequency
+						option = SGDPUI_UPDATE_FREQUENCY_DAILY
+					}
+				}
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = sgdpui_sp_optimization
+							option = RULE_SGDPUI_SP_OPTIM_ON
+						}
+						ROOT = { is_ai = no }
+					}
+					calculate_gdp = yes
+
+					compute_y_axis_intervals = yes
+
+					sGDPui_add_point_to_graph = yes
+				}
+				else_if = {
+					limit = {
+						has_game_rule = {
+							rule = sgdpui_sp_optimization
+							option = RULE_SGDPUI_SP_OPTIM_OFF
+						}
+					}
+					calculate_gdp = yes
+
+					compute_y_axis_intervals = yes
+
+					sGDPui_add_point_to_graph = yes
+				}
+			}
+		}
+	}
+}

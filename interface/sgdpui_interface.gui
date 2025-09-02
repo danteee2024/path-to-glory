@@ -1,0 +1,417 @@
+guiTypes = {
+	containerWindowType = {
+		name = "sGDPui_graph_gui"
+		position = { x = 0 y = 165 }
+		size = { width = 350 height= 250 }
+		orientation = UPPER_RIGHT
+		origo = center
+		moveable = no
+		clipping = no
+
+		show_position = {
+			x = 320
+			y = 165
+		}
+		hide_position = {
+			x = 0
+			y = 165
+		}
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 300
+		fade_time = 100
+
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_sgdpui_background"
+		}
+
+		iconType = {
+			name = "chart"
+			spriteType = "GFX_sgdpui_chart"
+			position = { x = 90 y = 70 }
+		}
+
+		# Container which will hold each of our line segments
+		gridboxtype = {
+			name = "line_segments"
+			position = { x = 99 y = 66 }
+			size = { width = 0 height = 200 }
+			slotsize = { width = 4 height = 200 }
+			max_slots_horizontal = 50
+			add_horizontal = yes
+		}
+
+		# y-axis labels, very optional
+		instantTextboxType = {
+			name = "100pct"
+			position = { x= 14 y = 65 }
+			font = "garamond_14"
+			text = "[?sgdpui_100_gdp]B USD"
+			maxWidth = 70
+			format = right
+		}
+		instantTextboxType = {
+			name = "80pct"
+			position = { x= 14 y = 85 }
+			font = "garamond_14"
+			text = "[?THIS.sgdpui_80_gdp]B USD"
+			maxWidth = 70
+			format = right
+		}
+		instantTextboxType = {
+			name = "60pct"
+			position = { x= 14 y = 105 }
+			font = "garamond_14"
+			text = "[?THIS.sgdpui_60_gdp]B USD"
+			maxWidth = 70
+			format = right
+		}
+		instantTextboxType = {
+			name = "40pct"
+			position = { x= 14 y = 125 }
+			font = "garamond_14"
+			text = "[?THIS.sgdpui_40_gdp]B USD"
+			maxWidth = 70
+			format = right
+		}
+		instantTextboxType = {
+			name = "20pct"
+			position = { x= 14 y = 145 }
+			font = "garamond_14"
+			text = "[?THIS.sgdpui_20_gdp]B USD"
+			maxWidth = 70
+			format = right
+		}
+		instantTextboxType = {
+			name = "0pct"
+			position = { x= 14 y = 165 }
+			font = "garamond_14"
+			text = "[?sgdpui_00_gdp]B USD"
+			maxWidth = 70
+			format = right
+		}
+
+		# Utility buttons for demo, not needed for radar graph
+		buttonType = {
+			name = "add_button"
+			spriteType = "GFX_NV_btn_add"
+			position = { x = 20 y = 20 }
+		}
+
+		iconType = {
+			name = "current_gdp_frame"
+			position = {
+				x = 184
+				y = 20
+			}
+			spriteType = GFX_sgdpui_frame_current_gdp
+		}
+		iconType = {
+			name = "current_gdp_growth_frame"
+			position = {
+				x = 268
+				y = 20
+			}
+			spriteType = GFX_sgdpui_frame_gdp_growth
+		}
+		instantTextBoxType = {
+			name = "current_gdp_textbox"
+			position = {
+				x = 188
+				y = 28
+			}
+			maxWidth = 70
+			maxHeight = 30
+			text = "[?total_gdp|.2]B"
+			font = hoi_20b
+			format = center
+
+			pdx_tooltip = current_gdp_text_tt
+		}
+		instantTextBoxType = {
+			name = "gdp_growth_textbox"
+			position = {
+				x = 267
+				y = 28
+			}
+			maxWidth = 60
+			maxHeight = 30
+			text = "[?gdp_growth|.1%+=]"
+			font = hoi_20b
+			format = center
+
+			pdx_tooltip = gdp_growth_text_tt
+		}
+	}
+
+	# Line segment container, very important
+	containerWindowType = {
+		name = "sGDPui_graph_line_segment"
+		size = { width = 10 height = 200 }
+		position = { x = 0 y = 0 }
+
+		# Line segment progress bar, using our custom asset with custom shader
+		iconType = {
+			name = "segment"
+			spriteType = "GFX_sgdpui_line_segment"
+			position = { x = 0 y = 0 }
+			frame = 57
+		}
+	}
+	containerWindowType = {
+		name = "sGDPui_visibility_button_show_container"
+
+		position = {
+			x = 695
+			y = 45
+		}
+		#show_animation_type = decelerated
+		#animation_time = 300
+		fade_time = 500
+		fade_type = linear
+
+		buttonType = {
+			name = "visibility_button_show"
+			spriteType = "GFX_sgdpui_toggle_button"
+			frame = 2
+
+			pdx_tooltip = visibility_button_tt
+
+			shortcut = "alt+t"
+		}
+	}
+	containerWindowType = {
+		name = "sGDPui_visibility_button_hide_container"
+
+		show_position = {
+			x = 1040
+			y = 45
+		}
+		hide_position = {
+			x = 695
+			y = 45
+		}
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 300
+
+		buttonType = {
+			name = "visibility_button_hide"
+			spriteType = "GFX_sgdpui_toggle_button"
+			frame = 1
+
+			pdx_tooltip = visibility_button_tt
+
+			shortcut = "alt+t"
+		}
+	}
+
+	containerWindowType = {
+		name = "sGDPui_diplo_graph_gui"
+		position = { x = 189 y = 120 }
+		size = { width = 350 height= 250 }
+		orientation = UPPER_RIGHT
+		origo = center
+		moveable = no
+		clipping = no
+
+		show_position = {
+			x = 189
+			y = 120
+		}
+		hide_position = {
+			x = -200
+			y = 120
+		}
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 300
+		fade_time = 100
+
+		background = {
+			name = "diplo_background"
+			quadTextureSprite = "GFX_sgdpui_background"
+		}
+
+		iconType = {
+			name = "diplo_chart"
+			spriteType = "GFX_sgdpui_chart"
+			position = { x = 90 y = 70 }
+		}
+
+		# Container which will hold each of our line segments
+		gridboxtype = {
+			name = "diplo_line_segments"
+			position = { x = 99 y = 66 }
+			size = { width = 0 height = 200 }
+			slotsize = { width = 4 height = 200 }
+			max_slots_horizontal = 50
+			add_horizontal = yes
+		}
+
+		# y-axis labels
+		instantTextboxType = {
+			name = "diplo_100pct"
+			position = { x= 14 y = 65 }
+			font = "garamond_14"
+			text = "[?sgdpui_100_gdp]B USD"
+			maxWidth = 70
+			format = right
+		}
+		instantTextboxType = {
+			name = "diplo_80pct"
+			position = { x= 14 y = 85 }
+			font = "garamond_14"
+			text = "[?THIS.sgdpui_80_gdp]B USD"
+			maxWidth = 70
+			format = right
+		}
+		instantTextboxType = {
+			name = "diplo_60pct"
+			position = { x= 14 y = 105 }
+			font = "garamond_14"
+			text = "[?THIS.sgdpui_60_gdp]B USD"
+			maxWidth = 70
+			format = right
+		}
+		instantTextboxType = {
+			name = "diplo_40pct"
+			position = { x= 14 y = 125 }
+			font = "garamond_14"
+			text = "[?THIS.sgdpui_40_gdp]B USD"
+			maxWidth = 70
+			format = right
+		}
+		instantTextboxType = {
+			name = "diplo_20pct"
+			position = { x= 14 y = 145 }
+			font = "garamond_14"
+			text = "[?THIS.sgdpui_20_gdp]B USD"
+			maxWidth = 70
+			format = right
+		}
+		instantTextboxType = {
+			name = "diplo_0pct"
+			position = { x= 14 y = 165 }
+			font = "garamond_14"
+			text = "[?sgdpui_00_gdp]B USD"
+			maxWidth = 70
+			format = right
+		}
+
+		# Utility buttons for demo, not needed for radar graph
+		buttonType = {
+			name = "diplo_add_button"
+			spriteType = "GFX_NV_btn_add"
+			position = { x = 20 y = 20 }
+		}
+
+		iconType = {
+			name = "current_gdp_frame"
+			position = {
+				x = 184
+				y = 20
+			}
+			spriteType = GFX_sgdpui_frame_current_gdp
+		}
+		iconType = {
+			name = "current_gdp_growth_frame"
+			position = {
+				x = 268
+				y = 20
+			}
+			spriteType = GFX_sgdpui_frame_gdp_growth
+		}
+		instantTextBoxType = {
+			name = "diplo_current_gdp_textbox"
+			position = {
+				x = 188
+				y = 28
+			}
+			maxWidth = 70
+			maxHeight = 30
+			text = "[?total_gdp|.2]B"
+			font = hoi_20b
+			format = center
+
+			pdx_tooltip = current_gdp_text_tt
+		}
+		instantTextBoxType = {
+			name = "diplo_gdp_growth_textbox"
+			position = {
+				x = 267
+				y = 28
+			}
+			maxWidth = 60
+			maxHeight = 30
+			text = "[?gdp_growth|.1%+=]"
+			font = hoi_20b
+			format = center
+
+			pdx_tooltip = gdp_growth_text_tt
+		}
+	}
+
+	# Line segment container, very important
+	containerWindowType = {
+		name = "sGDPui_diplo_graph_line_segment"
+		size = { width = 10 height = 200 }
+		position = { x = 0 y = 0 }
+
+		# Line segment progress bar, using our custom asset with custom shader
+		iconType = {
+			name = "segment"
+			spriteType = "GFX_sgdpui_line_segment"
+			position = { x = 0 y = 0 }
+			frame = 57
+		}
+	}
+	containerWindowType = {
+		name = "sGDPui_diplo_visibility_button_show_container"
+
+		position = {
+			x = 545
+			y = 0
+		}
+		#show_animation_type = decelerated
+		#animation_time = 300
+		fade_time = 500
+		fade_type = linear
+
+		buttonType = {
+			name = "diplo_visibility_button_show"
+			spriteType = "GFX_sgdpui_toggle_button"
+			frame = 2
+
+			pdx_tooltip = visibility_button_tt
+
+			shortcut = "alt+t"
+		}
+	}
+	containerWindowType = {
+		name = "sGDPui_diplo_visibility_button_hide_container"
+
+		show_position = {
+			x = 889
+			y = 0
+		}
+		hide_position = {
+			x = 545
+			y = 0
+		}
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 300
+
+		buttonType = {
+			name = "diplo_visibility_button_hide"
+			spriteType = "GFX_sgdpui_toggle_button"
+			frame = 1
+
+			pdx_tooltip = visibility_button_tt
+
+			shortcut = "alt+t"
+		}
+	}
+}

@@ -1,0 +1,25 @@
+﻿l_english:
+ # Graph
+ visibility_button_tt: "§HGDP Graph§!\nShows industrial development over time."
+ current_gdp_text_tt: "§HCurrent GDP:§! [?total_gdp|.2]B USD"
+ gdp_growth_text_tt: "§HGDP Growth over the past [GetGDPUpdateTime]:§! [?gdp_growth|.1%+=]"
+
+ # Game Rules
+ RULE_GROUP_SGDPUI: "Simple GDP Graph"
+ RULE_SGDPUI_UPDATE_FREQUENCY: "Update Frequency"
+ SGDPUI_UPDATE_FREQUENCY_MONTHLY_TEXT: "Monthly"
+ SGDPUI_UPDATE_FREQUENCY_MONTHLY_DESC: "Update the GDP graph every month."
+ SGDPUI_UPDATE_FREQUENCY_WEEKLY_TEXT: "Weekly"
+ SGDPUI_UPDATE_FREQUENCY_WEEKLY_DESC: "Update the GDP graph every week.\n\n§RWARNING: This will cause performance issues.§!"
+ SGDPUI_UPDATE_FREQUENCY_DAILY_TEXT: "Daily"
+ SGDPUI_UPDATE_FREQUENCY_DAILY_DESC: "Update the GDP graph every week.\nMakes the GDP Growth display less useful since it updates daily.\n\n§RWARNING: This will cause severe performance issues.§!"
+ RULE_SGDPUI_FORMULA: "GDP Calculation Formula"
+ RULE_SGDPUI_FORMULA_ENABLED_TEXT: "Advanced"
+ RULE_SGDPUI_FORMULA_ENABLED_DESC: "GDP will be calculated using different values for Civilian Factories, Military Factories as well as Dockyards."
+ RULE_SGDPUI_FORMULA_DISABLED_TEXT: "Simple"
+ RULE_SGDPUI_FORMULA_DISABLED_DESC: "GDP will be the total Factory count."
+ RULE_SGDPUI_SP_OPTIM: "Singleplayer Optimization"
+ RULE_SGDPUI_SP_OPTIM_ON_TEXT: "Enabled"
+ RULE_SGDPUI_SP_OPTIM_ON_DESC: "The Graph will only be enabled for player-controlled countries.\n\nIf you want to play a releasable nation, release yourself as early as possible."
+ RULE_SGDPUI_SP_OPTIM_OFF_TEXT: "Disabled"
+ RULE_SGDPUI_SP_OPTIM_OFF_DESC: "The Graph will be enabled for every country, so you can tag switch around."

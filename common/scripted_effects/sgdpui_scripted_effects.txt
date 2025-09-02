@@ -1,0 +1,147 @@
+sGDPui_add_point_to_graph = {
+	add_to_variable = { THIS.sGDPui_count = 1 }
+
+	clear_array = THIS.sGDPui_graph_offsets
+	clear_array = THIS.sGDPui_graph_slopes
+
+	for_each_loop = {
+		array = THIS.gdp_array
+		index = i
+
+		# y value
+		set_variable = { THIS.sGDPui_y_position = THIS.gdp_array^i }
+		subtract_from_variable = { THIS.sGDPui_y_position = THIS.min_gdp }
+		divide_variable = { THIS.sGDPui_y_position = THIS.gdp_interval }
+		multiply_variable = { THIS.sGDPui_y_position = 100 }
+		round_variable = THIS.sGDPui_y_position
+
+		if = {
+			limit = { check_variable = { i > 0 } }
+
+			# The y position offset is the inverse of the y position
+			set_temp_variable = { offset = THIS.sGDPui_last_y_position }
+			multiply_temp_variable = { offset = -1 }
+			add_to_array = {
+				array = THIS.sGDPui_graph_offsets
+				value = offset
+			}
+
+			# The 'slope' here is simply the difference between the current y value and the last one, divided by 2 plus 50
+			# These last two changes are needed for the shader
+			set_temp_variable = { diff = THIS.sGDPui_y_position }
+			subtract_from_temp_variable = { diff = THIS.sGDPui_last_y_position }
+			divide_temp_variable = { diff = 2 }
+			add_to_temp_variable = { diff = 50 }
+			add_to_array = {
+				array = THIS.sGDPui_graph_slopes
+				value = diff
+			}
+		}
+		set_variable = { THIS.sGDPui_last_y_position = THIS.sGDPui_y_position }
+	}
+
+	# Prune arrays so they hold at most 50 elements
+	if = {
+		limit = { check_variable = { THIS.sGDPui_count > 50 } }
+		remove_from_array = { array = THIS.sGDPui_graph_offsets index = 0 }
+		remove_from_array = { array = THIS.sGDPui_graph_slopes index = 0 }
+		remove_from_array = { array = THIS.sGDPui_numbers index = 0 }
+		remove_from_array = { array = THIS.gdp_array index = 0 }
+	}
+
+	add_to_array = { THIS.sGDPui_numbers = THIS.sGDPui_count }
+
+	add_to_variable = { THIS.sGDPui_graph_dirty = 1 }
+}
+
+@gdp_civ_mult = 0.35
+@gdp_mil_mult = 0.25
+@gdp_nav_mult = 0.15
+
+calculate_gdp = {
+	set_variable = { THIS.civilian_gdp = 0 }
+	set_variable = { THIS.military_gdp = 0 }
+	set_variable = { THIS.naval_gdp = 0 }
+
+	every_controlled_state = {
+		add_to_variable = { PREV.civilian_gdp = THIS.non_damaged_building_level@industrial_complex }
+		add_to_variable = { PREV.military_gdp = THIS.non_damaged_building_level@arms_factory }
+		add_to_variable = { PREV.naval_gdp = THIS.non_damaged_building_level@dockyard }
+	}
+	if = {
+		limit = {
+			has_game_rule = {
+				rule = sgdpui_gdp_formula
+				option = RULE_SGDPUI_FORMULA_ENABLED
+			}
+		}
+		multiply_variable = { THIS.civilian_gdp = @gdp_civ_mult }
+		multiply_variable = { THIS.military_gdp = @gdp_mil_mult }
+		multiply_variable = { THIS.naval_gdp = @gdp_nav_mult }
+	}
+	set_variable = { THIS.total_gdp = THIS.civilian_gdp }
+	add_to_variable = { THIS.total_gdp = THIS.military_gdp }
+	add_to_variable = { THIS.total_gdp = THIS.naval_gdp }
+
+	if = {
+		limit = { NOT = { check_variable = { THIS.last_gdp = 0 } } }
+		set_variable = { THIS.gdp_growth = THIS.total_gdp }
+		divide_variable = { THIS.gdp_growth = THIS.last_gdp }
+		subtract_from_variable = { THIS.gdp_growth = 1 }
+	}
+
+	set_variable = { THIS.last_gdp = THIS.total_gdp }
+}
+compute_y_axis_intervals = {
+	add_to_array = { THIS.gdp_array = THIS.total_gdp }
+
+	find_lowest_in_array = {
+		array = THIS.gdp_array
+		value = temp_min_gdp
+		index = temp_min_gdp_i
+	}
+	set_variable = { THIS.min_gdp = temp_min_gdp }
+	set_variable = { THIS.min_gdp_i = temp_min_gdp_i }
+	find_highest_in_array = {
+		array = THIS.gdp_array
+		value = temp_new_max_gdp
+		index = temp_max_gdp_i
+	}
+	set_variable = { THIS.old_max_gdp = temp_new_max_gdp }
+	set_variable = { THIS.max_gdp = temp_new_max_gdp }
+	set_variable = { THIS.max_gdp_i = temp_max_gdp_i }
+
+	# compute y axis intervals
+	set_variable = { THIS.gdp_interval = THIS.max_gdp }
+	subtract_from_variable = { THIS.gdp_interval = THIS.min_gdp }
+	set_temp_variable = { gdp_interval_fifth = THIS.gdp_interval }
+	divide_temp_variable = { gdp_interval_fifth = 5 }
+
+	set_variable = { THIS.sgdpui_100_gdp = THIS.max_gdp }
+	round_variable = THIS.sgdpui_100_gdp
+
+	set_temp_variable = { 80pct = THIS.max_gdp }
+	subtract_from_temp_variable = { 80pct = gdp_interval_fifth }
+	set_variable = { THIS.sgdpui_80_gdp = 80pct }
+	round_variable = THIS.sgdpui_80_gdp
+
+	set_temp_variable = { 60pct = 80pct }
+	subtract_from_temp_variable = { 60pct = gdp_interval_fifth }
+	set_variable = { THIS.sgdpui_60_gdp = 60pct }
+	round_variable = THIS.sgdpui_60_gdp
+
+	set_temp_variable = { 40pct = 60pct }
+	subtract_from_temp_variable = { 40pct = gdp_interval_fifth }
+	set_variable = { THIS.sgdpui_40_gdp = 40pct }
+	round_variable = THIS.sgdpui_40_gdp
+
+	set_temp_variable = { 20pct = 40pct }
+	subtract_from_temp_variable = { 20pct = gdp_interval_fifth }
+	set_variable = { THIS.sgdpui_20_gdp = 20pct }
+	round_variable = THIS.sgdpui_20_gdp
+
+	set_temp_variable = { 00pct = 20pct }
+	subtract_from_temp_variable = { 00pct = gdp_interval_fifth }
+	set_variable = { THIS.sgdpui_00_gdp = 00pct }
+	round_variable = THIS.sgdpui_00_gdp
+}

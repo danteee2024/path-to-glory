@@ -1,0 +1,45 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_sgdpui_background"
+		textureFile = "gfx/interface/sgdpui_background.dds"
+	}
+
+	spriteType = {
+		name = "GFX_sgdpui_chart"
+		textureFile = "gfx/interface/sgdpui_chart.dds"
+	}
+
+	spriteType = {
+		name = "GFX_sgdpui_toggle_button"
+		textureFile = "gfx/interface/sgdpui_toggle_button.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_sgdpui_frame_current_gdp"
+		textureFile = "gfx/interface/sgdpui_frame1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_sgdpui_frame_gdp_growth"
+		textureFile = "gfx/interface/sgdpui_frame2.dds"
+	}
+
+	progressbartype = {
+		name = "GFX_sgdpui_line_segment"
+		textureFile1 = "gfx/interface/sgdpui_line_full.dds"
+		textureFile2 = "gfx/interface/sgdpui_line_empty.dds"
+		size = {
+			x = 4
+			y = 200
+		}
+		effectFile = "gfx/FX/sgdpui.lua"
+		horizontal = yes
+	}
+
+	spriteType = {
+		name = "GFX_sgdpui_warning"
+		textureFile = "gfx/texticons/sgdpui_warning.dds"
+	}
+}

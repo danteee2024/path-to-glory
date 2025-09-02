@@ -1,0 +1,51 @@
+sgdpui_update_frequency = {
+	name = "RULE_SGDPUI_UPDATE_FREQUENCY"
+	group = "RULE_GROUP_SGDPUI"
+	default = {
+		name = "SGDPUI_UPDATE_FREQUENCY_MONTHLY"
+		text = "SGDPUI_UPDATE_FREQUENCY_MONTHLY_TEXT"
+		desc = "SGDPUI_UPDATE_FREQUENCY_MONTHLY_DESC"
+	}
+	option = {
+		name = "SGDPUI_UPDATE_FREQUENCY_WEEKLY"
+		text = "SGDPUI_UPDATE_FREQUENCY_WEEKLY_TEXT"
+		desc = "SGDPUI_UPDATE_FREQUENCY_WEEKLY_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "SGDPUI_UPDATE_FREQUENCY_DAILY"
+		text = "SGDPUI_UPDATE_FREQUENCY_DAILY_TEXT"
+		desc = "SGDPUI_UPDATE_FREQUENCY_DAILY_DESC"
+		allow_achievements = yes
+	}
+}
+sgdpui_gdp_formula = {
+	name = "RULE_SGDPUI_FORMULA"
+	group = "RULE_GROUP_SGDPUI"
+	default = {
+		name = "RULE_SGDPUI_FORMULA_ENABLED"
+		text = "RULE_SGDPUI_FORMULA_ENABLED_TEXT"
+		desc = "RULE_SGDPUI_FORMULA_ENABLED_DESC"
+	}
+	option = {
+		name = "RULE_SGDPUI_FORMULA_DISABLED"
+		text = "RULE_SGDPUI_FORMULA_DISABLED_TEXT"
+		desc = "RULE_SGDPUI_FORMULA_DISABLED_DESC"
+		allow_achievements = yes
+	}
+}
+sgdpui_sp_optimization = {
+	name = "RULE_SGDPUI_SP_OPTIM"
+	group = "RULE_GROUP_SGDPUI"
+	default = {
+		name = "RULE_SGDPUI_SP_OPTIM_ON"
+		text = "RULE_SGDPUI_SP_OPTIM_ON_TEXT"
+		desc = "RULE_SGDPUI_SP_OPTIM_ON_DESC"
+	}
+	option = {
+		name = "RULE_SGDPUI_SP_OPTIM_OFF"
+		text = "RULE_SGDPUI_SP_OPTIM_OFF_TEXT"
+		desc = "RULE_SGDPUI_SP_OPTIM_OFF_DESC"
+		allow_achievements = yes
+	}
+}

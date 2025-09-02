@@ -1,0 +1,30 @@
+defined_text = {
+	name = GetGDPUpdateTime
+	text = {
+		trigger = {
+			has_game_rule = {
+				rule = sgdpui_update_frequency
+				option = SGDPUI_UPDATE_FREQUENCY_MONTHLY
+			}
+		}
+		localization_key = "Month"
+	}
+	text = {
+		trigger = {
+			has_game_rule = {
+				rule = sgdpui_update_frequency
+				option = SGDPUI_UPDATE_FREQUENCY_WEEKLY
+			}
+		}
+		localization_key = "Week"
+	}
+	text = {
+		trigger = {
+			has_game_rule = {
+				rule = sgdpui_update_frequency
+				option = SGDPUI_UPDATE_FREQUENCY_DAILY
+			}
+		}
+		localization_key = "Day"
+	}
+}
