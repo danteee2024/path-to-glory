@@ -5750,18 +5750,7 @@ create_corps_commander = {
 		}
 	}
 
-	#Focus for Made by CaptainLuck"
-	focus = {
-		id = POR_made_by_captainluck
-		icon = GFX_POR_made_by_captainluck-16642
-		x = 95
-		y = 23
-		cost = 100
-		available_if_capitulated = yes
-		completion_reward = {
-            custom_effect_tooltip = GetAmongSomeBitches
-        }
-	}
+	
 
 	#Focus for The Communist Threat"
 	focus = {
