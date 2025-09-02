@@ -26133,6 +26133,35 @@ focus_tree = {
 				}
 			}
 	
+		focus = {
+		id = GER_Holy_Roman_Mefo
+
+		icon = GFX_focus_generic_economic_recovery
+
+		prerequisite = { focus = GER_Holy_Roman_Industry }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_Holy_Roman_Industry
+
+		cost = 5
+
+		available = {
+			
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			GER_modify_industrial_modifier = yes
+			add_to_variable = { 
+				GER_industrial_consumer_goods_factor = -0.1
+				tooltip = consumer_goods_factor_tt
+			}
+			
+				}
+			}
+	
 	focus = {
 		id = GER_Strengthen_the_People
 
@@ -26293,8 +26322,57 @@ focus_tree = {
 			add_ideas = GER_Recruit_More
 				}
 			}
-			
 		
+			
+		focus = {
+		id = GER_Holy_Plan
+
+		icon = GFX_focus_GER_army
+
+		prerequisite = { focus = GER_Holy_Roman_Empire } 
+		prerequisite =  { focus = GER_Army_Plan }
+
+		x = 2
+		y = 1
+		relative_position_id = GER_Holy_Roman_Empire
+
+		cost = 5
+
+		available = {
+			
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = GER_Army_Plan
+			add_idea = GER_Army_Plan_2 }
+				}
+			}
+			
+		focus = {
+		id = GER_Bohemia
+
+		icon = GFX_focus_generic_befriend_bohemia
+
+		prerequisite = { focus = GER_Holy_Roman_Empire } 
+		prerequisite =  { focus = GER_Holy_Roman_Mefo }
+
+		x = -2
+		y = 1
+		relative_position_id = GER_Holy_Roman_Empire
+
+		cost = 5
+
+		available = {
+			
+		}
+
+		completion_reward = {
+				CZE = {
+					country_event = germany_events.145
+				}
+			}
+			}
 
 
 	focus = {
