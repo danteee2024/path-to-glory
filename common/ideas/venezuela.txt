@@ -155,6 +155,49 @@ ideas = {
 				air_defence_factor = 0.05
 			}
 		}
+		VEN_royal_guards = {
+			picture = NORDIC_army_monarchist
+			modifier = {
+				special_forces_attack_factor = 0.05
+				special_forces_defence_factor = 0.05
+			}
+		}
+
+		VEN_empire_army = {
+			picture = HABSBURG_army
+			modifier = {
+				army_morale_factor = 0.05
+				army_org_factor = 0.05
+				weekly_manpower = 500
+			}
+		}
+
+		VEN_bread_lines = {
+			picture = SOV_purged_junior_army_officers
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+
+			}
+		}
+
+		VEN_secret_popo = {
+			picture = generic_secret_police
+			modifier = {
+				resistance_damage_to_garrison = -0.1
+				compliance_gain = 10
+				operation_cost = -0.1
+			}
+		}
+
+		VEN_worker_paradise = {
+			picture = por_iberian_workers_united
+			modifier = {
+				weekly_manpower = 500
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
 
 	}
 }

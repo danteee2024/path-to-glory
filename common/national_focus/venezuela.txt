@@ -1081,6 +1081,14 @@ focus = {
 	
 		completion_reward = {
 			add_political_power = 50
+			add_popularity = {
+				ideology = communism
+				popularity = 0.3
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.3
+			}
 		}
 	}
 
@@ -1433,6 +1441,14 @@ mutually_exclusive = {
 		}
 		completion_reward = {
 			add_political_power = 50
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+			set_politics = {
+				ruling_party = communism
+			}
+			add_ideas = VEN_bread_lines
 		}
 	}
 
@@ -1453,7 +1469,8 @@ mutually_exclusive = {
 			focus = VEN_turn_to_communist
 		}
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 100
+			add_stability = 0.05
 		}
 	}
 
@@ -1474,7 +1491,7 @@ mutually_exclusive = {
 			focus = VEN_turn_to_communist
 		}
 		completion_reward = {
-			add_political_power = 50
+			remove_ideas = VEN_western_monoply
 		}
 	}
 
@@ -1519,7 +1536,8 @@ mutually_exclusive = {
 			focus = VEN_equality
 		}
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 75
+			add_ideas = free_trade
 		}
 	}
 
@@ -1567,7 +1585,15 @@ mutually_exclusive = {
 			focus = VEN_set_our_eco_free
 		}
 		completion_reward = {
-			add_political_power = 50
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				
+			}
 		}
 	}
 
@@ -1588,7 +1614,15 @@ mutually_exclusive = {
 			focus = VEN_spread_communism
 		}
 		completion_reward = {
-			add_political_power = 50
+			307 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				
+			}
 		}
 	}
 
@@ -1633,7 +1667,9 @@ mutually_exclusive = {
 			focus = VEN_soviet_investments
 		}
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 100
+			add_war_support = 0.1
+			add_stability = 0.1
 		}
 	}
 
@@ -1657,7 +1693,8 @@ mutually_exclusive = {
 			focus = VEN_devlops_capital
 		}
 		completion_reward = {
-			add_political_power = 50
+			create_intelligence_agency = yes
+			add_ideas = VEN_secret_popo
 		}
 	}
 
@@ -1681,7 +1718,7 @@ mutually_exclusive = {
 			focus = VEN_secret_police
 		}
 		completion_reward = {
-			add_political_power = 50
+			add_ideas = VEN_worker_paradise
 		}
 	}
 
@@ -1711,6 +1748,9 @@ mutually_exclusive = {
 	
 		completion_reward = {
 			add_political_power = 50
+			set_politics = {
+				ruling_party = neutrality
+			}
 			add_popularity = {
 				ideology = neutrality
 				popularity = 0.5
@@ -1827,6 +1867,7 @@ focus = {
 	
 		completion_reward = {
 			add_political_power = 150
+			add_ideas = free_trade
 			
 		}
 	}
@@ -1853,7 +1894,11 @@ focus = {
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 	
 		completion_reward = {
-			add_political_power = 50
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_trait = {
+				trait = baron_of_terror
+			}
 		}
 	}
 
@@ -1877,10 +1922,26 @@ focus = {
 		available = {
 		}
 	
-		search_filters = { FOCUS_FILTER_HISTORICAL }
 	
 		completion_reward = {
-			add_political_power = 50
+			307 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				
+			}
+			489 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				
+			}
 		}
 	}
 
@@ -1906,7 +1967,7 @@ focus = {
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 	
 		completion_reward = {
-			add_political_power = 50
+			add_ideas = VEN_royal_guards
 		}
 	}
 
@@ -2048,7 +2109,7 @@ focus = {
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 	
 		completion_reward = {
-			add_political_power = 50
+			add_ideas = VEN_empire_army
 		}
 	}
 
@@ -2077,7 +2138,60 @@ focus = {
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 	
 		completion_reward = {
-			add_political_power = 50
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				
+			}
 		}
 	}
 
@@ -2132,7 +2246,24 @@ focus = {
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 	
 		completion_reward = {
-			add_political_power = 50
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				
+			}
 		}
 	}
 
