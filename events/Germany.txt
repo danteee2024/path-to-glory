@@ -63,19 +63,20 @@ country_event = {
 	option = {
 		name = germany.146.a
 				transfer_state = 74
+				74 = { add_core_of = GER }
 				
 				transfer_state = 75
-				
+				75 = { add_core_of = GER }
 				transfer_state = 972
-			
-		
+				972 = { add_core_of = GER }
 				transfer_state = 9
-				
+				9 = { add_core_of = GER }
 				transfer_state = 69
+				69 = { add_core_of = GER }
 	
 
 		diplomatic_relation = {
-			country = PREV
+			country = CZE
 			relation = non_aggression_pact
 			active = yes
 		}	 
