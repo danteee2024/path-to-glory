@@ -374,6 +374,27 @@ ideas = {
 		}
 
 		
+		GER_Holy_Roman_Industry_2 = {
+			
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_improved_industries
+
+			removal_cost = -1
+			
+			modifier = {
+			production_speed_industrial_complex_factor = 0.1
+			production_factory_efficiency_gain_factor = 0.05
+			production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		
 		GER_Empire_War_Industry = {
 			
 			allowed = {
