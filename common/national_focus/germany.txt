@@ -26397,6 +26397,47 @@ focus_tree = {
 				add_idea = GER_Holy_Roman_Industry_2 }
 			}
 			}
+		
+			focus = {
+		id = GER_Benelux
+
+		icon = GFX_focus_generic_influence_benelux
+
+		prerequisite = { focus = GER_Holy_Roman_Empire } 
+
+		x = 0
+		y = 1
+		relative_position_id = GER_Holy_Roman_Empire
+
+		cost = 5
+
+		available = {
+			
+		}
+
+		completion_reward = {
+				create_wargoal = {
+				target = BEL
+				type = annex_everything
+			}
+			980  = { add_core_of = GER }
+			34  = { add_core_of = GER }
+			6  = { add_core_of = GER }
+			977  = { add_core_of = GER }
+			create_wargoal = {
+				target = HOL
+				type = annex_everything
+			}
+			35  = { add_core_of = GER }
+			36  = { add_core_of = GER }
+			7  = { add_core_of = GER }
+			create_wargoal = {
+				target = LUX
+				type = annex_everything
+			}
+			8 = { add_core_of = GER }
+			}
+			}
 
 
 
