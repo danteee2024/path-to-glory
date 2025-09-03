@@ -26348,6 +26348,61 @@ focus_tree = {
 			add_idea = GER_Army_Plan_2 }
 				}
 			}
+
+		focus = {
+		id = GER_Holy_Plan_Army_Final
+
+		icon = GFX_focus_chi_army_reform
+
+		prerequisite =  { focus = GER_Holy_Plan }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_Holy_Plan
+
+		cost = 5
+
+		available = {
+			
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = GER_Army_Plan_2
+			add_idea = GER_Army_Plan_3 }
+				}
+			}
+
+			focus = {
+		id = GER_Holy_Artillery_Army
+
+		icon = GFX_goal_generic_army_artillery2
+
+		prerequisite =  { focus = GER_Holy_Plan }
+
+		x = -1
+		y = 1
+		relative_position_id = GER_Holy_Plan
+
+		cost = 5
+
+		available = {
+			
+		}
+
+		completion_reward = {
+			add_to_variable = { 
+				GER_military_army_artillery_defence_factor = 0.05
+				tooltip = army_artillery_defence_factor_tt
+			}
+			add_to_variable = { 
+					GER_bewegungskrieg_army_artillery_attack_factor = 0.05
+					tooltip = army_artillery_attack_factor_tt
+				}
+
+			}
+		}
+			
 			
 		focus = {
 		id = GER_Bohemia
@@ -26373,6 +26428,31 @@ focus_tree = {
 				}
 			}
 			}
+
+			focus = {
+		id = GER_Koenigsberg
+
+		icon = GFX_focus_BRA_the_polaca
+
+		prerequisite = { focus = GER_Bohemia } 
+
+		x = 1
+		y = 1
+		relative_position_id = GER_Bohemia
+
+		cost = 5
+
+		available = {
+			
+		}
+
+		completion_reward = {
+				POL = {
+					country_event = germany.165
+				}
+			}
+			}
+
 
 		focus = {
 		id = GER_Holy_Roman_Great_Industry
@@ -26436,6 +26516,36 @@ focus_tree = {
 				type = annex_everything
 			}
 			8 = { add_core_of = GER }
+			}
+			}
+
+			focus = {
+		id = GER_Prepare_for_Big_War
+
+		icon = GFX_focus_generic_total_war
+
+		prerequisite = { focus = GER_Benelux } 
+		prerequisite = { focus = GER_Koenigsberg }
+		prerequisite = { focus = GER_Holy_Artillery_Army }
+
+		x = 0
+		y = 2
+		relative_position_id = GER_Benelux
+
+		cost = 10
+
+		available = {
+			
+		}
+
+		completion_reward = {
+			add_ideas = GER_Prepare_for_Big_War
+			GER_modify_industrial_modifier = yes
+			add_to_variable = { 
+				GER_industrial_consumer_goods_factor = -0.1
+				tooltip = consumer_goods_factor_tt
+			}
+			
 			}
 			}
 

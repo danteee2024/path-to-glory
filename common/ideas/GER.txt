@@ -291,6 +291,46 @@ ideas = {
 					}
 		}
 
+		GER_Army_Plan_3 = {
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+			}
+
+			removal_cost = -1
+
+			picture = chi_army_corruption3
+
+			modifier = {
+				experience_gain_army = 0.1
+				max_planning_factor = 0.1
+				planning_speed = 0.05
+				org_loss_when_moving = -0.05
+				mobilization_speed = 0.05
+				max_dig_in_factor = 0.1
+					}
+		}
+
+		GER_Prepare_for_Big_War = {
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+			}
+
+			removal_cost = -1
+
+			picture = ENG_the_war_to_end_all_wars
+
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+					}
+		}
+
 
 			GER_Military_Army_2 = {
 			allowed = {

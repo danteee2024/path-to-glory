@@ -5,6 +5,108 @@
 add_namespace = germany
 add_namespace = AAT_germany
 
+# Sellinf Koenigsberg
+country_event = {
+	id = germany.165
+	title = germany.165.t
+	desc = germany.165.d	
+	picture = GFX_report_event_generic_rally
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.165.a
+		ai_chance = {
+			base = 80
+		}
+		
+		GER = {
+			country_event = { id = germany.166 }
+		}
+	}
+	
+	option = {
+		name = germany.145.b
+		ai_chance = {
+			base = 20
+			modifier = {
+				is_subject_of = FROM
+				factor = 0
+			}
+			modifier = {
+				original_tag = POL
+				factor = 0
+			}			
+		}
+		hidden_effect = { GER = { country_event = { id = germany.167 } } }
+		
+	}
+}
+
+# Poland accepts
+country_event = {
+	id = germany.166
+	title = germany.166.t
+	desc = germany.166.d
+	picture = GFX_report_event_german_troops
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.166.a
+		POL = { transfer_state = 763
+		      763  = { add_core_of = POL }
+				transfer_state = 5	
+			5 = { add_core_of = POL } }
+			
+		diplomatic_relation = {
+			country = POL
+			relation = non_aggression_pact
+			active = yes
+		}	
+
+		GER ={
+		 random_controlled_state = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+#Poland refuses
+country_event = {
+	id = germany.167
+	title = germany.167.t
+	desc = germany.167.d
+	picture = GFX_report_event_soldiers_marching
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.147.a
+		GER = {
+		diplomatic_relation = {
+			country = POL
+			relation = -30
+			active = yes
+		}	
+	}
+	POL = {
+		diplomatic_relation = {
+			country = GER
+			relation = -30
+			active = yes
+		}	
+	}
+	}
+}
+
+
 # Demand Bohemia
 country_event = {
 	id = germany.145
@@ -51,6 +153,8 @@ country_event = {
 	}
 }
 
+
+
 # Czechoslovakia accepts
 country_event = {
 	id = germany.146
@@ -95,11 +199,12 @@ country_event = {
 	
 	option = {
 		name = germany.147.a
-		add_state_claim = 9
-		add_state_claim = 69
-		add_state_claim = 972
-		add_state_claim = 75
-		add_state_claim = 74
+		transfer_state = 74
+				74 = { add_core_of = GER }
+				75 = { add_core_of = GER }
+				972 = { add_core_of = GER }
+				9 = { add_core_of = GER }
+				69 = { add_core_of = GER }
 		create_wargoal = {
 			type = take_state_focus
 			target = FROM
