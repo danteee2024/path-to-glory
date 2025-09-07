@@ -10727,7 +10727,9 @@ focus_tree = {
 		}
 
 		available = {
-			is_subject = no 
+			has_army_manpower = { size > 1000000 }	
+			SWE = { is_subject = no
+		has_war = no }
 			}
 
 		bypass = {

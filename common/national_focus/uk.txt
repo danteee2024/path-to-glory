@@ -9221,6 +9221,10 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		search_filters = {FOCUS_FILTER_POLITICAL}	
 		completion_reward = {
 			add_political_power = 200
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
 			custom_effect_tooltip = ENG_organize_the_blackshirts_tt
 			hidden_effect = {
 				set_country_flag = Parliament_Disabled_Flag
@@ -9327,8 +9331,8 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		completion_reward = {
 			remove_ideas = ENG_the_war_to_end_all_wars
 			custom_effect_tooltip = generic_skip_one_line_tt
-			add_stability = 0.05
-			add_war_support = 0.05
+			add_stability = 0.1
+			add_war_support = 0.1
 			GER = {
 				if = {
 					limit = {
@@ -9873,7 +9877,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		x = 2
 		y = 1
 		relative_position_id = ENG_organize_the_blackshirts
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}	
@@ -9960,7 +9964,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		x = 0
 		y = 1
 		relative_position_id = ENG_enact_the_mosley_manifesto
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -9985,7 +9989,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		x = 2
 		y = 1
 		relative_position_id = ENG_enact_the_mosley_manifesto
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -10035,7 +10039,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		x = -2
 		y = 1
 		relative_position_id = ENG_enact_the_mosley_manifesto
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -10061,7 +10065,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		x = -1
 		y = 2
 		relative_position_id = ENG_enact_the_mosley_manifesto
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
