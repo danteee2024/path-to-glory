@@ -26098,8 +26098,8 @@ focus_tree = {
 								expire = "1965.1.1"
 								ideology = despotism
 								traits = {
-									imperial_connections	
-									anti_democrat
+								kaiserin_of_the_people
+								victoria_iii
 								}
 							}
 							promote_leader = yes
@@ -26198,7 +26198,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_Recruit_more
 
-		cost = 5
+		cost = 10
 
 		available = {
 			
@@ -26267,9 +26267,19 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_Swiss
 
-		cost = 5
+		cost = 10
 
 		available = {
+			AUS = {
+				OR = {
+					is_subject_of = ROOT
+				}
+			} 
+			SWI = {
+				OR = {
+					is_subject_of = ROOT
+				}
+			}
 			
 		}
 
@@ -26336,7 +26346,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_Holy_Roman_Empire
 
-		cost = 5
+		cost = 10
 
 		available = {
 			
@@ -26416,7 +26426,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_Holy_Roman_Empire
 
-		cost = 5
+		cost = 10
 
 		available = {
 			
@@ -26465,7 +26475,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_Bohemia
 
-		cost = 5
+		cost = 10
 
 		available = {
 			
@@ -26489,7 +26499,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_Holy_Roman_Empire
 
-		cost = 5
+		cost = 10
 
 		available = {
 			
@@ -26548,6 +26558,57 @@ focus_tree = {
 			
 			}
 			}
+		
+			focus = {
+		id = GER_France
+
+		icon = GFX_focus_chi_reach_out_to_france
+
+		prerequisite = { focus = GER_Prepare_for_Big_War } 
+
+		x = -1
+		y = 1
+		relative_position_id = GER_Prepare_for_Big_War
+
+		cost = 5
+
+		available = {
+			
+		}
+
+		completion_reward = {
+			FRA = {
+					country_event = germany.132
+				}
+			
+			}
+			}
+		
+				focus = {
+		id = GER_Italy
+
+		icon = GFX_focus_befriend_italy
+
+		prerequisite = { focus = GER_Prepare_for_Big_War } 
+
+		x = 1
+		y = 1
+		relative_position_id = GER_Prepare_for_Big_War
+
+		cost = 5
+
+		available = {
+			
+		}
+
+		completion_reward = {
+			ITA = {
+					country_event = germany.172
+				}
+			
+			}
+			}
+
 
 
 
