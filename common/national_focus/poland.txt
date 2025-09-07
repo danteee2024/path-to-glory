@@ -10728,6 +10728,10 @@ focus_tree = {
 
 		available = {
 			has_army_manpower = { size > 1000000 }	
+			has_opinion = {
+				target = SWE
+				value = 80
+			}
 			SWE = { is_subject = no
 		has_war = no }
 			}
