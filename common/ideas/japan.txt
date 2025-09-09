@@ -1836,9 +1836,9 @@ ideas = {
 				political_power_cost = 0.25
 				trade_laws_cost_factor = 0.25
 				economy_cost_factor = 0.25
-				production_speed_industrial_complex_factor = 0.10
+				production_speed_industrial_complex_factor = 0.05
 				production_speed_arms_factory_factor = 0.10
-				production_speed_dockyard_factor = 0.10
+				production_speed_dockyard_factor = 0.05
 				industrial_capacity_factory = 0.05
 				consumer_goods_factor = 0.15
 			}
@@ -1895,9 +1895,10 @@ ideas = {
 			
 			modifier = {
 				stability_factor = -0.1
-				production_speed_industrial_complex_factor = 0.10
+				production_speed_industrial_complex_factor = 0.05
 				production_speed_arms_factory_factor = 0.10
 				consumer_goods_factor = 0.15
+				production_speed_dockyard_factor = -0.05
 			}
 		}
 
@@ -1991,7 +1992,7 @@ ideas = {
 			modifier = {
 				conscription = 0.01
 				war_support_factor = 0.1
-				production_speed_industrial_complex_factor = 0.1
+				production_speed_industrial_complex_factor = 0.05
 			}
 		}
 
