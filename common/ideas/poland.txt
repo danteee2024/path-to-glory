@@ -19,7 +19,7 @@ country = {
 		picture = GER_fan_prussian_militarism
 
 		modifier = {
-			conscription = 0.02
+			conscription = 0.01
 		}
 
 	}
@@ -1999,7 +1999,7 @@ country = {
 		removal_cost = -1
 
 		modifier = {
-			conscription = 0.02
+			conscription = 0.01
 		}
 	
 		}

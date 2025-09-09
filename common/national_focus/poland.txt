@@ -86,7 +86,7 @@ focus_tree = {
 		prerequisite = { focus = POL_the_four_year_plan }
 		x = 4
 		y = 1
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 10
@@ -330,15 +330,15 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 5
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = POL_start_central_industrial_region_1
@@ -420,10 +420,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 				set_state_flag = POL_start_central_industrial_region_1
@@ -759,10 +759,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = POL_develop_upper_silesia_1
@@ -1198,28 +1198,7 @@ focus_tree = {
 				}
 				set_state_flag = POL_modernize_congressional_factories_2
 			}
-			random_owned_controlled_state = {
-				prioritize = { 98 }
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = POL_modernize_congressional_factories_3
-			}
+			
 		}
 	}
 
