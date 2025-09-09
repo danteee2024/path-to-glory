@@ -2084,7 +2084,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 10
+			factor = 5
 		}
 		
 		allow_branch = {
@@ -2176,7 +2176,6 @@ focus_tree = {
 			POL_april_constitution_up = yes
 		}
 	}
-
 	#The Castle
 	focus = {
 		id = POL_the_castle
@@ -2336,7 +2335,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = POL_promote_chemical_industry
 				bonus = 1.0
-				uses = 1
+				uses = 2
 				category = synth_resources
 			}
 		}
@@ -2678,7 +2677,7 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				name = POL_prepare_for_the_next_war
 				cost_reduction = 0.5
-				uses = 2
+				uses = 3
 				category = land_doctrine
 			}
 		}
@@ -2760,7 +2759,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = POL_the_sanation_right
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -2865,7 +2864,7 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = POL_polish_revanchism
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -2942,7 +2941,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = POL_polish_revanchism
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -2969,7 +2968,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = POL_pan_slavic_revanchism
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -2999,7 +2998,7 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = POL_pan_slavic_revanchism
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -3027,7 +3026,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = POL_baltic_ultimatums
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
