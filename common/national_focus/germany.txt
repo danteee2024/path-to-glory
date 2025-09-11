@@ -25152,7 +25152,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = GER_re_establish_free_elections_ww }
 
-		x = 4
+		x = 0
 		y = 1
 		relative_position_id = GER_re_establish_free_elections_ww
 
@@ -25254,6 +25254,101 @@ focus_tree = {
 					instant_build = yes 
 				}
 			}
+
+		}
+	}
+
+	focus = {
+		id = GER_Democratic_Industry_decision
+		icon = GFX_focus_generic_modernize_industry
+		prerequisite = { focus = GER_Democratic_Building }
+		prerequisite = { focus = GER_Democratic_factorys }
+
+		x = -1
+		y = 1
+		relative_position_id = GER_Democratic_factorys
+
+		cost = 10
+
+		allow_branch = {
+			
+		}
+
+	
+
+		available = {
+		
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			unlock_decision_tooltip = GER_Inustrial_stabilize
+			unlock_decision_tooltip = GER_democratic_mefo_Bill
+
+		}
+	}
+	focus = {
+		id = GER_Democratic_Industry_decision_2
+		icon = GFX_focus_CHL_enlarge_the_textile_industries
+		prerequisite = { focus = GER_Democratic_Industry_decision }
+		prerequisite = { focus = GER_the_mannheim_project_ww }
+		
+
+		x = 2
+		y = 1
+		relative_position_id = GER_Democratic_Industry_decision
+
+		cost = 10
+
+		allow_branch = {
+			
+		}
+
+	
+
+		available = {
+		
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			unlock_decision_tooltip = GER_Inustrial_Production
+			unlock_decision_tooltip = GER_Industrial_Output
+
+		}
+	}
+
+		focus = {
+		id = GER_Democratic_Industry_decision_War
+		icon = GFX_focus_generic_military_industry
+		prerequisite = { focus = GER_Democratic_Industry_decision_2 }
+		prerequisite = { focus = GER_realpolitik }
+		
+
+		x = 0
+		y = 1
+		relative_position_id = GER_Democratic_Industry_decision_2
+
+		cost = 10
+
+		allow_branch = {
+			
+		}
+
+	
+
+		available = {
+		
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			unlock_decision_tooltip = GER_Inustrial_Production_War
+			unlock_decision_tooltip = GER_Industrial_War_Building
+			unlock_decision_tooltip = GER_War_Eco
 
 		}
 	}
@@ -25552,7 +25647,7 @@ focus_tree = {
 		icon = GFX_focus_generic_university_3
 		prerequisite = { focus = GER_re_establish_free_elections_ww }
 
-		x = 0
+		x = 4
 		y = 1
 		relative_position_id = GER_re_establish_free_elections_ww
 		cost = 5
@@ -28538,11 +28633,11 @@ focus_tree = {
 
 		icon = GFX_focus_GER_realpolitik
 
-		prerequisite = { focus = GER_the_mannheim_project_ww focus = GER_strengthen_the_welfare_state }
+		prerequisite = { focus = GER_Democratic_Industry_decision focus = GER_strengthen_the_welfare_state }
 
-		x = 0
+		x = -2
 		y = 1
-		relative_position_id = GER_the_mannheim_project_ww
+		relative_position_id = GER_Democratic_Industry_decision
 
 		cost = 2
 

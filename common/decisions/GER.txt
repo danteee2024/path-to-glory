@@ -22803,6 +22803,316 @@ GER_the_fading_eagle_category = {
 
 }
 
+GER_Industrial_Plan_category = {
+	GER_Inustrial_stabilize = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = GER
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+	        
+		}
+		
+		visible = {
+			has_completed_focus = GER_Democratic_Industry_decision
 
+		}
+		activation = {
+			always = no
+		}
+		is_good = yes
+		days_remove = 30
+		cost = 50
+		fire_only_once = yes
+
+		cancel_effect = {
+		}
+
+		remove_effect = {
+			  swap_ideas = { 
+				remove_idea = GER_Democratic_Building
+				add_idea = GER_Democratic_Building_2
+			  }
+			  add_timed_idea = {
+				idea = 	GER_Democratic_Payment
+				days = 90
+			
+
+			  }
+
+		}	
+	}
+
+	GER_Industrial_Output = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = GER
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+			has_idea = GER_Democratic_Building_2
+	        
+		}
+		
+		visible = {
+			has_completed_focus = GER_Democratic_Industry_decision_2
+			has_idea = GER_Democratic_Building_2
+
+		}
+		activation = {
+			always = no
+		}
+		is_good = yes
+		days_remove = 30
+		cost = 50
+		fire_only_once = yes
+
+		cancel_effect = {
+		}
+
+		remove_effect = {
+			  swap_ideas = { 
+				remove_idea = GER_Democratic_Building_2
+				add_idea = GER_Democratic_Building_3
+			  }
+			
+			  add_timed_idea = {
+				idea = 	GER_Democratic_Payment
+				days = 90
+			  }
+
+		}	
+	}
+
+	GER_Inustrial_Production = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = GER
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+			has_idea = GER_Democratic_Building_3
+	        
+		}
+		
+		visible = {
+			has_completed_focus = GER_Democratic_Industry_decision_2
+			has_idea = GER_Democratic_Building_3
+
+		}
+		activation = {
+			always = no
+		}
+		is_good = yes
+		days_remove = 30
+		cost = 50
+		fire_only_once = yes
+
+		cancel_effect = {
+		}
+
+		remove_effect = {
+			  swap_ideas = { 
+				remove_idea = GER_Democratic_Building_3
+				add_idea = GER_Democratic_Building_4
+			  }
+			
+			  add_timed_idea = {
+				idea = 	GER_Democratic_Payment
+				days = 90
+			  }
+
+		}	
+	}
+
+	GER_Inustrial_Production_War = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = GER
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+			has_idea = GER_Democratic_Building_4
+	        
+		}
+		
+		visible = {
+			has_completed_focus = GER_Democratic_Industry_decision_War
+			has_idea = GER_Democratic_Building_4
+
+		}
+		activation = {
+			always = no
+		}
+		is_good = yes
+		days_remove = 30
+		cost = 50
+		fire_only_once = yes
+
+		cancel_effect = {
+		}
+
+		remove_effect = {
+			  swap_ideas = { 
+				remove_idea = GER_Democratic_Building_4
+				add_idea = GER_Democratic_Building_5
+			  }
+
+		}	
+	}
+
+	GER_Industrial_War_Building = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = GER
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+			has_idea = GER_Democratic_Building_5
+	        
+		}
+		
+		visible = {
+			has_completed_focus = GER_Democratic_Industry_decision_War
+			has_idea = GER_Democratic_Building_5
+
+		}
+		activation = {
+			always = no
+		}
+		is_good = yes
+		days_remove = 30
+		cost = 50
+		fire_only_once = yes
+
+		cancel_effect = {
+		}
+
+		remove_effect = {
+			  swap_ideas = { 
+				remove_idea = GER_Democratic_Building_5
+				add_idea = GER_Democratic_Building_6
+			  }
+
+		}	
+	}
+
+		GER_War_Eco = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = GER
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+			threat > 0.6
+	        
+		}
+		
+		visible = {
+			has_completed_focus = GER_Democratic_Industry_decision_War
+	
+
+		}
+		activation = {
+			always = no
+		}
+		is_good = yes
+		days_remove = 30
+		cost = 100
+		fire_only_once = yes
+
+		cancel_effect = {
+		}
+
+		remove_effect = {
+			  add_ideas = war_economy
+
+		}	
+	}
+
+	GER_democratic_mefo_Bill = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = GER
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+	        
+		}
+		
+		visible = {
+			has_completed_focus = GER_Democratic_Industry_decision
+
+		}
+		activation = {
+			always = no
+		}
+		is_good = yes
+		days_remove = 30
+		cost = 50
+		fire_only_once = yes
+
+		cancel_effect = {
+		}
+
+		remove_effect = {
+			  GER_modify_industrial_modifier = yes
+			add_to_variable = { 
+				GER_industrial_consumer_goods_factor = -0.1
+				tooltip = consumer_goods_factor_tt
+			}
+			  add_timed_idea = {
+				idea = 	GER_Democratic_Payment_2
+				days = 90
+			
+
+			  }
+
+		}	
+	}
+}
 
 
