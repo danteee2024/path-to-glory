@@ -9167,7 +9167,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_long_live_the_workers_government
 		mutually_exclusive = { focus = SOV_the_builder_of_the_red_army }
-		cost = 5
+		cost = 10
 
 		available = {
 
@@ -9178,7 +9178,7 @@ focus_tree = {
 		completion_reward = {
 			add_timed_idea = {
 				idea = SOV_revolutionary_spirit_idea
-				days = 365
+				days = 720
 			}
 		}
 	}
@@ -9376,6 +9376,29 @@ focus_tree = {
 			}
 		}
 	}
+
+	focus = {
+    id = Sov_Trotsky_Master_Mind
+    icon = GFX_focus_fra_loyalty_trotzky
+    prerequisite = { focus = SOV_strengthen_heavy_industry }
+    x = 0 
+    y = 1 
+    relative_position_id = SOV_strengthen_heavy_industry
+    cost = 5 
+
+    available = {
+    }
+
+    search_filters = {}
+
+    completion_reward = {
+        add_ideas = Sov_Trotsky_Master_Mind
+    }
+}
+
+
+
+
 
 	focus = {
 		id = SOV_a_global_class_struggle
