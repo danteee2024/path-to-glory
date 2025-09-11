@@ -20,6 +20,7 @@ country = {
 
 		modifier = {
 			conscription = 0.01
+			war_support = 0.1
 		}
 
 	}

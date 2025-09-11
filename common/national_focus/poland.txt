@@ -3519,6 +3519,7 @@ focus_tree = {
 		id = POL_plan_west
 		icon = GFX_focus_POL_plan_west
 		prerequisite = { focus = POL_prepare_for_the_next_war }
+		mutually_exclusive = { focus = POL_plan_east }
 		x = -14
 		y = 1
 		relative_position_id = POL_complete_april_constitution
