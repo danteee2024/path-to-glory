@@ -13,7 +13,7 @@ ideas = {
 		
 		Sov_Trotsky_Master_Mind = {
 			name = Sov_Trotsky_Master_Mind
-			
+
 			removal_cost = -1 
 
 			allowed = {
@@ -26,6 +26,7 @@ ideas = {
 				supply_consumption_factor = -0.10
 				planning_speed = 0.10
 				max_planning_factor = 0.10
+				division_recovery_rate = 0.10 
 			}
 		}
 
