@@ -2740,7 +2740,8 @@ ideas = {
 			}
 
 			modifier = {
-				industry_repair_factor = 0.2
+				industry_repair_factor = 0.25
+				industrial_construction_speed_factor = 0.10
 			}
 		}
 
@@ -2831,7 +2832,7 @@ ideas = {
 			modifier = {
 				political_power_factor = -0.05
 				production_factory_efficiency_gain_factor = 0.05
-				industrial_capacity_factory = 0.05
+				industrial_capacity_factory = 0.10
 				industrial_capacity_dockyard = 0.05
 			}
 		}

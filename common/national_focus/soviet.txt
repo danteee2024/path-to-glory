@@ -9062,7 +9062,7 @@ focus_tree = {
 				idea = SOV_workers_government_idea
 				days = 365
 			}
-			add_stability = 0.1
+			add_stability = 0.15
 			add_political_power = 100
 			hidden_effect = {
 				set_rule = { can_join_factions = yes }
