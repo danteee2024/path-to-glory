@@ -9151,9 +9151,9 @@ focus_tree = {
 				traits = { media_personality organisational_leader }
 				skill = 4
 				attack_skill = 3
-				defense_skill = 1
-				planning_skill = 4
-				logistics_skill = 4
+				defense_skill = 2
+				planning_skill = 5
+				logistics_skill = 5
 			}
 			
 		}
@@ -9309,7 +9309,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_reigniting_the_revolutionary_spirit
 		
-		cost = 5
+		cost = 10
 
 		available = {
 			has_global_flag = SOV_soviet_civil_war_over
@@ -9601,6 +9601,22 @@ focus_tree = {
 					}
 				}
 			}
+		}
+	}
+
+
+	focus = {
+		id = SOV_Defence_of_the_soviet_republics
+		icon = GFX_focus_SOV_proclaim_soviet_hegemony
+		prerequisite = { focus = SOV_international_union_of_soviet_republics }
+		x = 0
+		y = 1
+		relative_position_id = SOV_international_union_of_soviet_republics
+
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = SOV_Defence_of_the_soviet_republics
 		}
 	}
 
