@@ -9109,11 +9109,11 @@ focus_tree = {
 	focus = {
 		id = SOV_the_builder_of_the_red_army
 		icon = GFX_focus_SOV_builder_of_the_red_army
-		prerequisite = { focus = SOV_long_live_the_workers_government }
+		prerequisite = { focus = SOV_long_live_the_workers_government  focus = SOV_reigniting_the_revolutionary_spirit}
 		x = -1
-		y = 1
+		y = 2
 		relative_position_id = SOV_long_live_the_workers_government
-		mutually_exclusive = { focus = SOV_reigniting_the_revolutionary_spirit }
+		 
 		cost = 5
 
 		available = {
@@ -9142,8 +9142,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = SOV_the_builder_of_the_red_army
 				ahead_reduction = 1
-				uses = 2
-				category = artillery
+				uses = 1
 				category = infantry_weapons 
 			}
 			add_field_marshal_role = {
@@ -9163,10 +9162,10 @@ focus_tree = {
 		id = SOV_reigniting_the_revolutionary_spirit
 		icon = GFX_goal_generic_war_with_comintern
 		prerequisite = { focus = SOV_long_live_the_workers_government }
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = SOV_long_live_the_workers_government
-		mutually_exclusive = { focus = SOV_the_builder_of_the_red_army }
+		
 		cost = 10
 
 		available = {
@@ -9236,7 +9235,7 @@ focus_tree = {
 	focus = {
 		id = SOV_depoliticize_the_military
 		icon = GFX_SOV_depoliticize_the_military_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_the_builder_of_the_red_army focus = SOV_reigniting_the_revolutionary_spirit }
+		prerequisite = { focus = SOV_the_builder_of_the_red_army focus = SOV_strengthen_heavy_industry }
 		x = -1
 		y = 1
 		relative_position_id = SOV_the_builder_of_the_red_army
@@ -9304,7 +9303,7 @@ focus_tree = {
 	focus = {
 		id = SOV_strengthen_heavy_industry 
 		icon = GFX_goal_generic_soviet_construction
-		prerequisite = { focus = SOV_the_builder_of_the_red_army focus = SOV_reigniting_the_revolutionary_spirit }
+		prerequisite = { focus = SOV_reigniting_the_revolutionary_spirit focus = SOV_long_live_the_workers_government}
 		x = 1
 		y = 1
 		relative_position_id = SOV_reigniting_the_revolutionary_spirit
@@ -9321,9 +9320,8 @@ focus_tree = {
 			add_tech_bonus = {
 				name = SOV_strengthen_heavy_industry
 				ahead_reduction = 1
-				uses = 2
-				category = industry
-				category = infantry_weapons 
+				uses = 1
+				category = industry 
 			}
 			random_owned_controlled_state = {
 				prioritize = { 252 254 }
@@ -9357,31 +9355,15 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_controlled_state = {
-				prioritize = { 195 214 213 408 137 }
-				limit = {
-					free_building_slots = {
-						building = dockyard  
-						size > 1
-						include_locked = yes
-					}
-					is_coastal = yes 
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard  
-					level = 2
-					instant_build = yes
-				}
-			}
+			
 		}
 	}
 
 	focus = {
     id = Sov_Trotsky_Master_Mind
     icon = GFX_focus_fra_loyalty_trotzky
-    prerequisite = { focus = SOV_strengthen_heavy_industry }
-    x = 0 
+    prerequisite = { focus = SOV_strengthen_heavy_industry focus = SOV_the_builder_of_the_red_army }
+    x = 1
     y = 1 
     relative_position_id = SOV_strengthen_heavy_industry
     cost = 5 
@@ -9625,7 +9607,7 @@ focus_tree = {
 		icon = GFX_SOV_the_onslaught_on_colonialism_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_a_global_class_struggle }
 		x = -1
-		y = 1
+		y = 2
 		relative_position_id = SOV_a_global_class_struggle 
 		
 		cost = 5
@@ -9646,7 +9628,7 @@ focus_tree = {
 		icon = GFX_SOV_carry_revolution_east_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_a_global_class_struggle }
 		x = 1
-		y = 1
+		y = 2
 		relative_position_id = SOV_a_global_class_struggle
 		
 		cost = 5
@@ -9667,7 +9649,7 @@ focus_tree = {
 		icon = GFX_SOV_the_end_of_the_imperialist_era_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_the_onslaught_on_colonialism focus = SOV_carry_revolution_east }
 		x = 1
-		y = 1
+		y = 2
 		relative_position_id = SOV_the_onslaught_on_colonialism
 		
 		cost = 5
