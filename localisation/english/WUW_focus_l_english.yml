@@ -4039,7 +4039,7 @@ BEL_corruption_ns_fake_tt: "Daily Political Power Gain: §R-0.25%§! \nStability
  GER_build_volkshalle_landmark_tt: "Replaces the §Y$landmark_berlin_reichstag$§! with the §Y$landmark_berlin_volkshalle$§!"
  
 #######################################################
-#HOLY ROMAN EMPIRE 
+#HOLY ROMAN EMPIRE -----
 #####################################
  GER_return_of_the_Holy_Roman_Empire:0 "The Holy Roman Empire"
  GER_return_of_the_Holy_Roman_Empire_desc: "The Holy Roman Empire must rise once more, uniting the Germanic lands under the Emperor's banner and restoring centuries of glory."
@@ -4104,7 +4104,7 @@ BEL_corruption_ns_fake_tt: "Daily Political Power Gain: §R-0.25%§! \nStability
  GER_Italy_desc: "Lombardy is rightfully Imperial territory. Enforcing the Emperor’s claim will extend the Empire’s influence into the Italian peninsula."
 
 ###########################################
-#Kaiser empire 
+#Kaiser empire #
 ###########################################
  GER_The_Industry_Grows:0 "Industrial Expansion"
  GER_The_Industry_Grows_desc: "Germany must modernize and expand her industrial base to compete with the world powers. New factories, better infrastructure, and advanced machinery will pave the way for our future."
@@ -4167,8 +4167,43 @@ BEL_corruption_ns_fake_tt: "Daily Political Power Gain: §R-0.25%§! \nStability
  GER_Kaiser_Ship:0 "Re-establish the Kriegsmarine"
  GER_Kaiser_Ship_desc: "A powerful navy will dominate the seas, enforcing Imperial authority and protecting our strategic interests against any challenger."
 
+
+################# IDEAS ###############################
+ GER_Military_Construct:0 "Military Factory Expansion"
+ GER_Military_Construct_desc: "To fuel our ambitions, we must first fuel our machines. A massive expansion of our armaments industry is necessary to outfit the modern army we require."
+
+
+ GER_Military_Construct_2:0 "Strategic Construction Effort"
+ GER_Military_Construct_desc: "Our initial industrial surge was merely the beginning. By directing resources and manpower towards key sectors, we can achieve unparalleled output in vital military goods."
+ 
+ GER_Military_Construct_3:0 "Siegfried Line"
+ GER_Military_Construct_desc: "A strong defense allows for a bold offense. Fortifying our western border will secure our rear and deter any potential aggression while we look east."
+
+ GER_Military_Army_2:0 "Form the Wehrmacht"
+ GER_Military_Army_2_desc: "The Reichswehr was a mere placeholder for a true army of the Reich. It is time to formally establish the Wehrmacht, unifying our land, air, and sea forces under a single, powerful command."
+
+ GER_Military_Construction_3:0 "U-Boat Pen Construction"
+ GER_Military_Construction_desc: "The Atlantic will be our battleground. Constructing massive, bomb-proof submarine pens on the coast will give our U-Boat fleet the secure bases they need to strangle enemy shipping."
+ 
+ GER_Special_Army:0 "Formation of the Brandenburgers"
+ GER_Special_Army_desc: "Victory does not belong to strength alone, but to cunning. We will create a special operations division, trained in infiltration and sabotage behind enemy lines to pave the way for our main forces."
+
+ GER_Ship_Build:0 "Kriegsmarine Expansion"
+ GER_Ship_Build_desc: "Britannia may rule the waves, but she is not invincible. By initiating Plan Z, we commit to a monumental naval buildup, aiming to challenge any fleet with a modern surface raider fleet.
+
+ GER_Central_Power:0 "Reassemble the Imperial Banner"
+ GER_Central_Power_desc: "The failed Weimar experiment is over. The spirit of the Empire never died; it only slept. It is time to restore the monarchy and return stability and glory to the German Reich."
+
+ GER_Central_Power_Army:0 "Prussian Military Tradition"
+ GER_Central_Power_Army_desc: "We will look to our glorious past to secure our future. By reinstilling the discipline and doctrine of the old Prussian General Staff, we will forge an officer corps without equal."
+
+ GER_Central_Power_Power_Eco:0 "Mitteleuropa Wirtschaftsraum"
+ GER_Central_Power_Power_Eco_desc: "Our economic future lies not across the oceans, but in our own backyard. We will integrate the industries and resources of Central Europe into a single, dominant economic bloc led from Berlin."
+
+
+
 #########################################################
-#Democratic Germany
+#Democratic Germany 
 ######################################################
  GER_Democratic_Recovery:0 "National Recovery" 
  GER_Democratic_Recovery_desc: "Germany must recover through stability, reform, and the support of her people. A strong, peaceful nation is the foundation of democracy."
