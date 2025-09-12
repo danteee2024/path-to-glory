@@ -3136,8 +3136,7 @@ BEL_corruption_ns_fake_tt: "Daily Political Power Gain: §R-0.25%§! \nStability
  GER_totaler_krieg: "Totaler Krieg"
  GER_totaler_krieg_desc: "To achieve total victory, we must mobilize our entire society and bring total war to our enemy’s doorstep. It’s time for [ROOT.GetNameDef] to rise up, and let the storm break loose!"
  GER_gain_totaler_krieg_remove_total_mob_tt: "§RRemove§! §Y$tot_economic_mobilisation$§!. Gain §Y$totaler_krieg_economy$§!."
- GER_Empire_Recovery:0 "Empire Recovery"
- GER_Empire_Industry:0 "Empire Industry"
+
  #ARMY
  GER_develop_modern_maneuver_warfare: "Develop Modern Maneuver Warfare"
  GER_develop_modern_maneuver_warfare_desc: "We must recognize the evolving nature of modern warfare and develop a new doctrine emphasizing the integration of infantry and new technologies to maximize our military effectiveness on the battlefield."
@@ -4038,6 +4037,162 @@ BEL_corruption_ns_fake_tt: "Daily Political Power Gain: §R-0.25%§! \nStability
  GER_allied_civilian_administration_integration_tt: "Unlocks Decisions to: §YIntegrate our Subjects' Civilian Administrations§!, allowing for us to §YAnnex§! our §YPuppets§!"
  GER_mackensen_went_into_retirement: "§YAugust von Mackensen§! went into Retirement"
  GER_build_volkshalle_landmark_tt: "Replaces the §Y$landmark_berlin_reichstag$§! with the §Y$landmark_berlin_volkshalle$§!"
+ 
+#######################################################
+#HOLY ROMAN EMPIRE 
+#####################################
+ GER_return_of_the_Holy_Roman_Empire:0 "The Holy Roman Empire"
+ GER_return_of_the_Holy_Roman_Empire_desc: "The Holy Roman Empire must rise once more, uniting the Germanic lands under the Emperor's banner and restoring centuries of glory."
+
+ GER_Holy_Roman_Industry:0 "The Holy Roman Industry"
+ GER_Holy_Roman_Industry_desc: "Revitalizing the Empire's industry will strengthen our economy and provide the resources needed to support both the people and the military."
+
+ GER_Strengthen_the_People:0 "Strengthen the People"
+ GER_Strengthen_the_People_desc: "A strong Empire requires strong citizens. Investing in education, infrastructure, and welfare will ensure the prosperity of our subjects."
+
+ GER_Recruit_more:0 "The Modern Army"
+ GER_Recruit_more_desc: "Our army must grow to meet the demands of the modern age. Recruitment drives and modernization programs will build a disciplined, formidable force."
+
+ GER_Holy_Roman_Mefo:0 "Borrow from the Banks"
+ GER_Holy_Roman_Mefo_desc: "To finance our expansion, we will borrow wisely from the banks, ensuring the Empire’s growth without risking economic collapse."
+
+ GER_Austria:0 "Emperor's Claim"
+ GER_Austria_desc: "The Emperor's claim over Austria must be enforced. Bringing these lands firmly under Imperial control will secure the Empire's heart."
+
+ GER_Swiss:0 "Reclaim the Alpine Cantons "
+ GER_Swiss_desc: "The Alpine cantons belong to the Empire. Reclaiming them will strengthen our borders and project our power into the mountains."
+
+ GER_Army_Plan:0 "Glory of the Empire"
+ GER_Army_Plan_desc: "Detailed plans and strategic training will ensure the glory of the Empire on the battlefield, demonstrating our military might."
+
+ GER_Holy_Roman_Empire:0 "Restore the Rightfull Lands"
+ GER_Holy_Roman_Empire_desc: "The rightful lands of the Empire must be restored. Through diplomacy and conquest, the Emperor shall reclaim his territories."
+
+ GER_Bohemia:0 "Reassert the Bohemian Crownlands"
+ GER_Bohemia_desc: "The Bohemian Crownlands are an essential part of Imperial heritage. Reasserting control will solidify the Empire’s influence in Central Europe."
+
+ GER_Benelux:0 "The Emperor’s Claim on the Low Countries"
+ GER_Benelux_desc: "The Emperor’s claim on the Low Countries will extend Imperial reach westward, strengthening trade and military presence."
+
+ GER_Holy_Plan:0 "Mobilize the Imperial Soldiers"
+ GER_Holy_Plan_desc: "Mobilizing Imperial soldiers is crucial to defend and expand the Empire. Every able-bodied citizen must be prepared for service."
+
+ GER_Holy_Roman_Great_Industry:0 "Imperial Economic Revival" 
+ GER_Holy_Roman_Great_Industry_desc: "An economic revival is needed to restore the Empire’s power. Factories, infrastructure, and innovation will drive Imperial prosperity."
+
+ GER_Koenigsberg:0 "The Polish-Imperial Agreement"
+ GER_Koenigsberg_desc: "The Polish-Imperial agreement must be enforced to secure the Empire's eastern borders and maintain regional stability."
+
+
+ GER_Holy_Artillery_Army:0 "Holy Empire’s Cannoneers"
+ GER_Holy_Artillery_Army_desc: "The Empire’s artillery must be unrivaled. Modern cannons and trained crews will dominate the battlefield and crush our enemies."
+
+
+ GER_Holy_Plan_Army_Final:0 "The Holy Legions"
+ GER_Holy_Plan_Army_Final_desc: "The Holy Legions shall march under the Emperor’s banner, disciplined and mighty, ready to defend and expand the Empire."
+
+
+ GER_Prepare_for_Big_War:0 "Battle of the Nations"
+ GER_Prepare_for_Big_War_desc: "Europe is on the brink of conflict. The Empire must prepare for the Battle of the Nations, ensuring victory through strategy and strength."
+
+
+ GER_France:0 "Reassert Authority West of the Rhine"
+ GER_France_desc: "The lands west of the Rhine belong to the Empire. Reasserting authority will secure our western frontier and demonstrate Imperial power."
+
+
+ GER_Italy:0 "The Emperor’s Claim on Lombardy"
+ GER_Italy_desc: "Lombardy is rightfully Imperial territory. Enforcing the Emperor’s claim will extend the Empire’s influence into the Italian peninsula."
+
+
+###########################################
+#Kaiser empire 
+###########################################
+ GER_The_Industry_Grows:0 "Industrial Expansion"
+ GER_The_Industry_Grows_desc: "Germany must modernize and expand her industrial base to compete with the world powers. New factories, better infrastructure, and advanced machinery will pave the way for our future."
+
+ GER_The_Hannover_Oil:0 "Hannover Oil Fields"
+ GER_The_Hannover_Oil_desc: "Securing oil from Hannover is crucial for fueling our growing military and industry. Control over these resources will ensure our armed forces never run dry."
+
+ Ger_Empire_War_Industry:0 "War Industry Program"
+ Ger_Empire_War_Industry_desc: "Our armies need more than soldiers—they need the weapons and equipment to dominate. Expanding war factories is essential for Germany's ambitions."
+
+ GER_Empire_Tank:0 "Imperial Armored Doctrine"
+ GER_Empire_Tank_desc: "The age of mechanized warfare approaches. Investing in armored units and tank development will make the German Empire feared on every battlefield."
+
+ GER_Empire_Mefo:0 "MEFO Financing Scheme"
+ GER_Empire_Mefo_desc: "The MEFO bills must be implemented carefully to finance our military expansion without crippling the economy. Industrial ingenuity is our ally."
+
+ GER_Prussia_Air:0 "Prussian Air Reform"
+ GER_Prussia_Air_desc: "Air power is the new frontier of warfare. Strengthening our air force will secure our skies and project German might across Europe."
+
+ GER_Rivive_the_Central_Powers:0 "Revive the Central 
+ Powers"
+ GER_Rivive_the_Central_Powers_desc: "The alliances of old must be rekindled. Restoring the Central Powers will secure Germany's dominance on the continent once more."
+
+ GER_establish_Army:0 "Reform the Imperial Army" 
+ GER_establish_Army_desc: "A strong army is the backbone of any empire. Expanding and modernizing our forces will ensure Germany can face any adversary." 
+
+ GER_establish_Industry:0 "Expand Civil Industry" 
+ GER_establish_Industry_desc: "Industrial development is key to our national strength. Building factories and improving infrastructure will lay the foundation for German greatness."
+
+ GER_Empire_Recovery:0 "Empire Recovery"
+ GER_Empire_Recovery_desc: "Germany rises again. Through careful planning and determination, we will restore the empire to its former glory."
+
+ GER_Empire_Industry:0 "Empire Industry"
+ GER_Empire_Industry_desc: "The Empire's industry must reach new heights. Advanced factories, skilled workers, and strategic investments will propel Germany into the modern era."
+
+ ######################################################
+#Military Dictatorship 
+##########################################################
+
+ GER_Military_Army:0 "Strengthen the Imperial Army"
+ GER_Military_Army_desc: "The Empire’s survival depends on an ironclad army. Expand and modernize the forces to crush dissent and dominate our enemies."
+
+ GER_Military_Construction:0 "Fortify the Empire"
+ GER_Military_Construction_desc: "Build barracks, training grounds, and arsenals without delay. A strong army requires infrastructure as disciplined as its soldiers."
+
+ GER_Demand_Austria:0 "Imperial Claim"
+ GER_Demand_Austria_desc: "Austria shall submit to Imperial authority. The Empire will enforce its claim with overwhelming military might if diplomacy fails."
+
+ GER_Military_Construction_2:0 "Expand the Barracks"
+ GER_Military_Construction_2_desc: "Our military expansion must continue relentlessly. Fortifications, munitions factories, and strategic depots will secure the Empire’s future."
+
+ GER_Military_Construction_3:0 "Iron Fist Infrastructure"
+ GER_Military_Construction_3_desc: "No weakness shall remain. Every corner of the Empire must be fortified, every soldier equipped, to enforce the will of the state."
+
+ GER_Kaiser_Army:0 "The Kaiser’s Legions"
+ GER_Kaiser_Army_desc: "The Kaiser’s army will be the steel fist of the Empire, striking decisively and embodying the discipline of the new order."
+
+ GER_Kaiser_Special_Force:0 "Elite Imperial Guard"
+ GER_Kaiser_Special_Force_desc: "Elite shock troops, trained to sow fear and ensure victory, will serve as the Emperor’s sword against both enemies and rebels."
+
+ GER_Kaiser_Ship:0 "Re-establish the Kriegsmarine"
+ GER_Kaiser_Ship_desc: "A powerful navy will dominate the seas, enforcing Imperial authority and protecting our strategic interests against any challenger."
+
+
+
+#########################################################
+#Democratic Germany
+######################################################
+ GER_Democratic_Recovery:0 "National Recovery" 
+ GER_Democratic_Recovery_desc "Germany must recover through stability, reform, and the support of her people. A strong, peaceful nation is the foundation of democracy."
+
+ GER_Democratic_Building:0 "Modern Infrastructure"
+ GER_Democratic_Building_desc "Investing in public works, infrastructure, and urban development will improve living standards and strengthen the nation."
+
+ GER_Democratic_factorys:0 "Industrial Expansion"
+ GER_Democratic_factorys_desc "Expanding factories and supporting private enterprise will provide jobs, stimulate the economy, and modernize Germany's industry."
+
+ GER_Democratic_Industry_decision:0 "Economic Reform"
+ GER_Democratic_Industry_decision_desc "Through careful planning and innovation, Germany can boost production while respecting workers’ rights and democratic principles."
+
+ GER_Democratic_Industry_decision_2:0 "Innovation and Research"
+ GER_Democratic_Industry_decision_2_desc "Further investment in research and development will ensure Germany remains competitive in the global economy and fosters sustainable growth."
+
+ GER_Democratic_Industry_decision_War:0 "War-Time Production"
+ GER_Democratic_Industry_decision_War_desc "Even in times of conflict, our industry must be efficient and resilient, balancing military needs with the protection of democratic values."
+
+ 
  
 
  generic_invite_to_faction_tt: "Gets event '§Y[ROOT.GetNameDef] invites us to the [ROOT.GetFactionName]§!'."
