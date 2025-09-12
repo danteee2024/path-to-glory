@@ -4240,7 +4240,65 @@ BEL_corruption_ns_fake_tt: "Daily Political Power Gain: §R-0.25%§! \nStability
  GER_Democratic_Industry_decision_War:0 "Awaken the Gaint"
  GER_Democratic_Industry_decision_War_desc: "Even in times of conflict, our industry must be efficient and resilient, balancing military needs with the protection of democratic values."
  
+ #########################################################
+ #Decision Germany
+ ######################################################
+
+ GER_Industrial_Plan_category:0 "Industrial Plan"
  
+ GER_Inustrial_stabilize:0 "Stabilize the Industrial Sector"
+
+ GER_democratic_mefo_Bill:0 "Democratic MEFO Bill"
+
+ GER_Inustrial_Production:0 "Increase Industrial Production"
+
+ GER_Industrial_Output:0 "Boost Industrial Output"
+
+ GER_Inustrial_Production_War:0 "War-Time Industrial Production"
+
+ GER_Industrial_War_Building:0 "Expand War Industries"
+
+ GER_War_Eco:0 "Mobilize the War Economy"
+
+ GER_integrate_BEL:0 "Integrate Belgium"
+ 
+ GER_integrate_HOL:0 "Integrate Netherlands"
+
+ GER_integrate_LUX:0 "Integrate Luxemburg"
+ 
+ GER_integrate_FRA:0 "Integrate French Territory"
+ 
+ GER_integrate_ITA:0 "Integrate Italien Territory"
+
+ #########################################################
+ #Events Germany
+ ######################################################
+ 
+ germany.165.t:0 "Selling Koenigsberg"
+ germany.165.d:0 "In a bold move to strengthen our industrial base, the Emperor has negotiated the sale of Königsberg to Poland. While the loss of this historic city is a blow to our prestige in Prussia, the industrial machinery and resources gained in return will allow the Empire to modernize and expand its capabilities. Some voices in the Reichstag decry this as a betrayal of our ancestral lands, but the Emperor insists that strategic growth must take precedence over sentimentality."
+ germany.165.a:0 "Agree to the Sale"
+ germany.145.b:0 "Refuse the Sale"
+
+ germany.166.t:0 "The Königsberg Accord Accepted"
+ germany.166.d:0 "The Polish government has officially accepted our offer to purchase Königsberg. While the Empire reluctantly parts with this historic city, the industrial machinery and resources gained will significantly bolster our economy. The Emperor emphasizes that this pragmatic decision will strengthen the Empire’s long-term power, even as some citizens mourn the loss of our eastern lands."
+ germany.166.a:0 "The Sell got accepted"
+ 
+  germany.167.t:0 "The Königsberg Sell got Declined"
+	germany.167.d:0 "Our proposal to sell Königsberg to Poland has been firmly rejected. The Emperor’s plan to strengthen the Empire’s industrial base through this transaction has failed, leaving us with our historic eastern territories intact—but without the promised industrial gains. Some see this as a missed opportunity to modernize our economy, while others celebrate the preservation of our ancestral lands."
+	germany.147.a:0 "The Sell got Declined"
+ 
+ germany.145.t:0 "Imperial Claim on Bohemia"
+ germany.145.d:0 "The Emperor has formally presented Czechoslovakia with an ultimatum: return the historic lands of Bohemia to the Empire. These lands, long tied to the crown of the Holy Roman Empire, are seen as essential to restoring our prestige and influence in Central Europe. Diplomats warn that refusal could lead to war, but the Emperor insists that the Empire cannot allow centuries-old rights to be ignored.""
+ germany.145.a:0 "Accept"
+ germany.145.b:0 "Refuse"
+
+ germany.146.t:0 "Bohemia Returned to the Empire"
+ germany.146.d:0 "Czechoslovakia has agreed to our demands and formally ceded Bohemia to the Holy Roman Empire. The historic lands are once again under imperial rule, restoring a key part of our legacy and strengthening our position in Central Europe. While some neighboring nations watch warily, the Emperor hails this as a triumph of diplomacy and a step toward the Empire’s resurgence."
+ germany.146.a:0 "Bohemia is Ours"
+
+ germany.147.t:0 "Bohemia Denied to the Empire"
+ germany.147.d:0 "Czechoslovakia has rejected our claim to Bohemia, refusing to return the historic lands to the Empire. The Emperor’s diplomatic overtures have failed, leaving us with no choice but to reconsider our strategy. While our ancestral lands remain under foreign control, the Reichstag and military advisors urge caution, warning that any attempt to seize Bohemia by force could ignite a wider conflict."
+ germany.147.a:0 "This means War"
 
  generic_invite_to_faction_tt: "Gets event '§Y[ROOT.GetNameDef] invites us to the [ROOT.GetFactionName]§!'."
  generic_invite_to_faction_advanced_tt: "Gets event '§Y[ROOT.GetNameDef] invites [TARGET_COUNTRY.GetName] to the [ROOT.GetFactionName]§!'."
