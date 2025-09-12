@@ -21192,6 +21192,11 @@ focus_tree = {
 
 			add_political_power = 75
 			add_stability = -0.025
+			add_ideas = GER_Proletarian_Support
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}	
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -21737,7 +21742,6 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			GER_modify_army_modifier = yes
-			add_to_variable = { GER_military_planning_speed = -0.1 tooltip = planning_speed_factor_tt }
 			add_to_variable = { GER_military_unit_leader_as_advisor_cp_cost_factor = -0.1 tooltip = unit_leader_as_advisor_cp_cost_factor_tt }
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -21818,7 +21822,6 @@ focus_tree = {
 
 			GER_modify_army_modifier = yes
 			add_to_variable = { GER_military_army_morale_factor = 0.1 tooltip = army_morale_factor_tt }
-			add_to_variable = { GER_military_army_org_factor = -0.05 tooltip = army_org_factor_tt }
 			add_to_variable = { GER_military_command_power_gain_mult = 0.1 tooltip = command_power_gain_mult_tt }		
 		}
 	}
@@ -21848,7 +21851,6 @@ focus_tree = {
 
 			GER_modify_army_modifier = yes
 			add_to_variable = { GER_military_mobilization_speed = 0.1 tooltip = mobilization_speed_tt }
-			add_to_variable = { GER_military_experience_gain_army_factor = -0.1 tooltip = experience_gain_army_factor_tt }
 			add_to_variable = { GER_military_minimum_training_level = -0.1 tooltip = minimum_training_level_tt }
 
 			
@@ -21993,20 +21995,24 @@ focus_tree = {
 
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_production_factory_max_efficiency_factor = 0.025
+				GER_industrial_production_factory_max_efficiency_factor = 0.05
 				tooltip = production_factory_max_efficiency_factor_tt
 			}
 			add_to_variable = { 
-				GER_industrial_production_factory_efficiency_gain_factor = 0.025
+				GER_industrial_production_factory_efficiency_gain_factor = 0.05
 				tooltip = production_factory_efficiency_gain_factor_tt
 			}
 			add_to_variable = { 
-				GER_industrial_production_factory_start_efficiency_factor = 0.025
+				GER_industrial_production_factory_start_efficiency_factor = 0.05
 				tooltip = production_factory_start_efficiency_factor_tt
 			}
 			add_to_variable = { 
-				GER_industrial_line_change_production_efficiency_factor = 0.025
+				GER_industrial_line_change_production_efficiency_factor = 0.05
 				tooltip = line_change_production_efficiency_factor_tt
+			}
+			add_to_variable = { 
+				GER_industrial_consumer_goods_factor = -0.1
+				tooltip = consumer_goods_factor_tt
 			}
 		}
 	}
@@ -22456,55 +22462,8 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
-		id = GER_red_europe
-		icon = GFX_focus_ger_great_red_menace
-		prerequisite = { focus = GER_the_proletarian_legion focus = GER_strengthen_the_proletarian_international }
+	
 
-		x = 1
-		y = 1
-		relative_position_id = GER_the_proletarian_legion
-		cost = 5
-		available = {
-			any_country = {
-				capital_scope = {
-					is_on_continent = europe
-				}
-				is_major = no
-				NOT = { has_government = fascism }
-				NOT = { has_government = communism }
-			}
-		}
-
-		bypass = {
-		}
-
-		search_filters = {}
-
-		completion_reward = {
-			add_named_threat = { threat = 5 name = GER_red_europe }
-
-			custom_effect_tooltip = GER_spark_the_flame_of_revolution_red_europe_tt
-		}
-	}
-	focus = {
-		id = GER_proletarian_solidarity
-		icon = GFX_focus_GER_proletarian_solidarity
-		prerequisite = { focus = GER_red_europe }
-
-		x = 0
-		y = 1
-		relative_position_id = GER_red_europe
-		cost = 5
-		available = {
-		}
-
-		search_filters = {}
-
-		completion_reward = {
-			custom_effect_tooltip = GER_proletarian_solidarity_decision_tt
-		}
-	}
 	focus = {
 		id = GER_liberate_italy
 		icon = GFX_focus_attack_italy
@@ -22557,7 +22516,7 @@ focus_tree = {
 		prerequisite = { focus = GER_liberate_italy }
 
 		x = 1
-		y = 2
+		y = 1
 		relative_position_id = GER_liberate_italy
 		cost = 10
 		available = {
@@ -22671,64 +22630,16 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = GER_root_out_imperialism
-		icon = GFX_focus_GER_liberate_exploited_colonial_workers
-		prerequisite = { focus = GER_the_end_to_fascist_europe focus = GER_red_europe }
 
-		x = 0
-		y = 1
-		relative_position_id = GER_the_end_to_fascist_europe
-		cost = 10
-		available = {
-		}
-
-		search_filters = {}
-
-		completion_reward = {
-			custom_effect_tooltip = GER_root_out_imperialism_tt
-			GER_set_up_colonial_resistance_states = yes #build array
-			IF = {
-				limit = {
-					NOT = {
-						any_other_country = {
-							is_in_array = {
-								array = GER.started_communist_cw_here
-								value = THIS
-							}
-							NOT = { capital_scope = { is_on_continent = europe}}
-						}
-					}
-				}
-				custom_effect_tooltip = GER_strengthen_the_proletarian_international_internationally_tt
-			}
-			
-			ELSE = {
-				every_other_country = {
-					limit = {
-						is_in_array = {
-							array = GER.started_communist_cw_here
-							value = THIS
-						}
-						NOT = { capital_scope = { is_on_continent = europe}}
-					}
-					country_event = {
-						id = wuw_GER_diplomacy.83
-						hours = 6
-					}
-				}
-			}
-		}
-	}
 
 	focus = {
 		id = GER_hegemony_over_europe
 		icon = GFX_focus_GER_hegemony_over_europe
-		prerequisite = { focus = GER_root_out_imperialism }
+		prerequisite = { focus = GER_the_end_to_fascist_europe  }
 
 		x = 0
-		y = 3
-		relative_position_id = GER_root_out_imperialism
+		y = 1
+		relative_position_id = GER_the_end_to_fascist_europe
 		cost = 10
 		available = {
 			is_subject = no
@@ -22869,56 +22780,15 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = GER_align_south_america
-		icon = GFX_focus_GER_align_south_america
-		prerequisite = { focus = GER_root_out_imperialism }
-
-		x = -1
-		y = 1
-		relative_position_id = GER_root_out_imperialism
-		cost = 5
-		available = {
-			is_faction_leader = yes
-			any_other_country = {
-				capital_scope = {
-					is_on_continent = south_america
-				}
-				OR = {
-					has_government = democratic
-					has_government = neutrality
-				}
-			}
-		}
-
-		bypass = {
-			all_other_country = {
-				capital_scope = {
-					is_on_continent = south_america
-				}
-				OR = {
-					exists = no
-					has_government = fascism
-					has_government = communism
-				}
-			}
-		}
-
-		search_filters = {}
-
-		completion_reward = {
-			custom_effect_tooltip = GER_communist_propaganda_south_america_decision_tt
-		}
-	}
-
+	
 	focus = {
 		id = GER_wage_war_on_capitalism
 		icon = GFX_focus_GER_wage_war_on_capitalism
-		prerequisite = { focus = GER_align_south_america }
+		prerequisite = { focus = GER_hegemony_over_europe }
 
-		x = 0
+		x = -1
 		y = 1
-		relative_position_id = GER_align_south_america
+		relative_position_id = GER_hegemony_over_europe
 		cost = 10
 		available = {
 			is_subject = no
@@ -22964,56 +22834,15 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = GER_instigate_middle_eastern_revolutions
-		icon = GFX_focus_GER_align_middle_east
-		prerequisite = { focus = GER_root_out_imperialism }
-
-		x = 1
-		y = 1
-		relative_position_id = GER_root_out_imperialism
-		cost = 5
-		available = {
-			is_faction_leader = yes
-			any_other_country = {
-				capital_scope = {
-					is_on_continent = middle_east
-				}
-				OR = {
-					has_government = democratic
-					has_government = neutrality
-				}
-			}
-		}
-
-		bypass = {
-			all_other_country = {
-				capital_scope = {
-					is_on_continent = middle_east
-				}
-				OR = {
-					exists = no
-					has_government = fascism
-					has_government = communism
-				}
-			}
-		}
-
-		search_filters = {}
-
-		completion_reward = {
-			custom_effect_tooltip = GER_communist_propaganda_middle_east_decision_tt
-		}
-	}
-
+	
 	focus = {
 		id = GER_strike_at_the_rising_sun
 		icon = GFX_focus_GER_strike_at_the_rising_sun
-		prerequisite = { focus = GER_instigate_middle_eastern_revolutions }
+		prerequisite = { focus = GER_hegemony_over_europe }
 
-		x = 0
+		x = 1
 		y = 1
-		relative_position_id = GER_instigate_middle_eastern_revolutions
+		relative_position_id = GER_hegemony_over_europe
 		cost = 10
 		available = {
 			is_subject = no
@@ -23084,7 +22913,7 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				random_select_amount = 3
+				random_select_amount = 5
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -23352,7 +23181,7 @@ focus_tree = {
 			custom_effect_tooltip = GER_locks_women_in_workforce_decision_tt
 
 			custom_effect_tooltip = GER_modify_politburo_modifier_tt
-			add_to_variable = { GER_politburo_conscription = 0.03 tooltip = conscription_tt }
+			add_to_variable = { GER_politburo_conscription = 0.05 tooltip = conscription_tt }
 
 			#IF = {
 			#	limit = {
@@ -23438,12 +23267,16 @@ focus_tree = {
 		completion_reward = {
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_industrial_capacity_factory = 0.05
+				GER_industrial_industrial_capacity_factory = 0.1
 				tooltip = industrial_capacity_factory_tt
 			}
 			add_to_variable = { 
-				GER_industrial_industrial_capacity_dockyard = 0.05
+				GER_industrial_industrial_capacity_dockyard = 0.1
 				tooltip = industrial_capacity_dockyard_tt
+			}
+			add_to_variable = { 
+				GER_industrial_consumer_goods_factor = -0.1
+				tooltip = consumer_goods_factor_tt
 			}
 		}
 	}
@@ -23467,6 +23300,10 @@ focus_tree = {
 			add_to_variable = { 
 				GER_industrial_production_lack_of_resource_penalty_factor = -0.05
 				tooltip = production_lack_of_resource_penalty_factor_tt
+			}
+			add_to_variable = { 
+				production_speed_buildings_factor = 0.05
+				tooltip = production_speed_buildings_factor_tt
 			}
 		}
 	}

@@ -4022,9 +4022,6 @@ BEL_corruption_ns_fake_tt: "Daily Political Power Gain: §R-0.25%§! \nStability
  GER_prepare_italian_coup_ww_desc: "Italy's fall into fascism must be undone. We will approach the [ITA.GetAdjective] royalists with a proposal for a coup with our support."
 
 
-
-
-
  #TOOLTIPS
  GER_unlock_influence_countries_tt: "Unlocks Decision: §Y$GER_influence_countries_cat$§!"
  GER_middle_eastern_trade_tt: "Unlocks Decision: §Y$GER_middle_eastern_trade_cat$§!"
@@ -4249,6 +4246,12 @@ BEL_corruption_ns_fake_tt: "Daily Political Power Gain: §R-0.25%§! \nStability
  GER_Democratic_Building_2:0 "Industrial Payment"
  GER_Democratic_Buildin_3:0 "Industrial Payment"
  
+#########################################################
+ #Communist Germany
+ ######################################################
+
+ GER_Proletarian_Support:0 "Proletarian Support"
+
  #########################################################
  #Decision Germany
  ######################################################
@@ -4308,11 +4311,3 @@ BEL_corruption_ns_fake_tt: "Daily Political Power Gain: §R-0.25%§! \nStability
  germany.147.t:0 "Bohemia Denied to the Empire"
  germany.147.d:0 "Czechoslovakia has rejected our claim to Bohemia, refusing to return the historic lands to the Empire. The Emperor’s diplomatic overtures have failed, leaving us with no choice but to reconsider our strategy. While our ancestral lands remain under foreign control, the Reichstag and military advisors urge caution, warning that any attempt to seize Bohemia by force could ignite a wider conflict."
  germany.147.a:0 "This means War"
-
- generic_invite_to_faction_tt: "Gets event '§Y[ROOT.GetNameDef] invites us to the [ROOT.GetFactionName]§!'."
- generic_invite_to_faction_advanced_tt: "Gets event '§Y[ROOT.GetNameDef] invites [TARGET_COUNTRY.GetName] to the [ROOT.GetFactionName]§!'."
-
- available_political_advisor_no_trait_tt: "$available_political_advisor$§Y$CHARACTER$§!"
- remove_political_advisor_no_trait_tt: "$remove_political_advisor$§Y$CHARACTER$§!"
-
- available_scientist_one_line_tt: "$available_scientist_tt$ §Y$CHARACTER$§!"
