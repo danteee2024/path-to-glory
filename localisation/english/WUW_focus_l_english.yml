@@ -4103,7 +4103,6 @@ BEL_corruption_ns_fake_tt: "Daily Political Power Gain: §R-0.25%§! \nStability
  GER_Italy:0 "The Emperor’s Claim on Lombardy"
  GER_Italy_desc: "Lombardy is rightfully Imperial territory. Enforcing the Emperor’s claim will extend the Empire’s influence into the Italian peninsula."
 
-
 ###########################################
 #Kaiser empire 
 ###########################################
@@ -4113,8 +4112,8 @@ BEL_corruption_ns_fake_tt: "Daily Political Power Gain: §R-0.25%§! \nStability
  GER_The_Hannover_Oil:0 "Hannover Oil Fields"
  GER_The_Hannover_Oil_desc: "Securing oil from Hannover is crucial for fueling our growing military and industry. Control over these resources will ensure our armed forces never run dry."
 
- Ger_Empire_War_Industry:0 "War Industry Program"
- Ger_Empire_War_Industry_desc: "Our armies need more than soldiers—they need the weapons and equipment to dominate. Expanding war factories is essential for Germany's ambitions."
+ GER_Empire_War_Industry:0 "War Industry Program"
+ GER_Empire_War_Industry_desc: "Our armies need more than soldiers—they need the weapons and equipment to dominate. Expanding war factories is essential for Germany's ambitions."
 
  GER_Empire_Tank:0 "Imperial Armored Doctrine"
  GER_Empire_Tank_desc: "The age of mechanized warfare approaches. Investing in armored units and tank development will make the German Empire feared on every battlefield."
@@ -4125,9 +4124,8 @@ BEL_corruption_ns_fake_tt: "Daily Political Power Gain: §R-0.25%§! \nStability
  GER_Prussia_Air:0 "Prussian Air Reform"
  GER_Prussia_Air_desc: "Air power is the new frontier of warfare. Strengthening our air force will secure our skies and project German might across Europe."
 
- GER_Rivive_the_Central_Powers:0 "Revive the Central 
- Powers"
- GER_Rivive_the_Central_Powers_desc: "The alliances of old must be rekindled. Restoring the Central Powers will secure Germany's dominance on the continent once more."
+ GER_Revive_the_Central_Powers:0 "Revive the Central Powers"
+ GER_Revive_the_Central_Powers_desc: "The alliances of old must be rekindled. Restoring the Central Powers will secure Germany's dominance on the continent once more."
 
  GER_establish_Army:0 "Reform the Imperial Army" 
  GER_establish_Army_desc: "A strong army is the backbone of any empire. Expanding and modernizing our forces will ensure Germany can face any adversary." 
@@ -4141,7 +4139,7 @@ BEL_corruption_ns_fake_tt: "Daily Political Power Gain: §R-0.25%§! \nStability
  GER_Empire_Industry:0 "Empire Industry"
  GER_Empire_Industry_desc: "The Empire's industry must reach new heights. Advanced factories, skilled workers, and strategic investments will propel Germany into the modern era."
 
- ######################################################
+######################################################
 #Military Dictatorship 
 ##########################################################
 
@@ -4169,29 +4167,26 @@ BEL_corruption_ns_fake_tt: "Daily Political Power Gain: §R-0.25%§! \nStability
  GER_Kaiser_Ship:0 "Re-establish the Kriegsmarine"
  GER_Kaiser_Ship_desc: "A powerful navy will dominate the seas, enforcing Imperial authority and protecting our strategic interests against any challenger."
 
-
-
 #########################################################
 #Democratic Germany
 ######################################################
  GER_Democratic_Recovery:0 "National Recovery" 
- GER_Democratic_Recovery_desc "Germany must recover through stability, reform, and the support of her people. A strong, peaceful nation is the foundation of democracy."
+ GER_Democratic_Recovery_desc: "Germany must recover through stability, reform, and the support of her people. A strong, peaceful nation is the foundation of democracy."
 
  GER_Democratic_Building:0 "Modern Infrastructure"
- GER_Democratic_Building_desc "Investing in public works, infrastructure, and urban development will improve living standards and strengthen the nation."
+ GER_Democratic_Building_desc: "Investing in public works, infrastructure, and urban development will improve living standards and strengthen the nation."
 
  GER_Democratic_factorys:0 "Industrial Expansion"
- GER_Democratic_factorys_desc "Expanding factories and supporting private enterprise will provide jobs, stimulate the economy, and modernize Germany's industry."
+ GER_Democratic_factorys_desc: "Expanding factories and supporting private enterprise will provide jobs, stimulate the economy, and modernize Germany's industry."
 
  GER_Democratic_Industry_decision:0 "Economic Reform"
- GER_Democratic_Industry_decision_desc "Through careful planning and innovation, Germany can boost production while respecting workers’ rights and democratic principles."
+ GER_Democratic_Industry_decision_desc: "Through careful planning and innovation, Germany can boost production while respecting workers’ rights and democratic principles."
 
  GER_Democratic_Industry_decision_2:0 "Innovation and Research"
- GER_Democratic_Industry_decision_2_desc "Further investment in research and development will ensure Germany remains competitive in the global economy and fosters sustainable growth."
+ GER_Democratic_Industry_decision_2_desc: "Further investment in research and development will ensure Germany remains competitive in the global economy and fosters sustainable growth."
 
  GER_Democratic_Industry_decision_War:0 "Awaken the Gaint"
- GER_Democratic_Industry_decision_War_desc "Even in times of conflict, our industry must be efficient and resilient, balancing military needs with the protection of democratic values."
-
+ GER_Democratic_Industry_decision_War_desc: "Even in times of conflict, our industry must be efficient and resilient, balancing military needs with the protection of democratic values."
  
  
 
