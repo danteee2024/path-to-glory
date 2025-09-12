@@ -4246,6 +4246,8 @@ BEL_corruption_ns_fake_tt: "Daily Political Power Gain: §R-0.25%§! \nStability
 ############################## IDEAS ##################################
  GER_Democratic_Payment:0 " Industrial Payment"
  GER_Democratic_Payment_2:0 "Industrial Payment"
+ GER_Democratic_Building_2:0 "Industrial Payment"
+ GER_Democratic_Buildin_3:0 "Industrial Payment"
  
  #########################################################
  #Decision Germany
