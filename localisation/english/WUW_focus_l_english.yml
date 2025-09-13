@@ -4211,8 +4211,8 @@ BEL_corruption_ns_fake_tt: "Daily Political Power Gain: §R-0.25%§! \nStability
  GER_Central_Power_Army:0 "Prussian Military Tradition"
  GER_Central_Power_Army_desc: "We will look to our glorious past to secure our future. By reinstilling the discipline and doctrine of the old Prussian General Staff, we will forge an officer corps without equal."
 
- GER_Central_Power_Power_Eco:0 "Mitteleuropa Wirtschaftsraum"
- GER_Central_Power_Power_Eco_desc: "Our economic future lies not across the oceans, but in our own backyard. We will integrate the industries and resources of Central Europe into a single, dominant economic bloc led from Berlin."
+ GER_Central_Power_Eco:0 "Mitteleuropa Wirtschaftsraum"
+ GER_Central_Power_Eco_desc: "Our economic future lies not across the oceans, but in our own backyard. We will integrate the industries and resources of Central Europe into a single, dominant economic bloc led from Berlin."
 
 
 

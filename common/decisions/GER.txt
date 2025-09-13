@@ -22891,7 +22891,7 @@ GER_Industrial_Plan_category = {
 			
 			  add_timed_idea = {
 				idea = 	GER_Democratic_Payment
-				days = 90
+				days = 60
 			  }
 
 		}	
@@ -22938,7 +22938,7 @@ GER_Industrial_Plan_category = {
 			
 			  add_timed_idea = {
 				idea = 	GER_Democratic_Payment
-				days = 90
+				days = 60
 			  }
 
 		}	
@@ -23106,7 +23106,7 @@ GER_Industrial_Plan_category = {
 			}
 			  add_timed_idea = {
 				idea = 	GER_Democratic_Payment_2
-				days = 90
+				days = 60
 			
 
 			  }

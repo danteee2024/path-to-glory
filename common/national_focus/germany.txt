@@ -25009,7 +25009,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_timed_idea = { Idea = GER_Democratic_recovery
-			days = 365 }
+			days = 730 }
 
 		}
 	}
@@ -25511,7 +25511,7 @@ focus_tree = {
 
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_research_speed_factor = 0.05
+				GER_industrial_research_speed_factor = 0.1
 				tooltip = research_speed_factor_tt 
 			}
 			
@@ -25519,7 +25519,7 @@ focus_tree = {
 
 			GER_add_or_modify_wunderwaffen = yes
 			add_to_variable = { 
-				GER_wunderwaffen_special_project_speed_factor = 0.05
+				GER_wunderwaffen_special_project_speed_factor = 0.1
 				tooltip = special_project_speed_factor_tt
 			}
 		}
@@ -28556,12 +28556,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			if = {
-				limit = {
-					is_in_faction = no
-				}
-				custom_effect_tooltip = GER_central_european_alliance_tt
-			}
+			
 			effect_tooltip = {
 				create_faction = GER_mitteleuropa_alliance
 			}
@@ -28576,8 +28571,6 @@ focus_tree = {
 					create_faction = GER_mitteleuropa_alliance
 				}
 			}
-
-			custom_effect_tooltip = GER_mitteleuropa_tt
 
 		}
 	}

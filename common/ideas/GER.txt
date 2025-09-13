@@ -386,7 +386,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-			production_speed_industrial_complex_factor = 0.15
+			production_speed_industrial_complex_factor = 0.1
 			consumer_goods_factor = -0.1
 			}
 		}
@@ -510,7 +510,7 @@ ideas = {
 			industrial_capacity_factory = 0.1
 			industrial_capacity_dockyard = 0.1
 			production_factory_efficiency_gain_factor = 0.15
-			production_factory_max_efficiency_factor = 0.05
+			production_factory_max_efficiency_factor = 0.1
 			production_lack_of_resource_penalty_factor = -0.1
 			}
 		}
@@ -631,7 +631,7 @@ ideas = {
 			modifier = {
 			production_speed_industrial_complex_factor = -0.15
 			production_speed_arms_factory_factor = 0.15
-			production_factory_max_efficiency_factor = 0.1
+			production_factory_max_efficiency_factor = 0.05
 			production_factory_efficiency_gain_factor = 0.1
 			industrial_capacity_factory = 0.1
 			industrial_capacity_dockyard = 0.1
@@ -1591,6 +1591,7 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = -0.1
 				min_export = 0.05
+				production_speed_buildings_factor = 0.05
 			}
 		}
 
@@ -1613,6 +1614,7 @@ ideas = {
 
 			modifier = {
 				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.1
 			}
 		}
 
