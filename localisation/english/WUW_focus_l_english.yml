@@ -4181,6 +4181,7 @@ BEL_corruption_ns_fake_tt: "Daily Political Power Gain: §R-0.25%§! \nStability
  GER_Kaiser_Ship:0 "Re-establish the Kriegsmarine"
  GER_Kaiser_Ship_desc: "A powerful navy will dominate the seas, enforcing Imperial authority and protecting our strategic interests against any challenger."
 
+ GER_Central_Power:0 "Central Power"
 
 ################# IDEAS ###############################
  GER_Military_Construct:0 "Military Factory Expansion"
