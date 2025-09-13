@@ -21051,7 +21051,7 @@ focus_tree = {
 
 			add_timed_idea = {
 				idea = GER_national_revitalization_ns
-				days = 545
+				days = 730
 			}
 			
 			if = {
