@@ -12341,7 +12341,6 @@ political_actions = {
 			original_tag = GER
 		}
 		cancel_trigger = {  
-			has_capitulated = yes 
 		}
 		ai_will_do = {
 			base = 140
@@ -12419,7 +12418,7 @@ political_actions = {
 			original_tag = GER
 		}
 		cancel_trigger = {  
-			has_capitulated = yes 
+			
 		}
 		ai_will_do = {
 			base = 140
@@ -12488,7 +12487,6 @@ political_actions = {
 			original_tag = GER
 		}
 		cancel_trigger = {  
-			has_capitulated = yes 
 		}
 		ai_will_do = {
 			base = 140
@@ -12562,7 +12560,7 @@ political_actions = {
 			original_tag = GER
 		}
 		cancel_trigger = {  
-			has_capitulated = yes 
+			
 		}
 		ai_will_do = {
 			base = 140
@@ -12614,7 +12612,6 @@ political_actions = {
 			original_tag = GER
 		}
 		cancel_trigger = {  
-			has_capitulated = yes 
 		}
 		ai_will_do = {
 			base = 140
