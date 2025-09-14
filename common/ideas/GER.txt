@@ -637,6 +637,47 @@ ideas = {
 			industrial_capacity_dockyard = 0.1
 			}
 		}
+
+		GER_Rally_the_Warhawks = {
+			
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = air_war_plans_division_focus
+
+			removal_cost = -1
+			
+			modifier = {
+			 justify_war_goal_time = -0.25
+			}
+		}
+
+		GER_Empire_War_Industry_2 = {
+			
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_improved_industries
+
+			removal_cost = -1
+			
+			modifier = {
+			production_speed_industrial_complex_factor = -0.2
+			production_speed_arms_factory_factor = 0.3
+			production_factory_max_efficiency_factor = 0.05
+			production_factory_efficiency_gain_factor = 0.1
+			industrial_capacity_factory = 0.1
+			industrial_capacity_dockyard = 0.1
+			}
+		}
 		GER_Prussia_Air = {
 			
 			allowed = {
