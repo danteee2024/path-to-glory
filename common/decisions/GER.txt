@@ -12341,27 +12341,35 @@ political_actions = {
 			original_tag = GER
 		}
 		cancel_trigger = {  
-			has_capitulated = yes 
 		}
 		ai_will_do = {
 			base = 140
 		}
 		available = {
 	        GER = {
-	        	OR = {
+
+            			OR = {
+								        
 	            	is_subject_of = ROOT
-	            	AND = {
-	            		any_core_state = {
+					 And = {
+	            		34 = {
 	            			is_controlled_by = ROOT
 	            		}
-            			OR = {
-	            			exists = no
-	            			has_capitulated = yes
+							6 = {
+	            			is_controlled_by = ROOT
 	            		}
-	            	}
+							977 = {
+	            			is_controlled_by = ROOT
+	            		}
+							980 = {
+	            			is_controlled_by = ROOT
+	            		}
+					}
+	            		}
+	            	
 	        	}
 	        }
-		}
+		
 		
 		visible = {
 			has_completed_focus = GER_Benelux
@@ -12410,27 +12418,27 @@ political_actions = {
 			original_tag = GER
 		}
 		cancel_trigger = {  
-			has_capitulated = yes 
+			
 		}
 		ai_will_do = {
 			base = 140
 		}
 		available = {
-	        GER = {
-	        	OR = {
-	            	is_subject_of = ROOT
-	            	AND = {
-	            		any_core_state = {
+	       GER = {
+            			OR = {
+							is_subject_of = ROOT
+						And = {
+	            		8 = {
 	            			is_controlled_by = ROOT
 	            		}
-            			OR = {
-	            			exists = no
-	            			has_capitulated = yes
+					
+					}
 	            		}
-	            	}
-	        	}
+	            	
+	        	
 	        }
-		}
+		 }
+	        
 		
 		visible = {
 			has_completed_focus = GER_Benelux
@@ -12479,27 +12487,31 @@ political_actions = {
 			original_tag = GER
 		}
 		cancel_trigger = {  
-			has_capitulated = yes 
 		}
 		ai_will_do = {
 			base = 140
 		}
 		available = {
 	        GER = {
-	        	OR = {
-	            	is_subject_of = ROOT
-	            	AND = {
-	            		any_core_state = {
+	        	
+            			OR = {
+							is_subject_of = ROOT
+						And = {
+	            		7 = {
 	            			is_controlled_by = ROOT
 	            		}
-            			OR = {
-	            			exists = no
-	            			has_capitulated = yes
+							36 = {
+	            			is_controlled_by = ROOT
 	            		}
-	            	}
+							35 = {
+	            			is_controlled_by = ROOT
+	            		}
+					}
+	            		}
+	            	
 	        	}
 	        }
-		}
+		
 		
 		visible = {
 			has_completed_focus = GER_Benelux
@@ -12548,16 +12560,14 @@ political_actions = {
 			original_tag = GER
 		}
 		cancel_trigger = {  
-			has_capitulated = yes 
+			
 		}
 		ai_will_do = {
 			base = 140
 		}
 		available = {
 	        GER = {
-	        	OR = {
-	            	is_subject_of = ROOT
-	            	AND = {
+	            	
 	            		28 = {
 	            			is_controlled_by = ROOT
 	            		}
@@ -12567,10 +12577,10 @@ political_actions = {
 						17 = {
 	            			is_controlled_by = ROOT
 	            		}
-	            	}
+	            	
 	        	}
 	        }
-		}
+		
 		
 		visible = {
 			has_completed_focus = GER_France
@@ -12602,16 +12612,13 @@ political_actions = {
 			original_tag = GER
 		}
 		cancel_trigger = {  
-			has_capitulated = yes 
 		}
 		ai_will_do = {
 			base = 140
 		}
 		available = {
 	        GER = {
-	        	OR = {
-	            	is_subject_of = ROOT
-	            	AND = {
+	        	
 	            		158 = {
 	            			is_controlled_by = ROOT
 	            		}
@@ -12631,9 +12638,9 @@ political_actions = {
 	            			is_controlled_by = ROOT
 	            		}
 	            	}
-	        	}
+	        	
 	        }
-		}
+		
 		
 		visible = {
 			has_completed_focus = GER_Italy
