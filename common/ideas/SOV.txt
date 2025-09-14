@@ -10,6 +10,21 @@ ideas = {
 
 
 	country= {
+
+		SOV_Trotskys_Left_Hand = {
+
+			picture = chi_army_corruption3
+
+			removal_cost = -1
+
+			allowed = {
+				always = no 
+			}
+
+			modifier = {
+				army_org_factor = 0.05
+			}
+		}
 		
 
 		SOV_Defence_of_the_soviet_republics = {
