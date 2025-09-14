@@ -9116,9 +9116,7 @@ focus_tree = {
 		 
 		cost = 5
 
-		available = {
-			SOV_lev_trotsky = {	is_country_leader = yes }
-		}
+		
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP}
 
@@ -9310,9 +9308,7 @@ focus_tree = {
 		
 		cost = 10
 
-		available = {
-			has_global_flag = SOV_soviet_civil_war_over
-		}
+		
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 

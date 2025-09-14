@@ -2825,11 +2825,11 @@ ideas = {
 			modifier = {
 				drift_defence_factor = 0.2
 				party_popularity_stability_factor = 0.1
-				political_power_factor = -0.10
+				political_power_factor = -0.05
 				offensive_war_stability_factor = 0.1
 				defensive_war_stability_factor = 0.2
 				max_surrender_limit_offset = 0.15
-				industrial_capacity_factory = 0.15
+				industrial_capacity_factory = 0.10
 			}
 		}
 
