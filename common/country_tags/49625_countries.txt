@@ -1,4 +1,0 @@
-ANA = "countries/Andalusia.txt"
-CST = "countries/Castile.txt"
-ARA = "countries/Aragon.txt"
-MSA = "countries/Monarchist South Africa.txt"

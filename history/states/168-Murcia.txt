@@ -1,7 +1,9 @@
 state={
 	id=168
 	name="STATE_168"
-
+    resources = {
+		tungsten = 24
+	}
 	history={
 		owner = SPR
 		victory_points = {
@@ -11,6 +13,7 @@ state={
 			infrastructure = 3 #was: 5
 			dockyard = 1
 			air_base = 2
+			industrial_complex = 1
 			10024 = {
 				naval_base = 8
 
@@ -18,7 +21,6 @@ state={
 
 		}
 		add_core_of = SPR
-                add_core_of = ANA
 
 	}
 
@@ -27,7 +29,7 @@ state={
 	}
 	manpower=1007605
 	buildings_max_level_factor=1.000
-	state_category=town
+	state_category=city
 
 	local_supplies=0.0 
 }
