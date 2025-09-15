@@ -1032,9 +1032,17 @@ technologies = {
 
 		}
 		
+        medium_sp_artillery_brigade = {
+			combat_width = -0.8
+		}
+		light_sp_artillery_brigade = {
+			combat_width = -0.8
+		}
+		heavy_sp_artillery_brigade = {
+			combat_width = -0.8
+		}
 		enable_tactic = tactic_elastic_defense
 		
-		experience_loss_factor = -0.10
 		path = {
 			leads_to_tech = intergrated_support 
 			research_cost_coeff = 1
@@ -1325,7 +1333,8 @@ technologies = {
 				breakthrough = 0.10
 			}
 		}
-
+		
+      
 		enable_tactic = tactic_blitz
 		
 		path = {
