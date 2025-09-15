@@ -21060,7 +21060,7 @@ focus_tree = {
 				}				
 				custom_effect_tooltip = GER_modify_mefo_bills_modifier_tt
 				add_to_variable = { 
-					GER_industrial_consumer_goods_factor = -0.1
+					GER_industrial_consumer_goods_factor = -0.15
 					tooltip = consumer_goods_factor_tt
 				}
 			}
@@ -27005,6 +27005,27 @@ focus_tree = {
 		}
 	}
 
+		focus = {
+		id = GER_Empire_War_Industry_Advances
+		icon = GFX_goal_continuous_non_factory_construct
+		prerequisite = { focus = GER_Empire_War_Industry }
+		prerequisite = { focus = GER_Empire_Mefo }
+		x = -1
+		y = 1
+		relative_position_id = GER_Empire_War_Industry
+		cost = 5
+		available = {
+		threat > 0.4
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			swap_ideas = { remove_idea = GER_Empire_War_Industry
+		add_idea = GER_Empire_War_Industry_2 }
+		}
+	}
+
 
 	focus = {
 		id = GER_glorious_mechanical_machinations
@@ -28066,8 +28087,7 @@ focus_tree = {
 		id = GER_Revive_the_Central_Powers
 		icon = GFX_SOV_the_triple_entente_ccp_2d_sov_compatibility
 
-		prerequisite = { focus = GER_demand_the_return_of_southern_jutland focus = GER_danzig_for_guarantees_ww }
-
+		prerequisite = { focus = GER_Rally_the_Warhawks }
 		x = -1
 		y = 3
 		relative_position_id = GER_demand_the_return_of_southern_jutland
@@ -28814,6 +28834,35 @@ focus_tree = {
 					add_opinion_modifier = { target = GER modifier = danzig_for_guarantees }
 				}
 			}
+
+		}
+	}
+
+	focus = {
+		id = GER_Rally_the_Warhawks
+		icon = GFX_SOV_lessons_of_war_ccp_2d_sov_compatibility
+
+		prerequisite = { focus = GER_danzig_for_guarantees_ww focus = GER_demand_the_return_of_southern_jutland }
+		x = 1
+		y = 1
+		relative_position_id = GER_danzig_for_guarantees_ww
+
+		cost = 2.5
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {
+			add_ideas = GER_Rally_the_Warhawks
+			
+
 
 		}
 	}

@@ -4112,6 +4112,14 @@ BEL_corruption_ns_fake_tt: "Daily Political Power Gain: §R-0.25%§! \nStability
  GER_Empire_War_Industry:0 "War Industry Program"
  GER_Empire_War_Industry_desc: "Our armies need more than soldiers—they need the weapons and equipment to dominate. Expanding war factories is essential for Germany's ambitions."
 
+ GER_Empire_War_Industry_2:0 "War Industry Program"
+
+ GER_Empire_War_Industry_Advances:0 "War Industry Program Advances"
+ GER_Empire_War_Industry_Advances_desc: "Our nation’s survival depends on steel, oil, and arms. By expanding the war industry program, we can accelerate production, modernize our factories, and ensure the Fatherland never lacks the tools of victory."
+
+ GER_Rally_the_Warhawks:0 "Rally the Warhawks"
+ GER_Rally_the_Warhawks_desc: "The people demand strength, not hesitation. By empowering our warhawks and embracing a doctrine of decisive action, we can shorten the path to war. When our enemies threaten the Reich, we shall not waste time with endless words."
+
  GER_Empire_Tank:0 "Imperial Armored Doctrine"
  GER_Empire_Tank_desc: "The age of mechanized warfare approaches. Investing in armored units and tank development will make the German Empire feared on every battlefield."
 

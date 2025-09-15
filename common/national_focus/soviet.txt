@@ -9116,9 +9116,7 @@ focus_tree = {
 		 
 		cost = 5
 
-		available = {
-			SOV_lev_trotsky = {	is_country_leader = yes }
-		}
+		
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP}
 
@@ -9232,6 +9230,24 @@ focus_tree = {
 		}
 	}
 
+
+
+
+
+	focus = { 
+		id = SOV_Left_Hand_for_the_Army
+		icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
+		prerequisite = {focus = SOV_the_permanent_revolution}
+		x = 0
+		y = 1
+		relative_position_id = SOV_the_permanent_revolution
+		cost = 5 
+
+		completion_reward = {
+			add_ideas = SOV_Trotskys_Left_Hand
+		}
+
+	}
 	focus = {
 		id = SOV_depoliticize_the_military
 		icon = GFX_SOV_depoliticize_the_military_ccp_2d_sov_compatibility
@@ -9310,9 +9326,7 @@ focus_tree = {
 		
 		cost = 10
 
-		available = {
-			has_global_flag = SOV_soviet_civil_war_over
-		}
+		
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
@@ -9378,30 +9392,6 @@ focus_tree = {
     }
 }
 
-
-
-
-
-	focus = {
-		id = SOV_a_global_class_struggle
-		icon = GFX_SOV_a_global_class_struggle_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_the_permanent_revolution }
-		x = 0
-		y = 1
-		relative_position_id = SOV_the_permanent_revolution
-		
-		cost = 5
-
-		available = {
-			surrender_progress < 0.15
-		}
-		
-		search_filters = {}
-
-		completion_reward = {
-			custom_effect_tooltip = SOV_a_global_class_struggle_decision_tt
-		}
-	}
 
 	focus = {
 		id = SOV_all_power_to_the_soviets
@@ -9602,68 +9592,11 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = SOV_the_onslaught_on_colonialism
-		icon = GFX_SOV_the_onslaught_on_colonialism_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_a_global_class_struggle }
-		x = -1
-		y = 2
-		relative_position_id = SOV_a_global_class_struggle 
-		
-		cost = 5
+	
 
-		available = {	
-			surrender_progress < 0.05
-		}
-		
-		search_filters = {}
+	
 
-		completion_reward = {
-			custom_effect_tooltip = SOV_the_onslaught_on_colonialism_decision_tt
-		}
-	}
-
-	focus = {
-		id = SOV_carry_revolution_east
-		icon = GFX_SOV_carry_revolution_east_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_a_global_class_struggle }
-		x = 1
-		y = 2
-		relative_position_id = SOV_a_global_class_struggle
-		
-		cost = 5
-
-		available = {
-			surrender_progress < 0.05
-		}
-		
-		search_filters = {}
-
-		completion_reward = {
-			custom_effect_tooltip = SOV_carry_revolution_east_decision_tt
-		}
-	}
-
-	focus = {
-		id = SOV_the_end_of_the_imperialist_era
-		icon = GFX_SOV_the_end_of_the_imperialist_era_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_the_onslaught_on_colonialism focus = SOV_carry_revolution_east }
-		x = 1
-		y = 2
-		relative_position_id = SOV_the_onslaught_on_colonialism
-		
-		cost = 5
-
-		available = {
-			surrender_progress < 0.05
-		}
-		
-		search_filters = {}
-
-		completion_reward = {
-			custom_effect_tooltip = SOV_the_end_of_the_imperialist_era_decision_tt
-		}
-	}
+	
 
 ########################################################################################################
 
