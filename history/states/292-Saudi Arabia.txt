@@ -2,13 +2,16 @@ state={
 	id=292
 	name="STATE_292"
 	
+	resources = {
+		oil = 31.000
+	}
 
 	history={
 		owner = SAU
 		buildings = {
-			infrastructure = 1
-			arms_factory = 1
-			industrial_complex = 1
+			infrastructure = 2
+			arms_factory = 2
+			industrial_complex = 4
 		}
 		victory_points = {
 			12727 5 

@@ -2,6 +2,10 @@ state={
 	id=678
 	name="STATE_678"
 
+	resources = {
+		oil = 30.000
+	}
+
 	history={
 		owner = SAU
 		buildings = {
