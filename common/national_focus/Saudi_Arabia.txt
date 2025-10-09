@@ -1,0 +1,199 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+
+focus_tree = {
+	id = Saudi_Arabia_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = SAU
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1500 }
+
+ focus = {
+    id = SAU_consolidate_royal_authority
+    icon = GFX_focus_generic_monarchy_2
+    x = 8
+    y = 1
+    cost = 10
+    available = {
+        has_government = neutrality
+    }
+    completion_reward = {
+        add_political_power = 120
+        add_stability = 0.1
+        add_ideas = SAU_royal_consolidation_idea
+        custom_effect_tooltip = SAU_consolidate_royal_authority_tt
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+### Arabian Empire Path
+focus = {
+    id = SAU_Arabian_Empire
+    icon = GFX_focus_CHL_strengthen_the_carabinieros
+	prerequisite = {
+		focus = SAU_consolidate_royal_authority
+	}
+	relative_position_id = SAU_consolidate_royal_authority
+    x = -3
+    y = 1
+    cost = 10
+    available = {
+        has_government = neutrality
+    }
+    completion_reward = {
+		add_war_support = 0.1
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Arabian_Empire2
+    icon = GFX_focus_generic_camel_corps
+	prerequisite = {
+		focus = SAU_Arabian_Empire
+	}
+	relative_position_id = SAU_Arabian_Empire
+    x = -1
+    y = 1
+    cost = 10
+    available = {
+        has_government = neutrality
+    }
+    completion_reward = {
+		
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Arabia_Army
+    icon = GFX_focus_generic_full_employment
+	prerequisite = {
+		focus = SAU_Arabian_Empire focus = SAU_Saudi_Arabia
+	}
+	relative_position_id = SAU_Arabian_Empire
+    x = 1
+    y = 1
+    cost = 10
+    available = {
+        has_government = neutrality
+    }
+    completion_reward = {
+		
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Yemen_Annex
+    icon = GFX_SOV_bringing_breakaways_back_to_the_fold_ccp_2d_sov_compatibility
+	prerequisite = {
+		focus = SAU_Arabian_Empire2
+	}
+	relative_position_id = SAU_Arabian_Empire2
+    x = -1
+    y = 1
+    cost = 10
+    available = {
+        has_government = neutrality
+    }
+    completion_reward = {
+		
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Iraq_Annex
+    icon = GFX_focus_PER_demand_iraqi_territory
+	prerequisite = {
+	focus = SAU_Arabian_Empire2
+	}
+	relative_position_id = SAU_Arabian_Empire2
+    x = 1
+    y = 1
+    cost = 10
+    available = {
+        has_government = neutrality
+    }
+    completion_reward = {
+		
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+
+### Saudi Arabia History Path
+
+focus = {
+    id = SAU_Saudi_Arabia
+    icon = GFX_focus_generic_monarchy_1
+	prerequisite = {
+		focus = SAU_consolidate_royal_authority
+	}
+	relative_position_id = SAU_consolidate_royal_authority
+    x = 0
+    y = 1
+    cost = 10
+    available = {
+        has_government = neutrality
+    }
+    completion_reward = {
+        
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+### Middle East Path
+
+focus = {
+    id = SAU_Middle_East
+    icon = GFX_goal_generic_national_unity
+	prerequisite = {
+		focus = SAU_consolidate_royal_authority
+	}
+	relative_position_id = SAU_consolidate_royal_authority
+    x = 3
+    y = 1
+    cost = 10
+    available = {
+        has_government = neutrality
+    }
+    completion_reward = {
+        
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+	
+}

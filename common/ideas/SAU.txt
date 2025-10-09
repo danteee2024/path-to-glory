@@ -1,0 +1,16 @@
+ideas = {
+
+	country = {
+
+	SAU_royal_consolidation_idea = {
+    picture = GFX_idea_generic_political_reform
+    allowed = { original_tag = SAU }
+    modifier = {
+        political_power_gain = 0.1
+        stability_factor = 0.05
+        surrender_limit = 0.05
+    }
+}
+
+}
+}
