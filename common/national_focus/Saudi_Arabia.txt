@@ -34,7 +34,6 @@ focus_tree = {
     }
     completion_reward = {
         add_political_power = 120
-        add_stability = 0.1
         add_ideas = SAU_royal_consolidation_idea
         custom_effect_tooltip = SAU_consolidate_royal_authority_tt
     }
@@ -46,13 +45,16 @@ focus_tree = {
 focus = {
     id = SAU_Arabian_Empire
     icon = GFX_focus_CHL_strengthen_the_carabinieros
+    mutually_exclusive = {
+        focus = SAU_Middle_East focus = SAU_Saudi_Arabia
+    }
 	prerequisite = {
 		focus = SAU_consolidate_royal_authority
 	}
 	relative_position_id = SAU_consolidate_royal_authority
     x = -3
     y = 1
-    cost = 10
+    cost = 5
     available = {
         has_government = neutrality
     }
@@ -78,6 +80,7 @@ focus = {
         has_government = neutrality
     }
     completion_reward = {
+        add_ideas = SAU_Arabian_Empire_Camel
 		
     }
     ai_will_do = {
@@ -99,6 +102,29 @@ focus = {
         has_government = neutrality
     }
     completion_reward = {
+        add_ideas = SAU_Arabian_Army
+		
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Arabia_Army2
+    icon = GFX_SOV_reinstitute_the_mestnichestvo_ccp_2d_sov_compatibility
+	prerequisite = {
+		focus = SAU_Arabia_Army
+	}
+	relative_position_id = SAU_Arabia_Army
+    x = 0
+    y = 2
+    cost = 10
+    available = {
+        has_government = neutrality
+    }
+    completion_reward = {
+     add_ideas = SAU_Arabian_Army2
 		
     }
     ai_will_do = {
@@ -148,24 +174,51 @@ focus = {
     }
 }
 
-
-### Saudi Arabia History Path
-
 focus = {
-    id = SAU_Saudi_Arabia
-    icon = GFX_focus_generic_monarchy_1
+    id = SAU_Revive_Arabian_Empire
+    icon = GFX_focus_IRQ_unite_mashriq
 	prerequisite = {
-		focus = SAU_consolidate_royal_authority
+	focus = SAU_Yemen_Annex
 	}
-	relative_position_id = SAU_consolidate_royal_authority
-    x = 0
+    prerequisite = {
+	focus = SAU_Iraq_Annex
+	}
+	relative_position_id = SAU_Yemen_Annex
+    x = 1
     y = 1
     cost = 10
     available = {
         has_government = neutrality
     }
     completion_reward = {
-        
+		
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+
+### Saudi Arabia History Path
+
+focus = {
+    id = SAU_Saudi_Arabia
+    icon = GFX_focus_generic_monarchy_1
+        mutually_exclusive = {
+        focus = SAU_Middle_East focus = SAU_Arabian_Empire
+    }
+	prerequisite = {
+		focus = SAU_consolidate_royal_authority
+	}
+	relative_position_id = SAU_consolidate_royal_authority
+    x = 0
+    y = 1
+    cost = 5
+    available = {
+        has_government = neutrality
+    }
+    completion_reward = {
+        add_stability = 0.1
     }
     ai_will_do = {
         factor = 1.2
@@ -177,17 +230,21 @@ focus = {
 focus = {
     id = SAU_Middle_East
     icon = GFX_goal_generic_national_unity
+        mutually_exclusive = {
+        focus = SAU_Arabian_Empire focus = SAU_Saudi_Arabia
+    }
 	prerequisite = {
 		focus = SAU_consolidate_royal_authority
 	}
 	relative_position_id = SAU_consolidate_royal_authority
     x = 3
     y = 1
-    cost = 10
+    cost = 5
     available = {
         has_government = neutrality
     }
     completion_reward = {
+        add_ideas = SAU_Middle_East
         
     }
     ai_will_do = {

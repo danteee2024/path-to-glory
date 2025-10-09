@@ -12,5 +12,39 @@ ideas = {
     }
 }
 
+	SAU_Middle_East = {
+    picture = generic_political_support
+    allowed = { original_tag = SAU }
+    modifier = {
+        political_power_gain = 0.1
+    }
+}
+
+	SAU_Arabian_Empire_Camel = {
+    picture = por_colonial_army
+    allowed = { original_tag = SAU }
+    modifier = {
+        modifier_army_sub_unit_camelry_attack_factor = 0.1
+        modifier_army_sub_unit_camelry_defence_factor = 0.1
+    }
+}
+
+	SAU_Arabian_Army = {
+    picture = chi_army_corruption3
+    allowed = { original_tag = SAU }
+    modifier = {
+     conscription_factor = 0.03
+    }
+}
+
+	SAU_Arabian_Army2 = {
+    picture = MEX_politicised_army_2
+    allowed = { original_tag = SAU }
+    modifier = {
+     army_org_factor = 0.05
+     org_loss_when_moving = -0.05
+    }
+}
+
 }
 }
