@@ -99,10 +99,10 @@ ideas = {
 			
 			modifier = {
 				planning_speed = 0.10
-				max_planning = 0.10
+				max_planning = 0.05
 				army_leader_cost_factor = 0.25
 				army_leader_start_attack_level = 2
-				army_org_factor = 0.10
+				army_org_factor = 0.05
 			}
 		}
 		MAN_attack_china = {
@@ -360,8 +360,8 @@ ideas = {
 			picture = generic_morale_bonus
 			
 			modifier = {
-				army_org_factor = 0.10
-				army_morale_factor = 0.1
+				army_org_factor = 0.05
+				army_morale_factor = 0.05
 				river_crossing_factor = -0.10
 			}
 		}
@@ -381,8 +381,8 @@ ideas = {
 			
 			modifier = {
 				army_morale_factor = 0.08
-				attrition = -0.10
-				max_planning = 0.1
+				attrition = -0.05
+				max_planning = 0.05
 			}
 		}
 		MAN_labour_corps_idea = {
@@ -445,7 +445,7 @@ ideas = {
 			picture = SOV_fourth_five_year_plan
 			
 			modifier = {
-				production_speed_buildings_factor = 0.25
+				production_speed_buildings_factor = 0.10
 				local_resources_factor = 0.1
 				extra_trade_to_overlord_factor = 0.4
 			}
@@ -503,7 +503,7 @@ ideas = {
 			picture = state_shintoism
 			
 			modifier = {
-				army_morale_factor = 0.1
+				army_morale_factor = 0.05
 				stability_factor = 0.1
 				war_support_factor = 0.05
 			}
