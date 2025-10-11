@@ -1,0 +1,275 @@
+#Category only allowed for SAU
+
+SAU_Integration_category = {
+	SAU_Iran_Integration = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = SAU
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+	        
+		}
+		
+		visible = {
+			has_completed_focus = SAU_Revive_Arabian_Empire
+
+		}
+		activation = {
+			always = no
+		}
+		is_good = yes
+		days_remove = 0
+		cost = 0
+		fire_only_once = yes
+
+		cancel_effect = {
+		}
+
+		remove_effect = {
+				PER = {
+				for_each_scope_loop = {
+					array = core_states_at_game_start
+					add_core_of = ROOT
+				}
+			}
+			if = {
+				limit = {
+					PER = { is_subject_of = ROOT }
+				}
+
+				annex_country = {
+					target = PER
+					transfer_troops = yes
+				}
+			}
+			every_state = {
+				limit = { is_core_of = PER }
+				add_core_of = ROOT
+			}
+			 
+		}	
+	}
+
+	SAU_Afghanistan_Integration = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = SAU
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+	        
+		}
+		
+		visible = {
+			has_completed_focus = SAU_Revive_Arabian_Empire
+
+		}
+		activation = {
+			always = no
+		}
+		is_good = yes
+		days_remove = 0
+		cost = 0
+		fire_only_once = yes
+
+		cancel_effect = {
+		}
+
+		remove_effect = {
+				AFG = {
+				for_each_scope_loop = {
+					array = core_states_at_game_start
+					add_core_of = ROOT
+				}
+			}
+			if = {
+				limit = {
+					AFG = { is_subject_of = ROOT }
+				}
+
+				annex_country = {
+					target = AFG
+					transfer_troops = yes
+				}
+			}
+			every_state = {
+				limit = { is_core_of = AFG }
+				add_core_of = ROOT
+			}
+			 
+		}	
+	}
+
+	SAU_North_Afracia_Integration = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = SAU
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+	        SAU = {
+	            		699 = {
+	            			is_controlled_by = ROOT
+	            		}
+						461	= {
+	            			is_controlled_by = ROOT
+	            		}
+						459	 = {
+	            			is_controlled_by = ROOT
+	            		}
+						458	 = {
+	            			is_controlled_by = ROOT
+	            		}
+						448	 = {
+	            			is_controlled_by = ROOT
+	            		}
+					}
+	            		}
+		
+		visible = {
+			has_completed_focus = SAU_Revive_Arabian_Empire
+
+		}
+		activation = {
+			always = no
+		}
+		is_good = yes
+		days_remove = 0
+		cost = 0
+		fire_only_once = yes
+
+		cancel_effect = {
+		}
+
+		remove_effect = {
+				MOR = {
+				for_each_scope_loop = {
+					array = core_states_at_game_start
+					add_core_of = ROOT
+				}
+			}
+			if = {
+				limit = {
+					MOR = { is_subject_of = ROOT }
+				}
+
+				annex_country = {
+					target = MOR
+					transfer_troops = yes
+				}
+			}
+			every_state = {
+				limit = { is_core_of = MOR }
+				add_core_of = ROOT
+			}
+
+				WES = {
+				for_each_scope_loop = {
+					array = core_states_at_game_start
+					add_core_of = ROOT
+				}
+			}
+			if = {
+				limit = {
+					WES = { is_subject_of = ROOT }
+				}
+
+				annex_country = {
+					target = WES
+					transfer_troops = yes
+				}
+			}
+			every_state = {
+				limit = { is_core_of = WES }
+				add_core_of = ROOT
+			}
+
+			 	ALG = {
+				for_each_scope_loop = {
+					array = core_states_at_game_start
+					add_core_of = ROOT
+				}
+			}
+			if = {
+				limit = {
+					ALG = { is_subject_of = ROOT }
+				}
+
+				annex_country = {
+					target = ALG
+					transfer_troops = yes
+				}
+			}
+			every_state = {
+				limit = { is_core_of = ALG }
+				add_core_of = ROOT
+			}
+
+			 	TUN = {
+				for_each_scope_loop = {
+					array = core_states_at_game_start
+					add_core_of = ROOT
+				}
+			}
+			if = {
+				limit = {
+					TUN = { is_subject_of = ROOT }
+				}
+
+				annex_country = {
+					target = TUN
+					transfer_troops = yes
+				}
+			}
+			every_state = {
+				limit = { is_core_of = TUN }
+				add_core_of = ROOT
+			}
+
+				LBA = {
+				for_each_scope_loop = {
+					array = core_states_at_game_start
+					add_core_of = ROOT
+				}
+			}
+			if = {
+				limit = {
+					LBA = { is_subject_of = ROOT }
+				}
+
+				annex_country = {
+					target = LBA
+					transfer_troops = yes
+				}
+			}
+			every_state = {
+				limit = { is_core_of = LBA }
+				add_core_of = ROOT
+			}
+			 
+			 
+		}	
+	}
+
+
+
+}
