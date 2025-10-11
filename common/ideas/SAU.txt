@@ -46,5 +46,21 @@ ideas = {
     }
 }
 
+SAU_Saudi_Arabia_Eco = {
+    picture = generic_economic_increase
+    allowed = { original_tag = SAU }
+    modifier = {
+     consumer_goods_factor = 0.15
+    }
+}
+
+SAU_Defence_Plan = {
+    picture = ast_volunteer_defence_corps
+    allowed = { original_tag = SAU }
+    modifier = {
+     army_core_defence_factor = 0.1
+    }
+}
+
 }
 }

@@ -1,4 +1,11 @@
 ﻿l_english:
+
+##Cosmetic
+ SAU_Arabian_Empire:0 "Arabian Empire"
+ SAU_Arabian_Empire_DEF:0 "Arabian Empire"
+ 
+
+###Ideology Tree
  SAU_consolidate_royal_authority:0 "Consolidate Royal Authority"
  SAU_consolidate_royal_authority_desc:0 "To ensure stability and unity in our young kingdom, it is essential that all tribes and regions recognize the authority of the royal family. By centralizing power and formalizing royal governance, we can secure the loyalty of our people and the continuity of our rule."
  SAU_royal_consolidation_idea:0 "Royal Consolidation"
