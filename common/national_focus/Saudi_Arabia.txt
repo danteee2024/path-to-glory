@@ -189,6 +189,147 @@ focus = {
     cost = 10
     available = {
         has_government = neutrality
+                         293 = {
+	            			is_controlled_by = ROOT
+	            		}
+						1010 = {
+	            			is_controlled_by = ROOT
+	            		}
+						675 = {
+	            			is_controlled_by = ROOT
+	            		}
+                        1011 = {
+	            			is_controlled_by = ROOT
+	            		}
+						291 = {
+	            			is_controlled_by = ROOT
+	            		}
+						676 = {
+	            			is_controlled_by = ROOT
+	            		}
+    }
+    completion_reward = {
+        293 = { add_core_of = SAU }
+		1010 = { add_core_of = SAU }
+		675 = { add_core_of = SAU }
+        1011 = { add_core_of = SAU }
+		291 = { add_core_of = SAU }
+		676 = { add_core_of = SAU }
+
+
+		
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+focus = {
+    id = SAU_Iran_War
+    icon = GFX_focus_generic_attack_iran
+	prerequisite = {
+	focus = SAU_Revive_Arabian_Empire
+	}
+	relative_position_id = SAU_Revive_Arabian_Empire
+    x = -1
+    y = 1
+    cost = 10
+    available = {
+        has_government = neutrality
+    }
+    completion_reward = {
+
+        		create_wargoal = {
+				type = annex_everything
+				target = PER
+			    }
+			
+		bypass = {
+			PER = {
+				OR = {
+					exists = no 
+				}
+			}
+		}
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+
+focus = {
+    id = SAU_Afghanistan_War
+    icon = GFX_focus_generic_attack_afghanistan
+	prerequisite = {
+	focus = SAU_Revive_Arabian_Empire
+	}
+	relative_position_id = SAU_Revive_Arabian_Empire
+    x = 1
+    y = 1
+    cost = 10
+    available = {
+        has_government = neutrality
+    }
+    completion_reward = {
+         		create_wargoal = {
+				type = annex_everything
+				target = AFG
+			    }
+			
+		bypass = {
+			AFG = {
+				OR = {
+					exists = no 
+				}
+			}
+		}
+		
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Prepare_War
+    icon = GFX_SOV_the_last_break_southward_ccp_2d_sov_compatibility
+	prerequisite = {
+	focus = SAU_Iran_War
+	}
+    prerequisite = {
+	focus = SAU_Afghanistan_War
+	}
+	relative_position_id = SAU_Iran_War
+    x = 1
+    y = 1
+    cost = 10
+    available = {
+        has_government = neutrality
+    }
+    completion_reward = {
+         	add_war_support = 0.1
+            add_stability = 0.1
+		
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+focus = {
+    id = SAU_UK_Colony
+    icon = GFX_focus_chi_british_cooperation
+	prerequisite = {
+	focus = SAU_Arabia_Army2
+	}
+    prerequisite = {
+	focus = SAU_Afghanistan_War
+	}
+	relative_position_id = SAU_Afghanistan_War
+    x = 1
+    y = 1
+    cost = 10
+    available = {
+        has_government = neutrality
     }
     completion_reward = {
 		
@@ -197,6 +338,33 @@ focus = {
         factor = 1.2
     }
 }
+focus = {
+    id = SAU_Egypt
+    icon = GFX_focus_generic_the_suez
+	prerequisite = {
+	focus = SAU_UK_Colony
+	}
+    prerequisite = {
+	focus = SAU_Prepare_War
+	}
+	relative_position_id = SAU_Prepare_War
+    x = 1
+    y = 1
+    cost = 10
+    available = {
+        has_government = neutrality
+    }
+    completion_reward = {
+        
+		
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+
+
 
 
 ### Saudi Arabia History Path
