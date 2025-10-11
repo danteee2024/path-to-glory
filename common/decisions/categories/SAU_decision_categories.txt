@@ -1,0 +1,22 @@
+#################
+#### Arabia ####
+#################
+
+
+SAU_Integration_category = {
+	icon = GFX_decision_category_generic_foreign_policy
+	#picture = GFX_decision_cat_picture_PLACEHOLDER
+
+	allowed = {
+		original_tag = SAU
+	}
+
+	priority = 7
+
+	visible = {
+		OR = {
+			has_completed_focus = SAU_Revive_Arabian_Empire
+		}
+	}
+}
+

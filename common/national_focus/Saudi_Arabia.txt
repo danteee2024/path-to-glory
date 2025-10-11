@@ -95,7 +95,7 @@ focus = {
 		focus = SAU_Arabian_Empire focus = SAU_Saudi_Arabia
 	}
 	relative_position_id = SAU_Arabian_Empire
-    x = 1
+    x = 2
     y = 1
     cost = 10
     available = {
@@ -146,6 +146,9 @@ focus = {
         has_government = neutrality
     }
     completion_reward = {
+        YEM = {
+					country_event = SAU.432
+				}
 		
     }
     ai_will_do = {
@@ -167,7 +170,9 @@ focus = {
         has_government = neutrality
     }
     completion_reward = {
-		
+		IRQ = {
+					country_event = SAU.332
+				}
     }
     ai_will_do = {
         factor = 1.2
@@ -209,12 +214,25 @@ focus = {
 	            		}
     }
     completion_reward = {
-        293 = { add_core_of = SAU }
+       set_capital = {
+				state = 291 
+				remember_old_capital = no
+			}
+            hidden_effect = {
+                
+			291 = {
+				add_victory_points = {
+					province = 2097
+					value = 5
+				}
+			}
+             293 = { add_core_of = SAU }
 		1010 = { add_core_of = SAU }
 		675 = { add_core_of = SAU }
         1011 = { add_core_of = SAU }
 		291 = { add_core_of = SAU }
 		676 = { add_core_of = SAU }
+        }
 
 
 		
@@ -320,8 +338,6 @@ focus = {
     icon = GFX_focus_chi_british_cooperation
 	prerequisite = {
 	focus = SAU_Arabia_Army2
-	}
-    prerequisite = {
 	focus = SAU_Afghanistan_War
 	}
 	relative_position_id = SAU_Afghanistan_War
@@ -332,7 +348,9 @@ focus = {
         has_government = neutrality
     }
     completion_reward = {
-		
+		ENG = {
+					country_event = SAU.145
+				}
     }
     ai_will_do = {
         factor = 1.2
@@ -355,7 +373,137 @@ focus = {
         has_government = neutrality
     }
     completion_reward = {
+        ENG = {
+					country_event = SAU.245
+				}
         
+		
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Syria
+    icon = GFX_focus_chi_reach_out_to_france
+	prerequisite = {
+	focus = SAU_UK_Colony
+	}
+    prerequisite = {
+	focus = SAU_Egypt
+	}
+	relative_position_id = SAU_Egypt
+    x = 1
+    y = 1
+    cost = 10
+    available = {
+        has_government = neutrality
+    }
+    completion_reward = {
+        FRA = {
+					country_event = SAU.545
+				}
+        
+		
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_France_War
+    icon = GFX_focus_attack_france
+	prerequisite = {
+	focus = SAU_Prepare_War
+	}
+	relative_position_id = SAU_Prepare_War
+    x = -1
+    y = 1
+    cost = 10
+    available = {
+        has_government = neutrality
+    }
+    completion_reward = {
+         		create_wargoal = {
+				type = annex_everything
+				target = FRA
+			    }
+			
+		bypass = {
+			AFG = {
+				OR = {
+					exists = no 
+				}
+			}
+		}
+		
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Italy_War
+    icon = GFX_focus_attack_italy
+	prerequisite = {
+	focus = SAU_Prepare_War
+	}
+	relative_position_id = SAU_Prepare_War
+    x = 0
+    y = 2
+    cost = 10
+    available = {
+        has_government = neutrality
+    }
+    completion_reward = {
+         		create_wargoal = {
+				type = annex_everything
+				target = ITA
+			    }
+			
+		bypass = {
+			AFG = {
+				OR = {
+					exists = no 
+				}
+			}
+		}
+		
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Spain_War
+    icon = GFX_focus_focus_fra_intervention_spain
+	prerequisite = {
+	focus = SAU_Prepare_War
+	}
+	relative_position_id = SAU_Prepare_War
+    x = -2
+    y = 2
+    cost = 10
+    available = {
+        has_government = neutrality
+    }
+    completion_reward = {
+         		create_wargoal = {
+				type = annex_everything
+				target = SPA
+			    }
+			
+		bypass = {
+			AFG = {
+				OR = {
+					exists = no 
+				}
+			}
+		}
 		
     }
     ai_will_do = {
