@@ -339,8 +339,10 @@ focus = {
     id = SAU_UK_Colony
     icon = GFX_focus_chi_british_cooperation
 	prerequisite = {
+	focus = SAU_Revive_Arabian_Empire
+	}
+    prerequisite = {
 	focus = SAU_Arabia_Army2
-	focus = SAU_Afghanistan_War
 	}
 	relative_position_id = SAU_Afghanistan_War
     x = 1
@@ -558,6 +560,14 @@ focus = {
     }
     completion_reward = {
         add_ideas = SAU_Saudi_Arabia_Eco
+         random_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
     }
     ai_will_do = {
         factor = 1.2
@@ -573,6 +583,9 @@ focus = {
     prerequisite = {
         focus = SAU_Arabia_Army2
     }
+     prerequisite = {
+		focus = SAU_Saudi_Arabia6
+	}
 	relative_position_id = SAU_Saudi_Arabia2
     x = 0
     y = 2
@@ -594,9 +607,6 @@ focus = {
 	prerequisite = {
 		focus = SAU_Saudi_Arabia3
 	}
-    prerequisite = {
-        focus = SAU_UK_Colony
-    }
 	relative_position_id = SAU_Saudi_Arabia3
     x = -1
     y = 2
@@ -613,6 +623,52 @@ focus = {
     }
 }
 
+
+focus = {
+    id = SAU_Saudi_Arabia5
+    icon = GFX_focus_generic_modernize_industry
+prerequisite = {
+		focus = SAU_Saudi_Arabia
+        focus = SAU_Middle_East
+	}
+	relative_position_id = SAU_Saudi_Arabia
+    x = 1
+    y = 1
+    cost = 10
+    available = {
+        has_government = neutrality
+    }
+    completion_reward = {
+        add_ideas = SAU_Building
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Saudi_Arabia6
+    icon = GFX_focus_CHL_enlarge_the_textile_industries
+	prerequisite = {
+		focus = SAU_Saudi_Arabia5
+	}
+	relative_position_id = SAU_Saudi_Arabia5
+    x = 0
+    y = 2
+    cost = 10
+    available = {
+        has_government = neutrality
+    }
+    completion_reward = {
+        swap_ideas = {
+            remove_idea =  SAU_Building
+            add_idea =  SAU_Building2
+        }
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
 
 ### Middle East Path
 
