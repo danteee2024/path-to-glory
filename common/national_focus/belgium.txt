@@ -1057,7 +1057,7 @@ focus_tree = {
 		x = -1
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 		}
@@ -1067,7 +1067,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = BEL_modify_royal_military_academy_dynamic_modifier_tt
 			add_to_variable = { 
-				BEL_royal_military_academy_army_org_factor = 0.1
+				BEL_royal_military_academy_army_org_factor = 0.10
 				tooltip = army_org_factor_tt				
 			}	 
 		}
@@ -1093,7 +1093,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = BEL_modify_royal_military_academy_dynamic_modifier_tt
 			add_to_variable = { 
-				BEL_royal_military_academy_initiative_factor = 0.15
+				BEL_royal_military_academy_initiative_factor = 0.10
 				tooltip = initiative_factor_tt				
 			}	
 		}
@@ -1180,7 +1180,7 @@ focus_tree = {
 		x = 1
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 		}
@@ -1208,7 +1208,7 @@ focus_tree = {
 		x = -1
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 		}
@@ -1274,7 +1274,7 @@ focus_tree = {
 		x = 0
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 		}
@@ -1407,7 +1407,7 @@ focus_tree = {
 		x = 0
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 		}
@@ -1866,7 +1866,7 @@ focus_tree = {
 		x = 0
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 			has_war = yes
@@ -1902,7 +1902,7 @@ focus_tree = {
 		x = 1
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 		}
@@ -2962,7 +2962,7 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			fascism > 0.5
+			fascism > 0.6
 		}
 	
 		completion_reward = {
@@ -3015,10 +3015,10 @@ focus_tree = {
 		x = 1
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
-			fascism > 0.5
+			fascism > 0.6
 		}
 	
 		completion_reward = {
@@ -3042,10 +3042,10 @@ focus_tree = {
 		x = 1
 		y = 2
 	
-		cost = 5
+		cost = 10
 
 		available = {
-			fascism > 0.6
+			fascism > 0.65
 		}
 	
 		completion_reward = {
@@ -3128,7 +3128,7 @@ focus_tree = {
 		x = 0
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 			fascism > 0.8
@@ -6960,12 +6960,12 @@ focus = {
 				else = {
 					custom_effect_tooltip = BEL_modify_belgian_legion_dynamic_modifier_tt
 					add_to_variable = { 
-						BEL_belgian_legion_army_core_attack_factor = 0.1
+						BEL_belgian_legion_army_core_attack_factor = 0.05
 						tooltip = army_core_attack_factor_tt					
 					}
 
 					add_to_variable = { 
-						BEL_belgian_legion_army_core_defence_factor = 0.1
+						BEL_belgian_legion_army_core_defence_factor = 0.05
 						tooltip = army_core_attack_factor_tt				
 					}	 
 				}		 
@@ -7770,7 +7770,7 @@ focus = {
 		x = 0
 		y = 2
 	
-		cost = 5
+		cost = 10
 
 		available = {
 		}
