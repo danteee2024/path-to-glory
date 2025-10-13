@@ -18895,6 +18895,29 @@ ai_will_do = {
 			}
 		}
 
+		focus = {
+			id = SOV_Ally_the_Facists
+			icon = GFX_focus_CHL_unify_the_fascist_movements
+			prerequisite = { focus = SOV_japanese_overtures }
+			x = 0 
+			y = 2 
+			relative_position_id = SOV_japanese_overtures
+			cost = 5 
+			ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = no
+
+		search_filters = {}
+		
+		completion_reward = {
+			war_support = 0.10
+        add_ideas = war_economy_mobilization
+        add_stability = -0.02
+		}
+	}
+		
+
 		completion_reward = {
 			GER = {
 				country_event = { id = NSB_soviet_fascist_tsarist.25 hours = 6 }
