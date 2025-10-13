@@ -16941,7 +16941,7 @@ ai_will_do = {
 		x = -6
 		y = 1
 		relative_position_id = SOV_reconvene_the_zemsky_sobor
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -16980,7 +16980,7 @@ ai_will_do = {
 		x = -2
 		y = 1
 		relative_position_id = SOV_romanov_reconstruction
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -17008,25 +17008,10 @@ ai_will_do = {
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 6
+					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 						type = industrial_complex
-						level = 4
-						instant_build = yes
-					}
-				}
-				else_if = {
-					limit = {
-						free_building_slots = {
-							building = industrial_complex
-							size > 4
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 5
-					add_building_construction = {
-						type = industrial_complex
-						level = 4
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -17041,7 +17026,22 @@ ai_will_do = {
 					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 						type = industrial_complex
-						level = 4
+						level = 2
+						instant_build = yes
+					}
+				}
+				else_if = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 3
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -17056,7 +17056,7 @@ ai_will_do = {
 					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 						type = industrial_complex
-						level = 4
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -17071,7 +17071,7 @@ ai_will_do = {
 					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 						type = industrial_complex
-						level = 4
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -17134,7 +17134,7 @@ ai_will_do = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_capital_of_the_tsars
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
