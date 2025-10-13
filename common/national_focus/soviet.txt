@@ -18905,7 +18905,7 @@ ai_will_do = {
 	
 	
 	focus = {
-		id = SOV_War_Economy_2
+		id = SOV_Expand_the_wave
 		icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
 		prerequisite = { focus = SOV_japanese_overtures }
 		x = 0
@@ -18939,10 +18939,10 @@ ai_will_do = {
 	focus = {
 		id = SOV_Professionalise_the_Army
 		icon = GFX_goal_continuous_suppression
-		prerequisite = { focus = SOV_war_economy_2 }
+		prerequisite = { focus = SOV_Expand_the_wave }
 		x = 0 
-		y = 1 
-		relative_position_id = SOV_war_economy_2
+		y = 1
+		relative_position_id = SOV_Expand_the_wave
 		cost = 10 
 
 		ai_will_do = {
@@ -18954,7 +18954,7 @@ ai_will_do = {
 
 		search_filters = {}
 		completion_reward = {
-			add_ideas = SOV_Professionalise_the_Army
+			add_ideas = SOV_Professionalise_the_Army_2
 		}
 	}
 	
