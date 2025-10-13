@@ -3363,7 +3363,7 @@ add_timed_idea = {
 	focus = {
 		id = FRA_service_ordre_legionnaire
 		icon = GFX_SOV_military_engineering_university_ccp_2d_sov_compatibility
-		cost = 7.5
+		cost = 5
 		prerequisite = {
 			focus = FRA_union_latins
 		}
@@ -3786,7 +3786,7 @@ add_timed_idea = {
 	focus = {
 		id = FRA_brumaire_movement
 		icon = GFX_focus_generic_monarchy_2
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = FRA_papal_rehabilitation
 		}
@@ -3798,7 +3798,7 @@ add_timed_idea = {
 			focus = FRA_support_the_legitimatises
 		}
 		available = {
-			neutrality > 0.4
+			neutrality > 0.6
 		}
 		x = 7
 		y = 1
@@ -4001,7 +4001,7 @@ add_timed_idea = {
 	focus = {
 		id = FRA_counter_the_fascist_infulence
 		icon = GFX_focus_generic_anti_fascist_diplomacy
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = FRA_side_with_the_orleanists
 		}
@@ -4072,7 +4072,7 @@ add_timed_idea = {
 	focus = {
 		id = FRA_constitutional_monarchy
 		icon = GFX_focus_focus_fra_orleans_restoration
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = FRA_oust_maurras
 		}
@@ -4208,7 +4208,7 @@ add_timed_idea = {
 	focus = {
 		id = FRA_public_works
 		icon = GFX_goal_generic_construct_infrastructure
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = FRA_constitutional_monarchy
 		}
@@ -4940,7 +4940,7 @@ add_timed_idea = {
 	focus = {
 		id = FRA_legacy_of_the_grande_armee
 		icon = GFX_focus_attack_france
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = FRA_militarist_society
 		}
@@ -5016,7 +5016,7 @@ add_timed_idea = {
 	focus = {
 		id = FRA_our_natural_borders
 		icon = GFX_focus_focus_fra_border
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = FRA_the_new_continental_system
 		}
