@@ -10,6 +10,25 @@ ideas = {
 
 
 	country= {
+		SOV_Crush_the_resistance = {
+		picture = SPR_torchbearers_of_tomorrow
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+
+			}
+			available = {
+
+			}
+
+			modifier = {
+				weekly_manpower = 1000
+				army_attack_factor = 0.10
+			}
+		}
 
 		SOV_Trotskys_Left_Hand = {
 

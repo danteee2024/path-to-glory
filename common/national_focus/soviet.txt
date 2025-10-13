@@ -18895,12 +18895,20 @@ ai_will_do = {
 			}
 		}
 
-		focus = {
-			id = SOV_Ally_the_Facists
+	
+		completion_reward = {
+			GER = {
+				country_event = { id = NSB_soviet_fascist_tsarist.25 hours = 6 }
+			}
+		}
+	}
+	
+	focus =  {
+			id = SOV_One_Party_State
 			icon = GFX_focus_CHL_unify_the_fascist_movements
 			prerequisite = { focus = SOV_japanese_overtures }
 			x = 0 
-			y = 2 
+			y = 1
 			relative_position_id = SOV_japanese_overtures
 			cost = 5 
 			ai_will_do = {
@@ -18916,15 +18924,6 @@ ai_will_do = {
         add_stability = -0.02
 		}
 	}
-		
-
-		completion_reward = {
-			GER = {
-				country_event = { id = NSB_soviet_fascist_tsarist.25 hours = 6 }
-			}
-		}
-	}
-	
 	########################################################
 	#  DEMOCRATIC RUSSIA MOD - BY GERMANYLUXEMBOURG DELUXE #
 	########################################################
