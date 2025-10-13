@@ -18176,7 +18176,7 @@ ai_will_do = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = SOV_Crush_the_resistance
+			add_ideas = Slavic_War_economy
 		}
 	}
 
