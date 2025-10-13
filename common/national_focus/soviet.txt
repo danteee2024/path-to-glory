@@ -18937,7 +18937,7 @@ ai_will_do = {
 
 
 	focus = {
-		id = SOV_Crush_the_resistance
+		id = SOV_Professionalise_the_Army
 		icon = GFX_goal_continuous_suppression
 		prerequisite = { focus = SOV_war_economy_2 }
 		x = 0 

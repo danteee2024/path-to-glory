@@ -26,7 +26,7 @@ ideas = {
 
 			modifier = {
 				weekly_manpower = 1000
-				army_attack_factor = 0.15
+				army_attack_factor = 0.10
 				recruitable_population_factor = -0.15
 			}
 		}
