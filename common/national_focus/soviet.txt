@@ -18176,7 +18176,7 @@ ai_will_do = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = Slavic_War_Economy
+			add_ideas = SOV_Crush_the_resistance
 		}
 	}
 
@@ -18903,25 +18903,36 @@ ai_will_do = {
 		}
 	}
 	
-	focus =  {
-			id = SOV_One_Party_State
-			icon = GFX_focus_CHL_unify_the_fascist_movements
-			prerequisite = { focus = SOV_japanese_overtures }
-			x = 0 
-			y = 1
-			relative_position_id = SOV_japanese_overtures
-			cost = 5 
-			ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = no
+	
+	focus = {
+		id = SOV_war_economy
+		icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
+		prerequisite = { focus = SOV_japanese_overtures }
+		x = 0
+		y = 1
+		relative_position_id = SOV_japanese_overtures
+		cost = 10
 
-		search_filters = {}
+		available = {
+
+		}
 		
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
 		completion_reward = {
-			war_support = 0.10
-        add_ideas = war_economy_mobilization
-        add_stability = -0.02
+			
+			else = {
+				custom_effect_tooltip = SOV_war_economy_stability_war_tt
+			}
+			if = {
+				limit = {
+					NOT = { has_idea = war_economy }
+					NOT = { has_idea = tot_economic_mobilisation }
+				}
+				add_ideas = war_economy
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 		}
 	}
 	########################################################
