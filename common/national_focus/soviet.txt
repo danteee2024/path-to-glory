@@ -16941,7 +16941,7 @@ ai_will_do = {
 		x = -6
 		y = 1
 		relative_position_id = SOV_reconvene_the_zemsky_sobor
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -16980,7 +16980,7 @@ ai_will_do = {
 		x = -2
 		y = 1
 		relative_position_id = SOV_romanov_reconstruction
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -17008,25 +17008,10 @@ ai_will_do = {
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 6
+					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 						type = industrial_complex
-						level = 4
-						instant_build = yes
-					}
-				}
-				else_if = {
-					limit = {
-						free_building_slots = {
-							building = industrial_complex
-							size > 4
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 5
-					add_building_construction = {
-						type = industrial_complex
-						level = 4
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -17041,7 +17026,22 @@ ai_will_do = {
 					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 						type = industrial_complex
-						level = 4
+						level = 2
+						instant_build = yes
+					}
+				}
+				else_if = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 3
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -17056,7 +17056,7 @@ ai_will_do = {
 					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 						type = industrial_complex
-						level = 4
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -17071,7 +17071,7 @@ ai_will_do = {
 					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 						type = industrial_complex
-						level = 4
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -17134,7 +17134,7 @@ ai_will_do = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_capital_of_the_tsars
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -17179,7 +17179,7 @@ ai_will_do = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_romanov_reconstruction
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -17268,7 +17268,7 @@ ai_will_do = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_church_candidates
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -17341,7 +17341,7 @@ ai_will_do = {
 		y = 1
 		relative_position_id = SOV_the_rightful_heir_to_the_empire
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -17410,7 +17410,7 @@ ai_will_do = {
 		y = 1
 		relative_position_id = SOV_the_third_rome
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -17774,7 +17774,7 @@ ai_will_do = {
 		x = 2
 		y = 1
 		relative_position_id = SOV_the_triple_entente
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -17876,7 +17876,7 @@ ai_will_do = {
 		x = 5
 		y = 1
 		relative_position_id = SOV_romanov_reconstruction
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -17931,7 +17931,7 @@ ai_will_do = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_secure_finland
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -18148,7 +18148,7 @@ ai_will_do = {
 		x = -1
 		y = 3
 		relative_position_id = SOV_the_iron_wall_of_russian_resolve1
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -18176,7 +18176,7 @@ ai_will_do = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = Slavic_War_Economy
+			add_ideas = Slavic_War_economy
 		}
 	}
 
@@ -18895,10 +18895,66 @@ ai_will_do = {
 			}
 		}
 
+	
 		completion_reward = {
 			GER = {
 				country_event = { id = NSB_soviet_fascist_tsarist.25 hours = 6 }
 			}
+		}
+	}
+	
+	
+	focus = {
+		id = SOV_Expand_the_wave
+		icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
+		prerequisite = { focus = SOV_japanese_overtures }
+		x = 0
+		y = 1
+		relative_position_id = SOV_japanese_overtures
+		cost = 10
+
+		available = {
+
+		}
+		
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			
+			else = {
+				custom_effect_tooltip = SOV_war_economy_stability_war_tt
+			}
+			if = {
+				limit = {
+					NOT = { has_idea = war_economy }
+					NOT = { has_idea = tot_economic_mobilisation }
+				}
+				add_ideas = war_economy
+			}
+			
+		}
+	}
+
+
+	focus = {
+		id = SOV_Professionalise_the_Army
+		icon = GFX_goal_continuous_suppression
+		prerequisite = { focus = SOV_Expand_the_wave }
+		x = 0 
+		y = 1
+		relative_position_id = SOV_Expand_the_wave
+		cost = 10 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = no
+
+		search_filters = {}
+
+		search_filters = {}
+		completion_reward = {
+			add_ideas = SOV_Professionalise_the_Army_2
 		}
 	}
 	
@@ -18915,7 +18971,7 @@ ai_will_do = {
 		x = 21
 		y = 1
 		relative_position_id = SOV_reconvene_the_zemsky_sobor
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -18968,7 +19024,7 @@ ai_will_do = {
 			factor = 1
 		}
 		available = {
-			democratic > 0.5
+			democratic > 0.6
 		}
 		available_if_capitulated = no
 		
@@ -19157,7 +19213,7 @@ ai_will_do = {
 		x = 2
 		y = 2
 		relative_position_id = SOV_hold_election
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -19318,7 +19374,7 @@ ai_will_do = {
 		x = 3
 		y = 1
 		relative_position_id = SOV_our_own_alliance
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -19331,7 +19387,7 @@ ai_will_do = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
-			add_political_power = 100
+			add_political_power = 50
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = SOV_expand_the_union_tt
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -19374,7 +19430,7 @@ ai_will_do = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_closer_cooperation
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -20750,7 +20806,7 @@ ai_will_do = {
 		x = 2
 		y = 1
 		relative_position_id = SOV_internal_management
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -21031,7 +21087,7 @@ ai_will_do = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_foreign_development
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -21062,10 +21118,31 @@ ai_will_do = {
 						has_state_category = megalopolis
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+					OR = {
+						has_state_category = city
+						has_state_category = large_city
+						has_state_category = metropolis
+						has_state_category = megalopolis
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -21086,28 +21163,7 @@ ai_will_do = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 2
-						include_locked = yes
-					}
-					OR = {
-						has_state_category = city
-						has_state_category = large_city
-						has_state_category = metropolis
-						has_state_category = megalopolis
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}

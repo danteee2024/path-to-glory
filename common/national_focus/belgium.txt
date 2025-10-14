@@ -69,7 +69,7 @@ focus_tree = {
 		x = 0
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 		}
@@ -724,7 +724,7 @@ focus_tree = {
 				else = {
 					custom_effect_tooltip = BEL_modify_mobilize_the_nation_dynamic_modifier_tt
 					add_to_variable = { 
-						BEL_mobilize_the_nation_conscription = 0.015
+						BEL_mobilize_the_nation_conscription = 0.010
 						tooltip = conscription_tt				
 					}	 
 				}		 
@@ -974,7 +974,7 @@ focus_tree = {
 		x = -3
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 		}
@@ -998,7 +998,7 @@ focus_tree = {
 			ELSE = {
 				custom_effect_tooltip = BEL_modify_scars_of_ww1_dynamic_modifier_tt
 				add_to_variable = { 
-					BEL_scars_of_ww1_production_speed_arms_factory_factor = 0.2
+					BEL_scars_of_ww1_production_speed_arms_factory_factor = 0.1
 					tooltip = production_speed_arms_factory_factor_tt
 				}
 				add_to_variable = { 
@@ -1030,7 +1030,7 @@ focus_tree = {
 		x = -6
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 		}
@@ -1139,7 +1139,7 @@ focus_tree = {
 		x = -1
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 		}
@@ -1670,7 +1670,7 @@ focus_tree = {
 				else = {
 					custom_effect_tooltip = BEL_modify_mobilize_the_nation_dynamic_modifier_tt
 					add_to_variable = { 
-						BEL_mobilize_the_nation_conscription = 0.015
+						BEL_mobilize_the_nation_conscription = 0.010
 						tooltip = conscription_tt				
 					}	 
 				}		 
@@ -1746,7 +1746,7 @@ focus_tree = {
 		x = 1
 		y = 1
 	
-		cost = 5
+		cost = 10
 		available_if_capitulated = yes
 		available = {
 			6 = {
@@ -1801,7 +1801,7 @@ focus_tree = {
 		x = 0
 		y = 2
 	
-		cost = 5
+		cost = 10
 
 		available = {
 		}
@@ -2224,7 +2224,7 @@ focus_tree = {
 		x = 0
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 		}
@@ -7498,7 +7498,7 @@ focus = {
 		x = 0
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 			34 = {
