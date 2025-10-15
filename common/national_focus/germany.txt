@@ -26089,7 +26089,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_revive_the_kaiserreich_ww
 
-		cost = 5
+		cost = 10
 
 		available = {
 			has_government = neutrality
