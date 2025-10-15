@@ -1134,6 +1134,197 @@ focus = {
     completion_reward = {
        
     unlock_decision_category_tooltip = SAU_Oil_Trade_category
+    add_ideas = SAU_Oil_Trade2
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+focus = {
+    id = SAU_infrastructure
+    icon = GFX_goal_generic_construct_infrastructure
+    prerequisite = {
+        focus = SAU_Oil_Trade
+    }
+	relative_position_id = SAU_Oil_Trade
+    x = 1
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+         random_controlled_state = {
+           prioritize = { 292 }
+                	add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+             random_controlled_state = {
+           prioritize = { 678 }
+                	add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+             random_controlled_state = {
+           prioritize = { 858 }
+                	add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+             random_controlled_state = {
+           prioritize = { 859 }
+                	add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+    
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+focus = {
+    id = SAU_infrastructure2
+    icon = GFX_SOV_infrastructure_effort_nsb_ccp_2d_sov_compatibility
+    prerequisite = {
+        focus = SAU_Oil_Trade
+    }
+	relative_position_id = SAU_Oil_Trade
+    x = -1
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+        build_railway = {
+				path = { 12883 2033 7934 12758 10892 12813 12727 5024 12702 }
+			}
+    
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Oil_Trade2
+    icon = GFX_goal_generic_construct_civ_factory
+    prerequisite = {
+        focus = SAU_infrastructure
+    }
+     prerequisite = {
+        focus = SAU_infrastructure2
+    }
+	relative_position_id = SAU_Oil_Trade
+    x = 0
+    y = 2
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+         random_controlled_state = {
+           prioritize = { 859 }
+           add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+             random_controlled_state = {
+           prioritize = { 856 }
+           add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Oil_Trade3
+    icon = GFX_focus_generic_stockpile_fuel
+    prerequisite = {
+        focus = SAU_Oil_Trade2
+    }
+	relative_position_id = SAU_Oil_Trade2
+    x = 2
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+         random_controlled_state = {
+           prioritize = { 678 }
+           add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = fuel_silo
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+             random_controlled_state = {
+           prioritize = { 859 }
+           add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = fuel_silo
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+              random_controlled_state = {
+           prioritize = { 292 }
+           add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = fuel_silo
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+              random_controlled_state = {
+           prioritize = { 858 }
+           add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = fuel_silo
+					level = 2
+					instant_build = yes
+				}
+                
+			}
 
     }
     
@@ -1143,5 +1334,6 @@ focus = {
 }
 
 }
+	
 	
 	

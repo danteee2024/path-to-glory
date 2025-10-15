@@ -116,5 +116,15 @@ original_tag = GER
     }
 }
 
+SAU_Oil_Trade2 =  {
+    picture = MEX_oil_concessions
+    allowed = { original_tag = SAU }
+    modifier = {
+     fuel_gain = -0.2
+     consumer_goods_factor = 0.1
+    }
+}
+
+
 }
 }
