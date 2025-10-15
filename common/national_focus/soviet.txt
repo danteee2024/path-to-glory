@@ -15721,7 +15721,7 @@ ai_will_do = {
 		x = 2
 		y = 1
 		relative_position_id = SOV_unification_of_the_exiles
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
