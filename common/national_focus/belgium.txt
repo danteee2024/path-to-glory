@@ -1670,14 +1670,14 @@ focus_tree = {
 				else = {
 					custom_effect_tooltip = BEL_modify_mobilize_the_nation_dynamic_modifier_tt
 					add_to_variable = { 
-						BEL_mobilize_the_nation_conscription = 0.010
+						BEL_mobilize_the_nation_conscription = 0.015
 						tooltip = conscription_tt				
 					}	 
 				}		 
 			}
 			add_timed_idea = { 
 				idea = BEL_lack_of_junior_officers_ns
-				days = 180
+				days = 270
 			}
 		}
 
@@ -4017,7 +4017,10 @@ focus = {
 		y = 1
 	
 		cost = 5
-
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 		available = {
 			29 = {
 				is_fully_controlled_by = BEL
@@ -7303,7 +7306,10 @@ focus = {
 					level = 1
 					instant_build = yes
 				}	
-			}	
+			}	#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 		}
 
 	}
@@ -8630,7 +8636,10 @@ focus = {
 		}
 
 	}
-
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 
 
 

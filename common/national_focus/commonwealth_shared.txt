@@ -16,7 +16,10 @@ shared_focus = {
 			has_focus_tree = canadian_focus
 		}
 	}
-	
+	#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 	offset = {
 		x = 22
 		y = 0
@@ -161,7 +164,10 @@ joint_focus = {
 			
 	}
 }
-
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 joint_focus = {
 	id = Commonwealth_political_cooperation
 	icon = GFX_focus_RAJ_to_shake_the_world
@@ -349,7 +355,10 @@ joint_focus = {
 
 	icon =GFX_focus_RAJ_appoint_a_c_suite
 
-
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 	prerequisite = { focus = Commonwealth_shared_intelligence }
 	prerequisite = { focus = Commonwealth_economic_union }
 
@@ -1909,7 +1918,10 @@ joint_focus = {
 		}		
 	}
 }
-
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 joint_focus = {
 	id = Commonwealth_Indian_Air
 	
@@ -2907,7 +2919,10 @@ joint_focus = {
 	
 	prerequisite = { focus = Commonwealth_Commonwealth_industry }
 	mutually_exclusive = { focus = Commonwealth_Commonwealth_rocketry }
-
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 	x = 0
 	y = 1
 	relative_position_id = Commonwealth_Commonwealth_industry
@@ -3208,7 +3223,10 @@ joint_focus = {
 	relative_position_id = Commonwealth_Commonwealth_military_industry
 	cost = 5
 
-	
+	#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 
 	available = {
 		Commonwealth_basic_available_trigger = yes
@@ -3510,7 +3528,10 @@ joint_focus = {
 			category = cat_production
 		}
 	}
-
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 	completion_reward_joint_member = {
 		add_tech_bonus = {
 			name = Commonwealth_machine_tools_research
