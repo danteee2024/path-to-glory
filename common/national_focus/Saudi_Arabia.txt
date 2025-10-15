@@ -1118,6 +1118,30 @@ focus = {
         factor = 1.2
     }
 }
+
+#####ECO TREE###
+
+focus = {
+    id = SAU_Oil_Trade
+    icon = GFX_focus_PER_increase_oil_sales
+	relative_position_id = SAU_consolidate_royal_authority
+    x = 12
+    y = 0
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+       
+    unlock_decision_category_tooltip = SAU_Oil_Trade_category
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
 }
 	
 	

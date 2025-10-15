@@ -16,6 +16,11 @@ characters={
 			expire="1965.1.1.1"
 			id=-1
 		}
+		country_leader = {
+			ideology=liberalism
+			expire="1965.1.1.1"
+			id=-1
+		}
 	}
 	SAU_philip_gordon_lee={
 		advisor={

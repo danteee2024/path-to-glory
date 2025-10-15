@@ -97,6 +97,24 @@ SAU_Building4 =  {
      consumer_goods_factor = -0.1
     }
 }
+SAU_Oil_Trade =  {
+    picture = MEX_oil_concessions
+    allowed = { original_tag = USA 
+original_tag = FRA
+original_tag = ENG
+original_tag = USA
+original_tag = ITA
+original_tag = JAP
+original_tag = GER
+}
+    modifier = {
+     fuel_gain = 0.2
+     army_fuel_consumption_factor = -0.15
+     navy_fuel_consumption_factor = -0.15
+     air_fuel_consumption_factor = -0.15
+     consumer_goods_factor = -0.2
+    }
+}
 
 }
 }

@@ -293,6 +293,7 @@ SAU_Integration_category = {
 		visible = {
 			has_completed_focus = SAU_Middle_East3
 			PER = { is_in_faction = no }
+			PER = { exists = yes }
 
 		}
 		activation = {
@@ -332,6 +333,7 @@ SAU_Integration_category = {
 		visible = {
 			has_completed_focus = SAU_Middle_East3
 			IRQ = { is_in_faction = no }
+			IRQ = { exists = yes }
 
 		}
 		activation = {
@@ -370,6 +372,7 @@ SAU_Integration_category = {
 		visible = {
 			has_completed_focus = SAU_Middle_East3
 			YEM = { is_in_faction = no }
+			YEM = { exists = yes }
 
 		}
 		activation = {
@@ -408,6 +411,7 @@ SAU_Integration_category = {
 		visible = {
 			has_completed_focus = SAU_Middle_East3
 			AFG = { is_in_faction = no }
+			AFG = { exists = yes }
 
 		}
 		activation = {
@@ -447,6 +451,7 @@ SAU_Integration_category = {
 		visible = {
 			has_completed_focus = SAU_Middle_East3
 			TUR = { is_in_faction = no }
+			TUR = { exists = yes }
 
 		}
 		activation = {
@@ -892,4 +897,77 @@ SAU_Iran_Building = {
 		}	
 	}
 
+}
+
+SAU_Oil_Trade_category = {
+
+	SAU_Oil_Trade = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = SAU
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = GER
+					original_tag = FRA
+					original_tag = ITA
+					original_tag = ENG
+					original_tag = SOV
+					original_tag = JAP
+					original_tag = USA
+				}
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+		}
+		available = {
+	        GER = {
+				not = { has_idea = SAU_Oil_Trade } }
+			JAP = {
+				not = { has_idea = SAU_Oil_Trade } }
+			ITA = {
+				not = { has_idea = SAU_Oil_Trade } }
+			USA = {
+				not = { has_idea = SAU_Oil_Trade } }
+			FRA = {
+				not = { has_idea = SAU_Oil_Trade } }
+			ENG = {
+				not = { has_idea = SAU_Oil_Trade } }		
+			SOV = {
+				not = { has_idea = SAU_Oil_Trade } }	
+
+		}
+		
+		visible = {
+
+		}
+		activation = {
+			always = yes
+		}
+		is_good = yes
+		days_remove = 10
+		cost = 20
+		fire_only_once = no
+		cancel_effect = {
+		}
+
+		remove_effect = {
+				FROM = {
+					add_timed_idea = {
+						idea = SAU_Oil_Trade
+						days = 90
+					}
+			 }
+			 
+		}	
+	}
 }
