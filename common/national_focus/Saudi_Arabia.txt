@@ -55,7 +55,7 @@ focus = {
 		focus = SAU_consolidate_royal_authority
 	}
 	relative_position_id = SAU_consolidate_royal_authority
-    x = -3
+    x = -4
     y = 1
     cost = 5
     available = {
@@ -654,7 +654,7 @@ prerequisite = {
         focus = SAU_Middle_East
 	}
 	relative_position_id = SAU_Saudi_Arabia
-    x = 1
+    x = 2
     y = 1
     cost = 10
     available = {
@@ -696,10 +696,10 @@ focus = {
     id = SAU_Saudi_Arabia7
     icon = GFX_goal_generic_construct_infrastructure
 	prerequisite = {
-		focus = SAU_Saudi_Arabia3
+		focus = SAU_Saudi_Arabia3 focus = SAU_Middle_East4
 	}
 	relative_position_id = SAU_Saudi_Arabia3
-    x = 1
+    x = 2
     y = 2
     cost = 10
     available = {
@@ -778,13 +778,32 @@ focus = {
 		focus = SAU_consolidate_royal_authority
 	}
 	relative_position_id = SAU_consolidate_royal_authority
-    x = 3
+    x = 5
     y = 1
-    cost = 5
+    cost = 4
     available = {
          
     }
     completion_reward = {
+          set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+                promote_character = { 
+					character = SAU_abdulaziz_ibn_saud
+					ideology =  liberalism 
+				}
+			set_party_name = {
+				ideology = democratic
+				long_name = "House of Saud"
+				name =  "House of Saud"
+			}
+           
+        add_popularity = {
+            ideology = democratic
+            popularity = 0.5
+        }
+        add_country_leader_trait = socialite_connections
         add_ideas = SAU_Middle_East
         
     }
@@ -823,7 +842,7 @@ focus = {
         prerequisite = { focus = SAU_Saudi_Arabia5
 	}
 	relative_position_id = SAU_Middle_East1
-    x = -1
+    x = -2
     y = 1
     cost = 5
     available = {
@@ -866,7 +885,7 @@ focus = {
 	prerequisite = {
 		focus = SAU_Middle_East2 }
 	relative_position_id = SAU_Middle_East2
-    x = 1
+    x = 2
     y = 1
     cost = 5
     available = {
@@ -875,6 +894,7 @@ focus = {
     completion_reward = {
        set_rule = { can_create_factions = yes }
 			create_faction = "SAU_United_Middle_East"
+            unlock_decision_category_tooltip = SAU_Middle_East_category
     }
     ai_will_do = {
         factor = 1.2
@@ -907,7 +927,175 @@ focus = {
         factor = 1.2
     }
 }
-	
-	
-	
+
+focus = {
+    id = SAU_Middle_East4
+    icon = GFX_goal_continuous_non_factory_construct
+	prerequisite = {
+	focus = SAU_Middle_East3
+	}
+    prerequisite = {
+	focus = SAU_Saudi_Arabia6
+	}
+	relative_position_id = SAU_Middle_East3
+    x = -2
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+          swap_ideas = {
+            remove_idea =  SAU_Building2
+            add_idea =  SAU_Building4
+        }
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
 }
+
+focus = {
+    id = SAU_Middle_East5
+    icon = GFX_focus_generic_influence_middle_east
+	prerequisite = {
+	focus = SAU_Middle_East4
+	}
+    prerequisite = {
+	focus = SAU_Syria2
+	}
+	relative_position_id = SAU_Middle_East4
+    x = 1
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+       add_stability = 0.1  
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+focus = {
+    id = SAU_Middle_East6
+    icon = GFX_focus_POL_develop_polish_shipbuilding
+	prerequisite = {
+	focus = SAU_Middle_East5
+	}
+	relative_position_id = SAU_Middle_East5
+    x = 0
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+        random_controlled_state = {
+           prioritize = { 292 }
+				add_extra_state_shared_building_slots = 4
+                	add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+                
+			}
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Middle_East7
+    icon = GFX_focus_usa_build_the_pentagon
+	prerequisite = {
+	focus = SAU_Middle_East6
+	}
+    prerequisite = {
+	focus = SAU_Saudi_Arabia7
+	}
+	relative_position_id = SAU_Middle_East6
+    x = -1
+    y = 1
+    cost = 10
+    available = {
+       PER = { is_puppet_of = SAU }
+       AFG = { is_puppet_of = SAU }
+       IRQ = { is_puppet_of = SAU }
+       TUR = { is_puppet_of = SAU }
+       YEM = { is_puppet_of = SAU }
+    }
+    completion_reward = {
+      hidden_effect = {
+           annex_country = {
+            target = TUR
+            transfer_troops = yes
+        }
+           annex_country = {
+            target = IRQ
+            transfer_troops = yes
+        }
+           annex_country = {
+            target = AFG
+            transfer_troops = yes
+        }
+           annex_country = {
+            target = YEM
+            transfer_troops = yes
+        }
+           annex_country = {
+            target = PER
+            transfer_troops = yes
+        }
+        every_state = {
+				limit = { is_core_of = PER }
+				add_core_of = ROOT
+			}
+            every_state = {
+				limit = { is_core_of = AFG }
+				add_core_of = ROOT
+			}
+            every_state = {
+				limit = { is_core_of = YEM }
+				add_core_of = ROOT
+			}
+            every_state = {
+				limit = { is_core_of = IRQ }
+				add_core_of = ROOT
+			}
+            every_state = {
+				limit = { is_core_of = TUR }
+				add_core_of = ROOT
+			}
+            
+			291 = {
+				add_victory_points = {
+					province = 2097
+					value = 5
+				}
+			}
+             } 
+             set_capital = {
+				state = 291 
+				remember_old_capital = no
+			}
+      
+              set_cosmetic_tag = SAU_United_States_of_the_Middle_East
+              set_country_flag = FORK_MID_democratic
+
+            
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+}
+	
+	
