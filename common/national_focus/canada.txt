@@ -17,7 +17,10 @@ focus_tree = {
 		#}
 	}
 	
-	
+	#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 	default = no
 
 	shared_focus = Commonwealth_form_joint_alliance
@@ -1960,7 +1963,10 @@ focus_tree = {
 			}
 		}
 	}
-
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 	focus = {
 		id = CAN_canadian_infantry_corps
 		icon = GFX_focus_ETH_freedom_at_gunpoint
@@ -3632,7 +3638,10 @@ focus = {
 		bypass = {
 
 		}
-
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -4630,7 +4639,10 @@ focus = {
 				category = air_doctrine
 			}
 		}
-
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 		completion_reward = {
 			air_experience = 25
 			random_owned_controlled_state = {
@@ -5282,3 +5294,4 @@ focus = {
 	}
 
 }		
+#fuck you giamper 

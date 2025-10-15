@@ -4017,7 +4017,10 @@ focus = {
 		y = 1
 	
 		cost = 5
-
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 		available = {
 			29 = {
 				is_fully_controlled_by = BEL
@@ -7303,7 +7306,10 @@ focus = {
 					level = 1
 					instant_build = yes
 				}	
-			}	
+			}	#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 		}
 
 	}
@@ -8630,7 +8636,10 @@ focus = {
 		}
 
 	}
-
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 
 
 

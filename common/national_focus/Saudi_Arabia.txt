@@ -44,6 +44,11 @@ focus_tree = {
         factor = 1.2
     }
 }
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
+
 ### Arabian Empire Path
 focus = {
     id = SAU_Arabian_Empire
@@ -131,7 +136,10 @@ focus = {
         factor = 1.2
     }
 }
-
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 focus = {
     id = SAU_Arabia_Army2
     icon = GFX_SOV_reinstitute_the_mestnichestvo_ccp_2d_sov_compatibility
@@ -276,7 +284,10 @@ focus = {
     y = 1
     cost = 10
     available = {
-         
+         #Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
     }
     completion_reward = {
 
@@ -566,7 +577,10 @@ focus = {
         factor = 1.2
     }
 }
-
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 focus = {
     id = SAU_Saudi_Arabia2
     icon = GFX_focus_generic_economic_recovery
@@ -792,6 +806,13 @@ focus = {
         factor = 1.2
     }
 }
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
+
+
+#fuck you giamper you
 
 	
 }
