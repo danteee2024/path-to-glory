@@ -1670,14 +1670,14 @@ focus_tree = {
 				else = {
 					custom_effect_tooltip = BEL_modify_mobilize_the_nation_dynamic_modifier_tt
 					add_to_variable = { 
-						BEL_mobilize_the_nation_conscription = 0.010
+						BEL_mobilize_the_nation_conscription = 0.015
 						tooltip = conscription_tt				
 					}	 
 				}		 
 			}
 			add_timed_idea = { 
 				idea = BEL_lack_of_junior_officers_ns
-				days = 180
+				days = 270
 			}
 		}
 
