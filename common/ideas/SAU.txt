@@ -87,6 +87,16 @@ SAU_Building3 =  {
      resource_trade_cost_bonus_per_factory = 1
     }
 }
+SAU_Building4 =  {
+    picture = generic_improved_industries
+    allowed = { original_tag = SAU }
+    modifier = {
+     production_speed_buildings_factor = 0.1
+     production_factory_efficiency_gain_factor = 0.1
+     production_factory_max_efficiency_factor = 0.05
+     consumer_goods_factor = -0.1
+    }
+}
 
 }
 }
