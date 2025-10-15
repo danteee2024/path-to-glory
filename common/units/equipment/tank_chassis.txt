@@ -276,7 +276,10 @@ equipments = {
 		group_by = archetype
 		interface_category = interface_category_armor
 		priority = 2000
-
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 		module_slots = {
 
 			turret_type_slot = {
@@ -495,7 +498,10 @@ equipments = {
 			steel = 2
 		}
 	}
-
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 	heavy_tank_chassis = {
 		year = 1922
 		is_archetype = yes
@@ -695,6 +701,7 @@ equipments = {
 		priority = 2000
 		module_slots = inherit
 		armor_value = 50
+		build_cost_ic = 12
 		maximum_speed = 5
 		reliability = 0.75
 	}
