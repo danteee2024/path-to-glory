@@ -480,7 +480,7 @@ SAU_Iran_Puppet = {
 		}
 		available = {
 			PER = { is_in_faction = yes }
-	        
+	        has_completed_focus = SAU_Middle_East5
 		}
 		
 		visible = {
@@ -520,6 +520,7 @@ SAU_Iran_Puppet = {
 		}
 		available = {
 			IRQ = { is_in_faction = yes }
+			has_completed_focus = SAU_Middle_East5
 	        
 		}
 		
@@ -558,7 +559,8 @@ SAU_Iran_Puppet = {
 			base = 140
 		}
 		available = {
-	        YEM = { is_in_faction = yes }
+			has_completed_focus = SAU_Middle_East5
+			YEM = { is_in_faction = yes }
 		}
 		
 		visible = {
@@ -596,7 +598,7 @@ SAU_Iran_Puppet = {
 		}
 		available = {
 			AFG = { is_in_faction = yes }
-	        
+	        has_completed_focus = SAU_Middle_East5
 		}
 		
 		visible = {
@@ -635,11 +637,11 @@ SAU_Iran_Puppet = {
 		}
 		available = {
 			TUR = { is_in_faction = yes }
-	        
+	        has_completed_focus = SAU_Middle_East5
 		}
 		
 		visible = {
-			has_completed_focus = SAU_Middle_East5
+			has_completed_focus = SAU_Middle_East3
 			TUR = { is_in_faction = yes }
 
 		}
@@ -656,6 +658,236 @@ SAU_Iran_Puppet = {
 
 		remove_effect = {
 				Puppet = TUR
+			 
+		}	
+	}
+}
+	SAU_Middle_East_Building_category = {
+	
+SAU_Iran_Building = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = SAU
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+	        controls_state = 266
+		}
+		
+		visible = {
+			has_completed_focus = SAU_Middle_East6
+
+		}
+		activation = {
+			always = yes
+		}
+		is_good = yes
+		days_remove = 10
+		cost = 50
+		fire_only_once = yes
+
+		cancel_effect = {
+		}
+
+		remove_effect = {
+				
+			add_resource = {
+				type = tungsten
+				amount = 10
+				state = 266
+			} 
+			add_resource = {
+				type = aluminium
+				amount = 10
+				state = 266
+			} 
+			 
+		}	
+	}
+
+	SAU_Iraq_Building = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = SAU
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+			
+			controls_state = 291
+	        
+		}
+		
+		visible = {
+			has_completed_focus = SAU_Middle_East6
+
+		}
+		activation = {
+			always = yes
+		}
+		is_good = yes
+		days_remove = 10
+		cost = 50
+		fire_only_once = yes
+
+		cancel_effect = {
+		}
+
+		remove_effect = {
+			add_resource = {
+				type = oil
+				amount = 15
+				state = 291
+			} 
+			 
+		}	
+	}
+
+	SAU_Yemen_Building = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = SAU
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+			controls_state = 293
+		}
+		
+		visible = {
+			has_completed_focus = SAU_Middle_East6
+
+		}
+		activation = {
+			always = yes
+		}
+		is_good = yes
+		days_remove = 10
+		cost = 50
+		fire_only_once = yes
+		cancel_effect = {
+		}
+
+		remove_effect = {
+			add_resource = {
+				type = oil
+				amount = 10
+				state = 293
+			} 
+			 
+		}	
+	}
+
+	SAU_Afghanistan_Building = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = SAU
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+			controls_state = 267
+	        
+		}
+		
+		visible = {
+			has_completed_focus = SAU_Middle_East6
+
+		}
+		activation = {
+			always = yes
+		}
+		is_good = yes
+		days_remove = 10
+		cost = 50
+		fire_only_once = yes
+
+		cancel_effect = {
+		}
+
+		remove_effect = {
+			add_resource = {
+				type = steel
+				amount = 10
+				state = 267
+			} 
+			add_resource = {
+				type = tungsten
+				amount = 10
+				state = 267
+			} 
+			add_resource = {
+				type = chromium
+				amount = 5
+				state = 267
+			} 
+		}	
+	}
+
+	SAU_Turkey_Building = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = SAU
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+			controls_state = 49
+		}
+		
+		visible = {
+			has_completed_focus = SAU_Middle_East6
+
+		}
+		activation = {
+			always = yes
+		}
+		is_good = yes
+		days_remove = 10
+		cost = 50
+		fire_only_once = yes
+
+		cancel_effect = {
+		}
+
+		remove_effect = {
+			add_resource = {
+				type = steel
+				amount = 10
+				state = 49
+			} 
+			add_resource = {
+				type = chromium
+				amount = 10
+				state = 49
+			} 
+				
 			 
 		}	
 	}
