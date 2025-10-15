@@ -814,5 +814,121 @@ focus = {
 
 #fuck you giamper you
 
+focus = {
+    id = SAU_Middle_East1
+    icon = GFX_SOV_autonomous_soviet_republics_ccp_2d_sov_compatibility
+	prerequisite = {
+		focus = SAU_Middle_East
+	}
+	relative_position_id = SAU_Middle_East
+    x = 0
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+        add_stability = 0.1
+        add_political_power = 120
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Middle_East2
+    icon = GFX_SOV_annex_tannu_tuva_ccp_2d_sov_compatibility
+	prerequisite = {
+		focus = SAU_Middle_East1 }
+        prerequisite = { focus = SAU_Saudi_Arabia5
+	}
+	relative_position_id = SAU_Middle_East1
+    x = -1
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+        add_ideas = free_trade
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_UK_Colony2
+    icon = GFX_focus_chi_british_cooperation
+	prerequisite = {
+	focus = SAU_Middle_East1
+	}
+	relative_position_id = SAU_Middle_East1
+    x = 1
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+		ENG = {
+					country_event = SAU.145
+				}
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Middle_East3
+    icon = GFX_focus_GER_align_middle_east
+	prerequisite = {
+		focus = SAU_Middle_East2 }
+	relative_position_id = SAU_Middle_East2
+    x = 1
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+       set_rule = { can_create_factions = yes }
+			create_faction = "SAU_United_Middle_East"
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+focus = {
+    id = SAU_Syria2
+    icon = GFX_focus_chi_reach_out_to_france
+	prerequisite = {
+	focus = SAU_Middle_East3
+	}
+    prerequisite = {
+	focus = SAU_UK_Colony2
+	}
+	relative_position_id = SAU_Middle_East3
+    x = 1
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+        FRA = {
+					country_event = SAU.545
+				}
+        
+		
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+	
+	
 	
 }

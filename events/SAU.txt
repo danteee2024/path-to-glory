@@ -84,6 +84,10 @@ country_event = {
 				659 = { add_core_of = SAU }
 				transfer_state = 992
 				992 = { add_core_of = SAU }
+				transfer_state = 455
+				455 = { add_core_of = SAU }
+				transfer_state = 454 
+				454 = { add_core_of = SAU }
 
 		diplomatic_relation = {
 			country = ENG
@@ -133,6 +137,8 @@ country_event = {
 				294 = { add_core_of = SAU }
 				659 = { add_core_of = SAU }
 				992 = { add_core_of = SAU }
+				455 = { add_core_of = SAU }
+				454 = { add_core_of = SAU }
 		create_wargoal = {
 			type = take_state_focus
 			target = FROM
@@ -200,10 +206,6 @@ country_event = {
 	
 	option = {
 		name = SAU.246.a
-				transfer_state = 455
-				455 = { add_core_of = SAU }
-				transfer_state = 454 
-				454 = { add_core_of = SAU }
 				 transfer_state = 453
 				453 = { add_core_of = SAU }
 				transfer_state = 446
@@ -260,10 +262,7 @@ country_event = {
 		}	
 	}	
 
-	transfer_state = 455
-				455 = { add_core_of = SAU }
-				 
-				454 = { add_core_of = SAU }
+
 				
 				453 = { add_core_of = SAU }
 				
