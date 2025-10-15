@@ -5042,7 +5042,7 @@ focus_tree = {
 			has_full_control_of_state = 219 #MOSCOW
 			has_equipment = { train_equipment > 119 } #20 trains per factory
 			OR = {
-				threat > 0.85
+				threat > 0.50
 				any_enemy_country = {
 					SOV_is_major_not_original_sov = yes
 					capital_scope = {
@@ -5293,7 +5293,7 @@ focus_tree = {
 		completion_reward = {
 			add_timed_idea = {
 				idea = SOV_the_road_of_life_ns
-				days = 730
+				days = 1825
 			}
 		}
 	}

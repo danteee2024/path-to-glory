@@ -69,7 +69,7 @@ focus_tree = {
 		x = 0
 		y = 1
 	
-		cost = 10
+		cost = 5
 
 		available = {
 		}
@@ -703,7 +703,7 @@ focus_tree = {
 		x = 1
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 			NOT = { 
@@ -731,7 +731,7 @@ focus_tree = {
 			}
 			add_timed_idea = { 
 				idea = BEL_lack_of_junior_officers_ns
-				days = 180
+				days = 270
 			}
 		}
 	}
@@ -747,7 +747,7 @@ focus_tree = {
 		x = 1
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 		}
@@ -1139,7 +1139,7 @@ focus_tree = {
 		x = -1
 		y = 1
 	
-		cost = 10
+		cost = 5
 
 		available = {
 		}
@@ -1154,7 +1154,7 @@ focus_tree = {
 				add_doctrine_cost_reduction = {
 					name = BEL_resist_and_bite
 					cost_reduction = 0.25
-					uses = 2
+					uses = 1
 					category = cat_mountaineers_doctrine
 				}
 			}
@@ -1274,7 +1274,7 @@ focus_tree = {
 		x = 0
 		y = 1
 	
-		cost = 10
+		cost = 5
 
 		available = {
 		}
@@ -1312,7 +1312,7 @@ focus_tree = {
 		x = 0
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 		}
@@ -1497,7 +1497,7 @@ focus_tree = {
 		x = 0
 		y = 2
 	
-		cost = 5
+		cost = 10
 
 		available = {
 		}
@@ -1528,7 +1528,7 @@ focus_tree = {
 		x = 0
 		y = 2
 	
-		cost = 5
+		cost = 10
 
 		available = {
 		}
@@ -1649,7 +1649,7 @@ focus_tree = {
 		x = 1
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 			NOT = { 
@@ -1746,7 +1746,7 @@ focus_tree = {
 		x = 1
 		y = 1
 	
-		cost = 10
+		cost = 5
 		available_if_capitulated = yes
 		available = {
 			6 = {
@@ -1801,7 +1801,7 @@ focus_tree = {
 		x = 0
 		y = 2
 	
-		cost = 10
+		cost = 5
 
 		available = {
 		}
@@ -2224,7 +2224,7 @@ focus_tree = {
 		x = 0
 		y = 1
 	
-		cost = 10
+		cost = 5
 
 		available = {
 		}
@@ -3548,7 +3548,7 @@ focus = {
 		x = 1
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 		}
@@ -3959,7 +3959,7 @@ focus = {
 		x = -2
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 			OR = {
@@ -3981,7 +3981,8 @@ focus = {
 		}
 
 		completion_reward = {
-
+			add_political_power = 300
+			
 			every_state = {
 				limit = {
 					OR = {
@@ -6919,7 +6920,7 @@ focus = {
 		x = 0
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 		}
