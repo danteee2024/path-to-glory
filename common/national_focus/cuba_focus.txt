@@ -1556,7 +1556,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = { 
-			neutrality > 0.3
+			neutrality > 0.4
 		}
 
 		completion_reward = {
