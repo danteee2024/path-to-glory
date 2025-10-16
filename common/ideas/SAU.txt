@@ -124,6 +124,50 @@ SAU_Oil_Trade2 =  {
      consumer_goods_factor = 0.1
     }
 }
+SAU_Oil_Trade3 =  {
+    picture = MEX_oil_concessions
+    allowed = { original_tag = SAU }
+    modifier = {
+     fuel_gain = -0.1
+     consumer_goods_factor = 0.05
+     research_speed_factor = 0.15
+    }
+}
+SAU_Oil_Trade4 =  {
+    picture = MEX_oil_concessions
+    allowed = { original_tag = SAU }
+    modifier = {
+     consumer_goods_factor = -0.05
+     research_speed_factor = 0.15
+     fuel_gain = 0.1
+    }
+}
+
+SAU_Oil_Trade5 =  {
+    picture = MEX_oil_concessions
+    allowed = { original_tag = SAU }
+    modifier = {
+     consumer_goods_factor = -0.20
+     research_speed_factor = 0.15
+     fuel_gain = 0.25
+     production_speed_buildings_factor = 0.1
+     production_oil_factor = 0.1
+    }
+}
+
+SAU_Oil_Trade6 =  {
+    picture = MEX_oil_concessions
+    allowed = { original_tag = SAU }
+    modifier = {
+     consumer_goods_factor = -0.20
+     research_speed_factor = 0.15
+     fuel_gain = 0.25
+     production_factory_efficiency_gain_factor = 0.05
+     production_factory_max_efficiency_factor = 0.05
+     production_factory_start_efficiency_factor = 0.05
+     production_oil_factor = 0.1
+    }
+}
 
 
 }

@@ -21,7 +21,7 @@ focus_tree = {
 	
 	default = no
 
-	continuous_focus_position = { x = 50 y = 1500 }
+	continuous_focus_position = { x = 1500 y = 1500 }
 
  focus = {
     id = SAU_consolidate_royal_authority
@@ -1123,7 +1123,7 @@ focus = {
 
 focus = {
     id = SAU_Oil_Trade
-    icon = GFX_focus_PER_increase_oil_sales
+    icon = GFX_focus_PER_invite_oil_nations
 	relative_position_id = SAU_consolidate_royal_authority
     x = 12
     y = 0
@@ -1151,13 +1151,14 @@ focus = {
 	relative_position_id = SAU_Oil_Trade
     x = 1
     y = 1
-    cost = 5
+    cost = 10
     available = {
          
     }
     completion_reward = {
          random_controlled_state = {
            prioritize = { 292 }
+           add_extra_state_shared_building_slots = 2
                 	add_building_construction = {
 					type = infrastructure
 					level = 2
@@ -1167,6 +1168,7 @@ focus = {
 			}
              random_controlled_state = {
            prioritize = { 678 }
+                    add_extra_state_shared_building_slots = 2
                 	add_building_construction = {
 					type = infrastructure
 					level = 2
@@ -1176,6 +1178,7 @@ focus = {
 			}
              random_controlled_state = {
            prioritize = { 858 }
+                     add_extra_state_shared_building_slots = 2
                 	add_building_construction = {
 					type = infrastructure
 					level = 2
@@ -1185,6 +1188,7 @@ focus = {
 			}
              random_controlled_state = {
            prioritize = { 859 }
+                     add_extra_state_shared_building_slots = 2
                 	add_building_construction = {
 					type = infrastructure
 					level = 2
@@ -1280,46 +1284,392 @@ focus = {
 	relative_position_id = SAU_Oil_Trade2
     x = 2
     y = 1
-    cost = 5
+    cost = 10
     available = {
          
     }
     completion_reward = {
          random_controlled_state = {
            prioritize = { 678 }
-           add_extra_state_shared_building_slots = 2
+           add_extra_state_shared_building_slots = 3
                 	add_building_construction = {
 					type = fuel_silo
-					level = 2
+					level = 3
 					instant_build = yes
 				}
                 
 			}
              random_controlled_state = {
            prioritize = { 859 }
-           add_extra_state_shared_building_slots = 2
+           add_extra_state_shared_building_slots = 3
                 	add_building_construction = {
 					type = fuel_silo
-					level = 2
+					level = 3
 					instant_build = yes
 				}
                 
 			}
               random_controlled_state = {
            prioritize = { 292 }
-           add_extra_state_shared_building_slots = 2
+           add_extra_state_shared_building_slots = 3
                 	add_building_construction = {
 					type = fuel_silo
-					level = 2
+					level = 3
 					instant_build = yes
 				}
                 
 			}
               random_controlled_state = {
            prioritize = { 858 }
-           add_extra_state_shared_building_slots = 2
+           add_extra_state_shared_building_slots = 3
                 	add_building_construction = {
 					type = fuel_silo
+					level = 3
+					instant_build = yes
+				}
+                
+			}
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Oil_Trade4
+    icon = GFX_focus_PER_increase_oil_sales
+    prerequisite = {
+        focus = SAU_Oil_Trade2
+    }
+	relative_position_id = SAU_Oil_Trade2
+    x = 0
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+
+    swap_ideas = {
+        remove_idea = SAU_Oil_Trade2
+        add_idea = SAU_Oil_Trade3
+    }
+    
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+focus = {
+    id = SAU_Research
+    icon = GFX_focus_research
+    prerequisite = {
+        focus = SAU_Oil_Trade2
+    }
+	relative_position_id = SAU_Oil_Trade2
+    x = -2
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+        add_research_slot = 1
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Oil_Trade5
+    icon = GFX_focus_generic_industry_3
+    prerequisite = {
+        focus = SAU_Oil_Trade4
+    }
+	relative_position_id = SAU_Oil_Trade4
+    x = -1
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+      random_controlled_state = {
+           add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+            random_controlled_state = {
+           add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+focus = {
+    id = SAU_infrastructure3
+    icon = GFX_SOV_infrastructure_effort_nsb_ccp_2d_sov_compatibility
+    prerequisite = {
+        focus = SAU_Oil_Trade4
+    }
+	relative_position_id = SAU_Oil_Trade4
+    x = 1
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+        build_railway = {
+				path = { 12758 5027 2057 4974 10744 10876 12046 2097  }
+			}
+        854 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 4974
+					instant_build = yes
+				}
+			}
+    
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Oil_Trade6
+    icon = GFX_goal_generic_oil_refinery
+        prerequisite = { focus = SAU_Oil_Trade5
+    }
+       prerequisite = { focus = SAU_infrastructure3
+    }
+	relative_position_id = SAU_Oil_Trade5
+    x = 1
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+        swap_ideas = {
+        remove_idea = SAU_Oil_Trade3
+        add_idea = SAU_Oil_Trade4
+    }
+        
+    
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Research2
+    icon = GFX_focus_research2
+    prerequisite = {
+        focus = SAU_Oil_Trade5
+    }
+     prerequisite = {
+        focus = SAU_Research
+    }
+	relative_position_id = SAU_Oil_Trade5
+    x = -1
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+        add_research_slot = 1
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+focus = {
+    id = SAU_oil
+    icon = GFX_focus_generic_resource_extraction
+    prerequisite = {
+        focus = SAU_Oil_Trade3
+    }
+     prerequisite = {
+        focus = SAU_infrastructure3
+    }
+	relative_position_id = SAU_Oil_Trade3
+    x = 0
+    y = 2
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+        add_resource = {
+            type = oil
+            amount = 15
+            state = 678
+        }
+        add_resource = {
+            type = oil
+            amount = 15
+            state = 859
+        }
+        add_resource = {
+            type = oil
+            amount = 15
+            state = 292
+        }
+        add_resource = {
+            type = oil
+            amount = 15
+            state = 858
+        }
+        add_resource = {
+            type = oil
+            amount = 30
+            state = 856
+        }
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_infrastructure4
+    icon = GFX_goal_generic_construct_infrastructure
+    prerequisite = {
+        focus = SAU_Oil_Trade6
+    }
+    prerequisite = {
+        focus = SAU_oil
+    }
+	relative_position_id = SAU_Oil_Trade6
+    x = 1
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+         random_controlled_state = {
+           prioritize = { 856 }
+                     add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+              random_controlled_state = {
+           prioritize = { 679 }
+                     add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+             random_controlled_state = {
+           prioritize = { 855 }
+                     add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+             random_controlled_state = {
+           prioritize = { 854 }
+                     add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+             random_controlled_state = {
+           prioritize = { 857 }
+                     add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+    
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Oil_Trade7
+    icon = GFX_focus_generic_modernize_industry
+    prerequisite = {
+        focus = SAU_Oil_Trade6
+    }
+       prerequisite = {
+        focus = SAU_Research2
+    }
+	relative_position_id = SAU_Oil_Trade6
+    x = -1
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+      random_controlled_state = {
+           add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+            random_controlled_state = {
+           add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = industrial_complex
 					level = 2
 					instant_build = yes
 				}
@@ -1333,6 +1683,155 @@ focus = {
     }
 }
 
+focus = {
+    id = SAU_Oil_Trade8
+    icon = GFX_focus_generic_offshore_oil_rig
+    prerequisite = {
+        focus = SAU_Oil_Trade7
+    }
+       prerequisite = {
+        focus = SAU_infrastructure4
+    }
+	relative_position_id = SAU_Oil_Trade7
+    x = 1
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+      random_controlled_state = {
+         prioritize = { 856 }
+           add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+      random_controlled_state = {
+         prioritize = { 859 }
+           add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+             random_controlled_state = {
+             prioritize = { 859 }
+           add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+             random_controlled_state = {
+             prioritize = { 292 }
+           add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Oil_Trade9
+    icon = GFX_goal_continuous_non_factory_construct
+      mutually_exclusive = {
+        focus = SAU_Oil_Trade10
+    }
+    prerequisite = {
+        focus = SAU_Oil_Trade8
+    }
+	relative_position_id = SAU_Oil_Trade8
+    x = 1
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+            swap_ideas = {
+        remove_idea = SAU_Oil_Trade4
+        add_idea = SAU_Oil_Trade5
+    }
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Oil_Trade10
+    icon = GFX_goal_generic_air_production
+    mutually_exclusive = {
+        focus = SAU_Oil_Trade9
+    }
+    prerequisite = {
+        focus = SAU_Oil_Trade8
+    }
+	relative_position_id = SAU_Oil_Trade8
+    x = -1
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+            swap_ideas = {
+        remove_idea = SAU_Oil_Trade4
+        add_idea = SAU_Oil_Trade6
+    }
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+### Military Tree
+focus = {
+    id = SAU_Military
+    icon = GFX_focus_generic_military_industry
+   
+	relative_position_id = SAU_Oil_Trade
+    x = 6
+    y = 0
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+      random_controlled_state = {
+           add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
 }
 	
 	
