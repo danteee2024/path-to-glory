@@ -191,7 +191,101 @@ SAU_Army = {
      conscription_factor = 0.03
     }
 }
+SAU_Planning = {
+    picture = MEX_politicised_army_2
+    allowed = { original_tag = SAU }
+    modifier = {
+    max_planning = 0.05
+    planning_speed = 0.05
+    
+    }
+}
+
+SAU_Tank_Production = {
+    picture = man_five_year_plan_tank
+    allowed = { original_tag = SAU }
+    equipment_bonus = {
+				heavy_tank_chassis = {
+					build_cost_ic = -0.1
+					reliability = 0.1 instant = yes
+					soft_attack = 0.1
+				}
+                medium_tank_chassis = {
+					build_cost_ic = -0.1
+					reliability = 0.1 instant = yes
+					soft_attack = 0.1
+				}
+			}
+}
+
+SAU_Tank_Army = {
+    picture = generic_acquire_tanks
+    allowed = { original_tag = SAU }
+    modifier = {
+        army_armor_attack_factor = 0.1
+        army_armor_defence_factor = 0.1
+        army_armor_speed_factor = 0.05
+    }
+}
+
+SAU_Army_reinforce = {
+    picture = chi_army_corruption3
+    allowed = { original_tag = SAU }
+    modifier = {
+        		land_reinforce_rate = 0.02
+				army_morale_factor = 0.05
+    }
+}
+
+SAU_Artillery = {
+    picture = SOV_defense_industry_artillery_bonus_ccp_sov_compatibility
+    allowed = { original_tag = SAU }
+    equipment_bonus = {
+			artillery = {
+				build_cost_ic = -0.15
+                soft_attack = 0.05
+				instant = yes
+			}
+            anti_tank_equipment = {
+				build_cost_ic = -0.15
+                hard_attack = 0.05
+				instant = yes
+			}
+            anti_air_equipment = {
+				build_cost_ic = -0.15
+                air_attack = 0.05
+				instant = yes
+			}
+		}
+}
+SAU_Global_Trade = {
+    picture = generic_sea_focused_navy
+    allowed = { original_tag = SAU }
+    modifier = {
+        production_speed_dockyard_factor = 0.1
+    }
+    equipment_bonus = {
+			convoy = {
+				build_cost_ic = -0.15
+				instant = yes
+			}
+		}
+
+}
+SAU_Global_Trade2 = {
+    picture = HUN_mavag_aircraft
+    allowed = { original_tag = SAU }
+    modifier = {
+        supply_node_range = 0.2
+    }
+    equipment_bonus = {
+			large_air_frame = {
+				build_cost_ic = -0.1
+				instant = yes
+			}
+		}
 
 
+}
 }
 }

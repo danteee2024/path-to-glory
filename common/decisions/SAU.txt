@@ -954,7 +954,7 @@ SAU_Oil_Trade_category = {
 			always = yes
 		}
 		is_good = yes
-		days_remove = 10
+		days_remove = 0
 		cost = 20
 		fire_only_once = no
 		cancel_effect = {

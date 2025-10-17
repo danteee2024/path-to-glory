@@ -1514,6 +1514,30 @@ focus = {
         factor = 1.2
     }
 }
+
+focus = {
+    id = SAU_Global_Trade2
+    icon = GFX_focus_generic_aircraft_production
+    prerequisite = {
+        focus = SAU_Research2
+    }
+    
+	relative_position_id = SAU_Research2
+    x = -1
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+        add_ideas = SAU_Global_Trade2
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
 focus = {
     id = SAU_oil
     icon = GFX_focus_generic_resource_extraction
@@ -1556,6 +1580,30 @@ focus = {
             amount = 30
             state = 856
         }
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Global_Trade
+    icon = GFX_SOV_pc_of_the_ussr_navy_ccp_2d_sov_compatibility
+    prerequisite = {
+        focus = SAU_oil
+    }
+    
+	relative_position_id = SAU_oil
+    x = 1
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+        add_ideas = SAU_Global_Trade
 
     }
     
@@ -2041,77 +2089,16 @@ focus = {
 		}
 
 		completion_reward = {
-			
-	IF = {
-			IF = {
-				limit = {
-					NOT = {
-						has_tech = gwtank_chassis
-					}
-				}
-				set_technology = { gwtank_chassis = 1 }
+			 add_tech_bonus = {
+				name = Sau_Tank
+				bonus = 0.5
+				uses = 3
+				category = armor
 			}
-			ELSE_IF = {
-				limit = {
-					NOT = {
-						has_tech = basic_heavy_tank_chassis
-					}
-				}
-				set_technology = { basic_heavy_tank_chassis = 1 }
-			}
-			ELSE_IF = {
-				limit = {
-					NOT = {
-						has_tech = improved_heavy_tank_chassis
-					}
-				}
-				set_technology = { improved_heavy_tank_chassis = 1 }
-			}
-			ELSE_IF = {
-				limit = {
-					NOT = {
-						has_tech = advanced_heavy_tank_chassis
-					}
-				}
-				set_technology = { advanced_heavy_tank_chassis = 1 }
-			}
-		}
-		ELSE = {
-			IF = {
-				limit = {
-					NOT = {
-						has_tech = gwtank
-					}
-				}
-				set_technology = { gwtank = 1 }
-			}
-			ELSE_IF = {
-				limit = {
-					NOT = {
-						has_tech = basic_heavy_tank
-					}
-				}
-				set_technology = { basic_heavy_tank = 1 }
-			}
-			ELSE_IF = {
-				limit = {
-					NOT = {
-						has_tech = improved_heavy_tank
-					}
-				}
-				set_technology = { improved_heavy_tank = 1 }
-			}
-			ELSE_IF = {
-				limit = {
-					NOT = {
-						has_tech = advanced_heavy_tank
-					}
-				}
-				set_technology = { advanced_heavy_tank = 1 }
-			}
+	
 		}
 	}
-    }
+    
     focus = {
 	id = SAU_Climate
 	icon = GFX_focus_AFG_mountain_training
@@ -2121,7 +2108,7 @@ focus = {
 	x = 1
 	y = 1
 
-	cost = 30
+	cost = 5
 
 	ai_will_do = {
 			factor = 1.2
@@ -2148,7 +2135,7 @@ focus = {
 	x = 1
 	y = 1
 
-	cost = 30
+	cost = 5
 
 	ai_will_do = {
 			factor = 1.2
@@ -2166,6 +2153,226 @@ focus = {
         add_ideas = SAU_Army
 		
 	}
+}
+
+focus = {
+    id = SAU_mechanized
+    icon = GFX_focus_generic_mechanized
+    mutually_exclusive = {
+        focus = SAU_Infantry2
+    }
+        prerequisite = {
+        focus = SAU_Climate
+    }
+           prerequisite = {
+        focus = SAU_Tank_technology_advancing
+    }
+   
+	relative_position_id = SAU_Tank_technology_advancing
+    x = 1
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+        add_tech_bonus = {
+				name = Sau_Mechanized
+				bonus = 1.0
+				uses = 1
+                ahead_reduction = 1
+				category = cat_mechanized_equipment
+			}
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Infantry2
+    icon = GFX_focus_generic_commonwealth_build_infantry
+    mutually_exclusive = {
+        focus = SAU_mechanized
+    }
+        prerequisite = {
+        focus = SAU_Climate
+    }
+           prerequisite = {
+        focus = SAU_Army2
+    }
+   
+	relative_position_id = SAU_Army2
+    x = -1
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+        add_tech_bonus = {
+				name = Sau_infantry
+				bonus = 0.5
+				uses = 2
+                ahead_reduction = 1
+				category = infantry_equipment
+			}
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+
+focus = {
+    id = SAU_Artillery
+    icon = GFX_SOV_soviet_artillery_ccp_2d_sov_compatibility
+        prerequisite = {
+        focus = SAU_mechanized
+    }
+           prerequisite = {
+        focus = SAU_Infantry2
+    }
+   
+	relative_position_id = SAU_Infantry2
+    x = -1
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+        add_tech_bonus = {
+				name = Sau_artillery
+				bonus = 0.5
+				uses = 3
+				category = artillery
+			}
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Planning
+    icon = GFX_focus_generic_army_doctrines_2
+        prerequisite = {
+        focus = SAU_Artillery
+    }
+	relative_position_id = SAU_Artillery
+    x = 0
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+        add_ideas = SAU_Planning
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Tank_Production
+    icon = GFX_focus_generic_tank_production
+        prerequisite = {
+        focus = SAU_mechanized
+    }
+	relative_position_id = SAU_mechanized
+    x = -1
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+        add_ideas = SAU_Tank_Production
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Tank_Army
+    icon = GFX_focus_generic_tank_assault
+        prerequisite = {
+        focus = SAU_Tank_Production
+    }
+	relative_position_id = SAU_Tank_Production
+    x = 0
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+        add_ideas = SAU_Tank_Army
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_reinforce
+    icon = GFX_SOV_an_adaptable_army_ccp_2d_sov_compatibility
+        prerequisite = {
+        focus = SAU_Infantry2
+    }
+	relative_position_id = SAU_Infantry2
+    x = 1
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+        add_ideas = SAU_Army_reinforce
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Artillery2
+    icon = GFX_goal_generic_army_artillery
+        prerequisite = {
+        focus = SAU_reinforce
+    }
+	relative_position_id = SAU_reinforce
+    x = 0
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+        add_ideas = SAU_Artillery
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
 }
 
 }

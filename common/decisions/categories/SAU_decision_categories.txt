@@ -61,7 +61,7 @@ SAU_Oil_Trade_category = {
 		original_tag = SAU
 	}
 
-	priority = 7
+	priority = 8
 
 	visible = {
 		OR = {
