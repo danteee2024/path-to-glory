@@ -168,6 +168,29 @@ SAU_Oil_Trade6 =  {
      production_oil_factor = 0.1
     }
 }
+	SAU_Camel = {
+    picture = por_colonial_army
+    allowed = { original_tag = SAU }
+    modifier = {
+        modifier_army_sub_unit_camelry_attack_factor = 0.1
+        modifier_army_sub_unit_camelry_defence_factor = 0.1
+    }
+}
+	SAU_Climate = {
+    picture = por_colonial_army
+    allowed = { original_tag = SAU }
+    modifier = {
+        heat_attrition = -0.30
+        army_speed_factor = 0.1
+    }
+}
+SAU_Army = {
+    picture = chi_army_corruption3
+    allowed = { original_tag = SAU }
+    modifier = {
+     conscription_factor = 0.03
+    }
+}
 
 
 }

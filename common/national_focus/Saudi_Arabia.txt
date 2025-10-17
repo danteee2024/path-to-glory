@@ -1809,18 +1809,19 @@ focus = {
     icon = GFX_focus_generic_military_industry
    
 	relative_position_id = SAU_Oil_Trade
-    x = 6
+    x = 7
     y = 0
     cost = 10
     available = {
          
     }
     completion_reward = {
+        army_experience = 30
       random_controlled_state = {
-           add_extra_state_shared_building_slots = 2
+           add_extra_state_shared_building_slots = 3
                 	add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 					instant_build = yes
 				}
                 
@@ -1832,6 +1833,341 @@ focus = {
         factor = 1.2
     }
 }
+
+focus = {
+    id = SAU_Truck
+    icon = GFX_focus_generic_truck
+        prerequisite = {
+        focus = SAU_Military
+    }
+   
+	relative_position_id = SAU_Military
+    x = -1
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+        add_tech_bonus = {
+				name = SAU_Truck
+				bonus = 1.0
+				uses = 1
+				category =  motorized_equipment
+			}
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Train
+    icon = GFX_focus_IRQ_train
+        prerequisite = {
+        focus = SAU_Truck
+    }
+        prerequisite = {
+        focus = SAU_infrastructure
+    }
+   
+	relative_position_id = SAU_Truck
+    x = -2
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+        add_tech_bonus = {
+            name = railway_modernization_bonus
+            bonus = 1.0
+            uses = 1
+            category = train_tech
+        }
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_infantry
+    icon = GFX_goal_generic_axis_build_infantry
+        prerequisite = {
+        focus = SAU_Military
+    }
+   
+	relative_position_id = SAU_Military
+    x = 1
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+        add_tech_bonus = {
+				name = SAU_infantry
+				bonus = 1.0
+				uses = 1
+				category =  infantry_weapons
+			}
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Radio
+    icon = GFX_focus_generic_radio_communication
+        prerequisite = {
+        focus = SAU_infantry
+    }
+           prerequisite = {
+        focus = SAU_Truck
+    }
+   
+	relative_position_id = SAU_infantry
+    x = -1
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+        add_tech_bonus = {
+				name = Sau_Radio
+				bonus = 1.0
+				uses = 2
+				category = electronics
+			}
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+focus = {
+    id = SAU_Camel
+    icon = GFX_focus_generic_camel_corps
+        prerequisite = {
+        focus = SAU_Radio
+    }
+
+	relative_position_id = SAU_Radio
+    x = 1
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+        add_ideas = SAU_Camel
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+focus = {
+	id = SAU_Land_Facility
+	icon = GFX_focus_generic_military_industry
+	relative_position_id = SAU_Radio
+	prerequisite = { focus = SAU_Radio }
+	x = -1
+	y = 1
+
+	cost = 10
+
+	ai_will_do = {
+			factor = 1.2
+		}
+
+	available = {
+	}
+
+
+	bypass = {
+		
+	}
+
+	completion_reward = {
+		random_owned_controlled_state = {
+				limit = {
+					can_construct_building = land_facility
+				}
+				prioritize = { 292 }
+				construct_building_in_random_province = {
+					land_facility = 1
+				}
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 1.0
+			}
+	}
+}
+
+focus = {
+		id = SAU_Tank_technology_advancing
+		icon = GFX_focus_generic_tank_assembly
+		prerequisite = { focus = SAU_Land_Facility }
+		x = -1
+		y = 1
+		relative_position_id = SAU_Land_Facility
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			
+	IF = {
+			IF = {
+				limit = {
+					NOT = {
+						has_tech = gwtank_chassis
+					}
+				}
+				set_technology = { gwtank_chassis = 1 }
+			}
+			ELSE_IF = {
+				limit = {
+					NOT = {
+						has_tech = basic_heavy_tank_chassis
+					}
+				}
+				set_technology = { basic_heavy_tank_chassis = 1 }
+			}
+			ELSE_IF = {
+				limit = {
+					NOT = {
+						has_tech = improved_heavy_tank_chassis
+					}
+				}
+				set_technology = { improved_heavy_tank_chassis = 1 }
+			}
+			ELSE_IF = {
+				limit = {
+					NOT = {
+						has_tech = advanced_heavy_tank_chassis
+					}
+				}
+				set_technology = { advanced_heavy_tank_chassis = 1 }
+			}
+		}
+		ELSE = {
+			IF = {
+				limit = {
+					NOT = {
+						has_tech = gwtank
+					}
+				}
+				set_technology = { gwtank = 1 }
+			}
+			ELSE_IF = {
+				limit = {
+					NOT = {
+						has_tech = basic_heavy_tank
+					}
+				}
+				set_technology = { basic_heavy_tank = 1 }
+			}
+			ELSE_IF = {
+				limit = {
+					NOT = {
+						has_tech = improved_heavy_tank
+					}
+				}
+				set_technology = { improved_heavy_tank = 1 }
+			}
+			ELSE_IF = {
+				limit = {
+					NOT = {
+						has_tech = advanced_heavy_tank
+					}
+				}
+				set_technology = { advanced_heavy_tank = 1 }
+			}
+		}
+	}
+    }
+    focus = {
+	id = SAU_Climate
+	icon = GFX_focus_AFG_mountain_training
+	relative_position_id = SAU_Land_Facility
+	prerequisite = { focus = SAU_Land_Facility }
+    prerequisite = { focus = SAU_Camel }
+	x = 1
+	y = 1
+
+	cost = 30
+
+	ai_will_do = {
+			factor = 1.2
+		}
+
+	available = {
+	}
+
+
+	bypass = {
+		
+	}
+
+	completion_reward = {
+        add_ideas = SAU_Climate
+		
+	}
+}
+focus = {
+	id = SAU_Army2
+	icon = GFX_focus_chi_army_reform
+	relative_position_id = SAU_Camel
+    prerequisite = { focus = SAU_Camel }
+	x = 1
+	y = 1
+
+	cost = 30
+
+	ai_will_do = {
+			factor = 1.2
+		}
+
+	available = {
+	}
+
+
+	bypass = {
+		
+	}
+
+	completion_reward = {
+        add_ideas = SAU_Army
+		
+	}
+}
+
 }
 	
 	
