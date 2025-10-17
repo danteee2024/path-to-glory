@@ -9175,7 +9175,7 @@ focus_tree = {
 		completion_reward = {
 			add_timed_idea = {
 				idea = SOV_revolutionary_spirit_idea
-				days = 720
+				days = 360
 			}
 		}
 	}
