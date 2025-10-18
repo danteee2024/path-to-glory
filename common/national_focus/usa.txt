@@ -2097,7 +2097,7 @@ mutually_exclusive = {
 		mutually_exclusive = { focus = USA_neutrality_act }
 		continue_if_invalid = yes
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = USA_continue_the_new_deal
 
 		offset = {
@@ -2693,7 +2693,7 @@ focus = {
 		id = USA_neutrality_act
 		icon = GFX_focus_SWI_neutrality_on_the_move
 		x = 4
-		y = 1
+		y = 2
 		prerequisite = { focus = USA_continue_the_new_deal focus = USA_reestablish_the_gold_standard }
 		mutually_exclusive = { focus = USA_limited_intervention }
 		relative_position_id = USA_continue_the_new_deal
@@ -7568,6 +7568,33 @@ focus = {
 			}
 		}
 	}
+
+	### New Focus
+
+	focus = {
+		id = USA_arsenal_of_prosperity
+		icon = GFX_focus_generic_mass_production
+		prerequisite = { focus = USA_continue_the_new_deal focus = USA_reestablish_the_gold_standard }
+		x = 2
+		y = 1
+		relative_position_id = USA_continue_the_new_deal
+		cost = 10
+		#ai_will_do = {
+		#	factor = 1
+		#}
+
+		available_if_capitulated = yes
+		available = {
+			has_war = yes
+			date > 1939.1.1
+		}
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }  
+		completion_reward = {
+			add_ideas = USA_arsenal_of_prosperity
+		}
+	}
+	
 
 	
 
