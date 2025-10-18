@@ -948,6 +948,7 @@ SAU_Oil_Trade_category = {
 		}
 		
 		visible = {
+			has_completed_focus = SAU_Oil_Trade
 
 		}
 		activation = {
