@@ -1398,7 +1398,6 @@ technologies = {
 		}
 
 		category_army = {
-			hard_attack = 0.10
 			soft_attack = 0.10
 		}
 
@@ -1452,7 +1451,6 @@ technologies = {
 		xp_unlock_cost = 100
 		
 		category_all_armor = {
-			hard_attack = 0.10
 			soft_attack = 0.10
 		}
 		
@@ -1926,7 +1924,7 @@ technologies = {
 		
 		#planning max bonus increase
 		max_planning = 0.1
-		command_power_gain = 0.25
+		command_power_gain = 0.20
 
 		doctrine = yes	
 		research_cost = 4.5
@@ -3196,7 +3194,7 @@ technologies = {
 	
 	mechanized_wave = {
 		category_tanks = {
-			max_organisation = 2
+			max_organisation = 3
 		}
 		xp_research_type = army
 		xp_unlock_cost = 100
