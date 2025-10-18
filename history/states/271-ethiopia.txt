@@ -9,6 +9,11 @@ state=
 	
 	state_category = town
 
+		resources={
+		oil = 12
+	}
+
+
 	history = {
 		set_variable = { ETH_state_development_production_speed = -0.1 }
 		set_variable = { ETH_state_development_local_building_slots_factor = -0.1 }

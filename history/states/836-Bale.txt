@@ -6,6 +6,9 @@ state = {
 	}
 	
 	state_category = pastoral
+	resources = {
+		oil = 8
+	}
 
 	history = {
 		set_variable = { ETH_state_development_production_speed = -0.3 }
