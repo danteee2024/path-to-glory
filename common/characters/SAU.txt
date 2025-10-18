@@ -59,6 +59,20 @@ characters={
 					factor  = 1.000
 				}
 		}
+
+		corps_commander = {
+
+        traits = {
+            panzer_leader
+            desert_fox
+            offensive_doctrine
+        }
+        skill = 5
+        attack_skill = 5
+        defense_skill = 3
+        planning_skill = 2
+        logistics_skill = 3
+	}
 # TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
 		name="Youssef al-Bishi"
 		portraits={
@@ -124,6 +138,20 @@ characters={
 					factor  = 1.000
 				}
 		}
+		     corps_commander = {
+
+        traits = {
+            desert_fox
+            infantry_leader
+			cavalry_expert
+        }
+
+        skill = 4
+        attack_skill = 2
+        defense_skill = 4
+        planning_skill = 3
+        logistics_skill = 4
+    }
 # TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
 		name="Karim Nassar"
 		portraits={
@@ -167,6 +195,20 @@ characters={
 					factor  = 1.000
 				}
 		}
+		corps_commander = {
+
+        traits = {
+            desert_fox
+            infantry_leader
+			adaptable
+        }
+
+        skill = 4
+        attack_skill = 4
+        defense_skill = 3
+        planning_skill = 2
+        logistics_skill = 3
+    }
 # TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
 		name="Saud al Saud"
 		portraits={
@@ -189,6 +231,20 @@ characters={
 					factor  = 1.000
 				}
 		}
+
+		 field_marshal = {
+
+        traits = {
+            panzer_leader       
+            desert_fox      
+            defensive_doctrine  
+        }
+        skill = 5
+        attack_skill = 4
+        defense_skill = 4
+        planning_skill = 3
+        logistics_skill = 3
+	}
 # TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
 		name="Ismail Ali al-Salhi"
 		portraits={
@@ -233,6 +289,20 @@ characters={
 					factor  = 1.000
 				}
 		}
+		 field_marshal = {
+
+        traits = {
+            desert_fox
+            infantry_leader
+			cavalry_leader
+        }
+
+        skill = 4
+        attack_skill = 3
+        defense_skill = 4
+        planning_skill = 2
+        logistics_skill = 3
+    }
 # TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
 		name="Faisal al-Saud"
 		portraits={
@@ -286,4 +356,9 @@ characters={
 			}
 		}
 	}
+
+
+
+
+	
 }

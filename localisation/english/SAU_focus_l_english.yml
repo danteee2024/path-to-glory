@@ -373,3 +373,31 @@
  SAU.547.t:0 "France Refuses the Deal"
  SAU.547.d:0 "France has declined our generous offer to purchase Syria. It seems we must take it by force if we wish to complete our unification."
  SAU.547.a:0 "Prepare for war with France!"
+ ####MIO
+ SAU_marmon_herrington_organization:0 "Riyadh Armored Company"
+ SAU_marmon_herrington_organization_desc:0 "Founded with foreign expertise and local investment, the Riyadh Armored Company specializes in the design and production of mobile armored vehicles tailored to the harsh conditions of the Arabian Peninsula."
+
+ SAU_medium_tank_organization:0 "Saudi Armored Industries"
+ SAU_medium_tank_organization_desc:0 "Saudi Arabia’s first formal armored vehicle industry, dedicated to producing reliable and effective medium tanks for desert warfare."
+
+ SAU_infantry_tank_designer:0 "Riyadh Armored Works"
+ SAU_infantry_tank_designer_desc:0 "A domestic tank development bureau inspired by British armored design philosophy, focusing on infantry support tanks and heavy armor protection."
+
+#### army
+
+  SAU_faisal_bin_saud: "Faisal bin Saud"
+  SAU_faisal_bin_saud_desc: "A skilled Field Marshal, known for his desert warfare expertise and infantry leadership."
+
+  SAU_Mustafa_al_hadi: "Mustafa al-Hadi"
+  SAU_Mustafa_al_hadi_desc: "A capable Corps Commander with experience leading infantry in desert campaigns."
+
+  SAU_fahad_al_saud: "Fahad Al Saud"
+  SAU_fahad_al_saud_desc: "A proficient Corps Commander specializing in armored warfare and desert operations."
+
+  SAU_Fahd_al_Aziz: "Fahd Al Aziz"
+  SAU_Fahd_al_Aziz_desc: "A Field Marshal skilled in mechanized and desert warfare with an aggressive offensive doctrine."
+
+  SAU_cavalry_commander: "Salim al-Fahad"
+  SAU_cavalry_commander_desc: "A cavalry expert with desert combat experience, capable of leading fast-moving units effectively."
+
+ 
