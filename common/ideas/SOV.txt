@@ -78,7 +78,7 @@ ideas = {
 			modifier = {
 				supply_consumption_factor = -0.10
 				planning_speed = 0.10
-				max_planning_factor = 0.15
+				max_planning_factor = 0.10
 				#division_recovery_rate = 0.1 maybe 
 			}
 		}
