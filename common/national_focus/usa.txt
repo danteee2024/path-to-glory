@@ -1562,8 +1562,8 @@ mutually_exclusive = {
 		icon = GFX_focus_generic_public_works
 		x = 2
 		y = 3
-		prerequisite = { focus = USA_american_market }
-		prerequisite = { focus = USA_southern_developtment }
+		prerequisite = { focus = USA_american_market focus = USA_southern_developtment  }
+		
 		relative_position_id = USA_wpa
 		cost = 10
 
@@ -1990,8 +1990,8 @@ mutually_exclusive = {
 		icon = GFX_focus_RAJ_war_taxes
 		x = -2
 		y = 3
-		prerequisite = { focus = USA_foreign_economic_investment }
-		prerequisite = { focus = USA_industrial_subsidies_act }
+		prerequisite = { focus = USA_foreign_economic_investment focus = USA_industrial_subsidies_act}
+		
 		relative_position_id = USA_wpa
 		cost = 10
 
