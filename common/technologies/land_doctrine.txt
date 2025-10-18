@@ -374,7 +374,7 @@ technologies = {
 		xp_unlock_cost = 100
 		category_tanks = {
 			max_organisation = 3
-			breakthrough = 0.20
+			breakthrough = 0.25
 		}
 		
 		enable_tactic = tactic_blitz
@@ -435,11 +435,14 @@ technologies = {
 		xp_unlock_cost = 100
 		category_tanks = {
 			max_organisation = 2
+			maximum_speed = 0.05
 		}
 
 		category_all_armor = {
 			default_morale = 0.1
 		}
+
+		
 		
 		
 		path = {
@@ -491,6 +494,7 @@ technologies = {
 		xp_unlock_cost = 100
 		category_tanks = {
 			max_organisation = 1
+			maximum_speed = 0.10
 		}
 
 		category_all_armor = {
@@ -498,7 +502,7 @@ technologies = {
 		}
 		armored_car = {
 			default_morale = 0.1
-			max_organisation = 7
+			max_organisation = 8
 		}
 
 		enable_tactic = tactic_breakthrough
@@ -853,7 +857,7 @@ technologies = {
 	nd_conscription = {
 		xp_research_type = army
 		xp_unlock_cost = 100
-		conscription = 0.02
+		conscription = 0.01
 		supply_combat_penalties_on_core_factor = -0.05
 		supply_consumption_factor = -0.05
 
@@ -1593,7 +1597,7 @@ technologies = {
 			cat_superior_firepower
 		}
 
-		
+		# fuck u giamper you gonna copy this 
 		folder = {
 			name = land_doctrine_folder
 			position = { x = -2 y = 18 }
@@ -1609,11 +1613,11 @@ technologies = {
 			}
 			modifier = {
 				not = { ai_air_doctrine_tier_1_trigger = yes }
-				factor = 0.15
+				factor = 0.05
 			}
 			modifier = {
 				not = { ai_air_doctrine_tier_2_trigger = yes }
-				factor = 0.5
+				factor = 0.05
 			}
 		}
 		
