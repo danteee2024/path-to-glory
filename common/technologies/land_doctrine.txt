@@ -2975,7 +2975,7 @@ technologies = {
 			combat_width = -0.4
 		}
 
-
+		#fuck you giamper you will copy this 
 
 		medium_armor = {
 			combat_width = -0.4
@@ -3066,7 +3066,7 @@ technologies = {
 			cat_mass_assault
 		}
 
-		
+		#fuck you giamper you will copy this 
 		folder = {
 			name = land_doctrine_folder
 			position = { x = -2 y = 10 }
