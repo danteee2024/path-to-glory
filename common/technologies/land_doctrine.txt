@@ -532,7 +532,8 @@ technologies = {
 			cat_mobile_warfare
 		}
 
-		
+		army_bonus_air_superiority_factor = 0.15
+
 		folder = {
 			name = land_doctrine_folder
 			position = { x = 2 y = 10 }
@@ -1557,7 +1558,7 @@ technologies = {
 		}
 			
 		#combat advantage when air superior
-		army_bonus_air_superiority_factor = 0.05
+		army_bonus_air_superiority_factor = 0.10
 
 		recon = {
 			battalion_mult = {
@@ -2974,7 +2975,7 @@ technologies = {
 			combat_width = -0.4
 		}
 
-
+		#fuck you giamper you will copy this 
 
 		medium_armor = {
 			combat_width = -0.4
@@ -3065,7 +3066,7 @@ technologies = {
 			cat_mass_assault
 		}
 
-		
+		#fuck you giamper you will copy this 
 		folder = {
 			name = land_doctrine_folder
 			position = { x = -2 y = 10 }
