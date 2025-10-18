@@ -9256,7 +9256,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_the_builder_of_the_red_army
 		
-		cost = 5
+		cost = 10
 
 		available = {
 
