@@ -25,9 +25,9 @@ ideas = {
 			}
 
 			modifier = {
-				weekly_manpower = 1000
-				army_attack_factor = 0.10
-				recruitable_population_factor = -0.15
+				
+				army_attack_factor = 0.05
+				recruitable_population_factor = -0.10
 			}
 		}
 
@@ -2677,7 +2677,7 @@ ideas = {
 			}
 
 			modifier = {
-				production_speed_arms_factory_factor = 0.15
+				production_speed_arms_factory_factor = 0.10
 				production_speed_industrial_complex_factor = -0.10
 		}
 	}
@@ -10289,10 +10289,10 @@ ideas = {
 				consumer_goods_factor = -0.15
 			}
 		}
-#Dante’s Path to Glory (BismarkMP Mod)
- # © 2025 Dante. All rights reserved.
-#Reuploads, redistribution, or uncredited modifications are not permitted.
-#Contact: BismarkMP Discord / Steam
+      #Dante’s Path to Glory (BismarkMP Mod)
+      # © 2025 Dante. All rights reserved.
+      #Reuploads, redistribution, or uncredited modifications are not permitted.
+      #Contact: BismarkMP Discord / Steam
 		SOV_gosproyektstroy_3_jap_mil = {
 
 			name = SOV_gosproyektstroy_1
