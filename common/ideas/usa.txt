@@ -20,6 +20,27 @@ ideas = {
 				military_industrial_organization_funds_gain = 0.15
 			}
 		}
+		USA_arsenal_of_prosperity = {
+	   picture = GFX_idea_generic_industry
+	   allowed = {
+		tag = USA
+	    }
+		allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+		modifier = {
+		production_factory_max_efficiency_factor = 0.05
+		production_factory_efficiency_gain_factor = 0.10
+		industrial_capacity_factory = 0.10
+		industrial_capacity_dockyard = 0.10
+		}
+		}
 		great_depression = {
 			picture = usa_great_depression_3
 			
