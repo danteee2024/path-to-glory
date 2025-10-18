@@ -1539,6 +1539,47 @@ focus = {
     }
 }
 focus = {
+    id = SAU_atomic_research_program
+    icon = GFX_SOV_soviet_atomic_bomb_project_ccp_2d_sov_compatibility
+    x = 0
+    y = 1
+    cost = 10
+    available = {
+      date > 1940.1.1
+    }
+    completion_reward = {
+        add_tech_bonus = {
+            name = SAU_atomic_research_bonus
+				bonus = 0.5
+				uses = 1
+				category = nuclear
+			}
+            random_owned_controlled_state = {
+				limit = {
+					can_construct_building = nuclear_facility
+				}
+				prioritize = { 292 }
+				construct_building_in_random_province = {
+					nuclear_facility = 1
+				}
+			}
+    }
+
+    ai_will_do = {
+        factor = 1
+    }
+
+    prerequisite = {
+        focus = SAU_Global_Trade2
+    }
+    relative_position_id = SAU_Global_Trade2
+
+    available_if_capitulated = yes
+
+    # Optional flavor text
+    search_filters = { FOCUS_FILTER_RESEARCH }
+}
+focus = {
     id = SAU_oil
     icon = GFX_focus_generic_resource_extraction
     prerequisite = {

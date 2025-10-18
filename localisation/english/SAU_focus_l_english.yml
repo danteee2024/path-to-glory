@@ -299,6 +299,9 @@
  SAU_Artillery2:0 "Modern Artillery"
  SAU_Artillery2_desc:0 "Updated designs will make our artillery more deadly and precise."
 
+ SAU_atomic_research_program:0 "Atomic Energy Initiative"
+ SAU_atomic_research_program_desc:0 "Driven by the need for sustainable energy and technological prestige, Saudi Arabia embarks on an ambitious atomic research program. This will strengthen our scientific base and bring us closer to mastering nuclear technology."
+
  ###Events
 
  ### --- Buying British Colonies (SAU.145–147) ---
