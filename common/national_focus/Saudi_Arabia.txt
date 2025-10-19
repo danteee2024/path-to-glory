@@ -382,7 +382,45 @@ focus = {
     y = 1
     cost = 5
     available = {
+
          
+    }
+    bypass = {
+        OR = {
+        Not = {
+       656 = { is_controlled_by = ENG }
+        }
+        NOT = {
+       1014  = { is_controlled_by = ENG }
+             }
+        NOT = {
+       765  = { is_controlled_by = ENG }
+             }
+        NOT = {
+       658  = { is_controlled_by = ENG }
+             }
+        NOT = {
+       659  = { is_controlled_by = ENG }
+             }
+        NOT = {
+       455  = { is_controlled_by = ENG }
+             }
+        NOT = {
+       454  = { is_controlled_by = ENG }
+        }
+        NOT = {
+            RAJ = {
+             is_subject_of = ENG
+             }
+            }
+            NOT = {
+        OMA = {
+             is_subject_of = ENG
+             }
+            }
+            
+        }
+        
     }
     completion_reward = {
 		ENG = {
@@ -409,6 +447,35 @@ focus = {
     available = {
          
     }
+     bypass = {
+           OR = {
+        Not = {
+       453 = { is_controlled_by = ENG }
+        }
+        Not = {
+       446 = { is_controlled_by = ENG }
+        }
+        Not = {
+       447 = { is_controlled_by = ENG }
+        }
+        Not = {
+       452 = { is_controlled_by = ENG }
+        }
+        Not = {
+       907 = { is_controlled_by = ENG }
+        }
+        Not = {
+       552 = { is_controlled_by = ENG }
+        }
+        Not = {
+       457 = { is_controlled_by = ENG }
+        }
+        Not = {
+       456 = { is_controlled_by = ENG }
+        }
+       
+    }
+}
     completion_reward = {
         ENG = {
 					country_event = SAU.245
@@ -436,6 +503,26 @@ focus = {
     cost = 5
     available = {
          
+    }
+    bypass = {
+           OR = {
+        Not = {
+       680 = { is_controlled_by = FRA }
+        }
+        NOT = {
+       677  = { is_controlled_by = FRA }
+             }
+        NOT = {
+       799  = { is_controlled_by = FRA }
+             }
+        NOT = {
+       554  = { is_controlled_by = FRA }
+             }
+        NOT = {
+       553  = { is_controlled_by = FRA }
+             }
+    }
+        
     }
     completion_reward = {
         FRA = {
@@ -890,6 +977,43 @@ focus = {
     available = {
          
     }
+       bypass = {
+        OR = {
+        Not = {
+       656 = { is_controlled_by = ENG }
+        }
+        NOT = {
+       1014  = { is_controlled_by = ENG }
+             }
+        NOT = {
+       765  = { is_controlled_by = ENG }
+             }
+        NOT = {
+       658  = { is_controlled_by = ENG }
+             }
+        NOT = {
+       659  = { is_controlled_by = ENG }
+             }
+        NOT = {
+       455  = { is_controlled_by = ENG }
+             }
+        NOT = {
+       454  = { is_controlled_by = ENG }
+        }
+        NOT = {
+            RAJ = {
+             is_subject_of = ENG
+             }
+            }
+            NOT = {
+        OMA = {
+             is_subject_of = ENG
+             }
+            }
+            
+        }
+        
+    }
     completion_reward = {
 		ENG = {
 					country_event = SAU.145
@@ -936,6 +1060,26 @@ focus = {
     cost = 5
     available = {
          
+    }
+    bypass = {
+           OR = {
+        Not = {
+       680 = { is_controlled_by = FRA }
+        }
+        NOT = {
+       677  = { is_controlled_by = FRA }
+             }
+        NOT = {
+       799  = { is_controlled_by = FRA }
+             }
+        NOT = {
+       554  = { is_controlled_by = FRA }
+             }
+        NOT = {
+       553  = { is_controlled_by = FRA }
+             }
+    }
+        
     }
     completion_reward = {
         FRA = {
@@ -2274,8 +2418,6 @@ focus = {
     icon = GFX_SOV_soviet_artillery_ccp_2d_sov_compatibility
         prerequisite = {
         focus = SAU_mechanized
-    }
-           prerequisite = {
         focus = SAU_Infantry2
     }
    
