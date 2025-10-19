@@ -357,6 +357,103 @@ characters={
 		}
 	}
 
+	SAU_Atoma_Haku={
+		advisor={
+			slot = political_advisor
+			idea_token = SAU_Atoma_Haku
+			allowed  = {
+					original_tag  = SAU
+				}
+				traits  = {
+					financial_expert
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Atoma Haku"
+		portraits={
+			civilian = {
+				
+				small="GFX_idea_generic_political_advisor_arab_2"
+			}
+		}
+	}
+
+	SAU_Gent_al_Sek={
+		advisor={
+			slot = political_advisor
+			idea_token = SAU_Gent_al_Sek
+			allowed  = {
+					original_tag  = SAU
+				}
+				traits  = {
+					technocrat
+				}
+				ai_will_do  = {
+					factor  = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Gent al Sek"
+		portraits={
+			civilian = {
+				
+				small="GFX_idea_generic_political_advisor_arab_3"
+			}
+		}
+	}
+
+		SAU_Mustaf_Gami={
+		corps_commander = {
+
+        traits = {
+            desert_fox
+            bearer_of_artillery
+			fortress_buster
+        }
+
+        skill = 5
+        attack_skill = 4
+        defense_skill = 4
+        planning_skill = 3
+        logistics_skill = 3
+    }
+
+		name="Mustaf Gami"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_arab_3"
+			}
+		}
+	}
+
+	SAU_Muhammed_Saba={
+		field_marshal = {
+
+        traits = {
+            desert_fox
+            organizer
+			aggressive_assaulter
+        }
+
+        skill = 5
+        attack_skill = 5
+        defense_skill = 3
+        planning_skill = 3
+        logistics_skill = 2
+    }
+
+		name="Mustaf Gami"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_arab_2"
+			}
+		}
+	}
+
+
 
 
 

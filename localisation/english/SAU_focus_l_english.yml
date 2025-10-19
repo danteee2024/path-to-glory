@@ -399,5 +399,14 @@
 
   SAU_cavalry_commander: "Salim al-Fahad"
   SAU_cavalry_commander_desc: "A cavalry expert with desert combat experience, capable of leading fast-moving units effectively."
+ 
+  SAU_Gent_al_Sek:0 "Gent al Sek"
+  SAU_Gent_al_Sek_desc:0 "A pragmatic technocrat dedicated to modernizing the administration of the Kingdom of Saudi Arabia. Gent al Sek values efficiency, planning, and progress above all."
+
+  SAU_Mustaf_Gami:0 "Mustaf Gami"
+  SAU_Mustaf_Gami_desc:0 "A skilled commander renowned for his mastery of desert warfare and artillery coordination. Mustaf Gami’s tactical awareness makes him a formidable leader in the harsh Arabian environment."
+
+  SAU_Muhammed_Saba:0 "Muhammed Saba"
+  SAU_Muhammed_Saba_desc:0 "A bold and aggressive field marshal, Muhammed Saba combines logistical acumen with fearless offensive strategies, leading Saudi forces with determination and precision."
 
  
