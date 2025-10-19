@@ -59,21 +59,7 @@ characters={
 					factor  = 1.000
 				}
 		}
-
-		corps_commander = {
-
-        traits = {
-            panzer_leader
-            desert_fox
-            offensive_doctrine
-        }
-        skill = 5
-        attack_skill = 5
-        defense_skill = 3
-        planning_skill = 2
-        logistics_skill = 3
-	}
-# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+ARGE ]: Missing large portrait please check!
 		name="Youssef al-Bishi"
 		portraits={
 			army={
@@ -138,20 +124,6 @@ characters={
 					factor  = 1.000
 				}
 		}
-		     corps_commander = {
-
-        traits = {
-            desert_fox
-            infantry_leader
-			cavalry_expert
-        }
-
-        skill = 4
-        attack_skill = 2
-        defense_skill = 4
-        planning_skill = 3
-        logistics_skill = 4
-    }
 # TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
 		name="Karim Nassar"
 		portraits={
@@ -195,20 +167,6 @@ characters={
 					factor  = 1.000
 				}
 		}
-		corps_commander = {
-
-        traits = {
-            desert_fox
-            infantry_leader
-			adaptable
-        }
-
-        skill = 4
-        attack_skill = 4
-        defense_skill = 3
-        planning_skill = 2
-        logistics_skill = 3
-    }
 # TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
 		name="Saud al Saud"
 		portraits={
@@ -232,19 +190,6 @@ characters={
 				}
 		}
 
-		 field_marshal = {
-
-        traits = {
-            panzer_leader       
-            desert_fox      
-            defensive_doctrine  
-        }
-        skill = 5
-        attack_skill = 4
-        defense_skill = 4
-        planning_skill = 3
-        logistics_skill = 3
-	}
 # TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
 		name="Ismail Ali al-Salhi"
 		portraits={
@@ -289,20 +234,6 @@ characters={
 					factor  = 1.000
 				}
 		}
-		 field_marshal = {
-
-        traits = {
-            desert_fox
-            infantry_leader
-			cavalry_leader
-        }
-
-        skill = 4
-        attack_skill = 3
-        defense_skill = 4
-        planning_skill = 2
-        logistics_skill = 3
-    }
 # TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
 		name="Faisal al-Saud"
 		portraits={
@@ -411,7 +342,8 @@ characters={
         traits = {
             desert_fox
             bearer_of_artillery
-			fortress_buster
+			trait_engineer
+			trickster
         }
 
         skill = 5
@@ -436,6 +368,7 @@ characters={
             desert_fox
             organizer
 			aggressive_assaulter
+			brilliant_strategist
         }
 
         skill = 5
@@ -445,10 +378,130 @@ characters={
         logistics_skill = 2
     }
 
-		name="Mustaf Gami"
+		name="Muhammed Saba"
 		portraits={
 			army={
 				small="GFX_idea_generic_army_arab_2"
+			}
+		}
+	}
+
+	SAU_ismail_al_salhi={
+
+		 field_marshal = {
+
+        traits = {
+            panzer_leader       
+            desert_fox      
+            organizer
+			brilliant_strategist
+			inflexible_strategist
+        }
+        skill = 5
+        attack_skill = 4
+        defense_skill = 4
+        planning_skill = 3
+        logistics_skill = 3
+	}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Ismail al-Salhi"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_3"
+			}
+		}
+	}
+
+	SAU_faisal_baku={
+	field_marshal = {
+
+        traits = {
+            desert_fox
+            trickster
+			organizer
+        }
+
+        skill = 4
+        attack_skill = 3
+        defense_skill = 4
+        planning_skill = 2
+        logistics_skill = 3
+    }
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Faisal Baku"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_arab_1"
+			}
+		}
+	}
+
+		SAU_Habibi_al_Abi={
+		corps_commander = {
+
+        traits = {
+            desert_fox
+            infantry_leader
+			trait_mountaineer
+        }
+
+        skill = 4
+        attack_skill = 4
+        defense_skill = 3
+        planning_skill = 2
+        logistics_skill = 3
+    }
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Habibi al-Abi"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_1"
+			}
+		}
+	}
+	SAU_Abdul_al_Bish={
+		corps_commander = {
+
+        traits = {
+            panzer_leader
+            desert_fox
+            aggressive_assaulter
+			trait_engineer
+        }
+        skill = 5
+        attack_skill = 5
+        defense_skill = 3
+        planning_skill = 4
+        logistics_skill = 3
+	}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Abdul al-Bish"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_2"
+			}
+		}
+	}
+	SAU_karim_hakan={
+		     corps_commander = {
+
+        traits = {
+            desert_fox
+			cavalry_leader
+			trickster
+        }
+
+        skill = 4
+        attack_skill = 4
+        defense_skill = 3
+        planning_skill = 3
+        logistics_skill = 4
+    }
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Karim Hakan"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_arab_3"
 			}
 		}
 	}

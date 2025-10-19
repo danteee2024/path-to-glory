@@ -42,6 +42,11 @@ recruit_character = SAU_Gent_al_Sek
 recruit_character = SAU_Atoma_Haku
 recruit_character = SAU_Mustaf_Gami
 recruit_character = SAU_Muhammed_Saba
+recruit_character = SAU_ismail_al_salhi
+recruit_character = SAU_faisal_baku
+recruit_character = SAU_Habibi_al_Abi
+recruit_character = SAU_Abdul_al_Bish
+recruit_character = SAU_karim_hakan
 
 1939.1.1 = {
 
