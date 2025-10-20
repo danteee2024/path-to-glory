@@ -15,6 +15,50 @@ ideas = {
 			}
 		}
 
+		JAP_Anti_Soviet = {
+		allowed = {
+			original_tag = JAP
+		}
+
+		allowed_civil_war = {
+			always = no
+		}
+
+		removal_cost = -1
+
+		picture = FIN_german_threat
+
+		targeted_modifier = {
+			tag = SOV
+			attack_bonus_against = 0.05
+			defense_bonus_against = 0.05
+		}
+
+
+	}
+
+		JAP_War_Production = {
+		allowed = {
+			original_tag = JAP
+		}
+
+		allowed_civil_war = {
+			always = no
+		}
+
+		removal_cost = -1
+
+		picture = generic_license_production
+
+		modifier = {
+			production_factory_efficiency_gain_factor = 0.05
+			production_factory_max_efficiency_factor = 0.05
+			industrial_capacity_factory = 0.1
+		}
+
+
+	}
+
 		JAP_democratic_trade_idea = {
 			picture = can_wartime_prices_and_trade_board
 			allowed = {
@@ -2385,9 +2429,9 @@ ideas = {
 			equipment_bonus = {
 				artillery_equipment = {
 					soft_attack = 0.1
-					ap_attack = -0.2
-					hard_attack = -0.2
-					build_cost_ic = -0.1
+					ap_attack = -0.15
+					hard_attack = -0.15
+					build_cost_ic = -0.15
 					instant = yes
 				}
 			}

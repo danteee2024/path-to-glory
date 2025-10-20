@@ -10,6 +10,13 @@
 
  japan_wtt_focus:0 "Japanese National Focus"
  JAP_revolutionary_fervour:0 "Revolutionary Fervor"
+ JAP_Soviet_War:0 "The Soviet War"
+ JAP_Soviet_War_desc:0 "With hostilities between Japan and the Soviet Union escalating, we must fully commit to the conflict. Our industries will be mobilized for total war, our armies reinforced, and our people prepared for sacrifice. The time has come to break Soviet power in Asia once and for all."
+ JAP_Anti_Soviet:0 "Anti-Soviet Mobilization"
+ JAP_War_Production:0 "War Production"
+ JAP_War_Production_desc:0 "With our economy fully committed to the war effort, civilian industries are being retooled to produce weapons, ammunition, and vehicles. Efficiency, discipline, and sacrifice will ensure that our armed forces never lack the tools needed for victory."
+ JAP_industry_development:0 "Industrial Development"
+ JAP_industry_development_desc:0 "To sustain our growing empire and the demands of modern warfare, Japan must continue expanding its industrial base. New factories will rise across the homeland and our occupied territories, ensuring a steady flow of weapons, equipment, and supplies for our forces at the front."
  
  JAP_fascism_party:0 "Kyokoku Itchi Naikaku"
  JAP_imperial_rule_assistance_association_party:0 "Taisei Yokusankai"

@@ -4161,10 +4161,10 @@
 				limit = {
 					has_state_flag = JAP_imperial_arsenals1
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -4248,10 +4248,10 @@
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = JAP_imperial_arsenals
@@ -4638,7 +4638,7 @@
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}			
@@ -5096,7 +5096,7 @@
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				
@@ -5105,7 +5105,7 @@
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				
@@ -5269,6 +5269,54 @@
 	}
 
 	focus = {
+		id = JAP_industry_development
+		icon = GFX_focus_generic_reorient_production
+		prerequisite = { focus =  JAP_create_a_manchurian_imperial_air_force }
+		x = -1
+		y = 1
+		relative_position_id = JAP_create_a_manchurian_imperial_air_force
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+
+			}
+			
+			 
+			}
+		}
+
+
+	focus = {
 		id = JAP_give_everything_to_the_army
 		icon = GFX_focus_SOV_merge_plants
 		prerequisite = { focus = JAP_further_preparations_for_war }
@@ -5287,13 +5335,13 @@
 			528 = {
 				add_building_construction = {
 					type = dockyard
-					level = -5
+					level = -3
 					instant_build = yes
 				}
 				
 					add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 5
 					instant_build = yes
 				}
 			}
@@ -5303,6 +5351,27 @@
 			}
 			JAP_interservice_rivalry_towards_army = yes
 		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = JAP_War_Production
+		icon = GFX_SOV_superior_war_machines_ccp_2d_sov_compatibility
+		prerequisite = { focus = JAP_give_everything_to_the_army }
+		x = 1
+		y = 1
+		relative_position_id = JAP_give_everything_to_the_army
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+			
+			add_ideas =  JAP_War_Production
+	}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -5469,8 +5538,8 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 	focus = {
-		id = JAP_offer_peace_to_the_soviets
-		icon = GFX_focus_generic_surrender
+		id = JAP_Soviet_War
+		icon = GFX_SOV_the_last_break_southward_ccp_2d_sov_compatibility
 		prerequisite = { focus = JAP_increase_rail_in_siberia focus = JAP_seize_trains_and_trucks_for_the_war }
 		x = 0
 		y = 2
@@ -5484,13 +5553,13 @@
 
 		available = {
 			has_war_with = SOV
-			surrender_progress > 0.05
 		}
 
 		completion_reward = {
-			white_peace = SOV
+			add_ideas = JAP_Anti_Soviet
+
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_ARMY_XP }
 	}
 
 	focus = {
