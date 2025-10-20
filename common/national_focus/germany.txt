@@ -26024,7 +26024,7 @@ focus_tree = {
 		cost = 5
 		available = {
 			has_government = neutrality
-			neutrality > 0.5
+			neutrality > 0.4
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_STABILITY }

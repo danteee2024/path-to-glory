@@ -14,7 +14,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		category_all_armor = {
+		category_tanks = {
 			breakthrough = 0.20
 		}
 		
@@ -372,9 +372,9 @@ technologies = {
 	armored_spearhead = { #Branch focused on Tanks 
 		xp_research_type = army
 		xp_unlock_cost = 100
-		category_tanks = {
+		category_all_armor = {
 			max_organisation = 3
-			breakthrough = 0.25
+			breakthrough = 0.20
 		}
 		
 		enable_tactic = tactic_blitz

@@ -3816,7 +3816,7 @@ add_timed_idea = {
 			focus = FRA_support_the_legitimatises
 		}
 		available = {
-			neutrality > 0.6
+			neutrality > 0.45
 		}
 		x = 7
 		y = 1
@@ -4896,7 +4896,7 @@ add_timed_idea = {
 	focus = {
 		id = FRA_militarist_society
 		icon = GFX_focus_GER_schutztruppe
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = FRA_brumaire_movement
 		}
