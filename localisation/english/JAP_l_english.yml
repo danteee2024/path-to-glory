@@ -17,6 +17,14 @@
  JAP_War_Production_desc:0 "With our economy fully committed to the war effort, civilian industries are being retooled to produce weapons, ammunition, and vehicles. Efficiency, discipline, and sacrifice will ensure that our armed forces never lack the tools needed for victory."
  JAP_industry_development:0 "Industrial Development"
  JAP_industry_development_desc:0 "To sustain our growing empire and the demands of modern warfare, Japan must continue expanding its industrial base. New factories will rise across the homeland and our occupied territories, ensuring a steady flow of weapons, equipment, and supplies for our forces at the front."
+ JAP_Industry_Plan:0 "National Industrial Expansion Plan"
+  JAP_Industry_Plan_desc:0 "To secure our nation's future, we must invest heavily in the modernization and expansion of our industry. By developing key regions in the North, Middle, and South, we will ensure a steady flow of industrial output to support our growing war machine and civilian needs alike."
+
+  JAP_China_relation:0 "Chinese Anti-Cooperation Policy"
+
+  JAP_develop_the_North:0 "Develop Northern Japan"
+  JAP_develop_the_Middle:0 "Develop Central Japan"
+  JAP_develop_the_Soutch:0 "Develop Southern Japan"
  
  JAP_fascism_party:0 "Kyokoku Itchi Naikaku"
  JAP_imperial_rule_assistance_association_party:0 "Taisei Yokusankai"

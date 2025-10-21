@@ -766,7 +766,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				industrial_capacity_factory = 0.10
-				industrial_capacity_dockyard = -0.10
+				industrial_capacity_dockyard = -0.05
 				political_power_gain = -0.10
 				production_factory_efficiency_gain_factor = 0.10
 				production_speed_arms_factory_factor = 0.10
@@ -2321,6 +2321,24 @@ ideas = {
 				land_doctrine_cost_factor = -0.05
 			}
 		}
+		 JAP_China_relation = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = jap_interservice_rivalry_army_strengthened
+			
+			targeted_modifier = {
+				tag = CHI
+			compliance_gain = -0.10
+			} 
+		}
 
 		JAP_interservice_rivalry_army_strengthened = {
 			name = JAP_interservice_rivalry_army_strengthened
@@ -2338,9 +2356,9 @@ ideas = {
 			
 			modifier = {
 				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = -0.1
+				production_speed_dockyard_factor = -0.05
 				industrial_capacity_factory = 0.05
-				industrial_capacity_dockyard = -0.1
+				industrial_capacity_dockyard = -0.05
 			}
 		}
 
