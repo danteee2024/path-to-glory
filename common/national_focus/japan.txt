@@ -5061,6 +5061,7 @@
 					}
 				}
 			}
+						add_stability = 0.1
 			
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
