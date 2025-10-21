@@ -53,7 +53,47 @@ ideas = {
 		modifier = {
 			production_factory_efficiency_gain_factor = 0.05
 			production_factory_max_efficiency_factor = 0.05
+			production_factory_start_efficiency_factor = 0.05
 			industrial_capacity_factory = 0.1
+		}
+
+
+	}
+	 JAP_Organize_the_Fuel = {
+		allowed = {
+			original_tag = JAP
+		}
+
+		allowed_civil_war = {
+			always = no
+		}
+
+		removal_cost = -1
+
+		picture = generic_fuel_reserves
+		modifier = {
+			army_fuel_consumption_factor = -0.15
+			air_fuel_consumption_factor =  -0.15
+			navy_fuel_consumption_factor = -0.15
+		}
+
+
+	}
+	JAP_Tank_Army = {
+		allowed = {
+			original_tag = JAP
+		}
+
+		allowed_civil_war = {
+			always = no
+		}
+
+		removal_cost = -1
+
+		picture = generic_armor
+		modifier = {
+			army_armor_attack_factor = 0.1
+			army_armor_defence_factor = 0.1
 		}
 
 
@@ -391,9 +431,6 @@ ideas = {
 			equipment_bonus = {
 				infantry_equipment = {
 					hard_attack = 0.75
-					instant = yes
-				}
-				infantry_equipment = {
 					ap_attack = 0.75
 					instant = yes
 				}
@@ -402,7 +439,6 @@ ideas = {
 				lunge_mines_trait
 			}
 			modifier = {
-				experience_loss_factor = 0.10
 			}
 		}
 		JAP_jungle_training = {
@@ -2321,8 +2357,31 @@ ideas = {
 				land_doctrine_cost_factor = -0.05
 			}
 		}
-		 JAP_China_relation = {
+		 JAP_the_ultimate_tank_Production = {
 			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_acquire_tanks
+			equipment_bonus = {
+				medium_tank_chassis = {
+					build_cost_ic = -0.1
+					soft_attack = 0.1
+					hard_attack = 0.1
+					reliability = 0.05
+				}
+			}
+			
+			
+		}
+		JAP_China_relation =  {
+		allowed = {
 				always = no
 			}
 
@@ -2447,8 +2506,7 @@ ideas = {
 			equipment_bonus = {
 				artillery_equipment = {
 					soft_attack = 0.1
-					ap_attack = -0.15
-					hard_attack = -0.15
+					hard_attack = -0.1
 					build_cost_ic = -0.15
 					instant = yes
 				}
@@ -2472,8 +2530,6 @@ ideas = {
 			picture = jap_supremacy_of_technology
 			
 			research_bonus = {
-				infantry_weapons = 0.20
-				support_tech = 0.20
 				armor = 0.20
 				artillery = 0.20
 			}

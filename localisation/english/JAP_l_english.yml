@@ -25,6 +25,29 @@
   JAP_develop_the_North:0 "Develop Northern Japan"
   JAP_develop_the_Middle:0 "Develop Central Japan"
   JAP_develop_the_Soutch:0 "Develop Southern Japan"
+ JAP_the_ultimate_tank_Production:0 "Project Oni – The Ultimate Tank"
+ JAP_the_ultimate_tank_Production_desc:0 "Our engineers have proposed an audacious vision: a steel demon capable of crushing any Western tank. Through the 'Oni' Project, Japan shall forge the most formidable armored vehicle in history, a testament to our Emperor’s unyielding will."
+
+ JAP_Organize_the_Fuel:0 "Fuel for the Empire"
+ JAP_Organize_the_Fuel_desc:0 "Even the mightiest engines of war are powerless without fuel. To sustain our new armored divisions, we must reorganize our refineries, secure vital resources from the Co-Prosperity Sphere, and ensure that every drop of oil serves the Emperor’s cause."
+
+ JAP_Tank_Army:0 "Imperial Armored Corps"
+ JAP_Tank_Army_desc:0 "Japan’s armored forces shall be united under a single command — the Imperial Armored Corps. With discipline, speed, and the indomitable spirit of the samurai, our tanks will bring the Empire’s thunder across Asia."
+ 
+ JAP_medium_tank_organization:0 "Sagami Army Technical Arsenal"
+ JAP_medium_tank_organization_desc:0 "The Sagami Army Technical Arsenal leads Japan’s development of modern armored vehicles. Combining rigorous engineering with battlefield practicality, Sagami engineers design medium tanks that strike the perfect balance between speed, armor, and reliability — embodying the spirit of Imperial precision."
+
+ JAP_infantry_tank_designer:0 "Hitachi Armored Support Division"
+ JAP_infantry_tank_designer_desc:0 "Tasked with providing reliable armor to support our infantry divisions, Hitachi’s armored division specializes in sturdy, dependable designs capable of enduring prolonged engagements. Built for resilience rather than speed, their machines march alongside the Emperor’s soldiers without falter."
+ JAP_mio_trait_expanded_production_facilities:0 "Expanded Production Facilities"
+ JAP_mio_trait_expanded_production_facilities_desc:0 "By expanding production lines and optimizing assembly procedures, Japanese factories achieve a new level of efficiency. Every workshop contributes to the Empire’s armored might."
+
+ JAP_mio_trait_Stabily_Tanks:0 "Stabilized Suspension Systems"
+ JAP_mio_trait_Stabily_Tanks_desc:0 "Through improved suspension and internal balance mechanisms, our tanks maintain stability even across rugged terrain, increasing accuracy and crew confidence in combat."
+
+ JAP_mio_trait_high_velocity_armament:0 "High-Velocity Armament"
+ JAP_mio_trait_high_velocity_armament_desc:0 "Research into new barrel metallurgy and propellant chemistry has produced high-velocity guns capable of piercing even the toughest foreign armor. Japanese precision ensures both power and accuracy on the battlefield."
+
  
  JAP_fascism_party:0 "Kyokoku Itchi Naikaku"
  JAP_imperial_rule_assistance_association_party:0 "Taisei Yokusankai"

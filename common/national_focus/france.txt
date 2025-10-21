@@ -3816,7 +3816,7 @@ add_timed_idea = {
 			focus = FRA_support_the_legitimatises
 		}
 		available = {
-			neutrality > 0.45
+			neutrality > 0.4
 		}
 		x = 7
 		y = 1

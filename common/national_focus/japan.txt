@@ -8474,10 +8474,11 @@ allow_branch = {
 	focus = {
 		id = JAP_modern_artillery
 		icon = GFX_goal_generic_army_artillery
-		prerequisite = { focus = JAP_army_expansion_law }
-		x = -4
+		prerequisite = { focus = JAP_lunge_mines }
+		prerequisite = { focus = JAP_defense_in_depth }
+		x = -1
 		y = 1
-		relative_position_id = JAP_army_expansion_law
+		relative_position_id = JAP_lunge_mines
 
 		cost = 5
 
@@ -8593,8 +8594,8 @@ allow_branch = {
 	}
 	
 	focus = {
-		id = JAP_the_ultimate_tank
-		icon = GFX_focus_SOV_the_glory_of_the_red_army_alternative
+		id = JAP_the_ultimate_tank_Production
+		icon = GFX_focus_generic_heavy_tank
 		prerequisite = { focus = JAP_armored_divisions }
 		prerequisite = { focus = JAP_rethink_armor_design }
 		x = 0
@@ -8605,27 +8606,56 @@ allow_branch = {
 			factor = 1
 		}
 		available = {
-			if = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-				has_tech = super_heavy_tank_chassis
-				has_tech = armor_tech_2
-				has_tech = engine_tech_2
-			}
 		}
 
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = JAP_the_ultimate_tank
-				bonus = 2
-				uses = 1
-				technology = super_heavy_tank
-			}
+			add_ideas = JAP_the_ultimate_tank_Production
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+		focus = {
+		id = JAP_Organize_the_Fuel
+		icon = GFX_focus_generic_stockpile_fuel
+		prerequisite = { focus = JAP_the_ultimate_tank_Production }
+		x = -1
+		y = 1
+		relative_position_id = JAP_the_ultimate_tank_Production
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = JAP_Organize_the_Fuel
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+		focus = {
+		id = JAP_Tank_Army
+		icon = GFX_focus_generic_tank_assault
+		prerequisite = { focus = JAP_the_ultimate_tank_Production }
+		x = 1
+		y = 1
+		relative_position_id = JAP_the_ultimate_tank_Production
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = JAP_Tank_Army
+		}
+		search_filters = { FOCUS_FILTER_ARMY_XP }
 	}
 
 	focus = {
@@ -8755,20 +8785,9 @@ allow_branch = {
 		}
 
 		available = {
-			has_army_experience > 49.99
-			if = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-				has_tech = advanced_medium_tank_chassis
-				has_tech = artillery4
-				has_tech = armor_tech_2
-				has_tech = engine_tech_2
-			}
 		}
 		
 		completion_reward = {
-			army_experience = -50
 			army_experience = 15
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.5

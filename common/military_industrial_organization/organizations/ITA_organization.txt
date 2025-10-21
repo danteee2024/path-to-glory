@@ -8,6 +8,16 @@
 
  #################### 
 
+ITA_infantry_tank_designer = {
+    name = ITA_infantry_tank_designer
+    include = generic_infantry_tank_organization
+    icon = GFX_idea_generic_tank_manufacturer
+
+    allowed = {
+        original_tag = ITA
+    }
+}
+
 
 ITA_fiat_organization = {
 	include = generic_tank_organization
