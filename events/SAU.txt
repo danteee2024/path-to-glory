@@ -119,13 +119,7 @@ country_event = {
 	
 	option = {
 		name = SAU.147.a
-			ENG = {
-		diplomatic_relation = {
-			country = SAU
-			relation = -30
-			active = yes
-		}	
-	}	
+
 	
 				656 = { add_core_of = SAU }
 				1014 = { add_core_of = SAU }
@@ -254,14 +248,7 @@ country_event = {
 	
 	option = {
 		name = SAU.247.a
-			ENG = {
-		diplomatic_relation = {
-			country = SAU
-			relation = -30
-			active = yes
-		}	
-	}	
-
+		
 
 				
 				453 = { add_core_of = SAU }
@@ -559,14 +546,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = SAU.547.a
-			FRA = {
-		diplomatic_relation = {
-			country = SAU
-			relation = -30
-			active = yes
-		}	
-	}	
+		name = SAU.547.a	
 	
 				
 				680 = { add_core_of = SAU }
