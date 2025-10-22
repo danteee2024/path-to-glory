@@ -8563,6 +8563,21 @@ allow_branch = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 	focus = {
+    id = JAP_refined_operational_planning
+    icon = GFX_goal_generic_army_doctrines
+    x = 0
+    y = 1
+    cost = 10
+    prerequisite = { focus = JAP_pack_guns }
+	relative_position_id = JAP_pack_guns
+    available = {
+    }
+    completion_reward = {
+
+        add_ideas = JAP_refined_planning_idea
+    }
+}
+	focus = {
 		id = JAP_armored_divisions
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = JAP_supremacy_of_technology }
@@ -8658,6 +8673,21 @@ allow_branch = {
 		}
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 	}
+	focus = {
+    id = JAP_embrace_armored_warfare
+    icon = GFX_focus_generic_tank_assembly
+    x = -1
+    y = 1
+    cost = 10
+	relative_position_id = JAP_Tank_Army
+    prerequisite = { focus = JAP_Tank_Army }
+	prerequisite = { focus = JAP_Organize_the_Fuel }
+    available = {
+    }
+    completion_reward = {
+        add_ideas = JAP_armored_warfare_idea
+    }
+}
 
 	focus = {
 		id = JAP_army_expansion

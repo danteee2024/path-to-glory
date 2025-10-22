@@ -66,6 +66,26 @@ JAP_medium_tank_organization = {
 		}
 	}
 		add_trait = {
+	    token = Jap_mio_trait_Factory_Tank_Cost
+		name = JAP_mio_trait_Factory_Tank_Cost
+		icon = GFX_generic_mio_trait_icon_production_capacity
+		special_trait_background = yes
+
+		position = { x=0 y=0 }  
+
+		available = {
+
+		}
+
+		production_bonus = {
+			production_cost_factor = -0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+		add_trait = {
 		token = JAP_mio_trait_high_velocity_armament
 		name = JAP_mio_trait_high_velocity_armament
 		icon = GFX_generic_mio_department_icon_tank_general_at
@@ -82,7 +102,7 @@ JAP_medium_tank_organization = {
 		}
 
 		equipment_bonus = {
-			ap_attack = 0.1
+			ap_attack = 0.05
 		}
 
 		ai_will_do = {
