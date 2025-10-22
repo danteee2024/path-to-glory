@@ -508,7 +508,8 @@ ideas = {
 				light_tank_chassis = {
 					soft_attack = 0.15
 					hard_attack = 0.15
-					build_cost_ic = -0.15
+					ap_attack = 0.15
+					build_cost_ic = -0.2
 					
 					instant = yes
 				}
