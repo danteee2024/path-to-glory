@@ -4201,6 +4201,10 @@ prospect_for_resources = {
 					level = 1
 					instant_build = yes
 				}
+					add_resource = {
+					type = steel
+					amount = 10
+				}
 			}
 			random_owned_controlled_state = {
 				prioritize = {
