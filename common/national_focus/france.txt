@@ -1303,6 +1303,10 @@ add_timed_idea = {
 			}
 		}
 	}
+	#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 	focus = {
 		id = FRA_french_union
 		icon = GFX_focus_fra_french_union
@@ -1932,6 +1936,10 @@ add_timed_idea = {
 			focus = FRA_action_francaise
 		}
 		relative_position_id = FRA_rearmament	#dont use political ones, which may be hidden
+		#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 		x = 25
 		y = 0
 		offset = {
@@ -2305,7 +2313,7 @@ add_timed_idea = {
 	focus = {
 		id = FRA_commune_proclamation
 		icon = GFX_goal_generic_war_with_comintern
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = FRA_pcf_sfio_coalition
 		}
@@ -2355,6 +2363,11 @@ add_timed_idea = {
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
+
+	#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 	focus = {
 		id = FRA_assistance_treaty
 		icon = GFX_focus_chi_mission_to_the_soviet_union
@@ -2573,6 +2586,11 @@ add_timed_idea = {
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
+
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 	focus = {
 		id = FRA_law_against_combat_groups
 		icon = GFX_focus_generic_anti_fascist_diplomacy
@@ -3363,7 +3381,7 @@ add_timed_idea = {
 	focus = {
 		id = FRA_service_ordre_legionnaire
 		icon = GFX_SOV_military_engineering_university_ccp_2d_sov_compatibility
-		cost = 7.5
+		cost = 5
 		prerequisite = {
 			focus = FRA_union_latins
 		}
@@ -3786,7 +3804,7 @@ add_timed_idea = {
 	focus = {
 		id = FRA_brumaire_movement
 		icon = GFX_focus_generic_monarchy_2
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = FRA_papal_rehabilitation
 		}
@@ -4001,7 +4019,7 @@ add_timed_idea = {
 	focus = {
 		id = FRA_counter_the_fascist_infulence
 		icon = GFX_focus_generic_anti_fascist_diplomacy
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = FRA_side_with_the_orleanists
 		}
@@ -4072,7 +4090,7 @@ add_timed_idea = {
 	focus = {
 		id = FRA_constitutional_monarchy
 		icon = GFX_focus_focus_fra_orleans_restoration
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = FRA_oust_maurras
 		}
@@ -4208,7 +4226,7 @@ add_timed_idea = {
 	focus = {
 		id = FRA_public_works
 		icon = GFX_goal_generic_construct_infrastructure
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = FRA_constitutional_monarchy
 		}
@@ -4878,7 +4896,7 @@ add_timed_idea = {
 	focus = {
 		id = FRA_militarist_society
 		icon = GFX_focus_GER_schutztruppe
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = FRA_brumaire_movement
 		}
@@ -4940,7 +4958,7 @@ add_timed_idea = {
 	focus = {
 		id = FRA_legacy_of_the_grande_armee
 		icon = GFX_focus_attack_france
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = FRA_militarist_society
 		}
@@ -5016,7 +5034,7 @@ add_timed_idea = {
 	focus = {
 		id = FRA_our_natural_borders
 		icon = GFX_focus_focus_fra_border
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = FRA_the_new_continental_system
 		}
@@ -5234,7 +5252,10 @@ add_timed_idea = {
 				has_war = yes
 			}
 		}
-
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 		bypass = {
 			all_state = {
 				OR = {
@@ -6858,7 +6879,10 @@ add_timed_idea = {
 
 		}
 		
-		
+		#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 		available_if_capitulated = yes
 		completion_reward = {
 			air_experience = 25
@@ -7125,7 +7149,10 @@ add_timed_idea = {
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
-	
+	#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 	focus = {
 		id = FRA_infantry_focus
 		icon = GFX_focus_focus_fra_maquis
@@ -7498,7 +7525,10 @@ add_timed_idea = {
 			}
 		}
 	}
-	
+	#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 	focus = {
 		id = FRA_light_medium_armor
 		icon = GFX_SOV_development_of_tankograd_ccp_2d_sov_compatibility
@@ -9153,3 +9183,8 @@ add_timed_idea = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 }
+
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam

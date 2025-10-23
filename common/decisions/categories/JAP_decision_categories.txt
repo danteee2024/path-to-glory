@@ -101,6 +101,19 @@ JAP_civilian_investment = {
 		original_tag = JAP
 	 }
 	}
+JAP_Industry_Building = {
+		priority = 20
+
+	visible = {
+		has_completed_focus = JAP_Industry_Plan
+		
+	}
+	
+	icon = GFX_decision_generic_construction
+	 allowed = {
+		original_tag = JAP
+	 }
+	}
 JAP_manchurian_investment = {
 	visible = {
 		has_completed_focus = JAP_prepare_for_war_with_the_soviet_union

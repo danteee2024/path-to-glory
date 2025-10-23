@@ -14,7 +14,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		category_all_armor = {
+		category_tanks = {
 			breakthrough = 0.20
 		}
 		
@@ -166,7 +166,7 @@ technologies = {
 		}
 		motorized = {
 			maximum_speed = 0.1
-			default_morale = 0.2
+			default_morale = 0.25
 		}
 		armored_car = {
 			maximum_speed = 0.1
@@ -186,11 +186,11 @@ technologies = {
 		}
 		mechanized = {
 			maximum_speed = 0.1
-			default_morale = 0.2
+			default_morale = 0.1
 		}
 		amphibious_mechanized = {
 			maximum_speed = 0.1
-			default_morale = 0.2
+			default_morale = 0.1
 		}
 		
 		
@@ -372,7 +372,7 @@ technologies = {
 	armored_spearhead = { #Branch focused on Tanks 
 		xp_research_type = army
 		xp_unlock_cost = 100
-		category_tanks = {
+		category_all_armor = {
 			max_organisation = 3
 			breakthrough = 0.20
 		}
@@ -435,11 +435,14 @@ technologies = {
 		xp_unlock_cost = 100
 		category_tanks = {
 			max_organisation = 2
+			maximum_speed = 0.05
 		}
 
 		category_all_armor = {
 			default_morale = 0.1
 		}
+
+		
 		
 		
 		path = {
@@ -491,6 +494,7 @@ technologies = {
 		xp_unlock_cost = 100
 		category_tanks = {
 			max_organisation = 1
+			maximum_speed = 0.10
 		}
 
 		category_all_armor = {
@@ -498,7 +502,7 @@ technologies = {
 		}
 		armored_car = {
 			default_morale = 0.1
-			max_organisation = 7
+			max_organisation = 8
 		}
 
 		enable_tactic = tactic_breakthrough
@@ -528,7 +532,8 @@ technologies = {
 			cat_mobile_warfare
 		}
 
-		
+		army_bonus_air_superiority_factor = 0.15
+
 		folder = {
 			name = land_doctrine_folder
 			position = { x = 2 y = 10 }
@@ -853,7 +858,7 @@ technologies = {
 	nd_conscription = {
 		xp_research_type = army
 		xp_unlock_cost = 100
-		conscription = 0.02
+		conscription = 0.01
 		supply_combat_penalties_on_core_factor = -0.05
 		supply_consumption_factor = -0.05
 
@@ -1201,12 +1206,13 @@ technologies = {
 		
 		category_line_artillery = {
 			default_morale = 0.2
+			breakthrough = 0.1
 		}
 		
 		signal_company = {
 			battalion_mult = {
 				category = category_artillery
-				defense = 0.10
+				defense = 0.15
 			}
 		}
 		
@@ -1257,7 +1263,8 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 		category_line_artillery = {
-			soft_attack = 0.10
+			soft_attack = 0.15
+			hard_attack = 0.10
 			build_cost_ic = -0.20
 		}
 		coordination_bonus = 0.05
@@ -1392,7 +1399,6 @@ technologies = {
 		}
 
 		category_army = {
-			hard_attack = 0.10
 			soft_attack = 0.10
 		}
 
@@ -1446,7 +1452,6 @@ technologies = {
 		xp_unlock_cost = 100
 		
 		category_all_armor = {
-			hard_attack = 0.10
 			soft_attack = 0.10
 		}
 		
@@ -1553,7 +1558,7 @@ technologies = {
 		}
 			
 		#combat advantage when air superior
-		army_bonus_air_superiority_factor = 0.15
+		army_bonus_air_superiority_factor = 0.10
 
 		recon = {
 			battalion_mult = {
@@ -1591,7 +1596,7 @@ technologies = {
 			cat_superior_firepower
 		}
 
-		
+		# fuck u giamper you gonna copy this 
 		folder = {
 			name = land_doctrine_folder
 			position = { x = -2 y = 18 }
@@ -1607,11 +1612,11 @@ technologies = {
 			}
 			modifier = {
 				not = { ai_air_doctrine_tier_1_trigger = yes }
-				factor = 0.15
+				factor = 0.10
 			}
 			modifier = {
 				not = { ai_air_doctrine_tier_2_trigger = yes }
-				factor = 0.5
+				factor = 0.05
 			}
 		}
 		
@@ -1740,6 +1745,11 @@ technologies = {
 		
 		category_all_infantry = {
 			max_organisation = 10
+			default_morale = 0.05
+		}
+
+		category_line_artillery = {
+			max_organisation = 10.0
 			default_morale = 0.05
 		}
 
@@ -1915,7 +1925,7 @@ technologies = {
 		
 		#planning max bonus increase
 		max_planning = 0.1
-		command_power_gain = 0.25
+		command_power_gain = 0.20
 
 		doctrine = yes	
 		research_cost = 4.5
@@ -2965,6 +2975,21 @@ technologies = {
 			combat_width = -0.4
 		}
 
+		#fuck you giamper you will copy this 
+
+		medium_armor = {
+			combat_width = -0.4
+		}
+		medium_tank_destroyer_brigade = {
+			combat_width = -0.2
+		}
+		medium_sp_anti_air_brigade = {
+			combat_width = -0.4
+		}
+		medium_sp_artillery_brigade = {
+			combat_width = -0.4
+		}
+
 		armored_car = {
 			max_organisation = 5
 			soft_attack = 0.1
@@ -3041,7 +3066,7 @@ technologies = {
 			cat_mass_assault
 		}
 
-		
+		#fuck you giamper you will copy this 
 		folder = {
 			name = land_doctrine_folder
 			position = { x = -2 y = 10 }
@@ -3185,7 +3210,7 @@ technologies = {
 	
 	mechanized_wave = {
 		category_tanks = {
-			max_organisation = 2
+			max_organisation = 3
 		}
 		xp_research_type = army
 		xp_unlock_cost = 100
@@ -3535,6 +3560,7 @@ technologies = {
 		}
 		
 		resistance_growth_on_our_occupied_states = 0.25 
+		
 		
 		doctrine = yes	
 		research_cost = 4.5

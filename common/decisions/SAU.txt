@@ -1,0 +1,985 @@
+#Category only allowed for SAU
+
+SAU_Integration_category = {
+	SAU_Iran_Integration = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = SAU
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+			  SAU = {
+	            		266 = {
+	            			is_controlled_by = ROOT
+	            		}
+						
+	            		}
+	        
+		}
+		
+		visible = {
+			has_completed_focus = SAU_Revive_Arabian_Empire
+
+		}
+		activation = {
+			always = no
+		}
+		is_good = yes
+		days_remove = 0
+		cost = 0
+		fire_only_once = yes
+
+		cancel_effect = {
+		}
+
+		remove_effect = {
+				PER = {
+				for_each_scope_loop = {
+					array = core_states_at_game_start
+					add_core_of = ROOT
+				}
+			}
+			if = {
+				limit = {
+					PER = { is_subject_of = ROOT }
+				}
+
+				annex_country = {
+					target = PER
+					transfer_troops = yes
+				}
+			}
+			every_state = {
+				limit = { is_core_of = PER }
+				add_core_of = ROOT
+			}
+			 
+		}	
+	}
+
+	SAU_Afghanistan_Integration = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = SAU
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+			  SAU = {
+	            		267 = {
+	            			is_controlled_by = ROOT
+	            		}
+	            		}
+	        
+		}
+		
+		visible = {
+			has_completed_focus = SAU_Revive_Arabian_Empire
+
+		}
+		activation = {
+			always = no
+		}
+		is_good = yes
+		days_remove = 0
+		cost = 0
+		fire_only_once = yes
+
+		cancel_effect = {
+		}
+
+		remove_effect = {
+				AFG = {
+				for_each_scope_loop = {
+					array = core_states_at_game_start
+					add_core_of = ROOT
+				}
+			}
+			if = {
+				limit = {
+					AFG = { is_subject_of = ROOT }
+				}
+
+				annex_country = {
+					target = AFG
+					transfer_troops = yes
+				}
+			}
+			every_state = {
+				limit = { is_core_of = AFG }
+				add_core_of = ROOT
+			}
+			 
+		}	
+	}
+
+	SAU_North_Afracia_Integration = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = SAU
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+	        SAU = {
+	            		699 = {
+	            			is_controlled_by = ROOT
+	            		}
+						461	= {
+	            			is_controlled_by = ROOT
+	            		}
+						459	 = {
+	            			is_controlled_by = ROOT
+	            		}
+						458	 = {
+	            			is_controlled_by = ROOT
+	            		}
+						448	 = {
+	            			is_controlled_by = ROOT
+	            		}
+					}
+	            		}
+		
+		visible = {
+			has_completed_focus = SAU_Revive_Arabian_Empire
+
+		}
+		activation = {
+			always = no
+		}
+		is_good = yes
+		days_remove = 0
+		cost = 0
+		fire_only_once = yes
+
+		cancel_effect = {
+		}
+
+		remove_effect = {
+				MOR = {
+				for_each_scope_loop = {
+					array = core_states_at_game_start
+					add_core_of = ROOT
+				}
+			}
+			if = {
+				limit = {
+					MOR = { is_subject_of = ROOT }
+				}
+
+				annex_country = {
+					target = MOR
+					transfer_troops = yes
+				}
+			}
+			every_state = {
+				limit = { is_core_of = MOR }
+				add_core_of = ROOT
+			}
+
+				WES = {
+				for_each_scope_loop = {
+					array = core_states_at_game_start
+					add_core_of = ROOT
+				}
+			}
+			if = {
+				limit = {
+					WES = { is_subject_of = ROOT }
+				}
+
+				annex_country = {
+					target = WES
+					transfer_troops = yes
+				}
+			}
+			every_state = {
+				limit = { is_core_of = WES }
+				add_core_of = ROOT
+			}
+
+			 	ALG = {
+				for_each_scope_loop = {
+					array = core_states_at_game_start
+					add_core_of = ROOT
+				}
+			}
+			if = {
+				limit = {
+					ALG = { is_subject_of = ROOT }
+				}
+
+				annex_country = {
+					target = ALG
+					transfer_troops = yes
+				}
+			}
+			every_state = {
+				limit = { is_core_of = ALG }
+				add_core_of = ROOT
+			}
+
+			 	TUN = {
+				for_each_scope_loop = {
+					array = core_states_at_game_start
+					add_core_of = ROOT
+				}
+			}
+			if = {
+				limit = {
+					TUN = { is_subject_of = ROOT }
+				}
+
+				annex_country = {
+					target = TUN
+					transfer_troops = yes
+				}
+			}
+			every_state = {
+				limit = { is_core_of = TUN }
+				add_core_of = ROOT
+			}
+
+				LBA = {
+				for_each_scope_loop = {
+					array = core_states_at_game_start
+					add_core_of = ROOT
+				}
+			}
+			if = {
+				limit = {
+					LBA = { is_subject_of = ROOT }
+				}
+
+				annex_country = {
+					target = LBA
+					transfer_troops = yes
+				}
+			}
+			every_state = {
+				limit = { is_core_of = LBA }
+				add_core_of = ROOT
+			}
+			 
+			 
+		}	
+	}
+}
+
+	SAU_Middle_East_category = {
+
+	SAU_Iran_Invite = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = SAU
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+			PER = { is_in_faction = no }
+	        
+		}
+		
+		visible = {
+			has_completed_focus = SAU_Middle_East3
+			PER = { is_in_faction = no }
+			PER = { exists = yes }
+
+		}
+		activation = {
+			always = yes
+		}
+		is_good = yes
+		days_remove = 10
+		cost = 20
+		fire_only_once = no
+
+		cancel_effect = {
+		}
+
+		remove_effect = {
+				PER = { country_event =  generic.5 }
+			 
+		}	
+	}
+
+	SAU_Iraq_Invite = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = SAU
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+			IRQ = { is_in_faction = no }
+	        
+		}
+		
+		visible = {
+			has_completed_focus = SAU_Middle_East3
+			IRQ = { is_in_faction = no }
+			IRQ = { exists = yes }
+
+		}
+		activation = {
+			always = yes
+		}
+		is_good = yes
+		days_remove = 10
+		cost = 20
+		fire_only_once = no
+
+		cancel_effect = {
+		}
+
+		remove_effect = {
+				IRQ = { country_event =  generic.5 }
+			 
+		}	
+	}
+
+	SAU_Yemen_Invite = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = SAU
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+	        YEM = { is_in_faction = no }
+		}
+		
+		visible = {
+			has_completed_focus = SAU_Middle_East3
+			YEM = { is_in_faction = no }
+			YEM = { exists = yes }
+
+		}
+		activation = {
+			always = yes
+		}
+		is_good = yes
+		days_remove = 10
+		cost = 20
+		fire_only_once = no
+		cancel_effect = {
+		}
+
+		remove_effect = {
+				YEM = { country_event =  generic.5 }
+			 
+		}	
+	}
+
+	SAU_Afghanistan_Invite = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = SAU
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+			AFG = { is_in_faction = no }
+	        
+		}
+		
+		visible = {
+			has_completed_focus = SAU_Middle_East3
+			AFG = { is_in_faction = no }
+			AFG = { exists = yes }
+
+		}
+		activation = {
+			always = yes
+		}
+		is_good = yes
+		days_remove = 10
+		cost = 20
+		fire_only_once = no
+
+		cancel_effect = {
+		}
+
+		remove_effect = {
+				AFG = { country_event =  generic.5 }
+			 
+		}	
+	}
+
+	SAU_Turkey_Invite = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = SAU
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+			TUR = { is_in_faction = no }
+	        
+		}
+		
+		visible = {
+			has_completed_focus = SAU_Middle_East3
+			TUR = { is_in_faction = no }
+			TUR = { exists = yes }
+
+		}
+		activation = {
+			always = yes
+		}
+		is_good = yes
+		days_remove = 10
+		cost = 20
+		fire_only_once = no
+
+		cancel_effect = {
+		}
+
+		remove_effect = {
+				TUR = { country_event =  generic.5 }
+			 
+		}	
+	}
+
+SAU_Iran_Puppet = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = SAU
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+			PER = { is_in_faction = yes }
+	        has_completed_focus = SAU_Middle_East5
+		}
+		
+		visible = {
+			has_completed_focus = SAU_Middle_East3
+			PER = { is_in_faction = yes }
+
+		}
+		activation = {
+			always = yes
+		}
+		is_good = yes
+		days_remove = 10
+		cost = 20
+		fire_only_once = yes
+
+		cancel_effect = {
+		}
+
+		remove_effect = {
+				
+				puppet = PER
+			 
+		}	
+	}
+
+	SAU_Iraq_Puppet = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = SAU
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+			IRQ = { is_in_faction = yes }
+			has_completed_focus = SAU_Middle_East5
+	        
+		}
+		
+		visible = {
+			has_completed_focus = SAU_Middle_East3
+			IRQ = { is_in_faction = yes }
+
+		}
+		activation = {
+			always = yes
+		}
+		is_good = yes
+		days_remove = 10
+		cost = 20
+		fire_only_once = yes
+
+		cancel_effect = {
+		}
+
+		remove_effect = {
+			Puppet = IRQ 
+			 
+		}	
+	}
+
+	SAU_Yemen_Puppet = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = SAU
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+			has_completed_focus = SAU_Middle_East5
+			YEM = { is_in_faction = yes }
+		}
+		
+		visible = {
+			has_completed_focus = SAU_Middle_East3
+			YEM = { is_in_faction = yes }
+
+		}
+		activation = {
+			always = yes
+		}
+		is_good = yes
+		days_remove = 10
+		cost = 20
+		fire_only_once = yes
+		cancel_effect = {
+		}
+
+		remove_effect = {
+				Puppet = YEM
+			 
+		}	
+	}
+
+	SAU_Afghanistan_Puppet = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = SAU
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+			AFG = { is_in_faction = yes }
+	        has_completed_focus = SAU_Middle_East5
+		}
+		
+		visible = {
+			has_completed_focus = SAU_Middle_East3
+			AFG = { is_in_faction = yes }
+
+		}
+		activation = {
+			always = yes
+		}
+		is_good = yes
+		days_remove = 10
+		cost = 20
+		fire_only_once = yes
+
+		cancel_effect = {
+		}
+
+		remove_effect = {
+				Puppet = AFG 
+			 
+		}	
+	}
+
+	SAU_Turkey_Puppet = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = SAU
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+			TUR = { is_in_faction = yes }
+	        has_completed_focus = SAU_Middle_East5
+		}
+		
+		visible = {
+			has_completed_focus = SAU_Middle_East3
+			TUR = { is_in_faction = yes }
+
+		}
+		activation = {
+			always = yes
+		}
+		is_good = yes
+		days_remove = 10
+		cost = 20
+		fire_only_once = yes
+
+		cancel_effect = {
+		}
+
+		remove_effect = {
+				Puppet = TUR
+			 
+		}	
+	}
+}
+	SAU_Middle_East_Building_category = {
+	
+SAU_Iran_Building = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = SAU
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+	        controls_state = 266
+		}
+		
+		visible = {
+			has_completed_focus = SAU_Middle_East6
+
+		}
+		activation = {
+			always = yes
+		}
+		is_good = yes
+		days_remove = 10
+		cost = 50
+		fire_only_once = yes
+
+		cancel_effect = {
+		}
+
+		remove_effect = {
+				
+			add_resource = {
+				type = tungsten
+				amount = 10
+				state = 266
+			} 
+			add_resource = {
+				type = aluminium
+				amount = 10
+				state = 266
+			} 
+			 
+		}	
+	}
+
+	SAU_Iraq_Building = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = SAU
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+			
+			controls_state = 291
+	        
+		}
+		
+		visible = {
+			has_completed_focus = SAU_Middle_East6
+
+		}
+		activation = {
+			always = yes
+		}
+		is_good = yes
+		days_remove = 10
+		cost = 50
+		fire_only_once = yes
+
+		cancel_effect = {
+		}
+
+		remove_effect = {
+			add_resource = {
+				type = oil
+				amount = 15
+				state = 291
+			} 
+			 
+		}	
+	}
+
+	SAU_Yemen_Building = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = SAU
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+			controls_state = 293
+		}
+		
+		visible = {
+			has_completed_focus = SAU_Middle_East6
+
+		}
+		activation = {
+			always = yes
+		}
+		is_good = yes
+		days_remove = 10
+		cost = 50
+		fire_only_once = yes
+		cancel_effect = {
+		}
+
+		remove_effect = {
+			add_resource = {
+				type = oil
+				amount = 10
+				state = 293
+			} 
+			 
+		}	
+	}
+
+	SAU_Afghanistan_Building = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = SAU
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+			controls_state = 267
+	        
+		}
+		
+		visible = {
+			has_completed_focus = SAU_Middle_East6
+
+		}
+		activation = {
+			always = yes
+		}
+		is_good = yes
+		days_remove = 10
+		cost = 50
+		fire_only_once = yes
+
+		cancel_effect = {
+		}
+
+		remove_effect = {
+			add_resource = {
+				type = steel
+				amount = 10
+				state = 267
+			} 
+			add_resource = {
+				type = tungsten
+				amount = 10
+				state = 267
+			} 
+			add_resource = {
+				type = chromium
+				amount = 5
+				state = 267
+			} 
+		}	
+	}
+
+	SAU_Turkey_Building = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = SAU
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+			controls_state = 49
+		}
+		
+		visible = {
+			has_completed_focus = SAU_Middle_East6
+
+		}
+		activation = {
+			always = yes
+		}
+		is_good = yes
+		days_remove = 10
+		cost = 50
+		fire_only_once = yes
+
+		cancel_effect = {
+		}
+
+		remove_effect = {
+			add_resource = {
+				type = steel
+				amount = 10
+				state = 49
+			} 
+			add_resource = {
+				type = chromium
+				amount = 10
+				state = 49
+			} 
+				
+			 
+		}	
+	}
+
+}
+
+SAU_Oil_Trade_category = {
+
+	SAU_Oil_Trade = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = SAU
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = GER
+					original_tag = FRA
+					original_tag = ITA
+					original_tag = ENG
+					original_tag = SOV
+					original_tag = JAP
+					original_tag = USA
+				}
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+		}
+		available = {
+	        GER = {
+				not = { has_idea = SAU_Oil_Trade } }
+			JAP = {
+				not = { has_idea = SAU_Oil_Trade } }
+			ITA = {
+				not = { has_idea = SAU_Oil_Trade } }
+			USA = {
+				not = { has_idea = SAU_Oil_Trade } }
+			FRA = {
+				not = { has_idea = SAU_Oil_Trade } }
+			ENG = {
+				not = { has_idea = SAU_Oil_Trade } }		
+			SOV = {
+				not = { has_idea = SAU_Oil_Trade } }	
+
+		}
+		
+		visible = {
+			has_completed_focus = SAU_Oil_Trade
+
+		}
+		activation = {
+			always = yes
+		}
+		is_good = yes
+		days_remove = 0
+		cost = 20
+		fire_only_once = no
+		cancel_effect = {
+		}
+
+		remove_effect = {
+				FROM = {
+					add_timed_idea = {
+						idea = SAU_Oil_Trade
+						days = 90
+					}
+			 }
+			 
+		}	
+	}
+}

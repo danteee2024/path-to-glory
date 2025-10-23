@@ -25153,7 +25153,7 @@ focus_tree = {
 		completion_reward = {
 			unlock_decision_tooltip = GER_Inustrial_Production
 			unlock_decision_tooltip = GER_Industrial_Output
-
+			
 		}
 	}
 
@@ -25631,6 +25631,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
+			
+			add_research_slot = 1 
 
 			add_breakthrough_progress = {
 				specialization = specialization_nuclear
@@ -26087,7 +26089,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_revive_the_kaiserreich_ww
 
-		cost = 2
+		cost = 10
 
 		available = {
 			has_government = neutrality
@@ -26240,7 +26242,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_Strengthen_the_People
 
-		cost = 5
+		cost = 10
 
 		available = {
 			
@@ -26642,7 +26644,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_revive_the_kaiserreich_ww
 
-		cost = 2
+		cost = 5
 
 		available = {
 			has_government = neutrality
@@ -34933,6 +34935,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			research_bonus = 0.10
 			custom_effect_tooltip = GER_the_mannheim_project_tt
 			if = {
 				limit = {
@@ -34992,7 +34995,8 @@ focus_tree = {
 					specialization = specialization_nuclear
 					value = 0.5
 				}
-			}			
+			}	
+			 		
 		}
 	}
 

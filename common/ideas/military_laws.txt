@@ -25,7 +25,10 @@ ideas = {
 			}
 			
 			cancel_if_invalid = no
-
+	#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 			ai_will_do = {
    				factor = 5
    				modifier = {
@@ -383,7 +386,10 @@ ideas = {
 			}
 			
 			cancel_if_invalid = no
-
+	#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 			ai_will_do = {
    				factor = 4
    				modifier = {
@@ -721,7 +727,10 @@ ideas = {
 		}
 
 		youth_conscription = {
-
+	#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 			picture = youth_conscription
 			
 			available = {
@@ -818,7 +827,10 @@ ideas = {
    				}
    			}
 		}
-
+	#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 		political_exemptions = {
 
 			picture = political_exemptions

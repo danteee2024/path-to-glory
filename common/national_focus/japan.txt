@@ -4161,10 +4161,10 @@
 				limit = {
 					has_state_flag = JAP_imperial_arsenals1
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -4248,10 +4248,10 @@
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = JAP_imperial_arsenals
@@ -4638,7 +4638,7 @@
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}			
@@ -5061,17 +5061,59 @@
 					}
 				}
 			}
+						add_stability = 0.1
 			
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
+		id = JAP_Industry_Plan
+		icon = GFX_focus_generic_modernize_industry
+		prerequisite = { focus = JAP_prepare_for_war_with_the_soviet_union }
+		x = 0
+		y = 1
+		relative_position_id = JAP_prepare_for_war_with_the_soviet_union
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+			add_ideas = JAP_China_relation
+			unlock_decision_tooltip = JAP_develop_the_North
+			unlock_decision_tooltip = JAP_develop_the_Middle
+			unlock_decision_tooltip = JAP_develop_the_Soutch
+			282 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			531 = {
+				add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
 		id = JAP_further_preparations_for_war
 		icon = GFX_SOV_shift_to_armaments_production_ccp_2d_sov_compatibility
-		prerequisite = { focus = JAP_prepare_for_war_with_the_soviet_union }
+		prerequisite = { focus = JAP_Industry_Plan }
 		x = 1
-		y = 1	
+		y = 2	
 		relative_position_id = JAP_prepare_for_war_with_the_soviet_union
 
 		cost = 10
@@ -5096,7 +5138,7 @@
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				
@@ -5105,7 +5147,7 @@
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				
@@ -5116,9 +5158,9 @@
 	focus = {
 		id = JAP_build_up_the_manchurian_army
 		icon = GFX_focus_SOV_womens_fascist_movement
-		prerequisite = { focus = JAP_prepare_for_war_with_the_soviet_union }
+		prerequisite = { focus = JAP_Industry_Plan }
 		x = -1
-		y = 1
+		y = 2
 		relative_position_id = JAP_prepare_for_war_with_the_soviet_union
 
 		cost = 5
@@ -5269,6 +5311,54 @@
 	}
 
 	focus = {
+		id = JAP_industry_development
+		icon = GFX_focus_generic_reorient_production
+		prerequisite = { focus =  JAP_War_Production }
+		x = 0
+		y = 1
+		relative_position_id = JAP_War_Production
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+
+			}
+			
+			 
+			}
+		}
+
+
+	focus = {
 		id = JAP_give_everything_to_the_army
 		icon = GFX_focus_SOV_merge_plants
 		prerequisite = { focus = JAP_further_preparations_for_war }
@@ -5287,13 +5377,13 @@
 			528 = {
 				add_building_construction = {
 					type = dockyard
-					level = -5
+					level = -3
 					instant_build = yes
 				}
 				
 					add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 5
 					instant_build = yes
 				}
 			}
@@ -5303,6 +5393,27 @@
 			}
 			JAP_interservice_rivalry_towards_army = yes
 		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = JAP_War_Production
+		icon = GFX_SOV_superior_war_machines_ccp_2d_sov_compatibility
+		prerequisite = { focus = JAP_give_everything_to_the_army }
+		x = 1
+		y = 1
+		relative_position_id = JAP_give_everything_to_the_army
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		completion_reward = {
+			
+			add_ideas =  JAP_War_Production
+	}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -5469,8 +5580,8 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 	focus = {
-		id = JAP_offer_peace_to_the_soviets
-		icon = GFX_focus_generic_surrender
+		id = JAP_Soviet_War
+		icon = GFX_SOV_the_last_break_southward_ccp_2d_sov_compatibility
 		prerequisite = { focus = JAP_increase_rail_in_siberia focus = JAP_seize_trains_and_trucks_for_the_war }
 		x = 0
 		y = 2
@@ -5484,13 +5595,13 @@
 
 		available = {
 			has_war_with = SOV
-			surrender_progress > 0.05
 		}
 
 		completion_reward = {
-			white_peace = SOV
+			add_ideas = JAP_Anti_Soviet
+
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_ARMY_XP }
 	}
 
 	focus = {
@@ -8364,10 +8475,11 @@ allow_branch = {
 	focus = {
 		id = JAP_modern_artillery
 		icon = GFX_goal_generic_army_artillery
-		prerequisite = { focus = JAP_army_expansion_law }
-		x = -4
+		prerequisite = { focus = JAP_lunge_mines }
+		prerequisite = { focus = JAP_defense_in_depth }
+		x = -1
 		y = 1
-		relative_position_id = JAP_army_expansion_law
+		relative_position_id = JAP_lunge_mines
 
 		cost = 5
 
@@ -8451,6 +8563,21 @@ allow_branch = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 	focus = {
+    id = JAP_refined_operational_planning
+    icon = GFX_goal_generic_army_doctrines
+    x = 0
+    y = 1
+    cost = 10
+    prerequisite = { focus = JAP_pack_guns }
+	relative_position_id = JAP_pack_guns
+    available = {
+    }
+    completion_reward = {
+
+        add_ideas = JAP_refined_planning_idea
+    }
+}
+	focus = {
 		id = JAP_armored_divisions
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = JAP_supremacy_of_technology }
@@ -8483,8 +8610,8 @@ allow_branch = {
 	}
 	
 	focus = {
-		id = JAP_the_ultimate_tank
-		icon = GFX_focus_SOV_the_glory_of_the_red_army_alternative
+		id = JAP_the_ultimate_tank_Production
+		icon = GFX_focus_generic_heavy_tank
 		prerequisite = { focus = JAP_armored_divisions }
 		prerequisite = { focus = JAP_rethink_armor_design }
 		x = 0
@@ -8495,28 +8622,72 @@ allow_branch = {
 			factor = 1
 		}
 		available = {
-			if = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-				has_tech = super_heavy_tank_chassis
-				has_tech = armor_tech_2
-				has_tech = engine_tech_2
-			}
 		}
 
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = JAP_the_ultimate_tank
-				bonus = 2
-				uses = 1
-				technology = super_heavy_tank
-			}
+			add_ideas = JAP_the_ultimate_tank_Production
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
+		focus = {
+		id = JAP_Organize_the_Fuel
+		icon = GFX_focus_generic_stockpile_fuel
+		prerequisite = { focus = JAP_the_ultimate_tank_Production }
+		x = -1
+		y = 1
+		relative_position_id = JAP_the_ultimate_tank_Production
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = JAP_Organize_the_Fuel
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+		focus = {
+		id = JAP_Tank_Army
+		icon = GFX_focus_generic_tank_assault
+		prerequisite = { focus = JAP_the_ultimate_tank_Production }
+		x = 1
+		y = 1
+		relative_position_id = JAP_the_ultimate_tank_Production
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = JAP_Tank_Army
+		}
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+	}
+	focus = {
+    id = JAP_embrace_armored_warfare
+    icon = GFX_focus_generic_tank_assembly
+    x = -1
+    y = 1
+    cost = 10
+	relative_position_id = JAP_Tank_Army
+    prerequisite = { focus = JAP_Tank_Army }
+	prerequisite = { focus = JAP_Organize_the_Fuel }
+    available = {
+    }
+    completion_reward = {
+        add_ideas = JAP_armored_warfare_idea
+    }
+}
 
 	focus = {
 		id = JAP_army_expansion
@@ -8645,20 +8816,9 @@ allow_branch = {
 		}
 
 		available = {
-			has_army_experience > 49.99
-			if = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-				has_tech = advanced_medium_tank_chassis
-				has_tech = artillery4
-				has_tech = armor_tech_2
-				has_tech = engine_tech_2
-			}
 		}
 		
 		completion_reward = {
-			army_experience = -50
 			army_experience = 15
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.5

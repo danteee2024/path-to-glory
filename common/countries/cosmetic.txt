@@ -161,6 +161,16 @@ ARA_UNIFIED = {
 	color_ui = rgb { 85 102 0 }
 }
 
+SAU_Arabian_Empire = {
+	color = rgb { 85 102 0 }
+	color_ui = rgb { 85 102 0 }
+}
+
+SAU_United_States_of_the_Middle_East = {
+	color = rgb { 120 175 200 }
+	color_ui = rgb { 120 175 200 }
+}
+
 MAJ_UNIFIED = {
 	color = rgb { 255 51 51 }
 	color_ui = rgb { 255 51 51 }

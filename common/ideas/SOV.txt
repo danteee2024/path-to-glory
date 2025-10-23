@@ -10,6 +10,26 @@ ideas = {
 
 
 	country= {
+		SOV_Professionalise_the_Army_2 = {
+		picture = SPR_torchbearers_of_tomorrow
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+
+			}
+			available = {
+
+			}
+
+			modifier = {
+				
+				army_attack_factor = 0.05
+				recruitable_population_factor = -0.10
+			}
+		}
 
 		SOV_Trotskys_Left_Hand = {
 
@@ -58,7 +78,7 @@ ideas = {
 			modifier = {
 				supply_consumption_factor = -0.10
 				planning_speed = 0.10
-				max_planning_factor = 0.15
+				max_planning_factor = 0.10
 				#division_recovery_rate = 0.1 maybe 
 			}
 		}
@@ -73,7 +93,10 @@ ideas = {
 			allowed = {
 				always = no
 			}
-
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 			modifier = {
 				production_factory_efficiency_gain_factor = -0.15
 				production_factory_max_efficiency_factor = 0.05
@@ -491,7 +514,10 @@ ideas = {
 			}
 		}
 
-
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 
 		SOV_anti_capitalist_campaign_eng = { #Comes from Propaganda Campaign
 			name = SOV_anti_capitalist_campaign_generic
@@ -1353,7 +1379,10 @@ ideas = {
 				custom_modifier_tooltip = SOV_development_of_eastern_allies_tt
 			}
 		}
-
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 		SOV_war_measures_allies = {
 			name = SOV_war_measures_in_the_east
 
@@ -1725,7 +1754,10 @@ ideas = {
 				consumer_goods_factor  = 0.15
 			}
 		}
-
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 		SOV_common_economic_space_sov_military = {
 			name = SOV_common_economic_space_sov_default
 
@@ -2249,10 +2281,13 @@ ideas = {
 
 			modifier = {
 				consumer_goods_factor = -0.10
-				industry_repair_factor = 0.25
+				industry_repair_factor = 0.20
 			}
 		}
-
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 		SOV_restore_the_glory_of_the_motherland = {
 			picture = SOV_restore_the_glory_of_the_motherland_ccp_sov_compatibility
 
@@ -2434,7 +2469,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = -0.15
+				consumer_goods_factor = -0.05
 				conscription = 0.01
 			}
 		}
@@ -2513,7 +2548,10 @@ ideas = {
 			allowed_civil_war = {
 				original_tag = SOV
 			}
-
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 			equipment_bonus = {
 				screen_ship = {
 					naval_speed = 0.1 naval_range = 0.25
@@ -2621,8 +2659,8 @@ ideas = {
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
 				army_org_factor = 0.05
-				conscription = 0.02
-				org_loss_when_moving = -0.05
+				conscription = 0.01
+				
 		}
 	}
 
@@ -2639,7 +2677,7 @@ ideas = {
 			}
 
 			modifier = {
-				production_speed_arms_factory_factor = 0.15
+				production_speed_arms_factory_factor = 0.10
 				production_speed_industrial_complex_factor = -0.10
 		}
 	}
@@ -3698,7 +3736,10 @@ ideas = {
 				defense_bonus_against = 0.1
 			}
 		}
-
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 		SOV_increased_aircraft_production_ns_bonus = { #Used as a hidden idea to prevent overcrowding in the regular Soviet Aircraft ns tt
 			removal_cost = -1
 
@@ -4488,7 +4529,10 @@ ideas = {
 #		}
 	}
 
-
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 ########  ########  ######  ####  ######   ##    ## ######## ########   ######
 ##     ## ##       ##    ##  ##  ##    ##  ###   ## ##       ##     ## ##    ##
 ##     ## ##       ##        ##  ##        ####  ## ##       ##     ## ##
@@ -10164,7 +10208,10 @@ ideas = {
 				original_TAG = SOV
 
 			}
-
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 			visible = {
 				has_country_flag = { flag = SOV_gosproyektstroy_level_2_flag value = 3 } #GER
 				has_country_flag = { flag = SOV_gosproyektstroy_level_3_flag value = 3 } #DOCK
@@ -10242,7 +10289,10 @@ ideas = {
 				consumer_goods_factor = -0.15
 			}
 		}
-
+      #Dante’s Path to Glory (BismarkMP Mod)
+      # © 2025 Dante. All rights reserved.
+      #Reuploads, redistribution, or uncredited modifications are not permitted.
+      #Contact: BismarkMP Discord / Steam
 		SOV_gosproyektstroy_3_jap_mil = {
 
 			name = SOV_gosproyektstroy_1
@@ -10302,6 +10352,6 @@ ideas = {
 				industrial_capacity_dockyard = 0.05
 			}
 		}
-		
 	
+
 }

@@ -10787,7 +10787,7 @@ leader_traits = {
 		stability_factor = 0.10
 		conscription_factor = 0.15
 		neutrality_drift = 0.01
-		army_core_defence_factor = 0.1
+		army_core_defence_factor = 0.05
 	}		
 
 	#Leopold - Prisoner-King post surrender

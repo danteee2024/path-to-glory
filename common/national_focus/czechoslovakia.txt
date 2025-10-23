@@ -10,7 +10,10 @@
 			has_dlc = "Death or Dishonor"
 		}
 	}
-	
+	#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 	default = no
 
 	continuous_focus_position = { x = 150 y = 150 }
@@ -1743,7 +1746,10 @@ focus = {
 			modifier = {
 				factor = 0.1
 			}
-		}
+		}#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 
 		available = {
 
@@ -5940,7 +5946,10 @@ focus = {
 			}
 		}
 	}
-
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 	focus = {
 		id = CZE_doctrine_bonus
 		icon = GFX_goal_generic_army_doctrines
@@ -6928,7 +6937,10 @@ focus = {
 		available = {
 
 		}
-
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 		bypass = {
 
 		}

@@ -1,0 +1,291 @@
+ideas = {
+
+	country = {
+
+	SAU_royal_consolidation_idea = {
+    picture = GFX_idea_generic_political_reform
+    allowed = { original_tag = SAU }
+    modifier = {
+        political_power_gain = 0.1
+        stability_factor = 0.05
+        surrender_limit = 0.05
+    }
+}
+
+	SAU_Middle_East = {
+    picture = generic_political_support
+    allowed = { original_tag = SAU }
+    modifier = {
+        political_power_gain = 0.1
+    }
+}
+
+	SAU_Arabian_Empire_Camel = {
+    picture = por_colonial_army
+    allowed = { original_tag = SAU }
+    modifier = {
+        modifier_army_sub_unit_camelry_attack_factor = 0.1
+        modifier_army_sub_unit_camelry_defence_factor = 0.1
+    }
+}
+
+	SAU_Arabian_Army = {
+    picture = chi_army_corruption3
+    allowed = { original_tag = SAU }
+    modifier = {
+     conscription_factor = 0.03
+    }
+}
+
+	SAU_Arabian_Army2 = {
+    picture = MEX_politicised_army_2
+    allowed = { original_tag = SAU }
+    modifier = {
+     army_org_factor = 0.05
+     org_loss_when_moving = -0.05
+    }
+}
+
+SAU_Saudi_Arabia_Eco = {
+    picture = generic_economic_increase
+    allowed = { original_tag = SAU }
+    modifier = {
+     consumer_goods_factor = -0.15
+    }
+}
+
+SAU_Defence_Plan = {
+    picture = ast_volunteer_defence_corps
+    allowed = { original_tag = SAU }
+    modifier = {
+     army_core_defence_factor = 0.15
+    }
+}
+
+SAU_Building =  {
+    picture = generic_improved_industries
+    allowed = { original_tag = SAU }
+    modifier = {
+     production_speed_buildings_factor = 0.1
+    }
+}
+
+SAU_Building2 =  {
+    picture = generic_improved_industries
+    allowed = { original_tag = SAU }
+    modifier = {
+     production_speed_buildings_factor = 0.1
+     production_factory_efficiency_gain_factor = 0.1
+    }
+}
+SAU_Building3 =  {
+    picture = generic_improved_industries
+    allowed = { original_tag = SAU }
+    modifier = {
+     production_speed_buildings_factor = 0.1
+     production_factory_efficiency_gain_factor = 0.1
+     resource_trade_cost_bonus_per_factory = 1
+    }
+}
+SAU_Building4 =  {
+    picture = generic_improved_industries
+    allowed = { original_tag = SAU }
+    modifier = {
+     production_speed_buildings_factor = 0.1
+     production_factory_efficiency_gain_factor = 0.1
+     production_factory_max_efficiency_factor = 0.05
+     consumer_goods_factor = -0.1
+    }
+}
+SAU_Oil_Trade =  {
+    picture = MEX_oil_concessions
+    allowed = { original_tag = USA 
+original_tag = FRA
+original_tag = ENG
+original_tag = USA
+original_tag = ITA
+original_tag = JAP
+original_tag = GER
+}
+    modifier = {
+     fuel_gain = 0.2
+     army_fuel_consumption_factor = -0.15
+     navy_fuel_consumption_factor = -0.15
+     air_fuel_consumption_factor = -0.15
+     consumer_goods_factor = -0.2
+    }
+}
+
+SAU_Oil_Trade2 =  {
+    picture = MEX_oil_concessions
+    allowed = { original_tag = SAU }
+    modifier = {
+     fuel_gain = -0.2
+     consumer_goods_factor = 0.1
+    }
+}
+SAU_Oil_Trade3 =  {
+    picture = MEX_oil_concessions
+    allowed = { original_tag = SAU }
+    modifier = {
+     fuel_gain = -0.1
+     consumer_goods_factor = 0.05
+     research_speed_factor = 0.15
+    }
+}
+SAU_Oil_Trade4 =  {
+    picture = MEX_oil_concessions
+    allowed = { original_tag = SAU }
+    modifier = {
+     consumer_goods_factor = -0.05
+     research_speed_factor = 0.15
+     fuel_gain = 0.1
+    }
+}
+
+SAU_Oil_Trade5 =  {
+    picture = MEX_oil_concessions
+    allowed = { original_tag = SAU }
+    modifier = {
+     consumer_goods_factor = -0.20
+     research_speed_factor = 0.15
+     fuel_gain = 0.25
+     production_speed_buildings_factor = 0.1
+     production_oil_factor = 0.1
+    }
+}
+
+SAU_Oil_Trade6 =  {
+    picture = MEX_oil_concessions
+    allowed = { original_tag = SAU }
+    modifier = {
+     consumer_goods_factor = -0.20
+     research_speed_factor = 0.15
+     fuel_gain = 0.25
+     production_factory_efficiency_gain_factor = 0.05
+     production_factory_max_efficiency_factor = 0.05
+     production_factory_start_efficiency_factor = 0.05
+     production_oil_factor = 0.1
+    }
+}
+	SAU_Camel = {
+    picture = por_colonial_army
+    allowed = { original_tag = SAU }
+    modifier = {
+        modifier_army_sub_unit_camelry_attack_factor = 0.1
+        modifier_army_sub_unit_camelry_defence_factor = 0.1
+    }
+}
+	SAU_Climate = {
+    picture = por_colonial_army
+    allowed = { original_tag = SAU }
+    modifier = {
+        heat_attrition = -0.30
+        army_speed_factor = 0.1
+    }
+}
+SAU_Army = {
+    picture = chi_army_corruption3
+    allowed = { original_tag = SAU }
+    modifier = {
+     conscription_factor = 0.03
+    }
+}
+SAU_Planning = {
+    picture = MEX_politicised_army_2
+    allowed = { original_tag = SAU }
+    modifier = {
+    max_planning = 0.05
+    planning_speed = 0.05
+    
+    }
+}
+
+SAU_Tank_Production = {
+    picture = man_five_year_plan_tank
+    allowed = { original_tag = SAU }
+    equipment_bonus = {
+				heavy_tank_chassis = {
+					build_cost_ic = -0.1
+					reliability = 0.1 instant = yes
+					soft_attack = 0.1
+				}
+                medium_tank_chassis = {
+					build_cost_ic = -0.1
+					reliability = 0.1 instant = yes
+					soft_attack = 0.1
+				}
+			}
+}
+
+SAU_Tank_Army = {
+    picture = generic_acquire_tanks
+    allowed = { original_tag = SAU }
+    modifier = {
+        army_armor_attack_factor = 0.1
+        army_armor_defence_factor = 0.1
+        army_armor_speed_factor = 0.05
+    }
+}
+
+SAU_Army_reinforce = {
+    picture = chi_army_corruption3
+    allowed = { original_tag = SAU }
+    modifier = {
+        		land_reinforce_rate = 0.02
+				army_morale_factor = 0.05
+    }
+}
+
+SAU_Artillery = {
+    picture = SOV_defense_industry_artillery_bonus_ccp_sov_compatibility
+    allowed = { original_tag = SAU }
+    equipment_bonus = {
+			artillery = {
+				build_cost_ic = -0.15
+                soft_attack = 0.05
+				instant = yes
+			}
+            anti_tank_equipment = {
+				build_cost_ic = -0.15
+                hard_attack = 0.05
+				instant = yes
+			}
+            anti_air_equipment = {
+				build_cost_ic = -0.15
+                air_attack = 0.05
+				instant = yes
+			}
+		}
+}
+SAU_Global_Trade = {
+    picture = generic_sea_focused_navy
+    allowed = { original_tag = SAU }
+    modifier = {
+        production_speed_dockyard_factor = 0.1
+    }
+    equipment_bonus = {
+			convoy = {
+				build_cost_ic = -0.15
+				instant = yes
+			}
+		}
+
+}
+SAU_Global_Trade2 = {
+    picture = HUN_mavag_aircraft
+    allowed = { original_tag = SAU }
+    modifier = {
+        supply_node_range = 0.2
+    }
+    equipment_bonus = {
+			large_air_frame = {
+				build_cost_ic = -0.1
+				instant = yes
+			}
+		}
+
+
+}
+}
+}

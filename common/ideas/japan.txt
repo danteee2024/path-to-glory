@@ -15,6 +15,90 @@ ideas = {
 			}
 		}
 
+		JAP_Anti_Soviet = {
+		allowed = {
+			original_tag = JAP
+		}
+
+		allowed_civil_war = {
+			always = no
+		}
+
+		removal_cost = -1
+
+		picture = FIN_german_threat
+
+		targeted_modifier = {
+			tag = SOV
+			attack_bonus_against = 0.05
+			defense_bonus_against = 0.05
+		}
+
+
+	}
+
+		JAP_War_Production = {
+		allowed = {
+			original_tag = JAP
+		}
+
+		allowed_civil_war = {
+			always = no
+		}
+
+		removal_cost = -1
+
+		picture = generic_license_production
+
+		modifier = {
+			production_factory_efficiency_gain_factor = 0.05
+			production_factory_max_efficiency_factor = 0.05
+			production_factory_start_efficiency_factor = 0.05
+			industrial_capacity_factory = 0.1
+		}
+
+
+	}
+	 JAP_Organize_the_Fuel = {
+		allowed = {
+			original_tag = JAP
+		}
+
+		allowed_civil_war = {
+			always = no
+		}
+
+		removal_cost = -1
+
+		picture = generic_fuel_reserves
+		modifier = {
+			army_fuel_consumption_factor = -0.15
+			air_fuel_consumption_factor =  -0.15
+			navy_fuel_consumption_factor = -0.15
+		}
+
+
+	}
+	JAP_Tank_Army = {
+		allowed = {
+			original_tag = JAP
+		}
+
+		allowed_civil_war = {
+			always = no
+		}
+
+		removal_cost = -1
+
+		picture = generic_armor
+		modifier = {
+			army_armor_attack_factor = 0.1
+			army_armor_defence_factor = 0.1
+		}
+
+
+	}
+
 		JAP_democratic_trade_idea = {
 			picture = can_wartime_prices_and_trade_board
 			allowed = {
@@ -347,9 +431,6 @@ ideas = {
 			equipment_bonus = {
 				infantry_equipment = {
 					hard_attack = 0.75
-					instant = yes
-				}
-				infantry_equipment = {
 					ap_attack = 0.75
 					instant = yes
 				}
@@ -358,7 +439,6 @@ ideas = {
 				lunge_mines_trait
 			}
 			modifier = {
-				experience_loss_factor = 0.10
 			}
 		}
 		JAP_jungle_training = {
@@ -722,7 +802,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				industrial_capacity_factory = 0.10
-				industrial_capacity_dockyard = -0.10
+				industrial_capacity_dockyard = -0.05
 				political_power_gain = -0.10
 				production_factory_efficiency_gain_factor = 0.10
 				production_speed_arms_factory_factor = 0.10
@@ -1875,6 +1955,29 @@ ideas = {
 				materiel_manufacturer_cost_factor = -0.15
 			}
 		}
+    JAP_armored_warfare_idea = {
+    icon = CZE_planning_bonus
+    allowed = {
+        original_tag = JAP
+    }
+    removal_cost = -1
+    modifier = {
+        org_loss_when_moving = -0.05
+        army_speed_factor = 0.05
+        planning_speed = 0.05
+    }
+}
+ JAP_refined_planning_idea = {
+    icon = CZE_planning_bonus
+    allowed = {
+        original_tag = JAP
+    }
+    removal_cost = -1
+    modifier = {
+        max_planning_factor = 0.05
+        army_org_factor = 0.05
+    }
+}
 
 		JAP_zaibatsus_challenged = {
 
@@ -2277,6 +2380,47 @@ ideas = {
 				land_doctrine_cost_factor = -0.05
 			}
 		}
+		 JAP_the_ultimate_tank_Production = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_acquire_tanks
+			equipment_bonus = {
+				medium_tank_chassis = {
+					build_cost_ic = -0.1
+					soft_attack = 0.1
+					hard_attack = 0.1
+					reliability = 0.05
+				}
+			}
+			
+			
+		}
+		JAP_China_relation =  {
+		allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = jap_interservice_rivalry_army_strengthened
+			
+			targeted_modifier = {
+				tag = CHI
+			compliance_gain = -0.10
+			} 
+		}
 
 		JAP_interservice_rivalry_army_strengthened = {
 			name = JAP_interservice_rivalry_army_strengthened
@@ -2294,9 +2438,9 @@ ideas = {
 			
 			modifier = {
 				production_speed_arms_factory_factor = 0.05
-				production_speed_dockyard_factor = -0.1
+				production_speed_dockyard_factor = -0.05
 				industrial_capacity_factory = 0.05
-				industrial_capacity_dockyard = -0.1
+				industrial_capacity_dockyard = -0.05
 			}
 		}
 
@@ -2385,9 +2529,8 @@ ideas = {
 			equipment_bonus = {
 				artillery_equipment = {
 					soft_attack = 0.1
-					ap_attack = -0.2
-					hard_attack = -0.2
-					build_cost_ic = -0.1
+					hard_attack = -0.1
+					build_cost_ic = -0.15
 					instant = yes
 				}
 			}
@@ -2410,8 +2553,6 @@ ideas = {
 			picture = jap_supremacy_of_technology
 			
 			research_bonus = {
-				infantry_weapons = 0.20
-				support_tech = 0.20
 				armor = 0.20
 				artillery = 0.20
 			}

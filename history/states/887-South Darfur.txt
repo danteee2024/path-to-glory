@@ -4,6 +4,10 @@ state={
 
 	manpower = 302020
 	state_category = wasteland
+
+	resources = {
+		tungsten = 16
+	}
 	
 	history = {
 		owner = ENG

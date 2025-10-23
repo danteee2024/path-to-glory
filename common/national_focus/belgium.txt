@@ -703,7 +703,7 @@ focus_tree = {
 		x = 1
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 			NOT = { 
@@ -724,14 +724,14 @@ focus_tree = {
 				else = {
 					custom_effect_tooltip = BEL_modify_mobilize_the_nation_dynamic_modifier_tt
 					add_to_variable = { 
-						BEL_mobilize_the_nation_conscription = 0.015
+						BEL_mobilize_the_nation_conscription = 0.010
 						tooltip = conscription_tt				
 					}	 
 				}		 
 			}
 			add_timed_idea = { 
 				idea = BEL_lack_of_junior_officers_ns
-				days = 180
+				days = 270
 			}
 		}
 	}
@@ -747,7 +747,7 @@ focus_tree = {
 		x = 1
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 		}
@@ -974,7 +974,7 @@ focus_tree = {
 		x = -3
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 		}
@@ -998,7 +998,7 @@ focus_tree = {
 			ELSE = {
 				custom_effect_tooltip = BEL_modify_scars_of_ww1_dynamic_modifier_tt
 				add_to_variable = { 
-					BEL_scars_of_ww1_production_speed_arms_factory_factor = 0.2
+					BEL_scars_of_ww1_production_speed_arms_factory_factor = 0.1
 					tooltip = production_speed_arms_factory_factor_tt
 				}
 				add_to_variable = { 
@@ -1030,7 +1030,7 @@ focus_tree = {
 		x = -6
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 		}
@@ -1057,7 +1057,7 @@ focus_tree = {
 		x = -1
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 		}
@@ -1067,7 +1067,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = BEL_modify_royal_military_academy_dynamic_modifier_tt
 			add_to_variable = { 
-				BEL_royal_military_academy_army_org_factor = 0.1
+				BEL_royal_military_academy_army_org_factor = 0.10
 				tooltip = army_org_factor_tt				
 			}	 
 		}
@@ -1093,7 +1093,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = BEL_modify_royal_military_academy_dynamic_modifier_tt
 			add_to_variable = { 
-				BEL_royal_military_academy_initiative_factor = 0.15
+				BEL_royal_military_academy_initiative_factor = 0.10
 				tooltip = initiative_factor_tt				
 			}	
 		}
@@ -1154,7 +1154,7 @@ focus_tree = {
 				add_doctrine_cost_reduction = {
 					name = BEL_resist_and_bite
 					cost_reduction = 0.25
-					uses = 2
+					uses = 1
 					category = cat_mountaineers_doctrine
 				}
 			}
@@ -1180,7 +1180,7 @@ focus_tree = {
 		x = 1
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 		}
@@ -1208,7 +1208,7 @@ focus_tree = {
 		x = -1
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 		}
@@ -1312,7 +1312,7 @@ focus_tree = {
 		x = 0
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 		}
@@ -1407,7 +1407,7 @@ focus_tree = {
 		x = 0
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 		}
@@ -1497,7 +1497,7 @@ focus_tree = {
 		x = 0
 		y = 2
 	
-		cost = 5
+		cost = 10
 
 		available = {
 		}
@@ -1528,7 +1528,7 @@ focus_tree = {
 		x = 0
 		y = 2
 	
-		cost = 5
+		cost = 10
 
 		available = {
 		}
@@ -1649,7 +1649,7 @@ focus_tree = {
 		x = 1
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 			NOT = { 
@@ -1677,7 +1677,7 @@ focus_tree = {
 			}
 			add_timed_idea = { 
 				idea = BEL_lack_of_junior_officers_ns
-				days = 180
+				days = 270
 			}
 		}
 
@@ -1866,7 +1866,7 @@ focus_tree = {
 		x = 0
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 			has_war = yes
@@ -1902,7 +1902,7 @@ focus_tree = {
 		x = 1
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 		}
@@ -2962,7 +2962,7 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			fascism > 0.5
+			fascism > 0.6
 		}
 	
 		completion_reward = {
@@ -2976,10 +2976,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}	
 			}
@@ -3015,10 +3015,10 @@ focus_tree = {
 		x = 1
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
-			fascism > 0.5
+			fascism > 0.6
 		}
 	
 		completion_reward = {
@@ -3045,7 +3045,7 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			fascism > 0.6
+			fascism > 0.70
 		}
 	
 		completion_reward = {
@@ -3054,10 +3054,7 @@ focus_tree = {
 				BEL_rexist_legion_conscription_factor = 0.15
 				tooltip = conscription_factor_tt				
 			}
-			add_to_variable = { 
-				BEL_rexist_legion_land_night_attack = 0.05
-				tooltip = land_night_attack_tt				
-			}
+			
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -3128,7 +3125,7 @@ focus_tree = {
 		x = 0
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 			fascism > 0.8
@@ -3224,10 +3221,10 @@ focus_tree = {
 					}
 				}
 				980 = {
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = industrial_complex
-						level = 2
+						level = 1
 						instant_build = yes
 					}	
 				}
@@ -3548,7 +3545,7 @@ focus = {
 		x = 1
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 		}
@@ -3959,7 +3956,7 @@ focus = {
 		x = -2
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 			OR = {
@@ -3981,7 +3978,8 @@ focus = {
 		}
 
 		completion_reward = {
-
+			add_political_power = 300
+			
 			every_state = {
 				limit = {
 					OR = {
@@ -4017,7 +4015,10 @@ focus = {
 		y = 1
 	
 		cost = 5
-
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 		available = {
 			29 = {
 				is_fully_controlled_by = BEL
@@ -4141,6 +4142,7 @@ focus = {
 				target = FRA
 				expire = 0
 				generator = { 29 785 18 28 17 27 }
+    
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -6916,7 +6918,7 @@ focus = {
 		x = 0
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 		}
@@ -6960,12 +6962,12 @@ focus = {
 				else = {
 					custom_effect_tooltip = BEL_modify_belgian_legion_dynamic_modifier_tt
 					add_to_variable = { 
-						BEL_belgian_legion_army_core_attack_factor = 0.1
+						BEL_belgian_legion_army_core_attack_factor = 0.05
 						tooltip = army_core_attack_factor_tt					
 					}
 
 					add_to_variable = { 
-						BEL_belgian_legion_army_core_defence_factor = 0.1
+						BEL_belgian_legion_army_core_defence_factor = 0.05
 						tooltip = army_core_attack_factor_tt				
 					}	 
 				}		 
@@ -7303,7 +7305,10 @@ focus = {
 					level = 1
 					instant_build = yes
 				}	
-			}	
+			}	#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 		}
 
 	}
@@ -7498,7 +7503,7 @@ focus = {
 		x = 0
 		y = 1
 	
-		cost = 5
+		cost = 10
 
 		available = {
 			34 = {
@@ -7770,7 +7775,7 @@ focus = {
 		x = 0
 		y = 2
 	
-		cost = 5
+		cost = 10
 
 		available = {
 		}
@@ -8630,7 +8635,10 @@ focus = {
 		}
 
 	}
-
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 
 
 

@@ -10,6 +10,58 @@
 
  japan_wtt_focus:0 "Japanese National Focus"
  JAP_revolutionary_fervour:0 "Revolutionary Fervor"
+ JAP_Soviet_War:0 "The Soviet War"
+ JAP_Soviet_War_desc:0 "With hostilities between Japan and the Soviet Union escalating, we must fully commit to the conflict. Our industries will be mobilized for total war, our armies reinforced, and our people prepared for sacrifice. The time has come to break Soviet power in Asia once and for all."
+ JAP_Anti_Soviet:0 "Anti-Soviet Mobilization"
+ JAP_War_Production:0 "War Production"
+ JAP_War_Production_desc:0 "With our economy fully committed to the war effort, civilian industries are being retooled to produce weapons, ammunition, and vehicles. Efficiency, discipline, and sacrifice will ensure that our armed forces never lack the tools needed for victory."
+ JAP_industry_development:0 "Industrial Development"
+ JAP_industry_development_desc:0 "To sustain our growing empire and the demands of modern warfare, Japan must continue expanding its industrial base. New factories will rise across the homeland and our occupied territories, ensuring a steady flow of weapons, equipment, and supplies for our forces at the front."
+ JAP_Industry_Plan:0 "National Industrial Expansion Plan"
+  JAP_Industry_Plan_desc:0 "To secure our nation's future, we must invest heavily in the modernization and expansion of our industry. By developing key regions in the North, Middle, and South, we will ensure a steady flow of industrial output to support our growing war machine and civilian needs alike."
+
+  JAP_China_relation:0 "Chinese Anti-Cooperation Policy"
+
+  JAP_develop_the_North:0 "Develop Northern Japan"
+  JAP_develop_the_Middle:0 "Develop Central Japan"
+  JAP_develop_the_Soutch:0 "Develop Southern Japan"
+ JAP_the_ultimate_tank_Production:0 "Project Oni – The Ultimate Tank"
+ JAP_the_ultimate_tank_Production_desc:0 "Our engineers have proposed an audacious vision: a steel demon capable of crushing any Western tank. Through the 'Oni' Project, Japan shall forge the most formidable armored vehicle in history, a testament to our Emperor’s unyielding will."
+
+ JAP_Organize_the_Fuel:0 "Fuel for the Empire"
+ JAP_Organize_the_Fuel_desc:0 "Even the mightiest engines of war are powerless without fuel. To sustain our new armored divisions, we must reorganize our refineries, secure vital resources from the Co-Prosperity Sphere, and ensure that every drop of oil serves the Emperor’s cause."
+
+ JAP_Tank_Army:0 "Imperial Armored Corps"
+ JAP_Tank_Army_desc:0 "Japan’s armored forces shall be united under a single command — the Imperial Armored Corps. With discipline, speed, and the indomitable spirit of the samurai, our tanks will bring the Empire’s thunder across Asia."
+ 
+ JAP_medium_tank_organization:0 "Sagami Army Technical Arsenal"
+ JAP_medium_tank_organization_desc:0 "The Sagami Army Technical Arsenal leads Japan’s development of modern armored vehicles. Combining rigorous engineering with battlefield practicality, Sagami engineers design medium tanks that strike the perfect balance between speed, armor, and reliability — embodying the spirit of Imperial precision."
+ JAP_embrace_armored_warfare:0 "Embrace Armored Warfare"
+  JAP_embrace_armored_warfare_desc:0 "Though Japan’s mountainous terrain and island geography have limited our use of armored divisions, modern warfare requires the ability to strike swiftly and maintain momentum. By studying foreign doctrines and adapting them to our own needs, our tank units will achieve greater mobility and coordination on the battlefield."
+
+  JAP_armored_warfare_idea:0 "Armored Warfare Doctrine"
+  JAP_refined_operational_planning:0 "Refined Operational Planning"
+  JAP_refined_operational_planning_desc:0 "The Imperial General Staff has recognized the importance of precise operational coordination. By improving our planning methods and command structure, we ensure our divisions can execute strategies with higher efficiency and maintain superior organization in prolonged operations."
+
+  JAP_refined_planning_idea:0 "Refined Planning Doctrine"
+
+ JAP_infantry_tank_designer:0 "Hitachi Armored Support Division"
+ JAP_infantry_tank_designer_desc:0 "Tasked with providing reliable armor to support our infantry divisions, Hitachi’s armored division specializes in sturdy, dependable designs capable of enduring prolonged engagements. Built for resilience rather than speed, their machines march alongside the Emperor’s soldiers without falter."
+ JAP_mio_trait_expanded_production_facilities:0 "Expanded Production Facilities"
+ JAP_mio_trait_expanded_production_facilities_desc:0 "By expanding production lines and optimizing assembly procedures, Japanese factories achieve a new level of efficiency. Every workshop contributes to the Empire’s armored might."
+
+ JAP_mio_trait_Stabily_Tanks:0 "Stabilized Suspension Systems"
+ JAP_mio_trait_Stabily_Tanks_desc:0 "Through improved suspension and internal balance mechanisms, our tanks maintain stability even across rugged terrain, increasing accuracy and crew confidence in combat."
+
+ JAP_mio_trait_high_velocity_armament:0 "High-Velocity Armament"
+ JAP_mio_trait_high_velocity_armament_desc:0 "Research into new barrel metallurgy and propellant chemistry has produced high-velocity guns capable of piercing even the toughest foreign armor. Japanese precision ensures both power and accuracy on the battlefield."
+  JAP_masaharu_homma:0 "Masaharu Homma"
+  JAP_masaharu_homma_desc:0 "A cautious yet cultured officer of the Imperial Japanese Army, General Masaharu Homma is known for his deliberate planning and diplomatic demeanor. His careful nature makes him a reliable commander, though sometimes overly prudent in the field."
+ JAP_mio_trait_Factory_Tank_Cost:0 "Advanced Production Cost"
+
+  JAP_minoru_oshima:0 "Minoru Ōshima"
+  JAP_minoru_oshima_desc:0 "A capable officer and military diplomat, General Minoru Ōshima combines tactical flexibility with a flair for armored warfare. His experience in Germany and his trickster instincts make him an unpredictable but effective commander."
+
  
  JAP_fascism_party:0 "Kyokoku Itchi Naikaku"
  JAP_imperial_rule_assistance_association_party:0 "Taisei Yokusankai"

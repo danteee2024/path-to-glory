@@ -1,0 +1,2564 @@
+### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+
+focus_tree = {
+	id = Saudi_Arabia_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = SAU
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 1500 y = 1500 }
+
+ focus = {
+    id = SAU_consolidate_royal_authority
+    icon = GFX_focus_generic_monarchy_2
+    x = 8
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+        add_political_power = 120
+        add_ideas = SAU_royal_consolidation_idea
+        custom_effect_tooltip = SAU_consolidate_royal_authority_tt
+        hidden_effect = {
+            add_country_leader_trait = legitimate_heir
+        }
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
+
+### Arabian Empire Path
+focus = {
+    id = SAU_Arabian_Empire
+    icon = GFX_focus_CHL_strengthen_the_carabinieros
+    mutually_exclusive = {
+        focus = SAU_Middle_East focus = SAU_Saudi_Arabia
+    }
+	prerequisite = {
+		focus = SAU_consolidate_royal_authority
+	}
+	relative_position_id = SAU_consolidate_royal_authority
+    x = -4
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+                set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+                promote_character = { 
+					character = SAU_abdulaziz_ibn_saud
+					ideology = nazism
+				}
+			set_party_name = {
+				ideology = fascism
+				long_name = "House of Saud"
+				name =  "House of Saud"
+			}
+        add_popularity = {
+            ideology = fascism
+            popularity = 0.5
+        }
+        add_country_leader_trait = collaborator_king
+		add_war_support = 0.1
+        add_stability = -0.25
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Arabian_Empire2
+    icon = GFX_focus_generic_camel_corps
+	prerequisite = {
+		focus = SAU_Arabian_Empire
+	}
+	relative_position_id = SAU_Arabian_Empire
+    x = -1
+    y = 1
+    cost = 5
+    available = {
+      
+    }
+    completion_reward = {
+        add_ideas = SAU_Arabian_Empire_Camel
+		
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Arabia_Army
+    icon = GFX_focus_generic_full_employment
+	prerequisite = {
+		focus = SAU_Arabian_Empire focus = SAU_Saudi_Arabia
+	}
+	relative_position_id = SAU_Arabian_Empire
+    x = 2
+    y = 1
+    cost = 5
+    available = {
+       
+    }
+    completion_reward = {
+        add_ideas = SAU_Arabian_Army
+		
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
+focus = {
+    id = SAU_Arabia_Army2
+    icon = GFX_SOV_reinstitute_the_mestnichestvo_ccp_2d_sov_compatibility
+	prerequisite = {
+		focus = SAU_Arabia_Army
+	}
+	relative_position_id = SAU_Arabia_Army
+    x = 0
+    y = 2
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+     add_ideas = SAU_Arabian_Army2
+		
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Yemen_Annex
+    icon = GFX_SOV_bringing_breakaways_back_to_the_fold_ccp_2d_sov_compatibility
+	prerequisite = {
+		focus = SAU_Arabian_Empire2
+	}
+	relative_position_id = SAU_Arabian_Empire2
+    x = -1
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+        YEM = {
+					country_event = SAU.432
+				}
+		
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Iraq_Annex
+    icon = GFX_focus_PER_demand_iraqi_territory
+	prerequisite = {
+	focus = SAU_Arabian_Empire2
+	}
+	relative_position_id = SAU_Arabian_Empire2
+    x = 1
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+		IRQ = {
+					country_event = SAU.332
+				}
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Revive_Arabian_Empire
+    icon = GFX_focus_IRQ_unite_mashriq
+	prerequisite = {
+	focus = SAU_Yemen_Annex
+	}
+    prerequisite = {
+	focus = SAU_Iraq_Annex
+	}
+	relative_position_id = SAU_Yemen_Annex
+    x = 1
+    y = 1
+    cost = 10
+    available = {
+         
+                         293 = {
+	            			is_controlled_by = ROOT
+	            		}
+						1010 = {
+	            			is_controlled_by = ROOT
+	            		}
+						675 = {
+	            			is_controlled_by = ROOT
+	            		}
+                        1011 = {
+	            			is_controlled_by = ROOT
+	            		}
+						291 = {
+	            			is_controlled_by = ROOT
+	            		}
+						676 = {
+	            			is_controlled_by = ROOT
+	            		}
+    }
+    completion_reward = {
+        set_cosmetic_tag = SAU_Arabian_Empire
+        set_country_flag = ARA_UNIFIED
+
+       set_capital = {
+				state = 291 
+				remember_old_capital = no
+			}
+            hidden_effect = {
+			291 = {
+				add_victory_points = {
+					province = 2097
+					value = 5
+				}
+			}
+             293 = { add_core_of = SAU }
+		1010 = { add_core_of = SAU }
+		675 = { add_core_of = SAU }
+        1011 = { add_core_of = SAU }
+		291 = { add_core_of = SAU }
+		676 = { add_core_of = SAU }
+        }
+
+
+		
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+focus = {
+    id = SAU_Iran_War
+    icon = GFX_focus_generic_attack_iran
+	prerequisite = {
+	focus = SAU_Revive_Arabian_Empire
+	}
+	relative_position_id = SAU_Revive_Arabian_Empire
+    x = -1
+    y = 1
+    cost = 5
+    available = {
+         #Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
+    }
+    completion_reward = {
+
+        		create_wargoal = {
+				type = annex_everything
+				target = PER
+			    }
+			
+		bypass = {
+			PER = {
+				OR = {
+					exists = no 
+				}
+			}
+		}
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+
+focus = {
+    id = SAU_Afghanistan_War
+    icon = GFX_focus_generic_attack_afghanistan
+	prerequisite = {
+	focus = SAU_Revive_Arabian_Empire
+	}
+	relative_position_id = SAU_Revive_Arabian_Empire
+    x = 1
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+         		create_wargoal = {
+				type = annex_everything
+				target = AFG
+			    }
+			
+		bypass = {
+			AFG = {
+				OR = {
+					exists = no 
+				}
+			}
+		}
+		
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Prepare_War
+    icon = GFX_SOV_the_last_break_southward_ccp_2d_sov_compatibility
+	prerequisite = {
+	focus = SAU_Iran_War
+	}
+    prerequisite = {
+	focus = SAU_Afghanistan_War
+	}
+	relative_position_id = SAU_Iran_War
+    x = 1
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+         	add_war_support = 0.1
+            add_stability = 0.1
+		
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+focus = {
+    id = SAU_UK_Colony
+    icon = GFX_focus_chi_british_cooperation
+	prerequisite = {
+	focus = SAU_Revive_Arabian_Empire
+	}
+    prerequisite = {
+	focus = SAU_Arabia_Army2
+	}
+	relative_position_id = SAU_Afghanistan_War
+    x = 1
+    y = 1
+    cost = 5
+    available = {
+
+         
+    }
+    bypass = {
+        OR = {
+        Not = {
+       656 = { is_controlled_by = ENG }
+        }
+        NOT = {
+       1014  = { is_controlled_by = ENG }
+             }
+        NOT = {
+       765  = { is_controlled_by = ENG }
+             }
+        NOT = {
+       658  = { is_controlled_by = ENG }
+             }
+        NOT = {
+       659  = { is_controlled_by = ENG }
+             }
+        NOT = {
+       455  = { is_controlled_by = ENG }
+             }
+        NOT = {
+       454  = { is_controlled_by = ENG }
+        }
+        NOT = {
+            RAJ = {
+             is_subject_of = ENG
+             }
+            }
+            NOT = {
+        OMA = {
+             is_subject_of = ENG
+             }
+            }
+            
+        }
+        
+    }
+    completion_reward = {
+		ENG = {
+					country_event = SAU.145
+				}
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+focus = {
+    id = SAU_Egypt
+    icon = GFX_focus_generic_the_suez
+	prerequisite = {
+	focus = SAU_UK_Colony
+	}
+    prerequisite = {
+	focus = SAU_Prepare_War
+	}
+	relative_position_id = SAU_Prepare_War
+    x = 1
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+     bypass = {
+           OR = {
+        Not = {
+       453 = { is_controlled_by = ENG }
+        }
+        Not = {
+       446 = { is_controlled_by = ENG }
+        }
+        Not = {
+       447 = { is_controlled_by = ENG }
+        }
+        Not = {
+       452 = { is_controlled_by = ENG }
+        }
+        Not = {
+       907 = { is_controlled_by = ENG }
+        }
+        Not = {
+       552 = { is_controlled_by = ENG }
+        }
+        Not = {
+       457 = { is_controlled_by = ENG }
+        }
+        Not = {
+       456 = { is_controlled_by = ENG }
+        }
+       
+    }
+}
+    completion_reward = {
+        ENG = {
+					country_event = SAU.245
+				}
+        
+		
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Syria
+    icon = GFX_focus_chi_reach_out_to_france
+	prerequisite = {
+	focus = SAU_UK_Colony
+	}
+    prerequisite = {
+	focus = SAU_Egypt
+	}
+	relative_position_id = SAU_Egypt
+    x = 1
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    bypass = {
+           OR = {
+        Not = {
+       680 = { is_controlled_by = FRA }
+        }
+        NOT = {
+       677  = { is_controlled_by = FRA }
+             }
+        NOT = {
+       799  = { is_controlled_by = FRA }
+             }
+        NOT = {
+       554  = { is_controlled_by = FRA }
+             }
+        NOT = {
+       553  = { is_controlled_by = FRA }
+             }
+    }
+        
+    }
+    completion_reward = {
+        FRA = {
+					country_event = SAU.545
+				}
+        
+		
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_France_War
+    icon = GFX_focus_attack_france
+	prerequisite = {
+	focus = SAU_Prepare_War
+	}
+	relative_position_id = SAU_Prepare_War
+    x = -1
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+         		create_wargoal = {
+				type = annex_everything
+				target = FRA
+			    }
+			
+		bypass = {
+			AFG = {
+				OR = {
+					exists = no 
+				}
+			}
+		}
+		
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Italy_War
+    icon = GFX_focus_attack_italy
+	prerequisite = {
+	focus = SAU_Prepare_War
+	}
+	relative_position_id = SAU_Prepare_War
+    x = 0
+    y = 2
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+         		create_wargoal = {
+				type = annex_everything
+				target = ITA
+			    }
+			
+		bypass = {
+			AFG = {
+				OR = {
+					exists = no 
+				}
+			}
+		}
+		
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Spain_War
+    icon = GFX_focus_focus_fra_intervention_spain
+	prerequisite = {
+	focus = SAU_Prepare_War
+	}
+	relative_position_id = SAU_Prepare_War
+    x = -2
+    y = 2
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+         		create_wargoal = {
+				type = annex_everything
+				target = SPA
+			    }
+			
+		bypass = {
+			AFG = {
+				OR = {
+					exists = no 
+				}
+			}
+		}
+		
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+
+
+
+
+### Saudi Arabia History Path
+
+focus = {
+    id = SAU_Saudi_Arabia
+    icon = GFX_focus_generic_monarchy_1
+        mutually_exclusive = {
+        focus = SAU_Middle_East focus = SAU_Arabian_Empire
+    }
+	prerequisite = {
+		focus = SAU_consolidate_royal_authority
+	}
+	relative_position_id = SAU_consolidate_royal_authority
+    x = 0
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+        add_stability = 0.1
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
+focus = {
+    id = SAU_Saudi_Arabia2
+    icon = GFX_focus_generic_economic_recovery
+	prerequisite = {
+		focus = SAU_Saudi_Arabia
+	}
+	relative_position_id = SAU_Saudi_Arabia
+    x = 0
+    y = 2
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+        add_ideas = SAU_Saudi_Arabia_Eco
+         random_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Saudi_Arabia3
+    icon = GFX_goal_generic_defence
+	prerequisite = {
+		focus = SAU_Saudi_Arabia2
+	}
+    prerequisite = {
+        focus = SAU_Arabia_Army2
+    }
+     prerequisite = {
+		focus = SAU_Saudi_Arabia6
+	}
+	relative_position_id = SAU_Saudi_Arabia2
+    x = 0
+    y = 2
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+        add_ideas = SAU_Defence_Plan
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Saudi_Arabia4
+    icon = GFX_SOV_memories_of_1905_ccp_2d_sov_compatibility
+	prerequisite = {
+		focus = SAU_Saudi_Arabia3
+	}
+	relative_position_id = SAU_Saudi_Arabia3
+    x = -1
+    y = 2
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+        add_stability = 0.1
+        add_political_power = 100
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+
+focus = {
+    id = SAU_Saudi_Arabia5
+    icon = GFX_focus_generic_modernize_industry
+prerequisite = {
+		focus = SAU_Saudi_Arabia
+        focus = SAU_Middle_East
+	}
+	relative_position_id = SAU_Saudi_Arabia
+    x = 2
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+        add_ideas = SAU_Building
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Saudi_Arabia6
+    icon = GFX_focus_CHL_enlarge_the_textile_industries
+	prerequisite = {
+		focus = SAU_Saudi_Arabia5
+	}
+	relative_position_id = SAU_Saudi_Arabia5
+    x = 0
+    y = 2
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+        swap_ideas = {
+            remove_idea =  SAU_Building
+            add_idea =  SAU_Building2
+        }
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Saudi_Arabia7
+    icon = GFX_goal_generic_construct_infrastructure
+	prerequisite = {
+		focus = SAU_Saudi_Arabia3 focus = SAU_Middle_East4
+	}
+	relative_position_id = SAU_Saudi_Arabia3
+    x = 2
+    y = 2
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+        random_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+                	}
+        random_controlled_state = {
+                add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+                  	}
+        random_controlled_state = {
+                add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+                  	}
+        random_controlled_state = {
+                add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+        
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Saudi_Arabia8
+    icon = GFX_goal_generic_positive_trade_relations
+	prerequisite = {
+		focus = SAU_Saudi_Arabia3
+	}
+	relative_position_id = SAU_Saudi_Arabia3
+    x = 0
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+        swap_ideas = {
+            remove_idea =  SAU_Building2
+            add_idea =  SAU_Building3
+        }
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+
+### Middle East Path
+
+focus = {
+    id = SAU_Middle_East
+    icon = GFX_goal_generic_national_unity
+        mutually_exclusive = {
+        focus = SAU_Arabian_Empire focus = SAU_Saudi_Arabia
+    }
+	prerequisite = {
+		focus = SAU_consolidate_royal_authority
+	}
+	relative_position_id = SAU_consolidate_royal_authority
+    x = 5
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+          set_politics = {
+					ruling_party = democratic
+					elections_allowed = no
+				}
+                promote_character = { 
+					character = SAU_abdulaziz_ibn_saud
+					ideology =  liberalism 
+				}
+			set_party_name = {
+				ideology = democratic
+				long_name = "House of Saud"
+				name =  "House of Saud"
+			}
+           
+        add_popularity = {
+            ideology = democratic
+            popularity = 0.5
+        }
+        add_country_leader_trait = socialite_connections
+        add_ideas = SAU_Middle_East
+        
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
+
+
+#fuck you giamper you
+
+focus = {
+    id = SAU_Middle_East1
+    icon = GFX_SOV_autonomous_soviet_republics_ccp_2d_sov_compatibility
+	prerequisite = {
+		focus = SAU_Middle_East
+	}
+	relative_position_id = SAU_Middle_East
+    x = 0
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+        add_stability = 0.1
+        add_political_power = 120
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Middle_East2
+    icon = GFX_SOV_annex_tannu_tuva_ccp_2d_sov_compatibility
+	prerequisite = {
+		focus = SAU_Middle_East1 }
+        prerequisite = { focus = SAU_Saudi_Arabia5
+	}
+	relative_position_id = SAU_Middle_East1
+    x = -2
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+        add_ideas = free_trade
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_UK_Colony2
+    icon = GFX_focus_chi_british_cooperation
+	prerequisite = {
+	focus = SAU_Middle_East1
+	}
+	relative_position_id = SAU_Middle_East1
+    x = 1
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+       bypass = {
+        OR = {
+        Not = {
+       656 = { is_controlled_by = ENG }
+        }
+        NOT = {
+       1014  = { is_controlled_by = ENG }
+             }
+        NOT = {
+       765  = { is_controlled_by = ENG }
+             }
+        NOT = {
+       658  = { is_controlled_by = ENG }
+             }
+        NOT = {
+       659  = { is_controlled_by = ENG }
+             }
+        NOT = {
+       455  = { is_controlled_by = ENG }
+             }
+        NOT = {
+       454  = { is_controlled_by = ENG }
+        }
+        NOT = {
+            RAJ = {
+             is_subject_of = ENG
+             }
+            }
+            NOT = {
+        OMA = {
+             is_subject_of = ENG
+             }
+            }
+            
+        }
+        
+    }
+    completion_reward = {
+		ENG = {
+					country_event = SAU.145
+				}
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Middle_East3
+    icon = GFX_focus_GER_align_middle_east
+	prerequisite = {
+		focus = SAU_Middle_East2 }
+	relative_position_id = SAU_Middle_East2
+    x = 2
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+       set_rule = { can_create_factions = yes }
+			create_faction = "SAU_United_Middle_East"
+            unlock_decision_category_tooltip = SAU_Middle_East_category
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+focus = {
+    id = SAU_Syria2
+    icon = GFX_focus_chi_reach_out_to_france
+	prerequisite = {
+	focus = SAU_Middle_East3
+	}
+    prerequisite = {
+	focus = SAU_UK_Colony2
+	}
+	relative_position_id = SAU_Middle_East3
+    x = 1
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    bypass = {
+           OR = {
+        Not = {
+       680 = { is_controlled_by = FRA }
+        }
+        NOT = {
+       677  = { is_controlled_by = FRA }
+             }
+        NOT = {
+       799  = { is_controlled_by = FRA }
+             }
+        NOT = {
+       554  = { is_controlled_by = FRA }
+             }
+        NOT = {
+       553  = { is_controlled_by = FRA }
+             }
+    }
+        
+    }
+    completion_reward = {
+        FRA = {
+					country_event = SAU.545
+				}
+        
+		
+    }
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Middle_East4
+    icon = GFX_goal_continuous_non_factory_construct
+	prerequisite = {
+	focus = SAU_Middle_East3
+	}
+    prerequisite = {
+	focus = SAU_Saudi_Arabia6
+	}
+	relative_position_id = SAU_Middle_East3
+    x = -2
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+          swap_ideas = {
+            remove_idea =  SAU_Building2
+            add_idea =  SAU_Building4
+        }
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Middle_East5
+    icon = GFX_focus_generic_influence_middle_east
+	prerequisite = {
+	focus = SAU_Middle_East4
+	}
+    prerequisite = {
+	focus = SAU_Syria2
+	}
+	relative_position_id = SAU_Middle_East4
+    x = 1
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+       add_stability = 0.1  
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+focus = {
+    id = SAU_Middle_East6
+    icon = GFX_focus_POL_develop_polish_shipbuilding
+	prerequisite = {
+	focus = SAU_Middle_East5
+	}
+	relative_position_id = SAU_Middle_East5
+    x = 0
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+        random_controlled_state = {
+           prioritize = { 292 }
+				add_extra_state_shared_building_slots = 4
+                	add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+                
+			}
+            unlock_decision_category_tooltip = SAU_Middle_East_Building_category
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Middle_East7
+    icon = GFX_focus_usa_build_the_pentagon
+	prerequisite = {
+	focus = SAU_Middle_East6
+	}
+    prerequisite = {
+	focus = SAU_Saudi_Arabia7
+	}
+	relative_position_id = SAU_Middle_East6
+    x = -1
+    y = 1
+    cost = 10
+    available = {
+       PER = { is_puppet_of = SAU }
+       AFG = { is_puppet_of = SAU }
+       IRQ = { is_puppet_of = SAU }
+       TUR = { is_puppet_of = SAU }
+       YEM = { is_puppet_of = SAU }
+    }
+    completion_reward = {
+      hidden_effect = {
+           annex_country = {
+            target = TUR
+            transfer_troops = yes
+        }
+           annex_country = {
+            target = IRQ
+            transfer_troops = yes
+        }
+           annex_country = {
+            target = AFG
+            transfer_troops = yes
+        }
+           annex_country = {
+            target = YEM
+            transfer_troops = yes
+        }
+           annex_country = {
+            target = PER
+            transfer_troops = yes
+        }
+        every_state = {
+				limit = { is_core_of = PER }
+				add_core_of = ROOT
+			}
+            every_state = {
+				limit = { is_core_of = AFG }
+				add_core_of = ROOT
+			}
+            every_state = {
+				limit = { is_core_of = YEM }
+				add_core_of = ROOT
+			}
+            every_state = {
+				limit = { is_core_of = IRQ }
+				add_core_of = ROOT
+			}
+            every_state = {
+				limit = { is_core_of = TUR }
+				add_core_of = ROOT
+			}
+            
+			291 = {
+				add_victory_points = {
+					province = 2097
+					value = 5
+				}
+			}
+             } 
+             set_capital = {
+				state = 291 
+				remember_old_capital = no
+			}
+      
+              set_cosmetic_tag = SAU_United_States_of_the_Middle_East
+              set_country_flag = FORK_MID_democratic
+
+            
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+#####ECO TREE###
+
+focus = {
+    id = SAU_Oil_Trade
+    icon = GFX_focus_PER_invite_oil_nations
+	relative_position_id = SAU_consolidate_royal_authority
+    x = 12
+    y = 0
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+       
+    unlock_decision_category_tooltip = SAU_Oil_Trade_category
+    add_ideas = SAU_Oil_Trade2
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+focus = {
+    id = SAU_infrastructure
+    icon = GFX_goal_generic_construct_infrastructure
+    prerequisite = {
+        focus = SAU_Oil_Trade
+    }
+	relative_position_id = SAU_Oil_Trade
+    x = 1
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+         random_controlled_state = {
+           prioritize = { 292 }
+           add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+             random_controlled_state = {
+           prioritize = { 678 }
+                    add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+             random_controlled_state = {
+           prioritize = { 858 }
+                     add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+             random_controlled_state = {
+           prioritize = { 859 }
+                     add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+    
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+focus = {
+    id = SAU_infrastructure2
+    icon = GFX_SOV_infrastructure_effort_nsb_ccp_2d_sov_compatibility
+    prerequisite = {
+        focus = SAU_Oil_Trade
+    }
+	relative_position_id = SAU_Oil_Trade
+    x = -1
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+        build_railway = {
+				path = { 12883 2033 7934 12758 10892 12813 12727 5024 12702 }
+			}
+    
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Oil_Trade2
+    icon = GFX_goal_generic_construct_civ_factory
+    prerequisite = {
+        focus = SAU_infrastructure
+    }
+     prerequisite = {
+        focus = SAU_infrastructure2
+    }
+	relative_position_id = SAU_Oil_Trade
+    x = 0
+    y = 2
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+         random_controlled_state = {
+           prioritize = { 859 }
+           add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+             random_controlled_state = {
+           prioritize = { 856 }
+           add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Oil_Trade3
+    icon = GFX_focus_generic_stockpile_fuel
+    prerequisite = {
+        focus = SAU_Oil_Trade2
+    }
+	relative_position_id = SAU_Oil_Trade2
+    x = 2
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+         random_controlled_state = {
+           prioritize = { 678 }
+           add_extra_state_shared_building_slots = 3
+                	add_building_construction = {
+					type = fuel_silo
+					level = 3
+					instant_build = yes
+				}
+                
+			}
+             random_controlled_state = {
+           prioritize = { 859 }
+           add_extra_state_shared_building_slots = 3
+                	add_building_construction = {
+					type = fuel_silo
+					level = 3
+					instant_build = yes
+				}
+                
+			}
+              random_controlled_state = {
+           prioritize = { 292 }
+           add_extra_state_shared_building_slots = 3
+                	add_building_construction = {
+					type = fuel_silo
+					level = 3
+					instant_build = yes
+				}
+                
+			}
+              random_controlled_state = {
+           prioritize = { 858 }
+           add_extra_state_shared_building_slots = 3
+                	add_building_construction = {
+					type = fuel_silo
+					level = 3
+					instant_build = yes
+				}
+                
+			}
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Oil_Trade4
+    icon = GFX_focus_PER_increase_oil_sales
+    prerequisite = {
+        focus = SAU_Oil_Trade2
+    }
+	relative_position_id = SAU_Oil_Trade2
+    x = 0
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+
+    swap_ideas = {
+        remove_idea = SAU_Oil_Trade2
+        add_idea = SAU_Oil_Trade3
+    }
+    
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+focus = {
+    id = SAU_Research
+    icon = GFX_focus_research
+    prerequisite = {
+        focus = SAU_Oil_Trade2
+    }
+	relative_position_id = SAU_Oil_Trade2
+    x = -2
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+        add_research_slot = 1
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Oil_Trade5
+    icon = GFX_focus_generic_industry_3
+    prerequisite = {
+        focus = SAU_Oil_Trade4
+    }
+	relative_position_id = SAU_Oil_Trade4
+    x = -1
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+      random_controlled_state = {
+           add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+            random_controlled_state = {
+           add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+focus = {
+    id = SAU_infrastructure3
+    icon = GFX_SOV_infrastructure_effort_nsb_ccp_2d_sov_compatibility
+    prerequisite = {
+        focus = SAU_Oil_Trade4
+    }
+	relative_position_id = SAU_Oil_Trade4
+    x = 1
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+        build_railway = {
+				path = { 12758 5027 2057 4974 10744 10876 12046 2097  }
+			}
+        854 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 4974
+					instant_build = yes
+				}
+			}
+    
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Oil_Trade6
+    icon = GFX_goal_generic_oil_refinery
+        prerequisite = { focus = SAU_Oil_Trade5
+    }
+       prerequisite = { focus = SAU_infrastructure3
+    }
+	relative_position_id = SAU_Oil_Trade5
+    x = 1
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+        swap_ideas = {
+        remove_idea = SAU_Oil_Trade3
+        add_idea = SAU_Oil_Trade4
+    }
+        
+    
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Research2
+    icon = GFX_focus_research2
+    prerequisite = {
+        focus = SAU_Oil_Trade5
+    }
+     prerequisite = {
+        focus = SAU_Research
+    }
+	relative_position_id = SAU_Oil_Trade5
+    x = -1
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+        add_research_slot = 1
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Global_Trade2
+    icon = GFX_focus_generic_aircraft_production
+    prerequisite = {
+        focus = SAU_Research2
+    }
+    
+	relative_position_id = SAU_Research2
+    x = -1
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+        add_ideas = SAU_Global_Trade2
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+focus = {
+    id = SAU_atomic_research_program
+    icon = GFX_SOV_soviet_atomic_bomb_project_ccp_2d_sov_compatibility
+    x = 0
+    y = 1
+    cost = 10
+    available = {
+      date > 1940.1.1
+    }
+    completion_reward = {
+        add_tech_bonus = {
+            name = SAU_atomic_research_bonus
+				bonus = 0.5
+				uses = 1
+				category = nuclear
+			}
+            random_owned_controlled_state = {
+				limit = {
+					can_construct_building = nuclear_facility
+				}
+				prioritize = { 292 }
+				construct_building_in_random_province = {
+					nuclear_facility = 1
+				}
+			}
+    }
+
+    ai_will_do = {
+        factor = 1
+    }
+
+    prerequisite = {
+        focus = SAU_Global_Trade2
+    }
+    relative_position_id = SAU_Global_Trade2
+
+    available_if_capitulated = yes
+
+    # Optional flavor text
+    search_filters = { FOCUS_FILTER_RESEARCH }
+}
+focus = {
+    id = SAU_oil
+    icon = GFX_focus_generic_resource_extraction
+    prerequisite = {
+        focus = SAU_Oil_Trade3
+    }
+     prerequisite = {
+        focus = SAU_infrastructure3
+    }
+	relative_position_id = SAU_Oil_Trade3
+    x = 0
+    y = 2
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+        add_resource = {
+            type = oil
+            amount = 15
+            state = 678
+        }
+        add_resource = {
+            type = oil
+            amount = 15
+            state = 859
+        }
+        add_resource = {
+            type = oil
+            amount = 15
+            state = 292
+        }
+        add_resource = {
+            type = oil
+            amount = 15
+            state = 858
+        }
+        add_resource = {
+            type = oil
+            amount = 30
+            state = 856
+        }
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Global_Trade
+    icon = GFX_SOV_pc_of_the_ussr_navy_ccp_2d_sov_compatibility
+    prerequisite = {
+        focus = SAU_oil
+    }
+    
+	relative_position_id = SAU_oil
+    x = 1
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+        add_ideas = SAU_Global_Trade
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_infrastructure4
+    icon = GFX_goal_generic_construct_infrastructure
+    prerequisite = {
+        focus = SAU_Oil_Trade6
+    }
+    prerequisite = {
+        focus = SAU_oil
+    }
+	relative_position_id = SAU_Oil_Trade6
+    x = 1
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+         random_controlled_state = {
+           prioritize = { 856 }
+                     add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+              random_controlled_state = {
+           prioritize = { 679 }
+                     add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+             random_controlled_state = {
+           prioritize = { 855 }
+                     add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+             random_controlled_state = {
+           prioritize = { 854 }
+                     add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+             random_controlled_state = {
+           prioritize = { 857 }
+                     add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+    
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Oil_Trade7
+    icon = GFX_focus_generic_modernize_industry
+    prerequisite = {
+        focus = SAU_Oil_Trade6
+    }
+       prerequisite = {
+        focus = SAU_Research2
+    }
+	relative_position_id = SAU_Oil_Trade6
+    x = -1
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+      random_controlled_state = {
+           add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+            random_controlled_state = {
+           add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Oil_Trade8
+    icon = GFX_focus_generic_offshore_oil_rig
+    prerequisite = {
+        focus = SAU_Oil_Trade7
+    }
+       prerequisite = {
+        focus = SAU_infrastructure4
+    }
+	relative_position_id = SAU_Oil_Trade7
+    x = 1
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+      random_controlled_state = {
+         prioritize = { 856 }
+           add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+      random_controlled_state = {
+         prioritize = { 859 }
+           add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+             random_controlled_state = {
+             prioritize = { 859 }
+           add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+             random_controlled_state = {
+             prioritize = { 292 }
+           add_extra_state_shared_building_slots = 2
+                	add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+				}
+                
+			}
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Oil_Trade9
+    icon = GFX_goal_continuous_non_factory_construct
+      mutually_exclusive = {
+        focus = SAU_Oil_Trade10
+    }
+    prerequisite = {
+        focus = SAU_Oil_Trade8
+    }
+	relative_position_id = SAU_Oil_Trade8
+    x = 1
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+            swap_ideas = {
+        remove_idea = SAU_Oil_Trade4
+        add_idea = SAU_Oil_Trade5
+    }
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Oil_Trade10
+    icon = GFX_goal_generic_air_production
+    mutually_exclusive = {
+        focus = SAU_Oil_Trade9
+    }
+    prerequisite = {
+        focus = SAU_Oil_Trade8
+    }
+	relative_position_id = SAU_Oil_Trade8
+    x = -1
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+            swap_ideas = {
+        remove_idea = SAU_Oil_Trade4
+        add_idea = SAU_Oil_Trade6
+    }
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+### Military Tree
+focus = {
+    id = SAU_Military
+    icon = GFX_focus_generic_military_industry
+   
+	relative_position_id = SAU_Oil_Trade
+    x = 7
+    y = 0
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+        army_experience = 30
+      random_controlled_state = {
+           add_extra_state_shared_building_slots = 3
+                	add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+                
+			}
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Truck
+    icon = GFX_focus_generic_truck
+        prerequisite = {
+        focus = SAU_Military
+    }
+   
+	relative_position_id = SAU_Military
+    x = -1
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+        add_tech_bonus = {
+				name = SAU_Truck
+				bonus = 1.0
+				uses = 1
+				category =  motorized_equipment
+			}
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Train
+    icon = GFX_focus_IRQ_train
+        prerequisite = {
+        focus = SAU_Truck
+    }
+        prerequisite = {
+        focus = SAU_infrastructure
+    }
+   
+	relative_position_id = SAU_Truck
+    x = -2
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+        add_tech_bonus = {
+            name = railway_modernization_bonus
+            bonus = 1.0
+            uses = 1
+            category = train_tech
+        }
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_infantry
+    icon = GFX_goal_generic_axis_build_infantry
+        prerequisite = {
+        focus = SAU_Military
+    }
+   
+	relative_position_id = SAU_Military
+    x = 1
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+        add_tech_bonus = {
+				name = SAU_infantry
+				bonus = 1.0
+				uses = 1
+				category =  infantry_weapons
+			}
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Radio
+    icon = GFX_focus_generic_radio_communication
+        prerequisite = {
+        focus = SAU_infantry
+    }
+           prerequisite = {
+        focus = SAU_Truck
+    }
+   
+	relative_position_id = SAU_infantry
+    x = -1
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+        add_tech_bonus = {
+				name = Sau_Radio
+				bonus = 1.0
+				uses = 2
+				category = electronics
+			}
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+focus = {
+    id = SAU_Camel
+    icon = GFX_focus_generic_camel_corps
+        prerequisite = {
+        focus = SAU_Radio
+    }
+
+	relative_position_id = SAU_Radio
+    x = 1
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+        add_ideas = SAU_Camel
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+focus = {
+	id = SAU_Land_Facility
+	icon = GFX_focus_generic_military_industry
+	relative_position_id = SAU_Radio
+	prerequisite = { focus = SAU_Radio }
+	x = -1
+	y = 1
+
+	cost = 10
+
+	ai_will_do = {
+			factor = 1.2
+		}
+
+	available = {
+	}
+
+
+	bypass = {
+		
+	}
+
+	completion_reward = {
+		random_owned_controlled_state = {
+				limit = {
+					can_construct_building = land_facility
+				}
+				prioritize = { 292 }
+				construct_building_in_random_province = {
+					land_facility = 1
+				}
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 1.0
+			}
+	}
+}
+
+focus = {
+		id = SAU_Tank_technology_advancing
+		icon = GFX_focus_generic_tank_assembly
+		prerequisite = { focus = SAU_Land_Facility }
+		x = -1
+		y = 1
+		relative_position_id = SAU_Land_Facility
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			 add_tech_bonus = {
+				name = Sau_Tank
+				bonus = 0.5
+				uses = 3
+				category = armor
+			}
+	
+		}
+	}
+    
+    focus = {
+	id = SAU_Climate
+	icon = GFX_focus_AFG_mountain_training
+	relative_position_id = SAU_Land_Facility
+	prerequisite = { focus = SAU_Land_Facility }
+    prerequisite = { focus = SAU_Camel }
+	x = 1
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+			factor = 1.2
+		}
+
+	available = {
+	}
+
+
+	bypass = {
+		
+	}
+
+	completion_reward = {
+        add_ideas = SAU_Climate
+		
+	}
+}
+focus = {
+	id = SAU_Army2
+	icon = GFX_focus_chi_army_reform
+	relative_position_id = SAU_Camel
+    prerequisite = { focus = SAU_Camel }
+	x = 1
+	y = 1
+
+	cost = 5
+
+	ai_will_do = {
+			factor = 1.2
+		}
+
+	available = {
+	}
+
+
+	bypass = {
+		
+	}
+
+	completion_reward = {
+        add_ideas = SAU_Army
+		
+	}
+}
+
+focus = {
+    id = SAU_mechanized
+    icon = GFX_focus_generic_mechanized
+    mutually_exclusive = {
+        focus = SAU_Infantry2
+    }
+        prerequisite = {
+        focus = SAU_Climate
+    }
+           prerequisite = {
+        focus = SAU_Tank_technology_advancing
+    }
+   
+	relative_position_id = SAU_Tank_technology_advancing
+    x = 1
+    y = 1
+    cost = 5
+    available = {
+         
+    }
+    completion_reward = {
+        add_tech_bonus = {
+				name = Sau_Mechanized
+				bonus = 1.0
+				uses = 1
+                ahead_reduction = 1
+				category = cat_mechanized_equipment
+			}
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Infantry2
+    icon = GFX_focus_generic_commonwealth_build_infantry
+    mutually_exclusive = {
+        focus = SAU_mechanized
+    }
+        prerequisite = {
+        focus = SAU_Climate
+    }
+           prerequisite = {
+        focus = SAU_Army2
+    }
+   
+	relative_position_id = SAU_Army2
+    x = -1
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+        add_tech_bonus = {
+				name = Sau_infantry
+				bonus = 0.5
+				uses = 2
+                ahead_reduction = 1
+				category = infantry_equipment
+			}
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+
+focus = {
+    id = SAU_Artillery
+    icon = GFX_SOV_soviet_artillery_ccp_2d_sov_compatibility
+        prerequisite = {
+        focus = SAU_mechanized
+        focus = SAU_Infantry2
+    }
+   
+	relative_position_id = SAU_Infantry2
+    x = -1
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+        add_tech_bonus = {
+				name = Sau_artillery
+				bonus = 0.5
+				uses = 3
+				category = artillery
+			}
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Planning
+    icon = GFX_focus_generic_army_doctrines_2
+        prerequisite = {
+        focus = SAU_Artillery
+    }
+	relative_position_id = SAU_Artillery
+    x = 0
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+        add_ideas = SAU_Planning
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Tank_Production
+    icon = GFX_focus_generic_tank_production
+        prerequisite = {
+        focus = SAU_mechanized
+    }
+	relative_position_id = SAU_mechanized
+    x = -1
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+        add_ideas = SAU_Tank_Production
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Tank_Army
+    icon = GFX_focus_generic_tank_assault
+        prerequisite = {
+        focus = SAU_Tank_Production
+    }
+	relative_position_id = SAU_Tank_Production
+    x = 0
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+        add_ideas = SAU_Tank_Army
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_reinforce
+    icon = GFX_SOV_an_adaptable_army_ccp_2d_sov_compatibility
+        prerequisite = {
+        focus = SAU_Infantry2
+    }
+	relative_position_id = SAU_Infantry2
+    x = 1
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+        add_ideas = SAU_Army_reinforce
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+focus = {
+    id = SAU_Artillery2
+    icon = GFX_goal_generic_army_artillery
+        prerequisite = {
+        focus = SAU_reinforce
+    }
+	relative_position_id = SAU_reinforce
+    x = 0
+    y = 1
+    cost = 10
+    available = {
+         
+    }
+    completion_reward = {
+        add_ideas = SAU_Artillery
+
+    }
+    
+    ai_will_do = {
+        factor = 1.2
+    }
+}
+
+}
+	
+	
+	

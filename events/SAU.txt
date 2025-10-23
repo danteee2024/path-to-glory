@@ -1,0 +1,569 @@
+﻿#####################
+# SAUman Events
+###########################
+
+add_namespace = SAU
+add_namespace = AAT_SAU
+
+# Buying ENG Colonies
+country_event = {
+	id = SAU.145
+	title = SAU.145.t
+	desc = SAU.145.d	
+	picture = GFX_report_event_generic_rally
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SAU.145.a
+		ai_chance = {
+			base = 60
+		}
+		
+		SAU = {
+			country_event = { id = SAU.146 }
+		}
+	}
+	
+	option = {
+		name = SAU.145.b
+		ai_chance = {
+			base = 40
+			modifier = {
+				is_subject_of = FROM
+				factor = 0
+			}
+			modifier = {
+				original_tag = ENG
+				factor = 0
+			}			
+		}
+		
+		effect_tooltip = {
+			SAU = {
+				create_wargoal = {
+					type = annex_everything
+					target = ENG
+				}
+			}
+		}
+		hidden_effect = { SAU = { country_event = { id = SAU.147 } } }
+	}
+}
+
+
+
+# ENG accepts
+country_event = {
+	id = SAU.146
+	title = SAU.146.t
+	desc = SAU.146.d
+	picture = GFX_report_event_SAUman_troops
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SAU.146.a
+				transfer_state = 656
+				656 = { add_core_of = SAU }
+				transfer_state = 1014
+				1014 = { add_core_of = SAU }
+				transfer_state = 765
+				765 = { add_core_of = SAU }
+				transfer_state = 658
+				658 = { add_core_of = SAU }
+				transfer_state = 1013
+				1013 = { add_core_of = SAU }
+				transfer_state = 1015
+				1015 = { add_core_of = SAU }
+				transfer_state = 1016
+				1016 = { add_core_of = SAU }
+				transfer_state = 294
+				294 = { add_core_of = SAU }
+				transfer_state = 659
+				659 = { add_core_of = SAU }
+				transfer_state = 992
+				992 = { add_core_of = SAU }
+				transfer_state = 455
+				455 = { add_core_of = SAU }
+				transfer_state = 454 
+				454 = { add_core_of = SAU }
+
+		diplomatic_relation = {
+			country = ENG
+			relation = non_aggression_pact
+			active = yes
+		}
+		ENG ={
+		 random_controlled_state = {
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = industrial_complex
+					level = 6
+					instant_build = yes
+				}
+			}
+		}	 
+		 
+	}
+}
+
+#ENG refuses
+country_event = {
+	id = SAU.147
+	title = SAU.147.t
+	desc = SAU.147.d
+	picture = GFX_report_event_soldiers_marching
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SAU.147.a
+
+	
+				656 = { add_core_of = SAU }
+				1014 = { add_core_of = SAU }
+				765 = { add_core_of = SAU }
+				658 = { add_core_of = SAU }
+				1013 = { add_core_of = SAU }
+				1015 = { add_core_of = SAU }
+				1016 = { add_core_of = SAU }
+				294 = { add_core_of = SAU }
+				659 = { add_core_of = SAU }
+				992 = { add_core_of = SAU }
+				455 = { add_core_of = SAU }
+				454 = { add_core_of = SAU }
+		create_wargoal = {
+			type = take_state_focus
+			target = FROM
+			generator = { 656 }
+		}
+	}
+}
+
+# Buying Egypt
+country_event = {
+	id = SAU.245
+	title = SAU.245.t
+	desc = SAU.245.d	
+	picture = GFX_report_event_generic_rally
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SAU.245.a
+		ai_chance = {
+			base = 60
+		}
+		
+		SAU = {
+			country_event = { id = SAU.246 }
+		}
+	}
+	
+	option = {
+		name = SAU.245.b
+		ai_chance = {
+			base = 40
+			modifier = {
+				is_subject_of = FROM
+				factor = 0
+			}
+			modifier = {
+				original_tag = ENG
+				factor = 0
+			}			
+		}
+		
+		effect_tooltip = {
+			SAU = {
+				create_wargoal = {
+					type = annex_everything
+					target = SAU
+				}
+			}
+		}
+		hidden_effect = { SAU = { country_event = { id = SAU.247 } } }
+	}
+}
+
+
+
+# ENG accepts
+country_event = {
+	id = SAU.246
+	title = SAU.246.t
+	desc = SAU.246.d
+	picture = GFX_report_event_SAUman_troops
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SAU.246.a
+				 transfer_state = 453
+				453 = { add_core_of = SAU }
+				transfer_state = 446
+				446 = { add_core_of = SAU }
+				transfer_state = 907
+				907 = { add_core_of = SAU }
+				transfer_state = 447
+				447 = { add_core_of = SAU }
+				transfer_state = 452
+				452 = { add_core_of = SAU }
+				transfer_state = 552
+				552 = { add_core_of = SAU }
+				transfer_state = 457
+				457 = { add_core_of = SAU }
+				transfer_state = 456
+				456 = { add_core_of = SAU }
+
+
+		diplomatic_relation = {
+			country = ENG
+			relation = non_aggression_pact
+			active = yes
+		}
+		ENG ={
+		 random_controlled_state = {
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = industrial_complex
+					level = 6
+					instant_build = yes
+				}
+			}
+		}	 
+		 
+	}
+}
+
+#ENG refuses
+country_event = {
+	id = SAU.247
+	title = SAU.247.t
+	desc = SAU.247.d
+	picture = GFX_report_event_soldiers_marching
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SAU.247.a
+		
+
+				
+				453 = { add_core_of = SAU }
+				
+				446 = { add_core_of = SAU }
+				
+				907 = { add_core_of = SAU }
+				
+				447 = { add_core_of = SAU }
+				
+				452 = { add_core_of = SAU }
+				
+				552 = { add_core_of = SAU }
+				
+				457 = { add_core_of = SAU }
+				456 = { add_core_of = SAU }
+	
+
+		create_wargoal = {
+			type = take_state_focus
+			target = FROM
+			generator = { 456 }
+		}
+	}
+}
+	
+# Demand iraq
+country_event = {
+	id = SAU.332
+	title = SAU.332.t
+	desc = SAU.332.d	
+	picture = GFX_report_event_generic_rally
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SAU.332.a
+		ai_chance = {
+			base = 50
+		}
+		
+		SAU = {
+			country_event = { id = SAU.333 }
+		}
+	}
+	
+	option = {
+		name = SAU.332.b
+		ai_chance = {
+			base = 50
+			modifier = {
+				is_subject_of = FROM
+				factor = 0
+			}
+			modifier = {
+				original_tag = FRA
+				factor = 0
+			}			
+		}
+		
+		effect_tooltip = {
+			SAU = {
+				create_wargoal = {
+					type = annex_everything
+					target = IRQ
+				}
+			}
+		}
+		hidden_effect = { SAU = { country_event = { id = SAU.334 } } }
+	}
+}
+
+
+
+# Iraq accepts
+country_event = {
+	id = SAU.333
+	title = SAU.333.t
+	desc = SAU.333.d
+	picture = GFX_report_event_german_troops
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SAU.346.a
+				
+	annex_country = {
+		target = IRQ
+	}
+
+	
+	}
+}
+
+#Iraq refuses
+country_event = {
+	id = SAU.334
+	title = SAU.334.t
+	desc = SAU.334.d
+	picture = GFX_report_event_soldiers_marching
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SAU.343.a
+		create_wargoal = {
+			type = annex_everything
+			target = IRQ
+		}
+	}
+}
+
+# Demand Yemen
+country_event = {
+	id = SAU.432
+	title = SAU.432.t
+	desc = SAU.432.d	
+	picture = GFX_report_event_generic_rally
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SAU.432.a
+		ai_chance = {
+			base = 50
+		}
+		
+		SAU = {
+			country_event = { id = SAU.433 }
+		}
+	}
+	
+	option = {
+		name = SAU.432.b
+		ai_chance = {
+			base = 50
+			modifier = {
+				is_subject_of = FROM
+				factor = 0
+			}
+			modifier = {
+				original_tag = YEM
+				factor = 0
+			}			
+		}
+		
+		effect_tooltip = {
+			SAU = {
+				create_wargoal = {
+					type = annex_everything
+					target = IRQ
+				}
+			}
+		}
+		hidden_effect = { SAU = { country_event = { id = SAU.434 } } }
+	}
+}
+
+
+
+# Yemen accepts
+country_event = {
+	id = SAU.433
+	title = SAU.433.t
+	desc = SAU.433.d
+	picture = GFX_report_event_german_troops
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SAU.446.a
+				
+	annex_country = {
+		target = YEM
+	}
+
+	
+	}
+}
+
+#Yemen refuses
+country_event = {
+	id = SAU.434
+	title = SAU.434.t
+	desc = SAU.434.d
+	picture = GFX_report_event_soldiers_marching
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SAU.443.a
+		create_wargoal = {
+			type = annex_everything
+			target = YEM
+		}
+	}
+}
+
+# Buying Syria
+country_event = {
+	id = SAU.545
+	title = SAU.545.t
+	desc = SAU.545.d	
+	picture = GFX_report_event_generic_rally
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SAU.545.a
+		ai_chance = {
+			base = 60
+		}
+		
+		SAU = {
+			country_event = { id = SAU.546 }
+		}
+	}
+	
+	option = {
+		name = SAU.545.b
+		ai_chance = {
+			base = 40
+			modifier = {
+				is_subject_of = FROM
+				factor = 0
+			}
+			modifier = {
+				original_tag = FRA
+				factor = 0
+			}			
+		}
+		
+		effect_tooltip = {
+			SAU = {
+				create_wargoal = {
+					type = annex_everything
+					target = FRA
+				}
+			}
+		}
+		hidden_effect = { SAU = { country_event = { id = SAU.547 } } }
+	}
+}
+
+
+
+# FRA accepts
+country_event = {
+	id = SAU.546
+	title = SAU.546.t
+	desc = SAU.546.d
+	picture = GFX_report_event_SAUman_troops
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SAU.146.a
+				transfer_state = 680
+				680 = { add_core_of = SAU }
+				transfer_state = 677
+				677 = { add_core_of = SAU }
+				transfer_state = 799
+				799 = { add_core_of = SAU }
+				transfer_state = 554
+				554 = { add_core_of = SAU }
+				transfer_state = 553
+				553 = { add_core_of = SAU }
+
+		diplomatic_relation = {
+			country = FRA
+			relation = non_aggression_pact
+			active = yes
+		}
+		FRA ={
+		 random_controlled_state = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}
+			}
+		}	 
+		 
+	}
+}
+
+#ENG refuses
+country_event = {
+	id = SAU.547
+	title = SAU.547.t
+	desc = SAU.547.d
+	picture = GFX_report_event_soldiers_marching
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = SAU.547.a	
+	
+				
+				680 = { add_core_of = SAU }
+				
+				677 = { add_core_of = SAU }
+				
+				799 = { add_core_of = SAU }
+				
+				554 = { add_core_of = SAU }
+				
+				553 = { add_core_of = SAU }
+		create_wargoal = {
+			type = take_state_focus
+			target = FROM
+			generator = { 680 }
+		}
+	}
+}
+	
+	

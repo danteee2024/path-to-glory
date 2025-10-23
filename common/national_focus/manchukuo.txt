@@ -113,6 +113,10 @@ focus_tree = {
 		
 	}	
 ####FIVE YEAR PLAN ECO TREE
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 	focus = {
 		id = MAN_first_five_year_plan
 		icon = GFX_goal_generic_build_tank
@@ -343,6 +347,10 @@ focus_tree = {
 					}
 				}
 			}
+			#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 			if = {
 				limit = {
 					715 = {
@@ -619,22 +627,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = ROOT
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
+			
 			add_tech_bonus = {
 				name = MAN_invite_japanese_investors
 				uses = 1
@@ -672,7 +665,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -687,7 +680,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -709,6 +702,10 @@ focus_tree = {
 			}
 		}
 	}
+	#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 	focus = {
 		id = MAN_increase_opium_production
 		icon = GFX_goal_generic_construction2
@@ -759,7 +756,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -775,7 +772,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -810,10 +807,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -841,7 +838,7 @@ focus_tree = {
 				limit = {
 					amount_research_slots < 6
 				}
-				add_research_slot = 1
+				
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
@@ -965,10 +962,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -981,10 +978,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -997,10 +994,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1008,6 +1005,10 @@ focus_tree = {
 	}
 #####END OF JAP INVESTMENT TREE
 ###ALLIANCE WITH KWANTUNG ARMY PATH
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 	focus = {
 		id = MAN_alliance_with_the_kwantung_army
 		icon = GFX_goal_generic_occupy_states_ongoing_war
@@ -1913,7 +1914,10 @@ focus_tree = {
 			add_ideas = MAN_white_russian_advisers
 		}
 	}
-
+	#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 	focus = {
 		id = MAN_empower_the_legislative_council
 		icon = GFX_goal_generic_dangerous_deal
@@ -2619,6 +2623,10 @@ focus_tree = {
 	}
 ###END OF ASSERATIVNESS
 ###ECO TREE BEGINS
+	#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 	focus = {
 		id = MAN_destroy_opium_plantations
 		icon = GFX_SOV_the_rightful_heir_to_the_empire_ccp_2d_sov_compatibility
@@ -2882,6 +2890,10 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+				#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -3246,10 +3258,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 				set_state_flag = MAN_expand_the_textile_industry_IC
@@ -3263,10 +3275,10 @@ focus_tree = {
 				custom_effect_tooltip = MAN_if_aikawa
 				effect_tooltip = {
 					random_owned_controlled_state = {
-						add_extra_state_shared_building_slots = 2
+						add_extra_state_shared_building_slots = 1
 						add_building_construction = {
 							type = industrial_complex
-							level = 2
+							level = 1
 						}
 						add_building_construction = {
 							type = infrastructure
@@ -3541,6 +3553,10 @@ focus_tree = {
 			}
 		}
 	}
+	#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 	focus = {
 		id = MAN_aramament_production
 		icon = GFX_focus_generic_reorient_production
@@ -3579,10 +3595,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -3602,12 +3618,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			add_tech_bonus = {
-				name = MAN_art
-				category = artillery
-				uses = 1
-				bonus = 1
-			}
+			
 			if = {
 				limit = {
 					NOT = {
@@ -3729,7 +3740,7 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_research_slot = 1			
+			research_bonus = 0.10 		
 		}
 	}
 ####NAVY TREE
@@ -3898,6 +3909,10 @@ focus_tree = {
 				}
 			}
 		}
+			#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.5
@@ -4435,14 +4450,12 @@ focus_tree = {
 			add_stability = -0.2
 			MAN_low_legitimacy_clear_all = yes
 			add_ideas = state_shintoism
-			add_ideas = limited_exports
+			
 			add_timed_idea = {
 				idea = MAN_new_regime
 				days = 365
 			}
-			if = { limit = { OR = { has_idea = disarmed_nation has_idea = volunteer_only } }
-				add_ideas = extensive_conscription
-			}
+			
 			if = { limit = { OR = { has_idea = civilian_economy has_idea = low_economic_mobilisation } }
 				add_ideas = partial_economic_mobilisation
 			}
@@ -4484,7 +4497,10 @@ focus_tree = {
 			}
 		}
 	}
-
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 	focus = {
 		id = MAN_dockyard_conversion
 		icon = GFX_goal_generic_construct_naval_dockyard
@@ -4560,7 +4576,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = MAN_exile_takeover
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 
@@ -4569,7 +4585,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = FRA_alliance_with_industrialists
-			add_offsite_building = { type = arms_factory level = 5 }
+			
 		}
 	}
 
@@ -4646,7 +4662,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -4658,7 +4674,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -4676,7 +4692,10 @@ focus_tree = {
 			}
 		}
 	}
-
+	#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 	focus = {
 		id = MAN_guard_the_skies
 		icon = GFX_goal_generic_air_fighter2
@@ -4810,7 +4829,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-
+	#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -4822,7 +4844,7 @@ focus_tree = {
 				add_attack = 1
 			}
 			add_doctrine_cost_reduction = {
-				cost_reduction = 0.75
+				cost_reduction = 0.5
 				name = land_doctrine_bonus
 				uses = 3
 				category = land_doctrine
@@ -4919,6 +4941,10 @@ focus_tree = {
 						emperor_showa
 					}
 				}
+				#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 			}
 			hidden_effect = {
 				every_state = {
@@ -5005,3 +5031,5 @@ focus_tree = {
 	}
 }
 }
+
+#fuck you giamper 

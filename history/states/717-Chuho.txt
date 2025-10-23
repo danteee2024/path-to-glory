@@ -1,6 +1,9 @@
 state={
 	id=717
 	name="STATE_717"
+	resources = {
+		tungsten = 7
+	}
 	
 	state_category = pastoral
 

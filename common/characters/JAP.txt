@@ -427,6 +427,27 @@ characters={
 		}
 	}
 
+	
+	JAP_akira_sugihara={
+		name=JAP_akira_sugihara
+		portraits={
+			army={
+				large=GFX_portrait_JAP_yoshijiro_umezu
+				small=GFX_portrait_JAP_yoshijiro_umezu_small
+			}
+		}
+		corps_commander={
+			traits={ panzer_leader winter_specialist trait_engineer }
+			skill=4
+			attack_skill=4
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=0
+		}
+	}
+
+
 	JAP_otozo_yamada={
 		name=JAP_otozo_yamada
 		portraits={
@@ -560,6 +581,24 @@ characters={
 			skill=2
 			attack_skill=2
 			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=0
+		}
+	}
+	JAP_minoru_oshima={
+		name=JAP_minoru_oshima
+		portraits={
+			army={
+				large=GFX_portrait_JAP_masaharu_homma
+				small=GFX_portrait_JAP_masaharu_homma_small
+			}
+		}
+		corps_commander={
+			traits={ panzer_leader trickster }
+			skill=3
+			attack_skill=3
+			defense_skill=3
 			planning_skill=1
 			logistics_skill=2
 			legacy_id=0

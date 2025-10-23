@@ -13,6 +13,8 @@ ideas = {
 			}
 			removal_cost = -1
             
+            
+            
 			modifier = {
 				consumer_goods_expected_value = 0.10
                 global_building_slots_factor = 0.15
@@ -30,7 +32,10 @@ ideas = {
 			allowed_to_remove = {
 				has_completed_focus = MON_great_industrial_revolution_of_mongolia
 			}
-
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 			cancel_if_invalid = no
 		}
 	}
@@ -360,7 +365,10 @@ mobilization_laws = {
 			allowed = {
 				original_tag = MON
 			}
-
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 			allowed_civil_war = {
 				always = yes
 			}
@@ -565,7 +573,10 @@ research_speed_factor               = 0.01  # Flat research bonus
 			}
 
 
-			
+			#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 		}
 			MON_many_men_idea = {
 
@@ -846,7 +857,10 @@ research_speed_factor               = 0.01  # Flat research bonus
 			}		
 		
 		}
-	
+	#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 		MON_sov_investments = {
 		
 			picture = home_of_revolution
@@ -1000,7 +1014,10 @@ research_speed_factor               = 0.01  # Flat research bonus
 			allowed = {
 				always = no
 			}
-
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 			allowed_civil_war = {
 				always = yes
 			}
@@ -1183,7 +1200,10 @@ research_speed_factor               = 0.01  # Flat research bonus
 			allowed = {
 				always = yes
 			}
-			
+			#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
 			allowed_civil_war = {
 				always = yes 
 			}
@@ -1224,3 +1244,8 @@ research_speed_factor               = 0.01  # Flat research bonus
 	}
 
 }
+#Dante’s Path to Glory (BismarkMP Mod)
+ # © 2025 Dante. All rights reserved.
+#Reuploads, redistribution, or uncredited modifications are not permitted.
+#Contact: BismarkMP Discord / Steam
+# fuck you giamper you copied our mod 

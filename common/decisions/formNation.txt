@@ -11997,11 +11997,14 @@ formable_nations_mod_category = {
 				state = 408
 				state = 409
 				state = 655
+				state = 657
 				
 				 # China
 				state = 608
 				state = 614
 				state = 597
+				state = 598 
+				state = 613 
 			}
 		}
 		
@@ -12044,12 +12047,15 @@ formable_nations_mod_category = {
 						614 = { controls_or_subject_of = yes }
 						608 = { controls_or_subject_of = yes } 
 						597 = { controls_or_subject_of = yes }
+						598 = { controls_or_subject_of = yes }
+						613 = { controls_or_subject_of = yes }
 						}	
 						AND = {
 							# Soviet
 						408 = { controls_or_subject_of = yes }
 						409 = { controls_or_subject_of = yes } 
 						655 = { controls_or_subject_of = yes }
+						657 = { controls_or_subject_of = yes }
 						}	
 						}
 					}
@@ -12103,17 +12109,17 @@ formable_nations_mod_category = {
 				608 = { add_core_of = ROOT }
 				614 = { add_core_of = ROOT }
 				597 = { add_core_of = ROOT }
+				598 = { add_core_of = ROOT }
+				613 = { add_core_of = ROOT }
 				# Soviet
 				408 = { add_core_of = ROOT }
 				409 = { add_core_of = ROOT }
 				655 = { add_core_of = ROOT }
+				657 = { add_core_of = ROOT }
 			}
 			# China
 			743 = { add_core_of = ROOT }
-			598 = { add_core_of = ROOT }
-			613 = { add_core_of = ROOT }
 			# Soviets
-			657 = { add_claim_by = ROOT }
 			560 = { add_claim_by = ROOT }
 			637 = { add_claim_by = ROOT }
 			# USA

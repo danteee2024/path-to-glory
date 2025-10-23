@@ -5,6 +5,10 @@ state={
 	
 	state_category = wasteland
 
+	resources = {
+		chromium = 18
+	}
+
 	history={
 		owner = SPR
 		add_core_of = WES
