@@ -1076,7 +1076,7 @@ add_timed_idea = {
 					}
 				}
 				add_extra_state_shared_building_slots = 1
-				add_compliance = 7.5
+				add_compliance = 10
 			}
 		}
 	}
@@ -3322,7 +3322,6 @@ add_timed_idea = {
 		}
 		will_lead_to_war_with = BEL
 		available = {
-			date > 1938.6.1
 			NOT = {
 				OR = {
 				BEL = { is_ai = no }
