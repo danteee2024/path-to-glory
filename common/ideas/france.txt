@@ -1097,7 +1097,7 @@ ideas = {
 			picture = generic_central_management
 
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.1
 				conversion_cost_civ_to_mil_factor= -0.2
 			}
 		}
@@ -1582,7 +1582,7 @@ ideas = {
 	
 			modifier = {
 				consumer_goods_factor = -0.3
-				stability_weekly = -0.001
+				stability_factor = -0.1
 			}
 		}
 		FRA_empowered_trade_unions = {
@@ -1621,6 +1621,7 @@ ideas = {
 			
 			modifier = {
 				production_speed_buildings_factor = 0.10
+				industrial_capacity_factory = 0.1
 			}
 		}
 		
@@ -1919,7 +1920,7 @@ ideas = {
 			}
 
 			modifier = {
-				conscription = 0.01
+				conscription = 0.03
 				army_morale_factor = 0.10
 			}
 		}		
@@ -2235,7 +2236,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_factor = -0.15
+				consumer_goods_factor = -0.25
 				stability_factor = -0.05
 			}
 		}
@@ -2432,7 +2433,7 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.075
 			}
 		}
-		FRA_entrepeneurship = {
+		 FRA_plan_v_ideatrepeneurship = {
 			picture = chi_hyper_inflation2
 			allowed = {
 				original_tag = FRA
@@ -3347,6 +3348,7 @@ ideas = {
 			modifier = {
 				experience_gain_air = 0.10
 				air_ace_generation_chance_factor = 0.15
+				air_agility_factor = 0.1
 			}
 		}
 		
@@ -3377,11 +3379,7 @@ ideas = {
 					instant = yes
 				}
 				mio_cat_eq_all_small_plane = {
-					build_cost_ic = -0.1
-					instant = yes
-				}
-				mio_cat_eq_all_small_plane = {
-					build_cost_ic = -0.1
+					build_cost_ic = -0.15
 					instant = yes
 				}
 			}

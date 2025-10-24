@@ -276,7 +276,7 @@ focus = {
 	focus = {
 		id = FRA_research_grants
 		icon = GFX_focus_research2
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = FRA_monetary_tripartite_agreement
 			focus = FRA_expand_railroad
@@ -290,8 +290,7 @@ focus = {
 			factor = 3
 		}
 		available = {
-			#amount_research_slots < 6
-			num_of_factories > 150	
+			#amount_research_slots < 6	
 		}
 		
 		# bypass = {
@@ -899,7 +898,7 @@ add_timed_idea = {
 	focus = {
 		id = FRA_gueye_lamine_law
 		icon = GFX_focus_generic_military_industry
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = FRA_develop_mali
 			focus = FRA_northern_development
@@ -959,7 +958,7 @@ add_timed_idea = {
 	focus = {
 		id = FRA_investment_civ
 		icon = GFX_focus_generic_modernize_industry
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = FRA_develop_mali
 			focus = FRA_northern_development
@@ -1560,7 +1559,7 @@ add_timed_idea = {
 	focus = {
 		id = FRA_defense_national_funds
 		icon = GFX_focus_PER_construct_air_defenses
-		cost = 7.5
+		cost = 5
 		prerequisite = {
 			focus = FRA_commit_automobile_manufacturer
 		}
@@ -1759,7 +1758,7 @@ add_timed_idea = {
 	focus = {
 		id = FRA_rearmament
 		icon = GFX_goal_generic_build_tank
-		cost = 7.5
+		cost = 5
 		x = 11
 		y = 0
 		available = {
@@ -7486,7 +7485,7 @@ add_timed_idea = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = FRA_mechanized_focus
-				bonus = 0.75
+				bonus = 1.0
 				uses = 2
 				category = cat_mechanized_equipment
 			}
@@ -8834,7 +8833,7 @@ add_timed_idea = {
 	focus = {
 		id = FRA_modernisation_program
 		icon = GFX_focus_usa_escort_fighters
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = FRA_form_the_first_strategic_bombing_unit
 		}
@@ -8917,10 +8916,8 @@ add_timed_idea = {
 		}
 		
 		completion_reward = {
-			add_timed_idea = {
-				idea = FRA_plan_v_idea
-				days = 730
-			}
+				add_ideas = FRA_plan_v_idea
+
 			
 			FRA_air_force_improvement = yes
 		}
