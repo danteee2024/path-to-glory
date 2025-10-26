@@ -4257,7 +4257,7 @@ add_timed_idea = {
 	focus = {
 		id = FRA_assist_the_carlist_cause
 		icon = GFX_focus_spa_supremacy_of_the_communion
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = FRA_support_the_legitimatises
 		}
@@ -4267,9 +4267,9 @@ add_timed_idea = {
 		mutually_exclusive = { focus = FRA_support_the_spanish_nationalists }
 		
 		available = {
-			SPR_scw_in_progress = yes
+				SPR_scw_in_progress = yes
 			country_exists = SPB
-			NOT = { has_war_with = SPB }
+				NOT = { has_war_with = SPB }
 		}
 		bypass = {
 			has_global_flag = scw_over
@@ -4278,23 +4278,7 @@ add_timed_idea = {
 		ai_will_do = {
 			factor = 6
 		}
-		allow_branch = {
-		#	has_dlc = "La Resistance"
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = FRA_status_quo
-					has_completed_focus = FRA_radicalize_front
-					has_completed_focus = FRA_far_right_leagues
-					has_completed_focus = FRA_brumaire_movement
-				}
-			}
-		}
+	
 		completion_reward = {
 			SPB = {
 				add_opinion_modifier = {
@@ -4323,7 +4307,7 @@ add_timed_idea = {
 	focus = {
 		id = FRA_intervene_in_the_spanish_civil_war
 		icon = GFX_focus_spa_no_compromise_on_carlist_ideals
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = FRA_assist_the_carlist_cause
 		}
@@ -4335,8 +4319,6 @@ add_timed_idea = {
 			SPR_scw_in_progress = yes
 			country_exists = SPB
 			NOT = { has_war_with = SPB }
-			has_civil_war = no
-			is_subject = no
 		}
 		bypass = {
 			has_global_flag = scw_over
@@ -4385,6 +4367,12 @@ add_timed_idea = {
 
 		completion_reward = {
 			if = {
+				limit = {
+					has_idea = FRA_disjointed_government
+				}
+				remove_ideas = FRA_disjointed_government
+			}	
+			if = {
 				limit = { country_exists = SPD }
 				add_to_war = { targeted_alliance = SPB enemy = SPD hostility_reason = asked_to_join }
 			}
@@ -4423,47 +4411,19 @@ add_timed_idea = {
 		cost = 10
 		prerequisite = {
 			focus = FRA_intervene_in_the_spanish_civil_war
+			focus = FRA_anti_german_front
 		}
-		x = 0
-		y = 2
+		x = 1
+		y = 1
 		mutually_exclusive = {
 			focus = FRA_convince_spain
 		}
 		available = {
-			custom_trigger_tooltip = { 
-				tooltip = FRA_has_no_deflation_tt
-				NOT = {
-					has_idea = FRA_deflation1
-				}
-				NOT = {
-					has_idea = FRA_deflation2
-				}
-				NOT = {
-					has_idea = FRA_deflation3
-				}
-				NOT = {
-					has_idea = FRA_deflation4
-				}
-				NOT = {
-					has_idea = FRA_deflation5
-				}
-			}
+		
 			has_global_flag = scw_over
-			is_subject = no
-			has_government = neutrality
-			if = {
-				limit = {
-					SPB = {
-						exists = yes
-					}
-				}
-				is_in_faction = yes
-			}
+	
 		}
 		bypass = {
-			SPB = {
-				exists = yes
-			}
 		}
 		will_lead_to_war_with = SPR
 		relative_position_id = FRA_intervene_in_the_spanish_civil_war
@@ -4472,43 +4432,17 @@ add_timed_idea = {
 			factor = 20
 		}
 		completion_reward = {
-			if = {
-				limit = {
-					has_idea = FRA_disjointed_government
-				}
-				remove_ideas = FRA_disjointed_government
-			}
-			if = {
-				limit = {
-					has_idea = FRA_reforms_failed
-				}
-				remove_ideas = FRA_reforms_failed
-			}
-			if = {
-				limit = {
-					country_exists = SPB
-				}
-				SPB = { country_event = france.124 }
-			}
-			else = {
-				every_other_country = {
-					limit = {
-						original_tag = SPR
-						NOT = {
-							is_in_faction_with = ROOT
-						}
-					}
-					ROOT = {
-						create_wargoal = {
-							type = annex_everything
-							target = PREV
-							expire = 0
-						}
-					}
-				}
-			}
+			    SPA = {
+                    country_event = generic.20 }
+				SPR = {
+                    country_event = generic.20 }
+                
+				SPB = {
+                    country_event = generic.20 }
+                }
+            
 		}
-	}
+	
 	
 	focus = {
 		id = FRA_support_the_spanish_nationalists
@@ -4581,10 +4515,9 @@ add_timed_idea = {
 		x = 0
 		y = 1
 		available = {
-			
-			NOT = {
-				has_completed_focus = FRA_union_latins
-			}
+			SPR_scw_in_progress = yes
+			country_exists = SPA
+			NOT = { has_war_with = SPA }
 		}
 		relative_position_id = FRA_support_the_spanish_nationalists
 		
@@ -4684,115 +4617,110 @@ add_timed_idea = {
 		search_filters = {  FOCUS_FILTER_WAR_SUPPORT }
 	}
 	focus = {
-		id = FRA_ally_italy
-		icon = GFX_focus_befriend_italy
-		cost = 5
-		prerequisite = {
-			focus = FRA_anti_german_front
-		}
-		x = -1
-		y = 1
-		available = {
-			is_in_faction = yes
-			is_subject = no
-			NOT = {
-				OR = {
-					has_war_with = ITA
-					any_other_country = {
-						is_in_faction_with = ROOT
-						has_war_with = ITA
-					}
-				}
-			}
-			ITA = {
-				is_in_faction = no
-				is_subject = no
-			}
-		}
-		bypass = {
-			OR = {
-				is_in_faction_with = ITA
-				ITA = {
-					is_subject_of = ROOT
-				}
-			}
-		}
-		relative_position_id = FRA_anti_german_front
-		
-		ai_will_do = {
-			factor = 3
-		}
-		completion_reward = {
-			ITA = {
-				country_event = {
-					id = france.124
-					days = 1
-				}
-			}
-		}
-		search_filters = {  }
-	}
-	focus = {
-		id = FRA_pact_with_spain
+		id = FRA_unite_with_spain
 		icon = GFX_focus_intervention_spain_nationalists
 		cost = 5
 		prerequisite = {
-			focus = FRA_anti_german_front
+			focus = FRA_secure_the_crown_of_spain
 		}
 		available = {
-			has_global_flag = scw_over
-			is_in_faction = yes
-			is_subject = no
-			NOT = {
-				has_war_with = SPA
-			}
-			SPA = {
-				is_in_faction = no
-				is_subject = no
-				NOT = {
-					has_government = communism
-				}
-			}
-		}
-		bypass = {
 			OR = {
-				SPA = {
-					exists = no
-				}
-				is_in_faction_with = SPA
-				SPA = {
-					is_subject_of = ROOT
-				}
+	
+			SPA = {
+				is_subject_of = FRA
 			}
+			SPR = {
+				is_subject_of = FRA
+			}
+			SPB = {
+				is_subject_of = FRA
+			}
+			FRA = {
+				
+			
+               171 = { is_controlled_by = FRA } # Galicia
+            	 790 = { is_controlled_by = FRA } # Asturias
+            	 178 = { is_controlled_by = FRA } # Canary Islands
+             165 = { is_controlled_by = FRA }
+            794 = { is_controlled_by = FRA }
+             166 = { is_controlled_by = FRA }
+            176 = { is_controlled_by = FRA }
+              172 = { is_controlled_by = FRA }
+           792 = { is_controlled_by = FRA }
+          791 = { is_controlled_by = FRA }
+          174 = { is_controlled_by = FRA }
+            171 = { is_controlled_by = FRA }
+         788 = { is_controlled_by = FRA }
+          41  = { is_controlled_by = FRA }
+          793 = { is_controlled_by = FRA }
+         167 = { is_controlled_by = FRA }
+          168 = { is_controlled_by = FRA }
+      	 175 = { is_controlled_by = FRA }
+        170 = { is_controlled_by = FRA }
+        169 = { is_controlled_by = FRA }
+        789 = { is_controlled_by = FRA }
+    	  173 = { is_controlled_by = FRA }
+    	  177 = { is_controlled_by = FRA }
+            }
+		} 
+	}
+		bypass = { 
 		}
-		x = 1
+		x = 0
 		y = 1
-		relative_position_id = FRA_anti_german_front
+		relative_position_id = FRA_secure_the_crown_of_spain
 		
 		ai_will_do = {
 			factor = 3
 		}
 		completion_reward = {
-			SPA = {
-				country_event = {
-					id = france.124
-					days = 1
-				}
+			annex_country = {
+				target = SPA
 			}
-		}
-		search_filters = {  }
+			annex_country = {
+				target = SPR
+			}
+				annex_country = {
+				target = SPB
+			}
+			171 = { add_core_of = FRA } # Galicia
+            790 = { add_core_of = FRA } # Asturias
+            178 = { add_core_of = FRA } # Canary Islands
+			165 = { add_core_of = FRA }
+			794 = { add_core_of = FRA }
+			166 = { add_core_of = FRA }
+			176 = { add_core_of = FRA }
+			172 = { add_core_of = FRA }
+			792 = { add_core_of = FRA }
+			791 = { add_core_of = FRA }
+			174 = { add_core_of = FRA }
+			171 = { add_core_of = FRA }
+			788 = { add_core_of = FRA }
+			41 = { add_core_of = FRA }
+			793 = { add_core_of = FRA }
+			167 = { add_core_of = FRA }
+			168 = { add_core_of = FRA }
+			175 = { add_core_of = FRA }
+			170 = { add_core_of = FRA }
+			169 = { add_core_of = FRA }
+			789 = { add_core_of = FRA }
+			173 = { add_core_of = FRA }
+			177 = { add_core_of = FRA }
+				}
 	}
+
+   
+
 	focus = {
 		id = FRA_anti_communism_r56
 		icon = GFX_goal_anti_comintern_pact
 		cost = 5
 		prerequisite = {
-			focus = FRA_ally_italy
-			focus = FRA_pact_with_spain
+			focus = FRA_unite_with_spain
 		}
-		x = 1
+		x = 0
 		y = 1
-		relative_position_id = FRA_ally_italy
+		relative_position_id = FRA_unite_with_spain
 		
 		available = {
 			is_subject = no
