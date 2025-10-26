@@ -2236,7 +2236,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_factor = -0.25
+				consumer_goods_factor = -0.15
 				stability_factor = -0.05
 			}
 		}
