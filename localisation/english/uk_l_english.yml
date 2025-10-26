@@ -33,6 +33,17 @@
  
  
 ################################### FOCUSES                     \n      §H§!
+ ENG_imperial_fleet_idea:0 "Imperial Fleet"
+
+  ENG_Royal_Industry:0 "Royal Industry"
+  ENG_Royal_Industry_desc:0 "With the King’s leadership guiding the nation, we shall restore and expand our industrial capacity under royal oversight. A stronger domestic industry will fuel both our economy and our growing military might."
+
+  ENG_imperial_fleet:0 "Imperial Fleet"
+  ENG_imperial_fleet_desc:0 "The pride of the British Empire rests upon the strength of its navy. By expanding dockyard capacity and improving efficiency, we will ensure that His Majesty’s fleet once again dominates the oceans of the world."
+
+  ENG_The_Kings_Guard:0 "The King’s Guard"
+  ENG_The_Kings_Guard_desc:0 "Loyal soldiers, sworn to protect the King and the realm, will form an elite core of our armed forces. The King’s Guard shall stand as both a symbol and a shield of royal authority across the empire."
+
  
  ENG_Beneleux_Buffer_States:0 "Beneleux Buffer States"
  ENG_Beneleux_Buffer_States_desc:0 ""

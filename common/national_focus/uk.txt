@@ -8027,6 +8027,73 @@ custom_effect_tooltip = generic_skip_one_line_tt
 			}
 		}
 	}
+	 focus = {
+    id = ENG_Royal_Industry
+    icon = GFX_focus_CHL_enlarge_the_textile_industries
+	prerequisite = {
+		focus = ENG_the_kings_party
+	}
+    x = 0
+    y = 1
+    cost = 10
+    available = {
+       
+    }
+	relative_position_id = ENG_the_kings_party
+    completion_reward = {
+        add_ideas = ENG_Royal_Industry
+	}
+    ai_will_do = {
+        factor = 1
+    }
+}
+
+	focus = {
+    id = ENG_imperial_fleet
+    icon = GFX_focus_PER_establish_the_navy
+	prerequisite = {
+		focus = ENG_Royal_Industry
+	}
+    x = 0
+    y = 1
+    cost = 10
+    available = {
+      
+    }
+	relative_position_id = ENG_Royal_Industry
+    completion_reward = {
+        add_ideas = ENG_imperial_fleet_idea
+    }
+    ai_will_do = {
+        factor = 1
+    }
+}
+
+	focus = {
+    id = ENG_The_Kings_Guard
+    icon = GFX_focus_chi_army_reform
+	prerequisite = {
+		focus = ENG_imperial_fleet
+	}
+		prerequisite = {
+		focus = ENG_reassess_continental_commitments
+	}
+    x = 0
+    y = 1
+    cost = 5
+    available = {
+       
+    }
+	relative_position_id = ENG_imperial_fleet
+    completion_reward = {
+        add_ideas = ENG_The_Kings_Guard
+    }
+    ai_will_do = {
+        factor = 1
+    }
+}
+
+
 	
 	focus = {
 		id = ENG_Royal_Roots
@@ -8035,7 +8102,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 			is_subject = no
 		}
 		icon = GFX_focus_rom_royal_dictatorship
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = ENG_the_kings_party
 		cost = 10
@@ -8171,7 +8238,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 			}
 		}
 		icon = GFX_focus_GER_european_confederation
-		x = -1
+		x = -2
 		y = 2
 		relative_position_id = ENG_the_kings_party
 		cost = 10
@@ -8548,7 +8615,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 			}
 		}
 		icon = GFX_focus_eng_organise_the_blackshirts
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = ENG_a_change_in_course
 		cancel_if_invalid = yes
@@ -9451,7 +9518,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 			}
 		}
 		icon = GFX_focus_eng_god_save_the_king
-		x = 6
+		x = 7
 		y = 1
 		relative_position_id = ENG_the_kings_party
 		cost = 5
@@ -10784,7 +10851,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 			}
 		}
 		icon = GFX_focus_GER_the_peoples_victory
-		x = 18
+		x = 19
 		y = 1
 		relative_position_id = ENG_a_change_in_course
 		cancel_if_invalid = yes
