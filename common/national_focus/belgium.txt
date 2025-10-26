@@ -3042,10 +3042,10 @@ focus_tree = {
 		x = 1
 		y = 2
 	
-		cost = 5
+		cost = 10
 
 		available = {
-			fascism > 0.70
+			fascism > 0.75
 		}
 	
 		completion_reward = {
