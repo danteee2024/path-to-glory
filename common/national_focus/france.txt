@@ -6825,7 +6825,7 @@ add_timed_idea = {
 	focus = {
 		id = FRA_giraud_plan
 		icon = GFX_goal_generic_defence
-		cost = 2.5
+		cost = 5
 		#prerequisite = {
 		#	focus = FRA_CHEDN
 		#}
@@ -6992,7 +6992,7 @@ add_timed_idea = {
 	focus = {
 		id = FRA_de_gaulle_strategy
 		icon = GFX_goal_generic_major_war
-		cost = 2.5
+		cost = 5
 		#prerequisite = {
 		#	focus = FRA_CHEDN
 		#}
@@ -7390,8 +7390,8 @@ add_timed_idea = {
 			army_experience = 50
 			add_tech_bonus = {
 				name = FRA_armor_reform
-				bonus = 0.5
-				uses = 4
+				bonus = 1
+				uses = 1
 				category = armor
 			}
 		}
