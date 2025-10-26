@@ -703,7 +703,7 @@ equipments = {
 		armor_value = 50
 		build_cost_ic = 12
 		maximum_speed = 5
-		reliability = 0.70
+		reliability = 0.65
 	}
 
 	heavy_tank_chassis_2 = {
