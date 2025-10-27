@@ -8049,7 +8049,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 }
 
 	focus = {
-    id = ENG_imperial_fleet
+    id = ENG_imperial_Dockyards
     icon = GFX_focus_PER_establish_the_navy
 	prerequisite = {
 		focus = ENG_Royal_Industry
@@ -8062,6 +8062,28 @@ custom_effect_tooltip = generic_skip_one_line_tt
     }
 	relative_position_id = ENG_Royal_Industry
     completion_reward = {
+        add_ideas = ENG_imperial_Dockyards_idea
+    }
+    ai_will_do = {
+        factor = 1
+    }
+}
+
+
+	focus = {
+    id = ENG_imperial_fleet
+    icon = GFX_SOV_an_oceangoing_navy_ccp_2d_sov_compatibility
+	prerequisite = {
+		focus = ENG_imperial_Dockyards
+	}
+    x = 1
+    y = 1
+    cost = 5
+    available = {
+      
+    }
+	relative_position_id = ENG_imperial_Dockyards
+    completion_reward = {
         add_ideas = ENG_imperial_fleet_idea
     }
     ai_will_do = {
@@ -8073,18 +8095,18 @@ custom_effect_tooltip = generic_skip_one_line_tt
     id = ENG_The_Kings_Guard
     icon = GFX_focus_chi_army_reform
 	prerequisite = {
-		focus = ENG_imperial_fleet
+		focus = ENG_imperial_Dockyards
 	}
 		prerequisite = {
 		focus = ENG_reassess_continental_commitments
 	}
-    x = 0
+    x = -1
     y = 1
     cost = 5
     available = {
        
     }
-	relative_position_id = ENG_imperial_fleet
+	relative_position_id = ENG_imperial_Dockyards
     completion_reward = {
         add_ideas = ENG_The_Kings_Guard
     }
@@ -8318,7 +8340,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 			}
 		}
 		icon =GFX_focus_generic_mediterranean_sea_focus
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = ENG_reassess_continental_commitments
 		cost = 10
@@ -8345,7 +8367,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 			is_in_faction_with = GER
 		}
 		icon = GFX_focus_chi_mission_to_germany
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = ENG_isolate_the_mediterranean_threat
 		cost = 10
@@ -8384,7 +8406,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 			has_non_aggression_pact_with = GER
 		}
 		icon = GFX_goal_generic_dangerous_deal
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = ENG_isolate_the_mediterranean_threat
 		cost = 10
@@ -8433,7 +8455,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 
 		}
 		icon = GFX_goal_generic_forceful_treaty
-		x = -2
+		x = -3
 		y = 1
 		relative_position_id = ENG_reassess_continental_commitments
 		cost = 5
@@ -8457,7 +8479,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 
 		}
 		icon = GFX_focus_befriend_italy
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = ENG_Return_To_The_Mainland
 		cost = 10
@@ -8492,7 +8514,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 
 		}
 		icon = GFX_focus_generic_befriend_portugal
-		x = -3
+		x = -2
 		y = 1
 		relative_position_id = ENG_Return_To_The_Mainland
 		cost = 5

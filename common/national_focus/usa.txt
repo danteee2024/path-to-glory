@@ -3111,7 +3111,7 @@ focus = {
 		available = {
 			OR = {
 				has_war = yes
-				has_war_support > 0.3
+				has_war_support > 0.4
 			}
 			democratic > 0.95
 		}
@@ -7586,7 +7586,7 @@ focus = {
 		available_if_capitulated = yes
 		available = {
 			has_war = yes
-			date > 1939.1.1
+			date > 1940.1.1
 		}
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }  
