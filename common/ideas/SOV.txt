@@ -26,8 +26,8 @@ ideas = {
 
 			modifier = {
 				
-				army_attack_factor = 0.05
-				recruitable_population_factor = -0.10
+				army_attack_factor = 0.1
+				recruitable_population_factor = -0.05
 			}
 		}
 
