@@ -311,7 +311,7 @@ SAU_Integration_category = {
 			always = yes
 		}
 		is_good = yes
-		days_remove = 10
+		days_remove = 15
 		cost = 50
 		fire_only_once = no
 
@@ -351,7 +351,7 @@ SAU_Integration_category = {
 			always = yes
 		}
 		is_good = yes
-		days_remove = 10
+		days_remove = 15
 		cost = 50
 		fire_only_once = no
 
@@ -390,7 +390,7 @@ SAU_Integration_category = {
 			always = yes
 		}
 		is_good = yes
-		days_remove = 10
+		days_remove = 15
 		cost = 50
 		fire_only_once = no
 		cancel_effect = {
@@ -429,7 +429,7 @@ SAU_Integration_category = {
 			always = yes
 		}
 		is_good = yes
-		days_remove = 10
+		days_remove = 15
 		cost = 50
 		fire_only_once = no
 
@@ -469,7 +469,7 @@ SAU_Integration_category = {
 			always = yes
 		}
 		is_good = yes
-		days_remove = 10
+		days_remove = 15
 		cost = 50
 		fire_only_once = no
 
@@ -508,8 +508,8 @@ SAU_Iran_Puppet = {
 			always = yes
 		}
 		is_good = yes
-		days_remove = 10
-		cost = 75
+		days_remove = 30
+		cost = 100
 		fire_only_once = yes
 
 		cancel_effect = {
@@ -549,8 +549,8 @@ SAU_Iran_Puppet = {
 			always = yes
 		}
 		is_good = yes
-		days_remove = 10
-		cost = 75
+		days_remove = 30
+		cost = 100
 		fire_only_once = yes
 
 		cancel_effect = {
@@ -588,8 +588,8 @@ SAU_Iran_Puppet = {
 			always = yes
 		}
 		is_good = yes
-		days_remove = 10
-		cost = 75
+		days_remove = 30
+		cost = 100
 		fire_only_once = yes
 		cancel_effect = {
 		}
@@ -626,8 +626,8 @@ SAU_Iran_Puppet = {
 			always = yes
 		}
 		is_good = yes
-		days_remove = 10
-		cost = 75
+		days_remove = 30
+		cost = 100
 		fire_only_once = yes
 
 		cancel_effect = {
@@ -665,8 +665,8 @@ SAU_Iran_Puppet = {
 			always = yes
 		}
 		is_good = yes
-		days_remove = 10
-		cost = 75
+		days_remove = 30
+		cost = 100
 		fire_only_once = yes
 
 		cancel_effect = {

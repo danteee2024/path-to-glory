@@ -16393,7 +16393,7 @@ ai_will_do = {
 		completion_reward = {
 			add_timed_idea = {
 				idea = SOV_rebuild_the_nation
-				days = 540
+				days = 720
 			}
 		}
 	}
