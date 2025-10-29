@@ -16508,7 +16508,7 @@ ai_will_do = {
 		x = 4
 		y = 1
 		relative_position_id = SOV_beaten_but_not_defeated
-		cost = 5
+		cost = 2.5
 		ai_will_do = {
 			factor = 1
 		}
@@ -16529,7 +16529,7 @@ ai_will_do = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_article_124
-		cost = 5
+		cost = 2.5
 		ai_will_do = {
 			factor = 1
 		}
@@ -16587,7 +16587,7 @@ ai_will_do = {
 		x = 2
 		y = 2
 		relative_position_id = SOV_reopen_novodevichi
-		cost = 5
+		cost = 2.5
 		ai_will_do = {
 			factor = 1
 		}
@@ -16661,7 +16661,7 @@ ai_will_do = {
 		x = 2
 		y = 4
 		relative_position_id = SOV_rebuild_the_savior_cathedral
-		cost = 5
+		cost = 2.5
 		ai_will_do = {
 			factor = 1
 		}
@@ -17105,6 +17105,8 @@ ai_will_do = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 
 		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.1
 			if = {
 				limit = {
 					NOT = { has_completed_focus = SOV_dismantle_the_zemsky_sobor }
@@ -17916,9 +17918,9 @@ ai_will_do = {
 		}
 
 		completion_reward = {
-			create_wargoal = { type = annex_everything target = EST }
-			create_wargoal = { type = annex_everything target = LIT }
-			create_wargoal = { type = annex_everything target = LAT }
+			EST = { country_event =  generic.20 }
+			LAT  = { country_event =  generic.20 }
+			LIT  = { country_event =  generic.20 }
 		}
 	}	
 
@@ -18888,21 +18890,23 @@ ai_will_do = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-
+			random_controlled_state = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
 					level = 2
 					instant_build = yes
 				}
+			}
 			
-				
+				random_controlled_state = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
 					level = 2
 					instant_build = yes
 				}
+			}
 			
 			else = {
 				custom_effect_tooltip = SOV_war_economy_stability_war_tt
@@ -18911,6 +18915,7 @@ ai_will_do = {
 				limit = {
 					NOT = { has_idea = war_economy }
 					NOT = { has_idea = tot_economic_mobilisation }
+					NOT = { has_idea = Slavic_War_economy }
 				}
 				add_ideas = war_economy
 			}

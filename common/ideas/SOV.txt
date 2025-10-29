@@ -28,7 +28,7 @@ ideas = {
 				
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
-				recruitable_population_factor = -0.05
+				conscription = -0.02
 			}
 		}
 
@@ -2303,7 +2303,7 @@ ideas = {
 			}
 
 			modifier = {
-				production_speed_buildings_factor = 0.1
+				production_speed_buildings_factor = 0.15
 			}
 		}
 
