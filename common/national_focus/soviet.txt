@@ -16676,6 +16676,29 @@ ai_will_do = {
 	}
 
 	focus = {
+		id = SOV_Recruit_Staff
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = SOV_reformalize_the_role_of_the_patriarchate }
+		x = -2
+		y = 1
+		relative_position_id = SOV_reformalize_the_role_of_the_patriarchate
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {
+			recruit_character = SOV_Konstantin_korkov
+			recruit_character = SOV_aleksey_stroma
+			recruit_character = SOV_vladimir_Satrovitsch
+		}
+	}
+
+	focus = {
 		id = SOV_reconvene_the_zemsky_sobor
 		icon = GFX_focus_SOV_zemsky_sobor
 		prerequisite = { focus = SOV_consolidate_power }

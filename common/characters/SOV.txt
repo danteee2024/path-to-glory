@@ -1846,11 +1846,79 @@ characters = {
 			logistics_skill = 3
 			legacy_id = 0
 			visible = {
-				NOT = { has_character_flag = SOV_exiled_flag }
+				
 				has_completed_focus = SOV_organization_of_the_partisans
 			}
 		}
 	}
+	SOV_Konstantin_korkov = {
+		name = 	SOV_Konstantin_korkov
+
+		portraits = {
+			army = {
+				small = "GFX_idea_kliment_voroshilov"
+				large = GFX_portrait_SOV_kliment_voroshilov
+			}
+		}
+
+		field_marshal = {
+			traits = { brilliant_strategist inflexible_strategist organizer winter_specialist }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+			legacy_id = 0
+			visible = { 
+			has_completed_focus = SOV_Recruit_Staff
+		}
+		}
+	}
+	SOV_aleksey_stroma = {
+		name = 	SOV_aleksey_stroma
+
+		portraits = {
+		army = {
+				large = "GFX_portrait_SOV_sidor_kovpak"
+				small = GFX_portrait_SOV_sidor_kovpak_small
+			}
+
+		corps_commander = {
+			traits = { brilliant_strategist panzer_leader winter_specialist }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+			legacy_id = 0
+			visible = { has_completed_focus = SOV_Recruit_Staff }
+		}
+	}
+}
+
+	SOV_vladimir_Satrovitsch = {
+		name = 	SOV_vladimir_Satrovitsch
+
+		portraits = {
+		army = {
+				large = "GFX_portrait_SOV_lev_dovator"
+				small = GFX_portrait_SOV_lev_dovator_small
+			}
+
+		corps_commander = {
+			traits = { winter_specialist Trickster trait_engineer }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id = 0
+			visible = { NOT = { has_character_flag = SOV_exiled_flag } 
+			has_completed_focus = SOV_Recruit_Staff }
+		}
+	}
+}
+
 
 	SOV_sidor_kovpak = {
 		name = SOV_sidor_kovpak
