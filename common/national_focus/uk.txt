@@ -9933,7 +9933,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		id = ENG_imperial_federation
 		prerequisite = { focus = Commonwealth_second_institution }
 		available = {
-		 date > 1939.1.1
+		 date > 1940.1.1
 						
 							 CAN = { is_subject_of = ENG }
 							 AST = { is_subject_of = ENG }
