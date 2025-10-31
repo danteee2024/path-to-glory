@@ -2295,7 +2295,7 @@
 		y = 1
 		relative_position_id = JAP_fate_of_the_kodoha_faction
 
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 4
 		}
@@ -2443,7 +2443,7 @@
 		y = 1
 		relative_position_id = JAP_imperial_rule_assistance_association
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 5
@@ -3952,7 +3952,7 @@
 		x = 0
 		y = 4
 		relative_position_id = JAP_guide_the_zaibatsus
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 3
@@ -4150,7 +4150,7 @@
 		y = 3
 		relative_position_id = JAP_national_mobilization_law
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 3
@@ -4270,7 +4270,7 @@
 		y = 4
 		relative_position_id = JAP_national_mobilization_law
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -5299,7 +5299,7 @@
 		y = 1
 		relative_position_id = JAP_further_preparations_for_war
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 3
@@ -5484,7 +5484,7 @@
 		y = 2
 		relative_position_id = JAP_preemptive_war
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1

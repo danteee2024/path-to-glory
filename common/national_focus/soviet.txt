@@ -9049,7 +9049,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_left_opposition_coup
-		cost = 5
+		cost = 10
 
 		available = {
 			has_global_flag = SOV_soviet_civil_war_over
@@ -9299,7 +9299,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_the_builder_of_the_red_army
 		
-		cost = 5
+		cost = 10
 
 		available = {
 
@@ -9401,7 +9401,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_system_decentralization
 		
-		cost = 5
+		cost = 10
 
 		available = {
 
