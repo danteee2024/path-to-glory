@@ -10352,7 +10352,7 @@ Integrate_Canada = {
 		}
 		
 		available = {
-			
+			 CAN = { is_subject_of = ENG }
 		}
 
 		cost = 200
@@ -10395,7 +10395,7 @@ Integrate_Canada = {
 		}
 		
 		available = {
-			
+							 AST = { is_subject_of = ENG }
 		}
 
 		cost = 200
@@ -10438,7 +10438,7 @@ Integrate_Canada = {
 		}
 		
 		available = {
-			
+							 NZL = { is_subject_of = ENG }
 		}
 
 		cost = 200
@@ -10481,7 +10481,7 @@ Integrate_Canada = {
 		}
 		
 		available = {
-			
+							 SAF = { is_subject_of = ENG }
 		}
 
 		cost = 200
