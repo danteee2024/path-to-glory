@@ -2808,11 +2808,7 @@
 	focus = {
 		id = JAP_strike_south_doctrine
 		icon = GFX_goal_generic_navy_doctrines_tactics
-		mutually_exclusive = {
-			focus = JAP_prepare_for_war_with_the_soviet_union
-		}
-		prerequisite = { focus = JAP_liaison_conference 
-		focus = JAP_purge_the_toseiha }
+		prerequisite = { focus = JAP_liaison_conference  }
 		x = 0
 		y = 1
 		relative_position_id = JAP_liaison_conference
@@ -4456,7 +4452,7 @@
 		completion_reward = {
 			set_truce = {
 				target = CHI
-				days = 365
+				days = 730
 			}
 			add_political_power = 100
 			609 = {
@@ -4983,11 +4979,7 @@
 	focus = {
 		id = JAP_prepare_for_war_with_the_soviet_union
 		icon = GFX_focus_SOV_reinforce_northern_naval_bases
-		prerequisite = { focus = JAP_purge_the_toseiha 
-		focus = JAP_liaison_conference }
-		mutually_exclusive = {
-			focus = JAP_strike_south_doctrine
-		}
+		prerequisite = { focus = JAP_purge_the_toseiha  }
 		x = 0
 		y = 1
 		relative_position_id = JAP_purge_the_toseiha
@@ -5090,7 +5082,7 @@
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -5098,7 +5090,7 @@
 				add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -5225,16 +5217,7 @@
 				add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-
-			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 
@@ -5279,7 +5262,7 @@
 				
 					add_building_construction = {
 					type = arms_factory
-					level = 5
+					level = 3
 					instant_build = yes
 				}
 			}
