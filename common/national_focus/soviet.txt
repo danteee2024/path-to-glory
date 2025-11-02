@@ -19274,7 +19274,6 @@ ai_will_do = {
 		id = SOV_union_of_sovereign_republics
 		icon = GFX_focus_RUS_form_usr
 		prerequisite = { focus = SOV_return_of_republic }
-		mutually_exclusive = { focus = SOV_dismantle_the_union }
 		x = 1
 		y = 1
 		relative_position_id = SOV_return_of_republic
@@ -19297,85 +19296,6 @@ ai_will_do = {
 		}
 	}
 
-	focus = {
-		id = SOV_dismantle_the_union
-		icon = GFX_focus_renounce_the_treaty_of_trianon
-		prerequisite = { focus = SOV_return_of_republic }
-		mutually_exclusive = { focus = SOV_union_of_sovereign_republics }
-		x = 3
-		y = 1
-		relative_position_id = SOV_return_of_republic
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-		}
-		available_if_capitulated = no
-		
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
-
-		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.1
-			custom_effect_tooltip = generic_skip_one_line_tt
-			hidden_effect = {
-				release_autonomy = {
-					target = UKR
-					autonomy_state = autonomy_integrated_puppet
-					freedom_level = 0.5
-				}
-				release_autonomy = {
-					target = BLR
-					autonomy_state = autonomy_integrated_puppet
-					freedom_level = 0.5
-				}
-				release_autonomy = {
-					target = GEO
-					autonomy_state = autonomy_integrated_puppet
-					freedom_level = 0.5
-				}
-				release_autonomy = {
-					target = ARM
-					autonomy_state = autonomy_integrated_puppet
-					freedom_level = 0.5
-				}
-				release_autonomy = {
-					target = AZR
-					autonomy_state = autonomy_integrated_puppet
-					freedom_level = 0.5
-				}
-				release_autonomy = {
-					target = KAZ
-					autonomy_state = autonomy_integrated_puppet
-					freedom_level = 0.5
-				}
-				release_autonomy = {
-					target = UZB
-					autonomy_state = autonomy_integrated_puppet
-					freedom_level = 0.5
-				}
-				release_autonomy = {
-					target = KYR
-					autonomy_state = autonomy_integrated_puppet
-					freedom_level = 0.5
-				}
-				release_autonomy = {
-					target = TAJ
-					autonomy_state = autonomy_integrated_puppet
-					freedom_level = 0.5
-				}
-				release_autonomy = {
-					target = TMS
-					autonomy_state = autonomy_integrated_puppet
-					freedom_level = 0.5
-				}
-			}
-			custom_effect_tooltip = SOV_dismantle_the_union_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_ideas = RUS_nation_state
-		}
-	}
 
 	focus = {
 		id = SOV_closer_cooperation
@@ -19484,39 +19404,7 @@ ai_will_do = {
 		}
 	}
 
-	focus = {
-		id = SOV_construct_new_democracies
-		icon = GFX_focus_generic_court
-		prerequisite = { focus = SOV_dismantle_the_union }
-		mutually_exclusive = {  }
-		x = 0
-		y = 1
-		relative_position_id = SOV_dismantle_the_union
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			has_government = democratic
-		}
-		available_if_capitulated = no
-		
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-
-		completion_reward = {
-			set_rule = {
-				can_puppet = yes
-			}
-			set_rule = {
-				can_send_volunteers = yes
-			}
-			set_rule = {
-				can_create_collaboration_government = yes
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_ideas = RUS_constructor_of_democracies_idea
-		}
-	}
+	
 
 	focus = {
 		id = SOV_reform_entente
@@ -20707,7 +20595,7 @@ ai_will_do = {
 		icon = GFX_focus_generic_improve_the_administration
 		prerequisite = { focus = SOV_hold_election }
 		mutually_exclusive = {  }
-		x = 12
+		x = 10
 		y = 1
 		relative_position_id = SOV_hold_election
 		cost = 5
