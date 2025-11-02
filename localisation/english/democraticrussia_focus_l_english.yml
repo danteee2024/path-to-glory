@@ -127,6 +127,10 @@
   SOV_Recruit_Staff_desc:0 "With the Patriarchate’s role redefined, it is time to strengthen our military leadership. By recruiting talented and loyal officers, we ensure that the Red Army is guided by capable hands. The new generation of commanders will bring both innovation and dedication to the Soviet cause."
  RUS_defend_the_homeland:0 "Defend the Homeland"
  RUS_defend_the_homeland_desc:0 "A free and democratic Russia must stand ready to defend its sovereignty. Every soldier, every citizen, and every blade of grass will resist the aggressor. Through unity, we will protect our home."
+ RUS_democratic_industrial_modernization:0 "Industrial Modernization Program"
+ RUS_democratic_industrial_modernization_desc:0 "The new democratic government has prioritized the modernization of our industrial base. By investing in cutting-edge technologies, fair labor practices, and transparent production management, we can create a prosperous and efficient economy that benefits all citizens of Russia."
+
+ RUS_democratic_industrial_modernization_idea:0 "Industrial Modernization Program"
 
  
 

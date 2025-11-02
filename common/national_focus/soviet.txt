@@ -19004,7 +19004,7 @@ ai_will_do = {
 		completion_reward = {
 			add_popularity = {
 				ideology = democratic
-				popularity = 0.15
+				popularity = 0.2
 			}
 			add_stability = 0.1
 			add_political_power = 150
@@ -19035,7 +19035,7 @@ ai_will_do = {
 			factor = 1
 		}
 		available = {
-			democratic > 0.6
+			democratic > 0.45
 		}
 		available_if_capitulated = no
 		
@@ -19914,6 +19914,22 @@ ai_will_do = {
 			add_ideas = war_economy
 		}
 	}
+	focus = {
+    id = RUS_democratic_industrial_modernization
+    icon = GFX_focus_CHL_enlarge_the_textile_industries
+	prerequisite = {
+		focus = SOV_new_frontiers
+	}
+	relative_position_id = SOV_russian_war_economy
+    x = -1
+    y = 1
+    cost = 5
+    available = {
+    }
+    completion_reward = {
+        add_ideas = RUS_democratic_industrial_modernization_idea
+    }
+}
 
 	focus = {
 		id = SOV_strike_east

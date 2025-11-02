@@ -1860,6 +1860,15 @@ characters = {
 				large = GFX_portrait_SOV_kliment_voroshilov
 			}
 		}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+						has_completed_focus = SOV_Recruit_Staff
+			}				
 
 		field_marshal = {
 			traits = { brilliant_strategist inflexible_strategist organizer winter_specialist }
@@ -1872,6 +1881,7 @@ characters = {
 			visible = { 
 			has_completed_focus = SOV_Recruit_Staff
 			NOT = { has_character_flag = SOV_exiled_flag }
+				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
 		}
 		}
 	}
@@ -1884,6 +1894,15 @@ characters = {
 				small = GFX_portrait_SOV_sidor_kovpak_small
 			}
 		}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+				has_completed_focus = SOV_Recruit_Staff
+			}				
 
 		corps_commander = {
 			traits = { trait_engineer panzer_leader winter_specialist }
@@ -1894,7 +1913,8 @@ characters = {
 			logistics_skill = 3
 			legacy_id = 0
 			visible = { has_completed_focus = SOV_Recruit_Staff 
-		NOT = { has_character_flag = SOV_exiled_flag } }
+		NOT = { has_character_flag = SOV_exiled_flag }
+				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated } }
 		}
 	}
 
@@ -1908,6 +1928,15 @@ characters = {
 				small = GFX_portrait_SOV_lev_dovator_small
 			}
 		}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+				has_completed_focus = SOV_Recruit_Staff
+			}				
 
 		corps_commander = {
 			traits = { winter_specialist Trickster commando }
@@ -1919,7 +1948,8 @@ characters = {
 			legacy_id = 0
 			visible = { 
 			has_completed_focus = SOV_Recruit_Staff
-		NOT = { has_character_flag = SOV_exiled_flag } }
+		NOT = { has_character_flag = SOV_exiled_flag }
+				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated } }
 		}
 	}
 

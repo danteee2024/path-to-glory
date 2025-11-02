@@ -2738,6 +2738,17 @@ ideas = {
 			}
 		}
 
+		RUS_democratic_industrial_modernization_idea = {
+    picture = SOV_russian_corporate_state_ccp_sov_compatibility
+    allowed = {
+        original_tag = RUS
+    }
+    modifier = {
+        industrial_capacity_factory = 0.05
+        production_factory_efficiency_gain_factor = 0.05
+    }
+}
+
 		SOV_our_slavic_commitments = {
 			picture = SOV_our_slavic_commitments_ccp_sov_compatibility
 			removal_cost = -1

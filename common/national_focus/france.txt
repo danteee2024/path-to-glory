@@ -3082,6 +3082,12 @@ add_timed_idea = {
 			country_event = {
 				id = france.112
 			}
+			hidden_effect = {
+				set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+		}
 		}
 	}
 	focus = {
@@ -3121,6 +3127,12 @@ add_timed_idea = {
 			country_event = {
 				id = france.112
 			}
+			hidden_effect = {
+				set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+		}
 		}
 	}	
 	focus = {
