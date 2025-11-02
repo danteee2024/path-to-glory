@@ -19972,12 +19972,58 @@ ai_will_do = {
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
-			add_war_support = 0.05
+			add_war_support = 0.1
+			add_stability = 0.1
 			add_political_power = 50
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = SOV_new_frontiers_tt
 			custom_effect_tooltip = generic_skip_one_line_tt
 			set_cosmetic_tag = RUS_GREATER_RUSSIAN_EMPIRE
+		}
+	}
+
+	focus = {
+    id = RUS_defend_the_homeland
+    icon = GFX_goal_generic_defence
+   	prerequisite = { focus = SOV_new_frontiers }
+		x = -3
+		y = 1
+		relative_position_id = SOV_new_frontiers
+    cost = 10
+    available = {
+        threat > 0.6
+    }
+    completion_reward = {
+        add_ideas = RUS_defend_the_homeland
+    }
+    ai_will_do = {
+        factor = 1
+    }
+}
+
+	focus = {
+		id = SOV_russian_war_economy
+		icon = GFX_SOV_war_economy_ccp_2d_sov_compatibility
+		prerequisite = { focus = SOV_new_frontiers }
+		x = 3
+		y = 1
+		relative_position_id = SOV_new_frontiers
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_war = yes
+				has_war_support > 0.6
+			}
+		}
+		available_if_capitulated = no
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = war_economy
 		}
 	}
 

@@ -1871,6 +1871,7 @@ characters = {
 			legacy_id = 0
 			visible = { 
 			has_completed_focus = SOV_Recruit_Staff
+			NOT = { has_character_flag = SOV_exiled_flag }
 		}
 		}
 	}
@@ -1892,7 +1893,8 @@ characters = {
 			planning_skill = 3
 			logistics_skill = 3
 			legacy_id = 0
-			visible = { has_completed_focus = SOV_Recruit_Staff }
+			visible = { has_completed_focus = SOV_Recruit_Staff 
+		NOT = { has_character_flag = SOV_exiled_flag } }
 		}
 	}
 
@@ -1916,7 +1918,8 @@ characters = {
 			logistics_skill = 3
 			legacy_id = 0
 			visible = { 
-			has_completed_focus = SOV_Recruit_Staff }
+			has_completed_focus = SOV_Recruit_Staff
+		NOT = { has_character_flag = SOV_exiled_flag } }
 		}
 	}
 
