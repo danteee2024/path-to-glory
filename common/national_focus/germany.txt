@@ -22274,9 +22274,7 @@ focus_tree = {
 				}
 				custom_effect_tooltip = GER_central_european_alliance_tt
 			}
-			effect_tooltip = {
-				create_faction = GER_proletarian_international_alliance
-			}
+			
 			
 		}
 	}
