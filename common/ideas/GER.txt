@@ -4705,7 +4705,7 @@ ideas = {
 			}
 
 			modifier = {
-				conscription_factor = 0.01
+				conscription = 0.01
 				army_org_factor = 0.05
 				army_morale_factor = 0.1
 				max_planning_factor = 0.1
