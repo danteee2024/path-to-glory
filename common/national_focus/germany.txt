@@ -22281,7 +22281,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_support_the_proletarian_uprising
+		id = GER_No_One_Left_Behind
 		icon = GFX_focus_GER_support_the_proletarian_uprising
 		prerequisite = { focus = GER_spark_the_flame_of_revolution }
 
@@ -22305,11 +22305,11 @@ focus_tree = {
 	focus = {
 		id = GER_strengthen_the_proletarian_international
 		icon = GFX_focus_GER_strengthen_the_proletarian_international
-		prerequisite = { focus = GER_support_the_proletarian_uprising }
+		prerequisite = { focus = GER_No_One_Left_Behind }
 
 		x = 1
 		y = 1
-		relative_position_id = GER_support_the_proletarian_uprising
+		relative_position_id = GER_No_One_Left_Behind
 		cost = 5
 		available = {
 		}
