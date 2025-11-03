@@ -21868,7 +21868,7 @@ focus_tree = {
 		available = {
 			communism > 0.35
 		}
-
+        # fuck you giamper 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
