@@ -1,4 +1,4 @@
-﻿### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_POLITICAL}
 ### search_filters = {FOCUS_FILTER_RESEARCH}
 ### search_filters = {FOCUS_FILTER_INDUSTRY}
 ### search_filters = {FOCUS_FILTER_STABILITY}
@@ -21866,7 +21866,7 @@ focus_tree = {
 		relative_position_id = GER_start_the_proletarian_revolution
 		cost = 5
 		available = {
-			communism > 0.5
+			communism > 0.3
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
@@ -22033,10 +22033,10 @@ focus_tree = {
 		completion_reward = {
 			GER_add_or_modify_politburo = yes
 
-			add_to_variable = { GER_politburo_political_power_factor = 0.1 tooltip = political_power_factor_tt }
+			add_to_variable = { GER_politburo_political_power_factor = 0.15 tooltip = political_power_factor_tt }
 			add_to_variable = { GER_politburo_resistance_growth = -0.05 tooltip = resistance_growth_tt }
 			add_to_variable = { GER_politburo_compliance_growth = 0.05 tooltip = compliance_growth_tt }
-			add_to_variable = { GER_politburo_subjects_autonomy_gain = -0.15 tooltip = subjects_autonomy_gain_tt }
+			
 		}
 	}
 
@@ -22075,14 +22075,20 @@ focus_tree = {
 		y = 2
 		relative_position_id = GER_civil_liberties
 		cost = 10
-		available = {
+		
+			available = {
 			is_subject = no
+			is_faction_leader = yes
+			any_other_country = {
+				is_in_faction_with = ROOT
+			}
 		}
+		
 
 		search_filters = {}
 
 		completion_reward = {
-			custom_effect_tooltip = GER_protect_the_revolution_tt
+			
 		}
 	}
 
@@ -22105,30 +22111,10 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 100
 			
-			custom_effect_tooltip = GER_establish_volkskommissariats_tt
 		}
 	}
 
-	focus = {
-		id = GER_industrialize_volkskommissariats
-		icon = GFX_goal_generic_construct_civilian
-		prerequisite = { focus = GER_establish_volkskommissariats }
-
-		x = -1
-		y = 1
-		relative_position_id = GER_establish_volkskommissariats
-		cost = 5
-		available = {
-			is_subject = no
-			num_subjects > 0
-		}
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			custom_effect_tooltip = GER_industrialize_volkskommissariats_tt
-		}
-	}
+	
 
 	focus = {
 		id = GER_instill_german_discipline
@@ -22140,97 +22126,18 @@ focus_tree = {
 		relative_position_id = GER_establish_volkskommissariats
 		cost = 5
 		available = {
-			is_subject = no
-			num_subjects > 0
+			
 		}
 
 		search_filters = {}
 
 		completion_reward = {
-			IF = {
-				limit = {
-					any_country = {
-						has_autonomy_state = autonomy_volkskommissariat
-					}
-				}
-				every_other_country = {
-					limit = {
-						has_autonomy_state = autonomy_volkskommissariat
-					}
-
 					add_ideas = GER_volkskommissariat_military
-				}
-			}
-
-			ELSE = {
-				custom_effect_tooltip = GER_current_future_volkskommisariats_tt
-				effect_tooltip = {
-					add_ideas = GER_volkskommissariat_military
-				}
-			}
+			
 		}
 	}
-	focus = {
-		id = GER_integrate_subjects_economies
-		icon = GFX_focus_usa_reestablish_the_gold_standard
-		prerequisite = { focus = GER_industrialize_volkskommissariats }
-		prerequisite = { focus = GER_instill_german_discipline }
-
-		x = 1
-		y = 1
-		relative_position_id = GER_industrialize_volkskommissariats
-		cost = 10
-		available = {
-			is_subject = no
-			num_subjects > 0
-		}
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-
-			IF = {
-				limit = {
-					any_country = {
-						has_autonomy_state = autonomy_volkskommissariat
-					}
-				}
-				every_other_country = {
-					limit = {
-						has_autonomy_state = autonomy_volkskommissariat
-					}
-
-					add_ideas = GER_volkskommissariat_economic_integration
-				}
-			}
-
-			ELSE = {
-				custom_effect_tooltip = GER_current_future_volkskommisariats_tt
-				effect_tooltip = {
-					add_ideas = GER_volkskommissariat_economic_integration
-				}
-			}
-		}
-	}
-	focus = {
-		id = GER_integrate_volkskommissariats
-		icon = GFX_focus_GER_integrate_volkskommissariats
-		prerequisite = { focus = GER_integrate_subjects_economies }
-
-		x = 0
-		y = 1
-		relative_position_id = GER_integrate_subjects_economies
-		cost = 10
-		available = {
-			num_subjects > 2
-		}
-
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-
-		completion_reward = {
-			custom_effect_tooltip = GER_integrate_volkskommissariats_tt
-		}
-	}
+	
+	
 
 
 	focus = {
@@ -22241,7 +22148,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = GER_social_ownership
-		cost = 10
+		cost = 5
 		available = {
 			is_subject = no
 			AUS = { 
@@ -22896,7 +22803,7 @@ focus_tree = {
 		x = 7
 		y = 1
 		relative_position_id = GER_social_ownership
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -22967,7 +22874,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_nationalize_industries
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -23078,7 +22985,7 @@ focus_tree = {
 
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_industrial_capacity_factory = 0.05
+				GER_industrial_industrial_capacity_factory = 0.10
 				tooltip = industrial_capacity_factory_tt
 			}
 
@@ -23113,7 +23020,7 @@ focus_tree = {
 
 			custom_effect_tooltip = GER_modify_politburo_modifier_tt
 			add_to_variable = { GER_politburo_party_popularity_stability_factor = 0.1 tooltip = party_popularity_stability_factor_tt }
-			add_to_variable = { GER_politburo_weekly_manpower = 100  tooltip = weekly_manpower_tt }
+			add_to_variable = { GER_politburo_weekly_manpower = 1000  tooltip = weekly_manpower_tt }
 		}
 	}
 
@@ -23127,7 +23034,7 @@ focus_tree = {
 		relative_position_id = GER_labor_rights_and_union_stuff
 		cost = 5
 		available = {
-			has_completed_focus = GER_establish_the_reichswerke
+			
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -23173,7 +23080,7 @@ focus_tree = {
 
 			add_popularity = {
 				ideology = communism
-				popularity = 0.05
+				popularity = 0.10
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -23267,7 +23174,7 @@ focus_tree = {
 		completion_reward = {
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_industrial_capacity_factory = 0.1
+				GER_industrial_industrial_capacity_factory = 0.15
 				tooltip = industrial_capacity_factory_tt
 			}
 			add_to_variable = { 
@@ -23275,7 +23182,7 @@ focus_tree = {
 				tooltip = industrial_capacity_dockyard_tt
 			}
 			add_to_variable = { 
-				GER_industrial_consumer_goods_factor = -0.1
+				GER_industrial_consumer_goods_factor = -0.15
 				tooltip = consumer_goods_factor_tt
 			}
 		}
@@ -23298,11 +23205,11 @@ focus_tree = {
 		completion_reward = {
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_production_lack_of_resource_penalty_factor = -0.05
+				GER_industrial_production_lack_of_resource_penalty_factor = -0.15
 				tooltip = production_lack_of_resource_penalty_factor_tt
 			}
 			add_to_variable = { 
-				production_speed_buildings_factor = 0.05
+				production_speed_buildings_factor = 0.10
 				tooltip = production_speed_buildings_factor_tt
 			}
 		}
@@ -23473,7 +23380,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = GER_spheres_of_influence
-		cost = 10
+		cost = 5
 		available = {
 			is_subject = no
 			NOT = { has_war_with = CZE }
@@ -23635,7 +23542,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_spheres_of_influence
-		cost = 10
+		cost = 5
 
 		available = {
 			is_subject = no
@@ -23813,7 +23720,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_czechoslovakia
-		cost = 10
+		cost = 5
 
 		available = {
 			is_subject = no
@@ -24380,7 +24287,7 @@ focus_tree = {
 		icon = GFX_focus_chi_cooperation_with_the_communists
 		prerequisite = { focus = GER_legacy_of_the_spartacus_league focus = GER_proletarian_dictatorship }
 
-		x = 6
+		x = 7
 		y = 1
 		relative_position_id = GER_legacy_of_the_spartacus_league
 		cost = 5
