@@ -131,6 +131,12 @@
  RUS_democratic_industrial_modernization_desc:0 "The new democratic government has prioritized the modernization of our industrial base. By investing in cutting-edge technologies, fair labor practices, and transparent production management, we can create a prosperous and efficient economy that benefits all citizens of Russia."
 
  RUS_democratic_industrial_modernization_idea:0 "Industrial Modernization Program"
+ SOV_war_industry:0 "Industrial Mobilization Program"
+ SOV_war_industry_desc:0 "To safeguard our nation's sovereignty and uphold democratic values, we must ensure that our armed forces are supplied with the finest equipment. This new industrial initiative will expand our defense production capacity, creating jobs, boosting innovation, and ensuring that Russia remains ready to defend peace and freedom."
+ SOV_border_logistics:0 "Far Eastern Logistics Network"
+ SOV_border_logistics_desc:0 "Our vast eastern territories are rich in resources but difficult to defend. With tensions simmering near our borders with China, Japan, and Mongolia, we must ensure our forces are well-supplied and mobile. By investing in new railways, depots, and supply hubs, we will turn Siberia into a fortress of stability and strength."
+
+
 
  
 

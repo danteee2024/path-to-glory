@@ -144,7 +144,7 @@ ideas = {
 			}
 
 			modifier = {
-				production_speed_arms_factory_factor = 0.1
+				production_speed_arms_factory_factor = 0.15
 				mobilization_speed = 0.2
 				stability_factor = -0.1
 			}

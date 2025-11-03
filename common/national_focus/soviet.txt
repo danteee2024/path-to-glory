@@ -6198,6 +6198,97 @@ focus_tree = {
 	}
 
 	focus = {
+		id = SOV_border_logistics
+		icon = GFX_focus_usa_focus_on_asia
+		prerequisite = { focus = SOV_far_east_fortification }
+		x = 0
+		y = 2
+		relative_position_id = SOV_far_east_fortification
+		cost = 5
+
+		available = {
+			
+		}
+		
+		search_filters = {}
+
+		completion_reward = {
+			 build_railway = {
+				path = { 1459 10660 12640 12658 12385 4595 1402 7335 7407 10292 10161 7350 4661 12594 7890 12427 10531 4781 7819 1676 10627 10597 12579 1834 10623 1798 4732 4801 4862 12507  }
+			}
+			588 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 12427
+					instant_build = yes
+				}
+			}
+			build_railway = {
+				path = { 12385 7711 7795 10550 }
+			}
+			589 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 10550
+					instant_build = yes
+				}
+			}
+			build_railway = {
+				path = { 12189 7266 1397 9749 9589 9604 }
+			}
+			561 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 12543
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 10678
+					instant_build = yes
+				}
+			}
+			
+			408 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 664
+					instant_build = yes
+				}
+			}
+			build_railway = {
+				path = { 1459 10488 10530 10408 1825 1675 12511 }
+			}
+			732 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 12511
+					instant_build = yes
+				}
+			}
+			build_railway = {
+				path = { 9604 4404 7309 4841 }
+			}
+			409 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 4841
+					instant_build = yes
+				}
+			}
+
+    
+		}
+	}
+
+	focus = {
 		id = SOV_restore_cossack_units
 		icon = GFX_focus_SOV_restore_cossack_units
 		prerequisite = { focus = SOV_strengthen_the_mobilization_plan }
@@ -19890,41 +19981,17 @@ ai_will_do = {
 }
 
 	focus = {
-		id = SOV_russian_war_economy
-		icon = GFX_SOV_war_economy_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_new_frontiers }
-		x = 3
-		y = 1
-		relative_position_id = SOV_new_frontiers
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			OR = {
-				has_war = yes
-				has_war_support > 0.6
-			}
-		}
-		available_if_capitulated = no
-		
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			add_ideas = war_economy
-		}
-	}
-	focus = {
     id = RUS_democratic_industrial_modernization
     icon = GFX_focus_CHL_enlarge_the_textile_industries
 	prerequisite = {
 		focus = SOV_new_frontiers
 	}
-	relative_position_id = SOV_russian_war_economy
-    x = -1
+	relative_position_id = SOV_new_frontiers
+    x = 3
     y = 1
     cost = 5
     available = {
+		has_stability > 0.6
     }
     completion_reward = {
         add_ideas = RUS_democratic_industrial_modernization_idea
@@ -20224,7 +20291,7 @@ ai_will_do = {
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
-			add_war_support = 0.05
+			add_war_support = 0.1
 			custom_effect_tooltip = generic_skip_one_line_tt
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 2
@@ -20251,33 +20318,24 @@ ai_will_do = {
 	}
 
 	focus = {
-		id = SOV_russian_war_economy
+		id = SOV_war_industry
 		icon = GFX_focus_generic_mass_production
 		prerequisite = { focus = SOV_increase_military_budget }
 		mutually_exclusive = {  }
 		x = 0
 		y = 1
 		relative_position_id = SOV_increase_military_budget
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
 		available = {
-			OR = {
-				has_war = yes
-				has_war_support > 0.8
-				threat > 0.6
-			}
-			NOT = {
-				has_idea = war_economy
-			}
 		}
 		available_if_capitulated = no
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_ideas = war_economy
 			custom_effect_tooltip = generic_skip_one_line_tt
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 2
@@ -20303,6 +20361,32 @@ ai_will_do = {
 					instant_build = yes						
 				}
 			}
+		}
+	}
+
+	focus = {
+		id = SOV_russian_war_economy
+		icon = GFX_SOV_war_economy_ccp_2d_sov_compatibility
+		prerequisite = { focus = SOV_war_industry }
+		x = 0
+		y = 1
+		relative_position_id = SOV_war_industry
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_war = yes
+				has_war_support > 0.7
+			}
+		}
+		available_if_capitulated = no
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = war_economy
 		}
 	}
 
