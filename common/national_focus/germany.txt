@@ -22116,6 +22116,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 100
+			add_war_support = 0.10
 			
 		}
 	}
@@ -22255,8 +22256,8 @@ focus_tree = {
 					is_on_continent = europe
 				}
 				is_major = no
-				NOT = { has_government = fascism }
-				NOT = { has_government = communism }
+				
+				
 			}
 		}
 
@@ -22265,9 +22266,7 @@ focus_tree = {
 		completion_reward = {
 			add_war_support = 0.05
 
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = GER_spark_the_flame_of_revolution_tt
+			
 
 			if = {
 				limit = {
@@ -22278,14 +22277,7 @@ focus_tree = {
 			effect_tooltip = {
 				create_faction = GER_proletarian_international_alliance
 			}
-			hidden_effect = {
-				if = {
-					limit = {
-						is_in_faction = no
-					}
-					create_faction = GER_proletarian_international_alliance
-				}
-			}
+			
 		}
 	}
 	focus = {
@@ -22296,14 +22288,14 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_spark_the_flame_of_revolution
-		cost = 5
+		cost = 10
 		available = {
 		}
 
 		search_filters = {}
 
 		completion_reward = {
-			custom_effect_tooltip = GER_support_the_proletarian_uprising_tt
+			set_conscription = scraping_the_barrel
 		}
 	}
 	
