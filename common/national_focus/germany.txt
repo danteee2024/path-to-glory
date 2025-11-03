@@ -22266,7 +22266,7 @@ focus_tree = {
 		completion_reward = {
 			add_war_support = 0.05
 
-			
+			create_faction = GER_proletarian_international_alliance
 
 			if = {
 				limit = {
@@ -22295,7 +22295,7 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-			set_conscription = scraping_the_barrel
+			add_ideas = scraping_the_barrel
 		}
 	}
 	
