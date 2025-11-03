@@ -58,7 +58,7 @@
 		x = 5
 		y = 0
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 10
@@ -1861,7 +1861,7 @@
 			add_tech_bonus = {
 				name = CHI_unified_industrial_planning
 				bonus = 1.0
-				uses = 3
+				uses = 2
 				category = industry
 			}
 		}

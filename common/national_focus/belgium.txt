@@ -1536,8 +1536,8 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = BEL_belgian_tank_development
-				bonus = 0.5
-				uses = 2
+				bonus = 1
+				uses = 1
 				category = armor
 			}
 		}
@@ -1902,7 +1902,7 @@ focus_tree = {
 		x = 1
 		y = 1
 	
-		cost = 10
+		cost = 5
 
 		available = {
 		}
@@ -2909,7 +2909,7 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			fascism > 0.5
+			fascism > 0.35
 		}
 	
 		completion_reward = {
@@ -2962,7 +2962,7 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			fascism > 0.6
+			fascism > 0.5
 		}
 	
 		completion_reward = {
@@ -3031,8 +3031,8 @@ focus_tree = {
 		id = BEL_the_lost_tribe
 		icon = GFX_focus_BEL_the_lost_tribe
 	
-		prerequisite = { focus = BEL_christian_corporatism }	
-		prerequisite = { focus = BEL_legacy_of_the_soldier_king }	
+		prerequisite = { focus = BEL_christian_corporatism focus = BEL_legacy_of_the_soldier_king}	
+		
 		will_lead_to_war_with = LUX	
 
 		relative_position_id = BEL_christian_corporatism	
@@ -3045,7 +3045,7 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			fascism > 0.75
+			fascism > 0.70
 		}
 	
 		completion_reward = {
@@ -3535,8 +3535,8 @@ focus = {
 		id = BEL_the_european_crusade
 		icon = GFX_focus_BEL_the_european_crusade
 	
-		prerequisite = { focus = BEL_civil_service_purge }			
-		prerequisite = { focus = BEL_traditional_family_values }	
+				
+		prerequisite = { focus = BEL_traditional_family_values  focus = BEL_civil_service_purge }	
 
 		relative_position_id = BEL_civil_service_purge	
 
