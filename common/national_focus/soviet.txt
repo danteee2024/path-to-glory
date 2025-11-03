@@ -16765,29 +16765,7 @@ ai_will_do = {
 			SOV_increase_church_power = yes	
 		}
 	}
-
-	focus = {
-		id = SOV_Recruit_Staff
-		icon = GFX_focus_chi_army_reform
-		prerequisite = { focus = SOV_reformalize_the_role_of_the_patriarchate }
-		x = -2
-		y = 1
-		relative_position_id = SOV_reformalize_the_role_of_the_patriarchate
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-
-		available_if_capitulated = yes
-		
-		search_filters = {FOCUS_FILTER_POLITICAL}
-
-		completion_reward = {
-			recruit_character = SOV_Konstantin_korkov
-			recruit_character = SOV_aleksey_stroma
-			recruit_character = SOV_vladimir_Satrovitsch
-		}
-	}
+	
 
 	focus = {
 		id = SOV_reconvene_the_zemsky_sobor
@@ -19817,10 +19795,6 @@ ai_will_do = {
 			factor = 1
 		}
 		available = {
-			OR = {
-				controls_state = 10
-				controls_state = 111
-			}
 		}
 		available_if_capitulated = no
 		
@@ -20264,6 +20238,31 @@ ai_will_do = {
 		completion_reward = {
 			add_ideas = war_economy
 		}
+	}
+
+	focus = {
+		id = RUS_citizen_defense_committees
+		icon = GFX_focus_generic_full_employment
+		prerequisite = { focus = SOV_russian_war_economy }
+		x = 0
+		y = 1
+		relative_position_id = SOV_russian_war_economy
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_war = yes
+				has_war_support > 0.7
+			}
+		}
+		available_if_capitulated = no
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = service_by_requirement }
 	}
 
 	focus = {

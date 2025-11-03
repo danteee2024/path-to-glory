@@ -135,6 +135,8 @@
  SOV_war_industry_desc:0 "To safeguard our nation's sovereignty and uphold democratic values, we must ensure that our armed forces are supplied with the finest equipment. This new industrial initiative will expand our defense production capacity, creating jobs, boosting innovation, and ensuring that Russia remains ready to defend peace and freedom."
  SOV_border_logistics:0 "Far Eastern Logistics Network"
  SOV_border_logistics_desc:0 "Our vast eastern territories are rich in resources but difficult to defend. With tensions simmering near our borders with China, Japan, and Mongolia, we must ensure our forces are well-supplied and mobile. By investing in new railways, depots, and supply hubs, we will turn Siberia into a fortress of stability and strength."
+ RUS_citizen_defense_committees:0 "Citizen Defense Committees"
+  RUS_citizen_defense_committees_desc:0 "Civilian organizations coordinate recruitment drives, training programs, and logistical support for our expanding army. Although this increases wartime efficiency, it places additional strain on local governance and civilian life."
 
 
 
