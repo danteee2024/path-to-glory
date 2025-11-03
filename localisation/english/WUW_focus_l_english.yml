@@ -4260,6 +4260,8 @@ BEL_corruption_ns_fake_tt: "Daily Political Power Gain: §R-0.25%§! \nStability
  ######################################################
 
  GER_Proletarian_Support:0 "Proletarian Support"
+ The_Red_Terror_Army:0 "The Red Terror Army"
+ The_Red_Terror_Army_desc:0 "Forged from the chaos of revolution and disciplined through the fires of war, the Red Terror Army stands as the embodiment of the new German order. Its ranks are filled with fanatical soldiers devoted to the ideals of the revolution, ready to crush reactionary forces and spread the cause beyond our borders. Fear and loyalty go hand in hand in this new people's army."
 
  #########################################################
  #Decision Germany

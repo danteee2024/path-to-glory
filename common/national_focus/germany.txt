@@ -21866,7 +21866,7 @@ focus_tree = {
 		relative_position_id = GER_start_the_proletarian_revolution
 		cost = 5
 		available = {
-			communism > 0.3
+			communism > 0.35
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
@@ -22110,8 +22110,6 @@ focus_tree = {
 		relative_position_id = GER_protect_the_revolution
 		cost = 5
 		available = {
-			is_subject = no
-			num_subjects > 0
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -22308,28 +22306,10 @@ focus_tree = {
 			custom_effect_tooltip = GER_support_the_proletarian_uprising_tt
 		}
 	}
-	focus = {
-		id = GER_the_proletarian_legion
-		icon = GFX_focus_SOV_builder_of_the_red_army
-		prerequisite = { focus = GER_support_the_proletarian_uprising focus = GER_protect_the_revolution }
+	
 
-		x = -1
-		y = 1
-		relative_position_id = GER_support_the_proletarian_uprising
-		cost = 5
-		available = {
-		}
 
-		search_filters = {}
 
-		completion_reward = {
-			custom_effect_tooltip = GER_the_proletarian_legion_tt
-			effect_tooltip = {
-				add_ideas = GER_proletarian_legion_ns
-			}
-			#custom_effect_tooltip = "TODO_Danne: Could even give attack/defense bonus against the opposing side of the CW using targeted_modifier targeting a variable? Polish/nice to have"
-		}
-	}
 	focus = {
 		id = GER_strengthen_the_proletarian_international
 		icon = GFX_focus_GER_strengthen_the_proletarian_international
@@ -23048,6 +23028,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
+
+			add_ideas = The_Red_Terror_Army
 
 			if = {
 				limit = {
