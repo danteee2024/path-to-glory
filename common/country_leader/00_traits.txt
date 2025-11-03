@@ -11372,6 +11372,7 @@ leader_traits = {
 		sprite = 13
 		army_core_defence_factor = 0.05
 		conscription_factor = 0.05
+		mobilization_speed = 0.20
 	}
 
 	GER_revolutionary_nationalist = { #Otto Strasser
@@ -11417,7 +11418,7 @@ leader_traits = {
 		sprite = 13 
 
 		communism_drift = 0.1
-		political_power_factor = 0.05
+		political_power_factor = 0.10
 	}
 
 	GER_militant_communist = { #Thälmann upgrade
