@@ -6414,9 +6414,6 @@ focus_tree = {
 		relative_position_id = SOV_rehabilitated_military
 		cost = 5
 
-		select_effect = {
-			add_ideas = SOV_military_reorganization_ns
-		}
 
 		available = {
 
@@ -6425,23 +6422,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_ARMY_XP}
 
 		completion_reward = {
-			#Tooltip purposes (Select Effect)
-			custom_effect_tooltip = SOV_focus_select_effect_tt
-			effect_tooltip = {
-				add_ideas = SOV_military_reorganization_ns
-			}
-
-			#(Complete Effect)
-			custom_effect_tooltip = SOV_focus_complete_effect_tt
-			hidden_effect = {
-				remove_ideas = SOV_military_reorganization_ns
-			}
-
-			add_to_variable = { SOV_the_red_army_unit_infantry_design_cost_factor = -0.1 }
-			add_to_variable = { SOV_the_red_army_unit_artillery_brigade_design_cost_factor = -0.1 }
-			custom_effect_tooltip = SOV_military_reorganization_ns_tt
-
-			army_experience = 50
+			add_ideas = SOV_military_reorganization_ns
 			add_command_power = 25
 		}
 	}
@@ -19288,7 +19269,7 @@ ai_will_do = {
 	focus = {
 		id = SOV_our_own_alliance
 		icon = GFX_focus_RUS_eastern_alliance
-		prerequisite = { focus = SOV_continue_the_monarchy focus = SOV_return_of_republic }
+		prerequisite = { focus = SOV_return_of_republic }
 		mutually_exclusive = { focus = SOV_reforge_old_alliances focus = SOV_russia_first }
 		x = 2
 		y = 2

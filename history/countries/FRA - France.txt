@@ -49,6 +49,7 @@ if = {
 	}
 }
 
+recruit_character = FRA_alphonse_sacre
 recruit_character = FRA_pierre_laval
 recruit_character = FRA_edouard_daladier
 recruit_character = FRA_maurice_thorez

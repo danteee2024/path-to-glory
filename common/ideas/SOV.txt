@@ -1929,12 +1929,12 @@ ideas = {
 
 		SOV_military_reorganization_ns = {
 
-			picture = generic_army_problems
+			picture = CZE_planning_bonus
 
 			removal_cost = -1
 
 			allowed = {
-				always = no # Added via focus
+				always = no 
 			}
 
 			allowed_civil_war = {
@@ -1942,10 +1942,9 @@ ideas = {
 			}
 
 			modifier = {
-				army_org_factor = -0.1
-				experience_gain_army_factor = -1
-				army_org_regain = -0.15
-				custom_modifier_tooltip = SOV_military_reorganization_ns_removal_tt
+				army_org_factor = 0.05
+				experience_gain_army_factor = 0.05
+				army_org_regain = 0.05
 			}
 		}
 
@@ -2744,8 +2743,7 @@ ideas = {
         original_tag = RUS
     }
     modifier = {
-		consumer_goods_factor = -0.05
-        industrial_capacity_factory = 0.05
+        industrial_capacity_factory = 0.1
         production_factory_efficiency_gain_factor = 0.05
 		production_speed_buildings_factor = 0.05
     }
