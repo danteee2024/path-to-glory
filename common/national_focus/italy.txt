@@ -20460,6 +20460,25 @@ focus_tree = {
 	}
 
 	focus = {
+	id = ITA_industrial_renaissance
+	icon = GFX_SOV_reorganize_the_pc_of_heavy_industry_ccp_2d_sov_compatibility
+	prerequisite = { focus = ITA_the_popular_front focus = ITA_italian_socialism }
+	x = 2
+	y = 1
+	relative_position_id = ITA_the_popular_front
+	cost = 10
+
+	available = {
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	completion_reward = {
+		add_ideas = ITA_industrial_renaissance
+	}
+}
+
+	focus = {
 		id = ITA_cooperate_with_the_mafia
 		icon = GFX_goal_generic_dangerous_deal
 		prerequisite = { focus = ITA_italian_socialism }
@@ -21611,7 +21630,7 @@ focus_tree = {
 		prerequisite = { focus = ITA_abolish_the_colonies }
 
 		x = -1
-		y = 2
+		y = 3
 		relative_position_id = ITA_abolish_the_colonies
 		cost = 5
 		available = {
@@ -21802,7 +21821,7 @@ focus_tree = {
 		icon = GFX_focus_generic_befriend_albania
 		prerequisite = { focus = ITA_abolish_the_colonies focus = ITA_new_colonial_policies }
 
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = ITA_abolish_the_colonies
 		cost = 5
@@ -21812,16 +21831,18 @@ focus_tree = {
 		}
 
 		available = {
-			OR = {
-				has_government = communism
-				has_government = neutrality
-			}
 		}
 
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 
 		completion_reward = {
 			ALB = { country_event = { id = BBA_italy_anti_colonialism_events.100 hours = 4 random_hours = 2 } }
+					hidden_effect = {
+			 every_state = {
+				limit = { is_core_of = ALB }
+				add_core_of = ROOT
+			}
+		}
 			
 			custom_effect_tooltip = if_they_accept_tt
 			effect_tooltip = {
@@ -21829,6 +21850,78 @@ focus_tree = {
 			}
 		}
 	}
+
+	focus = {
+		id = ITA_negotiations_with_Yugoslavia
+		icon = GFX_focus_invite_yugoslavia
+		prerequisite = { focus = ITA_abolish_the_colonies focus = ITA_new_colonial_policies }
+
+		x = 2
+		y = 1
+		relative_position_id = ITA_abolish_the_colonies
+		cost = 5
+
+		bypass = {
+			NOT = { country_exists = YUG }
+		}
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		completion_reward = {
+			YUG = { country_event = ITA.332 } 
+			hidden_effect = {
+			 every_state = {
+				limit = { is_core_of = YUG }
+				add_core_of = ROOT
+			}
+		}
+			
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				annex_country = { target = YUG }
+			}
+		}
+	}
+
+	
+	focus = {
+		id = ITA_negotiations_with_Greece
+		icon = GFX_focus_generic_befriend_greece
+		prerequisite = { focus = ITA_negotiations_with_Yugoslavia }
+
+		x = 0
+		y = 1
+		relative_position_id = ITA_negotiations_with_Yugoslavia
+		cost = 5
+
+		bypass = {
+			NOT = { country_exists = GRE }
+		}
+
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		completion_reward = {
+			GRE = { country_event = ITA.432 } 
+					hidden_effect = {
+			 every_state = {
+				limit = { is_core_of = GRE }
+				add_core_of = ROOT
+			}
+		}
+			
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				annex_country = { target = GRE }
+			}
+		}
+	}
+
 
 	focus = {
 		id = ITA_enlist_the_bashkimi_kombetar
@@ -21882,7 +21975,7 @@ focus_tree = {
 		prerequisite = { focus = ITA_new_colonial_policies }
 
 		x = 1
-		y = 2
+		y = 3
 		relative_position_id = ITA_new_colonial_policies
 		cost = 5
 		available = {

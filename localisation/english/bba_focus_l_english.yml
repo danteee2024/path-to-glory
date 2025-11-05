@@ -704,6 +704,39 @@
 
 
  # ITALY
+ 
+  ITA_negotiations_with_Yugoslavia:0 "Negotiations with Yugoslavia"
+  ITA_negotiations_with_Yugoslavia_desc:0 "Rather than pursuing imperial ambitions through force, we shall approach Belgrade with a proposal for integration. Under the banner of cooperation and shared prosperity, the Yugoslav government may be persuaded to join us willingly — creating a unified Adriatic realm under Italian leadership."
+
+  ITA_negotiations_with_Greece:0 "Negotiations with Greece"
+  ITA_negotiations_with_Greece_desc:0 "Athens holds a crucial position in the Mediterranean balance of power. Through careful diplomacy and the promise of mutual benefit, we may convince the Greek government to align its fate with ours, peacefully extending Italian influence across the Aegean."
+  ITA.332.t:0 "Negotiations with Yugoslavia"
+  ITA.332.d:0 "The Italian government has extended an official proposal to Belgrade regarding the future of the Adriatic region. Framed as an offer of cooperation and unity, it is in reality an invitation for Yugoslavia to join Italy in a new political order — one led from Rome."
+  ITA.332.a:0 "Let us send our proposal."
+  ITA.332.b:0 "They will never accept such terms."
+
+  ITA.333.t:0 "Yugoslavia Accepts Integration"
+  ITA.333.d:0 "After days of deliberation, the Yugoslav leadership has agreed to our terms. Their government has formally announced its dissolution and the integration of all Yugoslav territories into the Kingdom of Italy. Across the Adriatic, our influence is now undisputed."
+  ITA.346.a:0 "A historic victory for diplomacy."
+
+  ITA.334.t:0 "Yugoslavia Rejects Our Offer"
+  ITA.334.d:0 "Our proposal for peaceful integration has been rejected by Belgrade. The Yugoslav government has denounced Italy’s intentions as imperialist and deceitful. Tensions have risen to dangerous levels, and it is clear that only force will resolve the question of the Adriatic."
+  ITA.343.a:0 "Then we shall take what is ours by right."
+ ITA.432.t:0 "Negotiations with Greece"
+  ITA.432.d:0 "In a move designed to strengthen Mediterranean unity, Italy has presented an offer to Athens: peaceful integration into a greater Italian federation. The message speaks of cooperation, economic security, and mutual defense — but few are unaware of the true implications."
+  ITA.432.a:0 "Submit our proposal to Athens."
+  ITA.432.b:0 "They will refuse, as they always do."
+
+  ITA.433.t:0 "Greece Accepts Integration"
+  ITA.433.d:0 "The Greek government has agreed to join Italy in a union of equals — or so the statement declares. Italian officials have already taken administrative control of Greek territory, marking the peaceful annexation of Greece into the Italian sphere. A new Mediterranean dawn rises."
+  ITA.446.a:0 "The Aegean now answers to Rome."
+
+  ITA.434.t:0 "Greece Rejects Our Proposal"
+  ITA.434.d:0 "Athens has publicly rejected our offer, accusing Italy of using diplomacy as a mask for imperial conquest. The Greek armed forces are mobilizing, and diplomatic relations have collapsed. The time for words has ended — war is inevitable."
+  ITA.443.a:0 "If they will not join us peacefully, they will fall by the sword."
+  ITA_industrial_renaissance:0 "Italian Industrial Renaissance"
+  ITA_industrial_renaissance_desc:0 "Through national cooperation and efficient state planning, Italy has entered a new era of industrial power. Factories hum with productivity, shipyards are bustling, and our scientists drive innovation faster than ever before."
+  
  ITA_italian_highways_bba:0 "Italian Highways"
  ITA_italian_highways_bba_desc:0 "The ancient Romans built roads that were the envy of the entire world. Now the upstart Germans believe that their Autobahn is far superior than anything we could build. We will prove them wrong."
  ITA_develop_libya:0 "Develop Libya"

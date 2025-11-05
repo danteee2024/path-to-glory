@@ -1192,7 +1192,6 @@ focus_tree = {
 		}
 
 		available = {
-			num_subjects > 0
 			NOT = { has_completed_focus = SOV_curtailment_of_the_collective_farms }
 		}
 		
