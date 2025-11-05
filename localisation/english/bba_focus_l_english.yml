@@ -736,7 +736,9 @@
   ITA.443.a:0 "If they will not join us peacefully, they will fall by the sword."
   ITA_industrial_renaissance:0 "Italian Industrial Renaissance"
   ITA_industrial_renaissance_desc:0 "Through national cooperation and efficient state planning, Italy has entered a new era of industrial power. Factories hum with productivity, shipyards are bustling, and our scientists drive innovation faster than ever before."
-  
+   ITA_Peacefully_Recruitement:0 "Peacefully Recruitment"
+ ITA_Military_Construction:0 "Military Construction"
+ ITA_Military_Construction_desc:0 "To safeguard our growing ambitions, Italy must strengthen its military infrastructure. Expanding our network of forts, air bases, and naval facilities will ensure that our forces can operate efficiently both at home and abroad. Through strategic investment in construction, we will lay the foundation for a modern and self-reliant military machine."
  ITA_italian_highways_bba:0 "Italian Highways"
  ITA_italian_highways_bba_desc:0 "The ancient Romans built roads that were the envy of the entire world. Now the upstart Germans believe that their Autobahn is far superior than anything we could build. We will prove them wrong."
  ITA_develop_libya:0 "Develop Libya"

@@ -35,6 +35,108 @@ ideas = {
 		research_speed_factor = 0.1
 	}
 }
+ ITA_Military_Construction = {
+	icon = SOV_third_five_year_plan_military
+	allowed = {
+		original_tag = ITA
+	}
+	modifier = {
+		consumer_goods_factor = -0.1
+		production_speed_arms_factory_factor = 0.1
+		production_speed_dockyard_factor = 0.1
+	}
+}
+ITA_military_agreements = {
+	icon = SOV_third_five_year_plan_military
+	allowed = {
+		original_tag = ITA
+	}
+	modifier = {
+		
+	}
+	   equipment_bonus = {
+				
+						small_plane_airframe = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				cv_small_plane_airframe = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				small_plane_cas_airframe = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				cv_small_plane_cas_airframe = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				small_plane_naval_bomber_airframe = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				cv_small_plane_naval_bomber_airframe = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				medium_plane_airframe = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				medium_plane_fighter_airframe = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				medium_plane_scout_plane_airframe = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				large_plane_airframe = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				large_plane_maritime_patrol_plane_airframe = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				light_tank_chassis = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				medium_tank_chassis = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				heavy_tank_chassis = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+}
+ ITA_Peacefully_Recruitement = {
+	icon = YUG_all_yugoslavian_regiments
+	allowed = {
+		original_tag = ITA
+	}
+	modifier = {
+		conscription = 0.03
+	}
+
+
+ }
+
+  ITA_the_italian_republic = {
+	icon = generic_political_support
+	allowed = {
+		original_tag = ITA
+	}
+	modifier = {
+		political_power_factor = 0.1
+	}
+
+
+ }
 
 		ITA_hidden_arty_production_ns = { #Hidden idea to apply arty production bonuses. Communicated in ITA_military_industry_dynamic_modifier (used as NS)
  			name = ITA_military_industry_dynamic_modifier #Just in case it shows up anywhere
