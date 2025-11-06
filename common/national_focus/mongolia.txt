@@ -212,7 +212,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_timed_idea = { idea = MON_purge_1 days = 365 }
+			add_timed_idea = { idea = MON_purge_1 days = 120 }
 			
 		}
 	}
@@ -223,7 +223,7 @@ focus_tree = {
 		icon = GFX_focus_generic_join_comintern
 		x = 0
 		y = 1
-		cost = 10
+		cost = 5
 		prerequisite = { focus = MON_the_purge }
 		relative_position_id = MON_the_purge
 		available = {
@@ -246,7 +246,7 @@ focus_tree = {
 		icon = GFX_focus_GER_proletarian_solidarity
 		x = 0
 		y = 1
-		cost = 10
+		cost = 5
 		prerequisite = { focus = MON_follow_the_soviets }
 		relative_position_id = MON_follow_the_soviets
 		
@@ -314,7 +314,7 @@ focus_tree = {
 		icon = GFX_focus_prc_agrarian_socialism
 		x = -5
 		y = 1
-		cost = 10
+		cost = 5
 		prerequisite = { focus = MON_finish_collectivisation }
 		relative_position_id = MON_finish_collectivisation
 		
@@ -392,7 +392,7 @@ focus_tree = {
 		icon = GFX_focus_generic_socialist_science
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 		prerequisite = { focus = MON_finish_collectivisation }
 		relative_position_id = MON_finish_collectivisation
 		
@@ -453,7 +453,7 @@ focus_tree = {
 		}
 		
 		available = {
-				SOV = { has_war_with = GER }
+				
 		}
 
 		completion_reward = {
@@ -497,7 +497,7 @@ focus_tree = {
 		icon = GFX_focus_SWE_education_reform
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 		prerequisite = { focus = MON_support_the_anti_fascist_war focus = MON_mobilize_the_steppes }
 		
 		relative_position_id = MON_support_the_anti_fascist_war
@@ -1377,7 +1377,7 @@ focus = {
 		icon = GFX_focus_NOR_moscows_education_centers
 		x = -1
 		y = 3
-	    cost = 10
+	    cost = 5
 		prerequisite = { focus = MON_soviet_investments }
 		relative_position_id = MON_forced_urbanisation
 		
@@ -1511,7 +1511,7 @@ focus = {
 		icon = GFX_focus_YUG_pan_slavic_congress
 		x = 0
 		y = 2
-		cost = 10
+		cost = 5
 		prerequisite = { focus = MON_local_arms_production }
 		prerequisite = {
 			focus = MON_forced_urbanisation
@@ -2186,7 +2186,7 @@ add_timed_idea = {
 	focus = {
 		id = MON_investment_complete
 		icon = GFX_focus_generic_modernize_industry
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = MON_develop_khovd
 			focus = MON_develop_dornod
@@ -2195,9 +2195,7 @@ add_timed_idea = {
 			focus = MON_develop_ulaanbaatar
 			
 		}
-		mutually_exclusive = {
-			focus = MON_investment_complete_military
-		}
+		
 		x = -1
 		y = 3
 		relative_position_id = MON_state_investments
@@ -2243,7 +2241,7 @@ add_timed_idea = {
 	focus = {
 		id = MON_investment_complete_military
 		icon = GFX_focus_generic_military_industry
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = MON_develop_khovd
 			focus = MON_develop_dornod
@@ -2252,9 +2250,7 @@ add_timed_idea = {
 			focus = MON_develop_ulaanbaatar
 			
 		}
-		mutually_exclusive = {
-			focus = MON_investment_complete
-		}
+		
 		x = 1
 		y = 3
 		relative_position_id = MON_state_investments
@@ -2433,7 +2429,7 @@ add_timed_idea = {
 		y = 3
 		relative_position_id = MON_army_modernisation
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 27
@@ -2521,7 +2517,7 @@ add_timed_idea = {
 			add_tech_bonus = {
 				name = "New Motorized"
 				bonus = 1
-				uses = 2
+				uses = 1
 				category = cat_mechanized_equipment
 			}
 		}
@@ -2545,7 +2541,7 @@ add_timed_idea = {
 			add_tech_bonus = {
 				name = "New Armor"
 				bonus = 2
-				uses = 2
+				uses = 1
 				category = armor
 			}
 		}
@@ -2612,7 +2608,7 @@ add_timed_idea = {
         mutually_exclusive = {
 			focus = MON_army_modernisation
 		}
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 27
@@ -2785,7 +2781,7 @@ focus = {
 
 		completion_reward = {
 			set_variable = {
-				MON_reestablished_army_cavalry_attack_factor = 0.20
+				MON_reestablished_army_cavalry_attack_factor = 0.35
 			}
 			custom_effect_tooltip = MON_reestablished_army_cavalry_factor_tooltip
 		}
@@ -2850,7 +2846,7 @@ focus = {
 		y = 3
 		relative_position_id = MON_an_army_for_the_fourtys
 
-		cost = 15
+		cost = 10
 
 		ai_will_do = {
 			factor = 27
@@ -2859,9 +2855,7 @@ focus = {
 		completion_reward = {
 			custom_effect_tooltip = winters_past_MON_tt
 			custom_effect_tooltip = generic_skip_one_line_tt
-			remove_dynamic_modifier = {
-				modifier = MON_reestablished_army
-			}
+			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			random_owned_controlled_state = {
 				limit = {
@@ -2926,7 +2920,7 @@ focus = {
 		icon = GFX_goal_generic_cavalry
 		x = 6
 		y = 0
-		cost = 10
+		cost = 5
         mutually_exclusive = {
 			focus = MON_collectivisation
 		}
@@ -3050,7 +3044,7 @@ focus = {
 		x = 1
 		y = 1
 		relative_position_id = MON_rely_on_national_strength
-		cost = 10
+		cost = 5
 
 		prerequisite = { focus = MON_rely_on_national_strength }
 
@@ -3800,7 +3794,7 @@ kill_country_leader = yes
 		x = 0
 		y = 1
 		relative_position_id = MON_stabilize_the_country
-		cost = 10
+		cost = 5
 		prerequisite = { focus = MON_stabilize_the_country }
 
 		ai_will_do = {
@@ -4029,7 +4023,7 @@ focus = {
 		x = 4
 		y = 3
 		relative_position_id = MON_rely_on_national_strength
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus =MON_cut_our_chains
 		}
