@@ -5828,7 +5828,7 @@ ITA_diplomacy_balkan_decision_category = {
 		}
 
 		available = {
-			date > 1937.1.1
+			date > 1937.5.1
 			FROM = {
 				NOT = { 
 					has_war_with = ROOT 
