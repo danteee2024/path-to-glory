@@ -17,7 +17,7 @@ country_event = {
 	option = {
 		name = ITA.432.a
 		ai_chance = {
-			base = 60
+			base = 50
 		}
 		
 		ITA = {
@@ -28,7 +28,7 @@ country_event = {
 	option = {
 		name = ITA.432.b
 		ai_chance = {
-			base = 40
+			base = 50
 			modifier = {
 				is_subject_of = FROM
 				factor = 0
@@ -101,7 +101,7 @@ country_event = {
 	option = {
 		name = ITA.332.a
 		ai_chance = {
-			base = 60
+			base = 50
 		}
 		
 		ITA = {
@@ -112,7 +112,7 @@ country_event = {
 	option = {
 		name = ITA.332.b
 		ai_chance = {
-			base = 40
+			base = 50
 			modifier = {
 				is_subject_of = FROM
 				factor = 0

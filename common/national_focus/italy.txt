@@ -20632,7 +20632,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			add_to_variable = { ITA_military_industry_dm_production_factory_efficiency_gain_factor = 0.05 }
+			add_to_variable = { ITA_military_industry_dm_production_factory_efficiency_gain_factor = 0.1 }
 			add_to_variable = { ITA_military_industry_dm_industrial_capacity_factory = 0.05 }
 			add_to_variable = { ITA_military_industry_dm_industrial_capacity_dockyard = 0.05 }
 			custom_effect_tooltip = ITA_empower_the_unions_military_industry_dm_tt
@@ -21397,7 +21397,6 @@ focus_tree = {
 					limit = {
 						is_on_continent = africa
 						is_controlled_by = ROOT
-						state_has_any_resource = yes
 					}
 					add_dynamic_modifier = { modifier = ITA_cooperatives_for_intensive_exploitation_dm }
 				}
@@ -21456,10 +21455,6 @@ focus_tree = {
 		completion_reward = {
 			ALB = { country_event = { id = BBA_italy_anti_colonialism_events.100 hours = 4 random_hours = 2 } }
 					hidden_effect = {
-			 every_state = {
-				limit = { is_core_of = ALB }
-				add_core_of = ROOT
-			}
 		}
 			
 			custom_effect_tooltip = if_they_accept_tt
@@ -21477,13 +21472,14 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ITA_new_colonial_policies
+			cost = 5
 
 		bypass = {
 			NOT = { country_exists = YUG }
 		}
 
 		available = {
-			date > 1937.1.1
+			date > 1937.6.1
 		}
 
 		search_filters = {FOCUS_FILTER_ANNEXATION}
@@ -21491,10 +21487,6 @@ focus_tree = {
 		completion_reward = {
 			YUG = { country_event = ITA.332 } 
 			hidden_effect = {
-			 every_state = {
-				limit = { is_core_of = YUG }
-				add_core_of = ROOT
-			}
 		}
 			
 			custom_effect_tooltip = if_they_accept_tt
@@ -21527,10 +21519,6 @@ focus_tree = {
 		completion_reward = {
 			GRE = { country_event = ITA.432 } 
 					hidden_effect = {
-			 every_state = {
-				limit = { is_core_of = GRE }
-				add_core_of = ROOT
-			}
 		}
 			
 			custom_effect_tooltip = if_they_accept_tt
@@ -22107,7 +22095,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_MANPOWER}
 
 		completion_reward = {
-			add_to_variable = { ITA_re_modifier_army_sub_unit_infantry_defence_factor = 0.03 }
+			add_to_variable = { ITA_re_modifier_army_sub_unit_infantry_defence_factor = 0.05 }
 			custom_effect_tooltip = ITA_ascari_re_tt
 
 			hidden_effect = {

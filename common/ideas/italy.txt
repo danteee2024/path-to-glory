@@ -28,10 +28,10 @@ ideas = {
 		original_tag = ITA
 	}
 	modifier = {
-		consumer_goods_factor = -0.05
-		production_speed_buildings_factor = 0.05
-		industrial_capacity_factory = 0.10
-		industrial_capacity_dockyard = 0.10
+		consumer_goods_factor = -0.1
+		production_speed_buildings_factor = 0.15
+		industrial_capacity_factory = 0.05
+		industrial_capacity_dockyard = 0.05
 		research_speed_factor = 0.1
 	}
 }
@@ -2827,9 +2827,9 @@ ITA_military_agreements = {
 			}
 			
 			modifier = {
-				experience_gain_army_factor = -0.1
-				experience_gain_air_factor = -0.1
-				experience_gain_navy_factor = -0.1
+				experience_gain_army_factor = -0.05
+				experience_gain_air_factor = -0.05
+				experience_gain_navy_factor = -0.05
 				required_garrison_factor = -0.1
 				modifier_army_sub_unit_military_police_defence_factor = 0.1
 				modifier_army_sub_unit_military_police_max_org_factor = 0.1
@@ -2900,6 +2900,7 @@ ITA_military_agreements = {
 			
 			modifier = {
 				consumer_goods_factor = -0.10
+				production_speed_buildings_factor = 0.1
 	
 			}
 		}
