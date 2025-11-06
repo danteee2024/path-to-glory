@@ -21455,6 +21455,10 @@ focus_tree = {
 		completion_reward = {
 			ALB = { country_event = { id = BBA_italy_anti_colonialism_events.100 hours = 4 random_hours = 2 } }
 					hidden_effect = {
+						 every_state = {
+				limit = { is_core_of = ALB }
+				add_core_of = ROOT
+			}
 		}
 			
 			custom_effect_tooltip = if_they_accept_tt
@@ -21487,6 +21491,11 @@ focus_tree = {
 		completion_reward = {
 			YUG = { country_event = ITA.332 } 
 			hidden_effect = {
+						 every_state = {
+				limit = { is_core_of = YUG }
+				add_core_of = ROOT
+			}
+		
 		}
 			
 			custom_effect_tooltip = if_they_accept_tt
@@ -21518,7 +21527,11 @@ focus_tree = {
 
 		completion_reward = {
 			GRE = { country_event = ITA.432 } 
-					hidden_effect = {
+			hidden_effect = {
+						 every_state = {
+				limit = { is_core_of = GRE }
+				add_core_of = ROOT
+			}
 		}
 			
 			custom_effect_tooltip = if_they_accept_tt
