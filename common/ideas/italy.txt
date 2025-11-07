@@ -120,7 +120,7 @@ ITA_military_agreements = {
 		original_tag = ITA
 	}
 	modifier = {
-		conscription = 0.03
+		conscription = 0.01
 	}
 
 
@@ -2610,6 +2610,7 @@ ITA_military_agreements = {
 				communism_drift = 0.01
 				resistance_damage_to_garrison_on_our_occupied_states = 0.1
 				operative_slot = 1
+				conscription = 0.015
 			}
 		}
 
