@@ -22248,7 +22248,7 @@ focus_tree = {
 	    x = 1
 	    y = 1 
 	    relative_position_id = GER_liberate_austria
-	    cost = 5 
+	    cost = 10
 	
 	    completion_reward = {
 		create_wargoal = {
