@@ -6049,14 +6049,20 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
+			
 			563 = { #CHITA
 				if = {
 					limit = { is_fully_controlled_by = ROOT }
 					custom_effect_tooltip = SOV_far_east_fortification_forts_4
 					hidden_effect = {
 						add_building_construction = {
+						type = anti_air_building
+						level = 4
+						instant_build = yes
+					}
+						add_building_construction = {
 							type = bunker
-							level = 1
+							level = 4
 							province = {
 								id = 4719
 								id = 12622
@@ -6065,7 +6071,7 @@ focus_tree = {
 						}
 						add_building_construction = {
 							type = bunker
-							level = 2
+							level = 4
 							province = {
 								id = 10559
 							}
@@ -6080,8 +6086,13 @@ focus_tree = {
 					custom_effect_tooltip = SOV_far_east_fortification_forts_4
 					hidden_effect = {
 						add_building_construction = {
+						type = anti_air_building
+						level = 4
+						instant_build = yes
+					}
+						add_building_construction = {
 							type = bunker
-							level = 1
+							level = 3
 							province = {
 								id = 12543
 								id = 7851
@@ -6091,7 +6102,7 @@ focus_tree = {
 						}
 						add_building_construction = { #Set like this for stupid tooltip purposes
 							type = bunker
-							level = 1
+							level = 4
 							province = {
 								id = 12657
 							}
@@ -6106,8 +6117,13 @@ focus_tree = {
 					custom_effect_tooltip = SOV_far_east_fortification_forts_10
 					hidden_effect = {
 						add_building_construction = {
+						type = anti_air_building
+						level = 4
+						instant_build = yes
+					}
+						add_building_construction = {
 							type = bunker
-							level = 1
+							level = 4
 							province = {
 								id = 10655
 								id = 7801
@@ -6118,7 +6134,7 @@ focus_tree = {
 						}
 						add_building_construction = {
 							type = bunker
-							level = 2
+							level = 4
 							province = {
 								id = 7763
 								id = 4725
@@ -6135,8 +6151,13 @@ focus_tree = {
 					custom_effect_tooltip = SOV_far_east_fortification_forts_4
 					hidden_effect = {
 						add_building_construction = {
+						type = anti_air_building
+						level = 4
+						instant_build = yes
+					}
+						add_building_construction = {
 							type = bunker
-							level = 2
+							level = 4
 							province = {
 								id = 12189
 							}
@@ -6144,7 +6165,7 @@ focus_tree = {
 						}
 						add_building_construction = {  #Set like this for stupid tooltip purposes
 							type = bunker
-							level = 2
+							level = 4
 							province = {
 								id = 10466
 							}
@@ -6158,9 +6179,14 @@ focus_tree = {
 					limit = { is_fully_controlled_by = ROOT }
 					custom_effect_tooltip = SOV_far_east_fortification_forts_10
 					hidden_effect = {
+							add_building_construction = {
+						type = anti_air_building
+						level = 4
+						instant_build = yes
+					}
 						add_building_construction = {
 							type = bunker
-							level = 1
+							level = 4
 							province = {
 								id = 11643
 								id = 6686
@@ -6173,7 +6199,7 @@ focus_tree = {
 						}
 						add_building_construction = {
 							type = bunker
-							level = 2
+							level = 4
 							province = {
 								id = 3977
 								id = 957
@@ -6233,17 +6259,31 @@ focus_tree = {
 				add_building_construction = {
 					type = supply_node
 					level = 1
-					province = 12543
+					province = 12660
 					instant_build = yes
 				}
 				add_building_construction = {
 					type = supply_node
 					level = 1
-					province = 10678
+					province = 4731
 					instant_build = yes
 				}
 			}
-			
+			build_railway = {
+				path = { 12543 12660 1845 1730 4731 4847 1807 1724 1842 7748 12638 4290 7249 7309 }
+			}
+
+			654 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 7616
+					instant_build = yes
+				}
+			}
+			build_railway = {
+				path = { 7748 7616 1802 10655 }
+			}
 			408 = {
 				add_building_construction = {
 					type = supply_node
