@@ -2342,7 +2342,7 @@ focus_tree = {
 			all_core_state = {
 				is_fully_controlled_by = ROOT
 			}
-			date > 1940.06.01
+			date > 1940.01.01
 			#OR = {
 			#	has_resources_in_country = {
 			#		resource = steel
@@ -23310,7 +23310,7 @@ focus_tree = {
 		x = 2
 		y = 2
 		relative_position_id = GER_state_controlled_economy
-		cost = 5
+		cost = 2.5
 		available = {
 			is_subject = no
 			NOT = { has_war_with = SOV }
@@ -24309,7 +24309,7 @@ focus_tree = {
 		x = 8
 		y = 1
 		relative_position_id = GER_the_peoples_victory
-		cost = 5
+		cost = 1.75
 		available = {
 			NOT = {
 				has_war_with = SOV
@@ -24366,7 +24366,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = GER_sign_the_second_treaty_of_berlin
-		cost = 5
+		cost = 1.75
 		available = {
 			is_subject = no
 			NOT = { has_war_with = SOV }
