@@ -9016,7 +9016,7 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = SOV_approach_tukhachevsky
-		cost = 5
+		cost = 10
 
 		available = {
 			SOV_soviet_civil_war_not_started = yes 
