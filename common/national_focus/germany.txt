@@ -22240,6 +22240,30 @@ focus_tree = {
 			}
 		}
 	}
+
+		focus = {
+	    id = GER_Liberate_the_Low_Countries
+	    icon = GFX_focus_ITA_corpo_volontari_della_liberta
+	    prerequisite = { focus = GER_liberate_austria }
+	    x = 1
+	    y = 1 
+	    relative_position_id = GER_liberate_austria
+	    cost = 5 
+	
+	    completion_reward = {
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = BEL
+			}
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = HOL
+			}
+	    }
+    }
+
+				
+
 	focus = {
 		id = GER_spark_the_flame_of_revolution
 		icon = GFX_focus_generic_workers_and_farmers_rise
