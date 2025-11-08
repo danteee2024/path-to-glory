@@ -3326,7 +3326,6 @@ add_timed_idea = {
 			focus = FRA_support_ppf
 			focus = FRA_we_want_petain
 		}
-		will_lead_to_war_with = BEL
 		mutually_exclusive = {  }
 		cost = 5
 
@@ -3335,7 +3334,6 @@ add_timed_idea = {
 		}
 		
 		available = {
-			has_war_support > 0.6
 		}
 		
 		bypass = {
