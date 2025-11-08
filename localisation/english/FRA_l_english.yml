@@ -15,7 +15,9 @@
  FRA_rnp:0 "RNP"
  FRA_neutrality_parti_social_francais_long:0 "Parti Social Français"
  FRA_neutrality_parti_social_francais:0 "PSF"
-
+ French_War_economy:0 "French War Economy"
+ FRA_French_War_Economy:0 "French War Economy"
+ FRA_French_War_Economy_desc:0 "Our industries must serve the nation’s destiny. Civilian comfort will be sacrificed for military strength. France will rise again—armed, disciplined, and ready for total war."
 
  FRA_payment_for_bombers:0 "Payment for Bombers"
 
