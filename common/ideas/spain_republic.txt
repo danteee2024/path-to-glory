@@ -1223,7 +1223,7 @@ ideas = {
 				combat_width_factor = -0.15
 				industrial_capacity_factory = 0.05
 				consumer_goods_factor = -0.15
-				conscription = 0.05
+				conscription = 0.04
 			}
 		}
 
@@ -1262,7 +1262,7 @@ ideas = {
 			}
 
 			modifier = {
-				conscription = 0.05
+				conscription = 0.03
 			}
 		}
 

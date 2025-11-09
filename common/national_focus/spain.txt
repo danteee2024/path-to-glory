@@ -7156,7 +7156,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = SPA_restore_the_empire
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -9421,7 +9421,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SPR_subvert_the_stalinists
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY}
@@ -9468,7 +9468,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SPR_secularize_the_new_state
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -9489,7 +9489,7 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = SPR_the_stalinist_doctrine
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_MANPOWER}
@@ -9514,7 +9514,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = SPR_the_stalinist_doctrine
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -9923,7 +9923,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SPR_land_redistribution
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -10003,7 +10003,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = SPR_class_war
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
@@ -10323,7 +10323,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SPR_soviet_equipment_shipments
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -10565,7 +10565,7 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = SPR_all_must_do_their_part
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_MANPOWER}
@@ -10714,7 +10714,7 @@ focus_tree = {
 		x = 2
 		y = 2
 		relative_position_id = SPR_land_redistribution
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -10825,7 +10825,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SPR_nationalize_the_industry
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -10875,23 +10875,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-					}
-					is_core_of = ROOT
-					NOT = { has_state_flag = SPR_increase_arms_production_1mil }
-				}
-				set_state_flag = SPR_increase_arms_production_1mil
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
+			
 		}
 	}
 
@@ -11225,7 +11209,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SPR_increase_arms_production
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
@@ -11408,7 +11392,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SPR_provide_for_the_people
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -11588,7 +11572,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SPR_collectivize_industry
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -11655,7 +11639,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SPR_transplant_soviet_industry
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
