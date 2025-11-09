@@ -8492,7 +8492,7 @@ allow_branch = {
 			add_tech_bonus = {
 				name = JAP_small_arms_modernization
 				bonus = 1
-				uses = 3
+				uses = 2
 				category = infantry_weapons
 			}
 			add_tech_bonus = {
@@ -8523,7 +8523,7 @@ allow_branch = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = JAP_modern_artillery
-				bonus = 1
+				bonus = 0.5
 				uses = 2
 				category = artillery
 			}
@@ -8558,7 +8558,7 @@ allow_branch = {
 			add_tech_bonus = {
 				name = JAP_supremacy_of_technology
 				bonus = 1
-				uses = 2
+				uses = 1
 				category = cat_mechanized_equipment
 			}
 			if = {
@@ -8568,7 +8568,7 @@ allow_branch = {
 				add_tech_bonus = {
 					name = JAP_supremacy_of_technology
 					bonus = 1
-					uses = 2
+					uses = 1
 					technology = amphibious_mechanized_infantry
 					technology = amphibious_mechanized_infantry_2
 				}
@@ -8629,7 +8629,7 @@ allow_branch = {
 			add_tech_bonus = {
 				name = JAP_armored_divisions
 				bonus = 1
-				uses = 2
+				uses = 1
 				category = armor
 			}
 			add_tech_bonus = {
@@ -8799,7 +8799,7 @@ allow_branch = {
 		y = 1
 		relative_position_id = JAP_supremacy_of_will
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
