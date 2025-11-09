@@ -17,7 +17,7 @@ initial_show_position = {
 	focus = {
 		id = FRA_vienot_agreement
 		icon = GFX_focus_GER_customs_union
-		cost = 10
+		cost = 5
 		x = 0
 		y = 0
 
@@ -37,7 +37,7 @@ initial_show_position = {
 	focus = {
 		id = FRA_tools_modernisation
 		icon = GFX_goal_generic_production2
-		cost = 10
+		cost = 5
 		relative_position_id = FRA_vienot_agreement
 		x = -5
 		y = 0
@@ -356,7 +356,7 @@ focus = {
 	focus = {
 		id = FRA_develop_syria
 		icon = GFX_focus_GER_align_middle_east
-		cost = 5
+		cost =  3.4
 		prerequisite = {
 			focus = FRA_colonial_investments
 		}
@@ -447,7 +447,7 @@ focus = {
 	focus = {
 		id = FRA_develop_algeria
 		icon = GFX_focus_generic_africa_factory
-		cost = 5
+		cost =  3.4
 		prerequisite = {
 			focus = FRA_colonial_investments
 		}
@@ -538,7 +538,7 @@ focus = {
 	focus = {
 		id = FRA_develop_morocco
 		icon = GFX_focus_generic_africa_production
-		cost = 5
+		cost =  3.4
 		prerequisite = {
 			focus = FRA_colonial_investments
 		}
@@ -600,7 +600,7 @@ focus = {
 	focus = {
 		id = FRA_develop_tunisia
 		icon = GFX_focus_TUR_loosen_the_laws_on_secularism
-		cost = 5
+		cost =  3.4
 		prerequisite = {
 			focus = FRA_colonial_investments
 		}
@@ -665,7 +665,7 @@ focus = {
 	focus = {
 		id = FRA_develop_mali
 		icon = GFX_focus_generic_befriend_rwanda
-		cost = 5
+		cost = 3.4
 		prerequisite = {
 			focus = FRA_colonial_investments
 		}
@@ -1618,6 +1618,7 @@ add_timed_idea = {
 				has_idea = partial_economic_mobilisation
 				has_idea = war_economy
 				has_idea = tot_economic_mobilisation
+				has_idea = French_War_economy
 			}
 		}
 		ai_will_do = {
@@ -1692,6 +1693,7 @@ add_timed_idea = {
 			OR = {
 				has_idea = war_economy
 				has_idea = tot_economic_mobilisation
+				has_idea = French_War_economy
 			}
 		}
 		ai_will_do = {
@@ -1781,6 +1783,7 @@ add_timed_idea = {
 				has_idea = partial_economic_mobilisation
 				has_idea = war_economy
 				has_idea = tot_economic_mobilisation
+				has_idea = French_War_economy
 			}
 		}
 		
@@ -1997,7 +2000,7 @@ add_timed_idea = {
 			focus = FRA_far_right_leagues
 		}
 		relative_position_id = FRA_rearmament	#dont use political ones, which may be hidden
-		x = 37
+		x = 39
 		y = 0
 		offset = {
 			x = -23
@@ -3058,7 +3061,7 @@ add_timed_idea = {
 	focus = {
 		id = FRA_support_ppf
 		icon = GFX_focus_BRA_utilize_security_law
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = FRA_front_liberte
 		}
@@ -3093,7 +3096,7 @@ add_timed_idea = {
 	focus = {
 		id = FRA_we_want_petain
 		icon = GFX_focus_ETH_expand_the_kebur_zabagna
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = FRA_front_liberte
 		}
@@ -3271,7 +3274,7 @@ add_timed_idea = {
 			focus = FRA_far_right_leagues
 			focus = FRA_action_francaise
 		}
-		x = 6
+		x = 7
 		y = 1
 		offset = {
 			x = -20
@@ -3320,7 +3323,7 @@ add_timed_idea = {
 		id = FRA_French_War_Economy
 		icon = GFX_SOV_war_economy_ccp_2d_sov_compatibility
 		relative_position_id = FRA_far_right_leagues
-		x = 0
+		x = 2
 		y = 4
 		prerequisite = {
 			focus = FRA_support_ppf
@@ -3334,6 +3337,7 @@ add_timed_idea = {
 		}
 		
 		available = {
+			date = 1939.1.1
 		}
 		
 		bypass = {
@@ -3352,9 +3356,10 @@ add_timed_idea = {
 		icon = GFX_goal_generic_forceful_treaty
 		relative_position_id = FRA_far_right_leagues
 		x = 0
-		y = 5
+		y = 4
 		prerequisite = {
-			focus = FRA_French_War_Economy
+			focus = FRA_support_ppf
+			focus = FRA_we_want_petain
 		}
 		will_lead_to_war_with = BEL
 		mutually_exclusive = {  }
