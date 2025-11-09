@@ -770,7 +770,7 @@ level = 1
 
 			available = {
 				has_completed_focus = SOV_Slavic_War_Economy
-				has_war_support > 0.7
+				has_war_support > 0.6
 				has_war = yes
 				OR = {
 					has_government = fascism
@@ -789,6 +789,39 @@ level = 1
 				consumer_goods_expected_value = 0.1
 				production_speed_arms_factory_factor = 0.3
 				production_speed_dockyard_factor = 0.3
+				conversion_cost_civ_to_mil_factor= -0.2
+				conversion_cost_mil_to_civ_factor = -0.2
+			}
+			cancel_if_invalid = no
+		}
+		French_War_economy = {
+			picture = war_economy
+             level = 1
+			allowed = {
+				tag = FRA
+			}
+
+			available = {
+				has_completed_focus = FRA_French_War_Economy
+				has_war_support > 0.7
+				has_war = yes
+
+					has_government = fascism
+
+			
+			}
+
+			visible = {
+				tag = fra
+			}
+
+			cost = 300
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_expected_value = 0.1
+				production_speed_arms_factory_factor = 0.2
+				production_speed_dockyard_factor = 0.2
 				conversion_cost_civ_to_mil_factor= -0.2
 				conversion_cost_mil_to_civ_factor = -0.2
 			}
@@ -850,7 +883,8 @@ level = 1
 
 			modifier = {
 				consumer_goods_expected_value = 0.15
-				production_speed_buildings_factor = -0.05
+				production_speed_buildings_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
 
 			}
 
@@ -878,8 +912,9 @@ level = 1
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_expected_value = 0.10
-				production_speed_buildings_factor = -0.10
+				consumer_goods_expected_value = 0.05
+				production_speed_buildings_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
 				global_building_slots_factor = 0.15
 			}
 

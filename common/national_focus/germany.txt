@@ -21866,7 +21866,7 @@ focus_tree = {
 		relative_position_id = GER_start_the_proletarian_revolution
 		cost = 5
 		available = {
-			communism > 0.35
+			communism > 0.4
 		}
         # fuck you giamper 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
@@ -22089,12 +22089,12 @@ focus_tree = {
 
 		completion_reward = {
 
-			add_ideas = GER_Central_Power_Army
+			add_ideas = GER_protect_the_revolution
 			custom_effect_tooltip = GER_pool_technical_know_how_tt
 			hidden_effect = {
 				every_other_country = {
 					limit = { is_in_faction_with = GER }
-					add_ideas = GER_Central_Power_Army
+					add_ideas = GER_protect_the_revolution
 				}
 			}
 		}
@@ -22376,11 +22376,11 @@ focus_tree = {
 	focus = {
 		id = GER_liberate_italy
 		icon = GFX_focus_attack_italy
-		prerequisite = { focus = GER_liberate_austria }
+		prerequisite = { focus = GER_Liberate_the_Low_Countries }
 
-		x = 1
-		y = 2
-		relative_position_id = GER_liberate_austria
+		x = 0
+		y = 1
+		relative_position_id = GER_Liberate_the_Low_Countries
 		cost = 10
 		available = {
 			ITA = { 
@@ -22805,7 +22805,7 @@ focus_tree = {
 		x = 7
 		y = 1
 		relative_position_id = GER_social_ownership
-		cost = 5
+		cost = 10
 		available = {
 		}
 
@@ -23034,7 +23034,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = GER_labor_rights_and_union_stuff
-		cost = 5
+		cost = 10
 		available = {
 			
 		}
@@ -23178,7 +23178,7 @@ focus_tree = {
 		completion_reward = {
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_industrial_capacity_factory = 0.15
+				GER_industrial_industrial_capacity_factory = 0.1
 				tooltip = industrial_capacity_factory_tt
 			}
 			add_to_variable = { 
@@ -23186,7 +23186,7 @@ focus_tree = {
 				tooltip = industrial_capacity_dockyard_tt
 			}
 			add_to_variable = { 
-				GER_industrial_consumer_goods_factor = -0.15
+				GER_industrial_consumer_goods_factor = -0.1
 				tooltip = consumer_goods_factor_tt
 			}
 		}
@@ -23334,7 +23334,7 @@ focus_tree = {
 		x = 2
 		y = 2
 		relative_position_id = GER_state_controlled_economy
-		cost = 2.5
+		cost = 10
 		available = {
 			is_subject = no
 			NOT = { has_war_with = SOV }
