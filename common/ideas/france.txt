@@ -11,7 +11,6 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_factor = -0.10
 				consumer_goods_factor = 0.05
 			}
 		}
@@ -984,7 +983,7 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_factory =  0.15
+				industrial_capacity_factory =  0.2
 				political_power_factor = 0.3
 			}
 		}
@@ -996,7 +995,7 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_factory =  0.12
+				industrial_capacity_factory =  0.15
 				political_power_factor = 0.2
 			}
 		}
@@ -1008,7 +1007,7 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_factory = 0.09
+				industrial_capacity_factory = 0.12
 				political_power_factor = 0.1
 			}
 		}
@@ -1020,7 +1019,7 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_factory =  0.06
+				industrial_capacity_factory =  0.09
 			}
 		}
 		
@@ -1031,7 +1030,7 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_factory =  0.03
+				industrial_capacity_factory =  0.06
 				political_power_cost = 0.1
 			}
 		}
@@ -1043,6 +1042,7 @@ ideas = {
 			}
 
 			modifier = {
+				industrial_capacity_factory =  0.03
 				political_power_cost = 0.2
 			}
 		}
@@ -1054,7 +1054,6 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_factory =  -0.05
 				political_power_cost = 0.3
 			}
 		}
@@ -1066,7 +1065,7 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_factory =  -0.10
+				industrial_capacity_factory =  -0.05
 				political_power_cost = 0.4
 			}
 		}
@@ -1078,7 +1077,7 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_factory = -0.15
+				industrial_capacity_factory = -0.10
 				political_power_cost = 0.5
 			}
 		}
@@ -1099,6 +1098,7 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = -0.1
 				conversion_cost_civ_to_mil_factor= -0.2
+				production_speed_arms_factory_factor = 0.05
 			}
 		}
 		
@@ -1140,6 +1140,7 @@ ideas = {
 				production_speed_infrastructure_factor = 0.1
 				production_speed_rail_way_factor = 0.1
 				production_speed_naval_base_factor = 0.1
+				production_speed_buildings_factor = 0.05
 			}
 		}
 
@@ -1257,6 +1258,12 @@ ideas = {
 					build_cost_ic = -0.05 instant = yes
 				}
 				artillery_equipment = {
+					build_cost_ic = -0.05  instant = yes
+				}
+				anti_air_equipment = {
+					build_cost_ic = -0.05  instant = yes
+				}
+				anti_tank_equipment = {
 					build_cost_ic = -0.05  instant = yes
 				}
 			}
@@ -1750,7 +1757,7 @@ ideas = {
 			
 			modifier = {
 				max_planning = 0.35
-				planning_speed = -0.25
+				planning_speed = -0.15
 				max_command_power = 25
 				command_power_gain_mult = 0.1
 			}
