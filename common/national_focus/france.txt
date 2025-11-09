@@ -1076,7 +1076,7 @@ add_timed_idea = {
 					}
 				}
 				add_extra_state_shared_building_slots = 1
-				add_compliance = 10
+				add_compliance = 15
 			}
 		}
 	}
@@ -1643,6 +1643,7 @@ add_timed_idea = {
 			factor = 1.2
 		}
 		completion_reward = {
+			add_political_power = 75
 			random_core_state = {
 				   add_extra_state_shared_building_slots = 3
 					add_building_construction = {
@@ -1666,6 +1667,7 @@ add_timed_idea = {
 			factor = 1
 		}
 		completion_reward = {
+			add_political_power = 75
 			random_core_state = {
 				   add_extra_state_shared_building_slots = 3
 					add_building_construction = {
