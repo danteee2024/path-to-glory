@@ -58,7 +58,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 	
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 100
 		}
 	}
 
@@ -3122,6 +3122,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 	
 		completion_reward = {
+			add_research_slot = 1
 			add_political_power = 150
 		}
 	}
@@ -3688,7 +3689,7 @@ focus_tree = {
 		x = 1
 		y = 1
 	
-		cost = 2.5
+		cost = 2
 		
 		prerequisite = { focus = IRE_Expand_Procurement_Department }
 		relative_position_id = IRE_Expand_Procurement_Department
@@ -3726,16 +3727,11 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = motorized_bonus
-				ahead_reduction = 2
-				uses = 1
-				category = motorized_equipment
-			}
-			add_tech_bonus = {
-				name = JUNO_armor_modernization_initiative
-				bonus = 0.5
+				ahead_reduction = 1
 				uses = 2
 				category = motorized_equipment
 			}
+			
 		}
 	}
 	
@@ -3788,8 +3784,8 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = JUNO_artilery_modernization_initiative
-				bonus = 2
-				uses = 1
+				bonus = 1
+				uses = 2
 				category = artillery
 			}
 		}
@@ -4292,7 +4288,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = IRE_army_modifier_tt
 			add_to_variable = { IRE_training_time_factor = -0.05 tooltip = training_time_factor_tt }
-			add_to_variable = { IRE_army_armor_attack_factor = 0.02 tooltip = army_attack_factor_tt }
+			add_to_variable = { IRE_army_armor_attack_factor = 0.05 tooltip = army_attack_factor_tt }
 			add_to_variable = { IRE_army_org_factor = 0.01 tooltip = army_org_factor_tt }
 		}
 	}
@@ -5149,6 +5145,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 	
 		completion_reward = {
+		
 			add_tech_bonus = {
 				name = IRE_the_four_year_plan
 				bonus = 1.0
