@@ -2342,7 +2342,7 @@ focus_tree = {
 			all_core_state = {
 				is_fully_controlled_by = ROOT
 			}
-			date > 1940.01.01
+			date > 1940.05.01
 			#OR = {
 			#	has_resources_in_country = {
 			#		resource = steel

@@ -8514,7 +8514,7 @@ allow_branch = {
 		y = 1
 		relative_position_id = JAP_lunge_mines
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -8523,7 +8523,7 @@ allow_branch = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = JAP_modern_artillery
-				bonus = 0.5
+				bonus = 1
 				uses = 2
 				category = artillery
 			}
