@@ -1809,7 +1809,7 @@ ideas = {
 			picture = ast_volunteer_defence_corps
 			
 			modifier = {
-				conscription = 0.02
+				conscription = 0.01
 				army_core_defence_factor = 0.05
 				army_core_attack_factor = 0.05
 			}

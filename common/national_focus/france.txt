@@ -7426,7 +7426,7 @@ add_timed_idea = {
 		focus = {
 		id = FRA_Defend_the_Homeland
 		icon = GFX_goal_generic_defence
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = FRA_army_reform
 		}
