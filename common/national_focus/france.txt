@@ -3445,6 +3445,28 @@ add_timed_idea = {
 		search_filters = { FOCUS_FILTER_MANPOWER }
 	}
 
+		focus = {
+		id = FRA_Portugal
+		icon = GFX_focus_generic_befriend_portugal
+		cost = 5
+		prerequisite = {
+			focus = FRA_service_ordre_legionnaire
+		}
+		relative_position_id = FRA_service_ordre_legionnaire
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			date > 1937.1.1
+		}
+		completion_reward = {
+			POR = { country_event = generic.20 }
+		}
+		
+	}
+
 	focus = {
 		id = FRA_army_of_aggression
 		icon = GFX_SOV_an_adaptable_army_ccp_2d_sov_compatibility
@@ -4808,7 +4830,7 @@ add_timed_idea = {
 	focus = {
 		id = FRA_union_latins
 		icon = GFX_focus_CHL_the_scouts_monarchist_youth_organization
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = FRA_support_the_legitimatises
 		}
@@ -4851,9 +4873,6 @@ add_timed_idea = {
 							}
 						}
 					}
-				}
-				ROM = {
-					country_event = france.124
 				}
 				#hidden_effect = { there is no way to make the current localization flexible enough to properly reuse this little entente event
 				#	news_event = {
