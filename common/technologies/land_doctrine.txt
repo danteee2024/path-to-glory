@@ -534,7 +534,7 @@ technologies = {
 
 		army_bonus_air_superiority_factor = 0.15
 		coordination_bonus = 0.10
-		
+
 		folder = {
 			name = land_doctrine_folder
 			position = { x = 2 y = 10 }
@@ -690,7 +690,8 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 		enable_tactic = tactic_backhand_blow
-		recon_factor_while_entrenched = 0.10
+		recon_factor_while_entrenched = 0.20
+		entrenchment_speed = 0.10
 		
 		path = {
 			leads_to_tech = modern_blitzkrieg 
@@ -807,7 +808,7 @@ technologies = {
         
 		army_core_attack_factor = 0.05
 		army_core_defence_factor = 0.05
-		conscription = 0.03
+		conscription = 0.02
 		
 		path = {
 			leads_to_tech = nd_conscription 
