@@ -4970,7 +4970,7 @@ add_timed_idea = {
 	focus = {
 		id = FRA_the_new_continental_system
 		icon = GFX_focus_fra_le_deluge
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = FRA_brumaire_movement
 		}
@@ -5007,7 +5007,8 @@ add_timed_idea = {
 			set_rule = {
 				can_create_factions = yes
 			}
-			add_war_support = 0.05
+			add_war_support = 0.1
+			add_stability = 0.1
 			if = {
 				limit = {
 					is_in_faction = no
