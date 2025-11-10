@@ -177,9 +177,9 @@ characters={
 		}
 		corps_commander={
 			traits={ panzer_leader trait_engineer armor_officer }
-			skill=4
-			attack_skill=4
-			defense_skill=3
+			skill=5
+			attack_skill=5
+			defense_skill=4
 			planning_skill=4
 			logistics_skill=3
 			legacy_id=0

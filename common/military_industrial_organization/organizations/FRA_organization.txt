@@ -114,7 +114,7 @@ FRA_hotchkiss_organization = {
 	icon = GFX_idea_generic_tank_manufacturer_3
 	allowed = {	
 		tag = FRA 
-		has_dlc = "Arms Against Tyranny"
+		
 	}
 	add_trait = { 
 		token = FRA_mio_trait_l_35
@@ -140,7 +140,7 @@ FRA_apx_organization = {
 	icon = GFX_idea_FRA_atelier_puteaux
 	allowed = {	
 		tag = FRA 
-		has_dlc = "Arms Against Tyranny"
+		
 	}
 }
 
@@ -153,6 +153,7 @@ FRA_amx_organization = {
 	available = {
 		
 	}
+	equipment_type = { armor }
 }
 
 #####################
