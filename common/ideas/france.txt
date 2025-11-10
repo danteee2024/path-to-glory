@@ -1346,6 +1346,8 @@ ideas = {
 			
 			modifier = {
 				amphibious_invasion = 0.20
+				modifier_army_sub_unit_marine_attack_factor = 0.05
+				modifier_army_sub_unit_marine_defence_factor = 0.05
 			}
 		}
 		
@@ -1762,6 +1764,57 @@ ideas = {
 				command_power_gain_mult = 0.1
 			}
 		}
+
+
+		FRA_Mountainers = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			cancel = {
+				NOT = { owns_state = 28 }
+			}
+
+			removal_cost = -1
+
+			picture = eng_special_air_service
+			
+			modifier = {
+				modifier_army_sub_unit_mountaineers_attack_factor = 0.05
+				modifier_army_sub_unit_mountaineers_defence_factor = 0.05
+			}
+		}
+
+		FRA_Defend_the_Homeland = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			cancel = {
+				NOT = { owns_state = 28 }
+			}
+
+			removal_cost = -1
+
+			picture = ast_volunteer_defence_corps
+			
+			modifier = {
+				conscription = 0.02
+				army_core_defence_factor = 0.05
+				army_core_attack_factor = 0.05
+			}
+		}
+			
 		
 		FRA_protected_by_the_maginot_line_attack = {
 			
@@ -2051,6 +2104,7 @@ ideas = {
 
 			modifier = {
 				army_org = 5
+				org_loss_when_moving = -0.05
 				justify_war_goal_time = -0.2
 			}
 		}
@@ -3356,6 +3410,7 @@ ideas = {
 				experience_gain_air = 0.10
 				air_ace_generation_chance_factor = 0.15
 				air_agility_factor = 0.1
+				air_accidents_factor = -0.10
 			}
 		}
 		

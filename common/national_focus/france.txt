@@ -2045,7 +2045,7 @@ add_timed_idea = {
 			}
 		}
 		completion_reward = {
-			add_stability = -0.10
+			add_stability = -0.05
 			add_timed_idea = {
 				idea = FRA_support_monarchy_focus
 				days = 574
@@ -3441,7 +3441,6 @@ add_timed_idea = {
 		}
 		completion_reward = {
 			add_ideas = FRA_service_ordre_legionnaire
-			add_ideas = FRA_army_of_aggression_focus
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER }
 	}
@@ -3449,12 +3448,12 @@ add_timed_idea = {
 	focus = {
 		id = FRA_army_of_aggression
 		icon = GFX_SOV_an_adaptable_army_ccp_2d_sov_compatibility
-		cost = 7.5
+		cost = 5
 		prerequisite = {
-			focus = FRA_service_ordre_legionnaire
+			focus = FRA_support_the_legitimatises focus = FRA_we_want_petain focus = FRA_support_ppf
 		}
-		relative_position_id = FRA_service_ordre_legionnaire
-		x = 0
+		relative_position_id = FRA_support_the_legitimatises
+		x = -5
 		y = 1
 		ai_will_do = {
 			factor = 2
@@ -6882,7 +6881,7 @@ add_timed_idea = {
 		mutually_exclusive = {
 			focus = FRA_de_gaulle_strategy
 		}
-		x = 54
+		x = 55
 		y = 0
 		offset = {
 			x = -20
@@ -7318,6 +7317,9 @@ add_timed_idea = {
 		prerequisite = {
 			focus = FRA_army_reform
 		}
+		mutually_exclusive = {
+			focus = FRA_Mountainers
+		}
 		x = -2
 		y = 1
 		relative_position_id = FRA_army_reform
@@ -7371,6 +7373,55 @@ add_timed_idea = {
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
+
+		focus = {
+		id = FRA_Mountainers
+		icon = GFX_focus_eng_special_air_service
+		cost = 5
+		prerequisite = {
+			focus = FRA_army_reform
+		}
+		mutually_exclusive = {
+			focus = FRA_commandos_marine
+		}
+		x = -4
+		y = 1
+		relative_position_id = FRA_army_reform
+		
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = FRA_Mountainers
+			add_tech_bonus = {
+				name = FRA_Mountainers
+				#category = tp_tech
+				category = mountaineers_tech
+				uses = 2
+				bonus = 1
+			}
+		}
+	}
+
+		focus = {
+		id = FRA_Defend_the_Homeland
+		icon = GFX_goal_generic_defence
+		cost = 5
+		prerequisite = {
+			focus = FRA_army_reform
+		}
+		x = 4
+		y = 1
+		relative_position_id = FRA_army_reform
+		
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = FRA_Defend_the_Homeland
+		}
+	}
+	
 	focus = {
 		id = FRA_africa_army
 		icon = GFX_focus_por_luso_tropicalism

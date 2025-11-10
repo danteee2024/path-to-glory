@@ -804,9 +804,7 @@ level = 1
 			available = {
 				has_completed_focus = FRA_French_War_Economy
 				has_war_support > 0.5
-				has_war = yes
-
-					has_government = fascism
+				has_government = fascism
 
 			
 			}
@@ -822,8 +820,8 @@ level = 1
 				consumer_goods_expected_value = 0.15
 				production_speed_arms_factory_factor = 0.25
 				production_speed_dockyard_factor = 0.25
-				conversion_cost_civ_to_mil_factor= -0.2
-				conversion_cost_mil_to_civ_factor = -0.2
+				conversion_cost_civ_to_mil_factor= -0.1
+				conversion_cost_mil_to_civ_factor = -0.1
 			}
 			cancel_if_invalid = no
 		}
