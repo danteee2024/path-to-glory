@@ -3459,7 +3459,7 @@ add_timed_idea = {
 			factor = 2
 		}
 		available = {
-			date > 1937.1.1
+			date > 1937.6.1
 		}
 		completion_reward = {
 			POR = { country_event = generic.20 }
@@ -7333,7 +7333,7 @@ add_timed_idea = {
 	focus = {
 		id = FRA_commandos_marine
 		icon = GFX_goal_generic_amphibious_assault
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = FRA_army_reform
 		}
@@ -7353,7 +7353,7 @@ add_timed_idea = {
 				name = FRA_commandos_marine
 				#category = tp_tech
 				category = marine_tech
-				uses = 2
+				uses = 1
 				bonus = 1
 			}
 		}
@@ -7397,7 +7397,7 @@ add_timed_idea = {
 		focus = {
 		id = FRA_Mountainers
 		icon = GFX_focus_eng_special_air_service
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = FRA_army_reform
 		}
@@ -7417,7 +7417,7 @@ add_timed_idea = {
 				name = FRA_Mountainers
 				#category = tp_tech
 				category = mountaineers_tech
-				uses = 2
+				uses = 1
 				bonus = 1
 			}
 		}
