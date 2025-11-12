@@ -1690,10 +1690,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL }
 
 		completion_reward = { 
-			add_timed_idea = {
-				idea = ARG_war_division_idea
-				days = 365
-			}	 
+				add_ideas = ARG_war_division_idea
+				
+			 
 		}
 	}
 
@@ -1854,10 +1853,10 @@ focus_tree = {
 				}
 			}
 		}
-			add_timed_idea = {
-				idea = ARG_preparing_for_war_idea
-				days = 730
-			}
+
+		add_ideas = ARG_preparing_for_war_idea
+
+			
 		}
 	}
 
@@ -5559,10 +5558,10 @@ focus_tree = {
 				limit = {
 					is_core_of = ROOT
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 3
 					instant_build = yes
 				}	
 			}
@@ -5570,7 +5569,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = ARG_industrial_expansion_bonus
 				bonus = 0.5
-				uses = 2
+				uses = 1
 				category = industry
 			}
 		}
@@ -5659,7 +5658,7 @@ focus_tree = {
 		completion_reward = { 
 			add_timed_idea = {
     			idea = ARG_economic_reactivation_idea
-    			days = 365
+    			days = 720
 			}
 		}
 	}
@@ -6080,19 +6079,19 @@ focus_tree = {
 
 		completion_reward = { 
 			278 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
 
 			956 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
