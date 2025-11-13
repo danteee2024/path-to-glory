@@ -105,6 +105,8 @@ ideas = {
 			
 			modifier = {
 				river_crossing_factor = -0.2
+				modifier_army_sub_unit_marine_attack_factor = 0.05
+				modifier_army_sub_unit_marine_defence_factor = 0.06
 			}
 		}
 
