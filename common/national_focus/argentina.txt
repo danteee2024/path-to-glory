@@ -1634,10 +1634,8 @@ focus_tree = {
 				}
 			}
 
-			add_timed_idea = {
-				idea = ARG_rapid_militarization_idea
-				days = 365
-			}
+				add_ideas = ARG_rapid_militarization_idea
+			
 		}
 	}
 
