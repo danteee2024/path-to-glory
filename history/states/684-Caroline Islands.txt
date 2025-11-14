@@ -10,6 +10,7 @@ state={
 		add_core_of = FSM
 		buildings = {
 			infrastructure = 2
+			industrial_complex = 1
 			air_base = 3
 			2489 = {
 				naval_base = 6

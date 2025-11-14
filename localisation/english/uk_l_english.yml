@@ -33,6 +33,33 @@
  
  
 ################################### FOCUSES                     \n      §H§!
+  ENG_Imperial_Federation:0 "The Imperial Federation"
+ 
+ Integrate_Canada:0 "Integrate Canada"
+ Integrate_Canada_desc:0 "Canada has long stood as a loyal dominion of the Crown. By formally integrating it into the United Kingdom, we will strengthen the unity and power of the Empire."
+
+ Integrate_Australia:0 "Integrate Australia"
+ Integrate_Australia_desc:0 "Australia’s destiny lies inseparably bound with that of Britain. Integrating Australia will further consolidate the Imperial Federation and bolster our presence in the Pacific."
+
+ Integrate_New_Zealand:0 "Integrate New Zealand"
+ Integrate_New_Zealand_desc:0 "New Zealand has always stood with the Empire through thick and thin. Its full integration into the United Kingdom will ensure our unity endures for generations."
+
+ Integrate_South_Africa:0 "Integrate South Africa"
+ Integrate_South_Africa_desc:0 "South Africa is a vital link between the Atlantic and Indian Oceans. Its integration will bring stability and a united vision to the Empire’s southern dominions."
+ ENG_imperial_Dockyards_idea:0 "Imperial Dockyards"
+ ENG_imperial_fleet:0 "The Imperial Fleet"
+ ENG_imperial_fleet_desc:0 "To secure our global empire and maintain command of the seas, the Royal Navy must once again be the pride of the Empire. By investing in advanced escort vessels and modern doctrines, we shall ensure that no enemy fleet dares challenge our might. The screens of His Majesty’s Navy will stand as the shield and spear of the Empire."
+ ENG_imperial_fleet_idea:0 "The Imperial Fleet"
+
+  ENG_Royal_Industry:0 "Royal Industry"
+  ENG_Royal_Industry_desc:0 "With the King’s leadership guiding the nation, we shall restore and expand our industrial capacity under royal oversight. A stronger domestic industry will fuel both our economy and our growing military might."
+
+  ENG_imperial_Dockyards:0 "Imperial Dockyards"
+  ENG_imperial_Dockyards_desc:0 "The pride of the British Empire rests upon the strength of its navy. By expanding dockyard capacity and improving efficiency, we will ensure that His Majesty’s fleet once again dominates the oceans of the world."
+
+  ENG_The_Kings_Guard:0 "The King’s Guard"
+  ENG_The_Kings_Guard_desc:0 "Loyal soldiers, sworn to protect the King and the realm, will form an elite core of our armed forces. The King’s Guard shall stand as both a symbol and a shield of royal authority across the empire."
+
  
  ENG_Beneleux_Buffer_States:0 "Beneleux Buffer States"
  ENG_Beneleux_Buffer_States_desc:0 ""

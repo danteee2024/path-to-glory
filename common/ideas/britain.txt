@@ -17,6 +17,49 @@ ideas = {
 				nuclear_production_factor = 0.15
 			}
 		}
+		ENG_imperial_Dockyards_idea = {
+   	 allowed = {
+        original_tag = ENG
+  	  }
+    picture = GFX_goal_generic_construct_navy
+    modifier = {
+        production_speed_dockyard_factor = 0.10
+        industrial_capacity_dockyard = 0.1
+    }
+}
+	ENG_imperial_fleet_idea = {
+   	 allowed = {
+        original_tag = ENG
+  	  }
+    picture = BRA_navy
+    modifier = {
+        navy_screen_attack_factor = 0.1
+		navy_screen_defence_factor = 0.1
+    }
+}
+	ENG_Royal_Industry = {
+   	 allowed = {
+        original_tag = ENG
+  	  }
+    picture = generic_improved_industries
+    modifier = {
+		global_building_slots = 1
+        production_speed_buildings_factor = 0.1
+		consumer_goods_factor = -0.1
+		
+    }
+}
+	ENG_The_Kings_Guard = {
+   	 allowed = {
+        original_tag = ENG
+  	  }
+    picture = NORDIC_army_monarchist
+    modifier = {
+        army_attack_factor = 0.05
+		army_defence_factor = 0.05
+		army_speed_factor =  0.05
+    }
+}
 		
 		ENG_blitz_spirit_idea = {
 			

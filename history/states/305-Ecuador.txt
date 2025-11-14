@@ -6,6 +6,7 @@ state = {
 
 	resources = {
 		oil = 2 # was: 2
+		steel = 8
 	}
 	
 	state_category = city

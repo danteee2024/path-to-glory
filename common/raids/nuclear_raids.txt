@@ -400,7 +400,7 @@ types = {
 	}
 
 	thermonuclear_strike = {
-		days_to_prepare = 10
+		days_to_prepare = 15
 
 		category = nuclear_raids
 

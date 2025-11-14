@@ -82,6 +82,7 @@
 
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = {
+			add_research_slot = 1 
 			add_stability = 0.05
 		}
 	}
@@ -1246,6 +1247,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
+
 			if = {
 				limit = {
 					has_idea = CHI_war_of_resistance
@@ -1836,7 +1838,7 @@
 		y = 0
 		relative_position_id =  CHI_military_affairs_commission
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 4

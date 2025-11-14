@@ -447,7 +447,7 @@ ideas = {
 			}
 
 			modifier = {
-				conscription = 0.02
+				conscription = 0.01
 			}
 		}
 
@@ -501,8 +501,8 @@ ideas = {
 			}
              equipment_bonus = {
 				infantry_equipment = {
-					soft_attack = 0.25
-					hard_attack = 0.75
+					soft_attack = 0.20
+					hard_attack = 0.35
 					build_cost_ic = 0.05
 				}
 			}
@@ -552,7 +552,7 @@ ideas = {
 				}
 			}
 			modifier = {
-				conscription = 0.02
+				conscription = 0.01
 				training_time_factor = -0.1
 				minimum_training_level = -0.1
 			}
@@ -571,7 +571,7 @@ ideas = {
 			}
 
 			modifier = {
-				production_speed_arms_factory_factor = 0.25
+				production_speed_arms_factory_factor = 0.15
 			}
 		}
 
@@ -887,7 +887,7 @@ ideas = {
 				army_defence_factor = 0.05
 				army_attack_factor = 0.05
 				army_org_factor = 0.1
-				conscription = 0.03
+				conscription = 0.01
 			}
 		}
 
@@ -906,11 +906,9 @@ ideas = {
 			}
 
 			modifier = {
-				army_defence_factor = 0.05
-				army_attack_factor = 0.05
 				army_org_factor = 0.1
 				training_time_factor = -0.2
-				conscription = 0.05
+				conscription = 0.03
 			}
 		}
 
@@ -932,7 +930,7 @@ ideas = {
 				army_defence_factor = 0.05
 				army_attack_factor = 0.05
 				army_org_factor = 0.05
-				army_morale_factor = 0.1
+				army_morale_factor = 0.05
 				political_power_factor = 0.1
 			}
 		}
@@ -955,8 +953,7 @@ ideas = {
 				army_defence_factor = 0.1
 				army_attack_factor = 0.1
 				army_org_factor = 0.05
-				army_morale_factor = 0.15
-				political_power_factor = 0.1
+				army_morale_factor = 0.10
 			}
 		}
 
@@ -1074,14 +1071,13 @@ ideas = {
 
 			modifier = {
 				army_defence_factor = 0.1
-				army_attack_factor = 0.2
-				army_org_factor = 0.15
-				army_speed_factor = 0.05
+				army_attack_factor = 0.15
+				army_org_factor = 0.10
 				training_time_factor = -0.2
-				conscription = 0.05
+				conscription = 0.06
 				army_morale_factor = 0.15
 				political_power_factor = 0.1
-				conscription_factor = 0.2
+				conscription_factor = 0.15
 				experience_loss_factor = -0.25
 				breakthrough_factor = 0.1
 				no_supply_grace = 48

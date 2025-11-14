@@ -1846,11 +1846,108 @@ characters = {
 			logistics_skill = 3
 			legacy_id = 0
 			visible = {
-				NOT = { has_character_flag = SOV_exiled_flag }
+				
 				has_completed_focus = SOV_organization_of_the_partisans
 			}
 		}
 	}
+	SOV_Konstantin_korkov = {
+		name = 	SOV_Konstantin_korkov
+
+		portraits = {
+			army = {
+				small = "GFX_idea_kliment_voroshilov"
+				large = GFX_portrait_SOV_kliment_voroshilov
+			}
+		}	
+		available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}			
+
+		field_marshal = {
+			traits = { brilliant_strategist inflexible_strategist organizer winter_specialist }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id = 0
+			visible = { 
+			not = { has_character_flag = SOV_exiled_flag }
+				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
+		}
+		}
+	}
+	SOV_aleksey_stroma = {
+		name = 	SOV_aleksey_stroma
+
+		portraits = {
+		army = {
+				large = "GFX_portrait_SOV_sidor_kovpak"
+				small = GFX_portrait_SOV_sidor_kovpak_small
+			}
+		}	
+		available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}				
+
+		corps_commander = {
+			traits = { trait_engineer panzer_leader winter_specialist }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id = 0
+			visible = { 
+		NOT = { has_character_flag = SOV_exiled_flag } }
+		}
+	}
+
+
+	SOV_vladimir_Satrovitsch = {
+		name = 	SOV_vladimir_Satrovitsch
+
+		portraits = {
+		army = {
+				large = "GFX_portrait_SOV_lev_dovator"
+				small = GFX_portrait_SOV_lev_dovator_small
+			}
+		}	
+		available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}			
+
+		corps_commander = {
+			traits = { winter_specialist Trickster commando }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+			legacy_id = 0
+			visible = { 
+		NOT = { has_character_flag = SOV_exiled_flag }
+				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated } }
+		}
+	}
+
+
 
 	SOV_sidor_kovpak = {
 		name = SOV_sidor_kovpak

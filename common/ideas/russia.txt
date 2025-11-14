@@ -86,11 +86,28 @@ ideas = {
 			}
 
 			modifier = {
-				annex_cost_factor = -0.1
 				justify_war_goal_time = -0.2
 				generate_wargoal_tension = -0.8
+				consumer_goods_factor = -0.15
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
 			}
 		}
+		RUS_defend_the_homeland = {
+
+			picture = chi_army_corruption3
+
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				conscription = 0.01
+			}
+		}
+
 
 		RUS_alaska_payment_paying = {
 
@@ -101,7 +118,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = 0.15
+				consumer_goods_factor = 0.05
 			}
 		}
 
@@ -114,7 +131,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = -0.1
+				consumer_goods_factor = -0.05
 				production_speed_buildings_factor = 0.05
 			}
 		}
@@ -128,7 +145,7 @@ ideas = {
 			}
 
 			modifier = {
-				production_speed_arms_factory_factor = 0.1
+				production_speed_arms_factory_factor = 0.15
 				mobilization_speed = 0.2
 				stability_factor = -0.1
 			}

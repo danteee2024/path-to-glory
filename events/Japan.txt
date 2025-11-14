@@ -892,7 +892,7 @@ country_event = {
 			character = JAP_emperor_hirohito
 			promote_leader = yes
 			country_leader = {
-				ideology = absolute_monarchism
+				ideology = despotism
 				traits = {
 					warrior_code
 					emperor_showa

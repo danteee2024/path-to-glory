@@ -346,8 +346,8 @@ ARGE ]: Missing large portrait please check!
 			trickster
         }
 
-        skill = 5
-        attack_skill = 4
+        skill = 4
+        attack_skill = 2
         defense_skill = 4
         planning_skill = 3
         logistics_skill = 3
@@ -371,8 +371,8 @@ ARGE ]: Missing large portrait please check!
 			brilliant_strategist
         }
 
-        skill = 5
-        attack_skill = 5
+        skill = 4
+        attack_skill = 3
         defense_skill = 3
         planning_skill = 3
         logistics_skill = 2
@@ -393,13 +393,10 @@ ARGE ]: Missing large portrait please check!
         traits = {
             panzer_leader       
             desert_fox      
-            organizer
-			brilliant_strategist
-			inflexible_strategist
         }
-        skill = 5
-        attack_skill = 4
-        defense_skill = 4
+        skill = 4
+        attack_skill = 2
+        defense_skill = 3
         planning_skill = 3
         logistics_skill = 3
 	}
@@ -466,12 +463,11 @@ ARGE ]: Missing large portrait please check!
             panzer_leader
             desert_fox
             aggressive_assaulter
-			trait_engineer
         }
-        skill = 5
-        attack_skill = 5
-        defense_skill = 3
-        planning_skill = 4
+        skill = 3
+        attack_skill = 4
+        defense_skill = 1
+        planning_skill = 1
         logistics_skill = 3
 	}
 # TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
@@ -492,7 +488,7 @@ ARGE ]: Missing large portrait please check!
         }
 
         skill = 4
-        attack_skill = 4
+        attack_skill = 3
         defense_skill = 3
         planning_skill = 3
         logistics_skill = 4

@@ -167,6 +167,24 @@ characters={
 			legacy_id=0
 		}
 	}
+		FRA_alphonse_sacre={
+		name=FRA_alphonse_sacre
+		portraits={
+			army={
+				large=GFX_portrait_FRA_alphonse_juin
+				small=GFX_portrait_FRA_alphonse_juin_small
+			}
+		}
+		corps_commander={
+			traits={ panzer_leader trait_engineer armor_officer ranger }
+			skill=5
+			attack_skill=5
+			defense_skill=4
+			planning_skill=4
+			logistics_skill=3
+			legacy_id=0
+		}
+	}
 
 	FRA_maurice_gamelin={
 		name=FRA_maurice_gamelin

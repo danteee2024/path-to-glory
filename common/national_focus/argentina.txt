@@ -879,7 +879,7 @@ focus_tree = {
 		id = ARG_corporatism
 		icon = GFX_focus_ICE_state_corporatism
 		prerequisite = { focus = ARG_cut_ties_with_britain }
-		x = 8
+		x = 4
 		y = 1
 		relative_position_id = ARG_cut_ties_with_britain
 		cost = 5
@@ -1245,7 +1245,7 @@ focus_tree = {
 		id = ARG_support_the_spanish_coup
 		icon = GFX_focus_intervention_spain_nationalists
 		prerequisite = { focus = ARG_cut_ties_with_britain }
-		x = 10
+		x = 6
 		y = 1
 		relative_position_id = ARG_cut_ties_with_britain
 		cost = 5
@@ -1634,10 +1634,8 @@ focus_tree = {
 				}
 			}
 
-			add_timed_idea = {
-				idea = ARG_rapid_militarization_idea
-				days = 365
-			}
+				add_ideas = ARG_rapid_militarization_idea
+			
 		}
 	}
 
@@ -1690,10 +1688,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL }
 
 		completion_reward = { 
-			add_timed_idea = {
-				idea = ARG_war_division_idea
-				days = 365
-			}	 
+				add_ideas = ARG_war_division_idea
+				
+			 
 		}
 	}
 
@@ -1854,10 +1851,10 @@ focus_tree = {
 				}
 			}
 		}
-			add_timed_idea = {
-				idea = ARG_preparing_for_war_idea
-				days = 730
-			}
+
+		add_ideas = ARG_preparing_for_war_idea
+
+			
 		}
 	}
 
@@ -2005,15 +2002,12 @@ focus_tree = {
 		id = ARG_revive_the_colonial_plan
 		icon = GFX_focus_ARG_revive_the_colonial_plan
 		prerequisite = { focus = ARG_cut_ties_with_britain }
-		x = 4
+		x = 2
 		y = 1
 		relative_position_id = ARG_cut_ties_with_britain
 		mutually_exclusive = { focus = ARG_conquer_uruguay }
 		cost = 10
 		available = {
-			GER = {
-				is_in_faction_with = ROOT
-			}
 
 			URG = {
 				exists = yes
@@ -2056,45 +2050,6 @@ focus_tree = {
 		}
 	}
 
-	focus = { #DOMINATION
-		id = ARG_conquer_uruguay
-		icon = GFX_focus_generic_attack_uruguay
-		prerequisite = { focus = ARG_cut_ties_with_britain }
-		x = 6
-		y = 1
-		relative_position_id = ARG_cut_ties_with_britain
-		mutually_exclusive = { focus = ARG_revive_the_colonial_plan }
-		cost = 10
-		available = {
-			URG = {
-				exists = yes
-			}
-		}
-
-		bypass = {
-			URG = {
-				OR = {
-					exists = no
-					has_war_with = ROOT
-					is_subject_of = ROOT
-					is_in_faction_with = ROOT
-				}
-			}
-		}
-
-		ai_will_do = {
-			factor = 5
-		}
-
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-
-		completion_reward = { 
-			create_wargoal = {
-					type = annex_everything
-					target = URG
-				}
-			}
-		}
 
 	focus = { #DOMINATION
 		id = ARG_reach_out_to_chile
@@ -5471,7 +5426,7 @@ focus_tree = {
 		id = ARG_banco_central_de_la_republica_argentina
 		icon = GFX_focus_ARG_banco_central_de_la_republica_argentina
 		#prerequisite = { focus = }
-		x = 34
+		x = 31
 		y = 0
 		#relative_position_id =
 		cost = 10
@@ -5559,10 +5514,10 @@ focus_tree = {
 				limit = {
 					is_core_of = ROOT
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 3
 					instant_build = yes
 				}	
 			}
@@ -5570,7 +5525,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = ARG_industrial_expansion_bonus
 				bonus = 0.5
-				uses = 2
+				uses = 1
 				category = industry
 			}
 		}
@@ -5636,6 +5591,21 @@ focus_tree = {
 				instant_build = yes
 				}
 			}
+			random_core_state = {
+			limit = {
+				free_building_slots = {
+					building = infrastructure
+					size > 0
+				}
+				is_owned_and_controlled_by = ROOT
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -5659,7 +5629,7 @@ focus_tree = {
 		completion_reward = { 
 			add_timed_idea = {
     			idea = ARG_economic_reactivation_idea
-    			days = 365
+    			days = 720
 			}
 		}
 	}
@@ -5721,11 +5691,8 @@ focus_tree = {
 				instant_build = yes
 				}
 			}
-
-			add_timed_idea = {
-    			idea = ARG_civilian_economy_boost_idea
-    			days = 365
-			}
+    			add_ideas = ARG_civilian_economy_boost_idea
+    		
 		}
 	}
 
@@ -6080,19 +6047,19 @@ focus_tree = {
 
 		completion_reward = { 
 			278 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
 
 			956 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}

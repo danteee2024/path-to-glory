@@ -102,7 +102,7 @@ equipment_modules = {
 		dismantle_cost_ic = 1
 		xp_cost = 0
 		multiply_stats = {
-			build_cost_ic = 0.2
+			build_cost_ic = 0.1
 			armor_value = 0.3
 		}
 	}
@@ -321,7 +321,7 @@ equipment_modules = {
 		xp_cost = 0
 		dismantle_cost_ic = 0.5
 		add_stats = {
-			build_cost_ic = 0.75
+			build_cost_ic = 1
 			reliability = 0.2
 			defense = 5
 			
@@ -519,11 +519,11 @@ equipment_modules = {
 		add_stats = {
 			build_cost_ic = 5
 			reliability = 0.2
-			defense = 3
+			defense = 10
 		}
 
 		multiply_stats = {
-			breakthrough = -0.25
+			breakthrough = -0.2
 		}
 
 		can_convert_from = {
@@ -1228,11 +1228,11 @@ equipment_modules = {
 		allow_equipment_type = anti_tank
 
 		add_stats = {
-			soft_attack = 40
-			hard_attack = 60
+			soft_attack = 35
+			hard_attack = 50
 			ap_attack = 225
-			build_cost_ic = 12.5
-			maximum_speed = -0.6
+			build_cost_ic = 13
+			maximum_speed = -0.7
 			reliability = -0.35
 		}
 		dismantle_cost_ic = 1

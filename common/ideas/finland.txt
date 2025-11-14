@@ -165,7 +165,6 @@ ideas = {
 
 			modifier = {
 				experience_gain_army_factor = 0.05
-				land_reinforce_rate = 0.05
 				acclimatization_cold_climate_gain_factor = 0.05
 				army_spirit_category_type_cost_factor = -0.1				
 			}
@@ -284,10 +283,10 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				army_morale_factor = 0.15
+				army_morale_factor = 0.05
 				attrition = -0.05
 				army_core_attack_factor = 0.05
-				army_core_defence_factor = 0.15
+				army_core_defence_factor = 0.1
 			}
 		}
 
@@ -309,10 +308,10 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				army_morale_factor = 0.25
+				army_morale_factor = 0.15
 				attrition = -0.1
-				army_core_attack_factor = 0.15
-				army_core_defence_factor = 0.2
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.15
 			}
 		}
 
@@ -334,9 +333,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				army_morale_factor = 0.3
+				army_morale_factor = 0.2
 				attrition = -0.15
-				army_core_attack_factor = 0.25
+				army_core_attack_factor = 0.15
 				army_core_defence_factor = 0.25
 			}
 		}

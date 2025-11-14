@@ -181,6 +181,9 @@ if = {
 	recruit_character = SOV_vladimir_kosmin
 	recruit_character = SOV_andrey_shkuro
 	recruit_character = SOV_anton_denikin
+	recruit_character = SOV_Konstantin_korkov
+	recruit_character = SOV_aleksey_stroma
+	recruit_character = SOV_vladimir_Satrovitsch
 }
 
 
@@ -276,6 +279,18 @@ if = {
 		set_character_flag = SOV_exiled_army_leader
 	}
 	SOV_andrey_shkuro = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_army_leader
+	}
+	SOV_aleksey_stroma = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_army_leader
+	}
+	SOV_Konstantin_korkov = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_army_leader
+	}
+	SOV_vladimir_Satrovitsch = { #Not in the country
 		set_character_flag = SOV_exiled_flag
 		set_character_flag = SOV_exiled_army_leader
 	}
