@@ -1,4 +1,7 @@
 ﻿l_english:
+ FRA_alphonse_sacre:0 "Alphonse Sacre"
+  FRA_unite_with_spain:0 "Unite with Spain"
+ FRA_unite_with_spain_desc:0 "Our influence over the Iberian Peninsula has reached its zenith. Whether through diplomacy or conquest, Spain has fallen under our dominion. Now is the time to formalize this union and bind our two nations together under one banner — the banner of France. From the Pyrenees to Gibraltar, a single Latin realm shall stand united, stronger than ever before."
 
  FRA_liberalism_desc:0 "§YRadicalism§! §Wis, in France, a political position that claims the legacy of 1789, marked in particular by§! §BAnticlericalism§! §Wand the defense of §!§HUniversal Suffrage§!§W.§!"
 
@@ -12,7 +15,16 @@
  FRA_rnp:0 "RNP"
  FRA_neutrality_parti_social_francais_long:0 "Parti Social Français"
  FRA_neutrality_parti_social_francais:0 "PSF"
+ French_War_economy:0 "French War Economy"
+ FRA_Mountainers:0 "The Mountaineers"
+ FRA_Mountainers_desc:0 "The harsh terrain of our borders demands specialized troops trained in mountain warfare. By establishing elite mountaineer units, we can ensure that France’s natural defenses become even more formidable."
 
+ FRA_Defend_the_Homeland:0 "Defend the Homeland"
+ FRA_Defend_the_Homeland_desc:0 "France must always stand ready to defend her soil. By emphasizing homeland defense, we will strengthen our fortifications, rally the people, and ensure that no invader ever sets foot upon French land unchallenged."
+  FRA_Portugal:0 "Negotiated the Submission of Portugal"
+ FRA_Portugal_desc:0 "Portugal’s colonial ambitions and historical ties to Britain make it a potential thorn in our side. By demanding their submission to French influence, we can secure our flank on the Iberian Peninsula and expand our sphere of control. Should they refuse, they will face the full might of France."
+ FRA_French_War_Economy:0 "French War Economy"
+ FRA_French_War_Economy_desc:0 "Our industries must serve the nation’s destiny. Civilian comfort will be sacrificed for military strength. France will rise again—armed, disciplined, and ready for total war."
 
  FRA_payment_for_bombers:0 "Payment for Bombers"
 
@@ -724,6 +736,10 @@
  FRA_metropolitan_priority_desc:0 "France's cities are its lifeblood. We should work with the industrialists to further improve our economy."
  FRA_public_works:0 "Public Works"
  FRA_public_works_desc:0 "A project of mass public works will not only improve our nation, but it will also improve the standing of the monarchy in the eyes of the people."
+ FRA_public_works2:0 "Public Works"
+ FRA_public_works2_desc:0 "A project of mass public works will not only improve our nation, but it will also improve the standing of the Regime in the eyes of the people."
+  FRA_Invest_into_the_Factory:0 "Invest into the Factorys"
+  FRA_Invest_into_the_Factory_desc:0 "With the revolution comes the need for a stronger industrial base. The workers stand ready to expand production, modernize equipment, and place the means of industry firmly under the control of the people. By directing resources into our factories, we ensure that the Communist cause is supplied with the tools necessary for victory."
  FRA_assist_the_carlist_cause:0 "Assist the Carlist Cause"
  FRA_assist_the_carlist_cause_desc:0 "The Carlists are fighting for a return of the Spanish monarchy. It would be unethical for us not to help them."
  FRA_intervene_in_the_spanish_civil_war:0 "Intervene in the Spanish Civil War"

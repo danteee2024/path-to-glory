@@ -29,7 +29,7 @@ IRE_IRA_political_balance = {
 			max = -0.7
 			modifier = {
 				political_power_factor = -0.2
-				stability_factor = -0.15
+				stability_factor = -0.10
 				boost_resistance_factor = 0.25
 				commando_trait_chance_factor = 0.25
 				conscription_factor = 0.15
@@ -50,7 +50,7 @@ IRE_IRA_political_balance = {
 			max = -0.4
 			modifier = {
 				political_power_factor = -0.15
-				stability_factor = -0.10
+				stability_factor = -0.05
 			}
 			on_activate = {
 				
@@ -72,7 +72,7 @@ IRE_IRA_political_balance = {
 			max = 0.7
 			modifier = {
 				political_power_factor = -0.25
-				stability_factor = -0.1
+				stability_factor = 0.1
 				conscription_factor = -0.1
 				war_support_factor = -0.025
 			}
@@ -90,7 +90,7 @@ IRE_IRA_political_balance = {
 			max = 1
 			modifier = {
 				political_power_factor = -0.5
-				stability_factor = -0.25
+				stability_factor = 0.15
 				conscription_factor = -0.2
 				war_support_factor = -0.05
 				mobilization_speed = -0.25

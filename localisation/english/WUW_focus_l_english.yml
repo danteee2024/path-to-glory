@@ -924,6 +924,13 @@
 
  AUS_totalitarian_safety: "Totalitarian Safety"
  AUS_totalitarian_safety_desc: "In 1933 Engelbert Dolfuss brought [AUS.GetNameDef] to its' current political state, for the safety of our nation. This decision to fully eliminate the parliament was controversial with our people, but we do believe that it was needed to keep us safe. Dolfuss may no longer be with us, but we should stay on this course, for our own safety."
+ decision_cost_pp_30:0 "£pol_power  §Y30§!"
+ decision_cost_pp_30_blocked:0 "£pol_power  §R30§!"
+ decision_cost_pp_30_tooltip:0 "This decision costs £pol_power  §Y30§! Political Power."
+ AUS_alpine_warfare_training:0 "Alpine Warfare Training"
+ AUS_alpine_warfare_training_desc:0 "Our army must be capable of fighting in the rugged Alpine terrain. By improving our mountaineer corps, we ensure that Austria can defend its mountains with unmatched skill."
+
+ AUS_alpine_infantry_bonus:0 "Enhanced Alpine Infantry"
 
  AUS_clamp_down_on_dnsap: "Clamp Down on DNSAP"
  AUS_clamp_down_on_dnsap_desc: "Political parties beyond our Vaterländische Front have long since been banned from our country. Despite this some still linger, and most troubling is the so-called DNSAP. Falsely claiming that they represent the true Austrofascism they argue that we should give up our sovereignty and join in union with [GER.GetNameDef]. We should deal with them at once!"
@@ -4260,6 +4267,15 @@ BEL_corruption_ns_fake_tt: "Daily Political Power Gain: §R-0.25%§! \nStability
  ######################################################
 
  GER_Proletarian_Support:0 "Proletarian Support"
+
+ The_Red_Terror_Army:0 "The Red Terror Army"
+ The_Red_Terror_Army_desc:0 "Forged from the chaos of revolution and disciplined through the fires of war, the Red Terror Army stands as the embodiment of the new German order. Its ranks are filled with fanatical soldiers devoted to the ideals of the revolution, ready to crush reactionary forces and spread the cause beyond our borders. Fear and loyalty go hand in hand in this new people's army."
+
+ GER_No_One_Left_Behind:0 "No One Left Behind"
+ GER_No_One_Left_Behind_desc:0 "The revolution demands everything of its people—and so it shall give everything in return. Every worker, farmer, and comrade must rise to defend the socialist homeland. None shall stand aside; none shall be abandoned. In unity, we find strength—in sacrifice, we secure victory."
+ GER_Liberate_the_Low_Countries:0 "Liberate the Low Countries"
+ GER_Liberate_the_Low_Countries_desc:0 "To bring socialism to Belgium and the Netherlands, we must liberate their people from bourgeois tyranny."
+
 
  #########################################################
  #Decision Germany

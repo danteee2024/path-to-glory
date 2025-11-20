@@ -1,4 +1,13 @@
 ﻿l_english:
+  ### ARGENTINA – MIO Trait ###
+ ARG_mio_trait_high_velocity_armament:0 "High Velocity Armament"
+ ARG_mio_trait_high_velocity_armament_desc:0 "By developing high-velocity cannons, we can pierce even the toughest enemy armor. Our tank divisions will strike with deadly precision and unmatched firepower."
+
+ ### ARGENTINA – Tank Production MIO ###
+ ARG_Tank_Production_organization:0 "Dirección de Producción de Tanques"
+ ARG_Tank_Production_organization_desc:0 "A specialized Argentinian tank development bureau focused on designing and manufacturing armored vehicles suited for South American battlefields. By combining foreign influence with local innovation, Argentina can produce modern and reliable tanks."
+  ARG_edelmiro_Fabio_Gacias:0 "Edelmiro Fabio Gacías"
+ ARG_edelmiro_Fabio_Gacias_desc:0 "A career officer with a background in engineering and armored warfare, Edelmiro Fabio Gacías represents the new generation of Argentine commanders. Skilled in logistics and planning, he has proven capable of leading mobile units through even the harshest terrain. His emphasis on mechanization and adaptability makes him an invaluable asset to the Argentine Army."
 
  SMB_army_default: "Arm the Fuerzas Armadas"
  SMB_army_default_desc: "Though they are nothing to scoff at, our armed forces are still much weaker than desired. Arming the soldiers with more modern weapons as well as training them to be ready for combat at any time, is essential."

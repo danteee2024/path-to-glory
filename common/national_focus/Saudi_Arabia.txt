@@ -1277,7 +1277,6 @@ focus = {
     }
     completion_reward = {
        
-    unlock_decision_category_tooltip = SAU_Oil_Trade_category
     add_ideas = SAU_Oil_Trade2
 
     }
@@ -1495,6 +1494,7 @@ focus = {
          
     }
     completion_reward = {
+     unlock_decision_category_tooltip = SAU_Oil_Trade_category
 
     swap_ideas = {
         remove_idea = SAU_Oil_Trade2

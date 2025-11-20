@@ -2295,7 +2295,7 @@
 		y = 1
 		relative_position_id = JAP_fate_of_the_kodoha_faction
 
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 4
 		}
@@ -2443,7 +2443,7 @@
 		y = 1
 		relative_position_id = JAP_imperial_rule_assistance_association
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 5
@@ -2808,11 +2808,7 @@
 	focus = {
 		id = JAP_strike_south_doctrine
 		icon = GFX_goal_generic_navy_doctrines_tactics
-		mutually_exclusive = {
-			focus = JAP_prepare_for_war_with_the_soviet_union
-		}
-		prerequisite = { focus = JAP_liaison_conference 
-		focus = JAP_purge_the_toseiha }
+		prerequisite = { focus = JAP_liaison_conference  }
 		x = 0
 		y = 1
 		relative_position_id = JAP_liaison_conference
@@ -3952,7 +3948,7 @@
 		x = 0
 		y = 4
 		relative_position_id = JAP_guide_the_zaibatsus
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 3
@@ -4150,7 +4146,7 @@
 		y = 3
 		relative_position_id = JAP_national_mobilization_law
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 3
@@ -4270,12 +4266,13 @@
 		y = 4
 		relative_position_id = JAP_national_mobilization_law
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
 		}
 		completion_reward = {
+
 			#if = {
 			#	limit = {
 			#		has_completed_focus = JAP_support_the_kodoha_faction
@@ -4350,7 +4347,7 @@
 		y = 1
 		relative_position_id = JAP_purge_the_kodoha_faction
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 4
@@ -4455,7 +4452,7 @@
 		completion_reward = {
 			set_truce = {
 				target = CHI
-				days = 365
+				days = 730
 			}
 			add_political_power = 100
 			609 = {
@@ -4638,7 +4635,7 @@
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}			
@@ -4793,7 +4790,7 @@
 		icon = GFX_SOV_eastern_expansion_ccp_2d_sov_compatibility
 		prerequisite = { focus = JAP_imperial_arsenals }
 		x = 2
-		y = 4
+		y = 5
 		relative_position_id = JAP_national_mobilization_law
 
 		cost = 10
@@ -4982,11 +4979,7 @@
 	focus = {
 		id = JAP_prepare_for_war_with_the_soviet_union
 		icon = GFX_focus_SOV_reinforce_northern_naval_bases
-		prerequisite = { focus = JAP_purge_the_toseiha 
-		focus = JAP_liaison_conference }
-		mutually_exclusive = {
-			focus = JAP_strike_south_doctrine
-		}
+		prerequisite = { focus = JAP_purge_the_toseiha  }
 		x = 0
 		y = 1
 		relative_position_id = JAP_purge_the_toseiha
@@ -5082,7 +5075,6 @@
 		}
 
 		completion_reward = {
-			add_ideas = JAP_China_relation
 			unlock_decision_tooltip = JAP_develop_the_North
 			unlock_decision_tooltip = JAP_develop_the_Middle
 			unlock_decision_tooltip = JAP_develop_the_Soutch
@@ -5109,12 +5101,60 @@
 	}
 
 	focus = {
+		id = JAP_Stabalize_the_Control
+		icon = GFX_focus_generic_annex_country_2
+		prerequisite = { focus = JAP_Industry_Plan }
+		x = -1
+		y = 1
+		relative_position_id = JAP_Industry_Plan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+			MAN = { is_puppet_of = JAP }
+		}
+
+		completion_reward = {
+			annex_country = {
+				target = MAN
+			}
+			761 = { add_core_of = JAP }
+			714 = { add_core_of = JAP }
+			717 = { add_core_of = JAP }
+			328 = { add_core_of = JAP }
+			715 = { add_core_of = JAP }
+			610 = { add_core_of = JAP }
+			611 = { add_core_of = JAP }
+			612 = { add_core_of = JAP }
+			609 = { add_core_of = JAP }
+			527 = { add_core_of = JAP }
+			525 = { add_core_of = JAP }
+			745 = { add_core_of = JAP }
+			524 = { add_core_of = JAP }
+			684 = { add_core_of = JAP }
+			647 = { add_core_of = JAP }
+			633 = { add_core_of = JAP }
+			716 = { add_core_of = JAP }
+			648 = { add_core_of = JAP }
+			
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+
+	focus = {
 		id = JAP_further_preparations_for_war
 		icon = GFX_SOV_shift_to_armaments_production_ccp_2d_sov_compatibility
-		prerequisite = { focus = JAP_Industry_Plan }
+		prerequisite = { focus = JAP_Stabalize_the_Control }
+		prerequisite = {
+			focus = JAP_industry_development
+		}
 		x = 1
-		y = 2	
-		relative_position_id = JAP_prepare_for_war_with_the_soviet_union
+		y = 1	
+		relative_position_id = JAP_Stabalize_the_Control
 
 		cost = 10
 
@@ -5155,168 +5195,16 @@
 		}
 	}
 
-	focus = {
-		id = JAP_build_up_the_manchurian_army
-		icon = GFX_focus_SOV_womens_fascist_movement
-		prerequisite = { focus = JAP_Industry_Plan }
-		x = -1
-		y = 2
-		relative_position_id = JAP_prepare_for_war_with_the_soviet_union
+	
 
-		cost = 5
-
-		ai_will_do = {
-			factor = 4
-		}
-
-		available = {
-			MAN = {
-				OR = {
-					is_in_faction_with = ROOT
-					is_subject_of = ROOT
-				}
-			}
-			if = {
-				limit = {
-					is_ai = no
-				}
-				has_equipment = { infantry_equipment > 1999 }
-			}
-		}
-
-		bypass = {
-			MAN = {
-				OR = {
-					exists = no
-					NOT = {
-						is_subject_of = ROOT
-						has_civil_war = yes
-					}
-				}
-				
-			}
-		}
-
-
-		completion_reward = {
-			send_equipment = {
-				target = MAN
-				equipment = infantry_equipment
-				amount = 2000
-				old_prioritised = yes
-			}
-			if = {
-				limit = { has_equipment = { support_equipment > 500 } }
-				send_equipment = {
-					target = MAN
-					equipment = support_equipment
-					amount = 500
-					old_prioritised = yes
-				}
-			}
-			if = {
-				limit = { has_equipment = { artillery_equipment > 250 } }
-				send_equipment = {
-					target = MAN
-					equipment = artillery_equipment
-					amount = 250
-					old_prioritised = yes
-				}
-			}
-			MAN = {
-				add_doctrine_cost_reduction = {
-					name = JAP_build_up_the_manchurian_army
-					cost_reduction = 1
-					uses = 2
-					category = land_doctrine
-				}
-				add_autonomy_ratio = {
-					value = -0.08333
-					localization = JAP_build_up_the_manchurian_army
-				}
-			}
-			MAN = {
-				country_event = wtt_japan.41
-			}
-		}
-		search_filters = {  FOCUS_FILTER_RESEARCH FOCUS_FILTER_TFV_AUTONOMY }
-	}
-
-	focus = {
-		id = JAP_create_a_manchurian_imperial_air_force
-		icon = GFX_focus_generic_cas_aircraft
-		prerequisite = { focus = JAP_build_up_the_manchurian_army }
-		x = 0
-		y = 1
-		relative_position_id = JAP_build_up_the_manchurian_army
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 3
-		}
-
-		available = {
-			MAN = {
-				OR = {
-					is_in_faction_with = ROOT
-					is_subject_of = ROOT
-				}
-			}
-		}
-
-		bypass = {
-			MAN = {
-				OR = {
-					exists = no
-					NOT = {
-						is_subject_of = ROOT
-						has_civil_war = yes
-					}
-				}
-			}
-		}
-
-
-		completion_reward = {
-			air_experience = 25
-			MAN = {
-				add_tech_bonus = {
-					name = air_plane_models
-					bonus = 0.75
-					uses = 2
-					category = light_air
-					category = medium_air
-					category = heavy_air
-				}
-				every_owned_state = {
-					limit = {
-						is_fully_controlled_by = MAN
-						is_owned_by = MAN
-						MAN = { is_puppet_of = JAP }
-					}
-					add_building_construction = {
-						type = air_base
-						level = 2
-						instant_build = yes
-					}
-				}
-				add_autonomy_ratio = {
-					value = -0.08333
-					localization = JAP_build_up_the_manchurian_army
-				}
-			}
-		}
-		search_filters = {  FOCUS_FILTER_RESEARCH FOCUS_FILTER_TFV_AUTONOMY FOCUS_FILTER_INDUSTRY }
-	}
 
 	focus = {
 		id = JAP_industry_development
 		icon = GFX_focus_generic_reorient_production
-		prerequisite = { focus =  JAP_War_Production }
-		x = 0
+		prerequisite = { focus =  JAP_Industry_Plan }
+		x = 1
 		y = 1
-		relative_position_id = JAP_War_Production
+		relative_position_id = JAP_Industry_Plan
 
 		cost = 10
 
@@ -5343,15 +5231,6 @@
 				}
 
 			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-
-			}
 			
 			 
 			}
@@ -5362,7 +5241,7 @@
 		id = JAP_give_everything_to_the_army
 		icon = GFX_focus_SOV_merge_plants
 		prerequisite = { focus = JAP_further_preparations_for_war }
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = JAP_further_preparations_for_war
 
@@ -5383,7 +5262,7 @@
 				
 					add_building_construction = {
 					type = arms_factory
-					level = 5
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -5399,12 +5278,12 @@
 	focus = {
 		id = JAP_War_Production
 		icon = GFX_SOV_superior_war_machines_ccp_2d_sov_compatibility
-		prerequisite = { focus = JAP_give_everything_to_the_army }
-		x = 1
+		prerequisite = { focus = JAP_further_preparations_for_war }
+		x = -1
 		y = 1
-		relative_position_id = JAP_give_everything_to_the_army
+		relative_position_id = JAP_further_preparations_for_war
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 3
@@ -5421,7 +5300,9 @@
 		id = JAP_train_generals_in_supply
 		icon = GFX_focus_generic_reinforcing_the_supply_network
 		prerequisite = { focus = JAP_give_everything_to_the_army }
-		prerequisite = { focus = JAP_create_a_manchurian_imperial_air_force }
+		prerequisite = {
+			focus = JAP_War_Production
+		}
 		x = -1
 		y = 1
 		relative_position_id = JAP_give_everything_to_the_army
@@ -5587,7 +5468,7 @@
 		y = 2
 		relative_position_id = JAP_preemptive_war
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -8009,15 +7890,32 @@ allow_branch = {
 		}
 
 		available = {
-			MAN = { is_subject_of = ROOT }
+			OR = {
+			# 1. Manchukuo is our puppet
+			MAN = { is_puppet_of = JAP }
+			
+			# 2. Japan fully controls all of Manchukuo’s core states
+			AND = {
+				MAN = { exists = no } # Means it’s been annexed
+				JAP = {
+					controls_state = 609
+					controls_state = 610
+					controls_state = 611
+					controls_state = 612
+					controls_state = 714
+					controls_state = 715
+					controls_state = 717
+					controls_state = 761
+				}
+			}
+		}
 		}
 
 		completion_reward = {
-			MAN = {
 				add_stability = 0.1
 				add_war_support = 0.1
-				add_political_power = 150
-			}
+
+
 		}
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
 	}
@@ -8037,18 +7935,41 @@ allow_branch = {
 		}
 
 		available = {
-			716 = { is_fully_controlled_by = MAN }
-			MAN = { is_subject_of = ROOT }
+			OR = {
+			# 1. Manchukuo is our puppet
+			MAN = { is_puppet_of = JAP }
+			
+			# 2. Japan fully controls all of Manchukuo’s core states
+			AND = {
+				MAN = { exists = no } # Means it’s been annexed
+				JAP = {
+					controls_state = 609
+					controls_state = 610
+					controls_state = 611
+					controls_state = 612
+					controls_state = 714
+					controls_state = 715
+					controls_state = 717
+					controls_state = 761
+				}
+			}
+		}
 		}
 
 		completion_reward = {
 			mark_focus_tree_layout_dirty = yes
-			MAN = {
-				add_ideas = MAN_resource_manchu_idea
-			}
+			every_owned_state = {
+				limit = { is_core_of = MAN }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
+}
 
 	focus = {
 		id = JAP_expand_the_showa_steel_works
@@ -8065,8 +7986,25 @@ allow_branch = {
 		}
 
 		available = {
-			716 = { is_fully_controlled_by = MAN }
-			MAN = { is_subject_of = ROOT }
+			OR = {
+			# 1. Manchukuo is our puppet
+			MAN = { is_puppet_of = JAP }
+			
+			# 2. Japan fully controls all of Manchukuo’s core states
+			AND = {
+				MAN = { exists = no } # Means it’s been annexed
+				JAP = {
+					controls_state = 609
+					controls_state = 610
+					controls_state = 611
+					controls_state = 612
+					controls_state = 714
+					controls_state = 715
+					controls_state = 717
+					controls_state = 761
+				}
+			}
+		}
 		}
 
 
@@ -8075,6 +8013,12 @@ allow_branch = {
 				add_resource = {
 					type = steel
 					amount = 32
+				}		
+			}
+			328 = {
+				add_resource = {
+					type = steel
+					amount = 13
 				}		
 			}
 						
@@ -8097,8 +8041,25 @@ allow_branch = {
 		}
 
 		available = {
-			716 = { is_fully_controlled_by = MAN }
-			MAN = { is_subject_of = ROOT }
+			OR = {
+			# 1. Manchukuo is our puppet
+			MAN = { is_puppet_of = JAP }
+			
+			# 2. Japan fully controls all of Manchukuo’s core states
+			AND = {
+				MAN = { exists = no } # Means it’s been annexed
+				JAP = {
+					controls_state = 609
+					controls_state = 610
+					controls_state = 611
+					controls_state = 612
+					controls_state = 714
+					controls_state = 715
+					controls_state = 717
+					controls_state = 761
+				}
+			}
+		}
 		}
 
 
@@ -8108,6 +8069,12 @@ allow_branch = {
 					type = aluminium
 					amount = 32
 				}				
+			}
+			328 = {
+				add_resource = {
+					type = aluminium
+					amount = 13
+				}		
 			}		
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -8128,8 +8095,25 @@ allow_branch = {
 		}
 
 		available = {
-			716 = { is_fully_controlled_by = MAN }
-			MAN = { is_subject_of = ROOT }
+			OR = {
+			# 1. Manchukuo is our puppet
+			MAN = { is_puppet_of = JAP }
+			
+			# 2. Japan fully controls all of Manchukuo’s core states
+			AND = {
+				MAN = { exists = no } # Means it’s been annexed
+				JAP = {
+					controls_state = 609
+					controls_state = 610
+					controls_state = 611
+					controls_state = 612
+					controls_state = 714
+					controls_state = 715
+					controls_state = 717
+					controls_state = 761
+				}
+			}
+		}
 		}
 
 
@@ -8232,18 +8216,30 @@ allow_branch = {
 		}
 
 		available = {
-			MAN = { 
-				is_subject_of = ROOT 
+			OR = {
+			# 1. Manchukuo is our puppet
+			MAN = { is_puppet_of = JAP }
+			
+			# 2. Japan fully controls all of Manchukuo’s core states
+			AND = {
+				MAN = { exists = no } # Means it’s been annexed
+				JAP = {
+					controls_state = 609
+					controls_state = 610
+					controls_state = 611
+					controls_state = 612
+					controls_state = 714
+					controls_state = 715
+					controls_state = 717
+					controls_state = 761
+				}
 			}
+		}
 		}
 
 		completion_reward = {
 			mark_focus_tree_layout_dirty = yes
-			MAN = {
-				if = {
-					limit = {
-						controls_state = 716
-					}
+			
 					build_railway = { #Mukden-Korean border
 						path = {
 							11771 9885 3895 3839 3970 6981
@@ -8254,19 +8250,12 @@ allow_branch = {
 							11771 987 9781 11764 964 3783 6851 1150
 						}
 					}
-				}
-				if = {
-					limit = {
-						controls_state = 716
-						controls_state = 610
-					}
+		
 					build_railway = { #Mukden - Chinese border
 						path = { 11771 6951 11815 9835 6837 11886 3900 }
 					}
 				}
-				MAN_low_legitimacy_level_down = yes
-			}
-		}
+			
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
@@ -8285,9 +8274,25 @@ allow_branch = {
 		}
 
 		available = {
-			MAN = {
-				is_subject_of = ROOT
+			OR = {
+			# 1. Manchukuo is our puppet
+			MAN = { is_puppet_of = JAP }
+			
+			# 2. Japan fully controls all of Manchukuo’s core states
+			AND = {
+				MAN = { exists = no } # Means it’s been annexed
+				JAP = {
+					controls_state = 609
+					controls_state = 610
+					controls_state = 611
+					controls_state = 612
+					controls_state = 714
+					controls_state = 715
+					controls_state = 717
+					controls_state = 761
+				}
 			}
+		}
 		}
 
 		completion_reward = {
@@ -8328,9 +8333,25 @@ allow_branch = {
 		}
 
 		available = {
-			MAN = {
-				is_subject_of = ROOT
+			OR = {
+			# 1. Manchukuo is our puppet
+			MAN = { is_puppet_of = JAP }
+			
+			# 2. Japan fully controls all of Manchukuo’s core states
+			AND = {
+				MAN = { exists = no } # Means it’s been annexed
+				JAP = {
+					controls_state = 609
+					controls_state = 610
+					controls_state = 611
+					controls_state = 612
+					controls_state = 714
+					controls_state = 715
+					controls_state = 717
+					controls_state = 761
+				}
 			}
+		}
 		}
 
 
@@ -8371,22 +8392,34 @@ allow_branch = {
 		}
 
 		available = {
-			MAN = {
-				is_subject_of = ROOT
-				has_full_control_of_state = 715
-				has_full_control_of_state = 610
-				has_full_control_of_state = 328
+			OR = {
+			# 1. Manchukuo is our puppet
+			MAN = { is_puppet_of = JAP }
+			
+			# 2. Japan fully controls all of Manchukuo’s core states
+			AND = {
+				MAN = { exists = no } # Means it’s been annexed
+				JAP = {
+					controls_state = 609
+					controls_state = 610
+					controls_state = 611
+					controls_state = 612
+					controls_state = 714
+					controls_state = 715
+					controls_state = 717
+					controls_state = 761
+				}
 			}
+		}
 		}
 
 
 		completion_reward = {
-			715 = { add_extra_state_shared_building_slots = 3 }
-			610 = { add_extra_state_shared_building_slots = 3 }
-			328 = { add_extra_state_shared_building_slots = 3 }
-			MAN = {
-				add_ideas = MAN_japanese_settlers
-			}
+			every_owned_state = {
+				limit = { is_core_of = MAN }
+				add_extra_state_shared_building_slots = 2
+
+		}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -8459,7 +8492,7 @@ allow_branch = {
 			add_tech_bonus = {
 				name = JAP_small_arms_modernization
 				bonus = 1
-				uses = 3
+				uses = 2
 				category = infantry_weapons
 			}
 			add_tech_bonus = {
@@ -8481,7 +8514,7 @@ allow_branch = {
 		y = 1
 		relative_position_id = JAP_lunge_mines
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -8525,7 +8558,7 @@ allow_branch = {
 			add_tech_bonus = {
 				name = JAP_supremacy_of_technology
 				bonus = 1
-				uses = 2
+				uses = 1
 				category = cat_mechanized_equipment
 			}
 			if = {
@@ -8535,7 +8568,7 @@ allow_branch = {
 				add_tech_bonus = {
 					name = JAP_supremacy_of_technology
 					bonus = 1
-					uses = 2
+					uses = 1
 					technology = amphibious_mechanized_infantry
 					technology = amphibious_mechanized_infantry_2
 				}
@@ -8596,7 +8629,7 @@ allow_branch = {
 			add_tech_bonus = {
 				name = JAP_armored_divisions
 				bonus = 1
-				uses = 2
+				uses = 1
 				category = armor
 			}
 			add_tech_bonus = {
@@ -8766,7 +8799,7 @@ allow_branch = {
 		y = 1
 		relative_position_id = JAP_supremacy_of_will
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1

@@ -8310,7 +8310,6 @@ formable_nations_mod_category = {
 			NOT = { has_global_flag = hide_formable_nations }
 			OR = { 
 				has_global_flag = no_limit
-				original_tag = POL
 				original_tag = CZE
 				original_tag = SLO
 				original_tag = HUN
@@ -8683,7 +8682,6 @@ formable_nations_mod_category = {
 				has_global_flag = no_limit
 				original_tag = AUS
 				original_tag = SWI
-				original_tag = ITA
 			}
 		}
 
@@ -12637,7 +12635,6 @@ formable_nations_mod_category = {
 			NOT = { has_global_flag = hide_formable_nations }
 			OR = { 
 				has_global_flag = no_limit
-				original_tag = POL
 				original_tag = SLO
 				original_tag = CZE
 			}

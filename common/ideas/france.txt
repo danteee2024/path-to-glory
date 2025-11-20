@@ -11,7 +11,6 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_factor = -0.10
 				consumer_goods_factor = 0.05
 			}
 		}
@@ -85,7 +84,7 @@ ideas = {
 			picture = AFG_adopt_nufus
 
 			modifier = {
-				conscription = 0.015
+				conscription = 0.010
 				mobilization_speed = 0.1
 				max_planning = 0.10
 				
@@ -984,7 +983,7 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_factory =  0.15
+				industrial_capacity_factory =  0.2
 				political_power_factor = 0.3
 			}
 		}
@@ -996,7 +995,7 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_factory =  0.12
+				industrial_capacity_factory =  0.15
 				political_power_factor = 0.2
 			}
 		}
@@ -1008,7 +1007,7 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_factory = 0.09
+				industrial_capacity_factory = 0.12
 				political_power_factor = 0.1
 			}
 		}
@@ -1020,7 +1019,7 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_factory =  0.06
+				industrial_capacity_factory =  0.09
 			}
 		}
 		
@@ -1031,7 +1030,7 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_factory =  0.03
+				industrial_capacity_factory =  0.06
 				political_power_cost = 0.1
 			}
 		}
@@ -1043,6 +1042,7 @@ ideas = {
 			}
 
 			modifier = {
+				industrial_capacity_factory =  0.03
 				political_power_cost = 0.2
 			}
 		}
@@ -1054,7 +1054,6 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_factory =  -0.05
 				political_power_cost = 0.3
 			}
 		}
@@ -1066,7 +1065,7 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_factory =  -0.10
+				industrial_capacity_factory =  -0.05
 				political_power_cost = 0.4
 			}
 		}
@@ -1078,7 +1077,7 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_factory = -0.15
+				industrial_capacity_factory = -0.10
 				political_power_cost = 0.5
 			}
 		}
@@ -1097,8 +1096,9 @@ ideas = {
 			picture = generic_central_management
 
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.1
 				conversion_cost_civ_to_mil_factor= -0.2
+				production_speed_arms_factory_factor = 0.05
 			}
 		}
 		
@@ -1140,6 +1140,7 @@ ideas = {
 				production_speed_infrastructure_factor = 0.1
 				production_speed_rail_way_factor = 0.1
 				production_speed_naval_base_factor = 0.1
+				production_speed_buildings_factor = 0.05
 			}
 		}
 
@@ -1259,6 +1260,12 @@ ideas = {
 				artillery_equipment = {
 					build_cost_ic = -0.05  instant = yes
 				}
+				anti_air_equipment = {
+					build_cost_ic = -0.05  instant = yes
+				}
+				anti_tank_equipment = {
+					build_cost_ic = -0.05  instant = yes
+				}
 			}
 		}
 		
@@ -1339,6 +1346,8 @@ ideas = {
 			
 			modifier = {
 				amphibious_invasion = 0.20
+				modifier_army_sub_unit_marine_attack_factor = 0.05
+				modifier_army_sub_unit_marine_defence_factor = 0.05
 			}
 		}
 		
@@ -1582,7 +1591,7 @@ ideas = {
 	
 			modifier = {
 				consumer_goods_factor = -0.3
-				stability_weekly = -0.001
+				stability_factor = -0.05
 			}
 		}
 		FRA_empowered_trade_unions = {
@@ -1621,6 +1630,7 @@ ideas = {
 			
 			modifier = {
 				production_speed_buildings_factor = 0.10
+				industrial_capacity_factory = 0.1
 			}
 		}
 		
@@ -1749,11 +1759,62 @@ ideas = {
 			
 			modifier = {
 				max_planning = 0.35
-				planning_speed = -0.25
+				planning_speed = -0.15
 				max_command_power = 25
 				command_power_gain_mult = 0.1
 			}
 		}
+
+
+		FRA_Mountainers = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			cancel = {
+				NOT = { owns_state = 28 }
+			}
+
+			removal_cost = -1
+
+			picture = eng_special_air_service
+			
+			modifier = {
+				modifier_army_sub_unit_mountaineers_attack_factor = 0.05
+				modifier_army_sub_unit_mountaineers_defence_factor = 0.05
+			}
+		}
+
+		FRA_Defend_the_Homeland = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			cancel = {
+				NOT = { owns_state = 28 }
+			}
+
+			removal_cost = -1
+
+			picture = ast_volunteer_defence_corps
+			
+			modifier = {
+				conscription = 0.01
+				army_core_defence_factor = 0.05
+				army_core_attack_factor = 0.05
+			}
+		}
+			
 		
 		FRA_protected_by_the_maginot_line_attack = {
 			
@@ -1793,7 +1854,7 @@ ideas = {
 			modifier = {
 				max_planning = 0.25
 				army_speed_factor = 0.05
-				army_org_factor = 0.08
+				army_org_factor = 0.1
 			}
 		}
 		
@@ -1919,8 +1980,9 @@ ideas = {
 			}
 
 			modifier = {
-				conscription = 0.01
+				conscription = 0.03
 				army_morale_factor = 0.10
+				land_reinforce_rate = 0.05
 			}
 		}		
 		FRA_support_the_centre_focus = {
@@ -2043,6 +2105,7 @@ ideas = {
 
 			modifier = {
 				army_org = 5
+				org_loss_when_moving = -0.05
 				justify_war_goal_time = -0.2
 			}
 		}
@@ -2120,10 +2183,23 @@ ideas = {
 			}
 
 			modifier = {
-				industry_air_damage_factor = -0.15
+				industry_air_damage_factor = -0.2
 				production_factory_efficiency_gain_factor = 0.05
 				production_factory_start_efficiency_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
 				production_speed_buildings_factor = 0.05
+			}
+		}
+		FRA_Invest_into_the_Factory = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				industrial_capacity_factory = 0.1
 			}
 		}
 
@@ -2432,7 +2508,7 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.075
 			}
 		}
-		FRA_entrepeneurship = {
+		 FRA_plan_v_ideatrepeneurship = {
 			picture = chi_hyper_inflation2
 			allowed = {
 				original_tag = FRA
@@ -3347,6 +3423,8 @@ ideas = {
 			modifier = {
 				experience_gain_air = 0.10
 				air_ace_generation_chance_factor = 0.15
+				air_agility_factor = 0.1
+				air_accidents_factor = -0.10
 			}
 		}
 		
@@ -3377,11 +3455,7 @@ ideas = {
 					instant = yes
 				}
 				mio_cat_eq_all_small_plane = {
-					build_cost_ic = -0.1
-					instant = yes
-				}
-				mio_cat_eq_all_small_plane = {
-					build_cost_ic = -0.1
+					build_cost_ic = -0.15
 					instant = yes
 				}
 			}

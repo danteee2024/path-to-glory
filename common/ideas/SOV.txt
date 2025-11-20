@@ -27,7 +27,8 @@ ideas = {
 			modifier = {
 				
 				army_attack_factor = 0.05
-				recruitable_population_factor = -0.10
+				army_defence_factor = 0.05
+				conscription = -0.02
 			}
 		}
 
@@ -1928,12 +1929,12 @@ ideas = {
 
 		SOV_military_reorganization_ns = {
 
-			picture = generic_army_problems
+			picture = CZE_planning_bonus
 
 			removal_cost = -1
 
 			allowed = {
-				always = no # Added via focus
+				always = no 
 			}
 
 			allowed_civil_war = {
@@ -1941,10 +1942,9 @@ ideas = {
 			}
 
 			modifier = {
-				army_org_factor = -0.1
-				experience_gain_army_factor = -1
-				army_org_regain = -0.15
-				custom_modifier_tooltip = SOV_military_reorganization_ns_removal_tt
+				army_org_factor = 0.05
+				experience_gain_army_factor = 0.05
+				army_org_regain = 0.05
 			}
 		}
 
@@ -2302,7 +2302,7 @@ ideas = {
 			}
 
 			modifier = {
-				production_speed_buildings_factor = 0.1
+				production_speed_buildings_factor = 0.10
 			}
 		}
 
@@ -2737,6 +2737,19 @@ ideas = {
 			}
 		}
 
+		RUS_democratic_industrial_modernization_idea = {
+    picture = SOV_russian_corporate_state_ccp_sov_compatibility
+    allowed = {
+        original_tag = RUS
+    }
+    modifier = {
+        industrial_capacity_factory = 0.1
+        production_factory_efficiency_gain_factor = 0.05
+		production_speed_buildings_factor = 0.1
+		research_speed_factor = 0.05
+    }
+}
+
 		SOV_our_slavic_commitments = {
 			picture = SOV_our_slavic_commitments_ccp_sov_compatibility
 			removal_cost = -1
@@ -2967,7 +2980,6 @@ ideas = {
 			modifier = {
 				conscription = 0.01
 				consumer_goods_factor = -0.15
-				global_building_slots_factor = -0.1
 			}
 		}
 		SOV_administrative_reforms_idea = {

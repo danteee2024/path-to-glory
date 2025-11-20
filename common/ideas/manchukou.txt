@@ -193,6 +193,7 @@ ideas = {
 		}
 		MAN_resource_manchu_idea = {
 			picture = saf_history_of_segregation
+			name = 	MAN_resource_manchu_idea
 			allowed = {
 				always = yes
 			}
@@ -208,7 +209,6 @@ ideas = {
 			
 			removal_cost = -1
 			modifier = {
-				production_speed_buildings_factor = -0.05
 				local_resources_factor = 0.15
 				fuel_gain_factor = 0.25
 			}
