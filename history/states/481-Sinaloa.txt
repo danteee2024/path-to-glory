@@ -4,15 +4,12 @@ state={
 	name="STATE_481" # Durango
 	manpower = 1255094
 	
-	state_category = rural
-	
-    resources={
-		steel=46
+	resources = {
+		coal = 1 # initial distribution = with infra 1.4 / 4 total - includes Sonora and Chihauha
 	}
 
-
-
-
+	state_category = rural
+	
 	history={
 		owner = MEX
 		buildings = {

@@ -8,14 +8,13 @@ state={
 		owner = SIA
 		buildings = {
 			infrastructure = 1
-			industrial_complex = 1
 		}
 		victory_points = {
 			10438 1 
 		}
 		add_core_of = SIA
 	}
-	manpower=5428128
+	manpower=2000000
 	state_category = town
 	buildings_max_level_factor=1.000
 	local_supplies=0.000

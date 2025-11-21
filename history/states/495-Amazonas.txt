@@ -2,9 +2,7 @@
 state={
 	id=495
 	name="STATE_495"
-     resources = {
-		rubber = 18
-	}
+
 	history={
 		owner = BRA
 		add_core_of = BRA

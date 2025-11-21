@@ -7,10 +7,6 @@ state = {
 	
 	state_category = pastoral
 
-	resources = {
-		steel = 12
-	}
-
 	history = {
 		set_variable = { ETH_state_development_production_speed = -0.3 }
 		set_variable = { ETH_state_development_local_building_slots_factor = -0.3 }

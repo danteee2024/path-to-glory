@@ -1,7 +1,7 @@
 state = {
 	id = 532
 	name = "STATE_532" # Tokai
-	manpower = 6174000
+	manpower = 7174000 # was 6174000
 	state_category = large_city
 
 	history = {
@@ -13,7 +13,7 @@ state = {
 			infrastructure = 4 #was: 7
 			arms_factory = 1
 			dockyard = 1
-			industrial_complex = 3
+			industrial_complex = 2
 
 			# Ōi Dam
 			4069 = { dam = 1 }

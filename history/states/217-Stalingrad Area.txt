@@ -19,15 +19,11 @@ state = {
 			arms_factory = 2
 			industrial_complex = 1
 			air_base = 1
-			 3529 = {
-                land_facility = 1
-            }
 
 			# 22nd Congress of the CPSU Stalingrad Hydroelectric Power Station
 			#3555 = { dam = 1 }
 
 		}
-		
 		
 		1939.1.1 = {
 			buildings = {

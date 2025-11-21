@@ -4,14 +4,15 @@ state={
 	name="STATE_25"
 	manpower = 1343700
 
+	resources = {
+		coal = 2 #initial distribution / 140 total
+	}
 
 	state_category = large_town
 	history={
 		owner = FRA
 		buildings = {
 			infrastructure = 3
-			arms_factory = 1
-			industrial_complex = 1
 		}
 		victory_points = {
 			620 5

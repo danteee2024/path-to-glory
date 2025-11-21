@@ -23,7 +23,7 @@ state = {
 			6900 2
 		}
 		buildings = {
-			infrastructure = 1 
+			infrastructure = 2 
 			arms_factory = 1
 			industrial_complex = 1
 			air_base = 3
@@ -36,6 +36,7 @@ state = {
 
 		}
 		add_core_of = ALB
+		add_claim_by = ITA
 		1939.4.12 = {
 			owner = ITA
 			controller = ITA

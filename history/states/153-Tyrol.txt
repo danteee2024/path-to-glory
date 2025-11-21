@@ -2,18 +2,14 @@
 state={
 	id=153
 	name="STATE_153"
-	resources = {
-		tungsten = 20
-	}
 	history={
 		owner = AUS
-
 		victory_points = {
 			673 5 
 		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 2
+			industrial_complex = 1
 			air_base = 3
 		}
 		add_core_of = AUS

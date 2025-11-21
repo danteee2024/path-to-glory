@@ -10,7 +10,6 @@ state = {
 	}
 	resources = {
 		oil = 1
-		tungsten = 16
 	}
 
 	history = {

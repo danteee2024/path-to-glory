@@ -3,6 +3,10 @@ state={
 	name="STATE_716"
 	resources={
 		steel=27.000
+		chromium = 4
+		tungsten = 4
+		oil = 3 #Japan extracted 1m barrels annually from Manhuria
+		coal = 11
 	}
 
 	history={
@@ -13,16 +17,26 @@ state={
 		buildings = {
 			infrastructure = 2
 			arms_factory = 2
-			industrial_complex = 4
+			industrial_complex = 1
 			air_base = 5
-			964 = {
+			11764 = {
 				naval_base = 3
 
 			}
-
+			11808 = {
+				landmark_great_wall_section = {
+				    level = 1
+				    allowed = {
+				        has_dlc = "No Compromise, No Surrender"
+				    }
+				}
+			}
 		}
 		victory_points = {
-			11771 3 
+			11771 3
+		}
+		victory_points = {
+			11764 1 
 		}
 
 	}
@@ -32,7 +46,7 @@ state={
 	}
 	manpower=10264620
 	buildings_max_level_factor=1.000
-	state_category= metropolis
+	state_category=city
 
 	local_supplies=0.0 
 }
