@@ -19,7 +19,7 @@ state={
 		}
 	}
 	resources = {
-		chrominu = 11
+		chromium = 11
 	}
 	
 	provinces={

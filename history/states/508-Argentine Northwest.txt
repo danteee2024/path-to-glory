@@ -4,6 +4,9 @@ state = {
 	manpower = 1141311
 	
 	state_category = town
+	resources = {
+		coal = 9
+	}
 
 	history = {
 
@@ -12,7 +15,7 @@ state = {
 
 		buildings = {
 			infrastructure = 2
-			industrial_complex = 1
+			industrial_complex = 2
 		}
 		
 		victory_points = {

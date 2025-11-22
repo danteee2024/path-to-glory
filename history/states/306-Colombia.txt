@@ -5,6 +5,10 @@ state={
 	manpower = 4953049
 	
 	state_category = city
+	resources = {
+		coal = 4
+		steel = 9
+	}
 	
 	history={
 		owner = COL
