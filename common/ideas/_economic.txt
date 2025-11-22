@@ -1008,7 +1008,7 @@ level = 1
    				factor = 0
    			}
 		}
-	}
+	
 	JAP_war_communism_idea = {
 
 			picture = new_economic_policy
@@ -1670,4 +1670,5 @@ level = 2
 
 		}
 	}
+}
 
