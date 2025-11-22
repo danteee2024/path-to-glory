@@ -5,6 +5,8 @@ state = {
 
 	resources = {
 		coal = 19 #initial distribution
+		steel = 12
+		tungsten = 9
 	}
 	
 	state_category = town

@@ -5,7 +5,7 @@ state = {
 	state_category = pastoral
 
 	resources = {
-		coal = 1 #initial distribution
+		coal = 11 #initial distribution
 	}
 
 	history = {
