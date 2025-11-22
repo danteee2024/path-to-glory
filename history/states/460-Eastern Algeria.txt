@@ -6,6 +6,12 @@ state={
 	
 	state_category = town
 
+	resources = {
+		coal = 6
+		chromium = 4
+		tungsten = 3
+	}
+
 	history={
 		owner = FRA
 		add_core_of = ALG

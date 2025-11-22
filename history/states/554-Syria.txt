@@ -7,7 +7,7 @@ state={
 	state_category = rural
 
 	history={
-		owner = SYR
+		owner = FRA
 		victory_points = {
 			4111 5
 		}
@@ -17,6 +17,10 @@ state={
 		}
 		add_core_of = SYR	
 
+	}
+	resources = {
+		steel = 2
+		coal = 3
 	}
 
 

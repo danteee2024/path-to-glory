@@ -1,6 +1,9 @@
 state= { 
 	id = 856
 	name = "STATE_856"
+	resources = {
+		coal = 3
+	}
 	
 	history = {
 
@@ -8,8 +11,10 @@ state= {
 		add_core_of	= SAU
 
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
 			arms_factory = 1
+			industrial_complex = 1
+			dockyard = 1
 			12883 = {
 				naval_base = 5
 			}
@@ -24,7 +29,7 @@ state= {
 		}
 	}
 	manpower = 500000
-	state_category = pastoral
+	state_category =  town
 
 	provinces = {
 		1923 2090 5037 8073 10786 12883 

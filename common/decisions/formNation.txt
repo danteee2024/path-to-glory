@@ -11990,6 +11990,7 @@ formable_nations_mod_category = {
 				state = 610
 				state = 525
 				state = 527
+				state = 524
 
 				 # Soviet
 				state = 408
@@ -12003,6 +12004,13 @@ formable_nations_mod_category = {
 				state = 597
 				state = 598 
 				state = 613 
+				state = 1034
+				state = 1038
+				state = 1039
+				state = 1043
+				state = 596
+				state = 595
+
 			}
 		}
 		
@@ -12038,6 +12046,7 @@ formable_nations_mod_category = {
 						609 = { owns_or_subject_of = yes }
 						525 = { owns_or_subject_of = yes }
 						527 = { owns_or_subject_of = yes }
+					 	524 = { owns_or_subject_of = yes }
 
 						OR = { 
 						AND = {
@@ -12047,6 +12056,12 @@ formable_nations_mod_category = {
 						597 = { controls_or_subject_of = yes }
 						598 = { controls_or_subject_of = yes }
 						613 = { controls_or_subject_of = yes }
+						1034 = { controls_or_subject_of = yes }
+						1038 = { controls_or_subject_of = yes }
+						1039 = { controls_or_subject_of = yes }
+						1043 = { controls_or_subject_of = yes }
+						596 = { controls_or_subject_of = yes }
+						595 = { controls_or_subject_of = yes }
 						}	
 						AND = {
 							# Soviet
@@ -12103,12 +12118,19 @@ formable_nations_mod_category = {
 				409 = { add_core_of = ROOT }
 				611 = { add_core_of = ROOT }
 				612 = { add_core_of = ROOT }
+				524 = { add_core_of = ROOT }
 				# Chinese
 				608 = { add_core_of = ROOT }
 				614 = { add_core_of = ROOT }
 				597 = { add_core_of = ROOT }
 				598 = { add_core_of = ROOT }
 				613 = { add_core_of = ROOT }
+				1034 = { add_core_of = ROOT }
+				1038 = { add_core_of = ROOT }
+				1039 = { add_core_of = ROOT }
+				1043 = { add_core_of = ROOT }
+				596 = { add_core_of = ROOT }
+				595 = { add_core_of = ROOT }
 				# Soviet
 				408 = { add_core_of = ROOT }
 				409 = { add_core_of = ROOT }

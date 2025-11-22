@@ -18,6 +18,9 @@ state={
 			}
 		}
 	}
+	resources = {
+		rubber = 6
+	}
 
 	provinces={
 		5013 5070 8065 8122 10762 10803

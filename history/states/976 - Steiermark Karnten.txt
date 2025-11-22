@@ -6,9 +6,10 @@ state = {
 	state_category = city
 	
 	resources = {
-		steel = 15 # was: 8
+		steel = 17 # was: 8
 		aluminium = 1 # was: 1
 		coal = 1 #initial distribution /5 total
+		tungsten = 18
 	}
 
 	history = {
@@ -18,7 +19,7 @@ state = {
 
 		buildings = {
 			infrastructure = 3 
-			industrial_complex = 2
+			industrial_complex = 3
 		}
 
 		victory_points = {

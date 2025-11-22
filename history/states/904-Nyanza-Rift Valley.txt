@@ -12,6 +12,9 @@ state={
 		}
 		add_core_of = KEN
 	}
+	resources = {
+		coal = 5
+	}
 
 	provinces={
 		5160 10860 11145 

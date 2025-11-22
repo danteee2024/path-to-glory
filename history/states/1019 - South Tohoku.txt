@@ -4,8 +4,8 @@ state = {
 	manpower = 6575000
 	state_category = town # was large_city
 	resources = {
-		steel = 5
-		coal = 1 #initial distribution
+		steel = 15
+		coal = 5 #initial distribution
 	}
 
 	history = {
@@ -16,7 +16,7 @@ state = {
 		buildings = {
 		
 			arms_factory = 1
-			industrial_complex = 1
+			industrial_complex = 3
 			infrastructure = 2
 
 		}

@@ -4,6 +4,9 @@ state = {
 	manpower = 1865552
 	
 	state_category = wasteland
+	resources = {
+		chromium = 8
+	}
 
 	history = {
 

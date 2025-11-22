@@ -6,6 +6,11 @@ state={
 	
 	state_category = wasteland
 
+	resources = {
+		coal = 14
+		tungsten = 3
+	}
+
 	history={
 		owner = ITA
 		

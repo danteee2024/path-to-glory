@@ -18,6 +18,9 @@ state={
 			8038 1
 		}
 	}
+	resources = {
+		chrominu = 11
+	}
 	
 	provinces={
 		4920 5012 7979 8038 8111 10875

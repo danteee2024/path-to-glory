@@ -5,7 +5,7 @@ state = {
 	state_category = town # was large_city
 	resources = {
 		steel = 10 # was: 35, then 15
-		oil = 3 #Should be located in the northern state after the split
+		oil = 13 #Should be located in the northern state after the split
 		coal = 2 #initial distribution
 	}
 
@@ -18,7 +18,9 @@ state = {
 			
 			industrial_complex = 1
 			fuel_silo = 1
-			infrastructure = 2
+			infrastructure = 3
+			dockyard = 2
+			arms_factory = 1
 			air_base = 6
 
 			9859 = {
