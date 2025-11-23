@@ -2,7 +2,7 @@ state = {
 	id = 1035
 	name = "STATE_1035"
 	manpower = 8652549
-	state_category = large_town
+	state_category = City
 	resources = {
 
 	}
@@ -14,7 +14,7 @@ state = {
 
 		buildings = {
 			infrastructure = 2	
-			industrial_complex = 2
+			industrial_complex = 3
 			11913 = {
                 landmark_nanjing_presidential_palace = {
                     level = 1
