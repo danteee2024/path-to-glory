@@ -1,0 +1,67 @@
+scripted_diplomatic_actions = {
+	si_request_resource_rights = {
+		cost = 5
+		icon = 2
+
+		selectable = {
+			PREV = { 
+				compare_autonomy_state > autonomy_puppet
+			}
+		}
+
+		visible = {
+			is_ai = no
+			ROOT = {
+				NOT = {
+					has_relation_modifier = {
+						target = PREV
+						modifier = si_resource_rights_given_opmod
+					}
+					has_war_with = PREV
+				}
+			}
+		}
+
+		accept_title = si_request_resource_rights_accept
+		accept_description = si_request_resource_rights_accept_desc
+		reject_title = si_request_resource_rights_reject
+		reject_description = si_request_resource_rights_reject_desc
+		send_description = si_request_resource_rights_send_desc
+		receive_description = si_request_resource_rights_receive_desc
+
+		requires_acceptance = yes
+		show_acceptance_on_action_button = no
+		
+		can_be_sent = {
+			always = yes
+		}
+
+		on_sent_effect = {
+			ROOT = {
+				set_country_flag = { 
+					flag = diplomatic_action_cooldown
+					value = 1
+					days = 30
+				}
+			}
+		}
+
+		reject_effect = {}
+
+		complete_effect = {
+			log = "L|[PREV.GetTag] gave resource rights to [ROOT.GetTag]"
+			ROOT = {
+				add_relation_modifier = {
+					target = PREV
+					modifier = si_resource_rights_given_opmod
+				}
+			}
+		}
+
+		ai_acceptance = {
+			si_request_resource_rights_ai_condition = { base = -100 }
+		}
+	}
+
+	
+}

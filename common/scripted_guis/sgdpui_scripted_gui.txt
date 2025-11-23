@@ -1,0 +1,161 @@
+scripted_gui = {
+	sGDPui_graph_construction_scripted_gui = {
+		window_name = "sGDPui_graph_gui"
+		context_type = player_context
+		parent_window_token = construction_tab
+
+		dirty = sGDPui_graph_dirty
+
+		visible = {
+			check_variable = { chart_open = 1 }
+		}
+
+		effects = {
+			add_button_click = {
+				calculate_gdp = yes
+
+				compute_y_axis_intervals = yes
+
+				sGDPui_add_point_to_graph = yes
+			}
+		}
+
+		triggers = {
+			add_button_visible = { is_debug = yes }
+		}
+
+		# Set up dynamic list to generate one line segment per point
+		dynamic_lists = {
+			line_segments = {
+				array = sGDPui_graph_offsets
+				change_scope = no
+				entry_container = sGDPui_graph_line_segment
+				index = segment_idx
+			}
+		}
+
+		properties = {
+			segment = {
+				# Sets they position of the line segment to the graph offset
+				# Equal to -y1
+				y = sGDPui_graph_offsets^segment_idx
+
+				# Tells the shader how steep to draw the line
+				# Must be equal to (y2 - y1) / 2 + 50
+				frame = sGDPui_graph_slopes^segment_idx
+			}
+		}
+	}
+	sGDPui_visibility_button_hide_gui = {
+		window_name = "sGDPui_visibility_button_hide_container"
+		context_type = player_context
+		parent_window_token = construction_tab
+
+		dirty = ROOT.chart_open
+
+		visible = {
+			check_variable = { ROOT.chart_open = 1 }
+		}
+
+		effects = {
+			visibility_button_hide_click = { set_variable = { ROOT.chart_open = 0 } }
+		}
+	}
+	sGDPui_visibility_button_show_gui = {
+		window_name = "sGDPui_visibility_button_show_container"
+		context_type = player_context
+		parent_window_token = construction_tab
+
+		dirty = ROOT.chart_open
+
+		visible = {
+			check_variable = { ROOT.chart_open = 0 }
+		}
+
+		effects = {
+			visibility_button_show_click = { set_variable = { ROOT.chart_open = 1 } }
+		}
+	}
+
+	sGDPui_graph_diplomacy_scripted_gui = {
+		window_name = "sGDPui_diplo_graph_gui"
+		context_type = selected_country_context
+		parent_window_token = selected_country_view
+
+		dirty = sGDPui_graph_dirty
+
+		visible = {
+			always = no		# might revisit
+			#check_variable = { ROOT.diplo_chart_open = 1 }
+		}
+
+		effects = {
+			diplo_add_button_click = {
+				calculate_gdp = yes
+
+				compute_y_axis_intervals = yes
+
+				sGDPui_add_point_to_graph = yes
+			}
+		}
+
+		# Set up dynamic list to generate one line segment per point
+		dynamic_lists = {
+			line_segments = {
+				array = THIS.sGDPui_graph_offsets
+				change_scope = no
+				entry_container = sGDPui_diplo_graph_line_segment
+				index = segment_idx
+			}
+		}
+
+		properties = {
+			segment = {
+				# Sets they position of the line segment to the graph offset
+				# Equal to -y1
+				y = sGDPui_graph_offsets^segment_idx
+
+				# Tells the shader how steep to draw the line
+				# Must be equal to (y2 - y1) / 2 + 50
+				frame = sGDPui_graph_slopes^segment_idx
+			}
+		}
+	}
+
+	sGDPui_visibility_diplo_button_hide_gui = {
+		window_name = "sGDPui_diplo_visibility_button_hide_container"
+		context_type = selected_country_context
+		parent_window_token = selected_country_view
+
+		dirty = ROOT.diplo_chart_open
+
+		visible = {
+			always = no		# might revisit
+			#check_variable = { ROOT.diplo_chart_open = 1 }
+		}
+
+		effects = {
+			diplo_visibility_button_hide_click = {
+				set_variable = { ROOT.diplo_chart_open = 0 }
+			}
+		}
+	}
+	sGDPui_visibility_diplo_button_show_gui = {
+		window_name = "sGDPui_diplo_visibility_button_show_container"
+		context_type = selected_country_context
+		parent_window_token = selected_country_view
+
+		dirty = ROOT.diplo_chart_open
+
+		visible = {
+			always = no		# might revisit
+			#check_variable = { ROOT.diplo_chart_open = 0 }
+		}
+
+		effects = {
+			diplo_visibility_button_show_click = {
+				set_variable = { ROOT.diplo_chart_open = 1 }
+			}
+		}
+	}
+}

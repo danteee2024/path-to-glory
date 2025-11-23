@@ -1,0 +1,136 @@
+SAF_balance_of_power_category = {
+
+	SAF_bop_slander_the_duce = {
+		priority = 120
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SAF
+		}
+
+		visible = {
+			has_country_leader = {
+				character = SAF_moses_kotane
+				ruling_only = yes
+			}
+			
+		}
+
+		available = {}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		complete_effect = {
+			SAF_bop_medium_increase_effect = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		
+		}
+	}
+		SAF_bop_slander_the_duce_2 = {
+		priority = 120
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SAF
+		}
+
+		visible = {
+			has_country_leader = {
+				character = SAF_moses_kotane
+				ruling_only = yes
+			}
+			
+		}
+
+		available = {}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		complete_effect = {
+			SAF_bop_medium_decrease_effect = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		
+		}
+	}
+	SAF_bop_slander_the_duce_3 = {
+		priority = 120
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SAF
+		}
+
+		visible = {
+			has_country_leader = {
+				character = SAF_moses_kotane
+				ruling_only = yes
+			}
+			
+		}
+
+		available = {}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		complete_effect = {
+			SAF_bop_very_high_increase_effect = yes
+			add_timed_idea = {
+				idea = FRA_investment
+				days = 30
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		
+		}
+	}
+	SAF_bop_slander_the_duce_4 = {
+		priority = 120
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SAF
+		}
+
+		visible = {
+			has_country_leader = {
+				character = SAF_moses_kotane
+				ruling_only = yes
+			}
+			
+		}
+
+		available = {}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		complete_effect = {
+		    SAF_bop_very_high_decrease_effect = yes
+			add_timed_idea = {
+				idea = FRA_investment
+				days = 30
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		
+		}
+	}
+
+}

@@ -1,0 +1,34 @@
+swap_great_depression = {
+
+			if = {
+				limit = { has_idea = SIA_Great_Depression_I }
+				swap_ideas = {
+					remove_idea = SIA_Great_Depression_I
+					add_idea = SIA_Great_Depression_II
+				}
+			}
+			else_if = {
+				limit = { has_idea = SIA_Great_Depression_II }
+				
+				swap_ideas = {
+					remove_idea = SIA_Great_Depression_II
+					add_idea = SIA_Great_Depression_III
+				}
+			
+			}
+			else_if = {
+				limit = { has_idea = SIA_Great_Depression_III }
+				
+				swap_ideas = {
+					remove_idea = SIA_Great_Depression_III
+					add_idea = SIA_Great_Depression_IV
+				}
+			
+			}
+			else_if = {
+				limit = { has_idea = SIA_Great_Depression_IV }
+				remove_ideas = SIA_Great_Depression_IV
+			}
+
+
+}

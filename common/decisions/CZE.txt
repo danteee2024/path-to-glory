@@ -1,0 +1,347 @@
+political_actions = {
+
+	CZE_integrate_POL = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = CZE
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+	        POL = {
+	        	OR = {
+	            	is_subject_of = ROOT
+	            	AND = {
+	            		any_core_state = {
+	            			is_controlled_by = ROOT
+	            		}
+            			OR = {
+	            			exists = no
+	            			has_capitulated = yes
+	            		}
+	            	}
+	        	}
+	        }
+		}
+		
+		visible = {
+			has_completed_focus = CZE_The_Great_Pan-Slavic_Empire
+
+		}
+		activation = {
+			always = no
+		}
+		is_good = yes
+		days_remove = 90
+		cost = 100
+		fire_only_once = yes
+
+		cancel_effect = {
+		}
+
+		remove_effect = {
+			POL = {
+				for_each_scope_loop = {
+					array = core_states_at_game_start
+					add_core_of = ROOT
+				}
+			}
+			if = {
+				limit = {
+					POL = { is_subject_of = ROOT }
+				}
+
+				annex_country = {
+					target = POL
+					transfer_troops = yes
+				}
+			}
+			every_state = {
+				limit = { is_core_of = POL }
+				add_core_of = ROOT
+			}
+
+		}	
+	}
+
+	CZE_integrate_LIT = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = CZE
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+	        LIT = {
+	        	OR = {
+	            	is_subject_of = ROOT
+	            	AND = {
+	            		any_core_state = {
+	            			is_controlled_by = ROOT
+	            		}
+            			OR = {
+	            			exists = no
+	            			has_capitulated = yes
+	            		}
+	            	}
+	        	}
+	        }
+		}
+		
+		visible = {
+			has_completed_focus = CZE_Lithuania
+
+		}
+		activation = {
+			always = no
+		}
+		is_good = yes
+		days_remove = 90
+		cost = 100
+		fire_only_once = yes
+
+		cancel_effect = {
+		}
+
+		remove_effect = {
+			LIT = {
+				for_each_scope_loop = {
+					array = core_states_at_game_start
+					add_core_of = ROOT
+				}
+			}
+			if = {
+				limit = {
+					LIT = { is_subject_of = ROOT }
+				}
+
+				annex_country = {
+					target = LIT
+					transfer_troops = yes
+				}
+			}
+			every_state = {
+				limit = { is_core_of = LIT }
+				add_core_of = ROOT
+			}
+
+		}	
+	}
+	CZE_integrate_LAT = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = CZE
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+	        CZE = {
+	        	OR = {
+	            	is_subject_of = ROOT
+	            	AND = {
+	            		any_core_state = {
+	            			is_controlled_by = ROOT
+	            		}
+            			OR = {
+	            			exists = no
+	            			has_capitulated = yes
+	            		}
+	            	}
+	        	}
+	        }
+		}
+		
+		visible = {
+			has_completed_focus = CZE_Latvia
+
+		}
+		activation = {
+			always = no
+		}
+		is_good = yes
+		days_remove = 90
+		cost = 100
+		fire_only_once = yes
+
+		cancel_effect = {
+		}
+
+		remove_effect = {
+			LAT = {
+				for_each_scope_loop = {
+					array = core_states_at_game_start
+					add_core_of = ROOT
+				}
+			}
+			if = {
+				limit = {
+					LAT = { is_subject_of = ROOT }
+				}
+
+				annex_country = {
+					target = LAT
+					transfer_troops = yes
+				}
+			}
+			every_state = {
+				limit = { is_core_of = LAT }
+				add_core_of = ROOT
+			}
+
+		}	
+	}
+
+	CZE_integrate_EST = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = CZE
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+	        EST = {
+	        	OR = {
+	            	is_subject_of = ROOT
+	            	AND = {
+	            		any_core_state = {
+	            			is_controlled_by = ROOT
+	            		}
+            			OR = {
+	            			exists = no
+	            			has_capitulated = yes
+	            		}
+	            	}
+	        	}
+	        }
+		}
+		
+		visible = {
+			has_completed_focus = CZE_Estonia
+
+		}
+		activation = {
+			always = no
+		}
+		is_good = yes
+		days_remove = 180
+		cost = 100
+		fire_only_once = yes
+
+		cancel_effect = {
+		}
+
+		remove_effect = {
+			EST = {
+				for_each_scope_loop = {
+					array = core_states_at_game_start
+					add_core_of = ROOT
+				}
+			}
+			if = {
+				limit = {
+					EST = { is_subject_of = ROOT }
+				}
+
+				annex_country = {
+					target = EST
+					transfer_troops = yes
+				}
+			}
+			every_state = {
+				limit = { is_core_of = EST }
+				add_core_of = ROOT
+			}
+
+		}	
+	}
+
+	CZE_integrate_SOV = {
+	
+		icon = decision_eng_install_government
+		allowed = {
+			original_tag = CZE
+		}
+		cancel_trigger = {  
+			has_capitulated = yes 
+		}
+		ai_will_do = {
+			base = 140
+		}
+		available = {
+	        SOV = {
+	        	OR = {
+	            	is_subject_of = ROOT
+	            	AND = {
+	            		any_core_state = {
+	            			is_controlled_by = ROOT
+	            		}
+            			OR = {
+	            			exists = no
+	            			has_capitulated = yes
+	            		}
+	            	}
+	        	}
+	        }
+		}
+		
+		visible = {
+			has_completed_focus = CZE_Sov
+
+		}
+		activation = {
+			always = no
+		}
+		is_good = yes
+		days_remove = 180
+		cost = 100
+		fire_only_once = yes
+
+		cancel_effect = {
+		}
+
+		remove_effect = {
+			SOV = {
+				for_each_scope_loop = {
+					array = core_states_at_game_start
+					add_core_of = ROOT
+				}
+			}
+			if = {
+				limit = {
+					SOV = { is_subject_of = ROOT }
+				}
+
+				annex_country = {
+					target = SOV
+					transfer_troops = yes
+				}
+			}
+			every_state = {
+				limit = { is_core_of = SOV }
+				add_core_of = ROOT
+			}
+
+		}	
+	}
+
+}

@@ -1,0 +1,23 @@
+ASG_category = {
+	ASG_open_military_line_graph_gui = {
+		icon = gre_paying_ifc_debt
+
+		fire_only_once = no
+		cost = 0
+
+		complete_effect = {
+			set_country_flag = open_military_line_graph_gui
+		}
+	}
+	ASG_open_civilian_line_graph_gui = {
+		icon = gre_paying_ifc_debt
+
+		fire_only_once = no
+		cost = 0
+
+		complete_effect = {
+			set_country_flag = open_civilian_line_graph_gui
+		}
+	}
+
+}

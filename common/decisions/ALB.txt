@@ -1,0 +1,5175 @@
+ALB_zog_smoking_addiciton = {
+
+	ALB_time_till_stress = {
+		
+		activation = {
+			always = no
+		}
+
+		available = {
+			has_completed_focus = ALB_local_tobacco_industry
+		}
+		
+		
+		timeout_effect = {
+			add_ideas = ALB_king_zog_stress
+		}
+		
+		is_good = no
+		icon = GFX_decision_generic_monarchy
+		days_mission_timeout = 215
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+}
+
+ALB_resistance_in_yugoslavia = {
+
+	ALB_YUG_crush_revolution = {
+
+		available = {
+			if = {
+				limit = { has_country_flag = revolution_montenegro }
+				105 = { compliance > 35 }
+			}
+			802 = { compliance > 35 }
+			if = {
+				limit = { has_country_flag = revolution_macedonia }
+				106 = { compliance > 35 }
+			}
+			has_equipment = {
+			    infantry_equipment > 1999
+			}
+		}
+		
+		visible = {
+			original_tag = YUG
+		}
+		
+		icon = GFX_decision_oppression
+		fire_only_once = yes
+		
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 1999 }
+		}
+		custom_cost_text = decision_cost_ie_2000
+		
+		complete_effect = {
+			if = {
+				limit = { has_country_flag = revolution_montenegro }
+				105 = { add_core_of = ROOT set_demilitarized_zone = no }
+			}
+			802 = { add_core_of = ROOT set_demilitarized_zone = no }
+			if = {
+				limit = { has_country_flag = revolution_macedonia }
+				106 = { add_core_of = ROOT set_demilitarized_zone = no }
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -2000
+			}
+			YUG = { clr_country_flag = albanian_revolt }
+			ALB = { clr_country_flag = albanian_revolt clr_country_flag = revolution_montenegro clr_country_flag = revolution_macedonia set_country_flag = albanian_revolt_happened }
+        }
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	ALB_YUG_suppress_rebels_montenegro = {
+
+		available = {
+			has_equipment = {
+			    infantry_equipment > 499
+			}
+		}
+		
+		days_remove = 25
+		
+		visible = {
+			ALB = { has_country_flag = revolution_montenegro }
+			original_tag = YUG
+		}
+		
+		on_map_mode = map_and_decisions_view
+		
+		icon = GFX_decision_generic_prepare_civil_war
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 105
+			}
+		}
+		
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 499 }
+		}
+		custom_cost_text = decision_cost_ie_500
+		
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+        }
+		
+		remove_effect = {
+			105 = {
+				add_resistance = -5
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	
+	ALB_YUG_suppress_rebels_kosovo = {
+
+		available = {
+			has_equipment = {
+			    infantry_equipment > 499
+			}
+		}
+		
+		days_remove = 25
+		
+		visible = {
+			original_tag = YUG
+		}
+		
+		on_map_mode = map_and_decisions_view
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 802
+			}
+		}
+		
+		icon = GFX_decision_generic_prepare_civil_war
+		
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 499 }
+		}
+		custom_cost_text = decision_cost_ie_500
+		
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+        }
+		
+		remove_effect = {
+			802 = {
+				add_resistance = -5
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	
+	ALB_YUG_suppress_rebels_macedonia = {
+
+		available = {
+			has_equipment = {
+			    infantry_equipment > 499
+			}
+		}
+		
+		days_remove = 25
+		
+		visible = {
+			ALB = { has_country_flag = revolution_macedonia }
+			original_tag = YUG
+		}
+		
+		on_map_mode = map_and_decisions_view
+		
+		icon = GFX_decision_generic_prepare_civil_war
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 106
+			}
+		}
+		
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 499 }
+		}
+		custom_cost_text = decision_cost_ie_500
+		
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+        }
+		
+		remove_effect = {
+			106 = {
+				add_resistance = -5
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	ALB_YUG_compromise = {
+
+		available = {
+			#original_tag = YUG
+		}
+		
+		visible = {
+			original_tag = YUG
+		}
+		
+		icon = GFX_decision_generic_decision
+		fire_only_once = yes
+		cost = 150
+		
+		complete_effect = {
+			effect_tooltip = {
+				if = {
+					limit = { ALB = { OR = { has_country_flag = revolution_montenegro has_country_flag = revolution_macedonia } } }
+					802 = { 
+						add_core_of = ALB
+					}
+					hidden_effect = {
+						105 = { add_core_of = YUG }
+						106 = { add_core_of = YUG }
+					}
+				}
+				else = {
+					release = KOS
+					ALB = { puppet = KOS }
+				}
+			}
+			ALB = { country_event = albania.2 }
+        }
+
+		ai_will_do = {
+			factor = 0.5
+			modifier = {
+				factor = -0.5
+				is_historical_focus_on = yes
+			  }
+		}
+	}
+	
+	ALB_arm_rebels_montenegro = {
+
+		available = {
+			has_equipment = {
+			    infantry_equipment > 499
+			}
+		}
+		
+		days_remove = 25
+		
+		visible = {
+			has_country_flag = revolution_montenegro
+			original_tag = ALB
+		}
+		
+		on_map_mode = map_and_decisions_view
+		
+		icon = GFX_decision_generic_prepare_civil_war
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 105
+			}
+		}
+		
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 499 }
+		}
+		custom_cost_text = decision_cost_ie_500
+		
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+        }
+		
+		remove_effect = {
+			105 = {
+				add_resistance = 15
+				add_compliance = -5
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	ALB_arm_rebels_kosovo = {
+
+		available = {
+			has_equipment = {
+			    infantry_equipment > 499
+			}
+		}
+		
+		days_remove = 25
+		
+		visible = {
+			original_tag = ALB
+		}
+		
+		on_map_mode = map_and_decisions_view
+		
+		icon = GFX_decision_generic_prepare_civil_war
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 802
+			}
+		}
+		
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 499 }
+		}
+		custom_cost_text = decision_cost_ie_500
+		
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+        }
+		
+		remove_effect = {
+			802 = {
+				add_resistance = 15
+				add_compliance = -5
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	ALB_arm_rebels_macedonia = {
+
+		available = {
+			has_equipment = {
+			    infantry_equipment > 499
+			}
+		}
+		
+		days_remove = 25
+		
+		visible = {
+			has_country_flag = revolution_macedonia
+			original_tag = ALB
+		}
+		
+		on_map_mode = map_and_decisions_view
+		
+		icon = GFX_decision_generic_prepare_civil_war
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 106
+			}
+		}
+		
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 499 }
+		}
+		custom_cost_text = decision_cost_ie_500
+		
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+        }
+		
+		remove_effect = {
+			106 = {
+				add_resistance = 15
+				add_compliance = -5
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	ALB_expand_revolution_montenegro = {
+
+		available = {
+			has_equipment = {
+			    infantry_equipment > 499
+			}
+		}
+		
+		fire_only_once = yes
+		cost = 25
+		
+		visible = {
+			has_completed_focus = ALB_albanian_revolt_in_kosovo
+		}
+		
+		on_map_mode = map_and_decisions_view
+		
+		icon = GFX_decision_eng_blackshirt_march
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 105
+			}
+		}
+
+		custom_cost_trigger = {
+			has_political_power > 24
+			has_equipment = { infantry_equipment > 499 }
+		}
+		custom_cost_text = decision_cost_pp_25_ie_500
+		
+		complete_effect = {
+			add_political_power = -25
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+			105 = {
+				remove_core_of = YUG
+				add_claim_by = ALB
+				hidden_effect = { start_resistance = yes set_demilitarized_zone = yes }
+			}
+			set_country_flag = revolution_montenegro
+        }
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_expand_revolution_macedonia = {
+
+		available = {
+			has_completed_focus = ALB_support_macedonian_organizations
+			has_equipment = {
+			    infantry_equipment > 499
+			}
+		}
+		
+		fire_only_once = yes
+		cost = 25
+		
+		visible = {
+			has_completed_focus = ALB_albanian_revolt_in_kosovo
+		}
+		
+		on_map_mode = map_and_decisions_view
+		
+		icon = GFX_decision_eng_blackshirt_march
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 106
+			}
+		}
+
+		custom_cost_trigger = {
+			has_political_power > 24
+			has_equipment = { infantry_equipment > 499 }
+		}
+		custom_cost_text = decision_cost_pp_25_ie_500
+		
+		complete_effect = {
+			add_political_power = -25
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+			106 = {
+				remove_core_of = YUG
+				add_claim_by = ALB
+				hidden_effect = { start_resistance = yes set_demilitarized_zone = yes }
+			}
+			970 = {
+				remove_core_of = YUG
+				add_claim_by = ALB
+				hidden_effect = { start_resistance = yes set_demilitarized_zone = yes }
+			}
+			set_country_flag = revolution_macedonia
+        }
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_ignite_albanian_revolution = {
+
+		available = {
+			OR = {
+				105 = {
+					resistance > 35
+				}
+				802 = {
+					resistance > 35
+				}
+				106 = {
+					resistance > 35
+				}
+			}
+		}
+		
+		cost = 100
+		
+		visible = {
+			has_completed_focus = ALB_albanian_revolt_in_kosovo
+		}
+		
+		icon = GFX_decision_generic_ignite_civil_war
+		
+		complete_effect = {
+			105 = {
+				if = {
+					limit = { resistance > 35 }
+					add_core_of = ALB
+					YUG = { release = MNT }
+					ALB = { puppet = MNT }
+					hidden_effect = { MNT = { load_oob = "MNT_revolt" } }
+				}
+				hidden_effect = { remove_claim_by = ALB }
+			}
+			802 = {
+				if = {
+					limit = { resistance > 35 }
+					add_core_of = ALB
+					YUG = { release = KOS }
+					ALB = { puppet = KOS }
+					hidden_effect = { KOS = { load_oob = "KOS_revolt" } }
+				}
+				hidden_effect = { remove_claim_by = ALB }
+			}
+			106 = {
+				if = {
+					limit = { resistance > 35 }
+					add_core_of = ALB
+					YUG = { release = MAC }
+					ALB = { puppet = MAC }
+					hidden_effect = { MAC = { load_oob = "MAC_revolt" } }
+				}
+				hidden_effect = { remove_claim_by = ALB }
+			}
+			970 = {
+				if = {
+					limit = { 970 = { resistance > 35 } }
+					add_core_of = ALB 
+				}
+			}
+			custom_effect_tooltip = 4_ALB_TT
+			YUG = { clr_country_flag = albanian_revolt }
+			ALB = { clr_country_flag = albanian_revolt clr_country_flag = revolution_montenegro clr_country_flag = revolution_macedonia }
+			set_country_flag = albanian_revolt_happened
+			hidden_effect = {
+				105 = { set_demilitarized_zone = no }
+				802 = { set_demilitarized_zone = no }
+				106 = { set_demilitarized_zone = no }
+			}
+        }
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+}
+
+ALB_defending_our_nation = {
+	
+	ALB_fortify_albania_1 = {
+	
+		icon = GFX_decision_generic_mountain_fortification
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 44
+		}
+		
+		on_map_mode = map_and_decisions_view
+
+		available = {
+			controls_state = 44
+			has_completed_focus = ALB_albanian_fortifications
+		}
+		
+		fire_only_once = yes
+		days_remove = 45
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 44
+			}
+		}
+
+		cost = 50
+		
+		remove_effect = {
+			934 = {	
+				set_building_level  = {
+					type = bunker
+					level = 2
+					province = {
+						all_provinces = yes
+						level < 2
+					}
+				}
+				set_building_level  = {
+					type = coastal_bunker
+					level = 2
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+						level < 2
+					}
+				}
+			}
+			44 = {	
+				set_building_level  = {
+					type = bunker
+					level = 2
+					province = {
+						all_provinces = yes
+						level < 2
+					}
+				}
+				set_building_level  = {
+					type = coastal_bunker
+					level = 2
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+						level < 2
+					}
+				}
+			}
+			805 = {	
+				set_building_level  = {
+					type = bunker
+					level = 2
+					province = {
+						all_provinces = yes
+						level < 2
+					}
+				}
+				set_building_level  = {
+					type = coastal_bunker
+					level = 2
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+						level < 2
+					}
+				}
+			}
+			swap_ideas = {
+				remove_idea = ALB_fortification_focus2
+				add_idea = ALB_fortification_focus3
+			}
+			set_country_flag = {
+				flag = albania_fortified
+				value = 1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_fortify_albania_2 = {
+	
+		icon = GFX_decision_generic_mountain_fortification
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 44
+			has_country_flag = {
+				flag = albania_fortified
+				value = 1
+			}
+		}
+		
+		on_map_mode = map_and_decisions_view
+
+		available = {
+			controls_state = 44
+		}
+		
+		fire_only_once = yes
+		days_remove = 45
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 44
+			}
+		}
+
+		cost = 50
+		
+		remove_effect = {
+			934 = {	
+				set_building_level  = {
+					type = bunker
+					level = 3
+					province = {
+						all_provinces = yes
+						level < 3
+					}
+				}
+				set_building_level  = {
+					type = coastal_bunker
+					level = 3
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+						level < 3
+					}
+				}
+			}
+			44 = {	
+				set_building_level  = {
+					type = bunker
+					level = 3
+					province = {
+						all_provinces = yes
+						level < 3
+					}
+				}
+				set_building_level  = {
+					type = coastal_bunker
+					level = 3
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+						level < 3
+					}
+				}
+			}
+			805 = {	
+				set_building_level  = {
+					type = bunker
+					level = 3
+					province = {
+						all_provinces = yes
+						level < 3
+					}
+				}
+				set_building_level  = {
+					type = coastal_bunker
+					level = 3
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+						level < 3
+					}
+				}
+			}
+			swap_ideas = {
+				remove_idea = ALB_fortification_focus3
+				add_idea = ALB_fortification_focus4
+			}
+			set_country_flag = {
+				flag = albania_fortified
+				value = 2
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_fortify_albania_3 = {
+	
+		icon = GFX_decision_generic_mountain_fortification
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 44
+			has_country_flag = {
+				flag = albania_fortified
+				value = 2
+			}
+		}
+		
+		on_map_mode = map_and_decisions_view
+
+		available = {
+			controls_state = 44
+		}
+		
+		fire_only_once = yes
+		days_remove = 45
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 44
+			}
+		}
+
+		cost = 50
+		
+		remove_effect = {
+			934 = {	
+				set_building_level  = {
+					type = bunker
+					level = 4
+					province = {
+						all_provinces = yes
+						level < 4
+					}
+				}
+				set_building_level  = {
+					type = coastal_bunker
+					level = 4
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+						level < 4
+					}
+				}
+			}
+			44 = {	
+				set_building_level  = {
+					type = bunker
+					level = 4
+					province = {
+						all_provinces = yes
+						level < 4
+					}
+				}
+				set_building_level  = {
+					type = coastal_bunker
+					level = 4
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+						level < 4
+					}
+				}
+			}
+			805 = {	
+				set_building_level  = {
+					type = bunker
+					level = 4
+					province = {
+						all_provinces = yes
+						level < 4
+					}
+				}
+				set_building_level  = {
+					type = coastal_bunker
+					level = 4
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+						level < 4
+					}
+				}
+			}
+			swap_ideas = {
+				remove_idea = ALB_fortification_focus4
+				add_idea = ALB_fortification_focus5
+			}
+			set_country_flag = {
+				flag = albania_fortified
+				value = 3
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_fortify_albania_4 = {
+	
+		icon = GFX_decision_generic_mountain_fortification
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 44
+			has_country_flag = {
+				flag = albania_fortified
+				value = 3
+			}
+		}
+		
+		on_map_mode = map_and_decisions_view
+
+		available = {
+			controls_state = 44
+		}
+		
+		fire_only_once = yes
+		days_remove = 45
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 44
+			}
+		}
+
+		cost = 50
+		
+		remove_effect = {
+			934 = {	
+				set_building_level  = {
+					type = bunker
+					level = 5
+					province = {
+						all_provinces = yes
+						level < 5
+					}
+				}
+				set_building_level  = {
+					type = coastal_bunker
+					level = 5
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+						level < 5
+					}
+				}
+			}
+			44 = {	
+				set_building_level  = {
+					type = bunker
+					level = 5
+					province = {
+						all_provinces = yes
+						level < 5
+					}
+				}
+				set_building_level  = {
+					type = coastal_bunker
+					level = 5
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+						level < 5
+					}
+				}
+			}
+			805 = {	
+				set_building_level  = {
+					type = bunker
+					level = 5
+					province = {
+						all_provinces = yes
+						level < 5
+					}
+				}
+				set_building_level  = {
+					type = coastal_bunker
+					level = 5
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+						level < 5
+					}
+				}
+			}
+			swap_ideas = {
+				remove_idea = ALB_fortification_focus5
+				add_idea = ALB_fortification_focus6
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_fortify_montenegro = {
+	
+		icon = GFX_decision_generic_mountain_fortification
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 105
+		}
+		
+		on_map_mode = map_and_decisions_view
+
+		available = {
+			controls_state = 105
+			has_completed_focus = ALB_albanian_fortifications
+		}
+		
+		fire_only_once = yes
+		days_remove = 45
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 105
+			}
+		}
+
+		cost = 50
+		
+		remove_effect = {
+			105 = {	
+				set_building_level  = {
+					type = bunker
+					level = 3
+					province = {
+						all_provinces = yes
+						level < 3
+					}
+				}
+				set_building_level  = {
+					type = coastal_bunker
+					level = 3
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+						level < 3
+					}
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_fortify_kosovo = {
+	
+		icon = GFX_decision_generic_mountain_fortification
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 802
+		}
+		
+		on_map_mode = map_and_decisions_view
+
+		available = {
+			controls_state = 802
+			has_completed_focus = ALB_albanian_fortifications
+		}
+		
+		fire_only_once = yes
+		days_remove = 45
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 802
+			}
+		}
+
+		cost = 50
+		
+		remove_effect = {
+			802 = {
+				set_building_level  = {
+					type = bunker
+					level = 3
+					province = {
+						all_provinces = yes
+						level < 3
+					}
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_fortify_macedonia = {
+	
+		icon = GFX_decision_generic_mountain_fortification
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 106
+		}
+		
+		on_map_mode = map_and_decisions_view
+
+		available = {
+			controls_state = 106
+			has_completed_focus = ALB_albanian_fortifications
+		}
+		
+		fire_only_once = yes
+		days_remove = 45
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 106
+			}
+		}
+
+		cost = 50
+		
+		remove_effect = {
+			106 = {
+				set_building_level  = {
+					type = bunker
+					level = 3
+					province = {
+						all_provinces = yes
+						level < 3
+					}
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_educate_new_generals = {
+	
+		icon = GFX_decision_generic_army_support
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			has_completed_focus = ALB_exile_italian_generals
+		}
+		
+		fire_only_once = yes
+		days_remove = 35
+		
+		custom_cost_trigger = {
+			has_army_experience  > 24
+		}
+		custom_cost_text = decision_cost_army_XP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                army_experience = -25
+            }
+        }
+
+		remove_effect = {
+			custom_effect_tooltip = 7_ALB_TT
+			set_country_flag = educate_new_generals
+			set_variable = { ALB_understaffed_army_army_org_factor = -0.15 }
+			if = {
+				limit = { has_country_flag = standardize_military_command }
+				set_variable = { ALB_understaffed_army_command_power_gain_mult = -0.25 }
+			}
+			else = {
+				set_variable = { ALB_understaffed_army_command_power_gain_mult = -0.45 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_crackdown_italian_sympathies = {
+	
+		icon = GFX_decision_generic_army_support
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			has_completed_focus = ALB_exile_italian_generals
+		}
+		
+		fire_only_once = yes
+		days_remove = 35
+		
+		custom_cost_trigger = {
+			has_army_experience  > 24
+		}
+		custom_cost_text = decision_cost_army_XP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                army_experience = -25
+            }
+        }
+
+		remove_effect = {
+			custom_effect_tooltip = 8_ALB_TT
+			set_country_flag = crackdown_italian_sympathies
+			set_variable = { ALB_understaffed_army_mobilization_speed = -0.10 }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_standardize_military_command = {
+	
+		icon = GFX_decision_generic_army_support
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			has_completed_focus = ALB_exile_italian_generals
+		}
+		
+		fire_only_once = yes
+		days_remove = 35
+		
+		custom_cost_trigger = {
+			has_army_experience  > 24
+		}
+		custom_cost_text = decision_cost_army_XP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                army_experience = -25
+            }
+        }
+
+		remove_effect = {
+			custom_effect_tooltip = 9_ALB_TT
+			set_country_flag = standardize_military_command
+			if = {
+				limit = { has_country_flag = educate_new_generals }
+				set_variable = { ALB_understaffed_army_command_power_gain_mult = -0.25 }
+			}
+			else = {
+				set_variable = { ALB_understaffed_army_command_power_gain_mult = -0.30 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_modernize_conscription = {
+	
+		icon = GFX_decision_generic_army_support
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		available = {
+		}
+		
+		visible = {
+			has_completed_focus = ALB_new_albanian_army
+		}
+		
+		fire_only_once = yes
+		days_remove = 35
+		
+		custom_cost_trigger = {
+			has_army_experience  > 24
+		}
+		custom_cost_text = decision_cost_army_XP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                army_experience = -25
+            }
+        }
+
+		remove_effect = {
+			custom_effect_tooltip = 11_ALB_TT
+			set_country_flag = modernized_conscription
+			set_variable = { ALB_understaffed_army_mobilization_speed = -0.05 }
+			set_variable = { ALB_understaffed_army_conscription_factor = 0.05 }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_refine_chain_of_command = {
+	
+		icon = GFX_decision_generic_army_support
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		available = {
+		}
+		
+		visible = {
+			has_completed_focus = ALB_new_albanian_army
+		}
+		
+		fire_only_once = yes
+		days_remove = 35
+		
+		custom_cost_trigger = {
+			has_army_experience  > 24
+		}
+		custom_cost_text = decision_cost_army_XP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                army_experience = -25
+            }
+        }
+
+		remove_effect = {
+			custom_effect_tooltip = 12_ALB_TT
+			set_country_flag = refined_chain_of_command
+			if = {
+				limit = { has_country_flag = offensive_drills }
+				set_variable = { ALB_understaffed_army_army_org_factor = 0.0 }
+			}
+			else = {
+				set_variable = { ALB_understaffed_army_army_org_factor = -0.05 }
+			}
+			set_variable = { ALB_understaffed_army_dig_in_speed_factor = -0.10 }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_defensive_drills = {
+	
+		icon = GFX_decision_generic_army_support
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		available = {
+		}
+		
+		visible = {
+			has_completed_focus = ALB_new_albanian_army
+		}
+		
+		fire_only_once = yes
+		days_remove = 35
+		
+		custom_cost_trigger = {
+			has_army_experience  > 24
+		}
+		custom_cost_text = decision_cost_army_XP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                army_experience = -25
+            }
+        }
+
+		remove_effect = {
+			custom_effect_tooltip = 13_ALB_TT
+			set_country_flag = defensive_drills
+			set_variable = { ALB_understaffed_army_max_dig_in = 5 }
+			set_variable = { ALB_understaffed_army_max_command_power_mult = 0.10 }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_offensive_drills = {
+	
+		icon = GFX_decision_generic_army_support
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		available = {
+		}
+		
+		visible = {
+			has_completed_focus = ALB_new_albanian_army
+		}
+		
+		fire_only_once = yes
+		days_remove = 35
+		
+		custom_cost_trigger = {
+			has_army_experience  > 24
+		}
+		custom_cost_text = decision_cost_army_XP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                army_experience = -25
+            }
+        }
+
+		remove_effect = {
+			custom_effect_tooltip = 14_ALB_TT
+			set_country_flag = offensive_drills
+			if = {
+				limit = { has_country_flag = refined_chain_of_command }
+				set_variable = { ALB_understaffed_army_army_org_factor = 0.0 }
+			}
+			else = {
+				set_variable = { ALB_understaffed_army_army_org_factor = -0.05 }
+			}
+			set_variable = { ALB_understaffed_army_command_power_gain_mult = 0 }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_ariel_defense = {
+	
+		icon = GFX_decision_generic_army_support
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		available = {
+			has_completed_focus = ALB_air_defense
+		}
+		
+		visible = {
+			has_completed_focus = ALB_exile_italian_generals
+		}
+		
+		fire_only_once = yes
+		days_remove = 35
+		
+		custom_cost_trigger = {
+			has_army_experience  > 24
+		}
+		custom_cost_text = decision_cost_army_XP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                army_experience = -25
+            }
+        }
+
+		remove_effect = {
+			custom_effect_tooltip = 17_ALB_TT
+			set_country_flag = ariel_drills
+			set_variable = { ALB_understaffed_army_cas_damage_reduction = 0.20 }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_mountain_drills = {
+	
+		icon = GFX_decision_generic_army_support
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		available = {
+			has_completed_focus = ALB_mountain_training
+		}
+		
+		visible = {
+			has_completed_focus = ALB_exile_italian_generals
+		}
+		
+		fire_only_once = yes
+		days_remove = 35
+		
+		custom_cost_trigger = {
+			has_army_experience  > 24
+		}
+		custom_cost_text = decision_cost_army_XP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                army_experience = -25
+            }
+        }
+
+		remove_effect = {
+			custom_effect_tooltip = 16_ALB_TT
+			set_country_flag = mountain_drills
+			set_variable = { ALB_understaffed_army_terrain_penalty_reduction = 0.20 }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+}
+
+ALB_integrate_states = {
+
+	ALB_integrate_43 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 43
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 43
+			43 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 43
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			43 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_45 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 45
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 45
+			45 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 45
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			45 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_46 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 46
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 46
+			46 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 46
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			46 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_47 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 47
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 47
+			47 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 47
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			47 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_48 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 48
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 48
+			48 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 48
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			48 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_76 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 76
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 76
+			76 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 76
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			76 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_77 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 77
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 77
+			77 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 77
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			77 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_78 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 78
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 78
+			78 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 78
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			78 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_79 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 79
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 79
+			79 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 79
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			79 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_80 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 80
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 80
+			80 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 80
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			80 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_81 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 81
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 81
+			81 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 81
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			81 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_82 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 82
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 82
+			82 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 82
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			82 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_83 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 83
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 83
+			83 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 83
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			83 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_84 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 84
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 84
+			84 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 84
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			84 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	ALB_integrate_102 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 102
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 102
+			102 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 102
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			102 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_103 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 103
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 103
+			103 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 103
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			103 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_104 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 104
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 104
+			104 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 104
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			104 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_105 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			105 = { NOT = { is_core_of = ALB } }
+			controls_state = 105
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 105
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 105
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			105 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_106 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			106 = { NOT = { is_core_of = ALB } }
+			controls_state = 106
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 106
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 106
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			106 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	ALB_integrate_107 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 107
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 107
+			107 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 107
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			107 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_108 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 108
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 108
+			108 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 108
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			108 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_109 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 109
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 109
+			109 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 109
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			109 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_154 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 154
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 154
+			154 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 154
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			154 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_155 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 155
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 155
+			155 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 155
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			155 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_163 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 163
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 163
+			163 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 163
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			163 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_164 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 164
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 164
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 164
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			164 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_182 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 182
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 182
+			182 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 182
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			182 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_184 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 184
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 184
+			184 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 184
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			184 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_185 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 185
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 185
+			185 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 185
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			185 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_186 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 186
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 186
+			186 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 186
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			186 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_187 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 187
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 187
+			187 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 187
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			187 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_211 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 211
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 211
+			211 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 211
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			211 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_212 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 212
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 212
+			212 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 212
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			212 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_341 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 341
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 341
+			has_completed_focus = ALB_integrate_decisions
+			has_completed_focus = ALB_anatolian_revenge
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 341
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			341 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_731 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 731
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 731
+			731 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 731
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			731 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_736 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 736
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 736
+			736 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 736
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			736 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_764 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 764
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 764
+			764 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 764
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			764 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_766 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 766
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 766
+			766 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 766
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			766 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_797 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 797
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 797
+			has_completed_focus = ALB_integrate_decisions
+			has_completed_focus = ALB_anatolian_revenge
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 797
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			797 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_801 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 801
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 801
+			801 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 801
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			801 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_802 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 802
+			802 = { NOT = { is_core_of = ALB } }
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 802
+			802 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 802
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			802 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_803 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 803
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 803
+			803 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 803
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			803 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_804 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 804
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 804
+			804 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 804
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			804 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_852 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 852
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 852
+			852 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 852
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			852 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_853 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			controls_state = 853
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 853
+			853 = { is_claimed_by = ALB }
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 853
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			853 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_970 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			970 = { NOT = { is_core_of = ALB } }
+			controls_state = 970
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 970
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 970
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			970 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_971 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			970 = { NOT = { is_core_of = ALB } }
+			controls_state = 971
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 970
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 971
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			971 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_973 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			973 = { NOT = { is_core_of = ALB } }
+			controls_state = 973
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 973
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 973
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			973 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_974 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			974 = { NOT = { is_core_of = ALB } }
+			controls_state = 974
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 974
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 974
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			974 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	ALB_integrate_975 = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			975 = { NOT = { is_core_of = ALB } }
+			controls_state = 975
+		}
+		
+		on_map_mode = map_only
+
+		available = {
+			controls_state = 975
+			has_completed_focus = ALB_integrate_decisions
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 975
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP_25
+		
+		complete_effect = {
+            hidden_effect = {
+                add_command_power = -25
+            }
+        }
+		
+		remove_effect = {
+			975 = {	
+				remove_claim_by = ALB
+				add_core_of = ALB
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}
+
+economy_decisions = {
+	
+	ALB_improve_infrastructure_in_albania = {
+		
+		icon = GFX_decision_generic_construction
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			has_completed_focus = ALB_infrastructure_focus
+		}
+		
+		on_map_mode = map_and_decisions_view
+
+		available = {
+			controls_state = 44
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 44
+			}
+		}
+
+		cost = 50
+		
+		complete_effect = {
+        }
+		
+		remove_effect = {
+			44 = { 
+				set_state_category = large_town 
+				add_dynamic_modifier = { modifier = ALB_infrastructure_improved_modifier_1 }
+				set_state_flag = infrastructure1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+	}
+	
+	ALB_improve_infrastructure_in_albania2 = {
+		
+		icon = GFX_decision_generic_construction
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			44 = {
+				has_state_flag = infrastructure1
+			}
+		}
+		
+		on_map_mode = map_and_decisions_view
+
+		available = {
+			controls_state = 44
+			44 = { infrastructure > 3 }
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 44
+			}
+		}
+
+		cost = 50
+		
+		complete_effect = {
+        }
+		
+		remove_effect = {
+			44 = { 
+				hidden_effect = { remove_dynamic_modifier = { modifier = ALB_infrastructure_improved_modifier_1 } }
+				add_dynamic_modifier = { modifier = ALB_infrastructure_improved_modifier_2 }
+				set_state_flag = infrastructure2
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	ALB_improve_infrastructure_in_albania3 = {
+		
+		icon = GFX_decision_generic_construction
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			44 = {
+				has_state_flag = infrastructure2
+			}
+		}
+		
+		on_map_mode = map_and_decisions_view
+
+		available = {
+			controls_state = 44
+			44 = { infrastructure > 4 }
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 44
+			}
+		}
+
+		cost = 50
+		
+		complete_effect = {
+        }
+		
+		remove_effect = {
+			44 = {
+				hidden_effect = { remove_dynamic_modifier = { modifier = ALB_infrastructure_improved_modifier_2 } }
+				add_dynamic_modifier = { modifier = ALB_infrastructure_improved_modifier_3 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	ALB_improve_infrastructure_in_shkoder = {
+		
+		icon = GFX_decision_generic_construction
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			has_completed_focus = ALB_infrastructure_focus
+		}
+		
+		on_map_mode = map_and_decisions_view
+
+		available = {
+			controls_state = 934
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 934
+			}
+		}
+
+		cost = 50
+		
+		complete_effect = {
+        }
+		
+		remove_effect = {
+			934 = { 
+				set_state_category = large_town 
+				add_dynamic_modifier = { modifier = ALB_infrastructure_improved_modifier_1 }
+				set_state_flag = infrastructure1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+	}
+	
+	ALB_improve_infrastructure_in_shkoder2 = {
+		
+		icon = GFX_decision_generic_construction
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			934 = {
+				has_state_flag = infrastructure1
+			}
+		}
+		
+		on_map_mode = map_and_decisions_view
+
+		available = {
+			controls_state = 934
+			934 = { infrastructure > 3 }
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 934
+			}
+		}
+
+		cost = 50
+		
+		complete_effect = {
+        }
+		
+		remove_effect = {
+			934 = { 
+				hidden_effect = { remove_dynamic_modifier = { modifier = ALB_infrastructure_improved_modifier_1 } }
+				add_dynamic_modifier = { modifier = ALB_infrastructure_improved_modifier_2 }
+				set_state_flag = infrastructure2
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	ALB_improve_infrastructure_in_shkoder3 = {
+		
+		icon = GFX_decision_generic_construction
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			934 = {
+				has_state_flag = infrastructure2
+			}
+		}
+		
+		on_map_mode = map_and_decisions_view
+
+		available = {
+			controls_state = 934
+			934 = { infrastructure > 4 }
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 934
+			}
+		}
+
+		cost = 50
+		
+		complete_effect = {
+        }
+		
+		remove_effect = {
+			934 = {
+				hidden_effect = { remove_dynamic_modifier = { modifier = ALB_infrastructure_improved_modifier_2 } }
+				add_dynamic_modifier = { modifier = ALB_infrastructure_improved_modifier_3 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	ALB_improve_infrastructure_in_montenegro = {
+		
+		icon = GFX_decision_generic_construction
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			has_completed_focus = ALB_infrastructure_focus
+			105 = { is_core_of = ALB }
+		}
+		
+		on_map_mode = map_and_decisions_view
+
+		available = {
+			controls_state = 105
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 105
+			}
+		}
+
+		cost = 50
+		
+		complete_effect = {
+        }
+		
+		remove_effect = {
+			105 = { 
+				set_state_category = town 
+				add_dynamic_modifier = { modifier = ALB_infrastructure_improved_modifier_1 }
+				set_state_flag = infrastructure1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+	}
+	
+	ALB_improve_infrastructure_in_montenegro2 = {
+		
+		icon = GFX_decision_generic_construction
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			105 = {
+				has_state_flag = infrastructure1
+			}
+		}
+		
+		on_map_mode = map_and_decisions_view
+
+		available = {
+			controls_state = 105
+			105 = { infrastructure > 3 }
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 105
+			}
+		}
+
+		cost = 50
+		
+		complete_effect = {
+        }
+		
+		remove_effect = {
+			105 = { 
+				hidden_effect = { remove_dynamic_modifier = { modifier = ALB_infrastructure_improved_modifier_1 } }
+				add_dynamic_modifier = { modifier = ALB_infrastructure_improved_modifier_2 }
+				set_state_flag = infrastructure2
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	ALB_improve_infrastructure_in_montenegro3 = {
+		
+		icon = GFX_decision_generic_construction
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			105 = {
+				has_state_flag = infrastructure2
+			}
+		}
+		
+		on_map_mode = map_and_decisions_view
+
+		available = {
+			controls_state = 105
+			105 = { infrastructure > 4 }
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 105
+			}
+		}
+
+		cost = 50
+		
+		complete_effect = {
+        }
+		
+		remove_effect = {
+			105 = {
+				hidden_effect = { remove_dynamic_modifier = { modifier = ALB_infrastructure_improved_modifier_2 } }
+				add_dynamic_modifier = { modifier = ALB_infrastructure_improved_modifier_3 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	ALB_improve_infrastructure_in_macedonia = {
+		
+		icon = GFX_decision_generic_construction
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			has_completed_focus = ALB_infrastructure_focus
+			106 = { is_core_of = ALB }
+		}
+		
+		on_map_mode = map_and_decisions_view
+
+		available = {
+			controls_state = 106
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 106
+			}
+		}
+
+		cost = 50
+		
+		complete_effect = {
+        }
+		
+		remove_effect = {
+			106 = { 
+				set_state_category = town 
+				add_dynamic_modifier = { modifier = ALB_infrastructure_improved_modifier_1 }
+				set_state_flag = infrastructure1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+	}
+	
+	ALB_improve_infrastructure_in_macedonia2 = {
+		
+		icon = GFX_decision_generic_construction
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			106 = {
+				has_state_flag = infrastructure1
+			}
+		}
+		
+		on_map_mode = map_and_decisions_view
+
+		available = {
+			controls_state = 106
+			106 = { infrastructure > 3 }
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 106
+			}
+		}
+
+		cost = 50
+		
+		complete_effect = {
+        }
+		
+		remove_effect = {
+			106 = { 
+				hidden_effect = { remove_dynamic_modifier = { modifier = ALB_infrastructure_improved_modifier_1 } }
+				add_dynamic_modifier = { modifier = ALB_infrastructure_improved_modifier_2 }
+				set_state_flag = infrastructure2
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	ALB_improve_infrastructure_in_macedonia3 = {
+		
+		icon = GFX_decision_generic_construction
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			106 = {
+				has_state_flag = infrastructure2
+			}
+		}
+		
+		on_map_mode = map_and_decisions_view
+
+		available = {
+			controls_state = 106
+			106 = { infrastructure > 4 }
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 106
+			}
+		}
+
+		cost = 50
+		
+		complete_effect = {
+        }
+		
+		remove_effect = {
+			106 = {
+				hidden_effect = { remove_dynamic_modifier = { modifier = ALB_infrastructure_improved_modifier_2 } }
+				add_dynamic_modifier = { modifier = ALB_infrastructure_improved_modifier_3 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	ALB_improve_infrastructure_in_kosovo = {
+		
+		icon = GFX_decision_generic_construction
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			has_completed_focus = ALB_infrastructure_focus
+			802 = { is_core_of = ALB }
+		}
+		
+		on_map_mode = map_and_decisions_view
+
+		available = {
+			controls_state = 802
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 802
+			}
+		}
+
+		cost = 50
+		
+		complete_effect = {
+        }
+		
+		remove_effect = {
+			802 = { 
+				set_state_category = large_town
+				add_dynamic_modifier = { modifier = ALB_infrastructure_improved_modifier_1 }
+				set_state_flag = infrastructure1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+	}
+	
+	ALB_improve_infrastructure_in_kosovo2 = {
+		
+		icon = GFX_decision_generic_construction
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			802 = {
+				has_state_flag = infrastructure1
+			}
+		}
+		
+		on_map_mode = map_and_decisions_view
+
+		available = {
+			controls_state = 802
+			802 = { infrastructure > 3 }
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 802
+			}
+		}
+
+		cost = 50
+		
+		complete_effect = {
+        }
+		
+		remove_effect = {
+			802 = { 
+				hidden_effect = { remove_dynamic_modifier = { modifier = ALB_infrastructure_improved_modifier_1 } }
+				add_dynamic_modifier = { modifier = ALB_infrastructure_improved_modifier_2 }
+				set_state_flag = infrastructure2
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	ALB_improve_infrastructure_in_kosovo3 = {
+		
+		icon = GFX_decision_generic_construction
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			802 = {
+				has_state_flag = infrastructure2
+			}
+		}
+		
+		on_map_mode = map_and_decisions_view
+
+		available = {
+			controls_state = 802
+			802 = { infrastructure > 4 }
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 802
+			}
+		}
+
+		cost = 50
+		
+		complete_effect = {
+        }
+		
+		remove_effect = {
+			802 = {
+				hidden_effect = { remove_dynamic_modifier = { modifier = ALB_infrastructure_improved_modifier_2 } }
+				add_dynamic_modifier = { modifier = ALB_infrastructure_improved_modifier_3 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	ALB_improve_infrastructure_in_northern_epirus = {
+		
+		icon = GFX_decision_generic_construction
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			has_completed_focus = ALB_infrastructure_focus
+		}
+		
+		on_map_mode = map_and_decisions_view
+
+		available = {
+			controls_state = 805
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 805
+			}
+		}
+
+		cost = 50
+		
+		complete_effect = {
+        }
+		
+		remove_effect = {
+			805 = { 
+				set_state_category = rural 
+				add_dynamic_modifier = { modifier = ALB_infrastructure_improved_modifier_1 }
+				set_state_flag = infrastructure1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+	}
+	
+	ALB_improve_infrastructure_in_northern_epirus2 = {
+		
+		icon = GFX_decision_generic_construction
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			805 = {
+				has_state_flag = infrastructure1
+			}
+		}
+		
+		on_map_mode = map_and_decisions_view
+
+		available = {
+			controls_state = 805
+			805 = { infrastructure > 3 }
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 805
+			}
+		}
+
+		cost = 50
+		
+		complete_effect = {
+        }
+		
+		remove_effect = {
+			805 = { 
+				hidden_effect = { remove_dynamic_modifier = { modifier = ALB_infrastructure_improved_modifier_1 } }
+				add_dynamic_modifier = { modifier = ALB_infrastructure_improved_modifier_2 }
+				set_state_flag = infrastructure2
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+	ALB_improve_infrastructure_in_northern_epirus3 = {
+		
+		icon = GFX_decision_generic_construction
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			805 = {
+				has_state_flag = infrastructure2
+			}
+		}
+		
+		on_map_mode = map_and_decisions_view
+
+		available = {
+			controls_state = 805
+			805 = { infrastructure > 4 }
+		}
+		
+		fire_only_once = yes
+		days_remove = 30
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 805
+			}
+		}
+
+		cost = 50
+		
+		complete_effect = {
+        }
+		
+		remove_effect = {
+			805 = {
+				hidden_effect = { remove_dynamic_modifier = { modifier = ALB_infrastructure_improved_modifier_2 } }
+				add_dynamic_modifier = { modifier = ALB_infrastructure_improved_modifier_3 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+	}
+	
+}
+
+foreign_politics = {
+	
+	ALB_send_diplomats_to_iran = {
+		
+		icon = GFX_decision_generic_form_nation
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			has_completed_focus = ALB_sphere_of_influence
+		}
+
+		available = {
+			not = { has_war_with = PER }
+			PER = { exists = yes }
+		}
+		
+		fire_only_once = yes
+		days_remove = 25
+
+		cost = 25
+		
+		complete_effect = {
+			PER = {
+				add_opinion_modifier = {
+					target = ALB
+					modifier = TUR_valued_strategic_partners
+				}
+			}
+        }
+		
+		remove_effect = {
+			if = {
+				limit = { PER = { is_subject = no } }
+				ALB = { add_to_faction = PER }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+	}
+	
+	ALB_send_diplomats_to_iraq = {
+		
+		icon = GFX_decision_generic_form_nation
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			has_completed_focus = ALB_sphere_of_influence
+		}
+
+		available = {
+			not = { has_war_with = IRQ }
+			IRQ = { exists = yes }
+		}
+		
+		fire_only_once = yes
+		days_remove = 25
+
+		cost = 25
+		
+		complete_effect = {
+			IRQ = {
+				add_opinion_modifier = {
+					target = ALB
+					modifier = TUR_valued_strategic_partners
+				}
+			}
+        }
+		
+		remove_effect = {
+			if = {
+				limit = { IRQ = { is_subject = no } }
+				ALB = { add_to_faction = IRQ }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+	}
+
+}
+
+political_actions = {
+	
+	ALB_deny_macedonia = {
+	
+		icon = GFX_decision_generic_civil_support
+		
+		allowed = {
+			original_tag = ALB
+		}
+		
+		visible = {
+			has_completed_focus = ALB_support_macedonian_organizations
+			106 = { NOT = { is_core_of = ALB } }
+			has_completed_focus = ALB_integrate_provinces
+		}
+		
+		on_map_mode = map_and_decisions_view
+
+		available = {
+			OR = {
+				BUL = { 
+					is_in_faction_with = ALB
+					controls_state = 106
+				}
+				controls_state = 106
+			}
+		}
+		
+		fire_only_once = yes
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 106
+			}
+		}
+		
+		complete_effect = {
+        }
+		
+		remove_effect = {
+			every_controlled_state = {
+				limit = {
+					has_dynamic_modifier = { modifier = skirmishes_against_imro }
+				}
+				remove_dynamic_modifier = { modifier = skirmishes_against_imro }
+				if = {
+					limit = {
+						has_dynamic_modifier = { modifier = widespread_bulgarian_sentiment_01 }
+					}
+					remove_dynamic_modifier = { modifier = widespread_bulgarian_sentiment_01 }
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+}

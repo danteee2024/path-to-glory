@@ -1,0 +1,61 @@
+ideas = {
+	air_force_spirit = {
+		torpedo_bombers_spirit = {
+			ledger = air
+			available = { has_air_academy = yes }
+			research_bonus = {
+				naval_air = 0.15
+			}
+			modifier = {
+				naval_strike = 0.1
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
+
+	}
+	air_force_command_spirit = {
+		
+		flight_plan_optimization_spirit = {
+			ledger = air
+			available = { has_air_academy = yes }
+			modifier = {
+				air_range_factor = 0.05
+				air_fuel_consumption_factor = -0.05
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
+		experimental_rocketry_spirit = {
+			ledger = air
+			available = { has_air_academy = yes has_tech = experimental_rockets }
+			#visible = { has_tech = experimental_rockets }
+			equipment_bonus = {
+				guided_missile_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+			modifier = {
+				rocket_attack_factor = 0.1
+				production_speed_rocket_site_factor = 0.1
+			}
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
+	}
+}

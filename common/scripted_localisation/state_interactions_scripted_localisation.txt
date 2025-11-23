@@ -1,0 +1,369 @@
+
+defined_text = {
+	name = si_core_button_tt_scriptloc
+
+###
+	text = {
+		trigger = {
+			NOT = { state_population > 50000 }
+			ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+			AND  = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+		}
+		localization_key = si_core_button_1_1
+	}
+	text = {
+		trigger = {
+			NOT = { state_population > 50000 }
+			AND  = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+		}
+		localization_key = si_core_button_1_2
+	}
+	text = {
+		trigger = {
+			NOT = { state_population > 50000 }
+			ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+		}
+		localization_key = si_core_button_1_3
+	}
+	text = {
+		trigger = {
+			NOT = { state_population > 50000 }
+		}
+		localization_key = si_core_button_1_4
+	}
+
+
+###
+	text = {
+		trigger = {
+			AND = { state_population > 50000     NOT = { state_population > 100000 } }
+			ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+			AND  = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+		}
+		localization_key = si_core_button_2_1
+	}
+	text = {
+		trigger = {
+			AND = { state_population > 50000     NOT = { state_population > 100000 } }
+			AND  = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+		}
+		localization_key = si_core_button_2_2
+	}
+	text = {
+		trigger = {
+			AND = { state_population > 50000     NOT = { state_population > 100000 } }
+			ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+		}
+		localization_key = si_core_button_2_3
+	}
+	text = {
+		trigger = {
+			AND = { state_population > 50000     NOT = { state_population > 100000 } }
+		}
+		localization_key = si_core_button_2_4
+	}
+
+
+###
+	text = {
+		trigger = {
+			AND = { state_population > 100000     NOT = { state_population > 250000 } }
+			ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+			AND  = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+		}
+		localization_key = si_core_button_3_1
+	}
+	text = {
+		trigger = {
+			AND = { state_population > 100000     NOT = { state_population > 250000 } }
+			AND  = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+		}
+		localization_key = si_core_button_3_2
+	}
+	text = {
+		trigger = {
+			AND = { state_population > 100000     NOT = { state_population > 250000 } }
+			ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+		}
+		localization_key = si_core_button_3_3
+	}
+	text = {
+		trigger = {
+			AND = { state_population > 100000     NOT = { state_population > 250000 } }
+		}
+		localization_key = si_core_button_3_4
+	}
+
+
+###
+	text = {
+		trigger = {
+			AND = { state_population > 250000     NOT = { state_population > 500000 } }
+			ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+			AND  = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+		}
+		localization_key = si_core_button_4_1
+	}
+	text = {
+		trigger = {
+			AND = { state_population > 250000     NOT = { state_population > 500000 } }
+			AND  = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+		}
+		localization_key = si_core_button_4_2
+	}
+	text = {
+		trigger = {
+			AND = { state_population > 250000     NOT = { state_population > 500000 } }
+			ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+		}
+		localization_key = si_core_button_4_3
+	}
+	text = {
+		trigger = {
+			AND = { state_population > 250000     NOT = { state_population > 500000 } }
+		}
+		localization_key = si_core_button_4_4
+	}
+
+
+###
+	text = {
+		trigger = {
+			AND = { state_population > 500000     NOT = { state_population > 1000000 } }
+			ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+			AND  = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+		}
+		localization_key = si_core_button_5_1
+	}
+	text = {
+		trigger = {
+			AND = { state_population > 500000     NOT = { state_population > 1000000 } }
+			AND  = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+		}
+		localization_key = si_core_button_5_2
+	}
+	text = {
+		trigger = {
+			AND = { state_population > 500000     NOT = { state_population > 1000000 } }
+			ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+		}
+		localization_key = si_core_button_5_3
+	}
+	text = {
+		trigger = {
+			AND = { state_population > 500000     NOT = { state_population > 1000000 } }
+		}
+		localization_key = si_core_button_5_4
+	}
+
+
+###
+	text = {
+		trigger = {
+			AND = { state_population > 1000000     NOT = { state_population > 2500000 } }
+			ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+			AND  = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+		}
+		localization_key = si_core_button_6_1
+	}
+	text = {
+		trigger = {
+			AND = { state_population > 1000000     NOT = { state_population > 2500000 } }
+			AND  = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+		}
+		localization_key = si_core_button_6_2
+	}
+	text = {
+		trigger = {
+			AND = { state_population > 1000000     NOT = { state_population > 2500000 } }
+			ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+		}
+		localization_key = si_core_button_6_3
+	}
+	text = {
+		trigger = {
+			AND = { state_population > 1000000     NOT = { state_population > 2500000 } }
+		}
+		localization_key = si_core_button_6_4
+	}
+
+
+###
+	text = {
+		trigger = {
+			AND = { state_population > 2500000     NOT = { state_population > 5000000 } }
+			ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+			AND  = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+		}
+		localization_key = si_core_button_7_1
+	}
+	text = {
+		trigger = {
+			AND = { state_population > 2500000     NOT = { state_population > 5000000 } }
+			AND  = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+		}
+		localization_key = si_core_button_7_2
+	}
+	text = {
+		trigger = {
+			AND = { state_population > 2500000     NOT = { state_population > 5000000 } }
+			ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+		}
+		localization_key = si_core_button_7_3
+	}
+	text = {
+		trigger = {
+			AND = { state_population > 2500000     NOT = { state_population > 5000000 } }
+		}
+		localization_key = si_core_button_7_4
+	}
+
+
+###
+	text = {
+		trigger = {
+			state_population > 5000000
+			ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+			AND  = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+		}
+		localization_key = si_core_button_8_1
+	}
+	text = {
+		trigger = {
+			state_population > 5000000
+			AND  = { ROOT = { has_country_flag = nideas_claimed_state_coring_cost_reduced_cflag }     is_claimed_by = ROOT }   # -50%
+		}
+		localization_key = si_core_button_8_2
+	}
+	text = {
+		trigger = {
+			state_population > 5000000
+			ROOT = { has_country_flag = nideas_coring_cost_reduced_cflag }   # -25%
+		}
+		localization_key = si_core_button_8_3
+	}
+	text = {
+		trigger = {
+			state_population > 5000000
+		}
+		localization_key = si_core_button_8_4
+	}
+}
+
+defined_text = {
+	name = si_uncore_button_tt_scriptloc
+
+###
+	text = {
+		trigger = {
+			NOT = { state_population > 50000 }
+		}
+		localization_key = si_uncore_button_1
+	}
+
+
+###
+	text = {
+		trigger = {
+			AND = { state_population > 50000     NOT = { state_population > 100000 } }
+		}
+		localization_key = si_uncore_button_2
+	}
+
+
+###
+	text = {
+		trigger = {
+			AND = { state_population > 100000     NOT = { state_population > 250000 } }
+		}
+		localization_key = si_uncore_button_3
+	}
+
+
+###
+	text = {
+		trigger = {
+			AND = { state_population > 250000     NOT = { state_population > 500000 } }
+		}
+		localization_key = si_uncore_button_4
+	}
+
+
+###
+	text = {
+		trigger = {
+			AND = { state_population > 500000     NOT = { state_population > 1000000 } }
+		}
+		localization_key = si_uncore_button_5
+	}
+
+
+###
+	text = {
+		trigger = {
+			AND = { state_population > 1000000     NOT = { state_population > 2500000 } }
+		}
+		localization_key = si_uncore_button_6
+	}
+
+
+###
+	text = {
+		trigger = {
+			AND = { state_population > 2500000     NOT = { state_population > 5000000 } }
+		}
+		localization_key = si_uncore_button_7
+	}
+
+
+###
+	text = {
+		trigger = {
+			state_population > 5000000
+		}
+		localization_key = si_uncore_button_8
+	}
+}
+
+defined_text = {
+	name = si_border_war_button_tt_scriptloc
+	
+	text = {
+		trigger = {
+			ROOT = { has_idea = si_border_war_attacker_idea }
+			owner = { has_idea = si_border_war_defender_idea }
+		}
+		localization_key = si_border_war_button_1
+	}
+	
+	text = {
+		trigger = {
+			ROOT = { has_idea = si_border_war_attacker_idea }
+		}
+		localization_key = si_border_war_button_2
+	}
+	
+	text = {
+		trigger = {
+			owner = { has_idea = si_border_war_defender_idea }
+		}
+		localization_key = si_border_war_button_3
+	}
+}
+
+defined_text = {
+	name = si_target_lock_tt_scriptloc
+	
+	text = {
+		trigger = {
+			NOT = { check_variable = { ROOT.si_target_var = 0 } }
+		}
+		localization_key = si_target_lock_tt
+	}
+	
+	text = {
+		trigger = {
+		}
+		localization_key = "No target locked."
+	}
+}
