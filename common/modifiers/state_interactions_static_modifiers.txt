@@ -1,2 +1,0 @@
-si_resource_rights_given_opmod = {
-}
