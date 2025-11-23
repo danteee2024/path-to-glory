@@ -528,7 +528,7 @@ focus_tree = {
 		x = -2
 		y = 2
 		relative_position_id = SOV_third_five_year_plan
-		cost = 5
+		cost = 11.7
 
 		mutually_exclusive = { focus = SOV_shift_to_armaments_production }
 
@@ -591,7 +591,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = SOV_reorganize_the_pc_of_heavy_industry
-		cost = 5
+		cost = 11.7
 
 		available = {
 			SOV_third_five_year_plan_available = yes
@@ -626,7 +626,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_third_five_year_plan
-		cost = 5
+		cost = 10
 
 		available = {
 			SOV_third_five_year_plan_available = yes
@@ -723,7 +723,7 @@ focus_tree = {
 		x = 2
 		y = 2
 		relative_position_id = SOV_third_five_year_plan
-		cost = 5
+		cost = 10
 
 		mutually_exclusive = { focus = SOV_reorganize_the_pc_of_heavy_industry}
 
@@ -778,7 +778,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = SOV_shift_to_armaments_production
-		cost = 5
+		cost = 10
 
 		available = {
 			SOV_third_five_year_plan_available = yes
@@ -814,7 +814,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SOV_reorganize_the_pc_of_heavy_industry
-		cost = 5
+		cost = 10
 
 		available = {
 			any_owned_state = {
@@ -4179,7 +4179,7 @@ focus_tree = {
 		x = -5
 		y = 1
 		relative_position_id = SOV_found_the_pcdi
-		cost = 5
+		cost = 7.5
 
 		available = {
 			has_full_control_of_state = 219 #MOSCOW
@@ -4199,7 +4199,7 @@ focus_tree = {
 				add_tech_bonus = {
 					name = SOV_pc_of_mechanical_engineering_name_default
 					bonus = 1
-					uses = 2
+					uses = 1
 					category = motorized_equipment
 					category = infantry_weapons
 				}
@@ -4208,7 +4208,7 @@ focus_tree = {
 				add_tech_bonus = {
 					name = SOV_pc_of_mechanical_engineering_name_alt
 					bonus = 1
-					uses = 2
+					uses = 1
 					category = motorized_equipment
 					category = infantry_weapons
 				}
@@ -7099,7 +7099,7 @@ focus_tree = {
 			}
 		}
 		relative_position_id = SOV_the_path_of_marxism_leninism
-		cost = 5
+		cost = 10
 
 		mutually_exclusive = { focus = SOV_the_right_opposition focus = SOV_the_left_opposition }
 
@@ -7350,7 +7350,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = SOV_socialism_in_one_country
-		cost = 5
+		cost = 10
 
 		available = {
 
@@ -8530,7 +8530,7 @@ focus_tree = {
 			}
 		}
 		relative_position_id = SOV_the_path_of_marxism_leninism
-		cost = 5
+		cost = 10
 
 		available = {
 			SOV_soviet_civil_war_not_started = yes 
@@ -9732,7 +9732,7 @@ focus_tree = {
 		x = 15
 		y = 0
 		relative_position_id = SOV_the_left_opposition
-		cost = 5
+		cost = 10
 		available = {
 			SOV_soviet_civil_war_not_started = yes 
 			custom_trigger_tooltip = {
@@ -13608,7 +13608,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_baltic_security
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
