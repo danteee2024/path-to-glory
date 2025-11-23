@@ -1,0 +1,91 @@
+ALB_understaffed_army_dynamic_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_chi_incompetent_officers
+
+	mobilization_laws_cost_factor = ALB_understaffed_army_mobilization_laws_cost_factor
+	army_org_factor = ALB_understaffed_army_army_org_factor
+	experience_gain_army_factor = ALB_understaffed_army_experience_gain_army_factor
+	mobilization_speed = ALB_understaffed_army_mobilization_speed
+	conscription_factor = ALB_understaffed_army_conscription_factor
+	training_time_factor = ALB_understaffed_army_training_time_factor
+	terrain_penalty_reduction = ALB_understaffed_army_terrain_penalty_reduction
+	cas_damage_reduction = ALB_understaffed_army_cas_damage_reduction
+	max_dig_in = ALB_understaffed_army_max_dig_in
+	dig_in_speed_factor = ALB_understaffed_army_dig_in_speed_factor
+	command_power_gain_mult = ALB_understaffed_army_command_power_gain_mult
+	max_command_power_mult = ALB_understaffed_army_max_command_power_mult
+	army_attack_factor = ALB_understaffed_army_army_attack_factor
+	army_defence_factor = ALB_understaffed_army_army_defense_factor
+}
+
+ALB_inexperienced_army_dynamic_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_chi_incompetent_officers
+
+	mobilization_laws_cost_factor = ALB_understaffed_army_mobilization_laws_cost_factor
+	army_org_factor = ALB_understaffed_army_army_org_factor
+	experience_gain_army_factor = ALB_understaffed_army_experience_gain_army_factor
+	mobilization_speed = ALB_understaffed_army_mobilization_speed
+	conscription_factor = ALB_understaffed_army_conscription_factor
+	training_time_factor = ALB_understaffed_army_training_time_factor
+	terrain_penalty_reduction = ALB_understaffed_army_terrain_penalty_reduction
+	cas_damage_reduction = ALB_understaffed_army_cas_damage_reduction
+	max_dig_in = ALB_understaffed_army_max_dig_in
+	dig_in_speed_factor = ALB_understaffed_army_dig_in_speed_factor
+	command_power_gain_mult = ALB_understaffed_army_command_power_gain_mult
+	max_command_power_mult = ALB_understaffed_army_max_command_power_mult
+	army_attack_factor = ALB_understaffed_army_army_attack_factor
+	army_defence_factor = ALB_understaffed_army_army_defense_factor
+}
+
+ALB_albanian_army_dynamic_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_tur_kemalist_officers
+
+	mobilization_laws_cost_factor = ALB_understaffed_army_mobilization_laws_cost_factor
+	army_org_factor = ALB_understaffed_army_army_org_factor
+	experience_gain_army_factor = ALB_understaffed_army_experience_gain_army_factor
+	mobilization_speed = ALB_understaffed_army_mobilization_speed
+	conscription_factor = ALB_understaffed_army_conscription_factor
+	training_time_factor = ALB_understaffed_army_training_time_factor
+	terrain_penalty_reduction = ALB_understaffed_army_terrain_penalty_reduction
+	cas_damage_reduction = ALB_understaffed_army_cas_damage_reduction
+	max_dig_in = ALB_understaffed_army_max_dig_in
+	dig_in_speed_factor = ALB_understaffed_army_dig_in_speed_factor
+	command_power_gain_mult = ALB_understaffed_army_command_power_gain_mult
+	max_command_power_mult = ALB_understaffed_army_max_command_power_mult
+	army_attack_factor = ALB_understaffed_army_army_attack_factor
+	army_defence_factor = ALB_understaffed_army_army_defense_factor
+}
+
+ALB_infrastructure_improved_modifier_1 = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_ETH_state_development
+	
+	state_resources_factor = 0.10
+	recruitable_population_factor = 0.05
+}
+
+ALB_infrastructure_improved_modifier_2 = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_ETH_state_development
+	
+	state_resources_factor = 0.20
+	recruitable_population_factor = 0.10
+	local_building_slots = 1
+}
+
+ALB_infrastructure_improved_modifier_3 = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_ETH_state_development
+	
+	state_resources_factor = 0.30
+	recruitable_population_factor = 0.15
+	local_building_slots = 2
+}

@@ -1,0 +1,32 @@
+add_namespace = si
+
+# transferred states
+news_event = {
+    id = si.1
+    title = si.1.t
+    desc = si.1.desc
+	picture = GFX_news_event_009
+    
+    is_triggered_only = yes
+	major = yes
+    
+    option = {
+        name = si.1.a
+    }
+}
+
+# claimed states
+news_event = {
+    id = si.2
+    title = si.2.t
+    desc = si.2.desc
+	picture = GFX_news_event_064
+    
+    is_triggered_only = yes
+	major = yes
+    
+    option = {
+        name = si.2.a
+    }
+}
+

@@ -1,0 +1,12 @@
+spriteTypes = {
+
+    spriteType = {
+        name = "GFX_idea_nukestate"
+        texturefile = "gfx/interface/ideas/idea_nukestate.dds"
+    }
+
+    spriteType = {
+        name = "GFX_nukestate_decisions"
+        texturefile = "gfx/interface/decisions/nukestate_decisions.dds"
+    }
+}

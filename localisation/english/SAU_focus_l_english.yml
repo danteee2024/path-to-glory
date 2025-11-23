@@ -1,0 +1,448 @@
+﻿l_english:
+
+##Cosmetic
+ SAU_Arabian_Empire:0 "Arabian Empire"
+ SAU_Arabian_Empire_DEF:0 "Arabian Empire"
+ SAU_United_States_of_the_Middle_East:0 "United States of the Middle East"
+ SAU_United_States_of_the_Middle_East_DEF:0 "United States of the Middle East"
+
+###Decisions
+
+ ### --- Integration Category ---
+ SAU_Integration_category:0 "Arabian Integration"
+ SAU_Integration_category_desc:0 "As the Arabian Empire grows, we must integrate the new lands under our rule to ensure lasting unity and loyalty."
+
+ SAU_Iran_Integration:0 "Integrate Persia"
+ SAU_Iran_Integration_desc:0 "Persia has been brought under our influence. Through administration and cultural exchange, we will make it an integral part of the Arabian Empire."
+
+ SAU_Afghanistan_Integration:0 "Integrate Afghanistan"
+ SAU_Afghanistan_Integration_desc:0 "The tribes of Afghanistan will be incorporated into our empire, strengthening our reach and securing our eastern frontier."
+
+ SAU_North_Afracia_Integration:0 "Integrate North Africa"
+ SAU_North_Afracia_Integration_desc:0 "With North Africa now under our control, we must bring its people and territories into the folds of the Arabian Empire."
+
+ ### --- Middle East Diplomacy Category ---
+ SAU_Middle_East_category:0 "Middle East Diplomacy"
+ SAU_Middle_East_category_desc:0 "To realize the dream of a united and stable Middle East, we must forge alliances, invite our neighbors, and strengthen regional cooperation."
+
+ SAU_Iran_Invite:0 "Invite Persia to the Faction"
+ SAU_Iran_Invite_desc:0 "Persia is a key partner for our vision of a united Middle East. Let us invite them to join our alliance."
+
+ SAU_Iraq_Invite:0 "Invite Iraq to the Faction"
+ SAU_Iraq_Invite_desc:0 "Iraq’s inclusion will strengthen our influence over Mesopotamia and further our regional unity."
+
+ SAU_Yemen_Invite:0 "Invite Yemen to the Faction"
+ SAU_Yemen_Invite_desc:0 "Our southern neighbor must be included in the alliance if we are to unite the Arabian Peninsula."
+
+ SAU_Afghanistan_Invite:0 "Invite Afghanistan to the Faction"
+ SAU_Afghanistan_Invite_desc:0 "Inviting Afghanistan into our alliance will secure our eastern borders and extend our sphere of influence."
+
+ SAU_Turkey_Invite:0 "Invite Turkey to the Faction"
+ SAU_Turkey_Invite_desc:0 "Turkey’s military and industrial power will make our alliance a formidable force in the Middle East."
+
+ SAU_Iran_Puppet:0 "Establish Persian Protectorate"
+ SAU_Iran_Puppet_desc:0 "Persia has accepted our leadership. We will establish a protectorate to oversee their integration into our empire."
+
+ SAU_Iraq_Puppet:0 "Establish Iraqi Protectorate"
+ SAU_Iraq_Puppet_desc:0 "Iraq shall be governed as a loyal protectorate under Saudi supervision, contributing resources and manpower to our cause."
+
+ SAU_Yemen_Puppet:0 "Establish Yemeni Protectorate"
+ SAU_Yemen_Puppet_desc:0 "Yemen will remain autonomous under our oversight, ensuring peace and cooperation across the Arabian Peninsula."
+
+ SAU_Afghanistan_Puppet:0 "Establish Afghan Protectorate"
+ SAU_Afghanistan_Puppet_desc:0 "The Kingdom of Afghanistan will operate as a subject under the guidance of the Arabian Empire."
+
+ SAU_Turkey_Puppet:0 "Establish Turkish Protectorate"
+ SAU_Turkey_Puppet_desc:0 "By turning Turkey into a protectorate, we secure a powerful ally and expand our control over the region."
+
+ ### --- Middle East Resource & Construction Category ---
+ SAU_Middle_East_Building_category:0 "Middle Eastern Resource Development"
+ SAU_Middle_East_Building_category_desc:0 "Newly acquired territories are rich in natural resources. With careful planning, we can develop their full potential for the Arabian economy."
+
+ SAU_Iran_Building:0 "Develop Persian Resources"
+ SAU_Iran_Building_desc:0 "The mountains of Persia are rich in minerals. We shall exploit these deposits to support our industrial growth."
+
+ SAU_Iraq_Building:0 "Develop Iraqi Oil Fields"
+ SAU_Iraq_Building_desc:0 "Iraq’s oil fields can fuel our growing empire. Expanding them will ensure a constant flow of energy and wealth."
+
+ SAU_Yemen_Building:0 "Expand Yemeni Oil Production"
+ SAU_Yemen_Building_desc:0 "The southern oil fields of Yemen can provide a steady supply of resources for the Kingdom."
+
+ SAU_Afghanistan_Building:0 "Develop Afghan Mines"
+ SAU_Afghanistan_Building_desc:0 "Afghanistan’s rugged terrain hides valuable minerals. We will extract and utilize them for the good of Arabia."
+
+ SAU_Turkey_Building:0 "Develop Anatolian Resources"
+ SAU_Turkey_Building_desc:0 "Turkey’s lands offer steel and chromium vital for modern warfare. Expanding mining operations here will empower our industry."
+
+ ### --- Oil Trade Category ---
+ SAU_Oil_Trade_category:0 "Oil Trade Agreements"
+ SAU_Oil_Trade_category_desc:0 "Our oil is the lifeblood of the world. By signing trade agreements with the major powers, we will gain political and economic leverage on a global scale."
+
+ SAU_Oil_Trade:0 "Negotiate Oil Trade Deal"
+ SAU_Oil_Trade_desc:0 "We can strike lucrative oil deals with the great powers of the world—fueling their wars, and our own prosperity."
+ 
+
+###focus
+ SAU_consolidate_royal_authority:0 "Consolidate Royal Authority"
+ SAU_consolidate_royal_authority_desc:0 "The House of Saud must strengthen its control over Arabia. Centralizing power ensures unity and stability across our growing kingdom."
+
+ SAU_Arabian_Empire:0 "Revive the Arabian Empire"
+ SAU_Arabian_Empire_desc:0 "By rallying the people under a strong, authoritarian rule, we can restore the glory of the ancient Arabian Empire."
+
+ SAU_Arabian_Empire2:0 "Camel Corps Expansion"
+ SAU_Arabian_Empire2_desc:0 "Our traditional camel-mounted warriors will become a modernized desert corps capable of rapid mobility and fierce combat."
+
+ SAU_Arabia_Army:0 "Organize the Arabian Army"
+ SAU_Arabia_Army_desc:0 "We shall transform our fragmented militias into a disciplined and centralized national army."
+
+ SAU_Arabia_Army2:0 "Modernize the Army"
+ SAU_Arabia_Army2_desc:0 "With new leadership and training, our army will stand as a professional and capable fighting force."
+
+ SAU_Yemen_Annex:0 "Demand Yemeni Submission"
+ SAU_Yemen_Annex_desc:0 "The unification of Arabia is incomplete without Yemen. We must bring them under our control—by diplomacy or by force."
+
+ SAU_Iraq_Annex:0 "Claim Iraq"
+ SAU_Iraq_Annex_desc:0 "Iraq’s land is rightfully part of the Arabian sphere. We will not rest until it is under our authority."
+
+ SAU_Revive_Arabian_Empire:0 "Unite Arabia"
+ SAU_Revive_Arabian_Empire_desc:0 "From Yemen to Iraq, from the sands to the sea, the Arabian Empire rises again under one banner."
+
+ SAU_Iran_War:0 "War with Persia"
+ SAU_Iran_War_desc:0 "The Persians threaten our borders. A decisive strike will ensure Saudi dominance in the region."
+
+ SAU_Afghanistan_War:0 "War with Afghanistan"
+ SAU_Afghanistan_War_desc:0 "Afghanistan stands in our path to regional supremacy. We shall bring them to heel."
+
+ SAU_Prepare_War:0 "Prepare for the Great Campaign"
+ SAU_Prepare_War_desc:0 "Our armies will be ready to face any foe. Arabia must prepare for total war."
+
+ SAU_UK_Colony:0 "Negotiate with Britain"
+ SAU_UK_Colony_desc:0 "Diplomacy with the British Empire may secure our place among the great powers."
+
+ SAU_Egypt:0 "Assert Control over Egypt"
+ SAU_Egypt_desc:0 "The Suez and Cairo are vital to Arabia’s influence. Egypt must recognize our leadership."
+
+ SAU_Syria:0 "Approach France"
+ SAU_Syria_desc:0 "We will negotiate with France over their control in the Levant to further our ambitions."
+
+ SAU_France_War:0 "War with France"
+ SAU_France_War_desc:0 "France’s colonial holdings stand in our way. We will liberate the region from their grip."
+
+ SAU_Italy_War:0 "War with Italy"
+ SAU_Italy_War_desc:0 "Italian interests in Africa and Arabia threaten our dominance. We will drive them out."
+
+ SAU_Spain_War:0 "War with Spain"
+ SAU_Spain_War_desc:0 "Spanish colonies in Africa could be valuable. We shall not allow foreign flags near our land."
+
+ SAU_Saudi_Arabia:0 "Preserve the Kingdom"
+ SAU_Saudi_Arabia_desc:0 "We shall preserve the traditional monarchy and strengthen our rule through stability and faith."
+
+ SAU_Saudi_Arabia2:0 "Economic Expansion"
+ SAU_Saudi_Arabia2_desc:0 "Saudi Arabia must industrialize. New factories and economic reforms will empower our people."
+
+ SAU_Saudi_Arabia3:0 "National Defense Plan"
+ SAU_Saudi_Arabia3_desc:0 "With growing threats around us, we must create a long-term defense strategy to protect our sovereignty."
+
+ SAU_Saudi_Arabia4:0 "Royal Authority Strengthened"
+ SAU_Saudi_Arabia4_desc:0 "The King’s leadership unites our nation. Political reforms will reinforce our stability."
+
+ SAU_Saudi_Arabia5:0 "Industrial Development"
+ SAU_Saudi_Arabia5_desc:0 "New industries will emerge across the kingdom, transforming our economy into a regional powerhouse."
+
+ SAU_Saudi_Arabia6:0 "Expand the Textile Industry"
+ SAU_Saudi_Arabia6_desc:0 "Expanding local production in textiles and consumer goods will make Saudi Arabia self-sufficient."
+
+ SAU_Saudi_Arabia7:0 "Improve Infrastructure"
+ SAU_Saudi_Arabia7_desc:0 "Roads and railways will connect our scattered lands, promoting trade and unity."
+
+ SAU_Saudi_Arabia8:0 "Trade Expansion"
+ SAU_Saudi_Arabia8_desc:0 "We will open our markets to global trade, boosting our economy and international standing."
+
+ SAU_Middle_East:0 "Democratic Reform"
+ SAU_Middle_East_desc:0 "By embracing democracy and cooperation, Saudi Arabia can lead a new, united Middle East."
+
+ SAU_Middle_East1:0 "Constitutional Monarchy"
+ SAU_Middle_East1_desc:0 "A balance between royal leadership and democracy will ensure both order and liberty."
+
+ SAU_Middle_East2:0 "Trade Liberalization"
+ SAU_Middle_East2_desc:0 "Free trade agreements will open our economy and encourage investment."
+
+ SAU_UK_Colony2:0 "British Cooperation"
+ SAU_UK_Colony2_desc:0 "Working with the British will strengthen our security and diplomatic ties."
+
+ SAU_Middle_East3:0 "Form the United Middle East"
+ SAU_Middle_East3_desc:0 "A coalition of Middle Eastern nations will guarantee peace and prosperity in our region."
+
+ SAU_Syria2:0 "French Diplomacy"
+ SAU_Syria2_desc:0 "We will reach out to France to strengthen regional partnerships and stability."
+
+ SAU_Middle_East4:0 "Industrial Expansion"
+ SAU_Middle_East4_desc:0 "Our economic reforms continue with new industries built across the nation."
+
+ SAU_Middle_East5:0 "Regional Stability"
+ SAU_Middle_East5_desc:0 "We will ensure peace and security for all our Middle Eastern allies."
+
+ SAU_Middle_East6:0 "Economic Prosperity"
+ SAU_Middle_East6_desc:0 "The Middle East shall rise as a new economic center powered by industry and oil."
+
+ SAU_Middle_East7:0 "Unite the Middle East"
+ SAU_Middle_East7_desc:0 "Through diplomacy and strength, we will unite the entire region under our leadership."
+
+ SAU_Oil_Trade:0 "Develop Oil Trade"
+ SAU_Oil_Trade_desc:0 "Our oil is the lifeblood of the world. We will use it to fund our modernization."
+
+ SAU_infrastructure:0 "Expand Infrastructure"
+ SAU_infrastructure_desc:0 "Improving transportation networks will enhance production and mobilization."
+
+ SAU_infrastructure2:0 "Construct Railways"
+ SAU_infrastructure2_desc:0 "Connecting our cities by rail will revolutionize trade and logistics."
+
+ SAU_Oil_Trade2:0 "Industrial Expansion"
+ SAU_Oil_Trade2_desc:0 "Our economy will boom with new industries producing goods and arms for the nation."
+
+ SAU_Oil_Trade3:0 "Build Fuel Silos"
+ SAU_Oil_Trade3_desc:0 "Fuel storage will secure our military’s power and ensure stable supplies."
+
+ SAU_Oil_Trade4:0 "Increase Oil Exports"
+ SAU_Oil_Trade4_desc:0 "By expanding export capabilities, we shall flood the world markets with Saudi oil."
+
+ SAU_Research:0 "Expand Research Facilities"
+ SAU_Research_desc:0 "New universities and research centers will allow us to compete scientifically."
+
+ SAU_Oil_Trade5:0 "Industrial Investments"
+ SAU_Oil_Trade5_desc:0 "We will continue developing factories to strengthen our economy."
+
+ SAU_infrastructure3:0 "Expand Supply Lines"
+ SAU_infrastructure3_desc:0 "New supply nodes and railways will ensure efficient military operations."
+
+ SAU_Oil_Trade6:0 "Refine Our Oil Industry"
+ SAU_Oil_Trade6_desc:0 "By modernizing refineries, we can extract more value from every barrel."
+
+ SAU_Research2:0 "Advanced Research"
+ SAU_Research2_desc:0 "Further investment in education and technology will give us the edge we need."
+
+ SAU_Global_Trade2:0 "Global Trade Network"
+ SAU_Global_Trade2_desc:0 "Saudi Arabia will become a central hub of global trade."
+
+ SAU_oil:0 "Expand Oil Extraction"
+ SAU_oil_desc:0 "We will increase oil production across our richest states to fuel our growth."
+
+ SAU_Global_Trade:0 "Global Market Integration"
+ SAU_Global_Trade_desc:0 "By integrating fully into world markets, our economy will thrive."
+
+ SAU_infrastructure4:0 "National Infrastructure Plan"
+ SAU_infrastructure4_desc:0 "Massive infrastructure investments will link the kingdom like never before."
+
+ SAU_Oil_Trade7:0 "Industrial Growth"
+ SAU_Oil_Trade7_desc:0 "Factories will rise across Arabia, producing everything from tools to arms."
+
+ SAU_Oil_Trade8:0 "Offshore Expansion"
+ SAU_Oil_Trade8_desc:0 "We’ll expand into offshore drilling and dockyard construction to diversify production."
+
+ SAU_Oil_Trade9:0 "Construction Supremacy"
+ SAU_Oil_Trade9_desc:0 "Our industries will dominate the region, building Industry for Arabia."
+
+ SAU_Oil_Trade10:0 "Production Investment"
+ SAU_Oil_Trade10_desc:0 "Investing in aviation production will mark our arrival as a modern power."
+
+ SAU_Military:0 "Expand the Military"
+ SAU_Military_desc:0 "The defense of Arabia must be ensured with a modern and well-equipped military."
+
+ SAU_Truck:0 "Motorized Forces"
+ SAU_Truck_desc:0 "Trucks will speed up our army’s logistics and mobility."
+
+ SAU_Train:0 "Railway Modernization"
+ SAU_Train_desc:0 "Modern trains will improve supply lines and troop transport."
+
+ SAU_infantry:0 "Infantry Modernization"
+ SAU_infantry_desc:0 "New weapons and training will make our infantry effective and reliable."
+
+ SAU_Radio:0 "Radio Communications"
+ SAU_Radio_desc:0 "Modern radio systems will allow our forces to coordinate efficiently."
+
+ SAU_Camel:0 "Royal Camel Corps"
+ SAU_Camel_desc:0 "Our traditional camel riders will be organized into a specialized combat corps."
+
+ SAU_Land_Facility:0 "Establish Land Warfare Facility"
+ SAU_Land_Facility_desc:0 "A new facility will focus on land warfare research and development."
+
+ SAU_Tank_technology_advancing:0 "Tank Development Program"
+ SAU_Tank_technology_advancing_desc:0 "Research into armored warfare will keep us competitive with global powers."
+
+ SAU_Climate:0 "Desert Warfare Training"
+ SAU_Climate_desc:0 "We will train our troops to master combat in extreme desert conditions."
+
+ SAU_Army2:0 "Army Reforms"
+ SAU_Army2_desc:0 "The restructured army will be more professional, efficient, and loyal."
+
+ SAU_mechanized:0 "Mechanized Army"
+ SAU_mechanized_desc:0 "Mechanized divisions will bring mobility and strength to our ground forces."
+
+ SAU_Infantry2:0 "Advanced Infantry Tactics"
+ SAU_Infantry2_desc:0 "Improved doctrines and weapons will make our soldiers more effective in battle."
+
+ SAU_Artillery:0 "Artillery Development"
+ SAU_Artillery_desc:0 "Powerful artillery support will ensure our armies dominate the battlefield."
+
+ SAU_Planning:0 "Operational Planning"
+ SAU_Planning_desc:0 "Coordinated strategic planning will increase our military’s effectiveness."
+
+ SAU_Tank_Production:0 "Tank Production"
+ SAU_Tank_Production_desc:0 "Mass production of armored vehicles will strengthen our armored divisions."
+
+ SAU_Tank_Army:0 "Armored Army"
+ SAU_Tank_Army_desc:0 "We will form an armored corps capable of lightning offensives."
+
+ SAU_reinforce:0 "Army Reinforcement"
+ SAU_reinforce_desc:0 "By improving logistics and manpower systems, our army will recover faster."
+
+ SAU_Artillery2:0 "Modern Artillery"
+ SAU_Artillery2_desc:0 "Updated designs will make our artillery more deadly and precise."
+
+ SAU_atomic_research_program:0 "Atomic Energy Initiative"
+ SAU_atomic_research_program_desc:0 "Driven by the need for sustainable energy and technological prestige, Saudi Arabia embarks on an ambitious atomic research program. This will strengthen our scientific base and bring us closer to mastering nuclear technology."
+
+ ###Events
+
+ ### --- Buying British Colonies (SAU.145–147) ---
+ SAU.145.t:0 "Saudi Arabia Offers to Buy British Colonies"
+ SAU.145.d:0 "The Saudi government has approached us with an offer to purchase several British colonies in the Middle East. Their growing influence and wealth from oil could make this deal mutually beneficial. Shall we accept their proposal?"
+ SAU.145.a:0 "Accept the Saudi offer"
+ SAU.145.b:0 "Refuse their offer"
+
+ SAU.146.t:0 "Britain Accepts the Deal"
+ SAU.146.d:0 "The British Empire has agreed to transfer control of their colonies to Saudi Arabia. Our influence in the region expands, and relations between our nations have improved."
+ SAU.146.a:0 "A wise deal for both sides"
+
+ SAU.147.t:0 "Britain Refuses the Offer"
+ SAU.147.d:0 "The British Empire has rejected our proposal. Their arrogance leaves us little choice but to consider more direct methods of expansion."
+ SAU.147.a:0 "Then we shall take what is ours by force!"
+
+ ### --- Buying Egypt (SAU.245–247) ---
+ SAU.245.t:0 "Saudi Arabia Offers to Buy Egypt"
+ SAU.245.d:0 "Saudi Arabia proposes to purchase control over Egypt, promising significant compensation and closer cooperation. Accepting could ease tensions in the region, but it would reduce our presence in North Africa."
+ SAU.245.a:0 "Accept their offer"
+ SAU.245.b:0 "Refuse their offer"
+
+ SAU.246.t:0 "Britain Accepts the Sale of Egypt"
+ SAU.246.d:0 "Britain has agreed to transfer Egypt to our control. The Nile now flows under the banner of the Arabian Empire!"
+ SAU.246.a:0 "A glorious acquisition!"
+
+ SAU.247.t:0 "Britain Refuses to Sell Egypt"
+ SAU.247.d:0 "The British have rejected our generous offer. Their colonial ambitions continue to stand in the way of Arabian unification."
+ SAU.247.a:0 "We will liberate Egypt by force!"
+
+ ### --- Demanding Iraq (SAU.332–334) ---
+ SAU.332.t:0 "Saudi Arabia Demands Iraq"
+ SAU.332.d:0 "Saudi Arabia has issued an ultimatum demanding that Iraq submit to their authority and join the Arabian Empire. The decision we make could decide the fate of the Middle East."
+ SAU.332.a:0 "Accept Saudi leadership"
+ SAU.332.b:0 "Reject their demands!"
+
+ SAU.333.t:0 "Iraq Submits to the Arabian Empire"
+ SAU.333.d:0 "Iraq has accepted our ultimatum and has been annexed into the Arabian Empire. Our power in the region grows ever stronger."
+ SAU.346.a:0 "Another province joins the Empire"
+
+ SAU.334.t:0 "Iraq Refuses Submission"
+ SAU.334.d:0 "Iraq has refused to yield to our authority. War is now the only option to enforce Arabian dominance."
+ SAU.343.a:0 "Prepare for war!"
+
+ ### --- Demanding Yemen (SAU.432–434) ---
+ SAU.432.t:0 "Saudi Arabia Demands Yemen"
+ SAU.432.d:0 "The Saudi government demands our submission and the annexation of Yemen into their growing empire. We must decide our fate carefully."
+ SAU.432.a:0 "Accept their demands"
+ SAU.432.b:0 "Refuse them!"
+
+ SAU.433.t:0 "Yemen Submits to the Arabian Empire"
+ SAU.433.d:0 "Yemen has agreed to our terms and joined the Arabian Empire peacefully. The Arabian Peninsula is one step closer to unity."
+ SAU.446.a:0 "A victory through diplomacy"
+
+ SAU.434.t:0 "Yemen Refuses Our Demands"
+ SAU.434.d:0 "Yemen has rejected our demands for unification. Their defiance will not go unpunished."
+ SAU.443.a:0 "Prepare the armies!"
+
+ ### --- Buying Syria (SAU.545–547) ---
+ SAU.545.t:0 "Saudi Arabia Offers to Buy Syria"
+ SAU.545.d:0 "Saudi Arabia has approached France with an offer to purchase Syria. Accepting would bring peace and profit, but would mean retreating from the Levant."
+ SAU.545.a:0 "Accept the Saudi proposal"
+ SAU.545.b:0 "Refuse the proposal"
+
+ SAU.546.t:0 "France Accepts the Deal"
+ SAU.546.d:0 "France has agreed to sell Syria to Saudi Arabia. Our empire now stretches further into the Levant, uniting the Arab lands under one rule."
+ SAU.146.a:0 "Excellent news"
+
+ SAU.547.t:0 "France Refuses the Deal"
+ SAU.547.d:0 "France has declined our generous offer to purchase Syria. It seems we must take it by force if we wish to complete our unification."
+ SAU.547.a:0 "Prepare for war with France!"
+ ####MIO
+ SAU_marmon_herrington_organization:0 "Riyadh Armored Company"
+ SAU_marmon_herrington_organization_desc:0 "Founded with foreign expertise and local investment, the Riyadh Armored Company specializes in the design and production of mobile armored vehicles tailored to the harsh conditions of the Arabian Peninsula."
+
+ SAU_medium_tank_organization:0 "Saudi Armored Industries"
+ SAU_medium_tank_organization_desc:0 "Saudi Arabia’s first formal armored vehicle industry, dedicated to producing reliable and effective medium tanks for desert warfare."
+
+ SAU_infantry_tank_designer:0 "Riyadh Armored Works"
+ SAU_infantry_tank_designer_desc:0 "A domestic tank development bureau inspired by British armored design philosophy, focusing on infantry support tanks and heavy armor protection."
+
+#### army
+
+  SAU_faisal_bin_saud: "Faisal bin Saud"
+  SAU_faisal_bin_saud_desc: "A skilled Field Marshal, known for his desert warfare expertise and infantry leadership."
+
+  SAU_Mustafa_al_hadi: "Mustafa al-Hadi"
+  SAU_Mustafa_al_hadi_desc: "A capable Corps Commander with experience leading infantry in desert campaigns."
+
+  SAU_fahad_al_saud: "Fahad Al Saud"
+  SAU_fahad_al_saud_desc: "A proficient Corps Commander specializing in armored warfare and desert operations."
+
+  SAU_Fahd_al_Aziz: "Fahd Al Aziz"
+  SAU_Fahd_al_Aziz_desc: "A Field Marshal skilled in mechanized and desert warfare with an aggressive offensive doctrine."
+
+  SAU_cavalry_commander: "Salim al-Fahad"
+  SAU_cavalry_commander_desc: "A cavalry expert with desert combat experience, capable of leading fast-moving units effectively."
+ 
+  SAU_Gent_al_Sek:0 "Gent al Sek"
+  SAU_Gent_al_Sek_desc:0 "A pragmatic technocrat dedicated to modernizing the administration of the Kingdom of Saudi Arabia. Gent al Sek values efficiency, planning, and progress above all."
+
+  SAU_Mustaf_Gami:0 "Mustaf Gami"
+  SAU_Mustaf_Gami_desc:0 "A skilled commander renowned for his mastery of desert warfare and artillery coordination. Mustaf Gami’s tactical awareness makes him a formidable leader in the harsh Arabian environment."
+
+  SAU_Muhammed_Saba:0 "Muhammed Saba"
+  SAU_Muhammed_Saba_desc:0 "A bold and aggressive field marshal, Muhammed Saba combines logistical acumen with fearless offensive strategies, leading Saudi forces with determination and precision."
+ 
+ SAU_Muhammed_Saba:0 "Muhammed Saba"
+ SAU_ismail_al_salhi:0 "Ismail al-Salhi"
+ SAU_faisal_baku:0 "Faisal Baku"
+ SAU_Habibi_al_Abi:0 "Habibi al-Abi"
+ SAU_Abdul_al_Bish:0 "Abdul al-Bish"
+ SAU_karim_hakan:0 "Karim Hakan"
+
+###ideas
+ SAU_royal_consolidation_idea:0 "Royal Consolidation"
+ SAU_Middle_East:0 "Middle Eastern Influence"
+ SAU_Arabian_Empire_Camel:0 "Arabian Camel Corps"
+ SAU_Arabian_Army:0 "Arabian Army Expansion"
+ SAU_Arabian_Army2:0 "Professional Arabian Army"
+ SAU_Saudi_Arabia_Eco:0 "Saudi Economic Reform"
+ SAU_Defence_Plan:0 "National Defence Plan"
+ SAU_Building:0 "Industrial Expansion"
+ SAU_Building2:0 "Industrial Improvement"
+ SAU_Building3:0 "Trade-Driven Industry"
+ SAU_Building4:0 "Saudi Industrial Miracle"
+ SAU_Oil_Trade:0 "Foreign Oil Trade Agreements"
+ SAU_Oil_Trade2:0 "Oil Concessions Withdrawn"
+ SAU_Oil_Trade3:0 "Oil Research and Refinement"
+ SAU_Oil_Trade4:0 "Balanced Oil Trade"
+ SAU_Oil_Trade5:0 "Saudi Oil Dominance"
+ SAU_Oil_Trade6:0 "Industrialized Oil Power"
+ SAU_Camel:0 "Camel Warfare"
+ SAU_Climate:0 "Desert Adaptation"
+ SAU_Army:0 "Army Expansion"
+ SAU_Planning:0 "Strategic Planning"
+ SAU_Tank_Production:0 "Tank Production Program"
+ SAU_Tank_Army:0 "Armored Army Doctrine"
+ SAU_Army_reinforce:0 "Army Reinforcement Doctrine"
+ SAU_Artillery:0 "Artillery Modernization"
+ SAU_Global_Trade:0 "Global Trade Expansion"
+ SAU_Global_Trade2:0 "Global Transport Network"
+
+ 

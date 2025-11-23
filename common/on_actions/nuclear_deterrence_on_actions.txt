@@ -1,0 +1,29 @@
+on_actions = {
+	on_daily = {
+  effect = {
+    if = {
+      limit = {
+        num_of_nukes > 0
+        NOT = { has_country_flag = got_nuclear_deterrent_spirit_flag }
+      }
+      country_event = { id = nuclear_deterrence.1 }
+    }
+  }
+}
+
+on_nuke_drop = {
+  effect = {
+    if = {
+      limit = {
+        has_country_flag = has_nukes_but_hidden
+      }
+      add_ideas = nuclear_state_idea
+      set_country_flag = nukes_declared
+      clr_country_flag = has_nukes_but_hidden
+      every_country = {
+              news_event = { hours = 6 id = news.1000 }
+        }
+    	}
+  	}
+	}
+}

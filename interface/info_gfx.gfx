@@ -1,0 +1,49 @@
+spriteTypes = {
+
+	#PORTRAITS
+	spriteType = {
+		name = "GFX_info_giray"
+		texturefile = "gfx/interface/info/portraits/info_giray.dds"
+	}
+	spriteType = {
+		name = "GFX_info_ern"
+		texturefile = "gfx/interface/info/portraits/info_ern.dds"
+	}
+	spriteType = {
+		name = "GFX_info_social"
+		texturefile = "gfx/interface/info/portraits/info_social.dds"
+	}
+	spriteType = {
+		name = "GFX_info_wia"
+		texturefile = "gfx/interface/info/portraits/info_wia.dds"
+	}
+
+	#BUTTONS
+	spriteType = {
+		name = "GFX_info_discord"
+		texturefile = "gfx/interface/info/info_discord.dds"
+	}
+	
+
+	#CT INFO
+	spriteType = {
+		name = "GFX_ct_info_button"
+		texturefile = "gfx/interface/info/ct_info/ct_info_button.dds"
+	}
+	spriteType = {
+		name = "GFX_ct_info_gear"
+		texturefile = "gfx/interface/info/ct_info/ct_info_gear.dds"
+	}
+	spriteType = {
+		name = "GFX_ct_info_rank"
+		texturefile = "gfx/interface/info/ct_info/ct_info_rank.dds"
+	}
+
+
+	#OTHER
+	spriteType = {
+		name = "GFX_info_poster"
+		texturefile = "gfx/interface/info/info_poster.dds"
+	}
+
+}

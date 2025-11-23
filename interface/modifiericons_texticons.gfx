@@ -16,7 +16,31 @@ spriteTypes = {
 		texturefile = "gfx/texticons/supply_texticon.dds"
 		legacy_lazy_load = no
 	}
+     
+spriteType = {
+		name = "GFX_civ_industry_icon_20x20"
+		texturefile = "gfx/texticons/civ_industry_icon_20x20.dds"
+		legacy_lazy_load = no
+	}
+	
+	
+	spriteType = {
+		name = "GFX_infrastructure_icon_20x20"
+		texturefile = "gfx/texticons/infrastructure_icon_20x20.dds"
+		legacy_lazy_load = no
+	}
 
+	spriteType = {
+		name = "GFX_mil_industry_icon_20x20"
+		texturefile = "gfx/texticons/mil_industry_icon_20x20.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_dockyard_icon_20x20"
+		texturefile = "gfx/texticons/dockyard_icon_20x20.dds"
+		legacy_lazy_load = no
+	}
 	spriteType = {
 		name = "GFX_convoy_texticon"
 		texturefile = "gfx/texticons/convoy_texticon.dds"

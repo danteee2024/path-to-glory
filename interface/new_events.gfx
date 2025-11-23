@@ -1,0 +1,26 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_report_event_tojo_dead"
+		texturefile = "gfx/event_pictures/JAP/report_event_tojo_dead.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_yoshijiro_umezu"
+		texturefile = "gfx/event_pictures/JAP/report_event_yoshijiro_umezu.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_hajime_sugiyama"
+		texturefile = "gfx/event_pictures/JAP/report_event_hajime_sugiyama.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_kenji_doihara"
+		texturefile = "gfx/event_pictures/JAP/report_event_kenji_doihara.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_showa_emperor_poster"
+		texturefile = "gfx/event_pictures/JAP/report_event_showa_emperor_poster.dds"
+	}
+}

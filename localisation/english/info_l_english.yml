@@ -1,0 +1,24 @@
+﻿l_english:
+ #TT'S
+ page1_button_loc: "Info"
+ page2_button_loc: "Credits"
+ page3_button_loc: "Desc"
+
+ page1_poet_loc: "Raise the blackened banner; though sirens wail and skies are torn by flame,\nWe do not yield, nor shall we kneel, though thunder shakes our name.\nEach cratered road, each burning field still beats a heart of steel;\nThis soil is ours; and we alone decide the fate we seal.\n\nLook not with pity, O pale and foreign sun!\nShine instead on men who'd rather die than run!\nFor every shattered rifle, a thousand more shall rise;\nFreedom is not begged for it is taken with clenched eyes.\n\nWe were born from fire and from fire we remain,\nNo tyrant’s boot shall mark this land with shame.\nLet rivers flood and empires scream,\nWe march through ash, and we still dare to dream!"
+ page1_poet_title_loc: "Poem of the Update:"
+
+ page2_social_loc: "Danteee"
+ page2_wia_loc: "Jibril"
+ page2_giray_loc: "Mathias"
+ page2_ern_loc: "Juddur"
+
+ page2_social_desc: "'The Head'\n§tProject Lead Director§!"
+ page2_wia_desc: "'The Swede'\n§CBalance Director§!"
+ page2_giray_desc: "'Tree Artisan'\n§1Solo Focus Tree Developer§!"
+ page2_ern_desc: "'The Fixer'\n§9Core Systems & Scripting Developer§!"
+ page2_rights_loc: "2025 Path To Glory. All Rights Reserved."
+
+
+ info_page3_subpage1_main_loc: "§YPath to Glory§! is a mod built for immersive multiplayer games with rebalanced mechanics and community-driven content. The game is tuned for 5–11 year sessions, with faster economic scaling and clearer political direction. For this reason, strong early choices include economic laws like Welfare Capitalism to assist lift the spirits of your nation or even force Bonds Buying for momentum to your economy.\n\nAfter your initial build-up, experiment with a wide range of government policies from economic models like State Capitalism, to policing systems like Military Police and Counter-Terrorism. The army system is enhanced with new tactics and spirits, demanding smart production choices in tanks, planes, and support to dominate.\n\nThe mod features formable nations, government policies, reworked focus trees, new focus trees with historical accuracy, and full support for dynamic decision-making. It’s optimised for stability in multiplayer, with daily desync risk reduced and systems regularly updated based on player feedback. A clean UI and deeper RP features make this a flexible and powerful mod for every playstyle."
+
+ 

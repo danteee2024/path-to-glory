@@ -1,0 +1,16 @@
+﻿l_english:
+
+nuclear_deterrence.1.t:0 "Nuclear deterrence"
+nuclear_deterrence.1.d:0 "We have successfully created and tested nuclear weapons.\n\nWhile our factories are working to create more of this wonder weapon, we are faced with a difficult choice - either we tell the world about our achievement, which will strengthen our position on the world stage and frighten our enemies, or we remain silent, leaving it a surprise for our enemies.\n\n"
+nuclear_deterrence.1.a:0 "It is worth telling the world about our powers"
+nuclear_deterrence.1.b:0 "It's best to keep this a secret for now."
+
+news.1000.t:0 "[FROM.GetNameDefCap] announces possession of a nuclear bomb!"
+news.1000.d:0 "For the first time, [FROM.GetNameDef] officially confirms that it has nuclear weapons. This move is sure to change the balance of power in the world and increase tensions between the powers. \n\nAnalysts around the world are wondering: is this an act of deterrence - or the first step towards a nuclear nightmare?"
+news.1000.a:0 "..."
+news.1000.b:0 "Wonderful"
+
+### wtf? ###
+reveal_nuke:0 "Declare the Presence of Nuclear Weapons"
+reveal_nuke_desc:0 "It's time to announce to the world that we have nuclear weapons."
+nuclear_deterrence_category:0 "Nuclear Deterrence"

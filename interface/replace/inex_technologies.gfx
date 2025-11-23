@@ -1,0 +1,51 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_industrial_expansion_tech_1_medium"
+		texturefile = "gfx/interface/technologies/industrial_expansion_tech_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_industrial_expansion_tech_2_medium"
+		texturefile = "gfx/interface/technologies/industrial_expansion_tech_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_industrial_expansion_tech_3_medium"
+		texturefile = "gfx/interface/technologies/industrial_expansion_tech_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_industrial_expansion_tech_4_medium"
+		texturefile = "gfx/interface/technologies/industrial_expansion_tech_4.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_industrial_expansion_tech_5_medium"
+		texturefile = "gfx/interface/technologies/industrial_expansion_tech_5.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_resource_expansion_tech_1_medium"
+		texturefile = "gfx/interface/technologies/resource_expansion_tech_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_resource_expansion_tech_2_medium"
+		texturefile = "gfx/interface/technologies/resource_expansion_tech_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_resource_expansion_tech_3_medium"
+		texturefile = "gfx/interface/technologies/resource_expansion_tech_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_resource_expansion_tech_4_medium"
+		texturefile = "gfx/interface/technologies/resource_expansion_tech_4.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_resource_expansion_tech_5_medium"
+		texturefile = "gfx/interface/technologies/resource_expansion_tech_5.dds"
+	}
+}

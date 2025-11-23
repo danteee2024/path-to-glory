@@ -1,0 +1,9 @@
+﻿l_english:
+#TT'S
+ip_civ_tt:0 "[?ROOT.num_of_civilian_factories|0]"
+ip_mil_tt:0 "[?ROOT.num_of_military_factories|0]"
+ip_doc_tt:0 "[?ROOT.num_of_naval_factories|0]"
+ip_sol_tt:0 "[?ROOT.num_divisions|0]"
+ip_pla_tt:0 "[?ROOT.num_deployed_planes|0]"
+ip_nav_tt:0 "[?ROOT.num_ships|0]"
+ip_open_button_tt: "§GCTRL+Shift+I§! for close this button"

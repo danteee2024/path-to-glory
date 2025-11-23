@@ -1,0 +1,37 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_portrait_CUB_che_guevara"
+		texturefile = "gfx/leaders/CUB/portrait_CUB_che.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_CUB_tolga_turan"
+		texturefile = "gfx/leaders/CUB/portrait_CUB_tolga_turan.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_teo_general"
+		texturefile = "gfx/leaders/CUB/portrait_teo_general.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_josé_agripino_barnet"
+		texturefile = "gfx/leaders/CUB/portrait_jose_barnet.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_fidel_castro_ruz"
+		texturefile = "gfx/leaders/CUB/portrait_fidel_castro_ruz.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_Fulgencio_Batista"
+		texturefile = "gfx/leaders/CUB/portrait_Fulgencio_Batista.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_Ramon_Grau"
+		texturefile = "gfx/leaders/CUB/portrait_Ramon_Grau.dds"
+	}
+}

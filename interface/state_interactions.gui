@@ -1,0 +1,173 @@
+guiTypes = {
+
+	
+	containerWindowType = {
+		name = "si_main_container"
+		position = { x = 0   y = 82 }
+		size = { width = 500   height = 159 }
+		Orientation = upper_left
+		moveable = yes
+		clipping = no
+		fade_time = 300
+		fade_type = linear
+		
+		background = {
+			name = "si_main_bg"
+			spriteType = "GFX_si_main_bg"
+		}
+
+		instantTextboxType = {
+			name = "si_title"
+			position = { x = 18   y = 18 }
+			font = "hoi_16mbs"
+			text = si_title
+			maxWidth = 350
+			maxHeight = 50
+			format = left
+		}
+
+		
+
+		
+		buttonType = {
+			name = "si_uncore_button"
+			position = { x = 15   y = 58 }
+			spriteType = "GFX_si_state_uncore_button"
+			pdx_tooltip = si_uncore_button_tt
+		}
+		
+		buttonType = {
+			name = "si_move_capital_button"
+			position = { x = 58   y = 58 }
+			spriteType = "GFX_si_state_move_capital_button"
+			pdx_tooltip = si_move_capital_button_tt
+		}
+		
+		buttonType = {
+			name = "si_request_resource_rights_button"
+			position = { x = 101   y = 58 }
+			spriteType = "GFX_si_state_request_resource_rights_button"
+			pdx_tooltip = si_request_resource_rights_button_tt
+		}
+		
+		buttonType = {
+			name = "si_remove_resource_rights_button"
+			position = { x = 144  y = 58 }
+			spriteType = "GFX_si_state_remove_resource_rights_button"
+			pdx_tooltip = si_remove_resource_rights_button_tt
+		}
+		
+		buttonType = {
+			name = "si_demiliterise_button"
+			position = { x = 187   y = 58 }
+			spriteType = "GFX_si_state_demiliterise_button"
+			pdx_tooltip = si_demiliterise_button_tt
+		}
+		
+		buttonType = {
+			name = "si_remiliterise_button"
+			position = { x = 230   y = 58 }
+			spriteType = "GFX_si_state_remiliterise_button"
+			pdx_tooltip = si_remiliterise_button_tt
+		}
+		
+	
+		
+	
+
+
+		buttonType = {
+			name = "si_mark_state_button"
+			position = { x = 322   y = 60 }
+			spriteType = "GFX_si_generic_long_button"
+			pdx_tooltip = si_mark_state_button_tt
+		}
+
+		buttonType = {
+			name = "si_mark_all_states_button"
+			position = { x = 322   y = 80 }
+			spriteType = "GFX_si_generic_long_button"
+			pdx_tooltip = si_mark_all_states_button_tt
+		}
+
+		buttonType = {
+			name = "si_unmark_state_button"
+			position = { x = 322   y = 100 }
+			spriteType = "GFX_si_generic_long_button"
+			pdx_tooltip = si_unmark_state_button_tt
+		}
+
+		buttonType = {
+			name = "si_unmark_all_states_button"
+			position = { x = 322   y = 120 }
+			spriteType = "GFX_si_generic_long_button"
+			pdx_tooltip = si_unmark_all_states_button_tt
+		}
+
+		instantTextBoxType = {
+			name = "si_mark_state_button_text"
+			position = { x = 329   y = 63 }
+			font = "hoi_16mbs"
+			format = center
+			text = si_mark_state_button_text
+			maxWidth = 100
+			maxHeight = 20
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "si_mark_all_states_button_text"
+			position = { x = 329   y = 83 }
+			font = "hoi_16mbs"
+			format = center
+			text = si_mark_all_states_button_text
+			maxWidth = 100
+			maxHeight = 20
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "si_unmark_state_button_text"
+			position = { x = 329   y = 103 }
+			font = "hoi_16mbs"
+			format = center
+			text = si_unmark_state_button_text
+			maxWidth = 100
+			maxHeight = 20
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "si_unmark_all_states_button_text"
+			position = { x = 329   y = 123 }
+			font = "hoi_16mbs"
+			format = center
+			text = si_unmark_all_states_button_text
+			maxWidth = 100
+			maxHeight = 20
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+
+		buttonType = {
+			name = "si_transfer_button"
+			position = { x = 439   y = 60 }
+			spriteType = "GFX_si_state_transfer_button"
+			pdx_tooltip = si_transfer_button_tt
+			scale = 0.85
+		}
+
+		buttonType = {
+			name = "si_claim_button"
+			position = { x = 439   y = 102 }
+			spriteType = "GFX_si_state_claim_button"
+			pdx_tooltip = si_claim_button_tt
+			scale = 0.85
+		}
+
+	}
+
+}
