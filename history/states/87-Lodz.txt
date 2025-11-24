@@ -4,11 +4,14 @@ state={
 	manpower = 2632000
 	
 	state_category = town
+	resources = {
+		steel = 14
+	}
 	history={
 		owner = POL
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 2
+			industrial_complex = 3
 		}
 		victory_points = {
 			9508 10

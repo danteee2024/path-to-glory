@@ -112,7 +112,7 @@ original_tag = GER
      army_fuel_consumption_factor = -0.15
      navy_fuel_consumption_factor = -0.15
      air_fuel_consumption_factor = -0.15
-     consumer_goods_factor = -0.2
+     consumer_goods_factor = -0.1
     }
 }
 
@@ -208,12 +208,10 @@ SAU_Tank_Production = {
 				heavy_tank_chassis = {
 					build_cost_ic = -0.1
 					reliability = 0.1 instant = yes
-					soft_attack = 0.1
 				}
                 medium_tank_chassis = {
 					build_cost_ic = -0.1
 					reliability = 0.1 instant = yes
-					soft_attack = 0.1
 				}
 			}
 }
@@ -223,7 +221,7 @@ SAU_Tank_Army = {
     allowed = { original_tag = SAU }
     modifier = {
         army_armor_attack_factor = 0.1
-        army_armor_defence_factor = 0.1
+        army_armor_defence_factor = 0.05
         army_armor_speed_factor = 0.05
     }
 }
@@ -242,17 +240,17 @@ SAU_Artillery = {
     allowed = { original_tag = SAU }
     equipment_bonus = {
 			artillery = {
-				build_cost_ic = -0.15
+				build_cost_ic = -0.1
                 soft_attack = 0.05
 				instant = yes
 			}
             anti_tank_equipment = {
-				build_cost_ic = -0.15
+				build_cost_ic = -0.1
                 hard_attack = 0.05
 				instant = yes
 			}
             anti_air_equipment = {
-				build_cost_ic = -0.15
+				build_cost_ic = -0.1
                 air_attack = 0.05
 				instant = yes
 			}

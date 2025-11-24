@@ -18,6 +18,10 @@ state={
 		add_core_of = SYR	
 
 	}
+	resources = {
+		steel = 2
+		coal = 3
+	}
 
 
 	provinces={

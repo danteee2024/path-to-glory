@@ -2,15 +2,15 @@ state={
 	id=289
 	name="STATE_289"
 	resources={
-		rubber=11
-		tungsten=3
+		rubber=8.000
+		tungsten=2.000
 	}
 
 	history={
 		owner = SIA
 		buildings = {
 			infrastructure = 2
-			arms_factory = 3
+			arms_factory = 1
 			industrial_complex = 5
 			air_base = 3
 			7408 = {

@@ -5,8 +5,8 @@ state = {
 	manpower = 3563249
 	resources = {
 		oil = 14 # was: 18
-		steel = 12
-		chromium = 5
+		coal = 8# initial distribution = with infra 1.4 / 1 total	#increased to reduce reliance on USA
+		chromium = 8
 	}
 	
 	state_category = large_city

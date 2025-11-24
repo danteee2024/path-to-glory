@@ -704,6 +704,41 @@
 
 
  # ITALY
+ 
+  ITA_negotiations_with_Yugoslavia:0 "Negotiations with Yugoslavia"
+  ITA_negotiations_with_Yugoslavia_desc:0 "Rather than pursuing imperial ambitions through force, we shall approach Belgrade with a proposal for integration. Under the banner of cooperation and shared prosperity, the Yugoslav government may be persuaded to join us willingly — creating a unified Adriatic realm under Italian leadership."
+
+  ITA_negotiations_with_Greece:0 "Negotiations with Greece"
+  ITA_negotiations_with_Greece_desc:0 "Athens holds a crucial position in the Mediterranean balance of power. Through careful diplomacy and the promise of mutual benefit, we may convince the Greek government to align its fate with ours, peacefully extending Italian influence across the Aegean."
+  ITA.332.t:0 "Negotiations with Yugoslavia"
+  ITA.332.d:0 "The Italian government has extended an official proposal to Belgrade regarding the future of the Adriatic region. Framed as an offer of cooperation and unity, it is in reality an invitation for Yugoslavia to join Italy in a new political order — one led from Rome."
+  ITA.332.a:0 "Let us send our proposal."
+  ITA.332.b:0 "They will never accept such terms."
+
+  ITA.333.t:0 "Yugoslavia Accepts Integration"
+  ITA.333.d:0 "After days of deliberation, the Yugoslav leadership has agreed to our terms. Their government has formally announced its dissolution and the integration of all Yugoslav territories into the Kingdom of Italy. Across the Adriatic, our influence is now undisputed."
+  ITA.346.a:0 "A historic victory for diplomacy."
+
+  ITA.334.t:0 "Yugoslavia Rejects Our Offer"
+  ITA.334.d:0 "Our proposal for peaceful integration has been rejected by Belgrade. The Yugoslav government has denounced Italy’s intentions as imperialist and deceitful. Tensions have risen to dangerous levels, and it is clear that only force will resolve the question of the Adriatic."
+  ITA.343.a:0 "Then we shall take what is ours by right."
+ ITA.432.t:0 "Negotiations with Greece"
+  ITA.432.d:0 "In a move designed to strengthen Mediterranean unity, Italy has presented an offer to Athens: peaceful integration into a greater Italian federation. The message speaks of cooperation, economic security, and mutual defense — but few are unaware of the true implications."
+  ITA.432.a:0 "Submit our proposal to Athens."
+  ITA.432.b:0 "They will refuse, as they always do."
+
+  ITA.433.t:0 "Greece Accepts Integration"
+  ITA.433.d:0 "The Greek government has agreed to join Italy in a union of equals — or so the statement declares. Italian officials have already taken administrative control of Greek territory, marking the peaceful annexation of Greece into the Italian sphere. A new Mediterranean dawn rises."
+  ITA.446.a:0 "The Aegean now answers to Rome."
+
+  ITA.434.t:0 "Greece Rejects Our Proposal"
+  ITA.434.d:0 "Athens has publicly rejected our offer, accusing Italy of using diplomacy as a mask for imperial conquest. The Greek armed forces are mobilizing, and diplomatic relations have collapsed. The time for words has ended — war is inevitable."
+  ITA.443.a:0 "If they will not join us peacefully, they will fall by the sword."
+  ITA_industrial_renaissance:0 "Italian Industrial Renaissance"
+  ITA_industrial_renaissance_desc:0 "Through national cooperation and efficient state planning, Italy has entered a new era of industrial power. Factories hum with productivity, shipyards are bustling, and our scientists drive innovation faster than ever before."
+   ITA_Peacefully_Recruitement:0 "Peacefully Recruitment"
+ ITA_Military_Construction:0 "Military Construction"
+ ITA_Military_Construction_desc:0 "To safeguard our growing ambitions, Italy must strengthen its military infrastructure. Expanding our network of forts, air bases, and naval facilities will ensure that our forces can operate efficiently both at home and abroad. Through strategic investment in construction, we will lay the foundation for a modern and self-reliant military machine."
  ITA_italian_highways_bba:0 "Italian Highways"
  ITA_italian_highways_bba_desc:0 "The ancient Romans built roads that were the envy of the entire world. Now the upstart Germans believe that their Autobahn is far superior than anything we could build. We will prove them wrong."
  ITA_develop_libya:0 "Develop Libya"
@@ -1537,9 +1572,9 @@
  ITA_increase_resource_amount_in_state_tt:0 "Add §Y2 of every resource§! already produced in the state."
  ITA_liberate_the_workers_of_africa_wargoal_tt:0 "§Y[ROOT.GetFlag][ROOT.GetNameDefCap]§! gains wargoal against any non-friendly country with a different ideology controlling states in Africa."
  ITA_ascari_create_units_tt:0 "Create up to §Y10 [ROOT.GetFlag][ROOT.GetAdjective]§! colonial units in controlled African states and up to §Y3 [ROOT.GetFlag][ROOT.GetAdjective]§! colonial units in every African subject."
- ITA_ascari_re_tt:0 "$ITA_modify_regio_esercito_dynamic_modifier_ns_intro$ \n$modifier_army_sub_unit_infantry_defence_factor$: §G+3.00%§! \n\n"
+ ITA_ascari_re_tt:0 "$ITA_modify_regio_esercito_dynamic_modifier_ns_intro$ \n$modifier_army_sub_unit_infantry_defence_factor$: §G+5.00%§! \n\n"
  ITA_aid_for_the_spanish_republic_tt:0 "Send §Y2500§! of §YInfantry Equipment§! to [GetSpanishRepublicFlagAndNameDef]. Old ones go first."
- ITA_empower_the_unions_military_industry_dm_tt:0 "$ITA_modify_military_industry_dynamic_modifier_ns_intro$ \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G+5.00%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §G+5.00%§! \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §G+5.00%§! \n\n"
+ ITA_empower_the_unions_military_industry_dm_tt:0 "$ITA_modify_military_industry_dynamic_modifier_ns_intro$ \n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G+5.00%§! \n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §G+5.00%§! \n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: §G+10.00%§! \n\n"
  ITA_production_lines_military_industry_dm_tt:0 "$ITA_modify_military_industry_dynamic_modifier_ns_intro$ \n$MODIFIER_PRODUCTION_FACTORY_START_EFFICIENCY_FACTOR$: §G+5.00%§! \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §G+10.00%§! \n\n"
  ITA_italia_libera_invite_tt:0 "\n§YIndependent Democratic countries§! close to [ROOT.GetName] in Central and Southern Europe will be invited to the §Y$ITA_free_states_of_europe$§!."
  ITA_italia_libera_faction_tt:0 "Gets event §Y'[ROOT.GetName] invites us to the $ITA_free_states_of_europe$'§!."

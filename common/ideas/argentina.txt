@@ -167,7 +167,7 @@ ideas = {
 			removal_cost = -1
 			picture = ARG_economic_reactivation
 			modifier = {
-				production_speed_industrial_complex_factor = 0.1
+				production_speed_buildings_factor = 0.1
 
 			}
 

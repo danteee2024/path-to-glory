@@ -5,10 +5,6 @@ state={
 	
 	state_category = wasteland
 
-	resources = {
-		chromium = 18
-	}
-
 	history={
 		owner = SPR
 		add_core_of = WES
@@ -21,6 +17,9 @@ state={
 		victory_points = {
 			8038 1
 		}
+	}
+	resources = {
+		chromium = 11
 	}
 	
 	provinces={

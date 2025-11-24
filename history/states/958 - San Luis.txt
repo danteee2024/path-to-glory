@@ -4,6 +4,9 @@ state = {
 	manpower = 602403
 	
 	state_category = rural
+	resources = {
+		coal = 5
+	}
 
 	history = {
 
@@ -12,6 +15,8 @@ state = {
 
 		buildings = {
 			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
 
 			# Minister Pistarini Reservoir
 			5152 = { dam = 1 }

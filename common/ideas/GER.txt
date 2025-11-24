@@ -39,6 +39,43 @@ ideas = {
 			}
 		}
 
+
+		The_Red_Terror_Army = {
+		random = no
+#fuck you giamper you snake copying our mod 
+		equipment_bonus = {
+			infantry_equipment = {
+				build_cost_ic = -0.10
+				instant = yes
+			}
+			artillery_equipment = {
+				build_cost_ic = -0.05
+				instant = yes
+			}
+			anti_air_equipment = {
+				build_cost_ic = -0.05
+				instant = yes
+			}
+			anti_tank_equipment = {
+				build_cost_ic = -0.05
+				instant = yes
+			}
+			support_equipment = {
+				build_cost_ic = -0.10
+				instant = yes
+			}
+			motorized_equipment = {
+				build_cost_ic = -0.05
+				instant = yes
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
 		GER_Empire_Tank = {
 
 			picture = generic_acquire_tanks
@@ -156,6 +193,25 @@ ideas = {
 			modifier = {
 				army_attack_against_major_factor = 0.05
 				army_defence_against_major_factor = 0.05
+			}
+		}
+
+		GER_protect_the_revolution = {
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+			
+			}
+
+			removal_cost = -1
+
+			picture = ARG_war_division
+
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
 			}
 		}
 
@@ -4679,9 +4735,11 @@ ideas = {
 			}
 
 			modifier = {
+				conscription = 0.02
 				army_org_factor = 0.05
 				army_morale_factor = 0.1
 				max_planning_factor = 0.1
+				
 			}
 		}
 

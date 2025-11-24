@@ -1361,16 +1361,26 @@ economy_decisions = {
 						size > 0
 						include_locked = yes
 					}
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
 				}
 				add_building_construction = {
 					type = arms_factory
 					level = 1
 					instant_build = yes
 				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
-		days_remove = 120
-		cost = 50
+		days_remove = 150
+		cost = 40
 		ai_will_do = {
 			factor = 5
 		}
@@ -1396,16 +1406,26 @@ economy_decisions = {
 						size > 0
 						include_locked = yes
 					}
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
 				}
 				add_building_construction = {
 					type = arms_factory
 					level = 1
 					instant_build = yes
 				}
+					add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
-		days_remove = 120
-		cost = 50
+		days_remove = 150
+		cost = 40
 		ai_will_do = {
 			factor = 5
 		}
@@ -1432,16 +1452,26 @@ economy_decisions = {
 						size > 0
 						include_locked = yes
 					}
+						free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
 				}
 				add_building_construction = {
 					type = arms_factory
 					level = 1
 					instant_build = yes
 				}
+					add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
-		days_remove = 120
-		cost = 50
+		days_remove = 150
+		cost = 40
 		ai_will_do = {
 			factor = 5
 		}
@@ -1467,16 +1497,27 @@ economy_decisions = {
 						size > 0
 						include_locked = yes
 					}
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
 				}
 				add_building_construction = {
 					type = arms_factory
 					level = 1
 					instant_build = yes
 				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+					
 			}
 		}
-		days_remove = 120
-		cost = 50
+		days_remove = 150
+		cost = 40
 		ai_will_do = {
 			factor = 5
 		}
@@ -1502,16 +1543,26 @@ economy_decisions = {
 						size > 0
 						include_locked = yes
 					}
+						free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
 				}
 				add_building_construction = {
 					type = arms_factory
 					level = 1
 					instant_build = yes
 				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
-		days_remove = 120
-		cost = 50
+		days_remove = 150
+		cost = 40
 		ai_will_do = {
 			factor = 5
 		}

@@ -6,7 +6,7 @@ state={
 	state_category = town
 	
 	resources={
-		rubber=89 
+		rubber=40 # was: 70
 	}
 
 
@@ -14,7 +14,6 @@ state={
 		owner = SIA
 		buildings = {
 			infrastructure = 2
-			industrial_complex = 2
 			12230 = {
 				naval_base = 1
 			}

@@ -7,6 +7,7 @@ add_namespace = france
 	############################
 		#### MOD : FRANCE SECTION ####
 	############################
+
 	
 #Legislative Election
 country_event = {
@@ -2072,19 +2073,19 @@ country_event = {
 			add_building_construction = {
 				type = bunker
 				province = 5291
-				level = 2
+				level = 5
 				instant_build = yes
 			}
 			add_building_construction = {
 				type = bunker
 				province = 3560
-				level = 2
+				level = 5
 				instant_build = yes
 			}
 			add_building_construction = {
 				type = bunker
 				province = 9472
-				level = 2
+				level = 5
 				instant_build = yes
 			}
 		}
@@ -2092,19 +2093,19 @@ country_event = {
 			add_building_construction = {
 				type = bunker
 				province = 11606
-				level = 2
+				level = 5
 				instant_build = yes
 			}
 			add_building_construction = {
 				type = bunker
 				province = 11483
-				level = 2
+				level = 5
 				instant_build = yes
 			}
 			add_building_construction = {
 				type = bunker
 				province = 575
-				level = 2
+				level = 5
 				instant_build = yes
 			}
 		}
@@ -2112,7 +2113,7 @@ country_event = {
 			add_building_construction = {
 				type = bunker
 				province = 3447
-				level = 2
+				level = 5
 				instant_build = yes
 			}
 		}
@@ -2134,43 +2135,43 @@ country_event = {
 			add_building_construction = {
 				type = bunker
 				province = 764
-				level = 2
+				level = 5
 				instant_build = yes
 			}
 			add_building_construction = {
 				type = bunker
 				province = 9909
-				level = 2
+				level = 5
 				instant_build = yes
 			}
 			add_building_construction = {
 				type = bunker
 				province = 3959
-				level = 2
+				level = 5
 				instant_build = yes
 			}
 			add_building_construction = {
 				type = bunker
 				province = 6975
-				level = 2
+				level = 5
 				instant_build = yes
 			}
 			add_building_construction = {
 				type = bunker
 				province = 3764
-				level = 2
+				level = 5
 				instant_build = yes
 			}
 			add_building_construction = {
 				type = bunker
 				province = 9745
-				level = 2
+				level = 5
 				instant_build = yes
 			}
 			add_building_construction = {
 				type = bunker
 				province = 778
-				level = 2
+				level = 5
 				instant_build = yes
 			}
 		}

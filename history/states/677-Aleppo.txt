@@ -20,6 +20,9 @@ state={
 		add_core_of = SYR
 
 	}
+	resources = {
+		coal = 5
+	}
 
 	provinces={
 		1056 1072 1088 7140 7671 10087 12473 

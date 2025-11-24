@@ -4,13 +4,18 @@ state={
 	manpower = 1412100
 	
 	state_category = rural
+	resources = {
+		coal = 5
+		tungsten = 7
+	}
 	history={
 		victory_points = {
 			3230 5
 		}
 		owner = POL
 		buildings = {
-			infrastructure = 3
+			infrastructure = 4
+			industrial_complex = 3
 		}
 		add_core_of = POL
 	}
