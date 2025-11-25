@@ -142,7 +142,7 @@ focus_tree = {
 		id = LIT_rastikis_military_reforms
 		icon = GFX_focus_generic_military_mission
 		prerequisite = { focus = LIT_secure_a_loyal_cabinet }
-		x = 18
+		x = 24
 		y = 1
 		relative_position_id = LIT_secure_a_loyal_cabinet
 
@@ -347,7 +347,7 @@ focus_tree = {
 		id = LIT_integrate_the_opposition
 		icon = GFX_goal_support_democracy
 		prerequisite = { focus = LIT_secure_a_loyal_cabinet }
-		x = 16
+		x = 22
 		y = 1
 		relative_position_id = LIT_secure_a_loyal_cabinet
 
@@ -2628,6 +2628,57 @@ focus_tree = {
 			}
 		}
 	}
+
+	focus = {
+		id = LIT_Kingdom_of_Prussia_Revival
+		icon = GFX_focus_GER_prussian_legacy
+		prerequisite = { focus = LIT_exile_voldemares }
+		prerequisite = { focus = LIT_lithuanian_preservationism }
+		x = 5
+		y = 1
+		relative_position_id = LIT_exile_voldemares
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			has_government = neutrality
+		}
+
+		bypass = {
+			
+		}
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			set_party_name = {
+                ideology = neutrality
+                long_name = "House of Prussia"
+                name = "HoP"
+            }
+			 create_country_leader = {
+                name = "Wilhelm III"
+                desc = ""
+                picture = "GFX_portrait_ger_wilhelm_iii"
+                expire = "1965.1.1"
+                ideology = despotism
+                traits = {
+                    King_of_Prussia
+                }
+            }
+			set_cosmetic_tag = LIT_Prussia
+			add_timed_idea = {
+				idea = LIT_Prussia_Revival
+				days = 180
+			}
+	}
+}
+
+
 	
 	focus = {
 		id = LIT_the_nation_and_its_power

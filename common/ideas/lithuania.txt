@@ -21,6 +21,23 @@ ideas = {
 				industrial_capacity_factory	= -0.2
 			}
 		}
+		LIT_Prussia_Revival ={
+			picture = FRA_matignon_agreements
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.1
+			}
+		}
 
 		LIT_invested_in_farms = {
 			
