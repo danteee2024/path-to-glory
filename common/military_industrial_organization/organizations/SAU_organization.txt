@@ -1,0 +1,74 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+ #################### 
+SAU_medium_tank_organization = {
+    name = SAU_medium_tank_organization
+    include = generic_medium_tank_organization
+    icon = GFX_idea_generic_tank_manufacturer
+
+    allowed = {
+        original_tag = SAU
+    }
+}
+
+SAU_infantry_tank_designer = {
+    name = SAU_infantry_tank_designer
+    include = generic_infantry_tank_organization
+    icon = GFX_idea_generic_tank_manufacturer
+
+    allowed = {
+        original_tag = SAU
+    }
+}
+
+SAU_marmon_herrington_organization = {
+	include = generic_mobile_tank_organization
+	icon = GFX_idea_marmon_herrington
+
+	allowed = {	
+		tag = SAU
+	}
+
+}
+
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+
+###################################

@@ -105,6 +105,28 @@ ideas = {
 			}
 		}
 
+		BALTIC_union_Industry = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_improved_industries
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.1
+				factory_energy_consumption = -0.05
+				industrial_capacity_factory = 0.1
+			}
+		}
+
 		BALTIC_union_idea = {
 
 			allowed = {
@@ -183,11 +205,6 @@ ideas = {
 
 			picture = german_advisors
 
-			targeted_modifier = {
-				tag = GER
-				attack_bonus_against = -0.15
-				defense_bonus_against = -0.15
-			}
 
 			modifier = {
 				industrial_capacity_factory = 0.1

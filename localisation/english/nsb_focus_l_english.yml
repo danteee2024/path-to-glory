@@ -16,6 +16,38 @@
  BALTIC_supported_fascism:0 "Supported Baltic Nationalism"
  accepted_catholics:0 "Accepted Catholics"
  annex_liberia_opinion:0 "Annexed Liberia"
+ BALTIC_Lithuania_Infra:0 "Rebuild Lithuanian Infrastructure"
+BALTIC_Lithuania_Infra_desc:0 "The Lithuanian rail and road network has long suffered from neglect. By investing in new links, we can modernize transportation across the country and support our national industry."
+
+BALTIC_Latvia_Infra:0 "Rebuild Latvian Infrastructure"
+BALTIC_Latvia_Infra_desc:0 "Latvia’s infrastructure requires major upgrades to support trade, military mobility, and economic growth. Modernization will help integrate the region with its neighbors."
+
+BALTIC_Estonia_Infra:0 "Rebuild Estonian Infrastructure"
+BALTIC_Estonia_Infra_desc:0 "Improving Estonia’s rail connections and internal logistics will provide the foundation for further industrial and resource development."
+
+### --- Resource Focuses ---
+BALTIC_Lithuania_Resource:0 "Develop Lithuanian Resources"
+BALTIC_Lithuania_Resource_desc:0 "Lithuania's lands contain valuable but underdeveloped deposits. With targeted investment, we can extract coal, tungsten, and steel to support our industrial expansion."
+
+BALTIC_Latvia_resources:0 "Develop Latvian Resources"
+BALTIC_Latvia_resources_desc:0 "Latvia possesses untapped aluminium and tungsten veins, along with coal and steel reserves. Securing these resources will bolster our national economy."
+
+BALTIC_Estonia_resources:0 "Develop Estonian Resources"
+BALTIC_Estonia_resources_desc:0 "Estonia's shale oil fields and mineral deposits can be harnessed to strengthen the region’s self-sufficiency and strategic production."
+
+### --- Building/Industry Focuses ---
+BALTIC_Lithuania_Building:0 "Expand Lithuanian Industry"
+BALTIC_Lithuania_Building_desc:0 "With newfound resources and modernized infrastructure, Lithuania is ready for a major industrial expansion. We will construct civilian and military factories across the nation."
+
+BALTIC_Latvia_Building:0 "Expand Latvian Industry"
+BALTIC_Latvia_Building_desc:0 "Latvia’s growing resource extraction efforts can support a rapid increase in industrial facilities. Factories will be established to strengthen production capabilities."
+
+BALTIC_Estonia_Building:0 "Expand Estonian Industry"
+BALTIC_Estonia_Building_desc:0 "Estonia’s modernization now allows the construction of new industry to fuel national development and regional cooperation."
+
+### --- Union Industry Focus ---
+BALTIC_union_Industry:0 "Unified Baltic Industry"
+BALTIC_union_Industry_desc:0 "With the infrastructure, resources, and industrial sectors of Lithuania, Latvia, and Estonia fully developed, we can now unify our economic systems into a cohesive Baltic industrial network. Our combined strength will build a powerful regional economy."
  #Estonia
  EST_era_of_silence:0 "The Era of Silence"
  EST_era_of_silence_desc:0 "With the violent ultra-nationalist Vaps movement sweeping from Saaremaa to Võrumaa, the State Elder must usher in a new era for Estonia; an era with no elections, no dissent, and no resistance. The nation must enter an era of silence."
