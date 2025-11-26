@@ -934,8 +934,7 @@ level = 1
 			modifier = {
 				consumer_goods_expected_value = 0.15
 				production_speed_buildings_factor = 0.1
-				production_speed_industrial_complex_factor = 0.1
-				factory_energy_consumption = -0.1
+				factory_energy_consumption = -0.05
 
 			}
 

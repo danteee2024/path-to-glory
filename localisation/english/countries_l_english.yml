@@ -282,6 +282,8 @@
  LIT_ADJ:0 "Lithuanian"
  LIT_Prussia:0 "Kingdom of Prussia"
  LIT_Prussia_DEF:0 "Kingdom of Prussia"
+ LIT_Greater_Prussia_DEF:0 "Greater Kingdom of Prussia"
+ LIT_Greater_Prussia:0 "Greater Kingdom of Prussia"
  #LIT_subject:0 "$OVERLORDADJ$ $LIT$"
  #LIT_subject_DEF:0 "$OVERLORDADJ$ $LIT$"
 

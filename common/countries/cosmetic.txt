@@ -236,8 +236,8 @@ GER_german_kaiserreich = {
 	color_ui = rgb { 115 115 115 }
 }
 LIT_Prussia = {
-	color = rgb { 128 128 128 }
-	color_ui = rgb { 115 115 115 }
+	color = rgb { 196 189 204 }
+	color_ui = rgb { 255 246 255 }
 }
 
 CHI_warlord_leader = {

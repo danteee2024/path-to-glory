@@ -332,6 +332,21 @@
 
   LIT_Koenigsberg_Modernization:0 "Modernize Königsberg"
   LIT_Koenigsberg_Modernization_desc:0 "Now under our rightful rule, Königsberg must be elevated to its former glory. Industrial expansion, naval facilities, and modern infrastructure will transform the city into a shining center of the reborn Prussian state."
+  LIT_Germany_Prussia_Trade:0 "Germany-Prussia Trade"
+ LIT_Greater_Prussia: "Proclaim Greater Prussia"
+  LIT_Greater_Prussia_desc: "Having reclaimed the historical lands of the House of Hohenzollern, we shall declare the rebirth of Greater Prussia and reshape our state accordingly."
+
+  LIT_Attack_Germany: "Strike at Germany"
+  LIT_Attack_Germany_desc: "Germany stands weakened and vulnerable. If we are to restore our rightful territories, we must act now and deliver a decisive blow."
+
+  LIT_Prussian_Industry: "Develop Prussian Industry"
+  LIT_Prussian_Industry_desc: "To sustain our ambitions, we must modernize and expand the industrial base of Prussia, ensuring our factories supply our armies with strength."
+
+  LIT_Reform_The_Army: "Reform the Prussian Army"
+  LIT_Reform_The_Army_desc: "A modern Prussian army must be well-trained, disciplined, and equipped. Through a comprehensive reform, we will create a fighting force worthy of our name."
+
+  LIT_abolish_seimas: "Abolish the Seimas"
+  LIT_abolish_seimas_desc: "The Seimas has long represented the remnants of parliamentary rule. To centralize authority and restore the Prussian state, it must be dissolved."
 
   ### Military Development
   LIT_Prussian_Artillery:0 "Prussian Artillery Corps"

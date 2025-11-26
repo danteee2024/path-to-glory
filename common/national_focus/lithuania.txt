@@ -97,7 +97,7 @@ focus_tree = {
 			}
 		}
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2483,7 +2483,7 @@ focus_tree = {
 		y = 0
 		relative_position_id = LIT_free_voldemares
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2531,7 +2531,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = LIT_exile_voldemares
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2600,7 +2600,7 @@ focus_tree = {
 		y = 0
 		relative_position_id = LIT_integrate_the_opposition
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -2678,6 +2678,13 @@ focus_tree = {
 				idea = LIT_Prussia_Revival
 				days = 180
 			}
+			hidden_effect = {
+				every_state = {
+				limit = { is_core_of = PRE }
+				add_core_of = ROOT
+			}
+		}
+			
 	}
 }
 focus = {
@@ -2710,8 +2717,22 @@ focus = {
 			add_ideas = LIT_Germany_Prussia_Trade
 			transfer_state = 763
 			transfer_state = 5
+			if = {
+				limit = {
+					763 = {
+						is_capital = no
+					}
+				}
+				set_capital = {
+					state = 763
+				}
+			}
+			hidden_effect = {
+			763 = {
+			set_state_name = Königsberg }
 			763 = { add_core_of = LIT }
 			5 = { add_core_of = LIT }
+			}
 			
 	}
 }
@@ -2743,17 +2764,18 @@ focus = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			763 = {
+			add_extra_state_shared_building_slots = 9
 			add_building_construction = {
 				type = industrial_complex
 				level = 4
 			}
 			add_building_construction = {
 				type = arms_factory
-				level = 2
+				level = 3
 			}
 			add_building_construction = {
 				type = dockyard
-				level = 1
+				level = 2
 			}
 		}
 			
@@ -2788,15 +2810,76 @@ focus = {
 			add_ideas = LIT_Prussian_Artillery
 	}
 }
+focus = {
+		id = LIT_Reform_The_Army
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = LIT_Prussian_Artillery }
+		
+		x = 1
+		y = 1
+		relative_position_id = LIT_Prussian_Artillery
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = LIT_military_idea_1
+				add_idea = LIT_military_idea_2
+			}
+	}
+}
+focus = {
+		id = LIT_abolish_seimas
+		icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+		prerequisite = { focus = LIT_Koenigsberg_Negotiations }
+		prerequisite = { focus = LIT_Prussian_Artillery }
+		
+		x = -1
+		y = 1
+		relative_position_id = LIT_Prussian_Artillery
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			remove_ideas = LIT_seimas_idea_1
+	}
+}
 
 focus = {
 		id = LIT_Prussian_War_Preparation
 		icon = GFX_focus_generic_military_industry
-		prerequisite = { focus = LIT_Koenigsberg_Negotiations }
-		prerequisite = { focus = LIT_Prussian_Artillery }
-		x = 1
+		prerequisite = { focus = LIT_abolish_seimas }
+		x = 0
 		y = 1
-		relative_position_id = LIT_Koenigsberg_Negotiations
+		relative_position_id = LIT_abolish_seimas
 
 		cost = 10
 
@@ -2828,11 +2911,38 @@ focus = {
 	}
 }
 focus = {
+		id = LIT_Prussian_Industry
+		icon = GFX_focus_CHL_enlarge_the_textile_industries
+		prerequisite = { focus = LIT_Prussian_War_Preparation }
+		prerequisite = { focus = LIT_Reform_The_Army }
+		x = 1
+		y = 1
+		relative_position_id = LIT_Prussian_War_Preparation
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+		available_if_capitulated = no
+		completion_reward = {
+			add_ideas = LIT_Prussian_Industry
+	}
+}
+focus = {
 		id = LIT_exploit_the_international_bank
 		icon = GFX_focus_usa_reestablish_the_gold_standard
 		prerequisite = { focus = LIT_Prussian_War_Preparation }
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = LIT_Prussian_War_Preparation
 
 		cost = 10
@@ -2952,9 +3062,11 @@ focus = {
 		completion_reward = {
 			annex_country = {
 				target = EST
+				transfer_troops = yes
 			}
 			annex_country = {
 				target = LAT
+				transfer_troops = yes
 			}
 			# Estonia
 			custom_effect_tooltip = form_country_estonia_coring_states_tt
@@ -3005,6 +3117,39 @@ focus = {
 				remove_idea = LIT_Prussias_Army
 				add_idea = LIT_Prussian_Army_Power
 			}
+			
+	}
+}
+
+focus = {
+		id = LIT_Attack_Germany
+		icon = GFX_focus_attack_germany
+		prerequisite = { focus = LIT_Prussian_Army_Power }
+		x = 0
+		y = 1
+		relative_position_id = LIT_Prussian_Army_Power
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+			
+		}
+
+		bypass = {
+			
+		}
+		available_if_capitulated = no
+		completion_reward = {
+			create_wargoal = {
+					type = take_state_focus
+				target = GER
+				generator = { 67 66 68 63 64 62 909 58 59 56 57 55 51 42 }
+				}
 			
 	}
 }
@@ -3068,6 +3213,43 @@ focus = {
 				limit = { is_core_of = POL }
 				add_core_of = ROOT
 			}
+			
+	}
+}
+
+focus = {
+		id = LIT_Greater_Prussia
+		icon = GFX_focus_ETH_the-italo_ethiopian_empire
+		prerequisite = { focus = LIT_Integrate_Poland }
+		prerequisite = { focus = LIT_Attack_Germany }
+		x = -1
+		y = 1
+		relative_position_id = LIT_Attack_Germany
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			controls_state = 763
+			controls_state = 64
+			controls_state = 10
+			controls_state = 11
+			controls_state = 808
+			controls_state = 812
+			
+		}
+
+		bypass = {
+			
+		}
+		available_if_capitulated = no
+		completion_reward = {
+			set_cosmetic_tag = LIT_Greater_Prussia
+			add_stability = 0.1
+			add_war_support = 0.1
 			
 	}
 }

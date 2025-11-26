@@ -11,7 +11,7 @@ state = {
 		add_core_of = POL
 		add_core_of = DNZ
 		add_core_of = KSH
-		add_claim_by = PRE
+		add_core_of = PRE
 
 		victory_points = {
 			362 10 # Danzig
