@@ -45,10 +45,10 @@ leader_traits = {
 
 	King_of_Prussia = {
 		random = no
-		weekly_casualties_war_support = 0.001
-		drift_defence_factor = 0.5
-		party_popularity_stability_factor = 0.15
+		war_support_factor = 0.1
 		justify_war_goal_time = -0.25
+		neutrality_drift = 0.05
+		army_morale_factor = 0.05
 	}
 
 	dictator = {
