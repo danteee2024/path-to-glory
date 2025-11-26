@@ -1562,6 +1562,54 @@ shared_focus = {
 	}
 }
 
+shared_focus = {
+	id = BALTIC_british_designers
+	icon = GFX_focus_chi_british_cooperation
+	prerequisite = { focus = BALTIC_invest_in_baltic_trade  focus = BALTIC_trade_with_neighbors }
+	x = 1
+	y = 1
+	relative_position_id = BALTIC_trade_with_neighbors
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+			ENG = {
+			exists = yes
+			has_capitulated = no
+			NOT = { has_war_with = ROOT }
+		}
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	
+	completion_reward = {
+		custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = BALTIC_RAF_organization
+			mio:BALTIC_RAF_organization = {
+				add_mio_size = 1
+			}
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+	}
+}
+
 ###########################
 #### COMMUNIST FOCUSES ####
 ###########################

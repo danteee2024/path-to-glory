@@ -2568,7 +2568,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = LIT_root_out_the_iron_wolf
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2976,7 +2976,7 @@ focus = {
 		y = 1
 		relative_position_id = LIT_Prussian_War_Preparation
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
