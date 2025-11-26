@@ -182,7 +182,7 @@ focus_tree = {
 		x = 2
 		y = 0
 		relative_position_id = SOV_infrastructure_effort_nsb
-		cost = 11.7
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -10334,7 +10334,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SOV_coup_detat
-		cost = 5
+		cost = 10
 		available = {
 		}
 		                
@@ -10414,7 +10414,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_curtailment_of_the_collective_farms
-		cost = 10
+		cost = 11.7
 		available = {
 			has_war = no
 		}
@@ -10439,7 +10439,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = SOV_back_to_the_nep
-		cost = 10
+		cost = 11.7
 		available = {
 		}
 		                
@@ -10452,7 +10452,7 @@ focus_tree = {
 						add_tech_bonus = {
 							name = SOV_planned_economy
 							bonus = 1.0
-							uses = 2
+							uses = 1
 							category = industry
 						}
 						add_ideas = new_economic_policy
@@ -10465,7 +10465,7 @@ focus_tree = {
 					add_tech_bonus = {
 						name = SOV_planned_economy
 						bonus = 1.0
-						uses = 2
+						uses = 1
 						category = industry
 					}
 					add_ideas = new_economic_policy
@@ -10837,7 +10837,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_paced_industrialization
-		cost = 5
+		cost = 10
 		available = {
 			has_idea = new_economic_policy
 		}
@@ -10859,7 +10859,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_international_revolutionary_marxist_centre
-		cost = 5
+		cost = 11.7
 		available = {
 			surrender_progress < 0.05
 		}
@@ -10918,7 +10918,7 @@ focus_tree = {
 			add_war_support = 0.1
 			add_timed_idea = {
 				idea = SOV_soviet_hegemony_idea
-				days = 730
+				days = 360
 			}
 
 		}
