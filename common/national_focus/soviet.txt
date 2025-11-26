@@ -182,7 +182,7 @@ focus_tree = {
 		x = 2
 		y = 0
 		relative_position_id = SOV_infrastructure_effort_nsb
-		cost = 10
+		cost = 11.7
 
 		ai_will_do = {
 			factor = 1
@@ -10414,7 +10414,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_curtailment_of_the_collective_farms
-		cost = 5
+		cost = 10
 		available = {
 			has_war = no
 		}
@@ -10439,7 +10439,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = SOV_back_to_the_nep
-		cost = 5
+		cost = 10
 		available = {
 		}
 		                
@@ -10447,10 +10447,6 @@ focus_tree = {
 
 		completion_reward = {
 			if = {
-				limit = {
-					num_subjects > 0
-				}
-				every_subject_country = {
 					country_event = { id = NSB_soviet_planned_economy.1 }
 					effect_tooltip = {
 						add_tech_bonus = {
@@ -10461,7 +10457,6 @@ focus_tree = {
 						}
 						add_ideas = new_economic_policy
 					}
-				}
 			}
 			else = {
 				custom_effect_tooltip = SOV_planned_economy_subjects_tt
@@ -10491,7 +10486,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_back_to_the_nep
-		cost = 5
+		cost = 10
 		available = {
 		}
 		                
