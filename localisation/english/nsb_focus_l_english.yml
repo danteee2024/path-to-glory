@@ -17,37 +17,37 @@
  accepted_catholics:0 "Accepted Catholics"
  annex_liberia_opinion:0 "Annexed Liberia"
  BALTIC_Lithuania_Infra:0 "Rebuild Lithuanian Infrastructure"
-BALTIC_Lithuania_Infra_desc:0 "The Lithuanian rail and road network has long suffered from neglect. By investing in new links, we can modernize transportation across the country and support our national industry."
+ BALTIC_Lithuania_Infra_desc:0 "The Lithuanian rail and road network has long suffered from neglect. By investing in new links, we can modernize transportation across the country and support our national industry."
 
-BALTIC_Latvia_Infra:0 "Rebuild Latvian Infrastructure"
-BALTIC_Latvia_Infra_desc:0 "Latvia’s infrastructure requires major upgrades to support trade, military mobility, and economic growth. Modernization will help integrate the region with its neighbors."
+ BALTIC_Latvia_Infra:0 "Rebuild Latvian Infrastructure"
+ BALTIC_Latvia_Infra_desc:0 "Latvia’s infrastructure requires major upgrades to support trade, military mobility, and economic growth. Modernization will help integrate the region with its neighbors."
 
-BALTIC_Estonia_Infra:0 "Rebuild Estonian Infrastructure"
-BALTIC_Estonia_Infra_desc:0 "Improving Estonia’s rail connections and internal logistics will provide the foundation for further industrial and resource development."
+ BALTIC_Estonia_Infra:0 "Rebuild Estonian Infrastructure"
+ BALTIC_Estonia_Infra_desc:0 "Improving Estonia’s rail connections and internal logistics will provide the foundation for further industrial and resource development."
 
-### --- Resource Focuses ---
-BALTIC_Lithuania_Resource:0 "Develop Lithuanian Resources"
-BALTIC_Lithuania_Resource_desc:0 "Lithuania's lands contain valuable but underdeveloped deposits. With targeted investment, we can extract coal, tungsten, and steel to support our industrial expansion."
+ ### --- Resource Focuses ---
+ BALTIC_Lithuania_Resource:0 "Develop Lithuanian Resources"
+ BALTIC_Lithuania_Resource_desc:0 "Lithuania's lands contain valuable but underdeveloped deposits. With targeted investment, we can extract coal, tungsten, and steel to support our industrial expansion."
 
-BALTIC_Latvia_resources:0 "Develop Latvian Resources"
-BALTIC_Latvia_resources_desc:0 "Latvia possesses untapped aluminium and tungsten veins, along with coal and steel reserves. Securing these resources will bolster our national economy."
+ BALTIC_Latvia_resources:0 "Develop Latvian Resources"
+ BALTIC_Latvia_resources_desc:0 "Latvia possesses untapped aluminium and tungsten veins, along with coal and steel reserves. Securing these resources will bolster our national economy."
 
-BALTIC_Estonia_resources:0 "Develop Estonian Resources"
-BALTIC_Estonia_resources_desc:0 "Estonia's shale oil fields and mineral deposits can be harnessed to strengthen the region’s self-sufficiency and strategic production."
+ BALTIC_Estonia_resources:0 "Develop Estonian Resources"
+ BALTIC_Estonia_resources_desc:0 "Estonia's shale oil fields and mineral deposits can be harnessed to strengthen the region’s self-sufficiency and strategic production."
 
-### --- Building/Industry Focuses ---
-BALTIC_Lithuania_Building:0 "Expand Lithuanian Industry"
-BALTIC_Lithuania_Building_desc:0 "With newfound resources and modernized infrastructure, Lithuania is ready for a major industrial expansion. We will construct civilian and military factories across the nation."
+ ### --- Building/Industry Focuses ---
+ BALTIC_Lithuania_Building:0 "Expand Lithuanian Industry"
+ BALTIC_Lithuania_Building_desc:0 "With newfound resources and modernized infrastructure, Lithuania is ready for a major industrial expansion. We will construct civilian and military factories across the nation."
 
-BALTIC_Latvia_Building:0 "Expand Latvian Industry"
-BALTIC_Latvia_Building_desc:0 "Latvia’s growing resource extraction efforts can support a rapid increase in industrial facilities. Factories will be established to strengthen production capabilities."
+ BALTIC_Latvia_Building:0 "Expand Latvian Industry"
+ BALTIC_Latvia_Building_desc:0 "Latvia’s growing resource extraction efforts can support a rapid increase in industrial facilities. Factories will be established to strengthen production capabilities."
 
-BALTIC_Estonia_Building:0 "Expand Estonian Industry"
-BALTIC_Estonia_Building_desc:0 "Estonia’s modernization now allows the construction of new industry to fuel national development and regional cooperation."
+ BALTIC_Estonia_Building:0 "Expand Estonian Industry"
+ BALTIC_Estonia_Building_desc:0 "Estonia’s modernization now allows the construction of new industry to fuel national development and regional cooperation."
 
-### --- Union Industry Focus ---
-BALTIC_union_Industry:0 "Unified Baltic Industry"
-BALTIC_union_Industry_desc:0 "With the infrastructure, resources, and industrial sectors of Lithuania, Latvia, and Estonia fully developed, we can now unify our economic systems into a cohesive Baltic industrial network. Our combined strength will build a powerful regional economy."
+ ### --- Union Industry Focus ---
+ BALTIC_union_Industry:0 "Unified Baltic Industry"
+ BALTIC_union_Industry_desc:0 "With the infrastructure, resources, and industrial sectors of Lithuania, Latvia, and Estonia fully developed, we can now unify our economic systems into a cohesive Baltic industrial network. Our combined strength will build a powerful regional economy."
  #Estonia
  EST_era_of_silence:0 "The Era of Silence"
  EST_era_of_silence_desc:0 "With the violent ultra-nationalist Vaps movement sweeping from Saaremaa to Võrumaa, the State Elder must usher in a new era for Estonia; an era with no elections, no dissent, and no resistance. The nation must enter an era of silence."
@@ -318,6 +318,11 @@ BALTIC_union_Industry_desc:0 "With the infrastructure, resources, and industrial
  LIT_abolish_the_presidency_desc:0 "Thus far, Smetona has retained rulership of the nation but with the growing popularity of Mindaugas III, it seems prudent that the office of Presidency be abolished and replaced with the absolute rule of the King. Smetona will resign to the role of Prime Minister, serving the young Mindaugas III as his adviser."
  LIT_claim_prussia:0 "Seize East Prussia"
  LIT_claim_prussia_desc:0 "Eastern Prussia is home to countless Lithuanian and Polish minorities, and it is time that these men were united with their comrades in [Root.GetNameDef]."
+  #Lithuania-Prussia
+ King_of_Prussia:0 "King of Prussia"
+  LIT_Prussia_Revival:0 "Prussian Revival"
+  LIT_Kingdom_of_Prussia_Revival:0 "Revival of the Kingdom of Prussia"
+  LIT_Kingdom_of_Prussia_Revival_desc:0 "With the exile resolved and the preservation of our national core secured, a new path opens before Lithuania. By embracing the legacy of Prussia and restoring the House of Hohenzollern to a place of prominence, we may reshape our state into a monarchy rooted in old tradition yet prepared for the challenges of the modern world. The coronation of Wilhelm III will mark the beginning of a new Prussian-Lithuanian era."
  #Shared Baltic
  BALTIC_rejoin_the_railways:0 "Rejoin the Railways"
  BALTIC_rejoin_the_railways_desc:0 "The Russians and the Germans who occupied us have seen us as nothing more than a rural backwater, but no more. [ROOT.GetNonIdeologyName] shall be industrialized to its maximum potential starting with an upgrade of our railways and infrastructure."

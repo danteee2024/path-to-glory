@@ -2634,6 +2634,9 @@ focus_tree = {
 		icon = GFX_focus_GER_prussian_legacy
 		prerequisite = { focus = LIT_exile_voldemares }
 		prerequisite = { focus = LIT_lithuanian_preservationism }
+		mutually_exclusive = {
+			focus = LIT_a_king_for_our_people focus = LIT_a_martial_prime_minister focus = LIT_a_priestly_prime_minister
+		}
 		x = 5
 		y = 1
 		relative_position_id = LIT_exile_voldemares
@@ -2655,6 +2658,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			set_cosmetic_tag = LIT_Prussia
 			set_party_name = {
                 ideology = neutrality
                 long_name = "House of Prussia"
@@ -2670,10 +2674,46 @@ focus_tree = {
                     King_of_Prussia
                 }
             }
-			set_cosmetic_tag = LIT_Prussia
 			add_timed_idea = {
 				idea = LIT_Prussia_Revival
 				days = 180
+			}
+	}
+}
+focus = {
+		id = LIT_Koenigsberg_Negotiations
+		icon = GFX_focus_generic_home_defense
+		prerequisite = { focus = LIT_Kingdom_of_Prussia_Revival }
+		
+		x = -1
+		y = 1
+		relative_position_id = LIT_Kingdom_of_Prussia_Revival
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			has_government = neutrality
+		}
+
+		bypass = {
+			
+		}
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			news_event = LIT_Koenigsberg_Negotiations
+			hidden_effect = {
+			GER = { add_ideas = LIT_Germany_Prussia_Trade }
+			add_ideas = LIT_Germany_Prussia_Trade
+			transfer_state = 763
+			transfer_state = 5
+			763 = { add_core_of = LIT }
+			5 = { add_core_of = LIT }
 			}
 	}
 }
