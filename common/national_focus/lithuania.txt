@@ -2637,7 +2637,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = LIT_a_king_for_our_people focus = LIT_a_martial_prime_minister focus = LIT_a_priestly_prime_minister
 		}
-		x = 5
+		x = 4
 		y = 1
 		relative_position_id = LIT_exile_voldemares
 
@@ -2696,7 +2696,7 @@ focus = {
 		}
 
 		available = {
-			has_government = neutrality
+			
 		}
 
 		bypass = {
@@ -2706,15 +2706,369 @@ focus = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			news_event = LIT_Koenigsberg_Negotiations
-			hidden_effect = {
 			GER = { add_ideas = LIT_Germany_Prussia_Trade }
 			add_ideas = LIT_Germany_Prussia_Trade
 			transfer_state = 763
 			transfer_state = 5
 			763 = { add_core_of = LIT }
 			5 = { add_core_of = LIT }
+			
+	}
+}
+
+focus = {
+		id = LIT_Koenigsberg_Modernization
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = LIT_Koenigsberg_Negotiations }
+		
+		x = -1
+		y = 1
+		relative_position_id = LIT_Koenigsberg_Negotiations
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			763 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 4
 			}
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+			}
+			add_building_construction = {
+				type = dockyard
+				level = 1
+			}
+		}
+			
+	}
+}
+focus = {
+		id = LIT_Prussian_Artillery
+		icon = GFX_SOV_soviet_artillery_ccp_2d_sov_compatibility
+		prerequisite = { focus = LIT_Kingdom_of_Prussia_Revival }
+		
+		x = 1
+		y = 1
+		relative_position_id = LIT_Kingdom_of_Prussia_Revival
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_ideas = LIT_Prussian_Artillery
+	}
+}
+
+focus = {
+		id = LIT_Prussian_War_Preparation
+		icon = GFX_focus_generic_military_industry
+		prerequisite = { focus = LIT_Koenigsberg_Negotiations }
+		prerequisite = { focus = LIT_Prussian_Artillery }
+		x = 1
+		y = 1
+		relative_position_id = LIT_Koenigsberg_Negotiations
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+		available_if_capitulated = no
+		completion_reward = {
+			add_timed_idea = {
+				idea = LIT_Prussian_War_Preparation
+				days = 365
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+			}
+			
+	}
+}
+focus = {
+		id = LIT_exploit_the_international_bank
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		prerequisite = { focus = LIT_Prussian_War_Preparation }
+		x = 0
+		y = 1
+		relative_position_id = LIT_Prussian_War_Preparation
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+			
+		}
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = { EST_exploit_the_banks_idea }
+		}
+	}
+focus = {
+		id = LIT_Prussias_Army
+		icon = GFX_SOV_an_adaptable_army_ccp_2d_sov_compatibility
+		prerequisite = { focus = LIT_Prussian_War_Preparation }
+		prerequisite = {
+			focus = LIT_prepare_forest_brothers
+		}
+		x = -2
+		y = 1
+		relative_position_id = LIT_Prussian_War_Preparation
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+		available_if_capitulated = no
+		completion_reward = {
+			add_ideas = LIT_Prussias_Army
+			
+			
+	}
+}
+
+focus = {
+		id = LIT_baltic_Submission
+		icon = GFX_focus_GER_subduing_the_baltic_states
+		prerequisite = { focus = LIT_Prussias_Army }
+		x = 0
+		y = 1
+		relative_position_id = LIT_Prussias_Army
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+		available_if_capitulated = no
+		completion_reward = {
+			LAT = { country_event = generic.20 }
+			EST = { country_event = generic.20 }
+			
+			
+	}
+}
+
+focus = {
+		id = LIT_baltic_integration
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = LIT_baltic_Submission }
+		x = 0
+		y = 1
+		relative_position_id = LIT_baltic_Submission
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			EST = {
+				OR = {
+					is_subject_of = ROOT
+				}
+			} 
+			LAT = {
+				OR = {
+					is_subject_of = ROOT
+				}
+			}
+			
+		}
+
+		bypass = {
+			
+		}
+		available_if_capitulated = no
+		completion_reward = {
+			annex_country = {
+				target = EST
+			}
+			annex_country = {
+				target = LAT
+			}
+			# Estonia
+			custom_effect_tooltip = form_country_estonia_coring_states_tt
+			hidden_effect = {
+				13 = { add_core_of = ROOT }
+				191 = { add_core_of = ROOT }
+				811 = { add_core_of = ROOT }
+				812 = { add_core_of = ROOT }
+				813 = { add_core_of = ROOT }
+			}
+			# Latvia
+			custom_effect_tooltip = form_country_latvia_coring_states_tt
+			hidden_effect = {
+				12 = { add_core_of = ROOT }
+				190 = { add_core_of = ROOT }
+				808 = { add_core_of = ROOT }
+				809 = { add_core_of = ROOT }
+				810 = { add_core_of = ROOT }
+			}
+	}
+}
+
+focus = {
+		id = LIT_Prussian_Army_Power
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = LIT_baltic_integration }
+		x = 1
+		y = 1
+		relative_position_id = LIT_baltic_integration
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+			
+		}
+
+		bypass = {
+			
+		}
+		available_if_capitulated = no
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = LIT_Prussias_Army
+				add_idea = LIT_Prussian_Army_Power
+			}
+			
+	}
+}
+
+focus = {
+		id = LIT_Attack_Poland
+		icon = GFX_focus_generic_attack_poland
+		prerequisite = { focus = LIT_baltic_integration }
+		x = -1
+		y = 1
+		relative_position_id = LIT_baltic_integration
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+			
+		}
+
+		bypass = {
+			
+		}
+		available_if_capitulated = no
+		completion_reward = {
+			create_wargoal = {
+					target = POL
+					type = annex_everything
+				}
+			
+	}
+}
+focus = {
+		id = LIT_Integrate_Poland
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = LIT_Attack_Poland }
+		x = 0
+		y = 1
+		relative_position_id = LIT_Attack_Poland
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			controls_state = 10
+			
+		}
+
+		bypass = {
+			
+		}
+		available_if_capitulated = no
+		completion_reward = {
+			every_state = {
+				limit = { is_core_of = POL }
+				add_core_of = ROOT
+			}
+			
 	}
 }
 

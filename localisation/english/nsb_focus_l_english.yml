@@ -323,6 +323,42 @@
   LIT_Prussia_Revival:0 "Prussian Revival"
   LIT_Kingdom_of_Prussia_Revival:0 "Revival of the Kingdom of Prussia"
   LIT_Kingdom_of_Prussia_Revival_desc:0 "With the exile resolved and the preservation of our national core secured, a new path opens before Lithuania. By embracing the legacy of Prussia and restoring the House of Hohenzollern to a place of prominence, we may reshape our state into a monarchy rooted in old tradition yet prepared for the challenges of the modern world. The coronation of Wilhelm III will mark the beginning of a new Prussian-Lithuanian era."
+  lit_prussia_news.1.t:0 "Königsberg Restored to the Kingdom of Prussia"
+  lit_prussia_news.1.d:0 "In a diplomatic breakthrough with far-reaching historical significance, the Kingdom of Prussia—recently re-established under the Lithuanian crown—has secured the transfer of Königsberg from Germany. After weeks of confidential negotiations, Berlin has formally acknowledged the Prussian monarchy’s claim to the city once regarded as the heart of the old Prussian state.\n\nGovernment representatives from both nations presented the agreement as a pragmatic solution to regional disputes, with Germany reportedly receiving extensive assurances of future cooperation. The return of Königsberg has sparked celebrations across the Prussian-Lithuanian realm, where the restoration of the traditional royal seat is seen as the symbolic completion of the monarchy’s revival.\n\nInternational observers remain divided: some praise the peaceful resolution of a complex territorial question, while others warn that the resurgence of a Prussian kingdom may reshape the balance of power in Eastern Europe."
+  lit_prussia_news.1.a:0 "A historic restoration."
+ ### Negotiations and Königsberg
+  LIT_Koenigsberg_Negotiations:0 "Negotiations for Königsberg"
+  LIT_Koenigsberg_Negotiations_desc:0 "With the revival of the Prussian monarchy, the question of Königsberg—our historic capital—stands at the forefront of our foreign policy. Through diplomacy and careful negotiation, we shall pursue its peaceful return to the Kingdom of Prussia."
+
+  LIT_Koenigsberg_Modernization:0 "Modernize Königsberg"
+  LIT_Koenigsberg_Modernization_desc:0 "Now under our rightful rule, Königsberg must be elevated to its former glory. Industrial expansion, naval facilities, and modern infrastructure will transform the city into a shining center of the reborn Prussian state."
+
+  ### Military Development
+  LIT_Prussian_Artillery:0 "Prussian Artillery Corps"
+  LIT_Prussian_Artillery_desc:0 "The legacy of Prussian firepower is unmatched. By reorganizing our artillery forces to mirror the discipline and precision of the old Prussian army, we restore the backbone of our modern military."
+
+  LIT_Prussian_War_Preparation:0 "Preparations for War"
+  LIT_Prussian_War_Preparation_desc:0 "The world grows ever more hostile. To secure the future of Prussia, we must mobilize, expand our armaments industry, and prepare our forces for the conflicts to come."
+
+  ### Military Expansion
+  LIT_Prussias_Army:0 "Prussia's Army"
+  LIT_Prussias_Army_desc:0 "The army of Prussia must once again inspire fear and respect across Europe. Through reforms, modern doctrine, and the rebuilding of old traditions, our military shall rise to unmatched strength."
+
+  LIT_baltic_Submission:0 "Subdue the Baltic"
+  LIT_baltic_Submission_desc:0 "Our authority must be recognized across the Baltics. Through diplomatic pressure or strategic force, Estonia and Latvia shall be compelled to submit to the will of the Prussian crown."
+
+  LIT_baltic_integration:0 "Integrate the Baltic Territories"
+  LIT_baltic_integration_desc:0 "With the Baltic nations firmly under our control, the time has come to integrate their lands into the Prussian realm. Through administrative restructuring and loyal governance, these territories will become a permanent part of our kingdom."
+
+  LIT_Prussian_Army_Power:0 "Prussian Army Ascendant"
+  LIT_Prussian_Army_Power_desc:0 "Our military reforms have reached their apex. Prussia now fields an army of unprecedented discipline, firepower, and professionalism—one worthy of our restored monarchy."
+
+  ### Poland Branch
+  LIT_Attack_Poland:0 "War with Poland"
+  LIT_Attack_Poland_desc:0 "Poland stands as the final barrier to Prussia's rightful dominance in the region. Diplomatic solutions have failed; now we shall settle our disputes on the battlefield."
+
+  LIT_Integrate_Poland:0 "Integrate Polish Territories"
+  LIT_Integrate_Poland_desc:0 "With Poland defeated, we must consolidate the lands under our rule. By incorporating these territories directly into the Prussian state, we ensure the security and unity of our expanding kingdom."
  #Shared Baltic
  BALTIC_rejoin_the_railways:0 "Rejoin the Railways"
  BALTIC_rejoin_the_railways_desc:0 "The Russians and the Germans who occupied us have seen us as nothing more than a rural backwater, but no more. [ROOT.GetNonIdeologyName] shall be industrialized to its maximum potential starting with an upgrade of our railways and infrastructure."

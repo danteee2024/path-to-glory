@@ -4,6 +4,7 @@
 
 add_namespace = LIT_events
 
+
 # SOV-LIT partition of Poland
 country_event = {
 	id = LIT_events.1
