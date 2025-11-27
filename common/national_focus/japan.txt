@@ -26535,9 +26535,7 @@ focus_tree = {
 		}
 
 		available = {
-			all_core_state = {
-				is_fully_controlled_by = ROOT
-			}
+
 			date > 1941.01.01
 		}
 
