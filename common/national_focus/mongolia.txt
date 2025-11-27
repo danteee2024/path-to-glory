@@ -2781,7 +2781,7 @@ focus = {
 
 		completion_reward = {
 			set_variable = {
-				MON_reestablished_army_cavalry_attack_factor = 0.35
+				MON_reestablished_army_cavalry_attack_factor = 0.25
 			}
 			custom_effect_tooltip = MON_reestablished_army_cavalry_factor_tooltip
 		}

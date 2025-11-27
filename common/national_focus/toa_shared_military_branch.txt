@@ -3632,45 +3632,45 @@ shared_focus = {
 				original_tag = CHL
 			}
 			custom_effect_tooltip = CHL_modify_chilean_army_ns_intro
-			add_to_variable = { JUNO_army_modifier_max_planning_factor = 0.1 tooltip = max_planning_factor_tt }
-			add_to_variable = { JUNO_army_modifier_planning_speed_factor = 0.15 tooltip = planning_speed_factor_tt }
+			add_to_variable = { JUNO_army_modifier_max_planning_factor = 0.05 tooltip = max_planning_factor_tt }
+			add_to_variable = { JUNO_army_modifier_planning_speed_factor = 0.10 tooltip = planning_speed_factor_tt }
 		}
 		ELSE_IF = {
 			limit = {
 				original_tag = BRA
 			}
 			custom_effect_tooltip = BRA_modify_brazilian_army_ns_intro
-			add_to_variable = { JUNO_army_modifier_max_planning_factor = 0.1 tooltip = max_planning_factor_tt }
-			add_to_variable = { JUNO_army_modifier_planning_speed_factor = 0.15 tooltip = planning_speed_factor_tt }
+			add_to_variable = { JUNO_army_modifier_max_planning_factor = 0.05 tooltip = max_planning_factor_tt }
+			add_to_variable = { JUNO_army_modifier_planning_speed_factor = 0.10 tooltip = planning_speed_factor_tt }
 		}
 		ELSE_IF = {
 			limit = {
 				original_tag = ARG
 			}
 			custom_effect_tooltip = ARG_modify_argentine_army_ns_intro
-			add_to_variable = { JUNO_army_modifier_max_planning_factor = 0.1 tooltip = max_planning_factor_tt }
-			add_to_variable = { JUNO_army_modifier_planning_speed_factor = 0.15 tooltip = planning_speed_factor_tt }
+			add_to_variable = { JUNO_army_modifier_max_planning_factor = 0.05 tooltip = max_planning_factor_tt }
+			add_to_variable = { JUNO_army_modifier_planning_speed_factor = 0.10 tooltip = planning_speed_factor_tt }
 		}
 		ELSE_IF = {
 			limit = {
 				original_tag = PAR
 			}
 			custom_effect_tooltip = PAR_modify_paraguayan_army_ns_intro
-			add_to_variable = { JUNO_army_modifier_max_planning_factor = 0.1 tooltip = max_planning_factor_tt }
-			add_to_variable = { JUNO_army_modifier_planning_speed_factor = 0.15 tooltip = planning_speed_factor_tt }
+			add_to_variable = { JUNO_army_modifier_max_planning_factor = 0.05 tooltip = max_planning_factor_tt }
+			add_to_variable = { JUNO_army_modifier_planning_speed_factor = 0.10 tooltip = planning_speed_factor_tt }
 		}
 		ELSE_IF = {
 			limit = {
 				original_tag = URG
 			}
 			custom_effect_tooltip = URG_modify_uruguayan_army_ns_intro
-			add_to_variable = { JUNO_army_modifier_max_planning_factor = 0.1 tooltip = max_planning_factor_tt }
-			add_to_variable = { JUNO_army_modifier_planning_speed_factor = 0.15 tooltip = planning_speed_factor_tt }
+			add_to_variable = { JUNO_army_modifier_max_planning_factor = 0.05 tooltip = max_planning_factor_tt }
+			add_to_variable = { JUNO_army_modifier_planning_speed_factor = 0.10 tooltip = planning_speed_factor_tt }
 		}
 		ELSE = {
 			custom_effect_tooltip = JUNO_modify_south_american_army_ns_intro
-			add_to_variable = { JUNO_army_modifier_max_planning_factor = 0.1 tooltip = max_planning_factor_tt }
-			add_to_variable = { JUNO_army_modifier_planning_speed_factor = 0.15 tooltip = planning_speed_factor_tt }
+			add_to_variable = { JUNO_army_modifier_max_planning_factor = 0.05 tooltip = max_planning_factor_tt }
+			add_to_variable = { JUNO_army_modifier_planning_speed_factor = 0.10 tooltip = planning_speed_factor_tt }
 		}
 	}
 }
