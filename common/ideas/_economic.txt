@@ -831,7 +831,7 @@ level = 1
 				production_speed_dockyard_factor = 0.25
 				conversion_cost_civ_to_mil_factor= -0.1
 				conversion_cost_mil_to_civ_factor = -0.1
-				factory_energy_consumption = 0.2
+				factory_energy_consumption = 0.25
 			}
 			cancel_if_invalid = no
 		}

@@ -93,7 +93,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				conscription = 0.04
+				conscription = 0.05
 				army_org_factor = 0.05
 				org_loss_when_moving = -0.05
 				army_attack_factor = 0.05

@@ -3102,6 +3102,7 @@ focus = {
 			EST = { country_event = generic.20 }
 			
 			
+			
 	}
 }
 
