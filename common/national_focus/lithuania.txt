@@ -2723,6 +2723,13 @@ focus = {
         }
         owner = {
             add_ideas = LIT_Prussia_Trade
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+				}
+			}
         }
     }
 	
@@ -2762,7 +2769,7 @@ focus = {
 		y = 1
 		relative_position_id = LIT_Koenigsberg_Negotiations
 
-		cost = 10
+		cost = 15
 
 		ai_will_do = {
 			factor = 3
@@ -2852,6 +2859,7 @@ focus = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			add_war_support = 0.1
 			swap_ideas = {
 				remove_idea = LIT_military_idea_1
 				add_idea = LIT_military_idea_2
@@ -2885,6 +2893,8 @@ focus = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			add_war_support = 0.05
+			add_stability = 0.05
 			remove_ideas = LIT_seimas_idea_1
 	}
 }
@@ -2963,6 +2973,7 @@ focus = {
 		}
 		available_if_capitulated = no
 		completion_reward = {
+			add_war_support = 0.1
 			add_timed_idea = {
 				idea = LIT_Prussian_War_Preparation
 				days = 365
@@ -2982,7 +2993,7 @@ focus = {
 		icon = GFX_focus_CHL_enlarge_the_textile_industries
 		prerequisite = { focus = LIT_Prussian_War_Preparation }
 		prerequisite = { focus = LIT_Reform_The_Army }
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = LIT_Prussian_War_Preparation
 
@@ -3009,7 +3020,7 @@ focus = {
 		icon = GFX_focus_usa_reestablish_the_gold_standard
 		prerequisite = { focus = LIT_Prussian_War_Preparation }
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = LIT_Prussian_War_Preparation
 
 		cost = 10
@@ -3067,10 +3078,10 @@ focus = {
 focus = {
 		id = LIT_baltic_Submission
 		icon = GFX_focus_GER_subduing_the_baltic_states
-		prerequisite = { focus = LIT_Prussias_Army }
-		x = 0
+		prerequisite = { focus = LIT_Prussian_War_Preparation }
+		x = -5
 		y = 1
-		relative_position_id = LIT_Prussias_Army
+		relative_position_id = LIT_Prussian_War_Preparation
 
 		cost = 10
 
@@ -3159,12 +3170,12 @@ focus = {
 focus = {
 		id = LIT_Prussian_Army_Power
 		icon = GFX_focus_chi_army_reform
-		prerequisite = { focus = LIT_baltic_integration }
+		prerequisite = { focus = LIT_Prussias_Army }
 		x = 1
 		y = 1
-		relative_position_id = LIT_baltic_integration
+		relative_position_id = LIT_Prussias_Army
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 3
@@ -3224,10 +3235,10 @@ focus = {
 focus = {
 		id = LIT_Attack_Poland
 		icon = GFX_focus_generic_attack_poland
-		prerequisite = { focus = LIT_baltic_integration }
+		prerequisite = { focus = LIT_Prussias_Army }
 		x = -1
 		y = 1
-		relative_position_id = LIT_baltic_integration
+		relative_position_id = LIT_Prussias_Army
 
 		cost = 5
 

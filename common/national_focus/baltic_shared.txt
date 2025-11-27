@@ -637,7 +637,7 @@ shared_focus = {
 shared_focus = {
 	id = BALTIC_union_Industry
 	icon = GFX_focus_generic_modernize_industry
-	prerequisite = { focus = BALTIC_Latvia_resources  }
+	prerequisite = { focus = BALTIC_Latvia_Building  }
 	prerequisite = {
 	focus = BALTIC_Lithuania_Building }
 	prerequisite = {
