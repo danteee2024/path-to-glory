@@ -9982,6 +9982,7 @@ focus_tree = {
 		
 		available = { 
 			is_subject = no
+			date > 1938.1.1
 		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_HISTORICAL }
@@ -12461,7 +12462,7 @@ focus_tree = {
 				NOT = { country_exists = ENG }
 				is_ally_with = ENG
 				has_subject = RGB
-		    }
+			}
 		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
