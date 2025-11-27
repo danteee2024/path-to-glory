@@ -332,9 +332,30 @@
 
   LIT_Koenigsberg_Modernization:0 "Modernize Königsberg"
   LIT_Koenigsberg_Modernization_desc:0 "Now under our rightful rule, Königsberg must be elevated to its former glory. Industrial expansion, naval facilities, and modern infrastructure will transform the city into a shining center of the reborn Prussian state."
-  LIT_Germany_Prussia_Trade:0 "Germany-Prussia Trade"
+  LIT_Prussia_Trade:0 "Prussia Trade"
  LIT_Greater_Prussia: "Proclaim Greater Prussia"
   LIT_Greater_Prussia_desc: "Having reclaimed the historical lands of the House of Hohenzollern, we shall declare the rebirth of Greater Prussia and reshape our state accordingly."
+ ### Negotiations Poland
+ LIT_negotiations_with_Poland_for_Prussia_Territories:0 "Negotiate With Poland for Prussian Territories"
+  LIT_negotiations_with_Poland_for_Prussia_Territories_desc:0 "With the Polish government in a precarious position regarding the administration of former Prussian lands, Lithuania has an opportunity to initiate diplomatic talks. By approaching Warsaw with carefully crafted proposals, we may secure rightful control over territories historically linked to our nation. Whether through negotiation or future pressure, this step lays the groundwork for expanding our influence in Prussia."
+
+ LIT.145.t:0 "Lithuania Requests the Return of Prussian Territories"
+  LIT.145.d:0 "The Lithuanian government has formally approached us with a diplomatic proposal regarding the administration of the Prussian territories currently under Polish control. They argue that these lands, historically associated with the Baltic region, rightfully belong under Lithuanian stewardship. Accepting their request could strengthen relations, while refusal may escalate tensions."
+  
+  LIT.145.a:0 "We will negotiate and transfer the territories."
+  LIT.145.b:0 "We refuse their demands."
+
+  ### Poland Accepts ###
+  LIT.146.t:0 "Poland Accepts Our Proposal"
+  LIT.146.d:0 "Warsaw has agreed to our diplomatic overture. The Polish government has officially recognized our claim to the Prussian territories and consented to their transfer. This peaceful resolution not only restores lands of historic importance to Lithuania, but also opens new opportunities for cooperation with Poland."
+  
+  LIT.146.a:0 "The Prussian lands return home."
+
+  ### Poland Refuses ###
+  LIT.147.t:0 "Poland Rejects Our Demands"
+  LIT.147.d:0 "Our attempt at peaceful negotiations has failed. Poland has outright refused to discuss the transfer of Prussian territories. Their obstinance leaves us with limited options—if we wish to reclaim what is rightfully ours, we may need to force the issue."
+  
+  LIT.147.a:0 "If diplomacy fails, steel shall speak." 
 
   LIT_Attack_Germany: "Strike at Germany"
   LIT_Attack_Germany_desc: "Germany stands weakened and vulnerable. If we are to restore our rightful territories, we must act now and deliver a decisive blow."

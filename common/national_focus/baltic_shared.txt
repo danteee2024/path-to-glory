@@ -499,10 +499,10 @@ shared_focus = {
 	completion_reward = {
 		
 			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 				}
 			}
 			random_owned_controlled_state = {
@@ -554,10 +554,10 @@ shared_focus = {
 	completion_reward = {
 		
 			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 				}
 			}
 			random_owned_controlled_state = {
@@ -610,10 +610,10 @@ shared_focus = {
 	completion_reward = {
 		
 			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 				}
 			}
 			random_owned_controlled_state = {
@@ -720,7 +720,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = BALTIC_attract_workers_to_capital
 
-	cost = 10
+	cost = 5
 
 	ai_will_do = {
 		factor = 1
@@ -755,32 +755,32 @@ shared_focus = {
 		if = {
 			limit = { original_tag = LIT }
 			11 = {
-				add_building_construction = { type = bunker province = 6296 level = 2 instant_build = yes }
-				add_building_construction = { type = bunker province = 327 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 6296 level = 4 instant_build = yes }
+				add_building_construction = { type = bunker province = 327 level = 4 instant_build = yes }
 			}
 			814 = {
-				add_building_construction = { type = bunker province = 3272 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 3272 level = 4 instant_build = yes }
 			}
 		}
 		if = {
 			limit = { original_tag = LAT }
 			808 = {
-				add_building_construction = { type = bunker province = 9340 level = 2 instant_build = yes }
-				add_building_construction = { type = bunker province = 9240 level = 2 instant_build = yes }
-				add_building_construction = { type = bunker province = 10323 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 9340 level = 4 instant_build = yes }
+				add_building_construction = { type = bunker province = 9240 level = 4 instant_build = yes }
+				add_building_construction = { type = bunker province = 10323 level = 4 instant_build = yes }
 			}
 			809 = {
-				add_building_construction = { type = bunker province = 6222 level = 2 instant_build = yes }
-				add_building_construction = { type = bunker province = 265 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 6222 level = 4 instant_build = yes }
+				add_building_construction = { type = bunker province = 265 level = 4 instant_build = yes }
 			}
 		}
 		if = {
 			limit = { original_tag = EST }
 			812 = {
-				add_building_construction = { type = bunker province = 3152 level = 2 instant_build = yes }
-				add_building_construction = { type = bunker province = 567 level = 2 instant_build = yes }
-				add_building_construction = { type = bunker province = 496 level = 3 instant_build = yes }
-				add_building_construction = { type = bunker province = 11426 level = 2 instant_build = yes }
+				add_building_construction = { type = bunker province = 3152 level = 4 instant_build = yes }
+				add_building_construction = { type = bunker province = 567 level = 4 instant_build = yes }
+				add_building_construction = { type = bunker province = 496 level = 4 instant_build = yes }
+				add_building_construction = { type = bunker province = 11426 level = 4 instant_build = yes }
 			}
 		}
 	}

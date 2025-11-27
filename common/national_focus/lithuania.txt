@@ -2712,11 +2712,27 @@ focus = {
 		available_if_capitulated = no
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		completion_reward = {
-			GER = { add_ideas = LIT_Germany_Prussia_Trade }
-			add_ideas = LIT_Germany_Prussia_Trade
-			transfer_state = 763
-			transfer_state = 5
+		completion_reward = { 
+
+		every_state = {
+        limit = {
+            OR = {
+                state = 763   
+                state = 5
+            }
+        }
+        owner = {
+            add_ideas = LIT_Prussia_Trade
+        }
+    }
+	
+       
+			
+		add_ideas = LIT_Prussia_Trade
+	    transfer_state = 763
+		transfer_state = 5
+		
+			
 			if = {
 				limit = {
 					763 = {
@@ -2730,8 +2746,8 @@ focus = {
 			hidden_effect = {
 			763 = {
 			set_state_name = Königsberg }
-			763 = { add_core_of = LIT }
-			5 = { add_core_of = LIT }
+				763 = { add_core_of = LIT }
+				5 = { add_core_of = LIT }
 			}
 			
 	}
@@ -2819,7 +2835,7 @@ focus = {
 		y = 1
 		relative_position_id = LIT_Prussian_Artillery
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 3
@@ -2874,11 +2890,62 @@ focus = {
 }
 
 focus = {
-		id = LIT_Prussian_War_Preparation
-		icon = GFX_focus_generic_military_industry
+		id = LIT_negotiations_with_Poland_for_Prussia_Territories
+		icon = GFX_goal_generic_territory_or_war
 		prerequisite = { focus = LIT_abolish_seimas }
 		x = 0
 		y = 1
+		relative_position_id = LIT_abolish_seimas
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+			 OR = {
+        Not = {
+       85 = { is_controlled_by = POL }
+        }
+        Not = {
+       807 = { is_controlled_by = POL }
+        }
+        Not = {
+       86 = { is_controlled_by = POL }
+        }
+        Not = {
+       87 = { is_controlled_by = POL }
+        }
+        Not = {
+       98 = { is_controlled_by = POL }
+        }
+        Not = {
+       762 = { is_controlled_by = POL }
+        }
+       
+    }
+			
+			
+		}
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			POL = { country_event = { id = LIT.145 } }
+	}
+}
+
+focus = {
+		id = LIT_Prussian_War_Preparation
+		icon = GFX_focus_generic_military_industry
+		prerequisite = { focus = LIT_negotiations_with_Poland_for_Prussia_Territories }
+		x = 0
+		y = 2
 		relative_position_id = LIT_abolish_seimas
 
 		cost = 10
@@ -2901,10 +2968,10 @@ focus = {
 				days = 365
 			}
 			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 				}
 			}
 			
@@ -3005,7 +3072,7 @@ focus = {
 		y = 1
 		relative_position_id = LIT_Prussias_Army
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 3
@@ -3418,7 +3485,7 @@ focus = {
 		x = 1
 		y = 1
 		relative_position_id = LIT_lithuanian_preservationism
-		mutually_exclusive = { focus = LIT_a_priestly_prime_minister focus = LIT_a_king_for_our_people }
+		mutually_exclusive = { focus = LIT_a_priestly_prime_minister focus = LIT_a_king_for_our_people focus = LIT_Kingdom_of_Prussia_Revival }
 
 		cost = 5
 
@@ -3446,7 +3513,7 @@ focus = {
 	focus = {
 		id = LIT_the_nationalist_council
 		icon = GFX_focus_generic_self_management
-		prerequisite = { focus = LIT_a_martial_prime_minister focus = LIT_a_priestly_prime_minister }
+		prerequisite = { focus = LIT_a_martial_prime_minister focus = LIT_a_priestly_prime_minister focus = LIT_Kingdom_of_Prussia_Revival }
 		x = 1
 		y = 1
 		relative_position_id = LIT_a_martial_prime_minister
@@ -3629,7 +3696,7 @@ focus = {
 		x = 3
 		y = 1
 		relative_position_id = LIT_lithuanian_preservationism
-		mutually_exclusive = { focus = LIT_a_martial_prime_minister focus = LIT_a_king_for_our_people }
+		mutually_exclusive = { focus = LIT_a_martial_prime_minister focus = LIT_a_king_for_our_people focus = LIT_Kingdom_of_Prussia_Revival }
 
 		cost = 5
 
@@ -4505,7 +4572,7 @@ focus = {
 		icon = GFX_focus_LIT_king_of_poland
 		prerequisite = { focus = LIT_exile_voldemares }
 		prerequisite = { focus = LIT_lithuanian_preservationism }
-		mutually_exclusive = { focus = LIT_a_martial_prime_minister focus = LIT_a_priestly_prime_minister }
+		mutually_exclusive = { focus = LIT_a_martial_prime_minister focus = LIT_a_priestly_prime_minister focus = LIT_Kingdom_of_Prussia_Revival }
 		x = -4
 		y = 1
 		relative_position_id = LIT_lithuanian_preservationism
