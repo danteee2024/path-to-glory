@@ -127,7 +127,7 @@ ETH_second_italo_ethiopian_war_category = {
 
 		available = {
 			OR = {
-				date > 1937.01.01
+				date > 1936.01.01
 				NOT = { has_full_control_of_state = 550 } #ERITREA
 				NOT = { has_full_control_of_state = 559 } #SOMALILAND
 				NOT = { has_full_control_of_state = 844 } #JUBALAND
