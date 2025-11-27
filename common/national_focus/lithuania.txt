@@ -2723,15 +2723,18 @@ focus = {
         }
         owner = {
             add_ideas = LIT_Prussia_Trade
-			random_owned_controlled_state = {
+			
+        }
+    }
+	 GER = {
+	 random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = industrial_complex
 					level = 5
 				}
 			}
-        }
-    }
+		}
 	
        
 			
