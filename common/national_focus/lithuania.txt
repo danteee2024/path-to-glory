@@ -3083,7 +3083,7 @@ focus = {
 		y = 1
 		relative_position_id = LIT_Prussian_War_Preparation
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
