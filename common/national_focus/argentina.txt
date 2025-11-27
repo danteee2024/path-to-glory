@@ -5045,7 +5045,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ARG_centralize_power
 		mutually_exclusive = { focus = ARG_unify_south_america }
-		cost = 10
+		cost = 20
 		available = {
 
 			NOT = {
@@ -6217,7 +6217,7 @@ focus_tree = {
 
 			add_tech_bonus = {
 				name = ARG_tech_initiative_bonus
-				bonus = 0.5
+				bonus = 1
 				uses = 1
 				category = construction_tech
 			}
