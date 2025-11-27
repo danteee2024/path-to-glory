@@ -26361,6 +26361,12 @@ focus_tree = {
 		available = {
 			
 		}
+		bypass = {
+			NOT = {
+				controls_state = 763
+				controls_state = 5
+			}
+		}
 
 		completion_reward = {
 				POL = {

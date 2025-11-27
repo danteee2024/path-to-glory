@@ -3109,6 +3109,7 @@ BEL_corruption_ns_fake_tt: "Daily Political Power Gain: §R-0.25%§! \nStability
  GER_industrial_consumer_goods_factor_limit_tt: "§Y[GetIndustrialModifier]§! have §Rless§! than $MODIFIER_CONSUMER_GOODS_FACTOR$: §Y90%§!"
  GER_establish_the_reichswerke: "Establish the $GER_reichswerke$"
  GER_establish_the_reichswerke_desc: "$GER_hermann_goring_werke_desc$" #old loc
+ GER_promise_of_gombos_treaty:0 "Exploit the Gömbös Trade Treaty "
  GER_unlock_reichswerke_tt: "Unlocks the Industrial Concern §Y$GER_reichswerke$§!"
  GER_seize_foreign_industries: "Seize Foreign Industries"
  GER_seize_foreign_industries_desc: "By integrating foreign industries into our economy we secure vital resources that bolster our war effort and production."
