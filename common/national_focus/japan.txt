@@ -430,7 +430,7 @@ focus_tree = {
 		}
 
 		bypass = {
-
+		
 		}
 
 		cancel_if_invalid = yes
@@ -6189,7 +6189,7 @@ focus_tree = {
 		}
 
 		bypass = {
-
+			is_in_faction = yes
 		}
 
 		cancel_if_invalid = yes
