@@ -5413,29 +5413,18 @@ focus_tree = {
 		completion_reward = {
 			add_stability = -0.05
 			add_war_support = 0.05
+
 			
-			custom_effect_tooltip = CHL_skip_one_line_tt
-			modify_building_resources = {
-				building = resource_expansion_aluminium
-				resource = aluminium
-				amount = 1
-			}
-			
-			modify_building_resources = {
-				building = resource_expansion_steel
-				resource = steel
-				amount = 1
-			}
-			modify_building_resources = {
-				building = resource_expansion_tungsten
-				resource = tungsten
-				amount = 1
-			}
-			modify_building_resources = {
-				building = resource_expansion_chromium
-				resource = chromium
-				amount = 1
-			}
+ 
+
+     random_owned_state = {
+        limit = { is_controlled_by = ROOT }
+        add_resource = { type = steel amount = 1 }
+        add_resource = { type = tungsten amount = 1 }
+        add_resource = { type = chromium amount = 1 }
+        add_resource = { type = aluminium amount = 1 }
+     }
+      
 		}
 	}
 	
