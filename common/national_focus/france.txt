@@ -324,7 +324,7 @@ focus = {
 	focus = {
 		id = FRA_develop_syria
 		icon = GFX_focus_GER_align_middle_east
-		cost =  3.4
+		cost =  5
 		prerequisite = {
 			focus = FRA_colonial_investments
 		}
@@ -337,7 +337,6 @@ focus = {
 		}
 		available_if_capitulated = yes
 		available = {
-			not = { has_idea = FRA_investment }
 			OR = {
 				ROOT = {
 					controls_state = 677
@@ -358,12 +357,6 @@ focus = {
 		}
 		completion_reward = {
 			add_political_power = 25
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_timed_idea = {
-				idea = FRA_investment
-				days = 15
-			}
-            custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
 				limit = {
 					554 = {
@@ -376,8 +369,11 @@ focus = {
 					}
 				}
 				554 = {
-					set_state_flag = FRA_industrial_expansion_target
 					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+					}
 				}
 			}
 			if = {
@@ -392,8 +388,11 @@ focus = {
 					}
 				}
 				677 = {
-					set_state_flag = FRA_industrial_expansion_target
 					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+					}
 				}
 			}
 			every_other_country = {
@@ -415,7 +414,7 @@ focus = {
 	focus = {
 		id = FRA_develop_algeria
 		icon = GFX_focus_generic_africa_factory
-		cost =  3.4
+		cost =  5
 		prerequisite = {
 			focus = FRA_colonial_investments
 		}
@@ -424,7 +423,6 @@ focus = {
 		y = 2
 		
 		available = {
-			not = { has_idea = FRA_investment }
 			459 = {
 				controls_or_subject_of = yes
 			}
@@ -438,13 +436,6 @@ focus = {
 		available_if_capitulated = yes
 		completion_reward = {
 			add_political_power = 25
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_timed_idea = {
-				idea = FRA_investment
-				days = 15
-			}
-            custom_effect_tooltip = generic_skip_one_line_tt
-
 			if = {
 				limit = {
 					460 = {
@@ -461,8 +452,11 @@ focus = {
 					}
 				}
 				460 = {
-					set_state_flag = FRA_industrial_expansion_target
 					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+					}
 				}
 			}
 			if = {
@@ -482,8 +476,11 @@ focus = {
 					}
 				}
 				459 = {
-					set_state_flag = FRA_industrial_expansion_target
 					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+					}
 				}
 			}
 
@@ -506,7 +503,7 @@ focus = {
 	focus = {
 		id = FRA_develop_morocco
 		icon = GFX_focus_generic_africa_production
-		cost =  3.4
+		cost =  5
 		prerequisite = {
 			focus = FRA_colonial_investments
 		}
@@ -518,7 +515,6 @@ focus = {
 			factor = 2
 		}
 		available = {
-			not = { has_idea = FRA_investment }
 			OR = {
 				ROOT = {
 					controls_state = 461
@@ -533,19 +529,19 @@ focus = {
 		}
 		completion_reward = {
 			add_political_power = 25
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_timed_idea = {
-				idea = FRA_investment
-				days = 15
-			}
-            custom_effect_tooltip = generic_skip_one_line_tt
 			461 = {
-				set_state_flag = FRA_industrial_expansion_target
 				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+						type = infrastructure
+						level = 1
+					}
 			}
 			462 = {
-				set_state_flag = FRA_industrial_expansion_target
 				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+						type = infrastructure
+						level = 1
+					}
 			}
 			if = {
 				limit = {
@@ -568,7 +564,7 @@ focus = {
 	focus = {
 		id = FRA_develop_tunisia
 		icon = GFX_focus_TUR_loosen_the_laws_on_secularism
-		cost =  3.4
+		cost =  5
 		prerequisite = {
 			focus = FRA_colonial_investments
 		}
@@ -578,7 +574,6 @@ focus = {
 		y = 1
 		
 		available = {
-			not = { has_idea = FRA_investment }
 			OR = {
 				ROOT = {
 					controls_state = 458
@@ -596,19 +591,19 @@ focus = {
 		}
 		completion_reward = {
 			add_political_power = 25
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_timed_idea = {
-				idea = FRA_investment
-				days = 15
-			}
-            custom_effect_tooltip = generic_skip_one_line_tt
 			458 = {
-				set_state_flag = FRA_industrial_expansion_target
 				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+						type = infrastructure
+						level = 1
+					}
 			}
 			665 = {
-				set_state_flag = FRA_industrial_expansion_target
 				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+						type = infrastructure
+						level = 1
+					}
 			}
 			if = {
 				limit = {
@@ -633,7 +628,7 @@ focus = {
 	focus = {
 		id = FRA_develop_mali
 		icon = GFX_focus_generic_befriend_rwanda
-		cost = 3.4
+		cost = 5
 		prerequisite = {
 			focus = FRA_colonial_investments
 		}
@@ -641,7 +636,6 @@ focus = {
 		x = -2
 		y = 1
 		available = {
-			not = { has_idea = FRA_investment }
 			OR = {
 				ROOT = {
 					controls_state = 780
@@ -661,20 +655,19 @@ focus = {
 		}
 		completion_reward = {
 			add_political_power = 25
-			custom_effect_tooltip = generic_skip_one_line_tt
-add_timed_idea = {
-				idea = FRA_investment
-				days = 15
-			}
-            custom_effect_tooltip = generic_skip_one_line_tt
-
 			780 = {
-				set_state_flag = FRA_industrial_expansion_target
 				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+						type = infrastructure
+						level = 1
+					}
 			}
 			556 = {
-				set_state_flag = FRA_industrial_expansion_target
 				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+						type = infrastructure
+						level = 1
+					}
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_TFV_AUTONOMY }
@@ -692,26 +685,27 @@ add_timed_idea = {
 		relative_position_id = FRA_vienot_agreement
 
 		available = {
-			not = { has_idea = FRA_investment }
 		}
 		ai_will_do = {
 			factor = 1.5
 		}
 		completion_reward = {
 			add_political_power = 25
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_timed_idea = {
-				idea = FRA_investment
-				days = 15
-			}
-            custom_effect_tooltip = generic_skip_one_line_tt
 			31 = {
 				set_state_flag = FRA_industrial_expansion_target
 				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
 			}
 			806 = {
 				set_state_flag = FRA_industrial_expansion_target
 				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
@@ -728,7 +722,6 @@ add_timed_idea = {
 		y = 1
 		relative_position_id = FRA_vienot_agreement
 		available = {
-			not = { has_idea = FRA_investment }
 		}
 		
 		ai_will_do = {
@@ -736,19 +729,21 @@ add_timed_idea = {
 		}
 		completion_reward = {
 			add_political_power = 25
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_timed_idea = {
-				idea = FRA_investment
-				days = 15
-			}
-            custom_effect_tooltip = generic_skip_one_line_tt
 			28 = {
 				set_state_flag = FRA_industrial_expansion_target
 				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
 			}
 			17 = {
 				set_state_flag = FRA_industrial_expansion_target
 				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
@@ -765,7 +760,6 @@ add_timed_idea = {
 		y = 1
 		relative_position_id = FRA_southern_development
 		available = {
-			not = { has_idea = FRA_investment }
 		}
 		
 		ai_will_do = {
@@ -773,19 +767,21 @@ add_timed_idea = {
 		}
 		completion_reward = {
 			add_political_power = 25
-			custom_effect_tooltip = generic_skip_one_line_tt
-		add_timed_idea = {
-				idea = FRA_investment
-				days = 15
-			}
-            custom_effect_tooltip = generic_skip_one_line_tt
 			24 = {
 				set_state_flag = FRA_industrial_expansion_target
 				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
 			}
 			33 = {
 				set_state_flag = FRA_industrial_expansion_target
 				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
@@ -803,26 +799,27 @@ add_timed_idea = {
 		relative_position_id = FRA_vienot_agreement
 
 		available = {
-			not = { has_idea = FRA_investment }
 		}
 		ai_will_do = {
 			factor = 1.5
 		}
 		completion_reward = {
 			add_political_power = 25
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_timed_idea = {
-				idea = FRA_investment
-				days = 15
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
 			735 = {
 				set_state_flag = FRA_industrial_expansion_target
 				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
 			}
 			32 = {
 				set_state_flag = FRA_industrial_expansion_target
 				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
@@ -835,7 +832,6 @@ add_timed_idea = {
 			focus = FRA_vienot_agreement
 		}
 		available = {
-			not = { has_idea = FRA_investment }
 		}
 		x = -1
 		y = 1
@@ -846,19 +842,21 @@ add_timed_idea = {
 		}
 		completion_reward = {
 			add_political_power = 25
-			custom_effect_tooltip = generic_skip_one_line_tt
-		add_timed_idea = {
-				idea = FRA_investment
-				days = 15
-			}
-            custom_effect_tooltip = generic_skip_one_line_tt
 			14 = {
 				set_state_flag = FRA_industrial_expansion_target
 				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
 			}
 			29 = {
 				set_state_flag = FRA_industrial_expansion_target
 				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_TFV_AUTONOMY FOCUS_FILTER_POLITICAL }
@@ -868,18 +866,13 @@ add_timed_idea = {
 		icon = GFX_focus_generic_military_industry
 		cost = 5
 		prerequisite = {
-			focus = FRA_develop_mali
 			focus = FRA_northern_development
 			focus = FRA_southern_development
 			focus = FRA_alpine_development
-			focus = FRA_develop_algeria
-			focus = FRA_develop_syria
-			focus = FRA_develop_morocco
-			focus = FRA_develop_tunisia
 			focus = FRA_develop_burgundy
 			focus = FRA_develop_centre
 		}
-		x = 5
+		x = 2
 		y = 1
 		relative_position_id = FRA_northern_development
 		ai_will_do = {
@@ -891,7 +884,6 @@ add_timed_idea = {
 					is_controlled_by = ROOT
 					OR = {
 						has_state_flag = FRA_industrial_expansion_target
-						has_state_flag = FRA_colonial_industry_target
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -928,18 +920,13 @@ add_timed_idea = {
 		icon = GFX_focus_generic_modernize_industry
 		cost = 5
 		prerequisite = {
-			focus = FRA_develop_mali
 			focus = FRA_northern_development
 			focus = FRA_southern_development
 			focus = FRA_alpine_development
-			focus = FRA_develop_algeria
-			focus = FRA_develop_syria
-			focus = FRA_develop_morocco
-			focus = FRA_develop_tunisia
 			focus = FRA_develop_burgundy
 			focus = FRA_develop_centre
 		}
-		x = 3
+		x = 0
 		y = 1
 		relative_position_id = FRA_northern_development
 		available_if_capitulated = yes
@@ -1016,6 +1003,9 @@ add_timed_idea = {
 		prerequisite = {
 			focus = FRA_develop_morocco
 			focus = FRA_develop_tunisia
+			focus = FRA_develop_algeria
+			focus = FRA_develop_mali
+			focus = FRA_develop_syria
 
 		}
 		available_if_capitulated = yes
@@ -1085,13 +1075,13 @@ add_timed_idea = {
 	focus = {
 		id = FRA_sahara_oil
 		icon = GFX_goal_generic_oil_refinery
-		cost = 7.5
+		cost = 10
 		prerequisite = {
 			focus = FRA_expand_the_citizenship
 		}
 		available_if_capitulated = yes
 		relative_position_id = FRA_expand_the_citizenship
-		x = -3
+		x = -2
 		y = 1
 		available = {
 			OR = {
@@ -1115,25 +1105,29 @@ add_timed_idea = {
 		completion_reward = {
 			add_resource = {
 				type = oil
-				amount = 4
+				amount = 7
 				state = 459
 			}
 			add_resource = {
 				type = oil
-				amount = 4
+				amount = 8
 				state = 460
 			}
 			add_resource = {
 				type = oil
-				amount = 8
+				amount = 12
 				state = 513
 			}
 			459 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = synthetic_refinery
-					level = 2
+					level = 3
 					instant_build = yes
+				}
+				add_building_construction = {
+					type = fuel_silos
+					level = 1
 				}
 			}
 			if = {
@@ -1158,13 +1152,13 @@ add_timed_idea = {
 	focus = {
 		id = FRA_tungsten_mines
 		icon = GFX_focus_generic_tungsten
-		cost = 7.5
+		cost = 10
 		prerequisite = {
 			focus = FRA_expand_the_citizenship
 		}
 		available_if_capitulated = yes
 
-		x = 3
+		x = 2
 		y = 1
 		relative_position_id = FRA_expand_the_citizenship
 		available = {
@@ -1190,14 +1184,14 @@ add_timed_idea = {
 		completion_reward = {
 			add_resource = {
 				type = tungsten
-				amount = 14
+				amount = 21
 				state = 671
 			}
 			671 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -1232,44 +1226,6 @@ add_timed_idea = {
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
-	focus = {
-		id = FRA_france_undividable
-		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
-		x = 1
-		y = 1
-		prerequisite = {
-			focus = FRA_expand_the_citizenship
-
-		}
-		mutually_exclusive = { focus = FRA_encourage_immigration }
-		available_if_capitulated = yes
-		relative_position_id = FRA_expand_the_citizenship
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-		
-		search_filters = { FOCUS_FILTER_MANPOWER }
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = FRA_expanded_citizenship
-				add_idea = FRA_france_undividable
-			}
-			every_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-					NOT = {
-						is_core_of = ROOT
-					}
-					NOT = {
-						is_on_continent = europe
-					}
-				}
-				add_compliance = 10
-			}
-		}
-	}
 	#Dante’s Path to Glory (BismarkMP Mod)
  # © 2025 Dante. All rights reserved.
 #Reuploads, redistribution, or uncredited modifications are not permitted.
@@ -1284,10 +1240,10 @@ add_timed_idea = {
 			y = 0
 		}
 		prerequisite = {
-			focus = FRA_france_undividable
+			focus = FRA_expand_the_citizenship
 		}
 		available_if_capitulated = yes
-		relative_position_id = FRA_france_undividable
+		relative_position_id = FRA_expand_the_citizenship
 		cost = 10
 
 		ai_will_do = {
@@ -1377,31 +1333,6 @@ add_timed_idea = {
 			custom_effect_tooltip = FRA_french_union_tt
 		}
 	}
-	focus = {
-		id = FRA_encourage_immigration
-		icon = GFX_SOV_an_adaptable_army_ccp_2d_sov_compatibility
-		x = -1
-		y = 1
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = {
-			focus = FRA_expand_the_citizenship
-		}
-		mutually_exclusive = { focus = FRA_france_undividable }
-		relative_position_id = FRA_expand_the_citizenship
-		cost = 10
-
-		ai_will_do = {
-			factor = 3
-		}
-
-		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			remove_worker_shortage_effect = yes
-		}
-	}
 
 
 
@@ -1448,10 +1379,10 @@ add_timed_idea = {
 					}
 					is_core_of = ROOT
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = FRA_military_factories_1MF
@@ -1513,10 +1444,10 @@ add_timed_idea = {
 					}
 					is_core_of = ROOT
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = FRA_military_factories_1MF
@@ -4512,8 +4443,7 @@ add_timed_idea = {
 			focus = FRA_convince_spain
 		}
 		available = {
-		
-			has_global_flag = scw_over
+		date > 1937.6.1
 	
 		}
 		bypass = {
@@ -4531,6 +4461,8 @@ add_timed_idea = {
                     country_event = generic.20 }
                 
 				SPB = {
+                    country_event = generic.20 }
+				D03 = {
                     country_event = generic.20 }
                 }
             
@@ -4727,6 +4659,9 @@ add_timed_idea = {
 			SPB = {
 				is_subject_of = FRA
 			}
+			D03 = {
+                   is_subject_of = FRA
+                }
 			FRA = {
 				
 			
@@ -4766,6 +4701,9 @@ add_timed_idea = {
 			factor = 3
 		}
 		completion_reward = {
+				annex_country = {
+				target = D03
+			}
 			annex_country = {
 				target = SPA
 			}
