@@ -1,5 +1,5 @@
 l_english:
-SOV_paranoia_value_text:0 "£SOV_paranoia_text_icon  Political Paranoia: §Y[?SOV_paranoia]%§!"
+SOV_paranoia_value_text:0 "£SOV_paranoia_text_icon  Political Paranoia: §Y[?SOV_paranoia]%§! (Weekly gain: §Y[?ROOT.SOV_paranoia_weekly_modifier_ui]%§!)"
 SOV_paranoia_text_tooltip:0 "Weekly £SOV_paranoia_text_icon Paranoia is affected by Stalin's traits, the NKVD chief, and various focuses, decisions, and events."
 SOV_soviet_civil_war_not_started_tt:0 "The Soviet Civil War has not started"
 SOV_soviet_civil_war_not_started_tt_NOT:0 "The Soviet Civil War has started"
