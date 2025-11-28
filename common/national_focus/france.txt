@@ -6919,7 +6919,7 @@ add_timed_idea = {
 		mutually_exclusive = {
 			focus = FRA_de_gaulle_strategy
 		}
-		x = 55
+		x = 56
 		y = 0
 		offset = {
 			x = -20
