@@ -984,6 +984,7 @@ ideas = {
 
 			modifier = {
 				industrial_capacity_factory =  0.2
+				industrial_capacity_dockyard = 0.2
 				political_power_factor = 0.3
 			}
 		}
@@ -996,6 +997,7 @@ ideas = {
 
 			modifier = {
 				industrial_capacity_factory =  0.15
+				industrial_capacity_dockyard = 0.15
 				political_power_factor = 0.2
 			}
 		}
@@ -1008,6 +1010,7 @@ ideas = {
 
 			modifier = {
 				industrial_capacity_factory = 0.12
+				industrial_capacity_dockyard = 0.12
 				political_power_factor = 0.1
 			}
 		}
@@ -1020,6 +1023,7 @@ ideas = {
 
 			modifier = {
 				industrial_capacity_factory =  0.09
+				industrial_capacity_dockyard = 0.09
 			}
 		}
 		
@@ -1031,6 +1035,7 @@ ideas = {
 
 			modifier = {
 				industrial_capacity_factory =  0.06
+				industrial_capacity_dockyard = 0.06
 				political_power_cost = 0.1
 			}
 		}
@@ -1043,6 +1048,7 @@ ideas = {
 
 			modifier = {
 				industrial_capacity_factory =  0.03
+				industrial_capacity_dockyard = 0.03
 				political_power_cost = 0.2
 			}
 		}
@@ -1065,7 +1071,6 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_factory =  -0.05
 				political_power_cost = 0.4
 			}
 		}
@@ -1077,7 +1082,6 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_factory = -0.10
 				political_power_cost = 0.5
 			}
 		}
@@ -1099,6 +1103,7 @@ ideas = {
 				consumer_goods_factor = -0.1
 				conversion_cost_civ_to_mil_factor= -0.2
 				production_speed_arms_factory_factor = 0.05
+				production_speed_dockyard_factor = 0.05
 			}
 		}
 		
@@ -1178,10 +1183,10 @@ ideas = {
 			picture = ast_all_in
 			
 			modifier = {
-				global_building_slots_factor = -0.15
 				stability_factor = 0.1
 				production_factory_efficiency_gain_factor = 0.1
-				production_factory_start_efficiency_factor = 0.1
+				production_factory_start_efficiency_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
 			}
 		}
 
@@ -2471,7 +2476,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				non_core_manpower = 0.03
+				non_core_manpower = 0.05
 			}
 		}
 		FRA_france_undividable = {
@@ -2488,7 +2493,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				non_core_manpower = 0.08
+				non_core_manpower = 0.1
 			}
 		}
 		FRA_agricultural_protectionism = {
@@ -3543,6 +3548,42 @@ ideas = {
 				mines_planting_by_fleets_factor = 0.1
 			}
 		}
+	 FRA_improved_Navy_Production = { 
+		allowed = {
+				original_tag = FRA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			available = {
+				has_capitulated = no
+			}
+
+			removal_cost = -1
+			equipment_bonus = { 
+				ship_hull_light = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				submarine = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				capital_ship = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+			}
+			
+			picture = generic_navy_bonus
+
+		}
 		
 		FRA_castex_strategies3_idea = {
 		
@@ -3629,6 +3670,7 @@ ideas = {
 				ships_at_battle_start = 0.2
 				strike_force_movement_org_loss = -0.1
 				navy_capital_ship_attack_factor = 0.1
+				navy_capital_ship_defence_factor = 0.1
 				naval_morale_factor = 0.1
 			}
 		}
@@ -4083,6 +4125,8 @@ ideas = {
 			cost = 75
 			traits = { small_ship_producer_mass_1 }	#trait used to apply to all types but was deleted, guessing they didnt build capital ships since I cant find info on them, but feel free to restore the general trait if desired
 		}
+
+			
 		
 		loire = { #MOD	
 			allowed = {
