@@ -10021,7 +10021,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_organize_uprisings_in_the_country
-		cost = 5
+		cost = 7.5
 		available = {
 			SOV_soviet_civil_war_not_started = yes 
 		}
