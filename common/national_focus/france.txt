@@ -4432,7 +4432,7 @@ focus = {
 	focus = {
 		id = FRA_secure_the_crown_of_spain
 		icon = GFX_focus_focus_fra_intervention_spain
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = FRA_intervene_in_the_spanish_civil_war
 			focus = FRA_anti_german_front
@@ -4557,36 +4557,6 @@ focus = {
 			}			
 			set_rule = {
 				can_create_factions = yes
-			}
-			if = {
-				limit = {
-					ROM = {
-						is_in_faction_with = POL
-						OR = {
-							has_government = neutrality
-							has_government = democratic
-						}
-					}
-					OR = {
-						ROM = {
-							is_faction_leader = yes
-						}
-						POL = {
-							is_faction_leader = yes
-						}						
-					}
-				}
-				ROM = {
-					FACTION_LEADER = {
-						country_event = {
-							id = generic.2
-							hours = 2
-						}						
-					}
-				}
-			}
-			else = {
-				create_faction = FRA_chantilly_accord
 			}
 			
 			add_opinion_modifier = {
@@ -5713,37 +5683,6 @@ focus = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 	focus = {
-		id = FRA_foreign_guest_workers
-		icon = GFX_SOV_the_workers_dictatorship_ccp_2d_sov_compatibility
-		x = -2
-		y = 1
-		prerequisite = {
-			focus = FRA_popular_front_united
-		}
-		relative_position_id = FRA_popular_front_united
-		cost = 5
-
-		ai_will_do = {
-			factor = 3
-		}
-
-		available = {
-			FRA_has_worker_shortage = yes
-		}
-		
-		bypass = {
-
-		}
-
-		
-		
-		
-		search_filters = { FOCUS_FILTER_MANPOWER }
-		completion_reward = {
-			remove_worker_shortage_effect = yes
-		}
-	}
-	focus = {
 		id = FRA_invest_in_our_weaker_allies
 		icon = GFX_goal_generic_build_tank
 		x = 0
@@ -5875,12 +5814,12 @@ focus = {
 		id = FRA_research_treaty
 		icon = GFX_goal_generic_scientific_exchange
 		cost = 5
-		prerequisite = {
-			focus = FRA_foreign_guest_workers
-		}
-		relative_position_id = FRA_foreign_guest_workers
-		x = 0
+		x = -2
 		y = 1
+		prerequisite = {
+			focus = FRA_popular_front_united
+		}
+		relative_position_id = FRA_popular_front_united
 		available = {
 			is_subject = no
 			is_in_faction = yes
