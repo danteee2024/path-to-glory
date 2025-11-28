@@ -664,7 +664,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_industrial_expansion
-		cost = 10
+		cost = 5
 		available = {
 			has_tech = advanced_machine_tools
 		}
@@ -733,7 +733,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_agricultural_reforms
-		cost = 10
+		cost = 5
 		available = {
 			OR ={
 				59 = { #Hannover
@@ -1638,7 +1638,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = GER_the_four_year_plan
-		cost = 5
+		cost = 10
 		available = {
 		}
 
@@ -2339,7 +2339,7 @@ focus_tree = {
 		relative_position_id = GER_seize_foreign_industries
 		cost = 10
 		available = {
-			date > 1941.01.01
+			date > 1941.06.01
 			#OR = {
 			#	has_resources_in_country = {
 			#		resource = steel
@@ -2677,7 +2677,7 @@ focus_tree = {
 		relative_position_id = GER_concentrated_armament_program
 		cost = 5
 		available = {
-			has_war_with_major = yes
+			date > 1939.6.1
 			has_civil_war = no
 		}
 
@@ -2686,6 +2686,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
+
 			if = {
 				limit = { #Must be one economy law away from the next one and fulfill the next law's criterias
 					has_idea = partial_economic_mobilisation
@@ -9388,7 +9389,7 @@ focus_tree = {
 		relative_position_id = GER_army_indoctrination
 		cost = 10
 		available = {
-			has_war_with_major = yes
+			date > 1939.1.1
 			has_tech = advanced_machine_tools
 		}
 
@@ -9404,7 +9405,16 @@ focus_tree = {
 				category = artillery
 				category = naval_equipment
 				category = air_equipment
+			
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.5
 			}
+			}
+
+
+
+
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 

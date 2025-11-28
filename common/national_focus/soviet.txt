@@ -10045,7 +10045,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_organize_uprisings_in_the_country
-		cost = 5
+		cost = 7.5
 		available = {
 			SOV_soviet_civil_war_not_started = yes 
 		}
@@ -10067,7 +10067,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_undermine_stalins_authority
-		cost = 5
+		cost = 10
 		available = {
 			SOV_soviet_civil_war_not_started = yes 
 			NOT = { has_idea = SOV_lavrenty_beriya }
@@ -11146,7 +11146,7 @@ focus_tree = {
 		x = 5
 		y = 1
 		relative_position_id = SOV_the_left_opposition
-		cost = 5
+		cost = 10
 		available = {
 			SOV_soviet_civil_war_not_started = yes 
 		}
