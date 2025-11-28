@@ -3286,14 +3286,14 @@ focus_tree = {
         add_extra_state_shared_building_slots = 1
         
         # Add steel directly
-        add_resource = { type = steel amount = 2 }
+        add_resource = { type = steel amount = 3  }
     }
 
     135 = {
         add_extra_state_shared_building_slots = 1
         
         # Add steel directly
-        add_resource = { type = steel amount = 2 }
+        add_resource = { type = steel amount = 3 }
     }
 
     custom_effect_tooltip = CHL_skip_one_line_tt
@@ -5412,6 +5412,19 @@ focus_tree = {
 		completion_reward = {
 			add_stability = -0.05
 			add_war_support = 0.05 
+
+		
+    113 = {
+        add_resource = { type = coal amount = 5 }
+    }
+
+
+    135 = {
+        add_extra_state_shared_building_slots = 1
+        
+        # Add steel directly
+        add_resource = { type = steel amount = 5  }
+    }
 		}
 	}
 	
