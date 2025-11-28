@@ -4567,7 +4567,7 @@ focus_tree = {
 		relative_position_id = GER_panzer_troops_school
 		cost = 5
 		available = {
-			has_war_with_major = yes
+			date > 1939.01.01
 		}
 
 		continue_if_invalid = yes
