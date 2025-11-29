@@ -2302,6 +2302,24 @@ ideas = {
 				drift_defence_factor = -0.05
 			}
 		}
+		FRA_Improve_the_Factorys = {
+			picture = generic_production_bonus
+			allowed = {
+				original_tag = FRA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
 		FRA_devalue_the_franc = {
 			picture = generic_foreign_capital
 			allowed = {

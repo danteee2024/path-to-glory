@@ -966,6 +966,30 @@ focus = {
 		}
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
 	}
+
+	focus = {
+		id = FRA_Improve_the_Factorys
+		icon = GFX_goal_generic_air_production 
+		cost = 5
+		prerequisite = {
+			focus = FRA_investment_civ
+		}
+		prerequisite = {
+			focus = FRA_expand_railroad
+		}
+		x = -1
+		y = 1
+		relative_position_id = FRA_investment_civ
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1.5
+		}
+
+		
+		completion_reward = {
+			add_ideas = FRA_Improve_the_Factorys
+		}
+	}
 	focus = {
 		id = FRA_cnrs
 		icon = GFX_focus_generic_university_3
