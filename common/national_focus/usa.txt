@@ -1324,7 +1324,6 @@ focus_tree = {
 			# First WPA left-branch step: Great Depression -> great_depression_1 (‑20 CG)
 			USA_congress_medium_opposition = yes
 			custom_effect_tooltip = federal_housing_tt
-			hidden_effect = {
 				if = {
 					limit = { has_idea = great_depression }
 					swap_ideas = {
@@ -1396,7 +1395,7 @@ focus_tree = {
 					add_extra_state_shared_building_slots = 1
 					set_state_flag = USA_federal_housing_act
 				}
-			}
+			
 		}
 	}
 	focus = {
@@ -1456,7 +1455,7 @@ focus_tree = {
 			}
 			
 			set_country_flag = USA_new_legislation_drafed_flag #Used to unlock the next focus
-			hidden_effect = {
+			
 				if = {
 					limit = { has_idea = great_depression }
 					swap_ideas = {
@@ -1464,7 +1463,6 @@ focus_tree = {
 						add_idea = great_depression_1
 					}
 				}
-			}
 		}
 	}
 	focus = {
@@ -1619,7 +1617,7 @@ mutually_exclusive = {
 		completion_reward = {
 			# Second WPA right-branch step: remove one tier of the Great Depression (‑20 CG)
 			set_country_flag = USA_new_legislation_drafed_flag #Used to unlock the next focus
-			hidden_effect = {
+			
 				if = {
 					limit = { has_idea = great_depression }
 					swap_ideas = {
@@ -1634,7 +1632,7 @@ mutually_exclusive = {
 						add_idea = great_depression_2
 					}
 				}
-			}
+			
 		}
 	}
 	focus = {
@@ -1689,7 +1687,6 @@ mutually_exclusive = {
 			# Third WPA right-branch step: clear any remaining Great Depression level
 			USA_congress_small_opposition = yes
 			set_country_flag = USA_new_legislation_drafed_flag
-			hidden_effect = {
 				if = {
 					limit = {
 						OR = {
@@ -1700,7 +1697,7 @@ mutually_exclusive = {
 					}
 					USA_depression_clear_all = yes
 				}
-			}
+			
 		}
 	}	
     focus = {
@@ -1737,7 +1734,7 @@ mutually_exclusive = {
 			# Third WPA left-branch step: clear any remaining Great Depression level
 			USA_congress_small_opposition = yes
 			set_country_flag = USA_new_legislation_drafed_flag
-			hidden_effect = {
+			
 				if = {
 					limit = {
 						OR = {
@@ -1748,7 +1745,6 @@ mutually_exclusive = {
 					}
 					USA_depression_clear_all = yes
 				}
-			}
 		}
 	}	
 	focus = {
@@ -2085,7 +2081,6 @@ mutually_exclusive = {
 			USA_congress_small_opposition = yes
 			unlock_decision_tooltip = { decision = USA_give_tax_break show_effect_tooltip = yes }
 			set_country_flag = USA_new_legislation_drafed_flag
-			hidden_effect = {
 				if = {
 					limit = { has_idea = great_depression }
 					swap_ideas = {
@@ -2100,7 +2095,6 @@ mutually_exclusive = {
 						add_idea = great_depression_2
 					}
 				}
-			}
 		}
 	}
 	focus = {
