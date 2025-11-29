@@ -1281,6 +1281,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 15
 		}
+		mutually_exclusive = {
+			focus = USA_agricultural_adjustment_act
+		}
 
 		available = {
 			congress_medium_support_trigger = yes
@@ -1318,10 +1321,17 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
 			set_country_flag = USA_new_legislation_drafed_flag #cleared for the next counter
-			USA_great_depression_level_down = yes
+			# First WPA left-branch step: Great Depression -> great_depression_1 (‑20 CG)
 			USA_congress_medium_opposition = yes
 			custom_effect_tooltip = federal_housing_tt
 			hidden_effect = {
+				if = {
+					limit = { has_idea = great_depression }
+					swap_ideas = {
+						remove_idea = great_depression
+						add_idea = great_depression_1
+					}
+				}
 				random_owned_controlled_state = {
 					limit = {
 						free_building_slots = {
@@ -1402,6 +1412,10 @@ focus_tree = {
 			factor = 1
 		}
 
+		mutually_exclusive = {
+			focus = USA_federal_housing_act
+		}
+
 		available = {
 			congress_medium_support_trigger = yes
 			has_government = democratic
@@ -1424,22 +1438,12 @@ focus_tree = {
 		}
 		}
 		
-		bypass = {
-			not = {
-				OR = {
-					has_idea = great_depression
-					has_idea = great_depression_2
-					has_idea = great_depression_3
-				}
-			}
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
-			USA_great_depression_level_down = yes
+			# First WPA right-branch step: Great Depression -> great_depression_1 (‑20 CG)
 			USA_congress_medium_opposition = yes
 			unlock_decision_tooltip = { decision = USA_pay_farm_subsidies show_effect_tooltip = yes }
 			if = {
@@ -1452,6 +1456,15 @@ focus_tree = {
 			}
 			
 			set_country_flag = USA_new_legislation_drafed_flag #Used to unlock the next focus
+			hidden_effect = {
+				if = {
+					limit = { has_idea = great_depression }
+					swap_ideas = {
+						remove_idea = great_depression
+						add_idea = great_depression_1
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -1593,8 +1606,8 @@ mutually_exclusive = {
 			not = {
 				OR = {
 					has_idea = great_depression
+					has_idea = great_depression_1
 					has_idea = great_depression_2
-					has_idea = great_depression_3
 				}
 			}
 		}
@@ -1604,8 +1617,24 @@ mutually_exclusive = {
 		
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
-			USA_great_depression_level_down = yes
+			# Second WPA right-branch step: remove one tier of the Great Depression (‑20 CG)
 			set_country_flag = USA_new_legislation_drafed_flag #Used to unlock the next focus
+			hidden_effect = {
+				if = {
+					limit = { has_idea = great_depression }
+					swap_ideas = {
+						remove_idea = great_depression
+						add_idea = great_depression_1
+					}
+				}
+				if = {
+					limit = { has_idea = great_depression_1 }
+					swap_ideas = {
+						remove_idea = great_depression_1
+						add_idea = great_depression_2
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -1657,9 +1686,21 @@ mutually_exclusive = {
 				add_extra_state_shared_building_slots = 1
 			}
 			
-			USA_great_depression_level_down = yes
+			# Third WPA right-branch step: clear any remaining Great Depression level
 			USA_congress_small_opposition = yes
 			set_country_flag = USA_new_legislation_drafed_flag
+			hidden_effect = {
+				if = {
+					limit = {
+						OR = {
+							has_idea = great_depression
+							has_idea = great_depression_1
+							has_idea = great_depression_2
+						}
+					}
+					USA_depression_clear_all = yes
+				}
+			}
 		}
 	}	
     focus = {
@@ -1693,9 +1734,21 @@ mutually_exclusive = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_stability = 0.05
-			USA_great_depression_level_down = yes
+			# Third WPA left-branch step: clear any remaining Great Depression level
 			USA_congress_small_opposition = yes
 			set_country_flag = USA_new_legislation_drafed_flag
+			hidden_effect = {
+				if = {
+					limit = {
+						OR = {
+							has_idea = great_depression
+							has_idea = great_depression_1
+							has_idea = great_depression_2
+						}
+					}
+					USA_depression_clear_all = yes
+				}
+			}
 		}
 	}	
 	focus = {
@@ -2028,10 +2081,26 @@ mutually_exclusive = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
-			USA_great_depression_level_down = yes
+			# Second WPA left-branch step: remove one tier of the Great Depression (‑20 CG)
 			USA_congress_small_opposition = yes
 			unlock_decision_tooltip = { decision = USA_give_tax_break show_effect_tooltip = yes }
 			set_country_flag = USA_new_legislation_drafed_flag
+			hidden_effect = {
+				if = {
+					limit = { has_idea = great_depression }
+					swap_ideas = {
+						remove_idea = great_depression
+						add_idea = great_depression_1
+					}
+				}
+				if = {
+					limit = { has_idea = great_depression_1 }
+					swap_ideas = {
+						remove_idea = great_depression_1
+						add_idea = great_depression_2
+					}
+				}
+			}
 		}
 	}
 	focus = {
