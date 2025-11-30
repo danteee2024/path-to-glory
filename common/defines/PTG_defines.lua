@@ -29,6 +29,11 @@ NDefines.NMilitary.MAX_AIR_EXPERIENCE = 5000
 
 NDefines.NBuildings.OWNER_CHANGE_EXTRA_SHARED_SLOTS_FACTOR = 1
 ----------------------------------
+
+POWERED_FACTORY_SPEED = 4.8, 					--Powered factory speed multiplier.
+POWERED_FACTORY_SPEED_MIL = 4.2, 			--Powered factory speed multiplier.
+
+
 NDefines.NProduction.EQUIPMENT_MODULE_ADD_XP_COST = 0					-- XP cost for adding a new equipment module in an empty slot when creating an equipment variant.
 NDefines.NProduction.EQUIPMENT_MODULE_REPLACE_XP_COST = 0				-- XP cost for replacing one equipment module with an unrelated module when creating an equipment variant.
 NDefines.NProduction.EQUIPMENT_MODULE_CONVERT_XP_COST = 0				-- XP cost for converting one equipment module to a related module when creating an equipment variant.
