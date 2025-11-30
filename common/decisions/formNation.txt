@@ -1343,6 +1343,7 @@ formable_nations_mod_category = {
 				state = 1044
 				state = 1040
 				state =  1042
+				state = 1036
 			}
 		}
 		
@@ -1441,6 +1442,7 @@ formable_nations_mod_category = {
 						1044 = { owns_or_subject_of = yes }
 						1040 = { owns_or_subject_of = yes }
 						1042 = { owns_or_subject_of = yes }
+						1036 = { owns_or_subject_of = yes }
 						
 					}
 				
@@ -1524,6 +1526,7 @@ formable_nations_mod_category = {
 				1044 = { add_core_of = ROOT }
 				1040 = { add_core_of = ROOT }
 				1042 = { add_core_of = ROOT }
+				1036 = { add_core_of = ROOT }
 			}
 			524 = { add_core_of = ROOT }
 			655 = { add_core_of = ROOT }

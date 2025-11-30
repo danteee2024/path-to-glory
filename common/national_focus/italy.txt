@@ -3036,6 +3036,11 @@ focus_tree = {
 					}
 				}
 			}
+			add_resource = {
+						type = coal
+						amount = 13
+						state = 158
+					}
 		}
 	}
 

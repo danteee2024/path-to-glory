@@ -528,7 +528,7 @@ focus_tree = {
 		x = -2
 		y = 2
 		relative_position_id = SOV_third_five_year_plan
-		cost = 5
+		cost = 11.7
 
 		mutually_exclusive = { focus = SOV_shift_to_armaments_production }
 
@@ -591,7 +591,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = SOV_reorganize_the_pc_of_heavy_industry
-		cost = 5
+		cost = 11.7
 
 		available = {
 			SOV_third_five_year_plan_available = yes
@@ -626,7 +626,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_third_five_year_plan
-		cost = 5
+		cost = 10
 
 		available = {
 			SOV_third_five_year_plan_available = yes
@@ -723,7 +723,7 @@ focus_tree = {
 		x = 2
 		y = 2
 		relative_position_id = SOV_third_five_year_plan
-		cost = 5
+		cost = 10
 
 		mutually_exclusive = { focus = SOV_reorganize_the_pc_of_heavy_industry}
 
@@ -778,7 +778,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = SOV_shift_to_armaments_production
-		cost = 5
+		cost = 10
 
 		available = {
 			SOV_third_five_year_plan_available = yes
@@ -814,7 +814,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SOV_reorganize_the_pc_of_heavy_industry
-		cost = 5
+		cost = 10
 
 		available = {
 			any_owned_state = {
@@ -4179,7 +4179,7 @@ focus_tree = {
 		x = -5
 		y = 1
 		relative_position_id = SOV_found_the_pcdi
-		cost = 5
+		cost = 7.5
 
 		available = {
 			has_full_control_of_state = 219 #MOSCOW
@@ -4199,7 +4199,7 @@ focus_tree = {
 				add_tech_bonus = {
 					name = SOV_pc_of_mechanical_engineering_name_default
 					bonus = 1
-					uses = 2
+					uses = 1
 					category = motorized_equipment
 					category = infantry_weapons
 				}
@@ -4208,7 +4208,7 @@ focus_tree = {
 				add_tech_bonus = {
 					name = SOV_pc_of_mechanical_engineering_name_alt
 					bonus = 1
-					uses = 2
+					uses = 1
 					category = motorized_equipment
 					category = infantry_weapons
 				}
@@ -7099,7 +7099,7 @@ focus_tree = {
 			}
 		}
 		relative_position_id = SOV_the_path_of_marxism_leninism
-		cost = 5
+		cost = 10
 
 		mutually_exclusive = { focus = SOV_the_right_opposition focus = SOV_the_left_opposition }
 
@@ -7350,7 +7350,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = SOV_socialism_in_one_country
-		cost = 5
+		cost = 10
 
 		available = {
 
@@ -8530,7 +8530,7 @@ focus_tree = {
 			}
 		}
 		relative_position_id = SOV_the_path_of_marxism_leninism
-		cost = 5
+		cost = 10
 
 		available = {
 			SOV_soviet_civil_war_not_started = yes 
@@ -9732,7 +9732,7 @@ focus_tree = {
 		x = 15
 		y = 0
 		relative_position_id = SOV_the_left_opposition
-		cost = 5
+		cost = 10
 		available = {
 			SOV_soviet_civil_war_not_started = yes 
 			custom_trigger_tooltip = {
@@ -10334,7 +10334,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SOV_coup_detat
-		cost = 5
+		cost = 10
 		available = {
 		}
 		                
@@ -10414,7 +10414,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_curtailment_of_the_collective_farms
-		cost = 5
+		cost = 11.7
 		available = {
 			has_war = no
 		}
@@ -10439,7 +10439,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = SOV_back_to_the_nep
-		cost = 5
+		cost = 11.7
 		available = {
 		}
 		                
@@ -10447,21 +10447,16 @@ focus_tree = {
 
 		completion_reward = {
 			if = {
-				limit = {
-					num_subjects > 0
-				}
-				every_subject_country = {
 					country_event = { id = NSB_soviet_planned_economy.1 }
 					effect_tooltip = {
 						add_tech_bonus = {
 							name = SOV_planned_economy
 							bonus = 1.0
-							uses = 2
+							uses = 1
 							category = industry
 						}
 						add_ideas = new_economic_policy
 					}
-				}
 			}
 			else = {
 				custom_effect_tooltip = SOV_planned_economy_subjects_tt
@@ -10470,7 +10465,7 @@ focus_tree = {
 					add_tech_bonus = {
 						name = SOV_planned_economy
 						bonus = 1.0
-						uses = 2
+						uses = 1
 						category = industry
 					}
 					add_ideas = new_economic_policy
@@ -10491,7 +10486,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_back_to_the_nep
-		cost = 5
+		cost = 10
 		available = {
 		}
 		                
@@ -10842,7 +10837,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_paced_industrialization
-		cost = 5
+		cost = 10
 		available = {
 			has_idea = new_economic_policy
 		}
@@ -10864,7 +10859,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_international_revolutionary_marxist_centre
-		cost = 5
+		cost = 11.7
 		available = {
 			surrender_progress < 0.05
 		}
@@ -10923,7 +10918,7 @@ focus_tree = {
 			add_war_support = 0.1
 			add_timed_idea = {
 				idea = SOV_soviet_hegemony_idea
-				days = 730
+				days = 360
 			}
 
 		}
@@ -13608,7 +13603,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_baltic_security
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 1

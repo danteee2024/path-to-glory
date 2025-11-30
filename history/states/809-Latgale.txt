@@ -2,6 +2,10 @@
 state={
 	id=809
 	name="STATE_809"
+	resources = {
+		tungsten = 9
+		aluminium = 2
+	}
 
 	history={
 		owner = LAT
