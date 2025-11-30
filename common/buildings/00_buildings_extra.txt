@@ -43,11 +43,11 @@ buildings = {
 		refinery = yes
 		show_modifier = yes
 		
-		local_resources_steel = 8
+		local_resources_steel = 4
 
 		level_cap = {
-			shares_slots = yes
-			state_max = 10
+			shares_slots = no
+			state_max = 5
 			group_by = extractors
 		}
 	}
@@ -60,11 +60,11 @@ buildings = {
 		refinery = yes
 		show_modifier = yes
 		
-		local_resources_aluminium = 8
+		local_resources_aluminium = 4
 
 		level_cap = {
-			shares_slots = yes
-			state_max = 10
+			shares_slots = no
+			state_max = 5
 			group_by = extractors
 		}
 	}
@@ -77,11 +77,11 @@ buildings = {
 		refinery = yes
 		show_modifier = yes
 		
-		local_resources_tungsten = 8
+		local_resources_tungsten = 4
 
 		level_cap = {
-			shares_slots = yes
-			state_max = 10
+			shares_slots = no
+			state_max = 5
 			group_by = extractors
 		}
 	}
@@ -94,11 +94,11 @@ buildings = {
 		refinery = yes
 		show_modifier = yes
 		
-		local_resources_chromium = 8
+		local_resources_chromium = 4
 
 		level_cap = {
-			shares_slots = yes
-			state_max = 10
+			shares_slots = no
+			state_max = 5
 			group_by = extractors
 		}
 	}
@@ -111,11 +111,11 @@ buildings = {
 		refinery = yes
 		show_modifier = yes
 		
-		local_resources_coal = 10
+		local_resources_coal = 6
 
 		level_cap = {
-			shares_slots = yes
-			state_max = 10
+			shares_slots = no
+			state_max = 5
 			group_by = extractors
 		}
 	}
