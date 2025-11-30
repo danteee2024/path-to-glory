@@ -116,11 +116,12 @@ ideas = {
             }
             picture = PB_Planned_Economy
             modifier = {
-                industrial_capacity_factory = 0.05
-                production_speed_resource_expansion_steel_factor = 0.15
-                production_speed_resource_expansion_chromium_factor = 0.15
-                production_speed_resource_expansion_tungsten_factor = 0.15
-                production_speed_resource_expansion_aluminium_factor = 0.15
+                industrial_capacity_factory = -0.05
+                production_speed_buildings_factor = 0.15
+                consumer_goods_factor = 0.1
+                conversion_cost_civ_to_mil_factor = 0.25
+                conversion_cost_mil_to_civ_factor = 0.25
+                 
             }
             ai_will_do = {
                 factor = 1
