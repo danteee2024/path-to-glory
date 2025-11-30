@@ -676,7 +676,7 @@ focus = {
 	focus = {
 		id = FRA_southern_development
 		icon = GFX_focus_generic_electrification
-		cost = 5
+		cost = 7.5
 		prerequisite = {
 			focus = FRA_vienot_agreement
 		}
@@ -714,7 +714,7 @@ focus = {
 	focus = {
 		id = FRA_develop_burgundy
 		icon = GFX_focus_GER_kdf_wagen
-		cost = 5
+		cost = 7.5
 		prerequisite = {
 			focus = FRA_vienot_agreement
 		}
@@ -752,7 +752,7 @@ focus = {
 	focus = {
 		id = FRA_develop_centre
 		icon = GFX_focus_generic_public_works
-		cost = 5
+		cost = 7.5
 		prerequisite = {
 			focus = FRA_vienot_agreement
 		}
@@ -790,7 +790,7 @@ focus = {
 	focus = {
 		id = FRA_alpine_development
 		icon = GFX_focus_GRE_a_land_of_mountains
-		cost = 5
+		cost = 7.5
 		prerequisite = {
 			focus = FRA_vienot_agreement
 		}
@@ -827,7 +827,7 @@ focus = {
 	focus = {
 		id = FRA_northern_development
 		icon =GFX_focus_generic_mining_industry
-		cost = 5
+		cost = 7.5
 		prerequisite = {
 			focus = FRA_vienot_agreement
 		}
