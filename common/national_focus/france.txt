@@ -4642,6 +4642,7 @@ focus = {
 			focus = FRA_secure_the_crown_of_spain
 		}
 		available = {
+			has_global_flag = scw_over
 			OR = {
 	
 			SPA = {
