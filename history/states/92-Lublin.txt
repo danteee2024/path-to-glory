@@ -31,6 +31,7 @@ state={
 
 	resources = {
 		coal = 2 # initial distribution
+		steel = 7
 	}
 
 	buildings_max_level_factor=1.000

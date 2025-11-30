@@ -6,7 +6,7 @@ state={
 	state_category = rural
 	resources = {
 		coal = 5
-		tungsten = 7
+		tungsten = 3
 	}
 	history={
 		victory_points = {
@@ -15,7 +15,7 @@ state={
 		owner = POL
 		buildings = {
 			infrastructure = 4
-			industrial_complex = 3
+			industrial_complex = 2
 		}
 		add_core_of = POL
 		add_core_of = PRE

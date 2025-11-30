@@ -284,7 +284,7 @@ focus_tree = {
 		completion_reward = {
 			add_timed_idea = {
 				idea = ENG_national_industrial_recovery_idea
-				months = 12
+				months = 18
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			swap_ideas = {
@@ -316,7 +316,7 @@ focus_tree = {
 		completion_reward = {
 			add_timed_idea = {
 				idea = ENG_return_to_sound_finance_idea
-				months = 12
+				months = 18
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			swap_ideas = {
@@ -1492,7 +1492,7 @@ completion_reward = {
 		x = 1
 		y = 1
 		relative_position_id = ENG_increase_military_budget
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
