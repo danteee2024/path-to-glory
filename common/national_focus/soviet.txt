@@ -9732,7 +9732,7 @@ focus_tree = {
 		x = 15
 		y = 0
 		relative_position_id = SOV_the_left_opposition
-		cost = 5
+		cost = 10
 		available = {
 			SOV_soviet_civil_war_not_started = yes 
 			custom_trigger_tooltip = {
@@ -11146,7 +11146,7 @@ focus_tree = {
 		x = 5
 		y = 1
 		relative_position_id = SOV_the_left_opposition
-		cost = 5
+		cost = 7.5
 		available = {
 			SOV_soviet_civil_war_not_started = yes 
 		}

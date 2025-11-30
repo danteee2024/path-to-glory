@@ -1638,7 +1638,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = GER_the_four_year_plan
-		cost = 5
+		cost = 10
 		available = {
 		}
 
@@ -2339,7 +2339,7 @@ focus_tree = {
 		relative_position_id = GER_seize_foreign_industries
 		cost = 10
 		available = {
-			date > 1941.01.01
+			date > 1941.06.01
 			#OR = {
 			#	has_resources_in_country = {
 			#		resource = steel
@@ -2677,7 +2677,7 @@ focus_tree = {
 		relative_position_id = GER_concentrated_armament_program
 		cost = 5
 		available = {
-			date > 1938.1.1
+			date > 1939.1.1
 			has_civil_war = no
 		}
 
