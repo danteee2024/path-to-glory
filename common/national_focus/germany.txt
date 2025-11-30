@@ -26315,11 +26315,11 @@ focus_tree = {
 
 		completion_reward = {
 			add_to_variable = { 
-				GER_military_army_artillery_defence_factor = 0.05
+				GER_military_army_artillery_defence_factor = 0.1
 				tooltip = army_artillery_defence_factor_tt
 			}
 			add_to_variable = { 
-					GER_bewegungskrieg_army_artillery_attack_factor = 0.05
+					GER_bewegungskrieg_army_artillery_attack_factor = 0.1
 					tooltip = army_artillery_attack_factor_tt
 				}
 

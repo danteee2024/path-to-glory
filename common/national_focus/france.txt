@@ -3433,7 +3433,7 @@ focus = {
 			factor = 2
 		}
 		available = {
-			date > 1937.1.1
+			date > 1937.6.1
 		}
 		completion_reward = {
 			POR = { country_event = generic.20 }
