@@ -53,9 +53,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				factory_energy_consumption = -0.1
+				factory_energy_consumption = -0.05
 				consumer_goods_factor = -0.1
-				production_speed_buildings_factor = 0.1
 			}
 		}
 
@@ -73,7 +72,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				conscription = 0.02
+				conscription = 0.01
 				army_org_factor = 0.05
 				org_loss_when_moving = -0.05
 			}
@@ -93,7 +92,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				conscription = 0.03
+				conscription = 0.02
 				army_org_factor = 0.05
 				org_loss_when_moving = -0.05
 				army_attack_factor = 0.05

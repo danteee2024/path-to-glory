@@ -104,14 +104,14 @@ buildings = {
 	}
 
 	resource_expansion_coal = {
-		base_cost = 10000
+		base_cost = 11000
 		icon_frame = 15
 		value = 1
 		infrastructure_construction_effect = yes
 		refinery = yes
 		show_modifier = yes
 		
-		local_resources_coal = 6
+		local_resources_coal = 3
 
 		level_cap = {
 			shares_slots = no

@@ -474,7 +474,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_lower_taxes
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -580,7 +580,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = GER_industrial_expansion
-		cost = 10
+		cost = 5
 		available = {
 			42 = {
 				is_fully_controlled_by = ROOT
@@ -852,7 +852,7 @@ focus_tree = {
 		x =-1
 		y = 1
 		relative_position_id = GER_wirtschaftswunder
-		cost = 10
+		cost = 5
 		available = {
 			OR = {
 				has_war = yes
@@ -938,7 +938,7 @@ focus_tree = {
 
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_production_factory_max_efficiency_factor = 0.05
+				GER_industrial_production_factory_max_efficiency_factor = 0.075
 				tooltip = production_factory_max_efficiency_factor_tt
 			}
 			add_to_variable = { 
@@ -965,7 +965,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_mass_production
-		cost = 10
+		cost = 5
 		available = {
 			has_war_with_major = yes
 		}
@@ -1009,7 +1009,7 @@ focus_tree = {
 				tooltip = conversion_cost_civ_to_mil_factor_tt
 			}
 			add_to_variable = { 
-				GER_industrial_production_factory_max_efficiency_factor = 0.05
+				GER_industrial_production_factory_max_efficiency_factor = 0.075
 				tooltip = production_factory_max_efficiency_factor_tt
 			}
 			add_to_variable = { 
@@ -1037,7 +1037,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = GER_prioritize_economic_growth
-		cost = 5
+		cost = 10
 		available = {
 			OR = {
 				has_full_control_of_state = 64 #Brandenburg
@@ -1638,7 +1638,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = GER_the_four_year_plan
-		cost = 5
+		cost = 10
 		available = {
 		}
 
@@ -1759,7 +1759,7 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = GER_autarky_efforts
-		cost = 5
+		cost = 10
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = GER_industrial_consumer_goods_factor_limit_tt
@@ -1828,7 +1828,7 @@ focus_tree = {
 
 			GER_add_or_modify_wehrwirtschaft = yes
 			add_to_variable = { 
-				GER_wehrwirtschaft_local_resources_factor = 0.1
+				GER_wehrwirtschaft_local_resources_factor = 0.05
 				tooltip = local_resources_factor_tt
 			}
 
@@ -2034,7 +2034,7 @@ focus_tree = {
 
 			custom_effect_tooltip = GER_modify_wehrwirtschaft_modifier_tt
 			add_to_variable = { 
-				GER_wehrwirtschaft_local_resources_factor = 0.1
+				GER_wehrwirtschaft_local_resources_factor = 0.05
 				tooltip = local_resources_factor_tt
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -2050,7 +2050,7 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = GER_autarky_efforts
-		cost = 5
+		cost = 10
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = GER_industrial_consumer_goods_factor_limit_tt
@@ -2073,10 +2073,10 @@ focus_tree = {
 					}
 				}
 				prioritize = { 65 }
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = synthetic_refinery
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -2147,7 +2147,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = GER_coal_liquefaction
-		cost = 5
+		cost = 10
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = GER_industrial_consumer_goods_factor_limit_tt
@@ -2189,10 +2189,10 @@ focus_tree = {
 					}
 				}
 				prioritize = { 57 }
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = synthetic_refinery
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -2283,10 +2283,10 @@ focus_tree = {
 					}
 				}
 				prioritize = { 65 }
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = synthetic_refinery
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -2296,7 +2296,7 @@ focus_tree = {
 			modify_building_resources = {
         	   building = synthetic_refinery
         	   resource = rubber
-        	   amount = 3
+        	   amount = 1
         	}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -2339,7 +2339,7 @@ focus_tree = {
 		relative_position_id = GER_seize_foreign_industries
 		cost = 10
 		available = {
-			date > 1941.01.01
+			date > 1941.06.01
 			#OR = {
 			#	has_resources_in_country = {
 			#		resource = steel
@@ -2464,7 +2464,7 @@ focus_tree = {
 		x = 6
 		y = 1
 		relative_position_id = GER_the_four_year_plan
-		cost = 5
+		cost = 10
 		available = {
 		}
 
@@ -2677,7 +2677,7 @@ focus_tree = {
 		relative_position_id = GER_concentrated_armament_program
 		cost = 5
 		available = {
-			date > 1938.1.1
+			date > 1939.1.1
 			has_civil_war = no
 		}
 
