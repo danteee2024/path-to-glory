@@ -3528,7 +3528,7 @@ focus = {
 	focus = {
 		id = LIT_the_nationalist_council
 		icon = GFX_focus_generic_self_management
-		prerequisite = { focus = LIT_a_martial_prime_minister focus = LIT_a_priestly_prime_minister focus = LIT_Kingdom_of_Prussia_Revival }
+		prerequisite = { focus = LIT_a_martial_prime_minister focus = LIT_a_priestly_prime_minister }
 		x = 1
 		y = 1
 		relative_position_id = LIT_a_martial_prime_minister
