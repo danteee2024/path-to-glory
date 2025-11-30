@@ -13143,8 +13143,9 @@ SOV_soviet_civil_war_dec_cat = {
 				custom_effect_tooltip = SOV_assassinate_stalin_good_tt
 				custom_effect_tooltip = SOV_assassinate_stalin_outcome_tt
 				hidden_effect = {
+					# 100% success with NKVD infiltration
 					random_list = {
-						80 = {
+						100 = {
 							retire_character = SOV_iosif_stalin
 							SOV_promote_to_country_leader_beriya = yes
 							news_event = {
@@ -13153,32 +13154,20 @@ SOV_soviet_civil_war_dec_cat = {
 							subtract_from_variable = { SOV_paranoia_weekly_modifiers_amount = 2 } #Stalin will always have the Authority Undermined trait (+2 weekly Paranoia)
 							SOV_paranoia_modifier_update_gui_tooltip = yes #Update Paranoia UI
 						}
-						20 = {
-							SOV_paranoia_very_high_increase_effect = yes
-							news_event = {
-								id = NSB_soviet_communist_civil_war.008
-							}
-						}
 					}
-					# TODO Create events
 				}
 			}
 			ELSE = {
 				custom_effect_tooltip = SOV_assassinate_stalin_bad_tt
 				custom_effect_tooltip = SOV_assassinate_stalin_outcome_tt
 				hidden_effect = {
+					# 100% success even without NKVD infiltration
 					random_list = {
-						50 = {
+						100 = {
 							retire_character = SOV_iosif_stalin
 							SOV_promote_to_country_leader_beriya = yes
 							news_event = {
 								id = NSB_soviet_communist_civil_war.009
-							}
-						}
-						50 = {
-							SOV_paranoia_very_high_increase_effect = yes
-							news_event = {
-								id = NSB_soviet_communist_civil_war.008
 							}
 						}
 					}

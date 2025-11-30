@@ -3,6 +3,10 @@ state = {
 	id = 115
 	name = "STATE_115"
 
+	resources = {# was: 2
+	coal = 8 
+}
+
 	history = {
 		owner = ITA
 		victory_points = {

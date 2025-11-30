@@ -19,6 +19,9 @@ state={
 		add_core_of = MZB
 
 	}
+	resources = {
+		oil = 8
+	}
 
 	provinces={
 		2193 5177 5212 8245 

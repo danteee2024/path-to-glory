@@ -16,6 +16,38 @@
  BALTIC_supported_fascism:0 "Supported Baltic Nationalism"
  accepted_catholics:0 "Accepted Catholics"
  annex_liberia_opinion:0 "Annexed Liberia"
+ BALTIC_Lithuania_Infra:0 "Rebuild Lithuanian Infrastructure"
+ BALTIC_Lithuania_Infra_desc:0 "The Lithuanian rail and road network has long suffered from neglect. By investing in new links, we can modernize transportation across the country and support our national industry."
+
+ BALTIC_Latvia_Infra:0 "Rebuild Latvian Infrastructure"
+ BALTIC_Latvia_Infra_desc:0 "Latvia’s infrastructure requires major upgrades to support trade, military mobility, and economic growth. Modernization will help integrate the region with its neighbors."
+
+ BALTIC_Estonia_Infra:0 "Rebuild Estonian Infrastructure"
+ BALTIC_Estonia_Infra_desc:0 "Improving Estonia’s rail connections and internal logistics will provide the foundation for further industrial and resource development."
+
+ ### --- Resource Focuses ---
+ BALTIC_Lithuania_Resource:0 "Develop Lithuanian Resources"
+ BALTIC_Lithuania_Resource_desc:0 "Lithuania's lands contain valuable but underdeveloped deposits. With targeted investment, we can extract coal, tungsten, and steel to support our industrial expansion."
+
+ BALTIC_Latvia_resources:0 "Develop Latvian Resources"
+ BALTIC_Latvia_resources_desc:0 "Latvia possesses untapped aluminium and tungsten veins, along with coal and steel reserves. Securing these resources will bolster our national economy."
+
+ BALTIC_Estonia_resources:0 "Develop Estonian Resources"
+ BALTIC_Estonia_resources_desc:0 "Estonia's shale oil fields and mineral deposits can be harnessed to strengthen the region’s self-sufficiency and strategic production."
+
+ ### --- Building/Industry Focuses ---
+ BALTIC_Lithuania_Building:0 "Expand Lithuanian Industry"
+ BALTIC_Lithuania_Building_desc:0 "With newfound resources and modernized infrastructure, Lithuania is ready for a major industrial expansion. We will construct civilian and military factories across the nation."
+
+ BALTIC_Latvia_Building:0 "Expand Latvian Industry"
+ BALTIC_Latvia_Building_desc:0 "Latvia’s growing resource extraction efforts can support a rapid increase in industrial facilities. Factories will be established to strengthen production capabilities."
+
+ BALTIC_Estonia_Building:0 "Expand Estonian Industry"
+ BALTIC_Estonia_Building_desc:0 "Estonia’s modernization now allows the construction of new industry to fuel national development and regional cooperation."
+
+ ### --- Union Industry Focus ---
+ BALTIC_union_Industry:0 "Unified Baltic Industry"
+ BALTIC_union_Industry_desc:0 "With the infrastructure, resources, and industrial sectors of Lithuania, Latvia, and Estonia fully developed, we can now unify our economic systems into a cohesive Baltic industrial network. Our combined strength will build a powerful regional economy."
  #Estonia
  EST_era_of_silence:0 "The Era of Silence"
  EST_era_of_silence_desc:0 "With the violent ultra-nationalist Vaps movement sweeping from Saaremaa to Võrumaa, the State Elder must usher in a new era for Estonia; an era with no elections, no dissent, and no resistance. The nation must enter an era of silence."
@@ -286,6 +318,83 @@
  LIT_abolish_the_presidency_desc:0 "Thus far, Smetona has retained rulership of the nation but with the growing popularity of Mindaugas III, it seems prudent that the office of Presidency be abolished and replaced with the absolute rule of the King. Smetona will resign to the role of Prime Minister, serving the young Mindaugas III as his adviser."
  LIT_claim_prussia:0 "Seize East Prussia"
  LIT_claim_prussia_desc:0 "Eastern Prussia is home to countless Lithuanian and Polish minorities, and it is time that these men were united with their comrades in [Root.GetNameDef]."
+  #Lithuania-Prussia
+ King_of_Prussia:0 "King of Prussia"
+  LIT_Prussia_Revival:0 "Prussian Revival"
+  LIT_Kingdom_of_Prussia_Revival:0 "Revival of the Kingdom of Prussia"
+  LIT_Kingdom_of_Prussia_Revival_desc:0 "With the exile resolved and the preservation of our national core secured, a new path opens before Lithuania. By embracing the legacy of Prussia and restoring the House of Hohenzollern to a place of prominence, we may reshape our state into a monarchy rooted in old tradition yet prepared for the challenges of the modern world. The coronation of Wilhelm III will mark the beginning of a new Prussian-Lithuanian era."
+  lit_prussia_news.1.t:0 "Königsberg Restored to the Kingdom of Prussia"
+  lit_prussia_news.1.d:0 "In a diplomatic breakthrough with far-reaching historical significance, the Kingdom of Prussia—recently re-established under the Lithuanian crown—has secured the transfer of Königsberg from Germany. After weeks of confidential negotiations, Berlin has formally acknowledged the Prussian monarchy’s claim to the city once regarded as the heart of the old Prussian state.\n\nGovernment representatives from both nations presented the agreement as a pragmatic solution to regional disputes, with Germany reportedly receiving extensive assurances of future cooperation. The return of Königsberg has sparked celebrations across the Prussian-Lithuanian realm, where the restoration of the traditional royal seat is seen as the symbolic completion of the monarchy’s revival.\n\nInternational observers remain divided: some praise the peaceful resolution of a complex territorial question, while others warn that the resurgence of a Prussian kingdom may reshape the balance of power in Eastern Europe."
+  lit_prussia_news.1.a:0 "A historic restoration."
+ ### Negotiations and Königsberg
+  LIT_Koenigsberg_Negotiations:0 "Negotiations for Königsberg"
+  LIT_Koenigsberg_Negotiations_desc:0 "With the revival of the Prussian monarchy, the question of Königsberg—our historic capital—stands at the forefront of our foreign policy. Through diplomacy and careful negotiation, we shall pursue its peaceful return to the Kingdom of Prussia."
+
+  LIT_Koenigsberg_Modernization:0 "Modernize Königsberg"
+  LIT_Koenigsberg_Modernization_desc:0 "Now under our rightful rule, Königsberg must be elevated to its former glory. Industrial expansion, naval facilities, and modern infrastructure will transform the city into a shining center of the reborn Prussian state."
+  LIT_Prussia_Trade:0 "Prussia Trade"
+ LIT_Greater_Prussia: "Proclaim Greater Prussia"
+  LIT_Greater_Prussia_desc: "Having reclaimed the historical lands of the House of Hohenzollern, we shall declare the rebirth of Greater Prussia and reshape our state accordingly."
+ ### Negotiations Poland
+ LIT_negotiations_with_Poland_for_Prussia_Territories:0 "Negotiate With Poland for Prussian Territories"
+  LIT_negotiations_with_Poland_for_Prussia_Territories_desc:0 "With the Polish government in a precarious position regarding the administration of former Prussian lands, Lithuania has an opportunity to initiate diplomatic talks. By approaching Warsaw with carefully crafted proposals, we may secure rightful control over territories historically linked to our nation. Whether through negotiation or future pressure, this step lays the groundwork for expanding our influence in Prussia."
+
+ LIT.145.t:0 "Lithuania Requests the Return of Prussian Territories"
+  LIT.145.d:0 "The Lithuanian government has formally approached us with a diplomatic proposal regarding the administration of the Prussian territories currently under Polish control. They argue that these lands, historically associated with the Baltic region, rightfully belong under Lithuanian stewardship. Accepting their request could strengthen relations, while refusal may escalate tensions."
+  
+  LIT.145.a:0 "We will negotiate and transfer the territories."
+  LIT.145.b:0 "We refuse their demands."
+
+  ### Poland Accepts ###
+  LIT.146.t:0 "Poland Accepts Our Proposal"
+  LIT.146.d:0 "Warsaw has agreed to our diplomatic overture. The Polish government has officially recognized our claim to the Prussian territories and consented to their transfer. This peaceful resolution not only restores lands of historic importance to Lithuania, but also opens new opportunities for cooperation with Poland."
+  
+  LIT.146.a:0 "The Prussian lands return home."
+
+  ### Poland Refuses ###
+  LIT.147.t:0 "Poland Rejects Our Demands"
+  LIT.147.d:0 "Our attempt at peaceful negotiations has failed. Poland has outright refused to discuss the transfer of Prussian territories. Their obstinance leaves us with limited options—if we wish to reclaim what is rightfully ours, we may need to force the issue."
+  
+  LIT.147.a:0 "If diplomacy fails, steel shall speak." 
+
+  LIT_Attack_Germany: "Strike at Germany"
+  LIT_Attack_Germany_desc: "Germany stands weakened and vulnerable. If we are to restore our rightful territories, we must act now and deliver a decisive blow."
+
+  LIT_Prussian_Industry: "Develop Prussian Industry"
+  LIT_Prussian_Industry_desc: "To sustain our ambitions, we must modernize and expand the industrial base of Prussia, ensuring our factories supply our armies with strength."
+
+  LIT_Reform_The_Army: "Reform the Prussian Army"
+  LIT_Reform_The_Army_desc: "A modern Prussian army must be well-trained, disciplined, and equipped. Through a comprehensive reform, we will create a fighting force worthy of our name."
+
+  LIT_abolish_seimas: "Abolish the Seimas"
+  LIT_abolish_seimas_desc: "The Seimas has long represented the remnants of parliamentary rule. To centralize authority and restore the Prussian state, it must be dissolved."
+
+  ### Military Development
+  LIT_Prussian_Artillery:0 "Prussian Artillery Corps"
+  LIT_Prussian_Artillery_desc:0 "The legacy of Prussian firepower is unmatched. By reorganizing our artillery forces to mirror the discipline and precision of the old Prussian army, we restore the backbone of our modern military."
+
+  LIT_Prussian_War_Preparation:0 "Preparations for War"
+  LIT_Prussian_War_Preparation_desc:0 "The world grows ever more hostile. To secure the future of Prussia, we must mobilize, expand our armaments industry, and prepare our forces for the conflicts to come."
+
+  ### Military Expansion
+  LIT_Prussias_Army:0 "Prussia's Army"
+  LIT_Prussias_Army_desc:0 "The army of Prussia must once again inspire fear and respect across Europe. Through reforms, modern doctrine, and the rebuilding of old traditions, our military shall rise to unmatched strength."
+
+  LIT_baltic_Submission:0 "Subdue the Baltic"
+  LIT_baltic_Submission_desc:0 "Our authority must be recognized across the Baltics. Through diplomatic pressure or strategic force, Estonia and Latvia shall be compelled to submit to the will of the Prussian crown."
+
+  LIT_baltic_integration:0 "Integrate the Baltic Territories"
+  LIT_baltic_integration_desc:0 "With the Baltic nations firmly under our control, the time has come to integrate their lands into the Prussian realm. Through administrative restructuring and loyal governance, these territories will become a permanent part of our kingdom."
+
+  LIT_Prussian_Army_Power:0 "Prussian Army Ascendant"
+  LIT_Prussian_Army_Power_desc:0 "Our military reforms have reached their apex. Prussia now fields an army of unprecedented discipline, firepower, and professionalism—one worthy of our restored monarchy."
+
+  ### Poland Branch
+  LIT_Attack_Poland:0 "War with Poland"
+  LIT_Attack_Poland_desc:0 "Poland stands as the final barrier to Prussia's rightful dominance in the region. Diplomatic solutions have failed; now we shall settle our disputes on the battlefield."
+
+  LIT_Integrate_Poland:0 "Integrate Polish Territories"
+  LIT_Integrate_Poland_desc:0 "With Poland defeated, we must consolidate the lands under our rule. By incorporating these territories directly into the Prussian state, we ensure the security and unity of our expanding kingdom."
  #Shared Baltic
  BALTIC_rejoin_the_railways:0 "Rejoin the Railways"
  BALTIC_rejoin_the_railways_desc:0 "The Russians and the Germans who occupied us have seen us as nothing more than a rural backwater, but no more. [ROOT.GetNonIdeologyName] shall be industrialized to its maximum potential starting with an upgrade of our railways and infrastructure."
@@ -1433,7 +1542,32 @@
  SOV_fyp_controlled_factories_tier_4_tt:0 "$TRIGGER_NUM_OF_TOTAL_CONTROLLED_FACTORIES_MORE_THAN$§Y[?ROOT.SOV_fyp_factory_requirement_tier_4]§! (Currently §[GetColorControlledFactoriesTier4][?ROOT.num_of_controlled_factories]§!)"
  SOV_fyp_controlled_factories_tier_5_tt:0 "$TRIGGER_NUM_OF_TOTAL_CONTROLLED_FACTORIES_MORE_THAN$§Y[?ROOT.SOV_fyp_factory_requirement_tier_5]§! (Currently §[GetColorControlledFactoriesTier5][?ROOT.num_of_controlled_factories]§!)"
 
- SOV_oil_production_silo_tt:0 "Add §Y1 $fuel_silo$§! in two of these states."
+SOV_oil_production_silo_tt:0 "Add §Y1 $fuel_silo$§! in two of these states."
+
+# --- Path to Glory: ensure key Soviet decisions/localisation exist even if nsb_decisions is overridden ---
+SOV_paranoia_system:0 "Political Paranoia"
+SOV_paranoia_system_desc:0 "An atmosphere of suspicion and mistrust hangs over [ROOT.GetNameDef]. [ROOT.GetLeader]'s concerns about factionalism within the party grow as countless accusations and alleged acts of sabotage, wreckage and espionage are being investigated by the NKVD."
+SOV_paranoia_bg_tooltip:0 "If £SOV_paranoia_text_icon §YParanoia§! value increases over §Y25§!, random purge events may occur. \nThe higher the £SOV_paranoia_text_icon §YParanoia§!, and the more days it has been that high, the more likely it is for a purge to happen. \nIf £SOV_paranoia_text_icon §YParanoia§! value increases over §R75§!, great purge events may occur. \n\nCertain §Yfocus§!, §Ydecision§! and §Yeffects§! will make £SOV_paranoia_text_icon §YParanoia§! immediately increase/decrease, and certain advisor and country leader traits will slowly increase §YParanoia§! over time. \n\nCompleting the focus §Y[GetAppropriateLastPurgeFocusName]§! will remove the £SOV_paranoia_text_icon §YParanoia§! system."
+SOV_paranoia_text_tooltip:0 "Weekly £SOV_paranoia_text_icon Paranoia change: §Y[?ROOT.SOV_paranoia_weekly_modifier_ui]%§!\nAffected by Stalin's traits, the NKVD chief, and various focuses, decisions, and events."
+SOV_paranoia_text_tooltip_default:0 "Weekly £SOV_paranoia_text_icon Paranoia change: §Y[?ROOT.SOV_paranoia_weekly_modifier_ui]%§!\nAffected by Stalin's traits, the NKVD chief, and various focuses, decisions, and events."
+SOV_paranoia_text_tooltip_not_active:0 "Political Paranoia is no longer active."
+SOV_paranoia_value_text:0 "£SOV_paranoia_text_icon  Political Paranoia: §Y[?SOV_paranoia]%§! (Weekly gain: §Y[?ROOT.SOV_paranoia_weekly_modifier_ui]%§!)"
+
+SOV_soviet_civil_war_dec_cat:0 "[GetSovietCivilWarName]"
+SOV_soviet_civil_war_dec_cat_desc:1 "The threat of yet another civil war is upon us. We must prepare ourselves for the worst, and ensure control of as much of the country, and the armed forces, as possible. But we must also be careful and avoid drawing too much attention, or [ROOT.GetLeader] might force our hand before we are ready."
+
+SOV_expand_nkvd_opposition:0 "Expand the NKVD Military Branch"
+SOV_expand_nkvd_opposition_desc:1 "We should take the opportunity to expand the Military branch of the NKVD. These troops can be very useful in securing our future victory."
+SOV_expand_nkvd_opposition_tt:0 "Adds 5 NKVD Divisions that will remain loyal when the [GetSovietCivilWarName] starts."
+
+SOV_align_general_stalin:0 "[ROOT.GetLeader] ensures loyalty of a general"
+SOV_align_general_stalin_desc:1 "Using every means at his disposal, [ROOT.GetLeader] attempts to ensure the loyalty of an army leader as preparation for a future conflict."
+SOV_align_general_stalin_tt:0 "§Y[?SOV.SOV_selected_general_stalin.GetName]§! becomes loyal to [ROOT.GetLeader]"
+
+SOV_the_head_of_the_nkvd_yagoda:0 "The Head of the NKVD - Yagoda"
+SOV_the_head_of_the_nkvd_yagoda_desc:1 "$SOV_genrikh_yagoda$ may not be on friendly terms with the leaders of the Right Opposition, but at least he can be reasoned with. It should be possibly to make Yagoda see the values of our proposal, and to convince him that ours is the winning side."
+SOV_aligned_right_opposition_flag:0 "Right Opposition Sympathizer"
+SOV_the_head_of_the_nkvd_yagoda_tt:0 "§Y$SOV_genrikh_yagoda$§! becomes a Right Opposition supporter."
  SOV_paranoia_system_active_flag:0 "£SOV_paranoia_text_icon Political Paranoia is active"
  SOV_will_trigger_a_great_purge_tt:0 "Stalin will start a Great Purge. §RThis purge will not be avoidable.§!"
  SOV_estonian_claimed_states_tt:0 "[ROOT.GetNameDefCap] gains claim on §Yall [EST.GetAdjective] cores§!."
@@ -1448,6 +1582,11 @@
  SOV_volunteers_allowed_mao_tt:0 "$volunteers_allowed_intro$ §Y[PRC.GetNameDef]§!."
  SOV_volunteers_allowed_kuomintang_tt:0 "$volunteers_allowed_intro$ §Y[CHI.GetNameDef]§!."
  SOV_send_military_advisors_to_spain_generals_tt:0 "\nIf [GetAppropriateSupportedSpanishFaction] loses the Spanish Civil War, [GetAppropriateSpanishExiledGeneral] will join §Y[ROOT.GetNameDef]§!."
+
+# Override Stalin assassination tooltips for custom success chance
+SOV_assassinate_stalin_good_tt:0 "An assassination attempt is carried out on Stalin\nChance to succeed = §G100%§!"
+SOV_assassinate_stalin_bad_tt:0 "An assassination attempt is carried out on Stalin\nChance to succeed = §G100%§!"
+SOV_assassinate_stalin_outcome_tt:0 "---\nIf the attempt is successful, §Y$SOV_lavrenty_beriya$§! will assume temporary control, creating an opportunity for a successful coup."
  SOV_spanish_supported_faction_default:0 "the supported Spanish faction"
  SOV_spanish_supported_faction_republic_pre:0 "[SPR.GetFlag] [SPR.GetNameDef]"
  SOV_spanish_supported_faction_republic_post:0 "[SPD.GetFlag] [SPD.GetNameDef]"

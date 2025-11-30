@@ -8,6 +8,7 @@ state = {
 	resources = {
 		aluminium = 10 # was: 16 (MM: This WAS before my time)
 		steel = 15 # was: 24 (MM: This WAS before my time)
+		coal = 15
 	}
 
 	history = {

@@ -8317,9 +8317,9 @@ focus_tree = {
 			custom_effect_tooltip = FIN_modify_fascist_regime_ns_intro
 			add_to_variable = { FIN_fascist_regime_special_forces_cap = 0.3 tooltip = special_forces_cap_tt }
 			add_to_variable = { FIN_fascist_regime_special_forces_no_supply_grace = 24 tooltip = special_forces_no_supply_grace_tt }
-			add_to_variable = { FIN_fascist_regime_special_forces_out_of_supply_factor = -0.15 tooltip = special_forces_out_of_supply_factor_tt }
-			add_to_variable = { FIN_fascist_regime_special_forces_attack_factor = 0.10 tooltip = special_forces_attack_factor_tt }
-			add_to_variable = { FIN_fascist_regime_special_forces_training_time_factor = 0.2 tooltip = special_forces_training_time_factor_tt }
+			add_to_variable = { FIN_fascist_regime_special_forces_out_of_supply_factor = -0.10 tooltip = special_forces_out_of_supply_factor_tt }
+			add_to_variable = { FIN_fascist_regime_special_forces_attack_factor = 0.05 tooltip = special_forces_attack_factor_tt }
+			add_to_variable = { FIN_fascist_regime_special_forces_training_time_factor = 0.5 tooltip = special_forces_training_time_factor_tt }
 
 			add_tech_bonus = {
 				name = FIN_advanced_jaeger_training_program
@@ -10260,7 +10260,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = FIN_modify_finnish_army_ns_intro
 			add_to_variable = { FIN_finnish_army_acclimatization_cold_climate_gain_factor = 0.1 tooltip = acclimatization_cold_climate_gain_factor_tt }
-			add_to_variable = { FIN_finnish_army_cas_damage_reduction = 0.15 tooltip = cas_damage_reduction_tt }
+			add_to_variable = { FIN_finnish_army_cas_damage_reduction = 0.10 tooltip = cas_damage_reduction_tt }
 			add_to_variable = { FIN_finnish_army_winter_attrition_factor = -0.15 tooltip = winter_attrition_factor_tt }
 
 			army_experience = 15
@@ -10287,7 +10287,7 @@ focus_tree = {
 			set_technology = { bicycle_infantry = 1 popup = no }
 
 			custom_effect_tooltip = FIN_modify_finnish_army_ns_intro
-			add_to_variable = { FIN_finnish_army_army_org_factor = 0.1 tooltip = army_org_factor_tt }
+			add_to_variable = { FIN_finnish_army_army_org_factor = 0.05 tooltip = army_org_factor_tt }
 			add_to_variable = { FIN_finnish_army_special_forces_cap = 0.05 tooltip = special_forces_cap_tt }
 			add_to_variable = { FIN_finnish_army_special_forces_out_of_supply_factor = -0.1 tooltip = special_forces_out_of_supply_factor_tt }
 

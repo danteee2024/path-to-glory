@@ -3109,6 +3109,7 @@ BEL_corruption_ns_fake_tt: "Daily Political Power Gain: §R-0.25%§! \nStability
  GER_industrial_consumer_goods_factor_limit_tt: "§Y[GetIndustrialModifier]§! have §Rless§! than $MODIFIER_CONSUMER_GOODS_FACTOR$: §Y90%§!"
  GER_establish_the_reichswerke: "Establish the $GER_reichswerke$"
  GER_establish_the_reichswerke_desc: "$GER_hermann_goring_werke_desc$" #old loc
+ GER_promise_of_gombos_treaty:0 "Exploit the Gömbös Trade Treaty "
  GER_unlock_reichswerke_tt: "Unlocks the Industrial Concern §Y$GER_reichswerke$§!"
  GER_seize_foreign_industries: "Seize Foreign Industries"
  GER_seize_foreign_industries_desc: "By integrating foreign industries into our economy we secure vital resources that bolster our war effort and production."
@@ -4161,7 +4162,7 @@ BEL_corruption_ns_fake_tt: "Daily Political Power Gain: §R-0.25%§! \nStability
  GER_Army_Plan_2:0 "The Hindenburg Plan"
  GER_Army_Plan_2_desc: "Let us learn from the lessons of the Great War. A systematic plan for the rapid expansion and standardization of our armaments will ensure our armies are the best-equipped in the world."
 
- GER_Holy_Roman_Industry_2:0 "Mitteleuropa Industrial Conference"
+ GER_Holy_Roman_Industry_2:0 "The Holy Roman Industry"
  GER_Holy_Roman_Industry_2_desc: "German efficiency alone is not enough. We must coordinate the industrial might of all Mitteleuropa, synchronizing production and resource allocation under our benevolent leadership for the good of the continent."
 
  GER_Army_Plan_3:0 "Found the Großer Generalstab"

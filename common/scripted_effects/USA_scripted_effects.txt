@@ -2,54 +2,46 @@
 USA_depression_clear_all = {
 	remove_ideas = {
 		great_depression
+		great_depression_1
 		great_depression_2
-		great_depression_3
-		great_depression_4
 	}
 }
 
 #Important to put HIGHEST first
 USA_great_depression_level_up = {
-	# level 5 not relevant. Cannot go above.
+	# Level up makes the Depression worse again.
 	custom_effect_tooltip = USA_great_depression_up_tt
 	if = {
-		limit = { has_idea = great_depression_2 }
+		limit = { has_idea = great_depression_1 }
 		swap_ideas = {
-			remove_idea = great_depression_2
+			remove_idea = great_depression_1
 			add_idea = great_depression
 		}
 	}
 	else_if = {
-		limit = { has_idea = great_depression_3 }
+		limit = { has_idea = great_depression_2 }
 		swap_ideas = {
-			remove_idea = great_depression_3
-			add_idea = great_depression_2
+			remove_idea = great_depression_2
+			add_idea = great_depression_1
 		}
 	}
-	
 }
 
 #Important to put LOWEST first
 USA_great_depression_level_down = {
-	if = {
-		limit = { has_idea = great_depression_4 }
-		custom_effect_tooltip = USA_great_depression_down_tt
-		remove_ideas = great_depression_4
-	}
-	if = {
-		limit = { has_idea = great_depression_3 }
-		custom_effect_tooltip = USA_great_depression_down_tt
-		swap_ideas = {
-			remove_idea = great_depression_3
-			add_idea = great_depression_4
-		}
-	}
+	# 3‑step recovery:
+	# great_depression -> great_depression_1 -> great_depression_2 -> no idea
 	if = {
 		limit = { has_idea = great_depression_2 }
 		custom_effect_tooltip = USA_great_depression_down_tt
+		remove_ideas = great_depression_2
+	}
+	if = {
+		limit = { has_idea = great_depression_1 }
+		custom_effect_tooltip = USA_great_depression_down_tt
 		swap_ideas = {
-			remove_idea = great_depression_2
-			add_idea = great_depression_3
+			remove_idea = great_depression_1
+			add_idea = great_depression_2
 		}
 	}
 	if = {
@@ -57,7 +49,7 @@ USA_great_depression_level_down = {
 		custom_effect_tooltip = USA_great_depression_down_tt
 		swap_ideas = {
 			remove_idea = great_depression
-			add_idea = great_depression_2
+			add_idea = great_depression_1
 		}
 	}
 }

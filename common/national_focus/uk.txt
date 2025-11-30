@@ -139,7 +139,7 @@ focus_tree = {
 		icon = GFX_focus_generic_nuclear_development
 		x = 1
 		y = 1
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -199,7 +199,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = maud_focus
-				bonus = 1.5
+				bonus = 1.0
 				uses = 1
 				category = nuclear
 			}
@@ -418,15 +418,15 @@ focus_tree = {
 						126 = {
 							free_building_slots = {
 								building = industrial_complex
-								size > 1
+								size > 2
 								include_locked = yes
 							}
 						}
 					}
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = industrial_complex
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -462,7 +462,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ENG_revitalize_northern_england
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -1039,9 +1039,9 @@ completion_reward = {
 	focus = {
 		id = ENG_ramp_up_constription
 		icon =  GFX_focus_AFG_royal_guard
-		cost = 5
+		cost = 10
 		prerequisite = {
-			focus = uk_small_arms_focus
+			focus = uk_small_arms_focus focus = ENG_adopt_bliztkrieg_tactics
 		}
 		x = 2
 		y = 1
@@ -1093,7 +1093,7 @@ completion_reward = {
 		}
 		
 		completion_reward = {
-			add_ideas = JAP_economy_by_japan_tanks
+			add_ideas = ENG_Tank_Production
 			
 		}
 	}
@@ -1833,7 +1833,7 @@ completion_reward = {
 				add_tech_bonus = {
 					name = armor_bonus
 					bonus = 2.0
-					uses = 2
+					uses = 1
 					category = armor
 				}				
 			}
@@ -2661,7 +2661,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		x = 0
 		y = 2
 		relative_position_id = uk_royal_marine_corps
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -9924,7 +9924,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		id = ENG_imperial_federation
 		prerequisite = { focus = Commonwealth_second_institution }
 		available = {
-		 date > 1940.1.1
+		 date > 1943.1.1
 						
 							 CAN = { is_subject_of = ENG }
 							 AST = { is_subject_of = ENG }
@@ -9950,11 +9950,6 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		completion_reward = {
 		
 		set_cosmetic_tag = ENG_imperial_federation_unified
-			
-
-		annex_country = {
-			target = MAL
-		}
 			
 			
 		

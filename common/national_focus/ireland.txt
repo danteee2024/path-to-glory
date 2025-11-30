@@ -1865,7 +1865,7 @@ focus_tree = {
 	
 		completion_reward = {
 			add_stability = 0.10
-			add_political_power = 50
+			add_political_power = 100
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = IRE_scars_of_The_Potato_Famine
@@ -3282,15 +3282,29 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			
-			custom_effect_tooltip = CHL_skip_one_line_tt
-			add_tech_bonus = {
-				name = IRE_resource_extraction_bonus
-				bonus = 0.50
-				uses = 2
-				category = excavation_tech
-			}
-		}
+    113 = {
+        add_extra_state_shared_building_slots = 1
+        
+        # Add steel directly
+        add_resource = { type = steel amount = 3  }
+    }
+
+    135 = {
+        add_extra_state_shared_building_slots = 1
+        
+        # Add steel directly
+        add_resource = { type = steel amount = 3 }
+    }
+
+    custom_effect_tooltip = CHL_skip_one_line_tt
+
+    add_tech_bonus = {
+        name = IRE_resource_extraction_bonus
+        bonus = 0.50
+        uses = 2
+        category = excavation_tech
+    }
+}
 	}
 	
 	
@@ -5165,7 +5179,7 @@ focus_tree = {
 		x = 2
 		y = 1
 	
-		cost = 10
+		cost = 5
 		
 		available = {
 		}
@@ -5285,7 +5299,7 @@ focus_tree = {
 		x = 0
 		y = 1
 	
-		cost = 10
+		cost = 5
 		
 		available = {
 		}
@@ -5397,29 +5411,20 @@ focus_tree = {
 	
 		completion_reward = {
 			add_stability = -0.05
-			add_war_support = 0.05
-			custom_effect_tooltip = CHL_skip_one_line_tt
-			modify_building_resources = {
-				building = resource_expansion_aluminium
-				resource = aluminium
-				amount = 1
-			}
-			
-			modify_building_resources = {
-				building = resource_expansion_steel
-				resource = steel
-				amount = 1
-			}
-			modify_building_resources = {
-				building = resource_expansion_tungsten
-				resource = tungsten
-				amount = 1
-			}
-			modify_building_resources = {
-				building = resource_expansion_chromium
-				resource = chromium
-				amount = 1
-			}
+			add_war_support = 0.05 
+
+		
+    113 = {
+        add_resource = { type = coal amount = 5 }
+    }
+
+
+    135 = {
+        add_extra_state_shared_building_slots = 1
+        
+        # Add steel directly
+        add_resource = { type = steel amount = 5  }
+    }
 		}
 	}
 	
