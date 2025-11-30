@@ -2728,10 +2728,10 @@ focus = {
     }
 	 GER = {
 	  64 = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 2
 				}
 			}
 		}
@@ -2910,7 +2910,7 @@ focus = {
 		y = 1
 		relative_position_id = LIT_abolish_seimas
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 3
@@ -3086,7 +3086,7 @@ focus = {
 		y = 1
 		relative_position_id = LIT_Prussian_War_Preparation
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 3

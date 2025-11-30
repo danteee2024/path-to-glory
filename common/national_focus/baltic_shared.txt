@@ -322,7 +322,7 @@ shared_focus = {
 	}
 	relative_position_id = BALTIC_Lithuania_Infra
 
-	cost = 5
+	cost = 10
 
 	ai_will_do = {
 		factor = 1
@@ -344,17 +344,17 @@ shared_focus = {
 		
 			add_resource = {
 				type = coal
-				amount = 9
+				amount = 4
 				state = 189
 			}
 			add_resource = {
 				type = steel
-				amount = 6
+				amount = 3
 				state = 189
 			}
 			add_resource = {
 				type = tungsten
-				amount = 8
+				amount = 4
 				state = 188
 			}
 		
@@ -371,7 +371,7 @@ shared_focus = {
 	}
 	relative_position_id = BALTIC_Estonia_Infra
 
-	cost = 5
+	cost = 10
 
 	ai_will_do = {
 		factor = 1
@@ -393,17 +393,17 @@ shared_focus = {
 		
 			add_resource = {
 				type = oil
-				amount = 9
+				amount = 4
 				state = 811
 			}
 			add_resource = {
 				type = steel
-				amount = 5
+				amount = 3
 				state = 13
 			}
 			add_resource = {
 				type = coal
-				amount = 10
+				amount = 4
 				state = 13
 			}
 		
@@ -420,7 +420,7 @@ shared_focus = {
 	}
 	relative_position_id = BALTIC_Latvia_Infra
 
-	cost = 5
+	cost = 10
 
 	ai_will_do = {
 		factor = 1
@@ -442,7 +442,7 @@ shared_focus = {
 		
 			add_resource = {
 				type = aluminium
-				amount = 6
+				amount = 4
 				state = 809
 			}
 			add_resource = {
@@ -452,17 +452,17 @@ shared_focus = {
 			}
 			add_resource = {
 				type = coal
-				amount = 11
-				state = 12
-			}
-			add_resource = {
-				type = steel
-				amount = 3
-				state = 12
-			}
-			add_resource = {
-				type = steel
 				amount = 4
+				state = 12
+			}
+			add_resource = {
+				type = steel
+				amount = 2
+				state = 12
+			}
+			add_resource = {
+				type = steel
+				amount = 2
 				state = 808
 			}
 		
@@ -509,14 +509,6 @@ shared_focus = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 2
-				}
-			}
-			189 = {
-				
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
 					level = 2
 				}
 			}
@@ -567,14 +559,6 @@ shared_focus = {
 					level = 2
 				}
 			}
-			190 = {
-				
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-				}
-			}
 		
 	}
 }
@@ -620,14 +604,6 @@ shared_focus = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 2
-				}
-			}
-			812 = {
-				
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
 					level = 2
 				}
 			}
