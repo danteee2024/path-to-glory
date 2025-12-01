@@ -21526,6 +21526,7 @@ focus_tree = {
 		}
 
 		available = {
+			date > 1938.6.1
 		}
 
 		search_filters = {FOCUS_FILTER_ANNEXATION}

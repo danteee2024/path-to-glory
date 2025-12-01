@@ -19,6 +19,23 @@ ideas = {
 				political_power_factor = 0.20
 				military_industrial_organization_funds_gain = 0.15
 			}
+		} 
+	 	USA_Communist_Army = {
+	   picture = generic_communist_army
+		allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+		modifier = {
+		army_attack_factor = 0.05
+		army_defence_factor = 0.05
+		army_speed_factor = 0.05
+		}
 		}
 		USA_arsenal_of_prosperity = {
 	   picture = GFX_idea_generic_industry

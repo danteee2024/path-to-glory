@@ -277,7 +277,9 @@ USA_wpa:0 "Works Progress Administration"
  USA_legislation_drafted_days_tt:0 "Current days are: [?USA_new_legislation_drafed_flag:days|Y0]"
  USA_new_legislation_drafed_flag:0 "Latest governmental act was drafted"
 
- #focuses#
+ #focuses# 
+  USA_Communist_Army:0 "The People's Army of America"
+  USA_Communist_Army_desc:0 "With the revolution underway, the bourgeois command structure must be dismantled and replaced with a disciplined force loyal to the workers. By reorganizing our military along communist principles, we ensure that every soldier fights not for profit, but for the liberation of the oppressed and the defense of the American proletariat."
  USA_foundation_of_NATO:0 "Foundation of NATO"
  USA_foundation_of_NATO_desc:0 "The world is changing rapidly around us: many of the former Great Powers lay in ruins after a devastating war has swept over continents. [USA.getNameDefCap] has managed not only to retain, but also strengthen its status as the worlds Superpower. The time has come to take direct control of the matter."
 

@@ -330,9 +330,43 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = USA_Communist_Army
+		icon = GFX_focus_generic_spur_communist_revolutions
+		x = 0
+		y = 1
+		prerequisite = { focus = USA_democratic_socialism }
+		relative_position_id = USA_democratic_socialism
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = communism
+			
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_timed_idea = {
+				idea = USA_Communist_Army
+				days = 540
+			}
+			
+				}
+			}
+		
+	
+	focus = {
 		id = USA_liberty_for_the_philippines
 		icon = GFX_goal_generic_alliance
-		x = 0
+		x = -1
 		y = 2
 		prerequisite = { focus = USA_democratic_socialism }
 		prerequisite = { focus = USA_full_desegregation }
