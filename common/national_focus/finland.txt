@@ -6592,7 +6592,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = FIN_viron_kansa
-		cost =5 
+		cost = 10
 
 		bypass = {
 			EST = {
@@ -6803,7 +6803,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = FIN_union_of_finnish_brothers_in_arms
-		cost =5 
+		cost = 10
 		available = {
 			OR = {
 				has_idea = all_adults_serve
@@ -7198,7 +7198,7 @@ focus_tree = {
 				has_completed_focus = FIN_prepare_a_military_coup
 				AND = {
 					has_completed_focus = FIN_discredit_the_democratic_system
-					fascism > 0.4
+					fascism > 0.5
 					has_stability > 0.45
 				}
 			}
