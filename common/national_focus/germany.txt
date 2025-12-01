@@ -2162,13 +2162,13 @@ focus_tree = {
 			OR = {
 				has_resources_in_country = {
 					resource = oil
-					amount > 149
+					amount > 140
 					extracted = yes
 				}
 				any_subject_country = {
 					has_resources_in_country = {
 						resource = oil
-						amount > 149
+						amount > 140
 						extracted = yes
 					}
 				}
@@ -2304,7 +2304,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = GER_establish_buna_werke
 				bonus = 1
-				uses = 2
+				uses = 1
 				category = synth_resources
 			}
 

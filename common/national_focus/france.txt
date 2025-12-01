@@ -192,7 +192,7 @@ focus = {
 	focus = {
 		id = FRA_monetary_tripartite_agreement
 		icon = GFX_focus_generic_industry_1
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = FRA_sncf
 		}
@@ -211,7 +211,7 @@ focus = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 				set_state_flag = FRA_metropolitan_civilian_factory_2
@@ -221,7 +221,7 @@ focus = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 				set_state_flag = FRA_metropolitan_civilian_factory_2
@@ -231,7 +231,7 @@ focus = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 				set_state_flag = FRA_metropolitan_civilian_factory_1
@@ -970,7 +970,7 @@ focus = {
 	focus = {
 		id = FRA_Improve_the_Factorys
 		icon = GFX_goal_generic_air_production 
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = FRA_investment_civ
 		}
@@ -1176,7 +1176,7 @@ focus = {
 	focus = {
 		id = FRA_tungsten_mines
 		icon = GFX_focus_generic_tungsten
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = FRA_expand_the_citizenship
 		}
@@ -1212,10 +1212,10 @@ focus = {
 				state = 671
 			}
 			671 = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1365,7 +1365,7 @@ focus = {
 	focus = {
 		id = FRA_war_material_licence
 		icon = GFX_SOV_rehabilitated_military_ccp_2d_sov_compatibility
-		cost = 5
+		cost = 7.5
 		prerequisite = {
 			focus = FRA_rearmament
 		}
@@ -1417,7 +1417,7 @@ focus = {
 	focus = {
 		id = FRA_commit_automobile_manufacturer
 		icon = GFX_focus_generic_truck
-		cost = 5
+		cost = 7.5
 		prerequisite = {
 			focus = FRA_rearmament
 		}
@@ -7155,7 +7155,7 @@ focus = {
 	focus = {
 		id = FRA_infantry_tanks
 		icon = GFX_focus_generic_combined_arms
-		cost = 7.5
+		cost = 5
 		prerequisite = {
 			focus = FRA_fortification_focus
 			focus = FRA_motorized_focus
@@ -7177,7 +7177,7 @@ focus = {
 			add_tech_bonus = {
 				name = FRA_infantry_tanks
 				bonus = 0.5
-				uses = 2
+				uses = 1
 				category = armor
 			}
 		}
