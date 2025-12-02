@@ -4008,7 +4008,7 @@ ideas = {
 
 			modifier = {
 				conscription = 0.005
-				army_org_factor = 0.05
+				army_org_factor = 0.1
 				training_time_factor = -0.1
 				experience_gain_army = 0.1
 			}
@@ -4030,7 +4030,7 @@ ideas = {
 
 			modifier = {
 				conscription = 0.01
-				army_org_factor = 0.05
+				army_org_factor = 0.1
 				training_time_factor = -0.1
 				experience_gain_army = 0.1
 			}
@@ -4052,7 +4052,7 @@ ideas = {
 
 			modifier = {
 				conscription = 0.005
-				army_org_factor = 0.1
+				army_org_factor = 0.15
 				training_time_factor = -0.1
 				mobilization_speed = 0.1
 				army_morale_factor = 0.05
@@ -4077,7 +4077,7 @@ ideas = {
 
 			modifier = {
 				conscription = 0.01
-				army_org_factor = 0.1
+				army_org_factor = 0.15
 				training_time_factor = -0.1
 				mobilization_speed = 0.1
 				army_morale_factor = 0.05
