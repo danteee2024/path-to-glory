@@ -3043,6 +3043,8 @@ BEL_corruption_ns_fake_tt: "Daily Political Power Gain: §R-0.25%§! \nStability
  FOCUS_ICON_SET_HISTORICAL_KEY_FOCUS: "Historical Key Focus"
 
  GER_prioritize_economic_growth: "Prioritize Economic Growth"
+ GER_Bohemias:0 "Integrating the Bohemian Lands"
+ GER_Bohemias_desc:0 "With our authority once again firmly established in Mitteleuropa, the status of the Bohemian lands has become a question we can no longer postpone. Long a vital industrial heartland of the old Habsburg dominion, Bohemia possesses both the economic strength and strategic position that Germany cannot ignore. By bringing these territories into our sphere more directly—through administrative reform, political oversight, and economic partnership—we can secure loyal governance in Prague and reinforce our influence across Central Europe."
  GER_prioritize_economic_growth_desc: "Years of negligent fiscal policies have almost ruined our economy. We must build tractors instead of tanks, hand out shovels instead of rifles, and prioritize economic growth instead of growing the arms industry!"
  GER_currency_reforms: "Currency Reforms"
  GER_currency_reforms_desc: "The first step of economic recovery and revitalization is to make sweeping currency reforms."

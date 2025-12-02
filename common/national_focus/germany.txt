@@ -26136,7 +26136,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_Strengthen_the_People
 
-		cost = 10
+		cost = 5
 
 		available = {
 			
@@ -26339,7 +26339,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_Holy_Roman_Empire
 
-		cost = 10
+		cost = 5
 
 		available = {
 			
@@ -27380,6 +27380,31 @@ focus_tree = {
 		}
 
 		focus = {
+		id = GER_Bohemias
+
+		icon = GFX_focus_generic_befriend_bohemia
+
+			prerequisite = { focus = GER_Military_Army focus = GER_Military_Construction }
+		prerequisite = { focus = GER_danzig_for_guarantees_ww focus = GER_demand_the_return_of_southern_jutland }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_Military_Army
+
+		cost = 5
+
+		available = {
+			
+		}
+
+		completion_reward = {
+				CZE = {
+					country_event = germany.145
+				}
+			}
+			}
+
+		focus = {
 		id = GER_Demand_Austria
 
 		icon = GFX_focus_GER_the_austrian_question
@@ -27387,7 +27412,7 @@ focus_tree = {
 		prerequisite = { focus = GER_Military_Army focus = GER_Military_Construction }
 		prerequisite = { focus = GER_danzig_for_guarantees_ww focus = GER_demand_the_return_of_southern_jutland }
 
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = GER_Military_Army
 		cost = 10
@@ -27668,8 +27693,9 @@ focus_tree = {
 		icon = GFX_focus_generic_military_industry
 		mutually_exclusive = { focus = GER_Military_Construction_3 }
 		prerequisite = { focus = GER_Demand_Austria } 
+		prerequisite = { focus = GER_Bohemias }
 
-		x = -1
+		x = -2
 		y = 1
 		relative_position_id = GER_Demand_Austria
 		cost = 5
@@ -27690,8 +27716,10 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_naval_dockyard
 		mutually_exclusive = { focus = GER_Military_Construction_2 }
 		prerequisite = { focus = GER_Demand_Austria } 
+		prerequisite = { focus = GER_Bohemias }
 
-		x = 1
+
+		x = 0
 		y = 1
 		relative_position_id = GER_Demand_Austria
 		cost = 5
@@ -28749,7 +28777,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_danzig_for_guarantees_ww
 
-		cost = 2.5
+		cost = 5
 
 		available = {
 			

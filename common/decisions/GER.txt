@@ -22923,7 +22923,7 @@ GER_Industrial_Plan_category = {
 			always = no
 		}
 		is_good = yes
-		days_remove = 30
+		days_remove = 0
 		cost = 50
 		fire_only_once = yes
 
@@ -22971,7 +22971,7 @@ GER_Industrial_Plan_category = {
 			always = no
 		}
 		is_good = yes
-		days_remove = 30
+		days_remove = 0
 		cost = 50
 		fire_only_once = yes
 
@@ -23018,7 +23018,7 @@ GER_Industrial_Plan_category = {
 			always = no
 		}
 		is_good = yes
-		days_remove = 30
+		days_remove = 0
 		cost = 50
 		fire_only_once = yes
 
@@ -23065,7 +23065,7 @@ GER_Industrial_Plan_category = {
 			always = no
 		}
 		is_good = yes
-		days_remove = 30
+		days_remove = 0
 		cost = 50
 		fire_only_once = yes
 
@@ -23107,7 +23107,7 @@ GER_Industrial_Plan_category = {
 			always = no
 		}
 		is_good = yes
-		days_remove = 30
+		days_remove = 0
 		cost = 50
 		fire_only_once = yes
 
@@ -23149,7 +23149,7 @@ GER_Industrial_Plan_category = {
 			always = no
 		}
 		is_good = yes
-		days_remove = 30
+		days_remove = 0
 		cost = 100
 		fire_only_once = yes
 
@@ -23186,7 +23186,7 @@ GER_Industrial_Plan_category = {
 			always = no
 		}
 		is_good = yes
-		days_remove = 30
+		days_remove = 0
 		cost = 50
 		fire_only_once = yes
 
