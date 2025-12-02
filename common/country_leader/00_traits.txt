@@ -43,6 +43,16 @@
 
 leader_traits = {
 
+	Kaiserin_of_the_holy_roman_empire = {
+		political_power_gain = 0.1
+		stability_weekly = 0.001
+		stability_factor = 0.05
+		neutrality_drift = 0.03
+		army_attack_factor = 0.05
+		army_defence_factor = 0.05
+	}
+
+
 	King_of_Prussia = {
 		random = no
 		war_support_factor = 0.1

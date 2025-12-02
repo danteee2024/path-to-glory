@@ -20790,7 +20790,7 @@ focus_tree = {
 		y = 0
 		relative_position_id = GER_prioritize_economic_growth
 
-		cost = 10
+		cost = 5
 
 		available = {
 			is_subject = no
@@ -26011,7 +26011,7 @@ focus_tree = {
 								expire = "1965.1.1"
 								ideology = despotism
 								traits = {
-								kaiserin_of_the_people
+								Kaiserin_of_the_holy_roman_empire
 								victoria_iii
 								}
 							}
@@ -26314,14 +26314,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_to_variable = { 
-				GER_military_army_artillery_defence_factor = 0.1
-				tooltip = army_artillery_defence_factor_tt
-			}
-			add_to_variable = { 
-					GER_bewegungskrieg_army_artillery_attack_factor = 0.1
-					tooltip = army_artillery_attack_factor_tt
-				}
+				add_ideas = GER_Holy_Artillery_Army
 
 			}
 		}
@@ -27698,7 +27691,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = GER_Demand_Austria
-		cost = 5
+		cost = 10
 		available = {
 		}
 
@@ -27722,7 +27715,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_Demand_Austria
-		cost = 5
+		cost = 10
 		available = {
 		}
 
