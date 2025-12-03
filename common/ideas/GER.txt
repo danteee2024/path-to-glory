@@ -156,6 +156,8 @@ ideas = {
 				production_speed_arms_factory_factor = 0.2
 				production_speed_dockyard_factor = 0.2
 				production_speed_industrial_complex_factor = -0.2
+				industrial_capacity_dockyard = 0.1
+				industrial_capacity_factory = 0.1
 			}
 		}
 
@@ -234,6 +236,7 @@ ideas = {
 				production_speed_dockyard_factor = 0.1
 				production_speed_industrial_complex_factor = -0.3
 				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.1
 			}
 		}
 
@@ -254,6 +257,7 @@ ideas = {
 				production_speed_dockyard_factor = 0.4
 				production_speed_industrial_complex_factor = -0.2
 				industrial_capacity_dockyard = 0.2
+				industrial_capacity_factory = 0.1
 			}
 		}
 

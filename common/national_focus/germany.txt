@@ -27367,7 +27367,6 @@ focus_tree = {
 		relative_position_id = GER_all_for_the_front
 		cost = 5
 		available = {
-			has_war = yes
 		}
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -27414,7 +27413,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = GER_Military_Army
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -28699,7 +28698,7 @@ focus_tree = {
 		y = 0
 		relative_position_id = GER_demand_the_return_of_southern_jutland
 
-		cost = 10
+		cost = 5
 
 		available = {
 			is_subject = no
