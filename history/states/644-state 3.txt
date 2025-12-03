@@ -14,6 +14,9 @@ state = {
 		add_core_of = YAK
 
 	}
+	resources = {
+		coal = 36
+	}
 
 	provinces = {
 		1819 4006 4229 4455 12592 13061

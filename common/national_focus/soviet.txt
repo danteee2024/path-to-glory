@@ -6951,6 +6951,7 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { SOV_the_red_army_special_forces_cap = 0.1 }
 			add_to_variable = { SOV_the_red_army_land_doctrine_cost_factor = -0.1 }
+
 			custom_effect_tooltip = SOV_the_glory_of_the_red_army_ns_tt
 
 			army_experience = 75
