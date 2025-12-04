@@ -6,7 +6,7 @@ state = {
 	state_category = town
 
 	resources = {
-		oil = 9
+		oil = 29
 		#steel=2 moved to Guerrero
 	}
 	
