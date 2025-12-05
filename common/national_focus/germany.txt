@@ -8777,14 +8777,11 @@ focus_tree = {
 			}
 		}
 
-		continue_if_invalid = yes
-		
-		available_if_capitulated = no
 		
 		available = {
 			has_war = no
 			is_subject = no
-			date > 1936.12.1
+			date > 1937.1.1
 		}
 
 		ai_will_do = {
