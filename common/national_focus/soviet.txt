@@ -10215,6 +10215,7 @@ focus_tree = {
 						id = NSB_soviet_communist_civil_war.002
 						hours = 1
 					}
+					set_cosmetic_tag = SOV_right_opposition_Assasinate
 					# Renaming of cities
 					country_event = {
 						id = NSB_soviet_civil_war_common.010
