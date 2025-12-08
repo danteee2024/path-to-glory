@@ -1392,11 +1392,13 @@ ideas = {
 			allowed = {
 				original_tag = HOL
 			}
-            modifier = {
+			removal_cost = -1
+			modifier = {
 				army_core_attack_factor = 0.1
-				army_coredefence_factor = 0.1
+				army_core_defence_factor = 0.1
 				army_org_factor = 0.05
-			}	
+			}
+		}
 
 		HOL_shared_intelligence_eng_fra = {
 

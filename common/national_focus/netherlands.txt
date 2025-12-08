@@ -53,7 +53,7 @@ focus_tree = {
 		icon = GFX_goal_generic_consumer_goods
 		x = 3
 		y = 0
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -81,7 +81,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = HOL_obtain_foreign_colonial_investments
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -89,14 +89,36 @@ focus_tree = {
 			695 = {
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 2
 					instant_build = yes
+					if = {
+						limit = {
+							695 = {
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+									include_locked = yes
+								}
+							}
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = synthetic_refinery
+							level = 1
+							instant_build = yes
+						}
+					}
 				}
 			}
 			309 = {
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -134,7 +156,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = HOL_the_western_possessions
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
@@ -172,7 +194,7 @@ focus_tree = {
 				name = HOL_expand_curacao_oil_refineries
 				bonus = 1.0
 				uses = 1
-				category = synth_resources
+				category = industry
 			}
 		}
 	}
@@ -207,7 +229,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = HOL_expand_curacao_oil_refineries
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -227,10 +249,10 @@ focus_tree = {
 							}
 						}
 					}
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = industrial_complex
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -296,7 +318,6 @@ focus_tree = {
 				}
 			}
 			NOT = { has_idea = HOL_aloof_neutrality }
-			has_global_flag = ven_claims_abc_islands
 		}
 		prerequisite = { focus = HOL_antilles_defenses }
 		will_lead_to_war_with = VEN
@@ -304,7 +325,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = HOL_antilles_defenses
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -343,7 +364,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = HOL_obtain_foreign_colonial_investments
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -351,14 +372,14 @@ focus_tree = {
 			335 = {
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
 			672 = {
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -372,7 +393,7 @@ focus_tree = {
 				}
 				INS = {
 					add_autonomy_ratio = {
-						value = -0.025
+						value = -0.5
 						localization = HOL_the_crown_jewel_colony
 					}
 				}
@@ -396,7 +417,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = HOL_the_crown_jewel_colony
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -404,7 +425,7 @@ focus_tree = {
 			335 = {
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				if = {
@@ -584,7 +605,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = HOL_java
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -592,7 +613,7 @@ focus_tree = {
 			672 = {
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				if = {
@@ -654,7 +675,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = HOL_java
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -662,28 +683,28 @@ focus_tree = {
 			667 = {
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
 			334 = {
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
 			668 = {
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
 			673 = {
 				add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 				if = {
@@ -696,10 +717,10 @@ focus_tree = {
 							}
 						}
 					}
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = industrial_complex
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -746,7 +767,7 @@ focus_tree = {
 		x = 2
 		y = 3
 		relative_position_id = HOL_the_crown_jewel_colony
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -811,7 +832,7 @@ focus_tree = {
 					limit = {
 						is_core_of = INS
 					}
-					add_compliance = 70
+					add_compliance = 100
 				}
 				set_capital = { state = 335 }
 			}
@@ -828,7 +849,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = HOL_continue_the_war_in_batavia
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -843,15 +864,15 @@ focus_tree = {
 					limit = {
 						335 = {
 							free_building_slots = {
-								building = industrial_complex
-								size > 3
-								include_locked = yes
+								building = arms_factory
+								size > 0
+								include_locked = no
 							}
 						}
 					}
 					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
-						type = industrial_complex
+						type = arms_factory
 						level = 4
 						instant_build = yes
 					}
@@ -867,7 +888,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = HOL_continue_the_war_in_batavia
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_MANPOWER}
@@ -902,7 +923,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = HOL_a_western_capital
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -918,10 +939,10 @@ focus_tree = {
 							}
 						}
 					}
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 							type = dockyard
-							level = 1
+							level = 2
 							instant_build = yes
 					}
 				}
@@ -937,10 +958,10 @@ focus_tree = {
 							}
 						}
 					}
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 							type = dockyard
-							level = 1
+							level = 2
 							instant_build = yes
 					}
 				}
@@ -956,10 +977,10 @@ focus_tree = {
 							}
 						}
 					}
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 							type = dockyard
-							level = 1
+							level = 2
 							instant_build = yes
 					}
 				}
@@ -975,10 +996,10 @@ focus_tree = {
 							}
 						}
 					}
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 							type = dockyard
-							level = 1
+							level = 2
 							instant_build = yes
 					}
 				}
@@ -994,10 +1015,10 @@ focus_tree = {
 							}
 						}
 					}
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 							type = dockyard
-							level = 1
+							level = 2
 							instant_build = yes
 					}
 				}
@@ -1013,10 +1034,10 @@ focus_tree = {
 							}
 						}
 					}
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 							type = dockyard
-							level = 1
+							level = 2
 							instant_build = yes
 					}
 				}
@@ -1035,7 +1056,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = HOL_a_western_capital
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -1077,7 +1098,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = HOL_colonial_shipbuilding
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
@@ -1087,16 +1108,16 @@ focus_tree = {
 					limit = {
 						335 = {
 							free_building_slots = {
-								building = dockyard
+								building = arms_factory
 								size > 0
 								include_locked = yes
 							}
 						}
 					}
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
-							type = dockyard
-							level = 1
+							type = arms_factory
+							level = 2
 							instant_build = yes
 					}
 				}
@@ -1106,16 +1127,16 @@ focus_tree = {
 					limit = {
 						672 = {
 							free_building_slots = {
-								building = dockyard
+								building = arms_factory
 								size > 0
 								include_locked = yes
 							}
 						}
 					}
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
-							type = dockyard
-							level = 1
+							type = arms_factory
+							level = 2
 							instant_build = yes
 					}
 				}
@@ -1124,7 +1145,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = HOL_prepare_for_our_return
 				bonus = 1.0
-				uses = 1
+				uses = 2
 				category = marine_tech
 			}
 		}
@@ -1148,17 +1169,17 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			set_capital = { state = 7 }
-			add_stability = 0.1
-			add_war_support = 0.05
-			add_manpower = 150000
+			add_stability = 0.15
+			add_war_support = 0.1
+			add_manpower = 20000
 			add_equipment_to_stockpile = {
 			    type = infantry_equipment
-			    amount = 10000
+			    amount = 20000
 			    producer = HOL
 			}
 			add_equipment_to_stockpile = {
 			    type = support_equipment
-			    amount = 500
+			    amount = 1000
 			    producer = HOL
 			}
 			add_ideas = HOL_liberation
@@ -1441,6 +1462,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
+			add_ideas = HOL_industrial_boom
 			add_tech_bonus = {
 				name = HOL_the_zuiderzee_works
 				bonus = 1.0
@@ -1465,7 +1487,6 @@ focus_tree = {
 				}
 			}
 			HOL_de_crisisjaren_level_down = yes
-			add_ideas = HOL_industrial_boom
 			hidden_effect = { news_event = { id = mtg_news.47 days = 1 } }
 		}
 	}
@@ -2029,20 +2050,6 @@ focus_tree = {
 			has_full_control_of_state = 7
 			has_full_control_of_state = 36
 		}
-		bypass = {
-			OR = {
-				is_in_faction_with = ENG
-				AND = {
-					has_defensive_war_with = ENG
-					NOT = {
-						focus_progress = {
-							focus = HOL_germany_is_the_greater_threat
-							progress > 0
-						}
-					}
-				}
-			}
-		}
 		prerequisite = { focus = HOL_prepare_the_inundation_lines }
 		mutually_exclusive = { focus = HOL_germany_is_the_greater_threat }
 		icon = GFX_focus_attack_britain
@@ -2054,171 +2061,11 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			7 = {
-				add_building_construction = {
-					type = coastal_bunker
-					level = 1
-					province = 3314
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 3314
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = coastal_bunker
-					level = 1
-					province = 9498
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 9498
-					instant_build = yes
-				}
-			}
-			36 = {	
-				add_building_construction = {
-					type = coastal_bunker
-					level = 1
-					province = 6336
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 6336
-					instant_build = yes
-				}
-			}
+			send_embargo = ENG
+			custom_effect_tooltip = embargo_relation_tt
 			ENG = {
 				add_opinion_modifier = { target = HOL modifier = HOL_protect_against_britain }
 			}	
-		}
-	}
-
-	focus = {
-		id = HOL_further_reinforce_the_ports
-		available = {
-			threat > 0.15
-			has_full_control_of_state = 7
-			has_full_control_of_state = 36
-		}
-		prerequisite = { focus = HOL_protect_against_britain }
-		icon = GFX_focus_generic_coastal_fort
-		x = 0
-		y = 1
-		relative_position_id = HOL_protect_against_britain
-		cost = 5
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			7 = {
-				add_building_construction = {
-					type = coastal_bunker
-					level = 1
-					province = 3314
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 3314
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = coastal_bunker
-					level = 1
-					province = 9498
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 9498
-					instant_build = yes
-				}
-			}
-			36 = {	
-				add_building_construction = {
-					type = coastal_bunker
-					level = 1
-					province = 6336
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 6336
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = HOL_southward_defenses
-		available = {
-			threat > 0.2
-			has_full_control_of_state = 7
-			has_full_control_of_state = 35
-			has_full_control_of_state = 36
-		}
-		prerequisite = { focus = HOL_further_reinforce_the_ports }
-		icon = GFX_goal_generic_construct_military
-		x = 0
-		y = 1
-		relative_position_id = HOL_further_reinforce_the_ports
-		cost = 5
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			7 = {
-				add_building_construction = {
-					type = bunker
-					level = 2
-					province = 9498
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = coastal_bunker
-					level = 1
-					province = 3314
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = coastal_bunker
-					level = 1
-					province = 9498
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = anti_air_building
-					level = 2
-					instant_build = yes
-				}
-			}
-			35 = {
-				add_building_construction = {
-					type = bunker
-					level = 3
-					province = 11456
-					instant_build = yes
-				}
-			}
-			36 = {	
-				add_building_construction = {
-					type = coastal_bunker
-					level = 1
-					province = 6336
-					instant_build = yes
-				}
-			}
 		}
 	}
 
@@ -2229,20 +2076,6 @@ focus_tree = {
 			has_full_control_of_state = 7
 			has_full_control_of_state = 35
 			has_full_control_of_state = 36
-		}
-		bypass = {
-			OR = {
-				is_in_faction_with = GER
-				AND = {
-					has_defensive_war_with = GER
-					NOT = {
-						focus_progress = {
-							focus = HOL_protect_against_britain
-							progress > 0
-						}
-					}
-				}
-			}
 		}
 		prerequisite = { focus = HOL_prepare_the_inundation_lines }
 		mutually_exclusive = { focus = HOL_protect_against_britain }
@@ -2255,128 +2088,10 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			7 = {
-				add_building_construction = {
-					type = coastal_bunker
-					level = 1
-					province = 3314
-					instant_build = yes
-				}
-			}
-			36 = {	
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 6241
-					instant_build = yes
-				}
-			}
-			35 = {	
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 11456
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 6500
-					instant_build = yes
-				}
-			}	
+			send_embargo = GER
+			custom_effect_tooltip = embargo_relation_tt
 			GER = {
 				add_opinion_modifier = { target = HOL modifier = HOL_germany_is_the_greater_threat }
-			}	
-		}
-	}
-
-	focus = {
-		id = HOL_fortress_holland
-		available = {
-			threat > 0.15
-			has_full_control_of_state = 7
-			has_full_control_of_state = 35
-		}
-		prerequisite = { focus = HOL_germany_is_the_greater_threat }
-		icon = GFX_goal_generic_fortify_city
-		x = 0
-		y = 1
-		relative_position_id = HOL_germany_is_the_greater_threat
-		cost = 5
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			7 = {
-				add_building_construction = {
-					type = coastal_bunker
-					level = 2
-					province = 3314
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 2
-					province = 9498
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 391
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = anti_air_building
-					level = 1
-					instant_build = yes
-				}
-			}
-			35 = {	
-				add_building_construction = {
-					type = bunker
-					level = 2
-					province = 11456
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = anti_air_building
-					level = 1
-					instant_build = yes
-				}
-			}	
-		}
-	}
-
-	focus = {
-		id = HOL_modernize_the_grebbeline
-		available = {
-			threat > 0.2
-			has_full_control_of_state = 36
-		}
-		prerequisite = { focus = HOL_fortress_holland }
-		icon = GFX_goal_generic_construct_military
-		x = 0
-		y = 1
-		relative_position_id = HOL_fortress_holland
-		cost = 5
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			36 = {	
-				add_building_construction = {
-					type = bunker
-					level = 2
-					province = 6241
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = anti_air_building
-					level = 1
-					instant_build = yes
-				}
 			}	
 		}
 	}
@@ -2389,7 +2104,7 @@ focus_tree = {
 		prerequisite = { focus = HOL_protect_against_britain focus = HOL_germany_is_the_greater_threat }
 		icon = GFX_focus_hol_war_on_pacifism
 		x = 1
-		y = 3
+		y = 1
 		relative_position_id = HOL_protect_against_britain
 		cost = 5
 

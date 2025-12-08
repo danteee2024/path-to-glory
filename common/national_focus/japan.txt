@@ -7310,7 +7310,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_sea_purge_the_kodoha_faction }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -8048,7 +8048,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_form_cabinet_intelligence_bureau }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -8094,7 +8094,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_found_the_great_japan_press_association }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -8224,7 +8224,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_form_the_central_economic_council }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -8292,7 +8292,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_form_the_central_economic_council }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -8441,8 +8441,8 @@ focus_tree = {
 			
 			JAP_add_or_modify_showa_statism = yes
 
-			add_to_variable = { JAP_showa_statism_industrial_capacity_dockyard = 0.05 tooltip = industrial_capacity_dockyard_tt }
-			add_to_variable = { JAP_showa_statism_industrial_capacity_factory = 0.05 tooltip = industrial_capacity_factory_tt }
+			add_to_variable = { JAP_showa_statism_industrial_capacity_dockyard = 0.1 tooltip = industrial_capacity_dockyard_tt }
+			add_to_variable = { JAP_showa_statism_industrial_capacity_factory = 0.1 tooltip = industrial_capacity_factory_tt }
 
 			IF = {
 				limit = {
@@ -8530,7 +8530,7 @@ focus_tree = {
 
 			JAP_add_or_modify_state_shintoism = yes
 
-			add_to_variable = { JAP_state_shinotism_pocket_penalty = -0.05 tooltip = pocket_penalty_tt }
+			add_to_variable = { JAP_state_shinotism_pocket_penalty = -0.1 tooltip = pocket_penalty_tt }
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -8555,7 +8555,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_enact_religious_organizations_law }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -8938,7 +8938,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_imperial_rule_assistance_association }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -8963,7 +8963,7 @@ focus_tree = {
 			JAP_add_or_modify_showa_statism = yes
 
 			add_to_variable = { JAP_showa_statism_conscription_factor = 0.1 tooltip = conscription_factor_tt }
-			add_to_variable = { JAP_showa_statism_industrial_capacity_factory = -0.03 tooltip = industrial_capacity_factory_tt }
+			add_to_variable = { JAP_showa_statism_industrial_capacity_factory = 0.05 tooltip = industrial_capacity_factory_tt }
 				
 			
 		}
@@ -9023,24 +9023,14 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_imperial_rule_assistance_association }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
 		}
 
 		available = {
-			has_war_with_major = yes
-			OR = {
-				has_war_support > 0.79
-				surrender_progress > 0
-			}
-			any_enemy_country = {
-				ic_ratio = {
-					tag = ROOT
-					ratio > 0.3
-				}
-			}
+			always = yes
 		}
 
 		bypass = {
@@ -25286,7 +25276,7 @@ focus_tree = {
 		x = -2
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -25373,7 +25363,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -25481,7 +25471,7 @@ focus_tree = {
 		x = 2
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -25574,7 +25564,7 @@ focus_tree = {
 		x = 4
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -25661,7 +25651,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -26020,7 +26010,7 @@ focus_tree = {
 		x = 2
 		y = 1 
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -26062,7 +26052,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -26175,7 +26165,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -26308,7 +26298,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -26373,7 +26363,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -26528,7 +26518,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -26536,7 +26526,7 @@ focus_tree = {
 
 		available = {
 
-			date > 1941.01.01
+			date > 1940.06.01
 		}
 
 		bypass = {
@@ -26998,7 +26988,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -27408,7 +27398,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -27717,7 +27707,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -27858,7 +27848,7 @@ focus_tree = {
 		x = 0
 		y = 2
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
