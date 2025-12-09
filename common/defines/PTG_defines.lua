@@ -110,7 +110,7 @@ NDefines.NCountry.FEMALE_UNIT_LEADER_BASE_CHANCE = {
 }
 NDefines.NCountry.STARTING_COMMAND_POWER = 10.0					-- starting command power for every country
 NDefines.NCountry.GIE_EXILE_ARMY_LEADER_START_LEVEL = 1	--Starting level for exile leader  -- why 3?!
-NDefines.NCountry.AIR_SUPPLY_CONVERSION_SCALE = 0.05				-- Claimed to be the same as vanilla previously but BBA changed this value so commented this out
+NDefines.NCountry.AIR_SUPPLY_CONVERSION_SCALE = 0.08				-- Claimed to be the same as vanilla previously but BBA changed this value so commented this out
 
 
 NDefines.NResistance.GARRISON_MANPOWER_LOST_BY_ATTACK = 0.005 	--WAS 0.018 Ratio of manpower lost by garrison at each attack on garrison (this number will be reduced by the hardness of garrison template)	

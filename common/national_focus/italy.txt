@@ -8673,10 +8673,10 @@ focus_tree = {
 		icon = GFX_focus_ITA_devaluate_the_lire
 		prerequisite = { focus = ITA_triumph_in_africa_bba }
 
-		x = -3
+		x = -1
 		y = 1
 		relative_position_id = ITA_triumph_in_africa_bba
-		cost = 5
+		cost = 2.5
 		available = {
 		}
 
@@ -8685,57 +8685,6 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.02
 			add_timed_idea = { idea = ITA_devaluated_lira days = 365 }
-		}
-	}
-
-	focus = {
-		id = ITA_anglo_italian_agreements
-		icon = GFX_focus_chi_british_cooperation
-		prerequisite = { focus = ITA_triumph_in_africa_bba }
-
-		x = -1
-		y = 1
-		relative_position_id = ITA_triumph_in_africa_bba
-		cost = 5
-
-		bypass = {
-			NOT = { has_country_flag = SUEZ_SANCTIONS_FLAG }
-			OR = {
-				NOT = { country_exists = ETH }
-				has_subject = ETH
-			}
-		} 
-
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = ITA_anglo_italian_agreements_suez_tt
-				OR = {
-					NOT = { has_country_flag = SUEZ_SANCTIONS_FLAG }
-					has_country_flag = { flag = SUEZ_SANCTIONS_FLAG days > 365 }
-				}
-			}
-
-			core_compliance = {
-				occupied_country_tag = ETH
-				value > 40
-			}
-		}
-
-		search_filters = {}
-
-		completion_reward = {
-			#Suez Canal access
-			if = {
-				limit = {
-					has_country_flag = SUEZ_SANCTIONS_FLAG
-				}
-				clr_country_flag = SUEZ_SANCTIONS_FLAG
-				custom_effect_tooltip = ITA_anglo_italian_agreements_suez_unlocked_tt
-			}
-
-			#Deescalation
-			add_to_variable = { ETH.ETH_war_escalation_level = -1 }
-			custom_effect_tooltip = ETH_war_deescalation_inc_tt
 		}
 	}
 
@@ -12497,7 +12446,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			add_to_variable = { ITA_iri_production_speed_industrial_complex_factor = -0.35 }
+			add_to_variable = { ITA_iri_production_speed_industrial_complex_factor = 0.15 }
 			add_to_variable = { ITA_iri_conversion_cost_civ_to_mil_factor = 0.15 }
 			custom_effect_tooltip = ITA_new_corporations_iri_tt
 
@@ -12629,7 +12578,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_tech = armored_train
+			always = yes
 		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -13237,7 +13186,7 @@ focus_tree = {
 		relative_position_id = ITA_revoke_the_acerbo_law
 		cost = 5
 		available = {
-			neutrality > 0.5
+			neutrality > 0.35
 		}
 
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_BALANCE_OF_POWER}
