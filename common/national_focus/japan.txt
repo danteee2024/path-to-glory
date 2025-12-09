@@ -9046,7 +9046,7 @@ focus_tree = {
 		completion_reward = {
 
 			custom_effect_tooltip = JAP_gain_national_defense_state_remove_total_mob_tt
-			add_ideas = national_defense_state
+			add_ideas = japanese_war_economy
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -25173,10 +25173,10 @@ focus_tree = {
 					}
 				}	
 				prioritize = { 531 532 528 }
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}	
@@ -25185,9 +25185,10 @@ focus_tree = {
 
 			JAP_add_or_modify_early_industrialization = yes
 
-			add_to_variable = { JAP_industry_consumer_goods_factor = -0.1 tooltip = consumer_goods_factor_tt }
-			add_to_variable = { JAP_industry_production_speed_arms_factory_factor = -0.05 tooltip = production_speed_arms_factory_factor_tt }
-			add_to_variable = { JAP_industry_production_speed_dockyard_factor = -0.05 tooltip = production_speed_dockyard_factor_tt }
+			add_to_variable = { JAP_industry_consumer_goods_factor = -0.2 tooltip = consumer_goods_factor_tt }
+			add_to_variable = { JAP_industry_production_speed_arms_factory_factor = -0.15 tooltip = production_speed_arms_factory_factor_tt }
+			add_to_variable = { JAP_industry_production_speed_dockyard_factor = -0.15 tooltip = production_speed_dockyard_factor_tt }
+			add_to_variable = { JAP_industry_production_speed_industrial_complex_factor = 0.15 tooltip = production_speed_industrial_complex_factor_tt }
 			
 		}
 
@@ -25255,9 +25256,10 @@ focus_tree = {
 
 			JAP_add_or_modify_early_industrialization = yes
 
-			add_to_variable = { JAP_industry_consumer_goods_factor = 0.05 tooltip = consumer_goods_factor_tt }
-			add_to_variable = { JAP_industry_production_speed_arms_factory_factor = 0.1 tooltip = production_speed_arms_factory_factor_tt }
-			add_to_variable = { JAP_industry_production_speed_dockyard_factor = 0.1 tooltip = production_speed_dockyard_factor_tt }
+			add_to_variable = { JAP_industry_consumer_goods_factor = 0.1 tooltip = consumer_goods_factor_tt }
+			add_to_variable = { JAP_industry_production_speed_arms_factory_factor = 0.15 tooltip = production_speed_arms_factory_factor_tt }
+			add_to_variable = { JAP_industry_production_speed_dockyard_factor = 0.15 tooltip = production_speed_dockyard_factor_tt }
+			add_to_variable = { JAP_industry_production_speed_industrial_complex_factor = -0.15 tooltip = production_speed_industrial_complex_factor_tt }
 			
 		}
 
@@ -25679,7 +25681,7 @@ focus_tree = {
 
 			JAP_add_or_modify_early_industrialization = yes
 
-			add_to_variable = { JAP_industry_research_speed_factor = 0.03 tooltip = research_speed_factor_tt }
+			add_to_variable = { JAP_industry_research_speed_factor = 0.08 tooltip = research_speed_factor_tt }
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -26753,6 +26755,12 @@ focus_tree = {
 
 			custom_effect_tooltip = available_industrial_concern
 			show_ideas_tooltip = oriental_development_company
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			JAP_add_or_modify_early_industrialization = yes
+
+			add_to_variable = { JAP_industry_consumer_goods_factor = -0.1 tooltip = consumer_goods_factor_tt }
 			
 		}
 
@@ -27184,12 +27192,6 @@ focus_tree = {
 			610 = { add_extra_state_shared_building_slots = 1 }
 			328 = { add_extra_state_shared_building_slots = 1 }
 
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			JAP_add_or_modify_early_industrialization = yes
-
-			add_to_variable = { JAP_industry_consumer_goods_factor = -0.05 tooltip = consumer_goods_factor_tt }
-
 		}
 
 	}
@@ -27346,7 +27348,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 5
+		cost = 2.5
 
 		ai_will_do = {
 			factor = 3
@@ -27373,12 +27375,6 @@ focus_tree = {
 			524 = {
 				add_extra_state_shared_building_slots = 2
 			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			JAP_add_or_modify_early_industrialization = yes
-
-			add_to_variable = { JAP_industry_consumer_goods_factor = -0.05 tooltip = consumer_goods_factor_tt }
 
 		}
 
@@ -27474,7 +27470,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 5
+		cost = 2.5
 
 		ai_will_do = {
 			factor = 3
@@ -27519,12 +27515,6 @@ focus_tree = {
 				random_select_amount = 4
 				add_extra_state_shared_building_slots = 1
 			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			JAP_add_or_modify_early_industrialization = yes
-
-			add_to_variable = { JAP_industry_consumer_goods_factor = -0.05 tooltip = consumer_goods_factor_tt }
 
 		}
 	}
@@ -27689,6 +27679,12 @@ focus_tree = {
 				}
 			}
 
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			JAP_add_or_modify_early_industrialization = yes
+
+			add_to_variable = { JAP_industry_consumer_goods_factor = -0.1 tooltip = consumer_goods_factor_tt }
+
 		}
 		
 	}
@@ -27707,7 +27703,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		cost = 5
+		cost = 2.5
 
 		ai_will_do = {
 			factor = 3
@@ -27759,12 +27755,6 @@ focus_tree = {
 					add_extra_state_shared_building_slots = 1
 				}
 			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			JAP_add_or_modify_early_industrialization = yes
-
-			add_to_variable = { JAP_industry_consumer_goods_factor = -0.05 tooltip = consumer_goods_factor_tt }
 
 		}
 	}
