@@ -13224,7 +13224,6 @@ focus_tree = {
 
 			OR = {
 				AND = {
-					16 = { NOT = { is_controlled_by = FRA } } #Paris has fallen
 					custom_trigger_tooltip = {
 						tooltip = demand_indochina_focus_tt
 						OR = {
