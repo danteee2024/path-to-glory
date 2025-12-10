@@ -2,6 +2,13 @@ on_actions = {
 	on_startup = {
 		
 		effect = {
+			# Apply passive mastery gain to all countries
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				add_ideas = passive_mastery_gain
+			}
 
 			every_country = {
 				limit = {
