@@ -3382,8 +3382,8 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		}	
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			add_stability = -0.05
-			add_popularity = { ideology = communism popularity = 0.05 }
+			add_stability = 0.05
+			add_popularity = { ideology = communism popularity = 0.15 }
 			add_political_power = 80
 			custom_effect_tooltip = ENG_concessions_to_the_trade_unions_tt_2
 			hidden_effect = { news_event = { id = mtg_news.14 days = 1 } }
@@ -3507,7 +3507,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		x = -1
 		y = 1
 		relative_position_id = ENG_guide_the_colonies
-		cost = 10
+		cost = 2.5
 		ai_will_do = {
 			factor = 1
 		}
@@ -3885,13 +3885,13 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		x = 1
 		y = 1
 		relative_position_id = ENG_guide_the_colonies
-		cost = 2
+		cost = 2.5
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {FOCUS_FILTER_MANPOWER}	
 		completion_reward = {
-			add_stability = -0.05
+			add_stability = 0.05
 			add_manpower = 25000
 			if = {
 				limit = {
@@ -3951,15 +3951,6 @@ custom_effect_tooltip = generic_skip_one_line_tt
 					transfer_state = 299
 					299 = { add_core_of = ARG }
 					transfer_state = 720
-					add_opinion_modifier = { target = ENG modifier = ENG_returned_our_territory }
-				}
-			}
-			if = {
-				limit = {
-					has_full_control_of_state = 119
-				}
-				IRE = {
-					transfer_state = 119
 					add_opinion_modifier = { target = ENG modifier = ENG_returned_our_territory }
 				}
 			}
@@ -4040,7 +4031,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		x = -1
 		y = 1
 		relative_position_id = ENG_withdraw_from_contested_territories
-		cost = 5
+		cost = 2.5
 		ai_will_do = {
 			factor = 1
 		}
@@ -4238,7 +4229,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		x = 1
 		y = 1
 		relative_position_id = ENG_withdraw_from_contested_territories
-		cost = 5
+		cost = 2.5
 		ai_will_do = {
 			factor = 1
 		}
@@ -4489,7 +4480,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		x = 0
 		y = 1
 		relative_position_id = ENG_self_government_for_the_middle_east
-		cost = 5
+		cost = 2.5
 		ai_will_do = {
 			factor = 1
 		}
@@ -4731,7 +4722,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		x = 0
 		y = 1
 		relative_position_id = ENG_self_government_for_the_americas
-		cost = 5
+		cost = 2.5
 		ai_will_do = {
 			factor = 1
 		}
@@ -5216,7 +5207,71 @@ custom_effect_tooltip = generic_skip_one_line_tt
 			hidden_effect = { news_event = { id = mtg_news.15 days = 1 } }
 		}
 	}
+
+	focus = {
+		id = ENG_The_Homeland_Industry
+		prerequisite = { focus = ENG_decolonization }
+		available = { 
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_ARG_capitalize_the_beef_industry
+		x = 0
+		y = 1
+		relative_position_id = ENG_decolonization
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}	
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY}
+		completion_reward = {
+	 add_ideas =  ENG_The_Homeland_Industry
+		}
+	}
 	
+	focus = {
+		id = ENG_Improved_Factories
+		prerequisite = { focus = ENG_decolonization }
+		available = { 
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_CHL_enlarge_the_textile_industries
+		x = -2
+		y = 1
+		relative_position_id = ENG_decolonization
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}	
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY}
+		completion_reward = {
+	 add_ideas =  ENG_Improved_Factories
+		}
+	}
+	focus = {
+		id = ENG_Advanced_Production
+		prerequisite = { focus = ENG_decolonization }
+		available = { 
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_generic_modernize_industry
+		x = 2
+		y = 1
+		relative_position_id = ENG_decolonization
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}	
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY}
+		completion_reward = {
+	 add_ideas =  ENG_Advanced_Production
+		}
+	}
 
 	### END OF DECOLONIZATION ###
 

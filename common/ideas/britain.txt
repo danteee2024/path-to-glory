@@ -555,6 +555,62 @@ ideas = {
 				army_org_factor = 0.05
 			}	
 		}
+		ENG_The_Homeland_Industry = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = man_five_year_plan_industry
+
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				global_building_slots = 2
+			}	
+		}
+		ENG_Improved_Factories = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_industrial_concern_1
+
+			modifier = {
+				industrial_capacity_dockyard = 0.15
+				industrial_capacity_factory = 0.15
+			}	
+		}
+		ENG_Advanced_Production = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_improved_industries
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+			}	
+		}
+
 		ENG_prepare_the_army_for_war = {
 			allowed = {
 				always = yes
