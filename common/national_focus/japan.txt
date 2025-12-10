@@ -11671,9 +11671,6 @@ focus_tree = {
 				has_government = neutrality
 				has_government = fascism
 			}
-			613 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
 		}
 
 		bypass = {
