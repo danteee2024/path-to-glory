@@ -1037,7 +1037,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = GER_prioritize_economic_growth
-		cost = 10
+		cost = 5
 		available = {
 			OR = {
 				has_full_control_of_state = 64 #Brandenburg
@@ -1638,7 +1638,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = GER_the_four_year_plan
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -1759,7 +1759,7 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = GER_autarky_efforts
-		cost = 10
+		cost = 5
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = GER_industrial_consumer_goods_factor_limit_tt
@@ -2050,7 +2050,7 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = GER_autarky_efforts
-		cost = 10
+		cost = 5
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = GER_industrial_consumer_goods_factor_limit_tt
@@ -2147,7 +2147,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = GER_coal_liquefaction
-		cost = 10
+		cost = 5
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = GER_industrial_consumer_goods_factor_limit_tt
@@ -2339,7 +2339,7 @@ focus_tree = {
 		relative_position_id = GER_seize_foreign_industries
 		cost = 10
 		available = {
-			date > 1941.06.01
+			date > 1941.01.01
 			#OR = {
 			#	has_resources_in_country = {
 			#		resource = steel
@@ -2844,12 +2844,6 @@ focus_tree = {
 			OR = {
 				has_war_support > 0.89
 				surrender_progress > 0
-			}
-			any_enemy_country = {
-				ic_ratio = {
-					tag = ROOT
-					ratio > 0.5
-				}
 			}
 		}
 

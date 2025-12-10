@@ -10228,7 +10228,6 @@ focus_tree = {
 		available = {
 			has_war = yes
 			any_core_state = {
-				JAP_is_home_islands_state = yes
 				NOT = {
 					is_fully_controlled_by = ROOT
 				}
@@ -10254,6 +10253,11 @@ focus_tree = {
 			custom_effect_tooltip = JAP_found_the_boeitai_tt
 
 			hidden_effect = {
+
+				set_technology = {
+					militia_tech = 1
+					popup = no
+				}
 
 				delete_unit_template_and_units = {
 					division_template = "Kokumin Giyū Sentōtai"
