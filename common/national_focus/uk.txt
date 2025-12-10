@@ -8632,7 +8632,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		y = 1
 		relative_position_id = ENG_a_change_in_course
 		cancel_if_invalid = yes
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -8753,7 +8753,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		x = 8
 		y = 2
 		relative_position_id = ENG_organize_the_blackshirts
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -8791,7 +8791,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		x = 6
 		y = 2
 		relative_position_id = ENG_organize_the_blackshirts
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -9376,8 +9376,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 				}
 				set_state_flag = enact_the_mosley_memorandum_2AF
 			}
-			
-			add_dynamic_modifier = { modifier = ENG_The_Mosley_Memorandum }
+			add_ideas = ENG_The_Mosley_Memorandum 
 		}
 	}
 	
@@ -9394,46 +9393,23 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		x = 0
 		y = 1
 		relative_position_id = ENG_enact_the_mosley_manifesto
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}	
 		completion_reward = {
-			set_variable = { ENG_Mosley_Construction_Speed = 0.1 }
-			
-			custom_effect_tooltip = ENG_Mosley_Nationalisation_Tooltip
+			swap_ideas = {
+				remove_idea = ENG_The_Mosley_Memorandum 
+				add_idea = ENG_The_Mosley_Memorandum1
+			}
 		}
 	}
 	
-	focus = {
-		id = ENG_Mosley_Increased_School_Age_And_Pensions
-		prerequisite = { focus = ENG_enact_the_mosley_manifesto }
-		available = {
-			is_subject = no
-			OR = {
-				has_government = fascism
-			}
-		}
-		icon = GFX_focus_AUS_womens_education_initiative
-		x = 2
-		y = 1
-		relative_position_id = ENG_enact_the_mosley_manifesto
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		search_filters = {FOCUS_FILTER_WAR_SUPPORT}	
-		completion_reward = {
-			set_variable = { ENG_Mosley_Research_Speed = 0.1 }
-			
-			custom_effect_tooltip = ENG_Mosley_Increase_School_Age_Tooltip
-		}
-	}
 	
 	focus = {
 		id = ENG_Mosley_Corporate_State
-		prerequisite = { focus = ENG_enact_the_mosley_manifesto }
+		prerequisite = { focus = ENG_Mosley_Nationalisation }
 		available = {
 			is_subject = no
 			OR = {
@@ -9441,58 +9417,33 @@ custom_effect_tooltip = generic_skip_one_line_tt
 			}
 		}
 		icon = GFX_focus_ICE_state_corporatism
-		x = 1
+		x = 0
 		y = 2
 		relative_position_id = ENG_enact_the_mosley_manifesto
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}	
 		completion_reward = {
-			set_variable = { ENG_Mosley_Consumer_Goods = -0.1 }
-			
-			custom_effect_tooltip = ENG_Mosley_Corporate_State_Tooltip
+			swap_ideas = {
+				remove_idea = ENG_The_Mosley_Memorandum1
+				add_idea = ENG_The_Mosley_Memorandum2
+			}
 		}
 	}
-	
+
 	focus = {
-		id = ENG_Mosley_Public_Works
-		prerequisite = { focus = ENG_enact_the_mosley_manifesto }
+		id = ENG_British_Army
+		prerequisite = { focus = ENG_Mosley_Nationalisation }
 		available = {
 			is_subject = no
 			OR = {
 				has_government = fascism
 			}
 		}
-		icon = GFX_focus_SOV_the_road_of_life
+		icon = GFX_focus_generic_army_doctrines_2
 		x = -2
-		y = 1
-		relative_position_id = ENG_enact_the_mosley_manifesto
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		search_filters = {FOCUS_FILTER_WAR_SUPPORT}	
-		completion_reward = {
-			set_variable = { ENG_Mosley_Industrial_Speed = 0.05 }
-			set_variable = { ENG_Mosley_Synthetic_Speed = 0.1 }
-			
-			custom_effect_tooltip = ENG_Mosley_Public_Works_Tooltip
-		}
-	}
-	
-	focus = {
-		id = ENG_Biff_Boys
-		prerequisite = { focus = ENG_enact_the_mosley_manifesto }
-		available = {
-			is_subject = no
-			OR = {
-				has_government = fascism
-			}
-		}
-		icon = GFX_focus_RAJ_military_into_the_workforce
-		x = -1
 		y = 2
 		relative_position_id = ENG_enact_the_mosley_manifesto
 		cost = 5
@@ -9501,11 +9452,34 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		}
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}	
 		completion_reward = {
-			add_ideas = ENG_Biff_Boys
-			
-			unlock_decision_tooltip = Raise_Biff_Boys
+			add_ideas = ENG_British_Army
 		}
 	}
+
+	focus = {
+		id = ENG_prepare_the_army_for_war
+		prerequisite = { focus = ENG_British_Army }
+		available = {
+			is_subject = no
+			OR = {
+				has_government = fascism
+			}
+		}
+		icon = GFX_SOV_an_adaptable_army_ccp_2d_sov_compatibility
+		x = -2
+		y = 3
+		relative_position_id = ENG_enact_the_mosley_manifesto
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}	
+		completion_reward = {
+			add_ideas = ENG_prepare_the_army_for_war
+		}
+	}
+	
+	
 
 	### UNALIGNED/FASCIST SHARED PATH ###
 
@@ -9817,6 +9791,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 			is_subject = no
 			country_exists = IRE
 			NOT = { is_in_faction_with = IRE }
+			date > 1937.6.1
 		}
 		bypass = {
 			owns_state = 113
@@ -9834,43 +9809,13 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		x = 0
 		y = 2
 		relative_position_id = ENG_god_save_the_king
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
 		completion_reward = {
 		
-			set_autonomy = {
-				target = IRE
-				autonomous_state = autonomy_free
-			}
-		
-			ENG_mosley_pacifism_level_down = yes
-			every_other_country = {
-				limit = {
-					OR = {
-						owns_state = 113
-						owns_state = 134
-						owns_state = 135
-						owns_state = 119
-						owns_state = 122
-						owns_state = 133
-						owns_state = 121
-						owns_state = 136
-						owns_state = 120
-					}
-				}
-				ENG = {
-					add_state_claim = 113
-					add_state_claim = 134
-					add_state_claim = 135
-					create_wargoal = {
-						type = annex_everything
-						target = PREV
-						expire = 0
-					}
-				}
-			}
+			IRE = { country_event = britain.332 }
 		}
 	}
 
