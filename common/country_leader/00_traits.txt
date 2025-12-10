@@ -2165,8 +2165,10 @@ leader_traits = {
 
 	protector_of_the_campesinos = { #communist Cardenas (land reformer)
 		random = no
-		production_speed_industrial_complex_factor = 0.1
+		production_speed_arms_factory_factor = 0.15
 		production_speed_infrastructure_factor = 0.1
+        political_power_factor = 0.1
+
 		ai_will_do = {
 			factor = 1
 		}
