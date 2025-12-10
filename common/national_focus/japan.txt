@@ -12467,7 +12467,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_nanshin_ron }
 
-		cost = 5
+		cost = 2.5
 
 		ai_will_do = {
 			factor = 1
@@ -12676,7 +12676,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_unsinkable_aircraft_carriers }
 
-		cost = 5
+		cost = 2.5
 
 		ai_will_do = {
 			factor = 1
@@ -12736,7 +12736,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_isolate_oceania }
 
-		cost = 5
+		cost = 2.5
 
 		ai_will_do = {
 			factor = 1
@@ -12838,7 +12838,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_battle_for_australia }
 
-		cost = 5
+		cost = 2.5
 
 		ai_will_do = {
 			factor = 1
@@ -13604,7 +13604,6 @@ focus_tree = {
 				limit = {
 					is_ai = no
 				}
-				JAP_naval_faction_is_at_least_influential = yes
 			}
 			OR = {
 				has_government = fascism
