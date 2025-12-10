@@ -1618,18 +1618,18 @@ mutually_exclusive = {
 
 		available = {
 
-			date > 1937.6.1
+			date > 1937.1.1
 			congress_medium_support_trigger = yes
 			has_government = democratic
 			has_country_flag = {
 				flag = USA_new_legislation_drafed_flag
-				days > 180
+				days > 120
 			}
 			custom_trigger_tooltip = {
 				tooltip = USA_legislation_drafted_days_tt
 				has_country_flag = {
 					flag = USA_new_legislation_drafed_flag
-					days > 180
+					days > 120
 				}
 			}
 		}
@@ -1680,18 +1680,18 @@ mutually_exclusive = {
 
 		available = {
 
-			date > 1938.6.1
+			date > 1938.1.1
 		congress_medium_support_trigger = yes
 			has_government = democratic
 			has_country_flag = {
 				flag = USA_new_legislation_drafed_flag
-				days > 180
+				days > 120
 			}
 			custom_trigger_tooltip = {
 				tooltip = USA_legislation_drafted_days_tt
 				has_country_flag = {
 					flag = USA_new_legislation_drafed_flag
-					days > 180
+					days > 120
 				}
 			}
 	}
@@ -1745,18 +1745,18 @@ mutually_exclusive = {
 
 		available = {
 
-			date > 1938.6.1
+			date > 1938.1.1
 		congress_medium_support_trigger = yes
 			has_government = democratic
 			has_country_flag = {
 				flag = USA_new_legislation_drafed_flag
-				days > 180
+				days > 120
 			}
 			custom_trigger_tooltip = {
 				tooltip = USA_legislation_drafted_days_tt
 				has_country_flag = {
 					flag = USA_new_legislation_drafed_flag
-					days > 180
+					days > 120
 				}
 			}
 	}
@@ -2090,18 +2090,18 @@ mutually_exclusive = {
 
 		available = {
 
-			date > 1937.6.1
+			date > 1937.1.1
 			congress_medium_support_trigger = yes
 			has_government = democratic
 			has_country_flag = {
 				flag = USA_new_legislation_drafed_flag
-				days > 180
+				days > 120
 			}
 			custom_trigger_tooltip = {
 				tooltip = USA_legislation_drafted_days_tt
 				has_country_flag = {
 					flag = USA_new_legislation_drafed_flag
-					days > 180
+					days > 120
 				}
 			}
 		}
@@ -2654,7 +2654,7 @@ focus = {
 					has_war_support > 0.5
 					congress_high_support_trigger = yes 
 
-					date > 1938.6.1
+					date > 1938.1.1
 				}
 			}
 		}
@@ -3221,7 +3221,7 @@ focus = {
 				has_war_support > 0.4
 			}
 			democratic > 0.95
-			date > 1938.1.1
+			date > 1937.6.1
 		}
 		continue_if_invalid = yes
 		x = -1

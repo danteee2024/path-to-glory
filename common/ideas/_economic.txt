@@ -111,6 +111,13 @@ level = 5
 			cost = 100
 			removal_cost = -1
 
+			allowed = {
+				OR = {
+					NOT = { has_idea = undisturbed_isolation }
+					has_completed_focus = USA_the_giant_wakes
+				}
+			}
+
 			modifier = {
 				consumer_goods_expected_value = 0.35
 				production_speed_arms_factory_factor = -0.3
