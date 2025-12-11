@@ -2296,7 +2296,7 @@ focus_tree = {
 			modify_building_resources = {
         	   building = synthetic_refinery
         	   resource = rubber
-        	   amount = 1
+        	   amount = 2
         	}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -8735,7 +8735,7 @@ focus_tree = {
 		x = 7
 		y = 1
 		relative_position_id = GER_heed_von_neuraths_concerns
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -9619,7 +9619,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_anschluss
 
-		cost = 10
+		cost = 5
 
 		will_lead_to_war_with = CZE
 		will_lead_to_war_with = FRA
@@ -9913,7 +9913,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_first_vienna_award
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -17435,7 +17435,7 @@ focus_tree = {
 		x = -17
 		y = 8
 		relative_position_id = GER_remilitarize_the_rhineland
-		cost = 5
+		cost = 2
 		available = {
 			has_government = fascism
 		}

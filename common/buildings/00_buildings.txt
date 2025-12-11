@@ -32,7 +32,7 @@ buildings = {
 	#   repair_speed_factor = 0.5 # Optional. Factor for how fast the building is repaired (default = 1.0)
 
 	infrastructure = {
-		base_cost = 4000
+		base_cost = 3000
 		icon_frame = 3
 		infrastructure = yes
 		value = 1
@@ -150,8 +150,8 @@ buildings = {
 		show_on_map = 1
 		show_on_map_meshes = 3
 		always_shown = yes
-		base_cost = 5000
-		per_level_extra_cost = 1000
+		base_cost = 4000
+		per_level_extra_cost = 50
 		spawn_point = naval_base_spawn 
 		only_costal = yes
 		is_port = yes
@@ -354,7 +354,7 @@ buildings = {
 	
 	naval_supply_hub = {
 		show_on_map = 1
-		base_cost = 10000
+		base_cost = 6000
 		icon_frame = 28
 		disabled_in_dmz = yes
 		naval_supply_hub = yes
@@ -364,7 +364,7 @@ buildings = {
 		building_prerequisite = {
 			building_dependency = {
 				building = naval_base
-				level = 8
+				level = 6
 			}
 		}
 		level_cap = {
@@ -375,8 +375,8 @@ buildings = {
 	naval_headquarters = {
 		dlc_allowed = { has_dlc = "No Compromise, No Surrender" }
 		show_on_map = 1
-		base_cost = 10000
-		per_controlled_building_extra_cost = 5000
+		base_cost = 6000
+		per_controlled_building_extra_cost = 1000
 		icon_frame = 29
 		value = 1
 		naval_headquarter = yes
@@ -387,7 +387,7 @@ buildings = {
 		building_prerequisite = {
 			building_dependency = {
 				building = naval_base
-				level = 8
+				level = 6
 			}
 		}
 		level_cap = {

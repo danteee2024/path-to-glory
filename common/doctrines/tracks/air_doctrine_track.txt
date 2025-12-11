@@ -9,6 +9,7 @@ fighter_aircraft = {
         equipment = {
             fighter
             interceptor
+            heavy_fighter
         }
     }
 }
@@ -24,6 +25,7 @@ strike_aircraft = {
             cas
             naval_bomber
             suicide
+            tactical_bomber
         }
     }
 }
