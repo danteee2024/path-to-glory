@@ -10098,6 +10098,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		completion_reward = {
 			add_political_power = 50
 			add_stability = 0.1
+			add_popularity = { ideology = communism popularity = 0.1  }
 			custom_effect_tooltip = ENG_concessions_to_the_trade_unions_tt
 			custom_effect_tooltip = ENG_concessions_to_the_trade_unions_tt_3
 			custom_effect_tooltip = ENG_concessions_to_the_trade_unions_tt_2
@@ -10331,10 +10332,63 @@ custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = ENG_for_the_good_of_the_revolution_idea
 		}
 	}
+
+	focus = {
+		id =  ENG_British_Economy1
+		prerequisite = { focus = ENG_for_the_good_of_the_revolution }
+		available = {
+
+		}
+		icon = GFX_SOV_planned_economy_ccp_2d_sov_compatibility
+		x = 1
+		y = 1
+		relative_position_id = ENG_for_the_good_of_the_revolution
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			add_ideas = British_Economy
+		}
+	}
+
+	focus = {
+		id = ENG_Demand_Unification_the_Islands
+		prerequisite = { focus = ENG_for_the_good_of_the_revolution }	
+		available = {
+		}
+		bypass = {
+			owns_state = 113
+			owns_state = 134
+			owns_state = 135
+			owns_state = 119
+			owns_state = 122
+			owns_state = 133
+			owns_state = 121
+			owns_state = 136
+			owns_state = 120
+		}
+		will_lead_to_war_with = IRE
+		icon = GFX_goal_demand_sudetenland
+		x = -1
+		y = 1
+		relative_position_id = ENG_for_the_good_of_the_revolution
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+		
+			IRE = { country_event = britain.332 }
+		}
+	}
 	
 	focus = {
 		id = ENG_Bolshevism
-		prerequisite = { focus = ENG_for_the_good_of_the_revolution }
+		prerequisite = { focus =  ENG_British_Economy1 }
+		prerequisite = {
+			focus =  ENG_Demand_Unification_the_Islands
+		}
 		mutually_exclusive = { focus = ENG_Trade_Union_Leadership }
 	
 
@@ -10347,7 +10401,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		}
 		icon = GFX_focus_SOV_the_path_of_marxism_leninism
 		x = -2
-		y = 1
+		y = 2
 		relative_position_id = ENG_for_the_good_of_the_revolution
 		cost = 5
 		ai_will_do = {
@@ -10362,7 +10416,10 @@ custom_effect_tooltip = generic_skip_one_line_tt
 	
 	focus = {
 		id = ENG_Trade_Union_Leadership
-		prerequisite = { focus = ENG_for_the_good_of_the_revolution }
+		prerequisite = { focus =  ENG_British_Economy1 }
+		prerequisite = {
+			focus =  ENG_Demand_Unification_the_Islands
+		}
 		mutually_exclusive = { focus = ENG_Bolshevism }
 		
 		available = {
@@ -10373,7 +10430,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		}
 		icon = GFX_focus_CHL_union_of_hispanic_republics
 		x = 8
-		y = 1
+		y = 2
 		relative_position_id = ENG_for_the_good_of_the_revolution
 		cost = 5
 		ai_will_do = {

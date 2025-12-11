@@ -844,6 +844,40 @@ level = 1
 			cancel_if_invalid = no
 		}
 
+		British_Economy = {
+			picture = new_economic_policy
+             level = 1
+			allowed = {
+				tag = ENG
+			}
+
+			available = {
+				has_completed_focus = ENG_British_Economy
+				has_war_support > 0.5
+				has_government = communism
+
+			
+			}
+
+			visible = {
+				tag = ENG
+			}
+
+			cost = 300
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_expected_value = 0.15
+				production_speed_buildings_factor = 0.15
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
+				conversion_cost_civ_to_mil_factor= -0.1
+				conversion_cost_mil_to_civ_factor = -0.1
+				factory_energy_consumption = 0.3
+			}
+			cancel_if_invalid = no
+		}
+
 
 
 

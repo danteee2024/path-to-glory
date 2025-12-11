@@ -54,6 +54,12 @@
 
  ENG_Advanced_Production:0 "Advanced Production Techniques"
  ENG_Advanced_Production_desc:0 "To stay competitive in the modern era, Britain must embrace cutting-edge production methods. Automation, streamlined assembly processes, and advanced engineering will dramatically expand output and ensure our industries are prepared for any future challenge."
+ ENG_British_Economy1:0 "Reconstruct the People's Economy"
+ ENG_British_Economy1_desc:0 "The revolution demands an economy free from the exploitation and chaos of capitalism. By nationalising key industries, establishing centralised planning, and distributing resources according to collective need, we will lay the foundation for a truly socialist Britain—an economy that serves the workers, not the elite."
+ British_Economy:0 "British Economy"
+
+ ENG_Demand_Unification_the_Islands:0 "Demand Unification of the Islands"
+ ENG_Demand_Unification_the_Islands_desc:0 "A divided British Isles cannot stand against the forces of reaction. For the revolution to survive and flourish, Ireland must be united with the workers of Britain under a single socialist state. We will extend a demand for peaceful unification—should the bourgeois government in Dublin refuse, the workers’ struggle will continue by other means."
 
  britain.333.t:0 "Ireland Submits to British Rule"
  britain.333.d:0 "Ireland has accepted our ultimatum and agreed to reintegration into the United Kingdom. British forces have entered the island without resistance, and administrative control is being restored across the region. This peaceful annexation strengthens our strategic position and eliminates a potential threat within the British Isles."
