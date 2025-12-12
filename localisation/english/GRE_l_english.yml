@@ -22,6 +22,9 @@
 
  GRE_Project_Poseidon_idea:0 "Project Poseidon"
  Byzantinum_Economy1:0 "Byzantinum Economy"
+ GRE_homeplan:0 "Schachtplan"
+  GRE_Byzantine_Gold:0 "Byzantine Gold"
+ GRE_Byzantine_Gold_desc:0 "Reviving the ancient prestige of the Byzantine solidus, Greece will adopt a modernized gold standard to stabilize our currency, strengthen investor confidence, and assert our economic independence."
 
  GRE_economic_recovery_desc:0 "As a small nation, [GRE.GetNameDef] must prepare to weather any potential storm. Stabilizing our economy will do well to further this goal."
  GRE_industrial_effort:0 "Industrial Expansion"

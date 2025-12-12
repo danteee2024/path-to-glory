@@ -241,7 +241,10 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_GRE_DEBT_TO_IFC FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			remove_ideas = GRE_schachtplan
+			swap_ideas = {
+				remove_idea =  GRE_schachtplan
+				add_idea =  GRE_homeplan
+			}
 			if = { 
 				limit = { 
 					ENG = { 
@@ -582,7 +585,26 @@ focus = {
 
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
-			add_ideas =  Byzantinum_Economy 
+			add_ideas =  Byzantinum_Economy1 
+
+		}
+	}
+
+	focus = {
+		id = GRE_Byzantine_Gold
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		prerequisite = { focus = GRE_Byzantinum_Economy }
+		x = 0
+		y = 1
+		relative_position_id = GRE_Byzantinum_Economy
+		cost = 5
+		ai_will_do = { 
+			base = 1
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			add_ideas =  GRE_Byzantine_Gold
 
 		}
 	}
@@ -3578,6 +3600,12 @@ focus = {
 					amount = 10
 				}
 			}
+			732 = { 
+				add_resource = { 
+					type = coal
+					amount = 11
+				}
+			}
 			186 = { 
 				add_resource = { 
 					type = aluminium
@@ -5047,7 +5075,7 @@ focus = {
 	focus = {
 		id = GRE_open_up_the_country
 		icon = GFX_goal_generic_major_alliance
-		prerequisite = { focus = GRE_four_year_plan focus = GRE_extracting_more_from_our_soil }
+		prerequisite = { focus = GRE_four_year_plan }
 		x = 0
 		y = 1
 		relative_position_id = GRE_four_year_plan

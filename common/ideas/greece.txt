@@ -333,6 +333,52 @@ ideas = {
 			}
 		}
 
+		GRE_Byzantine_Gold = {
+				
+			allowed = {
+				original_tag = GRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = SPR_seize_the_gold_reserves
+				
+			removal_cost = -1
+				
+			modifier = {
+				consumer_goods_factor = -0.15	
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		GRE_homeplan = {
+				
+			allowed = {
+				original_tag = GRE
+				NOT = {
+					has_war_with = GER
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = gre_schachtplan
+				
+			removal_cost = -1
+				
+			modifier = {
+				min_export = -0.1
+				local_resources_factor = 0.1
+				consumer_goods_factor = -0.15
+				production_speed_industrial_complex_factor = 0.05		
+				production_speed_arms_factory_factor = 0.05		
+			}
+		}
+
 		GRE_schachtplan = {
 				
 			allowed = {
