@@ -878,6 +878,37 @@ level = 1
 			cancel_if_invalid = no
 		}
 
+		Byzantinum_Economy1 = {
+			picture = partial_economic_mobilisation
+             level = 1
+			allowed = {
+				tag = GRE
+			}
+
+			available = {
+				has_completed_focus = GRE_Byzantinum_Economy
+				has_war_support > 0.5
+
+			
+			}
+
+			visible = {
+				tag = GRE
+			}
+
+			cost = 300
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_expected_value = 0.2
+				production_speed_buildings_factor = 0.15
+				conversion_cost_civ_to_mil_factor= -0.1
+				conversion_cost_mil_to_civ_factor = -0.1
+				factory_energy_consumption = 0.1
+			}
+			cancel_if_invalid = no
+		}
+
 
 
 

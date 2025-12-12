@@ -4,6 +4,35 @@ ideas = {
 
 	country = { 
 
+	GRE_Project_Poseidon = {
+			
+			picture = generic_coastal_defense_ships
+
+			allowed = {
+				original_tag = GRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				
+			}
+
+			equipment_bonus = {
+				capital_ship = {
+					build_cost_ic = -0.3
+					armor_value = 0.2
+					naval_range = 0.2
+					reliability = 0.1
+					instant = yes
+			}
+		}
+	}
+
     GRE_Modern_Warfare = {
 			
 			picture = generic_infantry_equipment_manufacturer_2
@@ -30,6 +59,30 @@ ideas = {
 			}
 		}
 	}
+	 	GRE_Honor_the_Byzantinum = {
+			
+			picture = generic_infantry_equipment_manufacturer_2
+
+			allowed = {
+				original_tag = GRE
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+
+			}
+
+			
+		}
+	
 		GRE_agrarian_society = {
 				
 			allowed = {

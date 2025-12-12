@@ -2594,7 +2594,7 @@ country_event = {
 				}
 			}
 		}
-		hidden_effect = { ENG = { country_event = { id = SAU.334 } } }
+		hidden_effect = { ENG = { country_event = { id = britain.334 } } }
 	}
 }
 
