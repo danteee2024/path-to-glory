@@ -58,6 +58,7 @@
  ENG_British_Economy1_desc:0 "The revolution demands an economy free from the exploitation and chaos of capitalism. By nationalising key industries, establishing centralised planning, and distributing resources according to collective need, we will lay the foundation for a truly socialist Britain—an economy that serves the workers, not the elite."
  British_Economy:0 "British Economy"
 
+
  ENG_Demand_Unification_the_Islands:0 "Demand Unification of the Islands"
  ENG_Demand_Unification_the_Islands_desc:0 "A divided British Isles cannot stand against the forces of reaction. For the revolution to survive and flourish, Ireland must be united with the workers of Britain under a single socialist state. We will extend a demand for peaceful unification—should the bourgeois government in Dublin refuse, the workers’ struggle will continue by other means."
 
@@ -204,7 +205,11 @@
  ENG_Follow_Trotsky_desc:0 ""
  
  ENG_The_British_Red_Army:0 "The British Red Army"
- ENG_The_British_Red_Army_desc:0 ""
+ ENG_The_British_Red_Army_desc:0 "The revolution must be defended by the workers in arms. The old royal army, loyal to crown and class, will be transformed into a People's force guided by socialist principles, political education, and unwavering discipline. The British Red Army shall stand as the shield of the revolution, ready to crush reaction at home and abroad."
+
+ ENG_The_British_Red_Army_after_Trotzkys_Plan:0 "The British Red Army After Trotsky’s Plan"
+ ENG_The_British_Red_Army_after_Trotzkys_Plan_desc:0 "Following Trotsky’s revolutionary military doctrine, the British Red Army will be reshaped into a highly disciplined, politically conscious force capable of rapid manoeuvre and decisive action. Emphasising professionalism, revolutionary zeal, and internationalist purpose, this army will not merely defend the revolution—it will carry it forward beyond Britain’s shores."
+  ENG_The_British_Red_Army2:0 "The British Red Army"
  
  ENG_The_Permanent_Revolution:0 "The Permanent Revolution"
  ENG_The_Permanent_Revolution_desc:0 ""

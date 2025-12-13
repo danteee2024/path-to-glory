@@ -911,7 +911,6 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				production_factory_efficiency_gain_factor = -0.05
 				production_factory_max_efficiency_factor = 0.10
 				consumer_goods_factor = 0.05
 			}
@@ -930,7 +929,6 @@ ideas = {
 			modifier = {
 				political_power_factor = 0.1
 				research_speed_factor = 0.10
-				consumer_goods_factor = 0.05
 			}
 		}
 	
@@ -946,9 +944,9 @@ ideas = {
 			
 			modifier = {
 				production_speed_infrastructure_factor = 0.2 
+				production_speed_dockyard_factor = 0.2
 				production_speed_rail_way_factor = 0.2
 				local_resources_factor = 0.1
-				consumer_goods_factor = 0.05
 			}
 		}
 	
@@ -1015,8 +1013,26 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				conscription = 0.02
+			}
+		}
+
+		ENG_The_British_Red_Army2 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			picture = generic_communist_army
+			
+			removal_cost = -1
+			
+			modifier = {
 				army_attack_factor = 0.15
 				army_defence_factor = 0.15
+				conscription = 0.03
 			}
 		}
 	

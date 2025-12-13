@@ -10278,7 +10278,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		x = -1
 		y = 1
 		relative_position_id = ENG_concessions_to_the_trade_unions
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -10299,7 +10299,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		x = 1
 		y = 1
 		relative_position_id = ENG_concessions_to_the_trade_unions
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -10322,7 +10322,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 		x = 1
 		y = 1
 		relative_position_id = ENG_the_fate_of_the_royal_family
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}	
@@ -10330,6 +10330,31 @@ custom_effect_tooltip = generic_skip_one_line_tt
 			remove_ideas = ENG_the_war_to_end_all_wars
 custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = ENG_for_the_good_of_the_revolution_idea
+		}
+	}
+
+	
+	focus = {
+		id = ENG_The_British_Red_Army
+		prerequisite = { focus = ENG_for_the_good_of_the_revolution }
+		available = {
+
+		}
+		bypass = {
+
+		}
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		x = 3
+		y = 1
+		relative_position_id = ENG_for_the_good_of_the_revolution
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			# Army Buffs to Morale
+			
+			add_ideas = ENG_The_British_Red_Army
 		}
 	}
 
@@ -11255,31 +11280,6 @@ custom_effect_tooltip = generic_skip_one_line_tt
 	}
 	
 	focus = {
-		id = ENG_Bring_Ireland_Into_Union
-		prerequisite = { focus = ENG_follow_moscow }
-		available = {
-
-		}
-		bypass = {
-
-		}
-		icon = GFX_goal_generic_occupy_states_ongoing_war
-		x = 1
-		y = 1
-		relative_position_id = ENG_follow_moscow
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		search_filters = {FOCUS_FILTER_STABILITY}	
-		completion_reward = {
-			IRE = { country_event = { id = britain.51 hours = 6 } }
-			
-			IRE = { every_core_state = { add_core_of = ENG } }
-		}
-	}
-	
-	focus = {
 		id = ENG_Follow_Trotsky
 		prerequisite = { focus = ENG_Bolshevism }
 		mutually_exclusive = { focus = ENG_the_british_communist_alternative focus = ENG_follow_moscow }
@@ -11305,27 +11305,30 @@ custom_effect_tooltip = generic_skip_one_line_tt
 	}
 	
 	focus = {
-		id = ENG_The_British_Red_Army
+		id = ENG_The_British_Red_Army_after_Trotzkys_Plan
 		prerequisite = { focus = ENG_Follow_Trotsky }
 		available = {
+			has_idea = ENG_The_British_Red_Army
 
 		}
 		bypass = {
 
 		}
-		icon = GFX_focus_SOV_builder_of_the_red_army
+		icon = GFX_focus_NOR_a_new_norway_Trotsky_communism
 		x = -1
 		y = 1
 		relative_position_id = ENG_Follow_Trotsky
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
 		search_filters = {FOCUS_FILTER_STABILITY}	
 		completion_reward = {
 			# Army Buffs to Morale
-			
-			add_ideas = ENG_The_British_Red_Army
+			swap_ideas = {
+				remove_idea = ENG_The_British_Red_Army
+			add_idea = ENG_The_British_Red_Army2
+			}
 		}
 	}
 	
