@@ -25,6 +25,20 @@
  GRE_homeplan:0 "Schachtplan"
   GRE_Byzantine_Gold:0 "Byzantine Gold"
  GRE_Byzantine_Gold_desc:0 "Reviving the ancient prestige of the Byzantine solidus, Greece will adopt a modernized gold standard to stabilize our currency, strengthen investor confidence, and assert our economic independence."
+ # =========================
+ greece.332.t:0 "The Question of Turkey"
+ greece.332.d:0 "With tensions rising in the Eastern Mediterranean, voices within our government argue that the time has come to press our claims against Turkey. Some believe diplomatic pressure will suffice, while others insist that only force can secure our national ambitions."
+
+ greece.332.a:0 "Present our demands diplomatically"
+ greece.332.b:0 "Prepare for war against Turkey"
+
+ # =========================
+ # Turkey Accepts
+ # =========================
+ greece.333.t:0 "Turkey Submits"
+ greece.333.d:0 "Faced with overwhelming pressure and the threat of conflict, the Turkish government has capitulated. Their state apparatus has collapsed, and our forces move in to secure full control of the country."
+
+ greece.346.a:0 "Turkey is ours"
 
  GRE_economic_recovery_desc:0 "As a small nation, [GRE.GetNameDef] must prepare to weather any potential storm. Stabilizing our economy will do well to further this goal."
  GRE_industrial_effort:0 "Industrial Expansion"

@@ -213,7 +213,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = GRE_remembering_the_anatolian_catastrophe
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 0
 			modifier = {
@@ -677,7 +677,7 @@ focus = {
 		id = GRE_reviving_the_double_headed_eagle
 		icon = GFX_focus_GRE_reviving_the_double_headed_eagle
 		available = {
-			has_government = fascism
+			
 		}
 		prerequisite = { focus = GRE_byzantine_themata }
 		x = -2
@@ -3569,9 +3569,14 @@ focus = {
 						}
 						is_fully_controlled_by = ROOT
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = dockyard
 						level = 2
 						instant_build = yes
 					}
@@ -3712,14 +3717,6 @@ focus = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
 		completion_reward = {
-			add_political_power = -120
-			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_timed_idea = {
-				idea = JAP_investment
-				days = 180
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			186 = {
 				if = { 
@@ -3908,7 +3905,7 @@ focus = {
 		x = 0
 		y = 1
 		relative_position_id = GRE_utilize_our_strengths
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 1
 		}
@@ -4229,7 +4226,7 @@ focus = {
 		x = 0
 		y = 1
 		relative_position_id = GRE_paying_back_our_debts_in_bulk
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 1
 		}
@@ -4285,7 +4282,7 @@ focus = {
 		x = 0
 		y = 1
 		relative_position_id = GRE_connecting_our_prefectures
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 1
 		}
@@ -4303,7 +4300,7 @@ focus = {
 		x = 0
 		y = 1
 		relative_position_id = GRE_fiscal_responsibility
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 1
 		}
@@ -4429,7 +4426,7 @@ focus = {
 		x = 0
 		y = 1
 		relative_position_id = GRE_exporting_more_luxury_commodoties
-		cost = 7.5
+		cost = 5
 		ai_will_do = {
 			base = 1
 		}
@@ -4449,10 +4446,10 @@ focus = {
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = industrial_complex
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -4622,7 +4619,7 @@ focus = {
 		x = 0
 		y = 1
 		relative_position_id = GRE_increase_our_mining_operations
-		cost = 7.5
+		cost = 5
 		ai_will_do = {
 			base = 1
 		}
@@ -5014,7 +5011,7 @@ focus = {
 		x = 4
 		y = 1
 		relative_position_id = GRE_cooperate_with_foreign_monopolies
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 1
 		}

@@ -57,6 +57,14 @@ ideas = {
 					build_cost_ic = -0.15
 					instant = yes
 			}
+			support_equipment = {
+					build_cost_ic = -0.15
+					instant = yes
+			}
+			trucks = {
+					build_cost_ic = -0.10
+					instant = yes
+			}
 		}
 	}
 	 	GRE_Honor_the_Byzantinum = {
@@ -1147,7 +1155,7 @@ ideas = {
 			removal_cost = -1
 				
 			modifier = {
-				conscription = 0.005
+				conscription = 0.01
 			}
 		}
 
@@ -1167,7 +1175,7 @@ ideas = {
 				
 			modifier = {
 				army_morale_factor = 0.10
-				army_org_factor = 0.03
+				army_org_factor = 0.05
 			}
 		}
 
@@ -1186,9 +1194,9 @@ ideas = {
 			removal_cost = -1
 				
 			modifier = {
-				conscription = 0.01
+				conscription = 0.02
 				army_morale_factor = 0.10
-				army_org_factor = 0.04
+				army_org_factor = 0.05
 			}
 		}		
 		GRE_hellenic_army_4 = { 
@@ -1206,7 +1214,7 @@ ideas = {
 			removal_cost = -1
 				
 			modifier = {
-				conscription = 0.01
+				conscription = 0.02
 				army_morale_factor = 0.10
 				army_org_factor = 0.10
 			}
@@ -1227,10 +1235,10 @@ ideas = {
 			removal_cost = -1
 				
 			modifier = {
-				conscription = 0.01
+				conscription = 0.02
 				army_morale_factor = 0.10 
 				land_reinforce_rate = 0.05
-				army_org_factor = 0.05
+				army_org_factor = 0.10
 			}
 		}
 
