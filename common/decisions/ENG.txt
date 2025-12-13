@@ -4258,7 +4258,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 100
+		cost = 50
 
 		fire_only_once = yes
 
@@ -4358,7 +4358,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 100
+		cost = 50
 
 		fire_only_once = yes
 
@@ -4458,7 +4458,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 100
+		cost = 50
 
 		fire_only_once = yes
 
@@ -4558,7 +4558,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 100
+		cost = 50
 
 		fire_only_once = yes
 
@@ -4659,7 +4659,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 100
+		cost = 50
 
 		fire_only_once = yes
 
@@ -4760,7 +4760,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 100
+		cost = 50
 
 		fire_only_once = yes
 
@@ -4861,7 +4861,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 100
+		cost = 50
 
 		fire_only_once = yes
 
@@ -4962,7 +4962,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 100
+		cost = 50
 
 		fire_only_once = yes
 
@@ -5063,7 +5063,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 100
+		cost = 50
 
 		fire_only_once = yes
 
@@ -5164,7 +5164,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 100
+		cost = 50
 
 		fire_only_once = yes
 
@@ -5265,7 +5265,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 100
+		cost = 50
 
 		fire_only_once = yes
 
@@ -5366,7 +5366,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 100
+		cost = 50
 
 		fire_only_once = yes
 
@@ -5467,7 +5467,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 100
+		cost = 50
 
 		fire_only_once = yes
 
@@ -5568,7 +5568,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 100
+		cost = 50
 
 		fire_only_once = yes
 
@@ -5669,7 +5669,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 100
+		cost = 50
 
 		fire_only_once = yes
 
@@ -5848,7 +5848,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 150
+		cost = 50
 
 		fire_only_once = yes
 
@@ -5999,7 +5999,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 75
+		cost = 35
 
 		fire_only_once = yes
 
@@ -6179,7 +6179,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 75
+		cost = 35
 
 		fire_only_once = yes
 
@@ -6351,7 +6351,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 75
+		cost = 35
 
 		fire_only_once = yes
 
@@ -6523,7 +6523,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 75
+		cost = 35
 
 		fire_only_once = yes
 
@@ -6695,7 +6695,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 75
+		cost = 35
 
 		fire_only_once = yes
 
@@ -6847,7 +6847,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 100
+		cost = 50
 
 		fire_only_once = yes
 
