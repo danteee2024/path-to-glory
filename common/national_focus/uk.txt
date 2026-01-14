@@ -10344,7 +10344,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 
 		}
 		icon = GFX_focus_SOV_builder_of_the_red_army
-		x = 3
+		x = 1
 		y = 1
 		relative_position_id = ENG_for_the_good_of_the_revolution
 		cost = 10
@@ -10360,20 +10360,28 @@ custom_effect_tooltip = generic_skip_one_line_tt
 
 	focus = {
 		id =  ENG_British_Economy1
-		prerequisite = { focus = ENG_for_the_good_of_the_revolution }
+		prerequisite = { focus = ENG_concessions_to_the_trade_unions }
 		available = {
 
 		}
 		icon = GFX_SOV_planned_economy_ccp_2d_sov_compatibility
-		x = 1
+		x = 3
 		y = 1
-		relative_position_id = ENG_for_the_good_of_the_revolution
+		relative_position_id = ENG_concessions_to_the_trade_unions
 		cost = 10
 		ai_will_do = {
 			factor = 1
 		}	
+		available = {
+			has_completed_focus = ENG_revisit_colonial_policy
+		}
 		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
 			add_ideas = British_Economy
+			
 		}
 	}
 
@@ -10410,7 +10418,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 	
 	focus = {
 		id = ENG_Bolshevism
-		prerequisite = { focus =  ENG_British_Economy1 }
+		prerequisite = { focus =  ENG_The_British_Red_Army }
 		prerequisite = {
 			focus =  ENG_Demand_Unification_the_Islands
 		}
@@ -10441,7 +10449,7 @@ custom_effect_tooltip = generic_skip_one_line_tt
 	
 	focus = {
 		id = ENG_Trade_Union_Leadership
-		prerequisite = { focus =  ENG_British_Economy1 }
+		prerequisite = { focus =  ENG_The_British_Red_Army }
 		prerequisite = {
 			focus =  ENG_Demand_Unification_the_Islands
 		}
