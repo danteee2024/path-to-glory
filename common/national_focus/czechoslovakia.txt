@@ -996,10 +996,10 @@
 				}
 			}
 		75 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1047,10 +1047,10 @@
 
 		completion_reward = {
 		 70 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1249,26 +1249,26 @@ focus = {
 
 		completion_reward = {
 			664 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
 			75 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
 			71 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1727,7 +1727,7 @@ focus = {
 			add_war_support = 0.1
 			add_popularity = {
 				ideology = neutrality
-				popularity = 0.1
+				popularity = 0.15
 			}	
 		}
 		}
@@ -1900,7 +1900,7 @@ focus = {
 		y = 1
 		relative_position_id = CZE_Prepare_for_War
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 80
@@ -1922,10 +1922,10 @@ focus = {
 
 		completion_reward = {
 	 create_wargoal = {
-					type = puppet_wargoal_focus
-					target = AUS
-					expire = 0
-				}
+				type = annex_everything
+				target = AUS
+				expire = 0
+			}
 			}
 		}
 		focus = {
@@ -1973,14 +1973,14 @@ focus = {
 			}
 		}
 	}	
-	focus = {
-		id = CZE_The_Great_Kingdom
-		icon = GFX_focus_BEL_king_of_the_belgians 
-		prerequisite = { focus = CZE_Expansion_is_Needed }
-		prerequisite = { focus = CZE_Demand_Austria }
+
+		focus = {
+		id = CZE_Invest_into_Austria
+		icon = GFX_focus_generic_mining_industry 
+		prerequisite = { focus =  CZE_Demand_Austria }
 		x = 1
 		y = 1
-		relative_position_id = CZE_Demand_Austria
+		relative_position_id =  CZE_Demand_Austria
 
 		cost = 10
 
@@ -1998,57 +1998,6 @@ focus = {
 			CZE = { controls_state = 153 }
 			CZE = { controls_state = 848 }
 			CZE = { controls_state = 152 }
-			CZE = { controls_state = 155 }
-			CZE = { controls_state = 974 }
-			CZE = { controls_state = 973 }
-			CZE = { controls_state = 43 }
-			CZE = { controls_state = 154 }
-		}
-
-		bypass = {
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-
-		completion_reward = {
-			every_state = {
-				limit = { is_core_of = HUN }
-				add_core_of = ROOT
-			}
-			every_state = {
-				limit = { is_core_of = AUS }
-				add_core_of = ROOT
-			}
-		
-			}
-		}
-
-		focus = {
-		id = CZE_Invest_into_Austria
-		icon = GFX_focus_generic_mining_industry 
-		prerequisite = { focus = CZE_The_Great_Kingdom }
-		mutually_exclusive = {
-		 focus = CZE_Invest_into_Hungary
-		}
-		x = -1
-		y = 1
-		relative_position_id = CZE_The_Great_Kingdom
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 80
-			modifier = {
-				factor = 0.1
-			}
-		}
-
-		available = {
-			CZE = { controls_state = 4 }
-			CZE = { controls_state = 976 }
 		}
 
 		bypass = {
@@ -2061,6 +2010,10 @@ focus = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
+			every_state = {
+				limit = { is_core_of = AUS }
+				add_core_of = ROOT
+			}
 		    4 = { 
 				add_resource = { 
 					type = Oil
@@ -2076,10 +2029,10 @@ focus = {
 			
 			}
 			4 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -2088,12 +2041,10 @@ focus = {
 	focus = {
 		id = CZE_Invest_into_Hungary
 		icon = GFX_focus_generic_aluminum 
-		prerequisite = { focus = CZE_The_Great_Kingdom }
-		mutually_exclusive = { focus = CZE_Invest_into_Austria }
-		x = 1
+		prerequisite = { focus = CZE_Expansion_is_Needed }
+		x = -1
 		y = 1
-		relative_position_id =  CZE_The_Great_Kingdom
-
+		relative_position_id =  CZE_Expansion_is_Needed
 		cost = 10
 
 		ai_will_do = {
@@ -2119,6 +2070,10 @@ focus = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
+			every_state = {
+				limit = { is_core_of = HUN }
+				add_core_of = ROOT
+			}
 		    974 = { 
 				add_resource = { 
 					type = Oil
@@ -2141,10 +2096,10 @@ focus = {
 			
 			}
 			43 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -2154,7 +2109,7 @@ focus = {
 		id = CZE_University_of_Bohemia
 		icon = GFX_focus_NORDIC_dem_capstone_research
 		prerequisite = { focus = CZE_Demand_Austria focus = CZE_Expansion_is_Needed }
-		x = -1
+		x = 1
 		y = 1
 		relative_position_id = CZE_Expansion_is_Needed
 
