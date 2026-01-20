@@ -3,7 +3,7 @@ state={
 	name="STATE_10"
 	manpower = 3089000
 
-	state_category = large_city
+	state_category = metropolis
 
 	history={
 		owner = POL
@@ -19,6 +19,9 @@ state={
 			industrial_complex = 2
 			anti_air_building = 2
 			air_base = 5
+			3544 = {
+                land_facility = 1 
+            }
 		}
 		add_core_of = POL
 	}
@@ -26,6 +29,7 @@ state={
 	resources = {
 		coal = 7
 		steel = 10
+		tungsten = 5
 	}
 	provinces={
 		402 467 524 3482 3544 6511 9400 11492 12562 

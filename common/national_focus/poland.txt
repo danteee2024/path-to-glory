@@ -1415,17 +1415,17 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH } 
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = POL_army_modernisation
-				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
-			}
 			add_tech_bonus = {
 				name = POL_army_modernisation
 				bonus = 1.0
 				uses = 1
 				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = POL_army_modernisation
+				bonus = 1.0
+				uses = 1
+				category = armor
 			}
 		}
 	}
