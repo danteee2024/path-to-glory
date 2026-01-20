@@ -20994,7 +20994,7 @@ focus_tree = {
 		completion_reward = {
 			add_timed_idea = {
 				idea = GER_recover_from_the_civil_war_ns
-				days = 365
+				days = 730
 			}
 		}
 	}
@@ -26837,6 +26837,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = GER_Prussia_Air
+			add_ideas = GER_Prussia_Air2
 		}
 	}
 
@@ -27678,14 +27679,34 @@ focus_tree = {
 	}
 
 		focus = {
-		id = GER_Military_Construction_2
-		icon = GFX_focus_generic_military_industry
-		mutually_exclusive = { focus = GER_Military_Construction_3 }
+		id = GER_Demand_Swiss_Anschluss
+		icon = GFX_focus_attack_switzerland
 		prerequisite = { focus = GER_Demand_Austria } 
 		prerequisite = { focus = GER_Bohemias }
 
-		x = -2
+		x = -1
 		y = 1
+		relative_position_id = GER_Demand_Austria
+		cost = 5
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			SWI = { country_event = germany.245 }
+	}
+}
+
+
+		focus = {
+		id = GER_Military_Construction_2
+		icon = GFX_focus_generic_military_industry
+		mutually_exclusive = { focus = GER_Military_Construction_3 }
+		prerequisite = { focus = GER_Demand_Swiss_Anschluss } 
+
+		x = -2
+		y = 2
 		relative_position_id = GER_Demand_Austria
 		cost = 10
 		available = {
@@ -27704,12 +27725,11 @@ focus_tree = {
 		id = GER_Military_Construction_3
 		icon = GFX_goal_generic_construct_naval_dockyard
 		mutually_exclusive = { focus = GER_Military_Construction_2 }
-		prerequisite = { focus = GER_Demand_Austria } 
-		prerequisite = { focus = GER_Bohemias }
+		prerequisite = { focus = GER_Demand_Swiss_Anschluss } 
 
 
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = GER_Demand_Austria
 		cost = 10
 		available = {

@@ -214,6 +214,105 @@ country_event = {
 		}
 	}
 }
+
+# Demand Swiss Anschluss
+country_event = {
+	id = germany.245
+	title = germany.245.t
+	desc = germany.245.d	
+	picture = GFX_report_event_generic_rally
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.245.a
+		ai_chance = {
+			base = 60
+		}
+		
+		GER = {
+			country_event = { id = germany.246 }
+		}
+	}
+	
+	option = {
+		name = germany.245.b
+		ai_chance = {
+			base = 40
+			modifier = {
+				is_subject_of = FROM
+				factor = 0
+			}
+			modifier = {
+				original_tag = CZE
+				factor = 0
+			}			
+		}
+		
+		effect_tooltip = {
+			GER = {
+				create_wargoal = {
+					type = annex_everything
+					target = SWI
+				}
+			}
+		}
+		hidden_effect = { GER = { country_event = { id = germany.247 } } }
+	}
+}
+
+
+
+# Swiss accepts
+country_event = {
+	id = germany.246
+	title = germany.246.t
+	desc = germany.246.d
+	picture = GFX_report_event_german_troops
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.246.a
+				annex_country = {
+					target = SWI
+					transfer_troops = yes
+				}
+				every_state = {
+					limit = {
+						is_core_of = SWI
+					}
+					add_core_of = GER
+				}
+	
+
+		 
+	}
+}
+
+#SWiss refuses
+country_event = {
+	id = germany.247
+	title = germany.247.t
+	desc = germany.247.d
+	picture = GFX_report_event_soldiers_marching
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.247.a
+		create_wargoal = {
+			type = annex_everything
+			target = FROM
+		}
+		every_state = {
+					limit = {
+						is_core_of = SWI
+					}
+					add_core_of = GER
+				}
+	}
+}
 	
 # Demand France Territory
 country_event = {

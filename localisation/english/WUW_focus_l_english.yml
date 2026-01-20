@@ -3040,6 +3040,24 @@ BEL_corruption_ns_fake_tt: "Daily Political Power Gain: §R-0.25%§! \nStability
 
 
  ### GERMAN FOCUS TREE ###
+ GER_Demand_Swiss_Anschluss:0 "Demand Swiss Anschluss"
+ GER_Demand_Swiss_Anschluss_desc:0 "With Austria and Bohemia secured, the question of Switzerland can no longer be ignored. Large parts of the Swiss population share our language and culture, and the Alps themselves are of great strategic importance. By pressing our claim, we may yet bring Switzerland into the Reich—peacefully if possible, by force if necessary."
+ GER_Prussia_Air2:0 "Prussian Fighter Production"
+ ### Demand Swiss Anschluss ###
+ germany.245.t:0 "The Swiss Question"
+ germany.245.d:0 "With our recent successes and the growing sense of German unity, voices within the Reich now call for the inclusion of Switzerland into Greater Germany. Many argue that the German-speaking Swiss are part of our natural nation, while others warn that forcing the issue could destabilize the region and provoke international backlash."
+ germany.245.a:0 "Send an ultimatum to Switzerland"
+ germany.245.b:0 "Prepare for war if they refuse"
+
+ ### Swiss Accepts ###
+ germany.246.t:0 "Switzerland Accepts the Anschluss"
+ germany.246.d:0 "Facing overwhelming pressure and diplomatic isolation, the Swiss government has agreed to our demands. German troops march in unopposed as Switzerland is peacefully integrated into the Reich."
+ germany.246.a:0 "One people, one Reich!"
+
+ ### Swiss Refuses ###
+ germany.247.t:0 "Switzerland Rejects Our Demands"
+ germany.247.d:0 "The Swiss government has defiantly rejected our ultimatum, declaring that their neutrality and independence are non-negotiable. Their refusal leaves us with only one path forward."
+ germany.247.a:0 "Then we shall take Switzerland by force"
  FOCUS_ICON_SET_HISTORICAL_KEY_FOCUS: "Historical Key Focus"
 
  GER_prioritize_economic_growth: "Prioritize Economic Growth"
