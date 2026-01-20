@@ -1434,9 +1434,9 @@ focus_tree = {
 		id = POL_modernising_the_cavalry
 		icon = GFX_goal_generic_cavalry
 		prerequisite = { focus = POL_army_modernisation }
-		mutually_exclusive = { focus = POL_attract_foreign_motors }
+
 		
-		x = -3
+		x = -1
 		y = 1
 		relative_position_id = POL_army_modernisation
 		cost = 10
@@ -1457,40 +1457,13 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = POL_attract_foreign_motors
-		icon = GFX_goal_generic_cavalry
-		prerequisite = { focus = POL_army_modernisation }
-		mutually_exclusive = { focus = POL_modernising_the_cavalry }
-		
-		x = -1
-		y = 1
-		relative_position_id = POL_army_modernisation
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			add_tech_bonus = {
-				name = POL_attract_foreign_motors
-				bonus = 1.0
-				uses = 1
-				category = motorized_equipment
-			}
-			unlock_decision_category_tooltip = POL_invite_foreign_motor_decisions
-		}
-	}
 
 	focus = {
 		id = POL_study_foreign_tanks
 		icon = GFX_goal_generic_production
-		prerequisite = { focus = POL_modernising_the_cavalry focus = POL_attract_foreign_motors }
+		prerequisite = { focus = POL_modernising_the_cavalry }
 		
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = POL_modernising_the_cavalry
 		cost = 10
@@ -1610,14 +1583,41 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POL_adaptive_designs
-		icon = GFX_goal_generic_production2
-		prerequisite = { focus = POL_attract_foreign_motors }
+		id = POL_The_New_Polish_Cavalry
+		icon = GFX_focus_generic_tank_production
+		prerequisite = { focus = POL_modernising_the_cavalry }
 		prerequisite = { focus = POL_anti_tank_guns }
 		
-		x = 1
+		x = 2
 		y = 1
-		relative_position_id = POL_attract_foreign_motors
+		relative_position_id = POL_modernising_the_cavalry
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			 add_ideas = POL_The_New_Polish_Cavalry
+			}
+		}
+	focus = {
+		id = POL_The_new_winged_hussars 
+		icon = GFX_focus_HABSBURG_the_modern_hussar
+		prerequisite = { focus = POL_The_New_Polish_Cavalry }
+		prerequisite = {
+			focus = POL_study_foreign_tanks
+		}
+		
+		x = 2
+		y = 2
+		relative_position_id = POL_modernising_the_cavalry
 		cost = 10
 
 		ai_will_do = {
@@ -1625,82 +1625,16 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_flag = invited_motor_co
-			IF = {
-				limit = { NOT = { has_dlc = "Arms Against Tyranny" } }
-				OR = {
-					has_idea = POL_vauxhall
-					has_idea = POL_ford
-					has_idea = POL_somua
-				}
-			}
+			
 		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			IF = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				IF = { 
-					limit = { has_country_flag = POL_somua_motors }
-					mio:FRA_somua_organization = {
-						add_mio_funds = 500
-						add_mio_funds_gain_factor = 0.1
-					}
-
-				}
-				IF = { 
-					limit = { has_country_flag = POL_vauxhall_motors }
-					mio:ENG_vauxhall_organization = {
-						add_mio_funds = 500
-						add_mio_funds_gain_factor = 0.1
-					}
-				}
-				IF = { 
-					limit = { has_country_flag = POL_ford_motors }
-					mio:USA_ford_motor_company_organization = {
-						add_mio_funds = 500
-						add_mio_funds_gain_factor = 0.1
-					}
-				}
+			 add_ideas = POL_The_new_winged_hussars 
 			}
-			ELSE = {
-
-				if = {
-					limit = {
-						has_idea = POL_vauxhall
-					}
-					swap_ideas = {
-						remove_idea = POL_vauxhall
-						add_idea = POL_vauxhall_free
-					}
-				}
-				else_if = {
-					limit = {
-						has_idea = POL_somua
-					}
-					swap_ideas = {
-						remove_idea = POL_somua
-						add_idea = POL_somua_free
-					}
-				}
-				else_if = {
-					limit = {
-						has_idea = POL_ford
-					}
-					swap_ideas = {
-						remove_idea = POL_ford
-						add_idea = POL_ford_free
-					}
-				}
-				else = {
-					custom_effect_tooltip = POL_motors_become_free_tt
-				}
-			}
-		}
-	}
+		}	
+	
 
 
 	############################
@@ -10898,7 +10832,7 @@ focus_tree = {
 
 		x = 0
 		y = 2
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2.5
@@ -11081,9 +11015,8 @@ focus_tree = {
 		prerequisite = { focus = POL_merge_internal_governments focus = POL_claim_livonia }
 		relative_position_id = POL_merge_internal_governments
 
-		mutually_exclusive = { focus = POL_royal_dictatorship }
 
-		x = 1
+		x = 2
 		y = 1
 		cost = 10
 		
@@ -11166,7 +11099,7 @@ focus_tree = {
 		prerequisite = { focus = POL_pro_allied_government }
 		relative_position_id = POL_pro_allied_government
 
-		x = 0
+		x = 1
 		y = 1
 		cost = 10
 
@@ -11226,11 +11159,10 @@ focus_tree = {
 		prerequisite = { focus = POL_merge_internal_governments }
 		relative_position_id = POL_merge_internal_governments
 
-		x = -1
+		x = 0
 		y = 1
-		cost = 10
+		cost = 5
 
-		mutually_exclusive = { focus = POL_pro_allied_government }
 
 		ai_will_do = {
 			factor = 2.5
@@ -11248,14 +11180,75 @@ focus_tree = {
 	}
 
 	focus = {
+		id = POL_Oil_Investment
+		icon = GFX_SOV_oil_production_ccp_2d_sov_compatibility
+			prerequisite = { focus = POL_royal_dictatorship }
+		relative_position_id = POL_royal_dictatorship
+
+		x = -1
+		y = 1
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		available = {
+			controls_state = 46
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			46 = {
+				add_resource = {
+					type = oil
+					amount = 12
+				}
+			add_building_construction = {
+				type = fuel_silo
+				level = 3
+			}
+		}
+		add_ideas = POL_Oil_Investment
+		}
+	}
+
+	focus = {
+		id = POL_Reformed_Army
+		icon = GFX_goal_generic_army_doctrines
+			prerequisite = { focus = POL_royal_dictatorship }
+		relative_position_id = POL_Oil_Investment
+
+		x = 2
+		y = 0
+		cost = 10
+
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+		add_ideas = POL_Reformed_Army
+		}
+	}
+
+	focus = {
 		id = POL_demand_slovakia
 		icon = GFX_goal_generic_territory_or_war
 		prerequisite = { focus = POL_royal_dictatorship }
 		relative_position_id = POL_royal_dictatorship
 
 		x = 0
-		y = 1
-		cost = 10
+		y = 2
+		cost = 5
 
 		ai_will_do = {
 			factor = 2.5
@@ -11263,7 +11256,6 @@ focus_tree = {
 		
 		available = {
 			is_puppet = no
-			has_army_manpower = { size > 499999 }	
 			OR = {
 				AND = {
 					SLO = {
@@ -11358,7 +11350,7 @@ focus_tree = {
 
 		x = 0
 		y = 1
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2.5
@@ -11367,7 +11359,7 @@ focus_tree = {
 		available = {
 			is_puppet = no
 			has_government = neutrality
-			has_army_manpower = { size > 749999 }	
+			has_army_manpower = { size > 700000 }	
 			OR = {
 				HUN = {
 					exists = yes
@@ -11382,6 +11374,9 @@ focus_tree = {
 				}
 			}
 		}
+		bypass = {
+			HUN = { is_puppet_of = POL }	
+		}
 
 		available_if_capitulated = yes
 
@@ -11395,7 +11390,7 @@ focus_tree = {
 				custom_effect_tooltip = POL_restore_poland_hungary_tt
 				every_state = {
 					limit = {
-						is_core_of = TRA
+						is_core_of = HUN
 						NOT = { is_core_of = YUG }
 					}
 					add_claim_by = POL
@@ -11417,6 +11412,49 @@ focus_tree = {
 			}
 		}
 	}
+
+	focus = {
+		id = POL_Unification_of_the_Kingdoms
+		icon = GFX_focus_ETH_the-italo_ethiopian_empire
+		prerequisite = { focus = POL_restore_poland_hungary }
+		relative_position_id = POL_restore_poland_hungary
+
+		x = 0
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available = {
+			HUN = { is_puppet_of = POL }	
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			set_cosmetic_tag = FORM_POH
+			annex_country = {
+				target = HUN
+				transfer_troops = yes
+			}
+				every_state = {
+					limit = {
+						is_core_of = HUN
+					}
+					add_core_of = POL
+				}
+				every_state = {
+					limit = {
+						is_core_of = SLO	
+					}
+					add_core_of = POL
+				}
+			}
+		}
+	
 
 	focus = {
 		id = POL_seek_an_alliance_with_kaiser
