@@ -26060,7 +26060,7 @@ focus_tree = {
 		completion_reward = {
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_consumer_goods_factor = -0.1
+				GER_industrial_consumer_goods_factor = -0.15
 				tooltip = consumer_goods_factor_tt
 			}
 			
@@ -26815,7 +26815,7 @@ focus_tree = {
 		completion_reward = {
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_consumer_goods_factor = -0.15
+				GER_industrial_consumer_goods_factor = -0.2
 				tooltip = consumer_goods_factor_tt
 			}
 		}
@@ -26887,7 +26887,7 @@ focus_tree = {
 		relative_position_id = GER_Empire_Industry
 		cost = 5
 		available = {
-		NOT = { num_of_controlled_factories < 130 }
+		NOT = { num_of_controlled_factories < 120 }
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -26895,6 +26895,25 @@ focus_tree = {
 		completion_reward = {
 			swap_ideas = { remove_idea = GER_Empire_Industry
 		add_idea = GER_Empire_War_Industry }
+		}
+	}
+
+	focus = {
+		id = GER_Empire_Army_Reform
+		icon = GFX_focus_generic_army_doctrines_2
+		prerequisite = { focus = GER_Empire_War_Industry }
+		prerequisite = { focus = GER_Empire_Tank }
+		x = 1
+		y = 1
+		relative_position_id = GER_Empire_War_Industry
+		cost = 5
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = GER_Empire_Army_Reform
 		}
 	}
 

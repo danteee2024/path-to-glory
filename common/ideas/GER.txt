@@ -159,8 +159,8 @@ ideas = {
 				production_speed_arms_factory_factor = 0.2
 				production_speed_dockyard_factor = 0.2
 				production_speed_industrial_complex_factor = -0.2
-				industrial_capacity_dockyard = 0.1
-				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.15
+				industrial_capacity_factory = 0.15
 			}
 		}
 
@@ -179,7 +179,7 @@ ideas = {
 
 			modifier = {
 				production_speed_buildings_factor = 0.1
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.1
 			}
 		}
 
@@ -197,8 +197,8 @@ ideas = {
 			picture = ARG_war_division
 
 			modifier = {
-				army_attack_against_major_factor = 0.05
-				army_defence_against_major_factor = 0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
 			}
 		}
 
@@ -238,7 +238,7 @@ ideas = {
 				production_speed_arms_factory_factor = 0.4
 				production_speed_dockyard_factor = 0.1
 				production_speed_industrial_complex_factor = -0.3
-				industrial_capacity_factory = 0.2
+				industrial_capacity_factory = 0.25
 				industrial_capacity_dockyard = 0.1
 			}
 		}
@@ -259,8 +259,29 @@ ideas = {
 				production_speed_arms_factory_factor = 0.1
 				production_speed_dockyard_factor = 0.4
 				production_speed_industrial_complex_factor = -0.2
-				industrial_capacity_dockyard = 0.2
+				industrial_capacity_dockyard = 0.25
 				industrial_capacity_factory = 0.1
+			}
+		}
+
+		GER_Empire_Army_Reform  = {
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+			}
+
+			removal_cost = -1
+
+			picture = chi_army_corruption3
+
+			modifier = {
+				land_reinforce_rate = 0.05
+				org_loss_when_moving = -0.05
+				planning_speed = 0.05
+				army_morale_factor = 0.05
+				recruitable_population_factor = 0.1
 			}
 		}
 
@@ -397,6 +418,7 @@ ideas = {
 				org_loss_when_moving = -0.1
 				mobilization_speed = 0.05
 				max_dig_in_factor = 0.1
+				army_org_factor = 0.05
 					}
 		}
 
@@ -436,6 +458,7 @@ ideas = {
 				army_speed_factor = 0.1
 				org_loss_when_moving = -0.1
 				army_defence_factor = 0.1
+				army_org_factor = 0.05
 				conscription = 0.015
 			}
 		}
@@ -475,7 +498,7 @@ ideas = {
 			
 			modifier = {
 			production_speed_industrial_complex_factor = 0.2
-			consumer_goods_factor = -0.1
+			consumer_goods_factor = -0.15
 			}
 		}
 
@@ -512,7 +535,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-			production_speed_industrial_complex_factor = 0.1
+			production_speed_industrial_complex_factor = 0.15
 			factory_energy_consumption = -0.10
 			}
 		}
@@ -531,9 +554,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-			production_speed_industrial_complex_factor = 0.15
-			industrial_capacity_factory = 0.1
-			industrial_capacity_dockyard = 0.1
+			production_speed_industrial_complex_factor = 0.2
+			industrial_capacity_factory = 0.15
+			industrial_capacity_dockyard = 0.15
 			factory_energy_consumption = -0.10
 			}
 		}
@@ -551,9 +574,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-			production_speed_industrial_complex_factor = 0.15
-			industrial_capacity_factory = 0.1
-			industrial_capacity_dockyard = 0.1
+			production_speed_industrial_complex_factor = 0.25
+			industrial_capacity_factory = 0.15
+			industrial_capacity_dockyard = 0.15
 			production_factory_efficiency_gain_factor = 0.1
 			production_lack_of_resource_penalty_factor = -0.1
 			factory_energy_consumption = -0.10
@@ -574,8 +597,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-			industrial_capacity_factory = 0.1
-			industrial_capacity_dockyard = 0.1
+			industrial_capacity_factory = 0.15
+			industrial_capacity_dockyard = 0.15
 			production_factory_efficiency_gain_factor = 0.15
 			production_factory_max_efficiency_factor = 0.05
 			production_lack_of_resource_penalty_factor = -0.1
@@ -599,9 +622,9 @@ ideas = {
 			modifier = {
 			production_speed_industrial_complex_factor = -0.2
 			production_speed_arms_factory_factor = 0.2
-			industrial_capacity_factory = 0.15
-			industrial_capacity_dockyard = 0.15
-			production_factory_efficiency_gain_factor = 0.15
+			industrial_capacity_factory = 0.2
+			industrial_capacity_dockyard = 0.2
+			production_factory_efficiency_gain_factor = 0.2
 			production_factory_max_efficiency_factor = 0.1
 			production_lack_of_resource_penalty_factor = -0.1
 			local_resources_factor = 0.05
@@ -706,7 +729,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-			production_speed_buildings_factor = 0.15
+			production_speed_buildings_factor = 0.2
 			production_factory_efficiency_gain_factor = 0.05
 			production_factory_max_efficiency_factor = 0.05
 			industrial_capacity_factory = 0.1
@@ -732,7 +755,7 @@ ideas = {
 			production_speed_industrial_complex_factor = -0.2
 			production_speed_arms_factory_factor = 0.2
 			production_factory_max_efficiency_factor = 0.05
-			production_factory_efficiency_gain_factor = 0.1
+			production_factory_efficiency_gain_factor = 0.15
 			production_factory_start_efficiency_factor = 0.05
 			industrial_capacity_factory = 0.1
 			industrial_capacity_dockyard = 0.1
@@ -777,7 +800,7 @@ ideas = {
 			production_speed_industrial_complex_factor = -0.2
 			production_speed_arms_factory_factor = 0.3
 			production_factory_max_efficiency_factor = 0.05
-			production_factory_efficiency_gain_factor = 0.1
+			production_factory_efficiency_gain_factor = 0.15
 			production_factory_start_efficiency_factor = 0.05
 			industrial_capacity_factory = 0.15
 			industrial_capacity_dockyard = 0.15
@@ -1731,6 +1754,18 @@ ideas = {
 					build_cost_ic = -0.1 instant = yes
 				}
 				artillery_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				anti_air_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				anti_tank_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				small_plane_airframe = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				medium_plane_airframe = {
 					build_cost_ic = -0.1 instant = yes
 				}
 			}
@@ -3605,8 +3640,18 @@ ideas = {
 
 			targeted_modifier = {
 				tag = BEL
-				attack_bonus_against = 0.05
-				breakthrough_bonus_against = 0.05
+				attack_bonus_against = 0.1
+				breakthrough_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = LUX
+				attack_bonus_against = 0.1
+				breakthrough_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = FRA
+				attack_bonus_against = 0.1
+				breakthrough_bonus_against = 0.1
 			}
 		}
 
