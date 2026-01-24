@@ -715,6 +715,10 @@ POL_KINGDOM = {
 	color = rgb { 176 81 111 }
 	color_ui = rgb { 176 81 111 }
 }
+POL_SWE = {
+	color = rgb { 126  200  237 }
+	color_ui = rgb { 126 200 237 }
+}
 POL_KINGDOM_RUS = {
 	color = rgb { 193 208 241 }
 	color_ui = rgb { 193 208 241 }

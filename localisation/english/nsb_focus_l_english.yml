@@ -737,6 +737,34 @@
  POL_mio_trait_Advamced_armament:0 "Polish Advanced Armament"
   POL_medium_tank_organization:0 "Warsaw Armored Works"
   POL_heavy_tank_organization:0 "Heavy Military Equipment Works"
+ # Demand FIN for SWE
+ NSB_poland_events.432.t:0 "The Finnish Question"
+ NSB_poland_events.432.d:0 "With tensions rising in Northern Europe, Poland has proposed a radical solution to stabilize the region. Finland, they argue, should be transferred to Swedish administration, restoring historic ties and ensuring security in the Baltic. The Finnish government now faces a difficult choice: submit to the demand or resist and face the consequences."
+ NSB_poland_events.432.a:0 "Finland must accept the proposal"
+ NSB_poland_events.432.b:0 "This is unacceptable"
+
+ # FIN accepts
+ NSB_poland_events.433.t:0 "Finland Accepts Swedish Annexation"
+ NSB_poland_events.433.d:0 "Facing overwhelming pressure, Finland has agreed to be annexed by Sweden. The Finnish territories are now fully integrated into the Swedish state, while Poland secures its interests in the region through newly established claims."
+ NSB_poland_events.446.a:0 "A new order in the North"
+
+ # FIN refuses
+ NSB_poland_events.434.t:0 "Finland Rejects the Ultimatum"
+ NSB_poland_events.434.d:0 "The Finnish government has rejected the demands outright, denouncing them as a violation of national sovereignty. Poland now has a clear justification to resolve the matter by force."
+ NSB_poland_events.443.a:0 "Then war it is"
+ # POL_The_Finland_Question
+ POL_The_Finland_Question:0 "The Finland Question"
+ POL_The_Finland_Question_desc:0 "With Sweden firmly under Polish influence, the future of Finland must be addressed. Integrating Finland into the Polish–Swedish sphere would secure the Baltic, eliminate a potential rival, and bring the North firmly under our control—peacefully, if possible."
+
+ # POL_Unite_the_Markets
+ POL_Unite_the_Markets:0 "Unite the Markets"
+ POL_Unite_the_Markets_desc:0 "Political unity means little without economic integration. By unifying the Polish and Swedish markets, we can stimulate growth, stabilize both economies, and lay the foundations for a truly shared future."
+
+ # POL_A_Dream_Comes_True
+ POL_A_Dream_Comes_True:0 "A Dream Comes True"
+ POL_A_Dream_Comes_True_desc:0 "What was once unthinkable has now become reality. Poland and Sweden stand united under a single banner, fulfilling a historic vision of dominance in the North and ushering in a new era of power and prestige."
+ POL_The_Black_Gold:0 "The Black Gold"
+ POL_The_Black_Gold_desc:0 "Romania’s vast oil reserves offer a rare opportunity. By strengthening our cooperation and investing in this vital resource, we can secure fuel for our industry and army while deepening the strategic bond between Poland and Romania."
 
  POL_The_new_winged_hussars:0 "The New Winged Hussars"
  POL_The_new_winged_hussars_desc:0 "Once the terror of Europe, the Winged Hussars symbolized Polish military excellence. Through modern armor, advanced tactics, and mechanized warfare, we shall revive their legacy—not as relics of the past, but as shock forces of the future."

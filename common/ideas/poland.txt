@@ -45,6 +45,24 @@ country = {
 		}
 	}
 
+	POL_Polish_Swedish_Market = {
+
+		allowed = {
+			original_tag = POL
+		}
+
+		allowed_civil_war = {
+		}
+
+		removal_cost = -1
+
+		picture = can_wartime_prices_and_trade_board
+
+	    modifier = {
+			consumer_goods_factor = -0.15
+		}
+	}
+
 	POL_Reformed_Army = {
 
 		allowed = {
@@ -86,6 +104,30 @@ country = {
 			fuel_gain_factor = 0.1
 		}
 	}
+
+	
+	POL_Oil_Investment2 = {
+		name = POL_Oil_Investment
+
+		allowed = {
+			original_tag = POL
+		}
+
+		allowed_civil_war = {
+		}
+
+		removal_cost = -1
+
+		picture = MEX_oil_concessions
+
+	    modifier = {
+			consumer_goods_factor = -0.15
+			production_speed_fuel_silo_factor = 0.05
+			production_speed_synthetic_refinery_factor = 0.05
+			fuel_gain_factor = 0.1
+		}
+	}
+
 
 	POL_Polish_Production = {
 
@@ -2291,8 +2333,8 @@ POL_Bohemias_Economy = {
 
 		modifier = {
 		consumer_goods_factor = -0.1
-		production_speed_buildings_factor = 0.05
-		industrial_capacity_factory = 0.05
+		production_speed_buildings_factor = 0.1
+		industrial_capacity_factory = 0.1
 		}
 	}
 }

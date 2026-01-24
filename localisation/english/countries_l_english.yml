@@ -234,6 +234,8 @@
  POL:0 "Poland"
  POL_DEF:0 "Poland"
  POL_ADJ:0 "Polish"
+ POL_SWE:0 "Polish-Swedish Commonwealth"
+ POL_SWE_DEF:0 "Polish-Swedish Commonwealth"
  #POL_subject:0 "$OVERLORDADJ$ Poland"
  #POL_subject_DEF:0 "$OVERLORDADJ$ Poland"
  POL_FRA_neutrality_subject:0 "Grand Duchy of Warsaw"

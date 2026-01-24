@@ -398,6 +398,7 @@
  PLC_UNIFIED_democratic_DEF:0 "the Polish-Lithuanian Federation"
  PLC_UNIFIED_communism_DEF:2 "the Commonwealth of Socialist Republics"
  PLC_UNIFIED_ADJ:0 "Polish-Lithuanian"
+ POL_SWE:0 "Polish-Swedish Commonwealth"
  UNL_UNIFIED_neutrality:0 "United Provinces"
  UNL_UNIFIED_fascism:0 "Leo Belgicus"
  UNL_UNIFIED_democratic:0 "United Kingdom of the Netherlands"

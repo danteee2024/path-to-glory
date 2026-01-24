@@ -10640,7 +10640,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_army_manpower = { size > 1000000 }	
+			has_army_manpower = { size > 800000 }	
 			has_opinion = {
 				target = SWE
 				value = 80
@@ -10692,7 +10692,111 @@ focus_tree = {
 			}
 		}	
 	}	
-		
+
+	focus = {
+		id = POL_The_Finland_Question
+		icon = GFX_focus_generic_invade_finland
+		prerequisite = { focus = POL_restore_poland_sweden }
+		relative_position_id = POL_restore_poland_sweden
+
+		x = 1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available = {
+			SWE = { is_subject = POL }
+			}
+
+		bypass = {
+			
+		}
+
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			FIN = { country_event =  NSB_poland_events.432 }
+		}
+	}
+
+	focus = {
+		id = POL_Unite_the_Markets
+		icon = GFX_focus_IRQ_decouple_from_the_pound
+		prerequisite = { focus = POL_restore_poland_sweden }
+		relative_position_id = POL_restore_poland_sweden
+
+		x = -1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available = {
+			SWE = { is_subject = POL }
+			}
+
+		bypass = {
+			
+		}
+
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			add_stability = 0.1
+			add_ideas = POL_Polish_Swedish_Market
+			SWE = {
+				add_stability = 0.1
+				add_ideas = POL_Polish_Swedish_Market
+			}
+		}
+	}
+
+	focus = {
+		id = POL_A_Dream_Comes_True
+		icon = GFX_focus_ICE_break_with_the_crown
+		prerequisite = { focus = POL_Unite_the_Markets }
+		prerequisite = { focus = POL_The_Finland_Question }
+		relative_position_id = POL_restore_poland_sweden
+
+		x = 0
+		y = 2
+		cost = 10
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available = {
+			SWE = { is_subject = POL }
+			}
+
+		bypass = {
+			
+		}
+
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			set_cosmetic_tag = POL_SWE
+			annex_country = {
+				target = SWE
+			}
+			every_state = {
+			limit = {
+						is_core_of = SWE
+					}
+					add_core_of = POL
+	}
+		}
+	}
 
 	focus = {
 		id = POL_commonwealth_army
@@ -11185,7 +11289,7 @@ focus_tree = {
 			prerequisite = { focus = POL_royal_dictatorship }
 		relative_position_id = POL_royal_dictatorship
 
-		x = -1
+		x = -2
 		y = 1
 		cost = 5
 
@@ -11216,13 +11320,43 @@ focus_tree = {
 	}
 
 	focus = {
+		id = POL_The_Black_Gold
+		icon = GFX_focus_generic_economic_recovery
+			prerequisite = { focus = POL_Oil_Investment }
+		relative_position_id = POL_Oil_Investment
+
+		x = -1
+		y = 1
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 2.5
+		}
+		available = {
+			
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = POL_Oil_Investment
+				add_idea = POL_Oil_Investment2
+			}
+		
+		}
+	}
+
+	focus = {
 		id = POL_Reformed_Army
 		icon = GFX_goal_generic_army_doctrines
 			prerequisite = { focus = POL_royal_dictatorship }
 		relative_position_id = POL_Oil_Investment
 
-		x = 2
-		y = 0
+		x = 3
+		y = 1
 		cost = 10
 
 
@@ -11247,7 +11381,7 @@ focus_tree = {
 		relative_position_id = POL_royal_dictatorship
 
 		x = 0
-		y = 2
+		y = 1
 		cost = 5
 
 		ai_will_do = {
@@ -11348,7 +11482,7 @@ focus_tree = {
 		prerequisite = { focus = POL_demand_slovakia }
 		relative_position_id = POL_demand_slovakia
 
-		x = 0
+		x = -1
 		y = 1
 		cost = 5
 
