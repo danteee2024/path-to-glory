@@ -11588,6 +11588,51 @@ focus_tree = {
 				}
 			}
 		}
+
+		focus = {
+		id = POL_Greater_Hungary_Claims
+		icon = GFX_focus_HUN_proclaim_greater_hungary
+		prerequisite = { focus = POL_Unification_of_the_Kingdoms }
+		relative_position_id = POL_Unification_of_the_Kingdoms
+
+		x = 0
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 2.5
+		}
+
+		available = {	
+		}
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			109 = { add_claim_by = POL } 
+			103 = { add_claim_by = POL } 
+			45  = { add_claim_by = POL } 
+			764  = { add_claim_by = POL } 
+			104  = { add_claim_by = POL } 
+			804  = { add_claim_by = POL } 
+			163  = { add_claim_by = POL } 
+			create_wargoal = {
+								type = take_state_focus
+								target = YUG
+								generator = {
+									109 103 45 764 104 804
+								}
+							}
+			create_wargoal = {
+								type = take_state_focus
+								target = ITA
+								generator = {
+									 163
+								}
+							}
+		}
+	}
 	
 
 	focus = {

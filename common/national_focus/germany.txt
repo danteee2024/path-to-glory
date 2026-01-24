@@ -25043,38 +25043,7 @@ focus_tree = {
 		}
 	}
 
-		focus = {
-		id = GER_Democratic_Industry_decision_War
-		icon = GFX_focus_generic_military_industry
-		prerequisite = { focus = GER_Democratic_Industry_decision_2 }
-		prerequisite = { focus = GER_realpolitik }
 		
-
-		x = 0
-		y = 1
-		relative_position_id = GER_Democratic_Industry_decision_2
-
-		cost = 10
-
-		allow_branch = {
-			
-		}
-
-	
-
-		available = {
-		
-		}
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			unlock_decision_tooltip = GER_Inustrial_Production_War
-			unlock_decision_tooltip = GER_Industrial_War_Building
-			unlock_decision_tooltip = GER_War_Eco
-
-		}
-	}
 
 
 
@@ -25231,139 +25200,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = GER_democratic_shield
-		icon = GFX_focus_ARG_defense_and_democracy
-		prerequisite = { focus = GER_realpolitik }
-
-		x = 1
-		y = 1
-		relative_position_id = GER_realpolitik
-		cost = 10
-		available = {
-		}
-
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-
-		completion_reward = {
-
-			IF = {
-				limit = {
-					NOT = {
-						has_rule = can_send_volunteers
-					}
-				}
-				set_rule = { 
-					can_send_volunteers = yes
-				}	
-			}
-
-			add_war_support = 0.1
-
-			custom_effect_tooltip =  generic_skip_one_line_tt
-
-			IF = {
-				limit = {
-					has_idea = GER_the_shield_of_democracy_liberalism_and_welfare_idea
-				}
-				swap_ideas = {
-					remove_idea = GER_the_shield_of_democracy_liberalism_and_welfare_idea
-					add_idea = GER_the_shield_of_democracy_liberalism_welfare_and_democracy_idea
-				}
-			}
-			ELSE = { 
-				swap_ideas = {
-					remove_idea = GER_the_shield_of_democracy_conservatism_and_welfare_idea
-					add_idea = GER_the_shield_of_democracy_conservatism_welfare_and_democracy_idea
-				}
-			}
-
-			custom_effect_tooltip = GER_send_military_support_democratic_shield_tt
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = GER_war_against_fascism_tt
-			every_other_country = {
-				limit = {
-					OR = {
-						is_in_faction_with = ROOT
-						is_guaranteed_by = ROOT
-						has_non_aggression_pact_with = ROOT
-					}
-					has_government = fascism
-					NOT = {
-						GER = {
-							has_wargoal_against = PREV
-						}
-					}
-				}
-				if = {
-					limit = {
-						ROOT = { is_faction_leader = yes }
-					}
-					ROOT = { remove_from_faction = PREV }
-				}
-				else_if = {
-					limit = {
-						is_faction_leader = yes
-					}
-					ROOT = { leave_faction = yes }
-				}
-				if = {
-					limit = {
-						ROOT = {
-							has_guaranteed = PREV
-						}
-					}
-					ROOT = {
-						diplomatic_relation = {
-						    country = PREV
-						    relation = guarantee
-						    active = no
-						}
-					}
-				}
-				if = {
-					limit = {
-						has_non_aggression_pact_with = ROOT
-					}
-					ROOT = {
-						diplomatic_relation = {
-						    country = PREV
-						    relation = non_aggression_pact
-						    active = no
-						}
-					}
-				}
-				ROOT = {
-					create_wargoal = {
-						type = annex_everything
-						target = PREV
-					}
-				}
-			}
-			every_other_country = {
-				limit = {
-					capital_scope = { is_on_continent = europe }
-					has_government = fascism
-					NOT = { is_in_faction_with = ROOT }
-					NOT = { is_guaranteed_by = ROOT }
-					NOT = { has_non_aggression_pact_with = ROOT }
-					NOT = {
-						GER = {
-							has_wargoal_against = PREV
-						}
-					}	
-				}
-				ROOT = {
-					create_wargoal = {
-						type = annex_everything
-						target = PREV
-					}
-				}
-			}
-		}
-	}
+	
 
 	focus = {
 		id = GER_reverse_the_brain_drain_ww
@@ -27418,12 +27255,12 @@ focus_tree = {
 
 		icon = GFX_focus_GER_the_austrian_question
 
-		prerequisite = { focus = GER_Military_Army focus = GER_Military_Construction }
+		
 		prerequisite = { focus = GER_danzig_for_guarantees_ww focus = GER_demand_the_return_of_southern_jutland }
 
-		x = 2
+		x = 0
 		y = 1
-		relative_position_id = GER_Military_Army
+		relative_position_id = GER_demand_the_return_of_southern_jutland
 		cost = 5
 
 		ai_will_do = {
@@ -27700,12 +27537,12 @@ focus_tree = {
 		focus = {
 		id = GER_Demand_Swiss_Anschluss
 		icon = GFX_focus_attack_switzerland
-		prerequisite = { focus = GER_Demand_Austria } 
-		prerequisite = { focus = GER_Bohemias }
 
-		x = -1
+		prerequisite = { focus = GER_Military_Construction focus = GER_Military_Army }
+
+		x = 0
 		y = 1
-		relative_position_id = GER_Demand_Austria
+		relative_position_id = GER_Military_Construction
 		cost = 5
 		available = {
 		}
@@ -27722,11 +27559,11 @@ focus_tree = {
 		id = GER_Military_Construction_2
 		icon = GFX_focus_generic_military_industry
 		mutually_exclusive = { focus = GER_Military_Construction_3 }
-		prerequisite = { focus = GER_Demand_Swiss_Anschluss } 
+		prerequisite = { focus = GER_Demand_Swiss_Anschluss focus = GER_Bohemias } 
 
 		x = -2
-		y = 2
-		relative_position_id = GER_Demand_Austria
+		y = 1
+		relative_position_id = GER_Demand_Swiss_Anschluss
 		cost = 10
 		available = {
 		}
@@ -27744,12 +27581,12 @@ focus_tree = {
 		id = GER_Military_Construction_3
 		icon = GFX_goal_generic_construct_naval_dockyard
 		mutually_exclusive = { focus = GER_Military_Construction_2 }
-		prerequisite = { focus = GER_Demand_Swiss_Anschluss } 
+		prerequisite = { focus = GER_Demand_Swiss_Anschluss  focus = GER_Bohemias } 
 
 
 		x = 0
-		y = 2
-		relative_position_id = GER_Demand_Austria
+		y = 1
+		relative_position_id = GER_Demand_Swiss_Anschluss
 		cost = 10
 		available = {
 		}
@@ -28045,7 +27882,7 @@ focus_tree = {
 		id = GER_Revive_the_Central_Powers
 		icon = GFX_SOV_the_triple_entente_ccp_2d_sov_compatibility
 
-		prerequisite = { focus = GER_Rally_the_Warhawks }
+		prerequisite = { focus = GER_Rally_the_Warhawks focus = GER_Demand_Austria }
 		x = -1
 		y = 3
 		relative_position_id = GER_demand_the_return_of_southern_jutland
@@ -28510,6 +28347,39 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_Democratic_Industry_decision_War
+		icon = GFX_focus_generic_military_industry
+		prerequisite = { focus = GER_Democratic_Industry_decision_2 }
+		prerequisite = { focus = GER_realpolitik }
+		
+
+		x = 0
+		y = 1
+		relative_position_id = GER_Democratic_Industry_decision_2
+
+		cost = 10
+
+		allow_branch = {
+			
+		}
+
+	
+
+		available = {
+		
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			unlock_decision_tooltip = GER_Inustrial_Production_War
+			unlock_decision_tooltip = GER_Industrial_War_Building
+			unlock_decision_tooltip = GER_War_Eco
+
+		}
+	}
+
+	focus = {
 		id = GER_mitteleuropa
 		icon = GFX_focus_GER_mitteleuropa
 		prerequisite = { focus = GER_realpolitik }
@@ -28535,20 +28405,14 @@ focus_tree = {
 		completion_reward = {
 
 			
-			effect_tooltip = {
+			set_rule = { can_create_factions = yes }
 				create_faction = GER_mitteleuropa_alliance
-			}
+			
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			unlock_decision_category_tooltip = GER_mitteleuropa_category
 
-			hidden_effect = {
-				if = {
-					limit = {
-						is_in_faction = no
-					}
-					create_faction = GER_mitteleuropa_alliance
-				}
-			}
+		
 
 		}
 	}
@@ -28716,6 +28580,82 @@ focus_tree = {
 	}
 
 	
+	focus = {
+		id = GER_Unite_Mitteleuropa
+		icon = GFX_focus_generic_democratic_europe
+		prerequisite = { focus = GER_integrated_economies }
+		prerequisite = { focus = GER_trade_agreements }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_integrated_economies
+		cost = 10
+
+		available = {
+			AND = {
+			POL = {
+				
+					is_subject_of = ROOT
+				
+				
+			}
+			CZE = {
+				
+					is_subject_of = ROOT
+					
+				
+			}
+			AUS = {
+				
+					is_subject_of = ROOT
+					
+				
+			}
+		}
+		}
+
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE }
+
+		completion_reward = {
+			annex_country = {
+					target = AUS
+					transfer_troops = yes
+				}
+				every_state = {
+				limit = {
+					is_core_of = AUS
+				}
+				add_core_of = GER
+			}
+
+			annex_country = {
+					target = CZE
+					transfer_troops = yes
+				}
+			every_state = {
+				limit = {
+					is_core_of = CZE
+				}
+				add_core_of = GER
+			}
+
+			annex_country = {
+					target = POL
+					transfer_troops = yes
+				}
+			every_state = {
+				limit = {
+					is_core_of = POL
+				}
+				add_core_of = GER
+			}
+			add_ideas = United_Mitteleuropa_Industry
+
+		
+		}
+	}
+
+	
 
 	focus = {
 		id = GER_danzig_for_guarantees_ww
@@ -28801,7 +28741,7 @@ focus_tree = {
 		icon = GFX_SOV_lessons_of_war_ccp_2d_sov_compatibility
 
 		prerequisite = { focus = GER_danzig_for_guarantees_ww focus = GER_demand_the_return_of_southern_jutland }
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = GER_danzig_for_guarantees_ww
 
@@ -28924,6 +28864,140 @@ focus_tree = {
 				air_experience = 15
 			}
 
+		}
+	}
+
+	focus = {
+		id = GER_democratic_shield
+		icon = GFX_focus_ARG_defense_and_democracy
+		prerequisite = { focus = GER_realpolitik }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_realpolitik
+		cost = 10
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {
+
+			IF = {
+				limit = {
+					NOT = {
+						has_rule = can_send_volunteers
+					}
+				}
+				set_rule = { 
+					can_send_volunteers = yes
+				}	
+			}
+
+			add_war_support = 0.1
+
+			custom_effect_tooltip =  generic_skip_one_line_tt
+
+			IF = {
+				limit = {
+					has_idea = GER_the_shield_of_democracy_liberalism_and_welfare_idea
+				}
+				swap_ideas = {
+					remove_idea = GER_the_shield_of_democracy_liberalism_and_welfare_idea
+					add_idea = GER_the_shield_of_democracy_liberalism_welfare_and_democracy_idea
+				}
+			}
+			ELSE = { 
+				swap_ideas = {
+					remove_idea = GER_the_shield_of_democracy_conservatism_and_welfare_idea
+					add_idea = GER_the_shield_of_democracy_conservatism_welfare_and_democracy_idea
+				}
+			}
+
+			custom_effect_tooltip = GER_send_military_support_democratic_shield_tt
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = GER_war_against_fascism_tt
+			every_other_country = {
+				limit = {
+					OR = {
+						is_in_faction_with = ROOT
+						is_guaranteed_by = ROOT
+						has_non_aggression_pact_with = ROOT
+					}
+					has_government = fascism
+					NOT = {
+						GER = {
+							has_wargoal_against = PREV
+						}
+					}
+				}
+				if = {
+					limit = {
+						ROOT = { is_faction_leader = yes }
+					}
+					ROOT = { remove_from_faction = PREV }
+				}
+				else_if = {
+					limit = {
+						is_faction_leader = yes
+					}
+					ROOT = { leave_faction = yes }
+				}
+				if = {
+					limit = {
+						ROOT = {
+							has_guaranteed = PREV
+						}
+					}
+					ROOT = {
+						diplomatic_relation = {
+						    country = PREV
+						    relation = guarantee
+						    active = no
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_non_aggression_pact_with = ROOT
+					}
+					ROOT = {
+						diplomatic_relation = {
+						    country = PREV
+						    relation = non_aggression_pact
+						    active = no
+						}
+					}
+				}
+				ROOT = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+			every_other_country = {
+				limit = {
+					capital_scope = { is_on_continent = europe }
+					has_government = fascism
+					NOT = { is_in_faction_with = ROOT }
+					NOT = { is_guaranteed_by = ROOT }
+					NOT = { has_non_aggression_pact_with = ROOT }
+					NOT = {
+						GER = {
+							has_wargoal_against = PREV
+						}
+					}	
+				}
+				ROOT = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
 		}
 	}
 
