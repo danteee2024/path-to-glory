@@ -4012,6 +4012,31 @@ focus_tree = {
 		}
 	}
 
+		focus = {
+		id = POL_Military_needs_to_Grow
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = POL_organized_plan }
+		x = 2
+		y = 2
+		relative_position_id = POL_plan_east
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			
+		}
+
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		completion_reward = {
+		add_ideas = POL_Recruitment_Plan
+		}
+	}
+
+
 	focus = {
 		id = POL_eastern_conscripts
 		icon = GFX_focus_generic_manpower
@@ -10641,16 +10666,11 @@ focus_tree = {
 
 		available = {
 			has_army_manpower = { size > 800000 }	
-			has_opinion = {
-				target = SWE
-				value = 80
-			}
-			SWE = { is_subject = no
-		has_war = no }
+			SWE = { is_subject = no }
 			}
 
 		bypass = {
-			POL = {
+			SWE = {
 				OR = {
 					is_subject_of = ROOT
 					exists = no
@@ -10774,7 +10794,10 @@ focus_tree = {
 		}
 
 		available = {
-			SWE = { is_subject = POL }
+			SWE = { is_subject_of = POL }
+			NOT = {
+				has_idea =  POL_Polish_Swedish_Culture_Difference
+			} 
 			}
 
 		bypass = {

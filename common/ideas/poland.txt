@@ -59,9 +59,28 @@ country = {
 		picture = can_wartime_prices_and_trade_board
 
 	    modifier = {
-			consumer_goods_factor = -0.15
+			consumer_goods_factor = -0.1
 		}
 	}
+
+	POL_Polish_Swedish_Culture_Difference = {
+
+		allowed = {
+			original_tag = POL
+		}
+
+		allowed_civil_war = {
+		}
+
+		removal_cost = -1
+
+		picture = can_wartime_prices_and_trade_board
+
+	    modifier = {
+			political_power_gain = -0.1
+		}
+	}
+
 
 	POL_Reformed_Army = {
 
@@ -121,7 +140,7 @@ country = {
 		picture = MEX_oil_concessions
 
 	    modifier = {
-			consumer_goods_factor = -0.15
+			consumer_goods_factor = -0.1
 			production_speed_fuel_silo_factor = 0.05
 			production_speed_synthetic_refinery_factor = 0.05
 			fuel_gain_factor = 0.1
@@ -145,6 +164,7 @@ country = {
 	    modifier = {
 			industrial_capacity_factory = 0.1
 			consumer_goods_factor = -0.1
+			global_building_slots = 1
 		}
 	}
 
@@ -1960,6 +1980,27 @@ country = {
 		}
 	}
 
+	POL_Recruitment_Plan  = {
+
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+
+		allowed_civil_war = {
+			has_government = fascism
+		}
+
+		removal_cost = -1
+
+		picture = generic_goods_red_bonus
+
+		modifier = {
+			conscription_factor = 0.05
+			conscription = 0.01
+		}
+	}
+
 	POL_radicalized_anti_germans = {
 
 		allowed = {
@@ -2312,8 +2353,10 @@ country = {
 			army_leader_start_level = 2
 			military_leader_cost_factor = -0.2
 			training_time_factor = -0.1
-			max_planning = 0.05
-			planning_speed = 0.05
+			max_planning = 0.1
+			planning_speed = 0.1
+			org_loss_when_moving = -0.05
+			army_org_factor = 0.05
 		}
 	}
 

@@ -54,10 +54,12 @@ country_event = {
 	
 	option = {
 		name = germany.166.a
-		POL = { transfer_state = 763
 		      763  = { add_core_of = POL }
-				transfer_state = 5	
-			5 = { add_core_of = POL } }
+			5 = { add_core_of = POL }
+		 763 = { transfer_state_to = POL }
+				763 = { remove_core_of = GER }
+			    5 = { transfer_state_to = POL }
+				5 = { remove_core_of = GER }
 			
 		diplomatic_relation = {
 			country = POL
@@ -67,10 +69,10 @@ country_event = {
 
 		GER ={
 		 random_controlled_state = {
-				add_extra_state_shared_building_slots = 5
+				add_extra_state_shared_building_slots = 7
 				add_building_construction = {
 					type = industrial_complex
-					level = 5
+					level = 7
 					instant_build = yes
 				}
 			}

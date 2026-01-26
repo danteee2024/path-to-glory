@@ -26191,10 +26191,14 @@ focus_tree = {
 			
 		}
 		bypass = {
+			or = {
 			NOT = {
 				controls_state = 763
 				controls_state = 5
-			}
+			} 
+			POL = {
+						exists = no
+					} }
 		}
 
 		completion_reward = {
@@ -28595,19 +28599,19 @@ focus_tree = {
 			AND = {
 			POL = {
 				
-					is_subject_of = ROOT
+					is_in_faction_with = GER
 				
 				
 			}
 			CZE = {
 				
-					is_subject_of = ROOT
+					is_in_faction_with = GER
 					
 				
 			}
 			AUS = {
 				
-					is_subject_of = ROOT
+					is_in_faction_with = GER
 					
 				
 			}
@@ -28617,38 +28621,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE }
 
 		completion_reward = {
-			annex_country = {
-					target = AUS
-					transfer_troops = yes
-				}
-				every_state = {
-				limit = {
-					is_core_of = AUS
-				}
-				add_core_of = GER
-			}
-
-			annex_country = {
-					target = CZE
-					transfer_troops = yes
-				}
-			every_state = {
-				limit = {
-					is_core_of = CZE
-				}
-				add_core_of = GER
-			}
-
-			annex_country = {
-					target = POL
-					transfer_troops = yes
-				}
-			every_state = {
-				limit = {
-					is_core_of = POL
-				}
-				add_core_of = GER
-			}
+			POL = { add_ideas = United_Mitteleuropa_Industry }
+			AUS = { add_ideas = United_Mitteleuropa_Industry }
+			CZE = { add_ideas = United_Mitteleuropa_Industry }
 			add_ideas = United_Mitteleuropa_Industry
 
 		

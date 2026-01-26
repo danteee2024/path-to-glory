@@ -3053,7 +3053,7 @@ BEL_corruption_ns_fake_tt: "Daily Political Power Gain: §R-0.25%§! \nStability
  GER_Czechoslovaki_Puppet:0 "Establish Czechoslovakia as a Puppet State"
  GER_Poland_Puppet:0 "Establish Poland as a Puppet State"
  GER_Unite_Mitteleuropa:0 "Unite Mitteleuropa"
- GER_Unite_Mitteleuropa_desc:0 "Through economic integration, political cooperation, and shared democratic institutions, the nations of Central Europe have grown inseparable. It is now time to formalize this unity and bring Mitteleuropa together under a single German-led state, ensuring stability, prosperity, and collective security for all its peoples."
+ GER_Unite_Mitteleuropa_desc:0 "Through economic integration, political cooperation, and shared democratic institutions, the nations of Central Europe have grown inseparable. It is now time to formalize this unity and bring Mitteleuropa together under a single Industry, ensuring stability, prosperity, and collective security for all its peoples."
  United_Mitteleuropa_Industry:0 "United Mitteleuropa Industry"
  ### Demand Swiss Anschluss ###
  germany.245.t:0 "The Swiss Question"
@@ -4349,6 +4349,7 @@ BEL_corruption_ns_fake_tt: "Daily Political Power Gain: §R-0.25%§! \nStability
  germany.165.d:0 "In a bold move to strengthen our industrial base, the Emperor has negotiated the sale of Königsberg to Poland. While the loss of this historic city is a blow to our prestige in Prussia, the industrial machinery and resources gained in return will allow the Empire to modernize and expand its capabilities. Some voices in the Reichstag decry this as a betrayal of our ancestral lands, but the Emperor insists that strategic growth must take precedence over sentimentality."
  germany.165.a:0 "Agree to the Sale"
  germany.145.b:0 "Refuse the Sale"
+ GER_Selling_Koenigsberg:0 "Selling Koenigsberg"
 
  germany.166.t:0 "The Königsberg Accord Accepted"
  germany.166.d:0 "The Polish government has officially accepted our offer to purchase Königsberg. While the Empire reluctantly parts with this historic city, the industrial machinery and resources gained will significantly bolster our economy. The Emperor emphasizes that this pragmatic decision will strengthen the Empire’s long-term power, even as some citizens mourn the loss of our eastern lands."

@@ -497,7 +497,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-			production_speed_industrial_complex_factor = 0.2
+			production_speed_industrial_complex_factor = 0.15
 			consumer_goods_factor = -0.15
 			}
 		}
@@ -535,7 +535,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-			production_speed_industrial_complex_factor = 0.15
+			production_speed_industrial_complex_factor = 0.1
 			factory_energy_consumption = -0.10
 			}
 		}
@@ -554,7 +554,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-			production_speed_industrial_complex_factor = 0.2
+			production_speed_industrial_complex_factor = 0.15
 			industrial_capacity_factory = 0.15
 			industrial_capacity_dockyard = 0.15
 			factory_energy_consumption = -0.10
@@ -574,7 +574,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-			production_speed_industrial_complex_factor = 0.25
+			production_speed_industrial_complex_factor = 0.2
 			industrial_capacity_factory = 0.15
 			industrial_capacity_dockyard = 0.15
 			production_factory_efficiency_gain_factor = 0.1
@@ -601,6 +601,7 @@ ideas = {
 			industrial_capacity_factory = 0.1
 			industrial_capacity_dockyard = 0.1
 			factory_energy_consumption = -0.1
+			global_building_slots = 1
 			}
 		}
 
@@ -642,12 +643,14 @@ ideas = {
 			
 			modifier = {
 			production_speed_industrial_complex_factor = -0.2
-			production_speed_arms_factory_factor = 0.2
+			production_speed_arms_factory_factor = 0.1
 			industrial_capacity_factory = 0.2
 			industrial_capacity_dockyard = 0.2
 			production_factory_efficiency_gain_factor = 0.2
 			production_factory_max_efficiency_factor = 0.1
 			production_lack_of_resource_penalty_factor = -0.1
+			local_resources_factor = 0.05
+			global_building_slots = 1
 			local_resources_factor = 0.05
 			factory_energy_consumption = -0.15
 			}
@@ -3536,7 +3539,7 @@ ideas = {
 
 			modifier = {
 				industry_repair_factor = 0.35
-				production_speed_buildings_factor = 0.15
+				production_speed_buildings_factor = 0.1
 				consumer_goods_factor = -0.1
 			}
 		}

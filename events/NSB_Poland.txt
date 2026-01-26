@@ -432,6 +432,10 @@ country_event = {
 			target = SWE
 			autonomy_state = autonomy_personal_union
 		}
+		add_timed_idea = {
+			idea = POL_Polish_Swedish_Culture_Difference
+			days = 180
+		}
 	}
 }
 #Sweden says no, gain a wargoal
