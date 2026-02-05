@@ -17,6 +17,49 @@ ideas = {
 				nuclear_production_factor = 0.15
 			}
 		}
+		ENG_imperial_Dockyards_idea = {
+   	 allowed = {
+        original_tag = ENG
+  	  }
+    picture = GFX_goal_generic_construct_navy
+    modifier = {
+        production_speed_dockyard_factor = 0.10
+        industrial_capacity_dockyard = 0.1
+    }
+}
+	ENG_imperial_fleet_idea = {
+   	 allowed = {
+        original_tag = ENG
+  	  }
+    picture = BRA_navy
+    modifier = {
+        navy_screen_attack_factor = 0.1
+		navy_screen_defence_factor = 0.1
+    }
+}
+	ENG_Royal_Industry = {
+   	 allowed = {
+        original_tag = ENG
+  	  }
+    picture = generic_improved_industries
+    modifier = {
+		global_building_slots = 1
+        production_speed_buildings_factor = 0.1
+		consumer_goods_factor = -0.1
+		
+    }
+}
+	ENG_The_Kings_Guard = {
+   	 allowed = {
+        original_tag = ENG
+  	  }
+    picture = NORDIC_army_monarchist
+    modifier = {
+        army_attack_factor = 0.05
+		army_defence_factor = 0.05
+		army_speed_factor =  0.05
+    }
+}
 		
 		ENG_blitz_spirit_idea = {
 			
@@ -269,8 +312,7 @@ ideas = {
 			picture = eng_guided_by_britain
 
 			modifier = {
-				production_speed_buildings_factor = 0
-				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = 0.05
 				industrial_capacity_factory = -0.05
 				political_power_cost = 0.25
 				}	
@@ -289,8 +331,8 @@ ideas = {
 			picture = ARG_envoy_to_london
 
 			modifier = {
-				production_speed_buildings_factor = 0.05
-				consumer_goods_factor = 0
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.1
 				industrial_capacity_factory = 0.05
 				political_power_cost = 0
 				}	
@@ -432,6 +474,193 @@ ideas = {
 			political_power_cost = 0.75
 			}	
 		}
+		 ENG_The_Mosley_Memorandum = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_improved_industries
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+			}	
+		}
+		ENG_The_Mosley_Memorandum1 = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_improved_industries
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				research_speed_factor = 0.1
+				production_speed_synthetic_refinery_factor = 0.1
+				production_speed_buildings_factor = 0.05
+			}	
+		}
+		ENG_The_Mosley_Memorandum2 = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_improved_industries
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				research_speed_factor = 0.1
+				production_speed_synthetic_refinery_factor = 0.1
+				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				drift_defence_factor = 0.05
+			}	
+		}
+		ENG_British_Army = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = MEX_politicised_army
+
+			modifier = {
+				army_attack_factor = 0.05
+				org_loss_when_moving = -0.05
+				army_org_factor = 0.05
+			}	
+		}
+		ENG_The_Homeland_Industry = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = man_five_year_plan_industry
+
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				global_building_slots = 2
+			}	
+		}
+		ENG_Improved_Factories = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_industrial_concern_1
+
+			modifier = {
+				industrial_capacity_dockyard = 0.15
+				industrial_capacity_factory = 0.15
+			}	
+		}
+		ENG_Advanced_Production = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_improved_industries
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+			}	
+		}
+
+		ENG_prepare_the_army_for_war = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = MEX_politicised_army
+
+			modifier = {
+				justify_war_goal_time = -0.2
+				mobilization_speed = 0.1
+				conscription_factor = 0.05
+			}	
+		}
+		ENG_Tank_Production = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = man_five_year_plan_tank
+
+			modifier = {
+			}	
+			equipment_bonus = {
+				light_tank_chassis = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				medium_tank_chassis = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				heavy_tank_chassis = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+
 		ENG_state_of_the_economy_two = {
 			allowed = {
 				always = yes
@@ -606,6 +835,7 @@ ideas = {
 				mechanized_attack_factor = 0.05
 				mechanized_defence_factor = 0.05
 				army_armor_attack_factor = 0.1
+				army_armor_defence_factor = 0.1
 				army_armor_speed_factor = 0.1
 			}
 			
@@ -681,7 +911,6 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				production_factory_efficiency_gain_factor = -0.05
 				production_factory_max_efficiency_factor = 0.10
 				consumer_goods_factor = 0.05
 			}
@@ -700,7 +929,6 @@ ideas = {
 			modifier = {
 				political_power_factor = 0.1
 				research_speed_factor = 0.10
-				consumer_goods_factor = 0.05
 			}
 		}
 	
@@ -716,9 +944,9 @@ ideas = {
 			
 			modifier = {
 				production_speed_infrastructure_factor = 0.2 
+				production_speed_dockyard_factor = 0.2
 				production_speed_rail_way_factor = 0.2
 				local_resources_factor = 0.1
-				consumer_goods_factor = 0.05
 			}
 		}
 	
@@ -785,8 +1013,26 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				conscription = 0.02
+			}
+		}
+
+		ENG_The_British_Red_Army2 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			picture = generic_communist_army
+			
+			removal_cost = -1
+			
+			modifier = {
 				army_attack_factor = 0.15
 				army_defence_factor = 0.15
+				conscription = 0.03
 			}
 		}
 	
@@ -1093,7 +1339,7 @@ ideas = {
 			
 			equipment_bonus = {
 				infantry_equipment = {
-					build_cost_ic = -0.1 instant = yes
+					build_cost_ic = -0.05 instant = yes
 				}
 			}
 		}

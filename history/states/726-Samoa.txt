@@ -2,10 +2,8 @@ state={
 	id=726
 	name="STATE_726"
 	manpower=123214
-	state_category = city
-    resources = {
-	rubber = 2
-  }
+	state_category = small_island
+
 	history={
 		owner = NZL
 		add_core_of = SAM

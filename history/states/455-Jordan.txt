@@ -9,7 +9,6 @@ state = {
 
 		owner = ENG
 		add_core_of = JOR
-		add_core_of = RAJ
 
 		buildings = {
 			infrastructure = 2
@@ -26,6 +25,9 @@ state = {
 			11976 1 # Ma'an
 		}
 
+	}
+	resources = {
+		coal = 6
 	}
 
 	provinces = {

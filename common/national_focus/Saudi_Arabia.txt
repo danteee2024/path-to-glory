@@ -35,7 +35,6 @@ focus_tree = {
     completion_reward = {
         add_political_power = 120
         add_ideas = SAU_royal_consolidation_idea
-        custom_effect_tooltip = SAU_consolidate_royal_authority_tt
         hidden_effect = {
             add_country_leader_trait = legitimate_heir
         }
@@ -1277,7 +1276,6 @@ focus = {
     }
     completion_reward = {
        
-    unlock_decision_category_tooltip = SAU_Oil_Trade_category
     add_ideas = SAU_Oil_Trade2
 
     }
@@ -1495,6 +1493,7 @@ focus = {
          
     }
     completion_reward = {
+     unlock_decision_category_tooltip = SAU_Oil_Trade_category
 
     swap_ideas = {
         remove_idea = SAU_Oil_Trade2

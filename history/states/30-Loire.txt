@@ -20,6 +20,10 @@ state={
 		}
 		add_core_of = FRA
 	}
+	resources = {
+		coal = 18
+		steel = 13
+	}
 
 	provinces={
 		503 527 3495 3509 3523 9478 9867 11463 11465 11613 11616 

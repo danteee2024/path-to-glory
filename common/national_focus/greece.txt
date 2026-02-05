@@ -33,7 +33,7 @@ focus_tree = {
 		}
 		x = 6
 		y = 0
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 0
 			modifier = { 
@@ -163,7 +163,7 @@ focus_tree = {
 		id = GRE_remembering_the_anatolian_catastrophe
 		icon = GFX_goal_generic_attack_allies
 		prerequisite = { focus = GRE_compromise_with_the_monarchists }
-		x = -2
+		x = -3
 		y = 1
 		relative_position_id = GRE_compromise_with_the_monarchists
 		cost = 10
@@ -189,7 +189,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GRE_remembering_the_anatolian_catastrophe
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 1
 		}
@@ -213,7 +213,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = GRE_remembering_the_anatolian_catastrophe
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 0
 			modifier = {
@@ -241,7 +241,10 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_GRE_DEBT_TO_IFC FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			remove_ideas = GRE_schachtplan
+			swap_ideas = {
+				remove_idea =  GRE_schachtplan
+				add_idea =  GRE_homeplan
+			}
 			if = { 
 				limit = { 
 					ENG = { 
@@ -510,218 +513,99 @@ focus_tree = {
 			country_event = { id = bftb_greece.6 }
 			add_timed_idea = {
 				idea = GRE_production_for_war
-				days = 50
+				days = 365
 			}
 		}
 	}	
 
-	focus = {
-		id = GRE_resurrecting_the_megali_idea
-		icon = GFX_focus_GRE_resurrecting_the_megali_idea
-		prerequisite = { focus = GRE_the_anatolian_refugees }
-		available = {
-			OR = {
-				country_exists = TUR
-				has_country_flag = GRE_megali_convention_a_failure
-			}
-			
-			is_subject = no
-			
-		}
-		cancel_if_invalid = yes
-		x = 0
-		y = 1
-		relative_position_id = GRE_the_anatolian_refugees
-		will_lead_to_war_with = TUR
-		cost = 15
-		ai_will_do = {
-			base = 1
-		}
-
-		bypass = {
-			OR = { 
-				NOT = {
-					OR = { 
-						country_exists = ENG
-						country_exists = FRA
-						country_exists = ITA
-					}
-					country_exists = TUR
-				}
-				has_country_flag = GRE_megali_convention_a_failure
-			}
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
-		select_effect = {
-			country_event = { id = bftb_greece.7 days = 7 }
-		}
-
-		completion_reward = {
-			add_war_support = 0.1
-			custom_effect_tooltip = GRE_megali_idea_conference_invites_tt
-		}
-	}	
+	
 
 	focus = {
-		id = GRE_the_gordian_knot
-		icon = GFX_goal_generic_military_deal
-		available = { 
-			is_subject = no
-			has_country_flag = GRE_megali_idea_approved 
-		}
-		prerequisite = { focus = GRE_resurrecting_the_megali_idea }
-		mutually_exclusive = { focus = GRE_horror_and_fear }
-		x = 1
-		y = 1
-		relative_position_id = GRE_resurrecting_the_megali_idea
-		will_lead_to_war_with = TUR
-		cost = 10
-		
-		bypass = {
-			TUR = { exists = no }
-		}
-		
-		ai_will_do = {
-			base = 0
-			modifier = { 
-				add = 1
-				OR = { 	
-					AND = { 
-						has_country_flag = GRE_megali_idea_approved
-						strength_ratio = { 
-							tag = TUR
-							ratio > 0.4
-						}
-					}
-					AND = { 
-						ENG = { 
-							has_war = no
-							has_country_flag = GRE_british_armenia
-							strength_ratio = { 
-								tag = TUR
-								ratio > 0.6
-							}
-						}
-					}
-					AND = { 
-						date < 1939.03.01
-						FRA = { 
-							has_war = no
-							has_country_flag = GRE_french_kurdistan
-							strength_ratio = { 
-								tag = TUR
-								ratio > 0.7
-							}
-						}
-					}
-				}
-			}
-		}
-
-		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_WAR_SUPPORT }
-		completion_reward = {
-			add_war_support = 0.1
-			custom_effect_tooltip = GRE_gordian_knot_tt
-			hidden_effect = {	
-				declare_war_on = {
-					target = TUR
-					type = take_state_focus
-					generator = { 797 341 347 340 339 }
-				}
-				if = { 
-					limit = { 
-						354 = { is_claimed_by = ENG }
-					}
-					ENG = {
-						country_event = { id = bftb_greece.229 }
-					}
-				}
-				if = { 
-					limit = { 
-						344 = { is_claimed_by = FRA }
-						350 = { is_claimed_by = FRA }
-						352 = { is_claimed_by = FRA }
-						353 = { is_claimed_by = FRA }
-						800 = { is_claimed_by = FRA }
-					}
-					FRA = { 
-						country_event = { id = bftb_greece.229 }
-					}
-				}
-				if = { 
-					limit = { 
-						342 = { is_claimed_by = ITA }
-						345 = { is_claimed_by = ITA }
-					}
-					ITA = { 
-						add_opinion_modifier = { 
-							target = TUR
-							modifier = GRE_strategic_enemy
-						}
-						add_ai_strategy = {
-							type = ignore
-							id = GRE
-							value = 75
-						}
-					}
-				}
-				GER = {
-					add_ai_strategy = {
-						type = protect
-						id = TUR
-						value = 75
-					}
-				}
-				SOV = {
-					add_ai_strategy = {
-						type = protect
-						id = TUR
-						value = 75
-					}
-				}
-			}
-		}
-	}	
-
-	focus = {
-		id = GRE_horror_and_fear
+		id = GRE_Demands_on_Turkey
 		icon = GFX_focus_generic_attack_turkey
 		available = {
-			is_subject = no
-			NOT = { has_country_flag = GRE_megali_idea_approved } 
+			
 		}
-		prerequisite = { focus = GRE_resurrecting_the_megali_idea }
-		mutually_exclusive = { focus = GRE_the_gordian_knot }
-		x = -1
+		prerequisite = { focus = GRE_the_anatolian_refugees }
+		x = 0
 		y = 1
-		relative_position_id = GRE_resurrecting_the_megali_idea
-		will_lead_to_war_with = TUR
-		cost = 10
+		relative_position_id =  GRE_the_anatolian_refugees
+		
+		cost = 5
 		ai_will_do = {
 			base = 0
-			modifier = { 
-				add = 1
-				AND = { 	
-					NOT = { has_country_flag = GRE_megali_idea_approved }
-					strength_ratio = { 
-						tag = TUR
-						ratio > 0.4
-					}
-				}
-			}
+			
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			declare_war_on = {
-				target = TUR
-				type = take_state_focus
-				generator = { 797 341 347 340 339 }
-			}
+			TUR = { country_event = greece.332 }
 			hidden_effect = {
-				country_event = { id = bftb_greece.207 days = 60 }
-			}
+			every_state = {
+				limit = { is_core_of = TUR }
+				add_core_of = ROOT
+		}
+	}
+	}
+}
+
+focus = {
+		id = GRE_byzantine_themata
+		icon = GFX_focus_GRE_byzantine_themata
+		prerequisite = { focus = GRE_Demands_on_Turkey }
+		x = 0
+		y = 1
+		relative_position_id = GRE_Demands_on_Turkey
+		cost = 10
+		ai_will_do = { 
+			base = 1
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			add_war_support = 0.1
+			custom_effect_tooltip = byz_restore_byzantine_empire_category_tt
+			set_cosmetic_tag = BYZ_UNIFIED
+			add_ideas = GRE_Honor_the_Byzantinum
+
+		}
+	}
+
+	focus = {
+		id = GRE_Byzantinum_Economy 
+		icon = GFX_focus_RAJ_special_economic_zones
+		prerequisite = { focus = GRE_byzantine_themata }
+		x = 0
+		y = 1
+		relative_position_id = GRE_byzantine_themata
+		cost = 5
+		ai_will_do = { 
+			base = 1
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			add_ideas =  Byzantinum_Economy1 
+
+		}
+	}
+
+	focus = {
+		id = GRE_Byzantine_Gold
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		prerequisite = { focus = GRE_Byzantinum_Economy }
+		x = 0
+		y = 1
+		relative_position_id = GRE_Byzantinum_Economy
+		cost = 5
+		ai_will_do = { 
+			base = 1
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			add_ideas =  GRE_Byzantine_Gold
+
 		}
 	}
 
@@ -746,10 +630,10 @@ focus_tree = {
 				}
 			}
 		}
-		prerequisite = { focus = GRE_horror_and_fear focus = GRE_the_gordian_knot }
-		x = 0
-		y = 2
-		relative_position_id = GRE_resurrecting_the_megali_idea
+		prerequisite = { focus = GRE_byzantine_themata }
+		x = 2
+		y = 1
+		relative_position_id = GRE_byzantine_themata
 		cost = 10
 		ai_will_do = {
 			base = 1
@@ -793,12 +677,12 @@ focus_tree = {
 		id = GRE_reviving_the_double_headed_eagle
 		icon = GFX_focus_GRE_reviving_the_double_headed_eagle
 		available = {
-			has_government = fascism
+			
 		}
-		prerequisite = { focus = GRE_horror_and_fear }
-		x = -1
+		prerequisite = { focus = GRE_byzantine_themata }
+		x = -2
 		y = 1
-		relative_position_id = GRE_horror_and_fear
+		relative_position_id = GRE_byzantine_themata
 		cost = 10
 		ai_will_do = {
 			base = 0
@@ -863,25 +747,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = GRE_byzantine_themata
-		icon = GFX_focus_GRE_byzantine_themata
-		prerequisite = { focus = GRE_phoideratoi }
-		prerequisite = { focus = GRE_the_die_is_cast }
-		x = 1
-		y = 1
-		relative_position_id = GRE_phoideratoi
-		cost = 5
-		ai_will_do = { 
-			base = 1
-		}
-
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-		completion_reward = {
-			add_war_support = 0.1
-			custom_effect_tooltip = byz_restore_byzantine_empire_category_tt
-		}
-	}
+	
 
  ##   ##  #   # #   # #  # #  # ###  ## ###     ### ###  ### ### 
 #  # #  # ## ## ## ## #  # ## #  #  #    #       #  #  # #   #   
@@ -950,7 +816,7 @@ focus_tree = {
 		id = GRE_a_socialist_economy
 		icon = GFX_SOV_socialist_emulation_ccp_2d_sov_compatibility
 		prerequisite = { focus = GRE_request_communist_support }
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = GRE_request_communist_support
 		cost = 10
@@ -3703,9 +3569,14 @@ focus_tree = {
 						}
 						is_fully_controlled_by = ROOT
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = dockyard
 						level = 2
 						instant_build = yes
 					}
@@ -3732,6 +3603,12 @@ focus_tree = {
 				add_resource = { 
 					type = aluminium
 					amount = 10
+				}
+			}
+			732 = { 
+				add_resource = { 
+					type = coal
+					amount = 11
 				}
 			}
 			186 = { 
@@ -3840,14 +3717,6 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
 		completion_reward = {
-			add_political_power = -120
-			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_timed_idea = {
-				idea = JAP_investment
-				days = 180
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			186 = {
 				if = { 
@@ -4036,7 +3905,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GRE_utilize_our_strengths
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 1
 		}
@@ -4357,7 +4226,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GRE_paying_back_our_debts_in_bulk
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 1
 		}
@@ -4413,7 +4282,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GRE_connecting_our_prefectures
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 1
 		}
@@ -4431,7 +4300,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GRE_fiscal_responsibility
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 1
 		}
@@ -4557,7 +4426,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GRE_exporting_more_luxury_commodoties
-		cost = 7.5
+		cost = 5
 		ai_will_do = {
 			base = 1
 		}
@@ -4577,10 +4446,10 @@ focus_tree = {
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = industrial_complex
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -4679,15 +4548,15 @@ focus_tree = {
 					limit = {
 						free_building_slots = {
 							building = industrial_complex
-							size > 2
+							size > 1
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = resource_expansion_steel
-						level = 2
-						instant_build = yes
+					add_extra_state_shared_building_slots = 1
+					add_resource = {
+						type = steel
+						amount = 16
+						state = 47
 					}
 				}	
 			}
@@ -4701,10 +4570,10 @@ focus_tree = {
 						}
 					}
 					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = resource_expansion_tungsten
-						level = 1
-						instant_build = yes
+					add_resource = {
+						type = tungsten
+						amount = 13
+						state = 185
 					}
 				}
 			}	
@@ -4750,7 +4619,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GRE_increase_our_mining_operations
-		cost = 7.5
+		cost = 5
 		ai_will_do = {
 			base = 1
 		}
@@ -5142,7 +5011,7 @@ focus_tree = {
 		x = 4
 		y = 1
 		relative_position_id = GRE_cooperate_with_foreign_monopolies
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 1
 		}
@@ -5203,7 +5072,7 @@ focus_tree = {
 	focus = {
 		id = GRE_open_up_the_country
 		icon = GFX_goal_generic_major_alliance
-		prerequisite = { focus = GRE_four_year_plan focus = GRE_extracting_more_from_our_soil }
+		prerequisite = { focus = GRE_four_year_plan }
 		x = 0
 		y = 1
 		relative_position_id = GRE_four_year_plan
@@ -5714,7 +5583,6 @@ focus_tree = {
 		id = GRE_a_modern_navy
 		icon = GFX_goal_generic_navy_submarine
 		prerequisite = { focus = GRE_the_hellenic_navy }
-		mutually_exclusive = { focus = GRE_abandon_the_greek_turkish_naval_treaty }
 		x = 1
 		y = 1
 		relative_position_id = GRE_the_hellenic_navy
@@ -5747,7 +5615,6 @@ focus_tree = {
 		id = GRE_abandon_the_greek_turkish_naval_treaty
 		icon = GFX_goal_generic_navy_battleship
 		prerequisite = { focus = GRE_the_hellenic_navy }
-		mutually_exclusive = { focus = GRE_a_modern_navy }
 		x = -1
 		y = 1
 		relative_position_id = GRE_the_hellenic_navy
@@ -5779,14 +5646,14 @@ focus_tree = {
 					dockyard > 0
 					free_building_slots = {
 						building = dockyard
-						size > 1
+						size > w
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -5978,6 +5845,26 @@ focus_tree = {
 			}
 		}
 	}
+
+	focus = {
+    id = GRE_Project_Poseidon
+    icon = GFX_focus_generic_navy_research_bonus
+    prerequisite = { focus = GRE_a_long_and_proud_tradition }   
+	relative_position_id = GRE_a_long_and_proud_tradition 
+    x = 0
+    y = 1
+    cost = 5
+
+    available = { }
+
+    ai_will_do = {
+        base = 0
+    }
+
+    completion_reward = {
+        add_ideas = GRE_Project_Poseidon
+    }
+}
 
 	focus = {
 		id = GRE_new_weapons_old_tricks

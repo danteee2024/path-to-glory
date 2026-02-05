@@ -167,7 +167,7 @@ ideas = {
 			removal_cost = -1
 			picture = ARG_economic_reactivation
 			modifier = {
-				production_speed_industrial_complex_factor = 0.1
+				production_speed_buildings_factor = 0.1
 
 			}
 
@@ -267,7 +267,7 @@ ideas = {
 			removal_cost = -1
 			picture = ARG_construction_guilds
 			modifier = {
-				production_speed_buildings_factor = 0.1
+				production_speed_buildings_factor = 0
 			}
 
 		}
@@ -884,7 +884,7 @@ ideas = {
 			removal_cost = -1
 			picture = ARG_state_unions
 			modifier = {
-				production_factory_max_efficiency_factor = 0.075
+				production_factory_max_efficiency_factor = 0.05
 				production_speed_arms_factory_factor = 0.05
 				production_speed_industrial_complex_factor = 0.05
 			}
@@ -1026,7 +1026,7 @@ ideas = {
 				conscription_factor = 0.1
 				communism_drift = 0.15
 				supply_consumption_factor = -0.05
-				army_attack_factor = 0.1
+				army_attack_factor = 0.05
 			}
 		}
 
@@ -1044,8 +1044,8 @@ ideas = {
 			removal_cost = -1
 			picture = ARG_women_in_industry 
 			modifier = {
-				production_factory_max_efficiency_factor = 0.075
-				consumer_goods_factor = -0.15
+				production_factory_max_efficiency_factor = 0.05
+				consumer_goods_factor = -0.1
 			}
 		}
 
@@ -1104,7 +1104,7 @@ ideas = {
 			picture = ARG_no_gods_no_masters
 			modifier = {
 				war_support_factor = 0.1
-				army_attack_factor = 0.1
+				army_attack_factor = 0.05
 				supply_consumption_factor = -0.05
 				experience_gain_army = 0.2
 			}
@@ -1280,8 +1280,8 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = -0.1
-				industrial_capacity_factory = 0.1
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.075
 				communism_drift = 0.01
 
 			}

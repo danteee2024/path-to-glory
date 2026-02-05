@@ -3,7 +3,12 @@ state = {
 	name = "STATE_71"
 	manpower = 1197800
 	
-	state_category = rural
+	resources = {
+		coal = 2 # initial distribution / 60 total
+	}
+
+
+	state_category = town
 	
 	history = {
 		

@@ -3,6 +3,11 @@ state = {
 	id = 569
 	name = "STATE_569" # Khakassia
 	manpower = 1567322
+
+	resources = {
+		coal = 36 #initial distirbution
+		tungsten = 12
+	}
 	
 	state_category = town
 

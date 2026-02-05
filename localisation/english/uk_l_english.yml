@@ -33,6 +33,68 @@
  
  
 ################################### FOCUSES                     \n      §H§!
+ ENG_Tank_Production:0 "Improved Tank Production"
+  ENG_Imperial_Federation:0 "The Imperial Federation"
+ ENG_The_Mosley_Memorandum:0 "The Mosley Memorandum"
+ ENG_The_Mosley_Memorandum1:0 "The Mosley Memorandum" 
+ ENG_The_Mosley_Memorandum2:0 "The Mosley Memorandum"
+ ENG_British_Army:0 "Reform the British Army"
+ ENG_British_Army_desc:0 "With Mosley's nationalisation program underway, we can now turn our attention to reshaping the British Army into a modern, politically reliable force. By centralising command structures and streamlining the procurement process, we will ensure that our armed forces are fully prepared to safeguard the nation and enforce the new vision for Britain."
+ ENG_prepare_the_army_for_war:0 "Prepare the Army for War"
+ ENG_prepare_the_army_for_war_desc:0 "With reforms underway, the British Army must now be readied for the conflicts to come. Training will be intensified, mobilisation procedures reviewed, and equipment modernised. Britain will not be caught unprepared when the storm breaks."
+ britain.332.t:0 "Britain Demands Ireland"
+ britain.332.d:0 "With the British government pursuing a more assertive foreign policy, London has delivered a formal demand to Ireland: submit to British rule or face the consequences. The United Kingdom argues that full control over the island is necessary for the security and stability of the British Isles. The Irish government must now decide how to respond to this ultimatum."
+ britain.332.a:0 "We accept British demands."
+ britain.332.b:0 "We will never surrender our sovereignty!"
+ ENG_The_Homeland_Industry:0 "Strengthen the Homeland Industry"
+ ENG_The_Homeland_Industry_desc:0 "With decolonisation underway, the economic heart of the nation must be reinforced. By investing in domestic industries, improving resource allocation, and prioritising self-sufficiency, the United Kingdom can ensure that the homeland remains strong and prosperous despite reduced imperial holdings."
+
+ ENG_Improved_Factories:0 "Improve the Factories"
+ ENG_Improved_Factories_desc:0 "The transition away from empire demands a modern, efficient industrial base. Through refurbishment of outdated facilities, investment in new machinery, and tighter administrative oversight, British factories will once again stand among the most productive in the world."
+
+ ENG_Advanced_Production:0 "Advanced Production Techniques"
+ ENG_Advanced_Production_desc:0 "To stay competitive in the modern era, Britain must embrace cutting-edge production methods. Automation, streamlined assembly processes, and advanced engineering will dramatically expand output and ensure our industries are prepared for any future challenge."
+ ENG_British_Economy1:0 "Reconstruct the People's Economy"
+ ENG_British_Economy1_desc:0 "The revolution demands an economy free from the exploitation and chaos of capitalism. By nationalising key industries, establishing centralised planning, and distributing resources according to collective need, we will lay the foundation for a truly socialist Britain—an economy that serves the workers, not the elite."
+ British_Economy:0 "British Economy"
+
+
+ ENG_Demand_Unification_the_Islands:0 "Demand Unification of the Islands"
+ ENG_Demand_Unification_the_Islands_desc:0 "A divided British Isles cannot stand against the forces of reaction. For the revolution to survive and flourish, Ireland must be united with the workers of Britain under a single socialist state. We will extend a demand for peaceful unification—should the bourgeois government in Dublin refuse, the workers’ struggle will continue by other means."
+
+ britain.333.t:0 "Ireland Submits to British Rule"
+ britain.333.d:0 "Ireland has accepted our ultimatum and agreed to reintegration into the United Kingdom. British forces have entered the island without resistance, and administrative control is being restored across the region. This peaceful annexation strengthens our strategic position and eliminates a potential threat within the British Isles."
+ britain.346.a:0 "Ireland is ours once more."
+
+ britain.334.t:0 "Ireland Rejects British Demands"
+ britain.334.d:0 "The Irish government has defiantly rejected our ultimatum, refusing to submit to British authority. Their refusal leaves us no choice but to enforce our demands through military action. Preparations for an invasion are already underway, and the nation rallies as war with Ireland looms."
+ britain.343.a:0 "Then we will take Ireland by force!"
+ 
+ Integrate_Canada:0 "Integrate Canada"
+ Integrate_Canada_desc:0 "Canada has long stood as a loyal dominion of the Crown. By formally integrating it into the United Kingdom, we will strengthen the unity and power of the Empire."
+
+ Integrate_Australia:0 "Integrate Australia"
+ Integrate_Australia_desc:0 "Australia’s destiny lies inseparably bound with that of Britain. Integrating Australia will further consolidate the Imperial Federation and bolster our presence in the Pacific."
+
+ Integrate_New_Zealand:0 "Integrate New Zealand"
+ Integrate_New_Zealand_desc:0 "New Zealand has always stood with the Empire through thick and thin. Its full integration into the United Kingdom will ensure our unity endures for generations."
+
+ Integrate_South_Africa:0 "Integrate South Africa"
+ Integrate_South_Africa_desc:0 "South Africa is a vital link between the Atlantic and Indian Oceans. Its integration will bring stability and a united vision to the Empire’s southern dominions."
+ ENG_imperial_Dockyards_idea:0 "Imperial Dockyards"
+ ENG_imperial_fleet:0 "The Imperial Fleet"
+ ENG_imperial_fleet_desc:0 "To secure our global empire and maintain command of the seas, the Royal Navy must once again be the pride of the Empire. By investing in advanced escort vessels and modern doctrines, we shall ensure that no enemy fleet dares challenge our might. The screens of His Majesty’s Navy will stand as the shield and spear of the Empire."
+ ENG_imperial_fleet_idea:0 "The Imperial Fleet"
+
+  ENG_Royal_Industry:0 "Royal Industry"
+  ENG_Royal_Industry_desc:0 "With the King’s leadership guiding the nation, we shall restore and expand our industrial capacity under royal oversight. A stronger domestic industry will fuel both our economy and our growing military might."
+
+  ENG_imperial_Dockyards:0 "Imperial Dockyards"
+  ENG_imperial_Dockyards_desc:0 "The pride of the British Empire rests upon the strength of its navy. By expanding dockyard capacity and improving efficiency, we will ensure that His Majesty’s fleet once again dominates the oceans of the world."
+
+  ENG_The_Kings_Guard:0 "The King’s Guard"
+  ENG_The_Kings_Guard_desc:0 "Loyal soldiers, sworn to protect the King and the realm, will form an elite core of our armed forces. The King’s Guard shall stand as both a symbol and a shield of royal authority across the empire."
+
  
  ENG_Beneleux_Buffer_States:0 "Beneleux Buffer States"
  ENG_Beneleux_Buffer_States_desc:0 ""
@@ -143,7 +205,11 @@
  ENG_Follow_Trotsky_desc:0 ""
  
  ENG_The_British_Red_Army:0 "The British Red Army"
- ENG_The_British_Red_Army_desc:0 ""
+ ENG_The_British_Red_Army_desc:0 "The revolution must be defended by the workers in arms. The old royal army, loyal to crown and class, will be transformed into a People's force guided by socialist principles, political education, and unwavering discipline. The British Red Army shall stand as the shield of the revolution, ready to crush reaction at home and abroad."
+
+ ENG_The_British_Red_Army_after_Trotzkys_Plan:0 "The British Red Army After Trotsky’s Plan"
+ ENG_The_British_Red_Army_after_Trotzkys_Plan_desc:0 "Following Trotsky’s revolutionary military doctrine, the British Red Army will be reshaped into a highly disciplined, politically conscious force capable of rapid manoeuvre and decisive action. Emphasising professionalism, revolutionary zeal, and internationalist purpose, this army will not merely defend the revolution—it will carry it forward beyond Britain’s shores."
+  ENG_The_British_Red_Army2:0 "The British Red Army"
  
  ENG_The_Permanent_Revolution:0 "The Permanent Revolution"
  ENG_The_Permanent_Revolution_desc:0 ""

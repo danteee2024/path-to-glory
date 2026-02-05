@@ -1,0 +1,339 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+ #################### 
+
+POL_pzinz_organization = {
+	include = generic_infantry_tank_organization
+	icon = GFX_idea_POL_pzinz
+	
+	allowed = {	
+		OR = {
+			AND = {
+				tag = POL
+				OR = {
+					has_dlc = "Poland: United and Ready"
+					has_dlc = "No Step Back"
+				}
+			}
+			tag = ROM
+		}
+	}
+
+	available = {
+		# When in a Foreign MIO, countries need to be at peace with original country
+		IF = {
+			limit = {
+				FROM = { NOT = { original_tag = POL } }
+			}
+			FROM = { NOT = { has_war_with = POL } }
+		}
+	}
+	
+	initial_trait = {
+		name = POL_mio_trait_multi_role_tank_designer
+		
+		limit_to_equipment_type = { 
+			armor
+		}
+		
+		equipment_bonus = {
+			maximum_speed = 0.05
+			reliability = 0.05
+		}
+	}
+	
+	add_trait = {
+		token = POL_mio_trait_cruiser_tanks
+		name = POL_mio_trait_cruiser_tanks
+		icon = GFX_generic_mio_department_icon_tank_general_engine
+		special_trait_background = yes
+		
+		position = { x=1 y=1 }  
+		relative_position_id = generic_mio_trait_interleaved_track_wheels
+		
+		any_parent = { generic_mio_trait_interleaved_track_wheels generic_mio_trait_overlapped_track_wheels }
+		
+		limit_to_equipment_type = { medium_tank_chassis heavy_tank_chassis }
+		
+		equipment_bonus = {
+			maximum_speed = 0.1
+			breakthrough = 0.05
+		} 
+	}
+}
+POL_medium_tank_organization = {
+    name = POL_medium_tank_organization
+    include = generic_medium_tank_organization
+    icon = GFX_idea_generic_tank_manufacturer
+
+    allowed = {
+        original_tag = POL
+    }
+	add_trait = {
+		token = POL_mio_trait_Advamced_armament
+		name = POL_mio_trait_Advamced_armament
+		icon = GFX_generic_mio_department_icon_tank_general_at
+		special_trait_background = yes
+
+		position = { x=1 y=2 }
+		relative_position_id = generic_mio_trait_spaced_armor
+
+		all_parents = { generic_mio_trait_improved_gun_metallurgy }
+
+		any_parent = { generic_mio_trait_spaced_armor generic_mio_trait_crew_survival_layout generic_mio_trait_sloped_side_armor }
+		
+		available = {
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.1
+			ap_attack = 0.05
+			hard_attack = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+	add_trait = {
+		name = POL_mio_trait_improved_Chassies
+		icon = GFX_generic_mio_department_icon_tank_heavy_tank_quality
+		special_trait_background = yes
+
+		position = { x=-1 y=1 }
+		relative_position_id = generic_mio_trait_improved_suspension
+
+		all_parents = { generic_mio_trait_improved_suspension }
+
+		
+		available = {
+		}
+
+		equipment_bonus = {
+			breakthrough = 0.05
+			reliability = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+
+	add_trait = {
+		token = GER_mio_trait_mobility_design_philosophy
+		name = GER_mio_trait_mobility_design_philosophy 
+		icon = GFX_generic_mio_department_icon_tank_medium_tank_engine
+		special_trait_background = yes
+
+		position = { x=1 y=1 }
+		relative_position_id = generic_mio_trait_improved_suspension
+
+		all_parents = { generic_mio_trait_improved_suspension }
+
+		
+		available = {
+		}
+
+		equipment_bonus = {
+			maximum_speed = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+}
+
+POL_heavy_tank_organization = {
+	name = POL_heavy_tank_organization
+	include = generic_heavy_tank_organization
+	icon = GFX_idea_generic_tank_manufacturer
+
+    allowed = {
+        original_tag = POL
+    }
+	initial_trait = {
+		
+		limit_to_equipment_type = { 
+			heavy_tank_chassis 
+		}
+		
+		equipment_bonus = {
+			armor_value = 0.1
+		}
+	}
+
+	add_trait = {
+		token = GER_mio_trait_multi_role_tanks
+		name = GER_mio_trait_multi_role_tanks
+		icon = GFX_generic_mio_department_icon_tank_heavy_tank_aa
+		special_trait_background = yes
+
+		position = { x=-2 y=0 }
+		relative_position_id = generic_mio_trait_one_piece_hull_side_coverings
+
+		visible = {
+			FROM = { original_tag = POL }
+		}
+
+		available = {
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			air_attack = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+
+	add_trait = {
+		token = GER_mio_trait_anti_tank_specialization
+		name = GER_mio_trait_anti_tank_specialization
+		icon = GFX_generic_mio_department_icon_tank_heavy_tank_at
+		special_trait_background = yes
+
+		all_parents = {
+            generic_mio_trait_one_piece_hull_side_coverings
+            GER_mio_trait_multi_role_tanks
+        }
+
+		position = { x=-1 y=1 }
+		relative_position_id = generic_mio_trait_one_piece_hull_side_coverings
+
+		visible = {
+			FROM = { original_tag = POL }
+		}
+
+		available = {
+		}
+
+		equipment_bonus = {
+			hard_attack = 0.05
+			ap_attack = 0.05
+		}
+
+		ai_will_do = {
+			base = 2
+		}
+	}
+
+}
+
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+POL_stocznia_gdynia_organization = {
+	include = generic_task_force_ship_organization
+	icon = GFX_idea_POL_stocznia_gdynia
+	allowed = {	
+		tag = POL
+		OR = {
+			has_dlc = "Poland: United and Ready"
+			has_dlc = "No Step Back"
+		}
+	}
+}
+
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+POL_pws_organization = {
+	include = generic_light_aircraft_organization
+	icon = GFX_idea_POL_pws
+	allowed = {	
+		tag = POL
+		OR = {
+			has_dlc = "Poland: United and Ready"
+			has_dlc = "No Step Back"
+		}
+	}
+}
+POL_pzl_organization = {
+	include = generic_medium_aircraft_organization
+	icon = GFX_idea_POL_pzl
+	allowed = {	
+		tag = POL
+		OR = {
+			has_dlc = "Poland: United and Ready"
+			has_dlc = "No Step Back"
+		}
+	}
+}
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+
+###################################
+
+POL_fb_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_POL_fb
+	allowed = {	
+		tag = POL
+		OR = {
+			has_dlc = "Poland: United and Ready"
+			has_dlc = "No Step Back"
+		}
+	}
+}
+POL_lrl_organization = {
+	include = generic_motorized_mechanized_organization
+	icon = GFX_idea_POL_lrl
+	allowed = {	
+		tag = POL
+		OR = {
+			has_dlc = "Poland: United and Ready"
+			has_dlc = "No Step Back"
+		}
+	}
+}
+POL_smpa_organization = {
+	include = generic_artillery_organization
+	icon = GFX_idea_POL_smpa
+	allowed = {	
+		tag = POL
+		OR = {
+			has_dlc = "Poland: United and Ready"
+			has_dlc = "No Step Back"
+		}
+	}
+}
+
+### Foreign Subsidiaries
+
+### POL_USA_ford_motor_company_organization - Polish Ford -> see USA_organizations.txt 
+
+### POL_ENG_vauxhall_organization - Polish Vauxall -> see ENG_organizations.txt 
+
+### POL_FRA_somua_organization - Polish SOMUA -> see FRA_organizations.txt 

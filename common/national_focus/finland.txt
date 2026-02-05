@@ -6592,7 +6592,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = FIN_viron_kansa
-		cost =5 
+		cost = 10
 
 		bypass = {
 			EST = {
@@ -6803,7 +6803,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = FIN_union_of_finnish_brothers_in_arms
-		cost =5 
+		cost = 10
 		available = {
 			OR = {
 				has_idea = all_adults_serve
@@ -7198,7 +7198,7 @@ focus_tree = {
 				has_completed_focus = FIN_prepare_a_military_coup
 				AND = {
 					has_completed_focus = FIN_discredit_the_democratic_system
-					fascism > 0.4
+					fascism > 0.5
 					has_stability > 0.45
 				}
 			}
@@ -8317,9 +8317,9 @@ focus_tree = {
 			custom_effect_tooltip = FIN_modify_fascist_regime_ns_intro
 			add_to_variable = { FIN_fascist_regime_special_forces_cap = 0.3 tooltip = special_forces_cap_tt }
 			add_to_variable = { FIN_fascist_regime_special_forces_no_supply_grace = 24 tooltip = special_forces_no_supply_grace_tt }
-			add_to_variable = { FIN_fascist_regime_special_forces_out_of_supply_factor = -0.15 tooltip = special_forces_out_of_supply_factor_tt }
-			add_to_variable = { FIN_fascist_regime_special_forces_attack_factor = 0.10 tooltip = special_forces_attack_factor_tt }
-			add_to_variable = { FIN_fascist_regime_special_forces_training_time_factor = 0.2 tooltip = special_forces_training_time_factor_tt }
+			add_to_variable = { FIN_fascist_regime_special_forces_out_of_supply_factor = -0.10 tooltip = special_forces_out_of_supply_factor_tt }
+			add_to_variable = { FIN_fascist_regime_special_forces_attack_factor = 0.05 tooltip = special_forces_attack_factor_tt }
+			add_to_variable = { FIN_fascist_regime_special_forces_training_time_factor = 0.5 tooltip = special_forces_training_time_factor_tt }
 
 			add_tech_bonus = {
 				name = FIN_advanced_jaeger_training_program
@@ -10236,10 +10236,10 @@ focus_tree = {
 
 			custom_effect_tooltip = FIN_modify_finnish_army_ns_intro
 			add_to_variable = { FIN_finnish_army_experience_gain_army_factor = 0.05 tooltip = experience_gain_army_factor_tt }
-			add_to_variable = { FIN_finnish_army_dig_in_speed_factor = 0.1 tooltip = dig_in_speed_factor_tt }
+			add_to_variable = { FIN_finnish_army_dig_in_speed_factor = 0.05 tooltip = dig_in_speed_factor_tt }
 			add_to_variable = { FIN_finnish_army_training_time_factor = -0.1 tooltip = training_time_factor_tt }
 			add_to_variable = { FIN_finnish_army_mobilization_speed = 0.1 tooltip = mobilization_speed_tt }
-			add_to_variable = { FIN_finnish_army_conscription_factor = 0.1 tooltip = conscription_factor_tt }
+			add_to_variable = { FIN_finnish_army_conscription_factor = 0.05 tooltip = conscription_factor_tt }
 		}
 	}
 	
@@ -10260,7 +10260,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = FIN_modify_finnish_army_ns_intro
 			add_to_variable = { FIN_finnish_army_acclimatization_cold_climate_gain_factor = 0.1 tooltip = acclimatization_cold_climate_gain_factor_tt }
-			add_to_variable = { FIN_finnish_army_cas_damage_reduction = 0.15 tooltip = cas_damage_reduction_tt }
+			add_to_variable = { FIN_finnish_army_cas_damage_reduction = 0.10 tooltip = cas_damage_reduction_tt }
 			add_to_variable = { FIN_finnish_army_winter_attrition_factor = -0.15 tooltip = winter_attrition_factor_tt }
 
 			army_experience = 15
@@ -10287,9 +10287,8 @@ focus_tree = {
 			set_technology = { bicycle_infantry = 1 popup = no }
 
 			custom_effect_tooltip = FIN_modify_finnish_army_ns_intro
-			add_to_variable = { FIN_finnish_army_army_org_factor = 0.1 tooltip = army_org_factor_tt }
-			add_to_variable = { FIN_finnish_army_special_forces_cap = 0.15 tooltip = special_forces_cap_tt }
-			add_to_variable = { FIN_finnish_army_breakthrough_factor = 0.05 tooltip = breakthrough_factor_tt }
+			add_to_variable = { FIN_finnish_army_army_org_factor = 0.05 tooltip = army_org_factor_tt }
+			add_to_variable = { FIN_finnish_army_special_forces_cap = 0.05 tooltip = special_forces_cap_tt }
 			add_to_variable = { FIN_finnish_army_special_forces_out_of_supply_factor = -0.1 tooltip = special_forces_out_of_supply_factor_tt }
 
 			show_unit_leaders_tooltip = FIN_hannu_hannuksela
@@ -10475,9 +10474,9 @@ focus_tree = {
 			army_experience = 25
 
 			custom_effect_tooltip = FIN_modify_finnish_army_ns_intro
-			add_to_variable = { FIN_finnish_army_org_loss_when_moving = -0.15 tooltip = org_loss_when_moving_tt }
-			add_to_variable = { FIN_finnish_army_recon_factor_while_entrenched = 0.1 tooltip = recon_factor_while_entrenched_tt }
-			add_to_variable = { FIN_finnish_army_army_attack_speed_factor = 0.1 tooltip = army_attack_speed_factor_tt }
+			add_to_variable = { FIN_finnish_army_org_loss_when_moving = -0.1 tooltip = org_loss_when_moving_tt }
+			add_to_variable = { FIN_finnish_army_recon_factor_while_entrenched = 0.05 tooltip = recon_factor_while_entrenched_tt }
+			add_to_variable = { FIN_finnish_army_army_attack_speed_factor = 0.05 tooltip = army_attack_speed_factor_tt }
 
 			show_unit_leaders_tooltip = FIN_matti_aarnio
 
@@ -10990,10 +10989,9 @@ focus_tree = {
 			army_experience = 35
 
 			custom_effect_tooltip = FIN_modify_finnish_army_ns_intro
-			add_to_variable = { FIN_finnish_army_initiative_factor = 0.02 tooltip = initiative_factor_tt }
-			add_to_variable = { FIN_finnish_army_recon_factor_while_entrenched = 0.1 tooltip = recon_factor_while_entrenched_tt }
-			add_to_variable = { FIN_finnish_army_modifier_army_sub_unit_long_range_patrol_support_attack_factor = 0.1 tooltip = modifier_army_sub_unit_long_range_patrol_support_attack_factor_tt }
-			add_to_variable = { FIN_finnish_army_modifier_army_sub_unit_long_range_patrol_support_defence_factor = 0.1 tooltip = modifier_army_sub_unit_long_range_patrol_support_defence_factor_tt }		
+			add_to_variable = { FIN_finnish_army_recon_factor_while_entrenched = 0.05 tooltip = recon_factor_while_entrenched_tt }
+			add_to_variable = { FIN_finnish_army_modifier_army_sub_unit_long_range_patrol_support_attack_factor = 0.05 tooltip = modifier_army_sub_unit_long_range_patrol_support_attack_factor_tt }
+			add_to_variable = { FIN_finnish_army_modifier_army_sub_unit_long_range_patrol_support_defence_factor = 0.05 tooltip = modifier_army_sub_unit_long_range_patrol_support_defence_factor_tt }		
 
 			show_unit_leaders_tooltip = FIN_erkki_raappana
 		}

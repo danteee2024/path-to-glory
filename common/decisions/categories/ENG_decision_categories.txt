@@ -1,6 +1,19 @@
 ################
 ##### ENG ######
 ################
+ENG_Imperial_Federation = {
+	icon = eng_move_to_secure_the_dominions
+
+	allowed = {
+		original_tag = ENG
+	}
+	priority = 60
+	visible = {
+		has_completed_focus = ENG_imperial_federation
+
+		}
+	}
+
 ENG_narvik_crisis_cat = {
 	icon = eng_move_to_secure_the_dominions
 

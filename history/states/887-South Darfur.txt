@@ -4,10 +4,6 @@ state={
 
 	manpower = 302020
 	state_category = wasteland
-
-	resources = {
-		tungsten = 16
-	}
 	
 	history = {
 		owner = ENG
@@ -16,6 +12,10 @@ state={
 			infrastructure = 1
 		}
 
+	}
+
+	resources = {
+		tungsten = 6
 	}
 
 	provinces={

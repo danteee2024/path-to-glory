@@ -2552,6 +2552,95 @@ country_event = {
 		}
 	}
 }
+# Demand ireland
+country_event = {
+	id = britain.332
+	title = britain.332.t
+	desc = britain.332.d	
+	picture = GFX_report_event_generic_rally
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = britain.332.a
+		ai_chance = {
+			base = 50
+		}
+		
+		ENG = {
+			country_event = { id = britain.333 }
+		}
+	}
+	
+	option = {
+		name = britain.332.b
+		ai_chance = {
+			base = 50
+			modifier = {
+				is_subject_of = FROM
+				factor = 0
+			}
+			modifier = {
+				original_tag = ire
+				factor = 0
+			}			
+		}
+		
+		effect_tooltip = {
+			SAU = {
+				create_wargoal = {
+					type = annex_everything
+					target = IRE
+				}
+			}
+		}
+		hidden_effect = { ENG = { country_event = { id = britain.334 } } }
+	}
+}
+
+
+
+# Ireland accepts
+country_event = {
+	id = britain.333
+	title = britain.333.t
+	desc = britain.333.d
+	picture = GFX_report_event_german_troops
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = britain.346.a
+				
+	annex_country = {
+		target = IRE
+		transfer_troops = yes
+	}
+	113 = {  add_core_of = ENG }
+	135 = {  add_core_of = ENG }
+	134 = {  add_core_of = ENG }
+
+	
+	}
+}
+
+#Ireland refuses
+country_event = {
+	id = britain.334
+	title = britain.334.t
+	desc = britain.334.d
+	picture = GFX_report_event_soldiers_marching
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = britain.343.a
+		create_wargoal = {
+			type = annex_everything
+			target = IRE
+		}
+	}
+}
 
 # Threaten Ireland
 

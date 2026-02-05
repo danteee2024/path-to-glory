@@ -4,6 +4,105 @@
 
 add_namespace = NSB_poland_events
 
+# Demand FIN FOR SWE
+country_event = {
+	id = NSB_poland_events.432
+	title = NSB_poland_events.432.t
+	desc = NSB_poland_events.432.d	
+	picture = GFX_report_event_generic_rally
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NSB_poland_events.432.a
+		ai_chance = {
+			base = 50
+		}
+		
+		POL = {
+			country_event = { id = NSB_poland_events.433 }
+		}
+	}
+	
+	option = {
+		name = NSB_poland_events.432.b
+		ai_chance = {
+			base = 50
+			modifier = {
+				is_subject_of = FROM
+				factor = 0
+			}
+			modifier = {
+				original_tag = FIN
+				factor = 0
+			}			
+		}
+		
+		effect_tooltip = {
+			POL = {
+				create_wargoal = {
+					type = annex_everything
+					target = FIN
+				}
+			}
+		}
+		hidden_effect = { POL = { country_event = { id = NSB_poland_events.434 } } }
+	}
+}
+
+
+
+# FIN accepts
+country_event = {
+	id = NSB_poland_events.433
+	title = NSB_poland_events.433.t
+	desc = NSB_poland_events.433.d
+	picture = GFX_report_event_german_troops
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NSB_poland_events.446.a
+	SWE = {		
+	annex_country = {
+		target = FIN
+	}
+	every_state = {
+			limit = {
+						is_core_of = FIN
+					}
+					add_core_of = SWE
+	}
+   }
+   every_state = {
+			limit = {
+						is_core_of = FIN
+					}
+					add_claim_by = POL
+	}
+
+	
+	}
+}
+
+#FIN refuses
+country_event = {
+	id = NSB_poland_events.434
+	title = NSB_poland_events.434.t
+	desc = NSB_poland_events.434.d
+	picture = GFX_report_event_soldiers_marching
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NSB_poland_events.443.a
+		create_wargoal = {
+			type = annex_everything
+			target = FIN
+		}
+	}
+}
+
 #Poland demands Slovakia
 country_event = {
 	id = NSB_poland_events.1
@@ -332,6 +431,10 @@ country_event = {
 		set_autonomy = {
 			target = SWE
 			autonomy_state = autonomy_personal_union
+		}
+		add_timed_idea = {
+			idea = POL_Polish_Swedish_Culture_Difference
+			days = 180
 		}
 	}
 }

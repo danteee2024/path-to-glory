@@ -1,0 +1,29 @@
+ideas = {
+	country = {
+		passive_mastery_gain = {
+			picture = PLACEHOLDER_idea_icon
+			removal_cost = -1
+			
+			allowed = {
+				always = yes
+			}
+			
+			modifier = {
+				# Air Doctrine Mastery Gain
+				new_strategic_destruction_mastery_gain_factor = 1.5
+				new_battlefield_support_mastery_gain_factor = 1.5
+				new_operational_integrity_mastery_gain_factor = 1.5
+				
+				# Naval Doctrine Mastery Gain
+				new_base_strike_mastery_gain_factor = 1.5
+				new_fleet_in_being_mastery_gain_factor = 1.5
+				new_convoy_raiding_mastery_gain_factor = 1.5
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+}
+

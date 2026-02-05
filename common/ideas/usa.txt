@@ -19,14 +19,11 @@ ideas = {
 				political_power_factor = 0.20
 				military_industrial_organization_funds_gain = 0.15
 			}
-		}
-		USA_arsenal_of_prosperity = {
-	   picture = GFX_idea_generic_industry
-	   allowed = {
-		tag = USA
-	    }
+		} 
+	 	USA_Communist_Army = {
+	   picture = generic_communist_army
 		allowed = {
-				always = no
+				always = yes
 			}
 
 			allowed_civil_war = {
@@ -35,11 +32,52 @@ ideas = {
 
 			removal_cost = -1
 		modifier = {
-		production_factory_max_efficiency_factor = 0.05
-		production_factory_efficiency_gain_factor = 0.10
-		industrial_capacity_factory = 0.10
-		industrial_capacity_dockyard = 0.10
+		army_attack_factor = 0.05
+		army_defence_factor = 0.05
+		army_speed_factor = 0.05
 		}
+		}
+		USA_arsenal_of_prosperity = {
+			picture = GFX_idea_generic_industry
+			allowed = {
+				tag = USA
+			}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.15
+				industrial_capacity_factory = 0.10
+				industrial_capacity_dockyard = 0.10
+			}
+		}
+
+		USA_beacon_of_democracy = {
+			picture = GFX_beacon_of_democracy
+			allowed = {
+				tag = USA
+			}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				democratic_drift = 0.15
+			}
 		}
 		great_depression = {
 			picture = usa_great_depression_3
@@ -62,7 +100,7 @@ ideas = {
 				local_resources_factor = -0.2
 			}
 		}
-		great_depression_2 = {
+		great_depression_1 = {
 			picture = usa_great_depression_2
 			
 			allowed = {
@@ -83,7 +121,7 @@ ideas = {
 				local_resources_factor = -0.15
 			}
 		}
-		great_depression_3 = {
+		great_depression_2 = {
 			picture = usa_great_depression
 			
 			allowed = {
@@ -104,27 +142,7 @@ ideas = {
 				local_resources_factor = -0.1
 			}
 		}
-		great_depression_4 = {
-			picture = usa_great_depression
-			
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				stability_factor = -0.05
-				political_power_cost = 0.25
-				consumer_goods_factor = 0.2
-				conscription_factor = -0.1
-				local_resources_factor = -0.05
-			}
-		}
+		
 		USA_limited_intervention = {
 			picture = generic_production_bonus
 			

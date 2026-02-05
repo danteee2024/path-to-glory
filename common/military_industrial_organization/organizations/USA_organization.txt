@@ -794,14 +794,6 @@ USA_ford_motor_company_organization = {
 				has_dlc = "Battle for the Bosporus"
 			}
 			AND = {
-				OR = {
-					original_TAG = LAT
-					original_TAG = LIT
-					original_TAG = EST
-				}
-				has_dlc = "No Step Back"
-			}
-			AND = {
 				original_TAG = BRA
 				# TODO_JUNO: Add juno DLC name here!!
 				has_dlc = "Arms Against Tyranny"
@@ -840,20 +832,6 @@ USA_ford_motor_company_organization = {
 		IF = {
 			limit = { FROM = { original_tag = ROM } }
 			FROM = { has_country_flag = USA_mot_chosen }
-		}
-		if = {
-			limit = {
-				FROM = {
-					OR = {
-						original_TAG = LAT
-						original_TAG = LIT
-						original_TAG = EST
-					}
-				}
-			}
-			FROM = {
-				has_completed_focus = BALTIC_ford_motors
-			}
 		}
 		IF = {
 			limit = {

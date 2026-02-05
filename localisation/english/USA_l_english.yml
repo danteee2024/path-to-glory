@@ -277,7 +277,9 @@ USA_wpa:0 "Works Progress Administration"
  USA_legislation_drafted_days_tt:0 "Current days are: [?USA_new_legislation_drafed_flag:days|Y0]"
  USA_new_legislation_drafed_flag:0 "Latest governmental act was drafted"
 
- #focuses#
+ #focuses# 
+  USA_Communist_Army:0 "The People's Army of America"
+  USA_Communist_Army_desc:0 "With the revolution underway, the bourgeois command structure must be dismantled and replaced with a disciplined force loyal to the workers. By reorganizing our military along communist principles, we ensure that every soldier fights not for profit, but for the liberation of the oppressed and the defense of the American proletariat."
  USA_foundation_of_NATO:0 "Foundation of NATO"
  USA_foundation_of_NATO_desc:0 "The world is changing rapidly around us: many of the former Great Powers lay in ruins after a devastating war has swept over continents. [USA.getNameDefCap] has managed not only to retain, but also strengthen its status as the worlds Superpower. The time has come to take direct control of the matter."
 
@@ -383,9 +385,15 @@ USA_wpa:0 "Works Progress Administration"
  mtg_usa_civil_war_fascists.20.b:0 "Dixie Must be Defended!"
 
 #LAST STAND IDEAS
- army_rangers_idea:0 "US Army Rangers"
- army_rangers_idea_desc:0 "We have trained our soldiers to be specialiezd in close quarters combat."
-  great_depression_4:0 "Stagnant Recovery"
+army_rangers_idea:0 "US Army Rangers"
+army_rangers_idea_desc:0 "We have trained our soldiers to be specialiezd in close quarters combat."
+great_depression:0 "The Great Depression"
+great_depression_1:0 "Ongoing Recovery"
+great_depression_2:0 "Slow Recovery"
+great_depression_4:0 "Stagnant Recovery" #legacy, kept for compatibility
+USA_great_depression_step1_tt:0 "Reduces the effect of §YThe Great Depression§! by one step.\nConsumer Goods Factories: §G-20%§!"
+USA_great_depression_step2_tt:0 "Further reduces the effect of §YThe Great Depression§! by one step.\nConsumer Goods Factories: §G-20%§!"
+USA_great_depression_clear_tt:0 "Completely removes §YThe Great Depression§! national spirit."
 operation_liberty_lion_idea:0 "Operation Liberty Lion"
 operation_liberty_lion_desc:0 "The new world shall liberate the old, no matter what it takes."
 

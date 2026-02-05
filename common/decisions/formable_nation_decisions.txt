@@ -14318,6 +14318,7 @@ greater_italy_category = {
 	proclaim_greater_italy = { 
 
 		icon = generic_form_nation
+		cost = 100
 
 		allowed = {
 			original_tag = ITA # Italy
@@ -14333,7 +14334,6 @@ greater_italy_category = {
 		}
 
 		available = {
-			has_completed_focus = ITA_towards_a_greater_italy
 			custom_trigger_tooltip = {
 				tooltip = greater_italy_required_states
 				controls_state = 852 # Istria
@@ -14411,9 +14411,24 @@ greater_italy_category = {
 				    name = ITA_italian_ajaccio_name   
 				} 
 				
-				# Ticino
-				
+				# All of yugo
+				102 = { add_core_of = ROOT }
 				846 = { add_core_of = ROOT }
+				109 = { add_core_of = ROOT }
+				104 = { add_core_of = ROOT }
+				45 = { add_core_of = ROOT }
+				107 = { add_core_of = ROOT }
+				105 = { add_core_of = ROOT }
+				108 = { add_core_of = ROOT }
+				106 = { add_core_of = ROOT }
+				970 = { add_core_of = ROOT }
+				764 = { add_core_of = ROOT }
+				802 = { add_core_of = ROOT }
+				803 = { add_core_of = ROOT }
+				804 = { add_core_of = ROOT }
+				44 = { add_core_of = ROOT }
+				805 = { add_core_of = ROOT }
+				934 = { add_core_of = ROOT }
 				
 				# Savoy
 				

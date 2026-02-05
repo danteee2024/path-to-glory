@@ -12,6 +12,34 @@
 
  #Focus
  GRE_economic_recovery:0 "Economic Recovery"
+ GRE_Honor_the_Byzantinum:0 "Honor the Byzantinum"
+ GRE_Byzantinum_Economy:0 "Byzantine Economic Reforms"
+ GRE_Byzantinum_Economy_desc:0 "Building upon the restored Themata system, we will reorganize the economy of the reborn Byzantium to strengthen trade, expand production, and ensure the empire’s prosperity for centuries to come."
+  GRE_Demands_on_Turkey:0 "Demands on Turkey"
+ GRE_Demands_on_Turkey_desc:0 "In light of our historic claims and the suffering of the Anatolian refugees, Greece will formally issue demands to Turkey. If they refuse, the matter may need to be settled by force. Our people must be restored to their rightful homes."
+  GRE_Project_Poseidon:0 "Project Poseidon"
+ GRE_Project_Poseidon_desc:0 "Greece will pursue an ambitious naval program to develop a new class of heavy battleships worthy of the god of the sea himself. By concentrating resources and expertise, we can significantly reduce the cost of constructing these massive warships."
+
+ GRE_Project_Poseidon_idea:0 "Project Poseidon"
+ Byzantinum_Economy1:0 "Byzantinum Economy"
+ GRE_homeplan:0 "Schachtplan"
+  GRE_Byzantine_Gold:0 "Byzantine Gold"
+ GRE_Byzantine_Gold_desc:0 "Reviving the ancient prestige of the Byzantine solidus, Greece will adopt a modernized gold standard to stabilize our currency, strengthen investor confidence, and assert our economic independence."
+ # =========================
+ greece.332.t:0 "The Question of Turkey"
+ greece.332.d:0 "With tensions rising in the Eastern Mediterranean, voices within our government argue that the time has come to press our claims against Turkey. Some believe diplomatic pressure will suffice, while others insist that only force can secure our national ambitions."
+
+ greece.332.a:0 "Present our demands diplomatically"
+ greece.332.b:0 "Prepare for war against Turkey"
+
+ # =========================
+ # Turkey Accepts
+ # =========================
+ greece.333.t:0 "Turkey Submits"
+ greece.333.d:0 "Faced with overwhelming pressure and the threat of conflict, the Turkish government has capitulated. Their state apparatus has collapsed, and our forces move in to secure full control of the country."
+
+ greece.346.a:0 "Turkey is ours"
+
  GRE_economic_recovery_desc:0 "As a small nation, [GRE.GetNameDef] must prepare to weather any potential storm. Stabilizing our economy will do well to further this goal."
  GRE_industrial_effort:0 "Industrial Expansion"
  GRE_industrial_effort_desc:0 "We will begin to subsidize and approve projects to expand our civilian industry within our nation, allowing us to employ vast swaths of our citizens while industrializing our country in the process."

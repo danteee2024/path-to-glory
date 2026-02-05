@@ -6,8 +6,10 @@ state={
 	
 	state_category = city
 	resources = {
-		steel = 16
+		coal = 4
+		steel = 9
 	}
+	
 	history={
 		owner = COL
 		buildings = {

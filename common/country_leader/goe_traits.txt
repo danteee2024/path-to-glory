@@ -246,7 +246,7 @@ leader_traits = {
 		resistance_target = -0.05
 		annex_cost_factor = -0.25
 		justify_war_goal_time = -0.33
-		army_core_attack_factor = 0.05
+		army_core_attack_factor = 0.15
 		ai_will_do = {
 			factor = 1
 		}
@@ -254,7 +254,7 @@ leader_traits = {
 
 	death = {
 		sprite = 13
-		#army_attack_factor = 0.12
+		army_attack_factor = 0.12
 		tactic_overwhelming_fire_preferred_weight_factor = 1
 		training_time_army_factor = -0.15
 		generate_wargoal_tension = -1
@@ -272,8 +272,8 @@ leader_traits = {
 	father_of_pakistan = {
 		sprite = 13
 		surrender_limit = 0.1
-		army_core_defence_factor = 0.05
-		#army_core_attack_factor = 0.0
+		army_core_defence_factor = 0.15
+		army_core_attack_factor = 0.1
 		political_power_factor = 0.1
 		stability_factor = 0.12
 	}
@@ -515,8 +515,8 @@ leader_traits = {
 	}
 
 	RAJ_GOE_baluchistans_soverign = {
-		army_core_defence_factor = 0.03
-		army_core_attack_factor = 0.03
+		army_core_defence_factor = 0.10
+		army_core_attack_factor = 0.10
 		sprite = 5
 	}
 
@@ -547,8 +547,7 @@ leader_traits = {
 	}
 
 	RAJ_GOE_cautious_strategist = {
-		planning_speed = -0.15
-		max_planning = 0.05
+		army_core_defence_factor = 0.12
 		sprite = 5
 	}
 
@@ -627,7 +626,7 @@ leader_traits = {
 
 	RAJ_heir_of_the_empire = {
 		stability_factor = 0.1
-		army_core_defence_factor = 0.05
+		army_core_defence_factor = 0.1
 		army_core_attack_factor = 0.05
 		political_power_factor = 0.05
 	}
@@ -712,8 +711,8 @@ leader_traits = {
 	red_tiger_of_bengal = {
 		sprite = 13
 		resistance_damage_to_garrison_on_our_occupied_states = 0.15
-		army_core_defence_factor = 0.05
-		army_core_attack_factor = 0.03
+		army_core_defence_factor = 0.1
+		army_core_attack_factor = 0.08
 		communism_drift = 0.02
 	}
 	#RAJ

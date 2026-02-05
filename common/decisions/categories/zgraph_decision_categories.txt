@@ -1,9 +1,0 @@
-ASG_category = {
-	icon = gre_paying_ifc_debt
-	
-	priority = 100
-
-	allowed = {
-		always = yes 
-	}
-}

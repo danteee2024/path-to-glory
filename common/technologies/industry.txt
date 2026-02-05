@@ -2102,6 +2102,8 @@ technologies = {
 
 	###### INDUSTRIAL EXPANSION START #######
 	industrial_expansion_tech_1 = {
+		global_building_slots = 1
+		local_resources_coal_factor = 0.05
 		allow_branch = {
 			has_game_rule = {
 				rule = rule_industrial_expansion
@@ -2137,6 +2139,8 @@ technologies = {
 	}
 	
 	industrial_expansion_tech_2 = {
+		global_building_slots = 1
+		local_resources_coal_factor = 0.05
 		enable_building = {
 			building = industrial_expansion
 			level = 2
@@ -2166,6 +2170,8 @@ technologies = {
 	}
 	
 	industrial_expansion_tech_3 = {
+		global_building_slots = 1
+		local_resources_coal_factor = 0.05
 		enable_building = {
 			building = industrial_expansion
 			level = 3
@@ -2195,6 +2201,8 @@ technologies = {
 	}
 	
 	industrial_expansion_tech_4 = {
+		global_building_slots = 1
+		local_resources_coal_factor = 0.05
 		enable_building = {
 			building = industrial_expansion
 			level = 4
@@ -2224,6 +2232,8 @@ technologies = {
 	}
 	
 	industrial_expansion_tech_5 = {
+		global_building_slots = 1
+		local_resources_coal_factor = 0.05
 		enable_building = {
 			building = industrial_expansion
 			level = 5
@@ -2251,160 +2261,7 @@ technologies = {
 		start_year = 1943
 	}
 	
-	resource_expansion_tech_1 = {
-		allow_branch = {
-			has_game_rule = {
-				rule = rule_resource_expansion
-				option = ENABLED
-			}
-		}
-		
-		enable_building = {
-			building = resource_expansion_steel
-			level = 5
-		}
-		
-		enable_building = {
-			building = resource_expansion_aluminium
-			level = 5
-		}
-		
-		enable_building = {
-			building = resource_expansion_tungsten
-			level = 5
-		}
-		
-		enable_building = {
-			building = resource_expansion_chromium
-			level = 5
-		}
-		
-		folder = {
-			name = industry_folder
-			position = { x = 0 y = 0 }
-		}
-		
-		path = {
-			leads_to_tech = resource_expansion_tech_2
-			research_cost_coeff = 1
-		}
-		
-		categories = {
-			extractor_tech
-			industry
-		}
-		
-		ai_will_do = {
-			factor = 1			
-		}
-		
-		research_cost = 2
-		start_year = 1936
-	}
 	
-	resource_expansion_tech_2 = {
-		on_research_complete = {
-			modify_building_resources = {
-				building = resource_expansion_steel
-				resource = steel
-				amount = 1
-			}
-			
-			modify_building_resources = {
-				building = resource_expansion_aluminium
-				resource = aluminium
-				amount = 1
-			}
-			
-			modify_building_resources = {
-				building = resource_expansion_tungsten
-				resource = tungsten
-				amount = 1
-			}
-			
-			modify_building_resources = {
-				building = resource_expansion_chromium
-				resource = chromium
-				amount = 1
-			}
-		}
-		
-		folder = {
-			name = industry_folder
-			position = { x = 0 y = 4 }
-		}
-		
-		path = {
-			leads_to_tech = resource_expansion_tech_3
-			research_cost_coeff = 1
-		}
-		
-		categories = {
-			extractor_tech
-			industry
-		}
-		
-		ai_will_do = {
-			factor = 1			
-		}
-		
-		research_cost = 2
-		start_year = 1939
-		
-		show_effect_as_desc = yes
-	}
-	
-	resource_expansion_tech_3 = {
-		on_research_complete = {
-			modify_building_resources = {
-				building = resource_expansion_steel
-				resource = steel
-				amount = 1
-			}
-			
-			modify_building_resources = {
-				building = resource_expansion_aluminium
-				resource = aluminium
-				amount = 1
-			}
-			
-			modify_building_resources = {
-				building = resource_expansion_tungsten
-				resource = tungsten
-				amount = 1
-			}
-			
-			modify_building_resources = {
-				building = resource_expansion_chromium
-				resource = chromium
-				amount = 1
-			}
-		}
-		
-		folder = {
-			name = industry_folder
-			position = { x = 0 y = 8 }
-		}
-		
-		path = {
-			leads_to_tech = resource_expansion_tech_4
-			research_cost_coeff = 1
-		}
-		
-		categories = {
-			extractor_tech
-			industry
-		}
-		
-		ai_will_do = {
-			factor = 1			
-		}
-		
-		research_cost = 2
-		start_year = 1943
-		
-		show_effect_as_desc = yes
-	}
 	
 	
 }

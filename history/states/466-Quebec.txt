@@ -4,6 +4,7 @@ state = {
 	manpower = 8860
 	resources = {
 		aluminium = 4.000
+		coal = 13
 	}
 
 	history = {

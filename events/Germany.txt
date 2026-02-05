@@ -26,7 +26,7 @@ country_event = {
 	}
 	
 	option = {
-		name = germany.145.b
+		name = germany.165.b
 		ai_chance = {
 			base = 30
 			modifier = {
@@ -54,10 +54,12 @@ country_event = {
 	
 	option = {
 		name = germany.166.a
-		POL = { transfer_state = 763
 		      763  = { add_core_of = POL }
-				transfer_state = 5	
-			5 = { add_core_of = POL } }
+			5 = { add_core_of = POL }
+		 763 = { transfer_state_to = POL }
+				763 = { remove_core_of = GER }
+			    5 = { transfer_state_to = POL }
+				5 = { remove_core_of = GER }
 			
 		diplomatic_relation = {
 			country = POL
@@ -67,10 +69,10 @@ country_event = {
 
 		GER ={
 		 random_controlled_state = {
-				add_extra_state_shared_building_slots = 5
+				add_extra_state_shared_building_slots = 7
 				add_building_construction = {
 					type = industrial_complex
-					level = 5
+					level = 7
 					instant_build = yes
 				}
 			}
@@ -177,6 +179,8 @@ country_event = {
 				9 = { add_core_of = GER }
 				transfer_state = 69
 				69 = { add_core_of = GER }
+				transfer_state = 72
+				72 = { add_core_of = GER }
 	
 
 		diplomatic_relation = {
@@ -204,11 +208,111 @@ country_event = {
 				972 = { add_core_of = GER }
 				9 = { add_core_of = GER }
 				69 = { add_core_of = GER }
+				72 = { add_core_of = GER }
 		create_wargoal = {
 			type = take_state_focus
 			target = FROM
 			generator = { 9 }
 		}
+	}
+}
+
+# Demand Swiss Anschluss
+country_event = {
+	id = germany.245
+	title = germany.245.t
+	desc = germany.245.d	
+	picture = GFX_report_event_generic_rally
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.245.a
+		ai_chance = {
+			base = 60
+		}
+		
+		GER = {
+			country_event = { id = germany.246 }
+		}
+	}
+	
+	option = {
+		name = germany.245.b
+		ai_chance = {
+			base = 40
+			modifier = {
+				is_subject_of = FROM
+				factor = 0
+			}
+			modifier = {
+				original_tag = CZE
+				factor = 0
+			}			
+		}
+		
+		effect_tooltip = {
+			GER = {
+				create_wargoal = {
+					type = annex_everything
+					target = SWI
+				}
+			}
+		}
+		hidden_effect = { GER = { country_event = { id = germany.247 } } }
+	}
+}
+
+
+
+# Swiss accepts
+country_event = {
+	id = germany.246
+	title = germany.246.t
+	desc = germany.246.d
+	picture = GFX_report_event_german_troops
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.246.a
+				annex_country = {
+					target = SWI
+					transfer_troops = yes
+				}
+				every_state = {
+					limit = {
+						is_core_of = SWI
+					}
+					add_core_of = GER
+				}
+	
+
+		 
+	}
+}
+
+#SWiss refuses
+country_event = {
+	id = germany.247
+	title = germany.247.t
+	desc = germany.247.d
+	picture = GFX_report_event_soldiers_marching
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.247.a
+		create_wargoal = {
+			type = annex_everything
+			target = FROM
+		}
+		every_state = {
+					limit = {
+						is_core_of = SWI
+					}
+					add_core_of = GER
+				}
 	}
 }
 	

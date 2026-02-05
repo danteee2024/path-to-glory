@@ -235,6 +235,10 @@ GER_german_kaiserreich = {
 	color = rgb { 128 128 128 }
 	color_ui = rgb { 115 115 115 }
 }
+LIT_Prussia = {
+	color = rgb { 196 189 204 }
+	color_ui = rgb { 255 246 255 }
+}
 
 CHI_warlord_leader = {
 	color = hsv { 0.18 0.6 0.9 } #255 244 190
@@ -711,6 +715,10 @@ POL_KINGDOM = {
 	color = rgb { 176 81 111 }
 	color_ui = rgb { 176 81 111 }
 }
+POL_SWE = {
+	color = rgb { 126  200  237 }
+	color_ui = rgb { 126 200 237 }
+}
 POL_KINGDOM_RUS = {
 	color = rgb { 193 208 241 }
 	color_ui = rgb { 193 208 241 }
@@ -829,6 +837,10 @@ SOV_left_opposition = {
 }
 
 SOV_right_opposition = {
+	color = rgb { 230 0 0 }
+	color_ui = rgb { 255 51 51 }
+}
+SOV_right_opposition_Assasinate = {
 	color = rgb { 230 0 0 }
 	color_ui = rgb { 255 51 51 }
 }

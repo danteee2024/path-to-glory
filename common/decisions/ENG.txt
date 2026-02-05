@@ -4258,7 +4258,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 100
+		cost = 50
 
 		fire_only_once = yes
 
@@ -4358,7 +4358,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 100
+		cost = 50
 
 		fire_only_once = yes
 
@@ -4458,7 +4458,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 100
+		cost = 50
 
 		fire_only_once = yes
 
@@ -4558,7 +4558,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 100
+		cost = 50
 
 		fire_only_once = yes
 
@@ -4659,7 +4659,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 100
+		cost = 50
 
 		fire_only_once = yes
 
@@ -4760,7 +4760,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 100
+		cost = 50
 
 		fire_only_once = yes
 
@@ -4861,7 +4861,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 100
+		cost = 50
 
 		fire_only_once = yes
 
@@ -4962,7 +4962,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 100
+		cost = 50
 
 		fire_only_once = yes
 
@@ -5063,7 +5063,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 100
+		cost = 50
 
 		fire_only_once = yes
 
@@ -5164,7 +5164,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 100
+		cost = 50
 
 		fire_only_once = yes
 
@@ -5265,7 +5265,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 100
+		cost = 50
 
 		fire_only_once = yes
 
@@ -5366,7 +5366,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 100
+		cost = 50
 
 		fire_only_once = yes
 
@@ -5467,7 +5467,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 100
+		cost = 50
 
 		fire_only_once = yes
 
@@ -5568,7 +5568,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 100
+		cost = 50
 
 		fire_only_once = yes
 
@@ -5669,7 +5669,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 100
+		cost = 50
 
 		fire_only_once = yes
 
@@ -5848,7 +5848,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 150
+		cost = 50
 
 		fire_only_once = yes
 
@@ -5999,7 +5999,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 75
+		cost = 35
 
 		fire_only_once = yes
 
@@ -6179,7 +6179,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 75
+		cost = 35
 
 		fire_only_once = yes
 
@@ -6351,7 +6351,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 75
+		cost = 35
 
 		fire_only_once = yes
 
@@ -6523,7 +6523,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 75
+		cost = 35
 
 		fire_only_once = yes
 
@@ -6695,7 +6695,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 75
+		cost = 35
 
 		fire_only_once = yes
 
@@ -6847,7 +6847,7 @@ ENG_concessions_to_the_trade_unions = {
 			NOT = { has_country_flag = ENG_trade_unions_demand_timer }
 		}
 
-		cost = 100
+		cost = 50
 
 		fire_only_once = yes
 
@@ -10341,4 +10341,178 @@ ENG_enforce_the_naval_treaties = {
 
 	}
 
+}
+ENG_Imperial_Federation = {
+Integrate_Canada = {
+
+		icon =  decision_eng_install_government
+	
+		allowed = {
+			tag = ENG
+		}
+		
+		available = {
+			 CAN = { is_subject_of = ENG }
+		}
+
+		cost = 200
+		days_remove = 60
+		
+		fire_only_once = yes
+
+		ai_will_do = {
+			
+		}
+		
+		visible = {
+			
+		}
+		
+		remove_effect = {
+			CAN = {
+				every_unit_leader = {
+					set_nationality = ENG
+				}
+			}
+			annex_country = {
+			    target = CAN
+			    transfer_troops = yes
+			}
+			every_state = {
+				limit = {
+					is_core_of = CAN
+				}
+				add_core_of = ENG
+			}
+		}
+	}
+	Integrate_Australia = {
+
+		icon =  decision_eng_install_government
+	
+		allowed = {
+			tag = ENG
+		}
+		
+		available = {
+							 AST = { is_subject_of = ENG }
+		}
+
+		cost = 200
+		days_remove = 60
+		
+		fire_only_once = yes
+
+		ai_will_do = {
+			
+		}
+		
+		visible = {
+			
+		}
+		
+		remove_effect = {
+			AST = {
+				every_unit_leader = {
+					set_nationality = ENG
+				}
+			}
+			annex_country = {
+			    target = AST
+			    transfer_troops = yes
+			}
+			every_state = {
+				limit = {
+					is_core_of = AST
+				}
+				add_core_of = ENG
+			}
+		}
+	}
+	Integrate_New_Zealand = {
+
+		icon =  decision_eng_install_government
+	
+		allowed = {
+			tag = ENG
+		}
+		
+		available = {
+							 NZL = { is_subject_of = ENG }
+		}
+
+		cost = 200
+		days_remove = 60
+		
+		fire_only_once = yes
+
+		ai_will_do = {
+			
+		}
+		
+		visible = {
+			
+		}
+		
+		remove_effect = {
+			NZL = {
+				every_unit_leader = {
+					set_nationality = ENG
+				}
+			}
+			annex_country = {
+			    target = NZL
+			    transfer_troops = yes
+			}
+			every_state = {
+				limit = {
+					is_core_of = NZL
+				}
+				add_core_of = ENG
+			}
+		}
+	}
+	Integrate_South_Africa = {
+
+		icon =  decision_eng_install_government
+	
+		allowed = {
+			tag = ENG
+		}
+		
+		available = {
+							 SAF = { is_subject_of = ENG }
+		}
+
+		cost = 200
+		days_remove = 60
+		
+		fire_only_once = yes
+
+		ai_will_do = {
+			
+		}
+		
+		visible = {
+			
+		}
+		
+		remove_effect =  {
+			SAF = {
+				every_unit_leader = {
+					set_nationality = ENG
+				}
+			}
+			annex_country = {
+			    target = SAF
+			    transfer_troops = yes
+			}
+			every_state = {
+				limit = {
+					is_core_of = SAF
+				}
+				add_core_of = ENG
+			}
+		}
+	}
 }

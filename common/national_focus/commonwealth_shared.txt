@@ -2151,20 +2151,20 @@ joint_focus = {
 		hidden_effect = {
 			add_to_variable = {
 				var = Commonwealth_airforces_originator_dmod_cas_factor
-				value = 0.15
+				value = 0.05
 			}
 			add_to_variable = {
 				var = Commonwealth_airforces_originator_dmod_strat_bombing_factor
-				value = 0.15
+				value = 0.05
 			}
 			add_to_variable = {
 				var = Commonwealth_airforces_member_dmod_cas_factor
-				value = 0.10
+				value = 0
 				tooltip = air_cas_present_factor_tt
 			}
 			add_to_variable = {
 				var = Commonwealth_airforces_member_dmod_strat_bombing_factor
-				value = 0.10
+				value = 0
 				tooltip = air_strategic_bomber_bombing_factor_tt
 			}
 		}
@@ -2176,12 +2176,12 @@ joint_focus = {
 		effect_tooltip = {
 			add_to_variable= {
 				var = Commonwealth_airforces_originator_dmod_cas_factor
-				value = 0.15
+				value = 0.05
 				tooltip = air_cas_present_factor_tt
 			}
 			add_to_variable = {
 				var = Commonwealth_airforces_originator_dmod_strat_bombing_factor
-				value = 0.15
+				value = 0.05
 				tooltip = air_strategic_bomber_bombing_factor_tt
 			}
 		}
@@ -2193,12 +2193,12 @@ joint_focus = {
 		effect_tooltip = {
 			set_variable = {
 				var = Commonwealth_airforces_member_dmod_cas_factor
-				value = 0.10
+				value = 0
 				tooltip = air_cas_present_factor_tt
 			}
 			add_to_variable = {
 				var = Commonwealth_airforces_member_dmod_strat_bombing_factor
-				value = 0.10
+				value = 0
 				tooltip = air_strategic_bomber_bombing_factor_tt
 			}
 		}
@@ -2216,8 +2216,6 @@ joint_focus = {
 	y = 1
 	relative_position_id = Commonwealth_North_African_Air_Control
 	cost = 5
-
-	
 
 	available = {
 		Commonwealth_basic_available_trigger = yes
@@ -2243,19 +2241,18 @@ joint_focus = {
 		hidden_effect = {
 			add_to_variable = {
 				var = Commonwealth_airforces_originator_dmod_intercept_efficiency
-				value = 0.15
+				value = 0.05
 			}
 			add_to_variable = {
 				var = Commonwealth_airforces_originator_dmod_superiority_efficiency
-				value = 0.15
+				value = 0.05
 			}
 			add_to_variable = {
 				var = Commonwealth_airforces_member_dmod_intercept_efficiency
-				value = 0.10
-			}
+				value = 0
 			add_to_variable = {
 				var = Commonwealth_airforces_member_dmod_superiority_efficiency
-				value = 0.10
+				value = 0
 			}
 		}
 	}
@@ -2265,12 +2262,12 @@ joint_focus = {
 		effect_tooltip = {
 			add_to_variable = {
 				var = Commonwealth_airforces_originator_dmod_intercept_efficiency
-				value = 0.15
+				value = 0.05
 				tooltip = air_intercept_efficiency_tt
 			}
 			add_to_variable = {
 				var = Commonwealth_airforces_originator_dmod_superiority_efficiency
-				value = 0.15
+				value = 0.05
 				tooltip = air_superiority_efficiency_tt
 			}
 		}
@@ -2283,12 +2280,12 @@ joint_focus = {
 		effect_tooltip = {
 			add_to_variable = {
 				var = Commonwealth_airforces_member_dmod_intercept_efficiency
-				value = 0.10
+				value = 0.
 				tooltip = air_intercept_efficiency_tt
 			}
 			add_to_variable = {
 				var = Commonwealth_airforces_member_dmod_superiority_efficiency
-				value = 0.10
+				value = 0
 				tooltip = air_superiority_efficiency_tt
 			}
 		}

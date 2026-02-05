@@ -49,6 +49,7 @@ if = {
 	}
 }
 
+recruit_character = FRA_alphonse_sacre
 recruit_character = FRA_pierre_laval
 recruit_character = FRA_edouard_daladier
 recruit_character = FRA_maurice_thorez
@@ -290,7 +291,6 @@ add_ideas = {
 	FRA_protected_by_the_maginot_line
 	limited_conscription
 	FRA_political_violence
-	FRA_full_employment
 }
 
 	#Instead of a an event which is meant to always fire - Fantom

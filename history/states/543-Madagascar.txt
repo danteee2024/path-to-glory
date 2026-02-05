@@ -5,11 +5,11 @@ state={
 	manpower = 3694611
 	
 	state_category = rural
-
-	resources={
-		rubber = 25
+	resources = {
+		rubber = 19
+		aluminium = 13
+		coal = 8
 	}
-
 	
 	history={
 		add_core_of = MAD

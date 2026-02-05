@@ -11,14 +11,16 @@ state={
 		#}
 		owner = POL
 		buildings = {
-			infrastructure = 4
-			industrial_complex = 2
+			infrastructure = 3
 			air_base = 3
 
 		}
 		add_core_of = POL
 		add_core_of = UKR
 
+	}
+	resources = {
+		coal = 17
 	}
 
 	provinces={
